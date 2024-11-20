@@ -1,0 +1,15 @@
+- `MikeyLatentTileSampler`: This node specializes in resampling a latent space that exceeds the specified tile size, effectively managing larger-than-tile latent spaces by breaking them down into manageable pieces for processing. It focuses on optimizing the handling and manipulation of large latent representations for tasks such as image generation or modification, ensuring efficient and targeted resampling within a tiled framework.
+    - Inputs:
+        - `base_model` (Required): Specifies the base model used for generating or refining the latent samples, serving as a critical component in the resampling process. Type should be `MODEL`.
+        - `samples` (Required): The input latent samples to be resampled, serving as the basis for the tiling and resampling operation. Type should be `LATENT`.
+        - `positive` (Required): The positive conditioning to guide the resampling towards desired attributes or features within the latent space. Type should be `CONDITIONING`.
+        - `negative` (Required): The negative conditioning to steer the resampling away from certain attributes or features within the latent space. Type should be `CONDITIONING`.
+        - `seed` (Required): Defines the seed for noise generation and sampling, ensuring reproducibility and consistency in the resampling process. Type should be `INT`.
+        - `denoise` (Required): Configures the denoising factor, which can alter the characteristics of the generated or modified latent space during resampling. Type should be `FLOAT`.
+        - `steps` (Required): Determines the number of steps to be used in the sampling process, impacting the depth of exploration in the latent space. Type should be `INT`.
+        - `cfg` (Required): Configures the conditioning factor, which can alter the characteristics of the generated or modified latent space during resampling. Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the sampling method used for resampling, impacting the approach to navigating the latent space. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Determines the scheduler used in conjunction with the sampler, affecting the sampling dynamics. Type should be `COMBO[STRING]`.
+        - `tile_size` (Required): Sets the size of the tiles into which the latent space is divided, directly influencing the granularity of the resampling process. Type should be `INT`.
+    - Outputs:
+        - `samples`: The resampled latent space, now segmented and processed into tiles according to the specified parameters. Type should be `LATENT`.

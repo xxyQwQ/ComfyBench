@@ -1,9 +1,0 @@
-- `LatentKeyframeGroup`: The LatentKeyframeGroup node is designed to manage and manipulate groups of latent keyframes, facilitating the creation, cloning, and integration of keyframe data. It serves as a foundational component in advanced control networks, enabling dynamic adjustments and enhancements to generated content through keyframe manipulation.
-    - Parameters:
-        - `index_strengths`: A string representing index-strength pairs used to create new latent keyframes. This allows for precise control over the creation of keyframes based on specified strengths. Type should be `STRING`.
-        - `print_keyframes`: A flag indicating whether to log information about each keyframe, including its batch index and strength, for debugging or informational purposes. Type should be `BOOLEAN`.
-    - Inputs:
-        - `prev_latent_kf`: Represents the previous group of latent keyframes to be cloned and integrated with new keyframe data. It is crucial for maintaining continuity and building upon existing keyframe configurations. Type should be `LATENT_KEYFRAME`.
-        - `latent_optional`: An optional parameter that, when provided, influences the generation of latent keyframes based on additional latent image data. Type should be `LATENT`.
-    - Outputs:
-        - `LATENT_KF`: The resulting group of latent keyframes, including both newly created and previously existing keyframes, ready for further manipulation or application. Type should be `LATENT_KEYFRAME`.

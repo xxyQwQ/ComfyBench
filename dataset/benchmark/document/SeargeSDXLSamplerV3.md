@@ -1,0 +1,19 @@
+- `SeargeSDXLSamplerV3`: The SeargeSDXLSamplerV3 node is designed for advanced sampling in generative models, offering enhanced capabilities for generating high-quality digital content. It incorporates sophisticated algorithms to refine and optimize the output, making it suitable for applications requiring precision and detail in the generated samples.
+    - Inputs:
+        - `base_model` (Required): Specifies the base model used for initial sampling, setting the foundation for the generation process. Type should be `MODEL`.
+        - `base_positive` (Required): Defines the positive conditioning to guide the base model towards desirable outcomes. Type should be `CONDITIONING`.
+        - `base_negative` (Required): Specifies the negative conditioning to steer the base model away from undesirable outcomes. Type should be `CONDITIONING`.
+        - `refiner_model` (Required): Indicates the refiner model used to enhance and refine the initial samples for improved quality. Type should be `MODEL`.
+        - `refiner_positive` (Required): Defines the positive conditioning for the refiner model, further guiding the enhancement process. Type should be `CONDITIONING`.
+        - `refiner_negative` (Required): Specifies the negative conditioning for the refiner model, ensuring the refinement avoids undesirable aspects. Type should be `CONDITIONING`.
+        - `latent_image` (Required): Represents the latent image or state used as a starting point for the sampling process. Type should be `LATENT`.
+        - `noise_seed` (Required): Provides a seed value for noise generation, ensuring reproducibility in the sampling process. Type should be `INT`.
+        - `steps` (Required): Determines the number of steps in the sampling process, affecting the detail and quality of the output. Type should be `INT`.
+        - `cfg` (Required): Configures the sampling strength or control factor, influencing the variance and fidelity of the generated content. Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the name of the sampler algorithm used, affecting the sampling strategy and outcome. Type should be `SAMPLER_NAME`.
+        - `scheduler` (Required): Indicates the scheduler used to manage the sampling steps, impacting the progression and refinement of the generation. Type should be `SCHEDULER_NAME`.
+        - `base_ratio` (Required): Sets the ratio of base to refiner model usage, balancing initial generation with refinement. Type should be `FLOAT`.
+        - `denoise` (Required): Controls the denoising factor in the sampling process, affecting the clarity and smoothness of the output. Type should be `FLOAT`.
+        - `refiner_prep_steps` (Optional): Specifies the number of preparation steps for the refiner model, adjusting the initial conditions for refinement. Type should be `INT`.
+    - Outputs:
+        - `latent`: Produces the final latent image or state after the sampling and refinement process, ready for further use or conversion to digital content. Type should be `LATENT`.

@@ -1,0 +1,10 @@
+- `CreateFadeMaskAdvanced`: The CreateFadeMaskAdvanced node is designed for generating sophisticated fade masks with customizable parameters, allowing for advanced control over the mask's appearance and behavior. This node enables the creation of dynamic masks that can be tailored to specific needs, incorporating features such as decay, alpha blending, and the ability to grow or shrink the mask with precision.
+    - Inputs:
+        - `points_string` (Required): Specifies the sequence of points defining the fade effect over frames, allowing for complex mask transitions based on frame index and corresponding mask values. Type should be `STRING`.
+        - `invert` (Required): When enabled, inverts the final mask output, offering an alternative visual representation where masked areas are reversed. Type should be `BOOLEAN`.
+        - `frames` (Required): Defines the total number of frames for the mask animation, setting the scope for how the fade effect progresses over time. Type should be `INT`.
+        - `width` (Required): Sets the width of the mask, determining the horizontal dimension of the generated mask. Type should be `INT`.
+        - `height` (Required): Sets the height of the mask, determining the vertical dimension of the generated mask. Type should be `INT`.
+        - `interpolation` (Required): Determines the method of interpolation between points, affecting the smoothness and style of the fade transition. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `mask`: The modified mask after applying the specified transformations, reflecting changes in size, shape, and appearance. Type should be `MASK`.

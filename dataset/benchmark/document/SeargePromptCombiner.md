@@ -1,0 +1,7 @@
+- `SeargePromptCombiner`: The SeargePromptCombiner node is designed to merge two input prompts into a single output prompt, optionally separated by a specified delimiter. This functionality is useful in scenarios where dynamic prompt construction is needed, allowing for the combination of separate prompt elements into a cohesive whole.
+    - Inputs:
+        - `prompt1` (Required): The first prompt to be combined. It serves as the initial part of the new, merged prompt. Type should be `STRING`.
+        - `separator` (Required): A string used to separate the two prompts when combined. This allows for customizable spacing or punctuation between prompt elements. Type should be `STRING`.
+        - `prompt2` (Required): The second prompt to be combined. It follows the separator and completes the merged prompt. Type should be `STRING`.
+    - Outputs:
+        - `combined prompt`: The result of merging prompt1 and prompt2, optionally separated by the separator. This is the final, combined prompt ready for use. Type should be `STRING`.

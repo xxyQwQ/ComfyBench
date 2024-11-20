@@ -1,8 +1,0 @@
-- `LatentKeyframeBatchedGroup`: The LatentKeyframeBatchedGroup node is designed for the manipulation and generation of batched latent keyframes within a neural network's control mechanism. It enables the creation, interpolation, and management of keyframes based on specified strengths and batch indices, facilitating dynamic control over the generation process.
-    - Parameters:
-        - `float_strengths`: Specifies the strengths for each keyframe in the batch. This parameter can be a single float value or an iterable of float values, determining the intensity or effect of each keyframe. Type should be `FLOAT`.
-        - `print_keyframes`: A flag that, when set to True, enables logging information about each keyframe in the batch, including its batch index and strength. Type should be `BOOLEAN`.
-    - Inputs:
-        - `prev_latent_kf`: An optional parameter that allows for the inclusion of previously generated latent keyframes. These keyframes can be merged with the newly generated or manipulated batch. Type should be `LATENT_KEYFRAME`.
-    - Outputs:
-        - `LATENT_KF`: Returns a LatentKeyframeGroup object containing the batch of generated or manipulated latent keyframes. Type should be `LATENT_KEYFRAME`.

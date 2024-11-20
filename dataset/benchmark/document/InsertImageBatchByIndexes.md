@@ -1,0 +1,7 @@
+- `InsertImageBatchByIndexes`: The InsertImageBatchByIndexes node is designed for integrating a sequence of images into an existing batch of images at specified indices. It ensures that the newly inserted images are placed at the correct positions within the original batch, maintaining the original sequence order where possible. This node is particularly useful in workflows requiring dynamic modification or augmentation of image batches, such as in data preprocessing for machine learning models.
+    - Inputs:
+        - `images` (Required): The original batch of images into which new images will be inserted. It serves as the base for the insertion operation. Type should be `IMAGE`.
+        - `images_to_insert` (Required): The images to be inserted into the original batch at specified indices. This parameter allows for dynamic content addition to the image batch. Type should be `IMAGE`.
+        - `insert_indexes` (Required): The indices within the original image batch where the new images should be inserted. These indices dictate the exact positions for insertion, aligning with the sequence of 'images_to_insert'. Type should be `INDEXES`.
+    - Outputs:
+        - `images_after_insert`: The updated batch of images after the insertion operation, maintaining the original sequence order with the new images integrated at specified positions. Type should be `IMAGE`.

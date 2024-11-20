@@ -1,0 +1,7 @@
+- `CR Thumbnail Preview`: This node is designed to generate thumbnail previews of images, optionally rescaling them and arranging them in a grid layout. It supports both individual and batch processing of images, allowing for flexible adjustments to the thumbnail presentation. The node also integrates with a websocket server to send the generated thumbnails for display, providing a link to further documentation for user assistance.
+    - Inputs:
+        - `image` (Required): The input image or a batch of images to be processed into thumbnails. This parameter is crucial for determining the content that will be transformed into a thumbnail preview. Type should be `IMAGE`.
+        - `rescale_factor` (Required): A factor by which the input images are rescaled. This affects the size of the resulting thumbnails, allowing for customization based on user preference or display requirements. Type should be `FLOAT`.
+        - `max_columns` (Required): Specifies the maximum number of columns in the grid layout for arranging the thumbnails. This parameter influences the overall layout and presentation of the thumbnails. Type should be `INT`.
+    - Outputs:
+        - `show_help`: Provides a link to further documentation for user assistance, enhancing the usability of the node. Type should be `STRING`.

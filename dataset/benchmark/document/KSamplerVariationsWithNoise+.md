@@ -1,0 +1,16 @@
+- `KSamplerVariationsWithNoise+`: This node introduces a two-stage sampling process with noise injection to generate variations of an input latent image. Initially, it applies a composition sampler to the input, optionally adding or fully denoising the result based on the variation strength. Subsequently, it employs a variation sampler that further processes the output of the first stage, adjusting the configuration based on the variation strength and cfg scale, to produce diverse and nuanced variations of the original image.
+    - Inputs:
+        - `model` (Required): The model parameter specifies the generative model used for sampling, playing a crucial role in determining the characteristics and quality of the generated variations. Type should be `MODEL`.
+        - `latent_image` (Required): The latent_image parameter represents the input latent representation of an image, serving as the starting point for the sampling process to generate variations. Type should be `LATENT`.
+        - `main_seed` (Required): The main_seed parameter is used to initialize the random noise generation for the base noise, influencing the stochastic aspects of the sampling process. Type should be `INT:seed`.
+        - `steps` (Required): The steps parameter defines the number of sampling steps to be performed, affecting the detail and quality of the generated image variations. Type should be `INT`.
+        - `cfg` (Required): The cfg parameter adjusts the conditioning factor, influencing the generation process by modulating the influence of the conditioning on the output. Type should be `FLOAT`.
+        - `sampler_name` (Required): The sampler_name parameter specifies the sampling strategy used in the first stage of the process, determining the approach for generating the initial variation. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler parameter determines the scheduling strategy for the sampling process, affecting the progression of noise reduction and detail refinement. Type should be `COMBO[STRING]`.
+        - `positive` (Required): The positive parameter provides positive textual guidance for the sampling process, steering the generation towards desired attributes or themes. Type should be `CONDITIONING`.
+        - `negative` (Required): The negative parameter provides negative textual guidance, instructing the model to avoid certain attributes or themes in the generated variations. Type should be `CONDITIONING`.
+        - `variation_strength` (Required): The variation_strength parameter controls the degree of variation introduced between the two stages, affecting the diversity of the generated images. Type should be `FLOAT`.
+        - `variation_seed` (Required): The variation_seed parameter is used to seed the variation process in the second stage, ensuring reproducibility and control over the variation generation. Type should be `INT:seed`.
+        - `denoise` (Required): The denoise parameter determines the level of denoising applied during the sampling process, affecting the clarity and detail of the generated image variations. Type should be `FLOAT`.
+    - Outputs:
+        - `latent`: The output latent represents the final varied latent representation of the image after the two-stage sampling process with noise injection. Type should be `LATENT`.

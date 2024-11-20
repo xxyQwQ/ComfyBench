@@ -1,0 +1,7 @@
+- `String Replace (mtb)`: Provides a basic string replacement functionality, allowing for the substitution of a specified substring with another within a given string. This node is designed to facilitate text manipulation by enabling users to easily replace parts of strings.
+    - Inputs:
+        - `string` (Required): The original string where replacements will be made. It serves as the base text for the operation. Type should be `STRING`.
+        - `old` (Required): The substring to be replaced. This parameter specifies the part of the original string that should be substituted. Type should be `STRING`.
+        - `new` (Required): The replacement substring. This parameter defines the new text that will replace the specified 'old' substring in the original string. Type should be `STRING`.
+    - Outputs:
+        - `string`: The modified string after the specified replacements have been made. Type should be `STRING`.

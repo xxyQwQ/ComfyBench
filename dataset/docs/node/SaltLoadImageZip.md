@@ -1,7 +1,0 @@
-- `SaltLoadImageZip`: The SaltLoadImageZip node is designed to load and optionally resize images from a ZIP file. It supports a variety of image formats and can concatenate the loaded images into a single tensor, facilitating their use in image processing workflows.
-    - Parameters:
-        - `path`: Specifies the file path to the ZIP archive containing images. It is crucial for locating and accessing the desired images for processing. Type should be `STRING`.
-        - `resize_images_to_first`: Determines whether all loaded images should be resized to match the dimensions of the first image found. This ensures uniformity in image sizes, which is often necessary for batch processing or when images are used in neural networks. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `images`: The output is a tensor containing the loaded (and possibly resized) images, ready for further processing or analysis. Type should be `IMAGE`.

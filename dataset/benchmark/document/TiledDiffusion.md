@@ -1,0 +1,10 @@
+- `TiledDiffusion`: The TiledDiffusion node specializes in applying diffusion processes to images in a tiled manner, optimizing for efficiency and scalability. It leverages a tiling strategy to manage and process large images or batches by breaking them down into smaller, manageable pieces, allowing for detailed and controlled diffusion effects across the entirety of the image.
+    - Inputs:
+        - `model` (Required): The model parameter represents the diffusion model to be applied. It is crucial for defining the diffusion behavior and processing the image data through the specified diffusion algorithm. Type should be `MODEL`.
+        - `method` (Required): Specifies the diffusion method to be applied, such as 'Mixture of Diffusers' or other strategies, influencing the overall diffusion process and its outcomes. Type should be `COMBO[STRING]`.
+        - `tile_width` (Required): Determines the width of each tile in the tiling strategy, affecting the granularity of the diffusion process across the image. Type should be `INT`.
+        - `tile_height` (Required): Sets the height of each tile, impacting how the image is segmented for the diffusion process and influencing the detail level achievable. Type should be `INT`.
+        - `tile_overlap` (Required): Defines the overlap between tiles to ensure seamless diffusion effects across tile boundaries, enhancing the visual continuity of the processed image. Type should be `INT`.
+        - `tile_batch_size` (Required): Controls the number of tiles processed simultaneously, balancing between computational efficiency and memory usage. Type should be `INT`.
+    - Outputs:
+        - `model`: Returns the modified model with the tiled diffusion process applied, ready for further use or analysis. Type should be `MODEL`.

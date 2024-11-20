@@ -1,7 +1,0 @@
-- `GetFloatFromJson`: Extracts a float value from a JSON object based on a specified key. This node is designed to facilitate the retrieval of numeric data from structured JSON content, enhancing data processing and manipulation within the Art Venture utility suite.
-    - Parameters:
-        - `key`: The key corresponding to the desired float value within the JSON object. This parameter determines the specific piece of data to be retrieved. Type should be `STRING`.
-    - Inputs:
-        - `json`: The JSON object from which a float value is to be extracted. This parameter is crucial for specifying the source of the data. Type should be `JSON`.
-    - Outputs:
-        - `float`: The extracted float value from the JSON object. This output is significant for further numerical analysis or operations. Type should be `FLOAT`.

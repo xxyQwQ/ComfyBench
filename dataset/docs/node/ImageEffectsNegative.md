@@ -1,6 +1,0 @@
-- `ImageEffectsNegative`: The ImageEffectsNegative node transforms images into their negative form by inverting the colors. This effect is achieved by subtracting each color channel value from the maximum possible value, effectively reversing the color spectrum and creating a photographic negative effect.
-    - Parameters:
-    - Inputs:
-        - `images`: The input images to be transformed into their negative form. This parameter is crucial for the node's operation as it directly affects the visual outcome of the effect. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The transformed images in their negative form, with each color channel value inverted to produce a photographic negative effect. Type should be `IMAGE`.

@@ -1,7 +1,0 @@
-- `PainterNode`: The PainterNode is designed to process images by applying transformations and generating a corresponding mask if applicable. It focuses on preparing images for further processing or visualization by adjusting their format, orientation, and scale.
-    - Parameters:
-        - `image`: The 'image' parameter specifies the image file to be processed. It is crucial for determining the input image that will undergo transformations and potentially mask generation, directly influencing the node's output. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `image`: The 'image' output represents the transformed and properly formatted version of the input image, ready for further processing or visualization. Type should be `IMAGE`.
-        - `mask`: The 'mask' output provides a mask associated with the input image, useful for various image processing tasks that require distinguishing the image's foreground from its background. Type should be `MASK`.

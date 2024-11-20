@@ -1,0 +1,10 @@
+- `InvCosWave`: The InvCosWave node generates an inverse cosine wave based on specified parameters, such as phase, amplitude, and translations. It's designed to create complex wave patterns by applying the inverse cosine function to the input values, offering a unique approach to wave generation.
+    - Inputs:
+        - `phase` (Required): The 'phase' parameter controls the period of the wave, affecting how stretched or compressed the wave appears over its cycle. A larger phase value results in a more stretched wave, impacting the frequency of the wave pattern generated. Type should be `FLOAT`.
+        - `amplitude` (Required): The 'amplitude' parameter determines the height of the wave's peaks, influencing the wave's overall intensity. Higher amplitude values produce waves with greater peak-to-trough distances, affecting the visual and numerical amplitude of the wave. Type should be `FLOAT`.
+        - `x_translation` (Required): The 'x_translation' parameter shifts the wave along the x-axis, allowing for adjustments in the wave's starting position. This shift can alter the phase of the wave, affecting where the wave begins within its cycle. Type should be `FLOAT`.
+        - `y_translation` (Required): The 'y_translation' parameter shifts the wave along the y-axis, adjusting the baseline level of the wave. This influences the vertical positioning of the wave, affecting its alignment relative to the y-axis. Type should be `FLOAT`.
+        - `current_frame` (Required): The 'current_frame' parameter specifies the current point in the wave's cycle, used to calculate the wave's value at that specific moment. This parameter is crucial for animating the wave over time, determining the wave's position at each frame. Type should be `INT`.
+    - Outputs:
+        - `float`: The first element of the output is the calculated wave value as a float, representing the precise wave value. Type should be `FLOAT`.
+        - `int`: The second element of the output is the integer representation of the wave value, providing a rounded wave value. Type should be `INT`.

@@ -1,0 +1,7 @@
+- `VAEDecodeTiled`: The VAEDecodeTiled node is designed for decoding latent representations into images, specifically optimized for handling large images by processing them in tiles. This method allows for efficient memory usage and can accommodate images that exceed the size limitations of standard decoding techniques.
+    - Inputs:
+        - `samples` (Required): The 'samples' parameter represents the latent representations that are to be decoded into images. It is crucial for the decoding process as it contains the encoded information that will be transformed back into visual form. Type should be `LATENT`.
+        - `vae` (Required): The 'vae' parameter is the variational autoencoder model used for the decoding process. It plays a central role in transforming the latent representations into images. Type should be `VAE`.
+        - `tile_size` (Required): The 'tile_size' parameter specifies the dimensions of the tiles used in the tiled decoding process. It affects the granularity of the decoding, with smaller tiles potentially allowing for finer control over memory usage and processing time. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is an image generated from the decoded latent representations, processed in a tiled manner to efficiently handle large image sizes. Type should be `IMAGE`.

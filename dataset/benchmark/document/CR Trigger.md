@@ -1,0 +1,8 @@
+- `CR Trigger`: The CR Trigger node is designed to compare an input index against a specified trigger value, returning the index, a boolean indicating if the index matches the trigger value, and a URL for help documentation. This functionality is useful for conditional logic and flow control within node-based processing pipelines.
+    - Inputs:
+        - `index` (Required): The index to compare against the trigger value. It determines the flow of execution based on its comparison with the trigger value. Type should be `INT`.
+        - `trigger_value` (Required): The value against which the index is compared. This comparison dictates whether certain actions are triggered based on the match. Type should be `INT`.
+    - Outputs:
+        - `index`: The original index value passed into the node. Type should be `INT`.
+        - `trigger`: A boolean indicating whether the index matches the trigger value. Type should be `BOOLEAN`.
+        - `show_help`: A URL providing additional help and documentation for the CR Trigger node. Type should be `STRING`.

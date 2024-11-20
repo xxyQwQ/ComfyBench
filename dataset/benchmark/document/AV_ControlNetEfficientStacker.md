@@ -1,0 +1,15 @@
+- `AV_ControlNetEfficientStacker`: The AV_ControlNetEfficientStacker node is designed to streamline the process of integrating and managing control networks within an image processing pipeline. It facilitates the efficient stacking of control networks by allowing for dynamic selection based on predefined criteria, application of preprocessing steps, and adjustment of control network strength and resolution, thereby enhancing the flexibility and effectiveness of image manipulation tasks.
+    - Inputs:
+        - `control_net_name` (Required): Specifies the name of the control network to be used, including options for automatic selection based on the model version. This parameter is crucial for determining the appropriate control network and preprocessing requirements for the image. Type should be `COMBO[STRING]`.
+        - `image` (Required): The input image to be processed. This parameter is essential as it serves as the base for applying the control network transformations. Type should be `IMAGE`.
+        - `strength` (Required): Defines the intensity of the control network's effect on the image, allowing for fine-tuned manipulation of the image's attributes. Type should be `FLOAT`.
+        - `start_percent` (Required): Specifies the starting percentage of the control network's effect, allowing for gradual application over the image. Type should be `FLOAT`.
+        - `end_percent` (Required): Specifies the ending percentage of the control network's effect, enabling precise control over how the network's influence fades. Type should be `FLOAT`.
+        - `preprocessor` (Required): Specifies the preprocessing method to be applied to the image before the control network is applied, ensuring the image is in the optimal format for manipulation. Type should be `COMBO[STRING]`.
+        - `cnet_stack` (Optional): An optional stack of control networks to be applied. This allows for the layering of multiple control networks for complex image transformations. Type should be `CONTROL_NET_STACK`.
+        - `control_net_override` (Optional): Allows for the manual override of the selected control network, providing flexibility in the choice of control networks. Type should be `STRING`.
+        - `timestep_keyframe` (Optional): Optionally specifies a keyframe for the control network, enabling temporal control over the image manipulation process. Type should be `TIMESTEP_KEYFRAME`.
+        - `resolution` (Optional): Sets the resolution for the image processing, allowing for control over the detail level of the output image. Type should be `INT`.
+        - `enabled` (Optional): A flag to enable or disable the control network processing, offering a straightforward way to bypass the control network application. Type should be `BOOLEAN`.
+    - Outputs:
+        - `CNET_STACK`: unknown Type should be `CONTROL_NET_STACK`.

@@ -1,0 +1,7 @@
+- `Generation TXT IMG Settings (JPS)`: This node is designed to configure and determine the generation mode and image strength based on the selected mode and image percentage. It supports switching between text-to-image and image-to-image modes, adjusting the output based on the mode's specific requirements.
+    - Inputs:
+        - `mode` (Required): Specifies the generation mode, either 'Txt2Img' or 'Img2Img', influencing the generation process and output characteristics. Type should be `COMBO[STRING]`.
+        - `img_percentage` (Required): Determines the strength or intensity of the image processing, affecting the final image output in 'Img2Img' mode. Type should be `INT`.
+    - Outputs:
+        - `gen_mode`: Indicates the generation mode as an integer value, distinguishing between text-to-image and image-to-image modes. Type should be `INT`.
+        - `img_strength`: Represents the calculated strength or intensity of the image processing, based on the provided image percentage. Type should be `FLOAT`.

@@ -1,0 +1,27 @@
+- `SEGSUpscaler`: The SEGSUpscaler node is designed to upscale images by segmenting them into smaller sections, enhancing each segment individually using a combination of models and techniques, and then reassembling the enhanced segments back into a single, upscaled image. This process allows for more detailed and controlled upscaling, leveraging the power of segmentation to address specific areas of an image for improvement.
+    - Inputs:
+        - `image` (Required): The original image to be upscaled. It serves as the base for segmentation and subsequent upscaling processes. Type should be `IMAGE`.
+        - `segs` (Required): A collection of image segments, each representing a portion of the original image to be individually upscaled and enhanced. Type should be `SEGS`.
+        - `model` (Required): The primary model used for processing and enhancing the image segments. Type should be `MODEL`.
+        - `clip` (Required): The CLIP model used for guiding the enhancement process based on textual descriptions. Type should be `CLIP`.
+        - `vae` (Required): The VAE model used for encoding and decoding image segments during the upscaling process. Type should be `VAE`.
+        - `rescale_factor` (Required): The factor by which the image will be rescaled as part of the upscaling process. Type should be `FLOAT`.
+        - `resampling_method` (Required): The method used for resampling the image during the upscaling process, affecting the quality and characteristics of the upscaled image. Type should be `COMBO[STRING]`.
+        - `supersample` (Required): Indicates whether supersampling is applied to the image for enhanced upscaling quality. Type should be `COMBO[STRING]`.
+        - `rounding_modulus` (Required): A value used to adjust the dimensions of the upscaled image, ensuring they are multiples of a specific number. Type should be `INT`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the upscaling process across segments. Type should be `INT`.
+        - `steps` (Required): The number of steps to perform in the image enhancement process for each segment. Type should be `INT`.
+        - `cfg` (Required): Configuration settings for the image enhancement process, guiding the behavior of the models used. Type should be `FLOAT`.
+        - `sampler_name` (Required): The name of the sampling method used in the image enhancement process, affecting the generation of enhanced segments. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler used to control the progression of steps in the image enhancement process. Type should be `COMBO[STRING]`.
+        - `positive` (Required): Positive text prompts used to guide the image enhancement process. Type should be `CONDITIONING`.
+        - `negative` (Required): Negative text prompts used to counterbalance the positive prompts, refining the enhancement process. Type should be `CONDITIONING`.
+        - `denoise` (Required): A parameter controlling the level of denoising applied to each image segment during enhancement. Type should be `FLOAT`.
+        - `feather` (Required): The feathering value applied to the edges of image segments, smoothing transitions between enhanced segments and the rest of the image. Type should be `INT`.
+        - `inpaint_model` (Required): The model used for inpainting, filling in areas of the image that may be missing or require correction after segmentation. Type should be `BOOLEAN`.
+        - `noise_mask_feather` (Required): The feathering value applied to the noise mask, smoothing the application of noise adjustments across image segments. Type should be `INT`.
+        - `upscale_model_opt` (Optional): An optional model specifically designed for upscaling, providing an alternative or supplementary method to the main upscaling process. Type should be `UPSCALE_MODEL`.
+        - `upscaler_hook_opt` (Optional): An optional hook allowing for custom post-processing steps after each segment is upscaled and reassembled into the final image. Type should be `UPSCALER_HOOK`.
+        - `scheduler_func_opt` (Optional): An optional scheduler function providing additional control over the scheduling of enhancement steps for each segment. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `image`: The final, upscaled image, composed of individually enhanced and reassembled image segments. Type should be `IMAGE`.

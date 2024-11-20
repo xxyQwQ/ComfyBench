@@ -1,0 +1,10 @@
+- `Create QR Code`: This node generates a QR code from provided text, allowing customization of size, version, error correction level, box size, and border. It outputs the QR code as an image tensor, suitable for further processing or visualization.
+    - Inputs:
+        - `text` (Required): The text to be encoded into the QR code. This is the primary data the QR code will represent. Type should be `STRING`.
+        - `size` (Required): Specifies the size of the generated QR code image in pixels. Type should be `INT`.
+        - `qr_version` (Required): Determines the version of the QR code, which affects the amount of data that can be stored. Type should be `INT`.
+        - `error_correction` (Required): Sets the error correction level of the QR code, influencing its resilience to damage. Type should be `COMBO[STRING]`.
+        - `box_size` (Required): Defines the size of each box in the QR code grid. Type should be `INT`.
+        - `border` (Required): Specifies the width of the border around the QR code. Type should be `INT`.
+    - Outputs:
+        - `image`: The generated QR code as an image tensor, ready for use or display. Type should be `IMAGE`.

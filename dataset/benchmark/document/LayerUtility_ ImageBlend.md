@@ -1,0 +1,10 @@
+- `LayerUtility_ ImageBlend`: This node is designed to blend two images together using a variety of blending modes. It leverages predefined functions to apply different mathematical operations for combining the pixel values of the background and layer images, resulting in a composite image that can be used for various visual effects or image processing tasks.
+    - Inputs:
+        - `background_image` (Required): The background image over which the layer image will be blended. This forms the base of the composite image. Type should be `IMAGE`.
+        - `layer_image` (Required): The layer image to be blended onto the background image. This image is combined with the background based on the specified blend mode and opacity. Type should be `IMAGE`.
+        - `invert_mask` (Required): A boolean parameter that determines whether the mask applied to the layer image should be inverted, affecting how the blend is applied. Type should be `BOOLEAN`.
+        - `blend_mode` (Required): Specifies the method of blending the layer image with the background. Different modes can produce various visual effects. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): Controls the transparency of the layer image, allowing for finer control over the blend intensity. Type should be `INT`.
+        - `layer_mask` (Optional): An optional mask that can be applied to the layer image, defining which parts of the layer should be visible in the final blend. Type should be `MASK`.
+    - Outputs:
+        - `image`: The result of blending the layer image with the background image according to the specified parameters. Type should be `IMAGE`.

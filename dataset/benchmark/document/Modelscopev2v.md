@@ -1,0 +1,14 @@
+- `Modelscopev2v`: The Modelscopev2v node is designed to transform visual content from one domain to another, leveraging advanced models to understand and manipulate visual data at a high level. It focuses on enabling complex visual transformations and enhancements, making it suitable for tasks that require deep understanding and modification of visual information.
+    - Inputs:
+        - `video_frames` (Required): Specifies the video frames to be transformed. Essential for defining the visual content that will undergo transformation. Type should be `IMAGE`.
+        - `prompt` (Required): A textual description of the desired transformation or outcome, guiding the model's understanding and manipulation of the visual content. Type should be `STRING`.
+        - `negative_prompt` (Required): A textual description of undesired elements or outcomes, helping to steer the model away from certain transformations. Type should be `STRING`.
+        - `model_path` (Required): The path to the model used for the transformation, determining the specific capabilities and characteristics of the transformation process. Type should be `STRING`.
+        - `strength` (Required): Controls the intensity of the transformation, allowing for fine-tuning of the visual output's adherence to the prompt. Type should be `FLOAT`.
+        - `num_inference_steps` (Required): Determines the number of steps the model takes to perform the transformation, affecting the quality and detail of the output. Type should be `INT`.
+        - `guidance_scale` (Required): Adjusts the influence of the prompt on the transformation, balancing between fidelity to the prompt and the original content. Type should be `FLOAT`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the transformation. Type should be `INT`.
+        - `enable_forward_chunking` (Required): Enables or disables forward chunking, potentially improving performance for large video frames. Type should be `BOOLEAN`.
+        - `enable_vae_slicing` (Required): Enables or disables VAE slicing, which can affect the model's efficiency and output quality. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The transformed video frames, representing the visual content after undergoing the specified transformation. Type should be `IMAGE`.

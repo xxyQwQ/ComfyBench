@@ -1,8 +1,0 @@
-- `AV_ClaudeApi`: The AV_ClaudeApi node facilitates the creation of an API interface for interacting with Claude's language model, enabling the configuration and utilization of Claude's AI capabilities through specified API keys, endpoints, and version information.
-    - Parameters:
-        - `claude_api_key`: The API key for Claude's service, essential for authenticating and gaining access to the language model's capabilities. Type should be `STRING`.
-        - `endpoint`: The URL endpoint for Claude's API, allowing for the specification of the base path for API requests. Defaults to the official Claude API endpoint if not provided. Type should be `STRING`.
-        - `version`: The version of Claude's API to use, enabling control over which features or improvements are accessible. Defaults to the latest version supported by the node. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `llm_api`: Provides an interface to Claude's language model, encapsulating the API key, endpoint, and version for making requests. Type should be `LLM_API`.

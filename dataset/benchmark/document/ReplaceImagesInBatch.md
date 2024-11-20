@@ -1,0 +1,7 @@
+- `ReplaceImagesInBatch`: This node is designed to replace a subset of images within a batch with a new set of images, starting from a specified index. It facilitates the manipulation of image batches by allowing selective updating of images, which can be useful in various image processing and augmentation tasks.
+    - Inputs:
+        - `original_images` (Required): The batch of original images that will be partially replaced. It plays a crucial role in the operation by serving as the base for the replacement process. Type should be `IMAGE`.
+        - `replacement_images` (Required): The images that will replace a portion of the original image batch. Their inclusion directly alters the content of the batch starting from the specified index. Type should be `IMAGE`.
+        - `start_index` (Required): The index within the original image batch from which the replacement should begin. It determines the starting point for the replacement operation. Type should be `INT`.
+    - Outputs:
+        - `image`: The modified image batch after the replacement operation has been performed. Type should be `IMAGE`.

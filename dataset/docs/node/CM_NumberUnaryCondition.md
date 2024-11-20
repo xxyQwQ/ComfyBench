@@ -1,7 +1,0 @@
-- `CM_NumberUnaryCondition`: This node performs unary operations on numbers based on predefined conditions, allowing for the evaluation of mathematical conditions involving a single numeric input. It abstracts the complexity of various unary mathematical operations into a simple interface.
-    - Parameters:
-        - `op`: Specifies the unary operation to be performed, chosen from a predefined set of conditions. This determines how the input number is evaluated. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `a`: The numeric input on which the unary operation is to be performed. This is the subject of the mathematical condition being evaluated. Type should be `NUMBER`.
-    - Outputs:
-        - `bool`: The result of the unary operation, indicating whether the condition is met (True) or not (False). Type should be `BOOL`.

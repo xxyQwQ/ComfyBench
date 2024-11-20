@@ -1,0 +1,6 @@
+- `CM_Vec4UnaryCondition`: This node performs unary operations on 4-dimensional vectors based on predefined conditions, evaluating to a boolean result. It abstracts complex vector operations into simple, condition-based checks.
+    - Inputs:
+        - `op` (Required): Specifies the unary operation to be performed on the vector, chosen from a predefined set of conditions. This determines how the vector is evaluated. Type should be `COMBO[STRING]`.
+        - `a` (Required): The 4-dimensional vector to be operated on. It serves as the input for the unary operation. Type should be `VEC4`.
+    - Outputs:
+        - `bool`: The boolean result of the unary operation performed on the 4-dimensional vector. Type should be `BOOL`.

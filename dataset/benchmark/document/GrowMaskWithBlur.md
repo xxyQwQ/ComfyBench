@@ -1,0 +1,14 @@
+- `GrowMaskWithBlur`: The GrowMaskWithBlur node is designed to manipulate masks by expanding or contracting them, optionally applying a blur effect, and performing various other transformations such as flipping, filling holes, and interpolating between frames. It provides a comprehensive set of operations for dynamic mask manipulation in image processing tasks, making it versatile for applications requiring precise control over mask geometry and appearance.
+    - Inputs:
+        - `mask` (Required): The input mask or batch of masks to be processed. It serves as the primary data upon which all transformations are applied, determining the base geometry for expansion, contraction, and other modifications. Type should be `MASK`.
+        - `expand` (Required): Specifies the amount by which the mask should be expanded or contracted. Positive values cause expansion, while negative values result in contraction, affecting the overall size and shape of the mask. Type should be `INT`.
+        - `incremental_expandrate` (Required): The rate at which the expand parameter is adjusted incrementally per frame, allowing for dynamic changes in mask size over a sequence of frames. Type should be `FLOAT`.
+        - `tapered_corners` (Required): A boolean flag that indicates whether to use tapered corners during mask manipulation, which can affect the smoothness and contour of the expanded or contracted mask. Type should be `BOOLEAN`.
+        - `flip_input` (Required): A boolean flag that determines whether the input mask should be flipped (inverted) before any other processing is done. This inversion can be useful for certain types of mask transformations. Type should be `BOOLEAN`.
+        - `blur_radius` (Required): The radius of the Gaussian blur to be applied to the mask. A value greater than 0 activates the blur effect, softening the edges and overall appearance of the mask. Type should be `FLOAT`.
+        - `lerp_alpha` (Required): The alpha value for linear interpolation between frames, enabling smooth transitions and blending of mask states across a sequence. Type should be `FLOAT`.
+        - `decay_factor` (Required): A factor that controls the decay of mask values over time, contributing to the fading or persistence of mask features in animated sequences. Type should be `FLOAT`.
+        - `fill_holes` (Optional): A boolean flag that, when enabled, causes holes within the mask to be filled. This operation can enhance mask solidity but may be computationally intensive. Type should be `BOOLEAN`.
+    - Outputs:
+        - `mask`: The modified mask after applying expansion, contraction, blur, and other transformations, ready for further processing or visualization. Type should be `MASK`.
+        - `mask_inverted`: An inverted version of the modified mask, providing an alternative representation that can be useful in certain processing contexts. Type should be `MASK`.

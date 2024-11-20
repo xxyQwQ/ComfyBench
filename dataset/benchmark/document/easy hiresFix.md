@@ -1,0 +1,21 @@
+- `easy hiresFix`: The `easy hiresFix` node is designed to enhance the resolution and detail of images, typically used as a post-processing step to refine and improve the visual quality of generated images. It focuses on fixing high-resolution aspects, making it suitable for applications requiring detailed and clear visual outputs.
+    - Inputs:
+        - `model_name` (Required): Specifies the neural network model used for the upscale process, impacting the quality and method of enhancement. Type should be `COMBO[STRING]`.
+        - `rescale_after_model` (Required): Determines whether the image is rescaled after being processed by the model, affecting the final image size and detail. Type should be `COMBO[BOOLEAN]`.
+        - `rescale_method` (Required): Defines the method used for rescaling the image, influencing the quality and appearance of the final output. Type should be `COMBO[STRING]`.
+        - `rescale` (Required): Specifies how the image is rescaled, by percentage or to specific dimensions, directly impacting the output size. Type should be `COMBO[STRING]`.
+        - `percent` (Required): The percentage to rescale the image by when 'rescale' is set to 'by percentage', affecting the output image size. Type should be `INT`.
+        - `width` (Required): The target width of the image when 'rescale' is set to 'to Width/Height', determining the output dimensions. Type should be `INT`.
+        - `height` (Required): The target height of the image when 'rescale' is set to 'to Width/Height', determining the output dimensions. Type should be `INT`.
+        - `longer_side` (Required): Specifies the longer side dimension for rescaling while maintaining aspect ratio, used when 'rescale' is set to 'to longer side - maintain aspect'. Type should be `INT`.
+        - `crop` (Required): Indicates whether and how the image should be cropped, affecting the composition of the final output. Type should be `COMBO[STRING]`.
+        - `image_output` (Required): Determines the format of the output image, influencing how the result is saved or displayed. Type should be `COMBO[STRING]`.
+        - `link_id` (Required): A unique identifier for linking the processed image with other elements or processes, useful for tracking and organization. Type should be `INT`.
+        - `save_prefix` (Required): A prefix added to the file name of the saved image, useful for organization and identification. Type should be `STRING`.
+        - `pipe` (Optional): An optional pipeline of processes the image may go through before or after the upscale process, affecting the overall workflow. Type should be `PIPE_LINE`.
+        - `image` (Optional): The input image to be upscaled, serving as the direct subject of the enhancement process. Type should be `IMAGE`.
+        - `vae` (Optional): An optional VAE model that can be used in conjunction with the upscale process for additional image processing. Type should be `VAE`.
+    - Outputs:
+        - `pipe`: The output pipeline, potentially including the upscaled image among other processed elements. Type should be `PIPE_LINE`.
+        - `image`: The upscaled image, showcasing improved resolution and detail. Type should be `IMAGE`.
+        - `latent`: A latent representation of the image, useful for further processing or analysis. Type should be `LATENT`.

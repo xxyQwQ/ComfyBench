@@ -1,0 +1,10 @@
+- `Log File [Dream]`: The Log File [Dream] node is designed for logging and organizing log entries related to frame counters and other specified inputs within a dream project. It supports conditional logging based on the active state, allows for customization of log file paths, and can output logs to both a file and stdout, facilitating both real-time monitoring and persistent record-keeping.
+    - Inputs:
+        - `frame_counter` (Required): A required input that integrates frame counting into the logging process, enhancing the log's detail and utility for animation and timing analysis. Type should be `FRAME_COUNTER`.
+        - `log_directory` (Required): Specifies the directory where the log file will be saved. This allows for flexible log management and organization within the file system. Type should be `STRING`.
+        - `log_filename` (Required): Defines the name of the log file where entries will be recorded. This enables easy identification and access to specific log files for review or analysis. Type should be `STRING`.
+        - `stdout` (Required): Determines whether log entries are also echoed to the standard output (stdout), enabling real-time monitoring of log messages. Type should be `BOOLEAN`.
+        - `active` (Required): Controls whether logging is active. If false, logging operations are bypassed, allowing for conditional logging based on runtime conditions. Type should be `BOOLEAN`.
+        - `clock_has_i_hours` (Required): Indicates whether the clock format for timestamps in log entries should be 24-hour. This affects the readability and standardization of time records in logs. Type should be `BOOLEAN`.
+        - `entry_i` (Optional): Optional log entry inputs, allowing for the aggregation of multiple log entries into a single log file. Supports up to 8 entries, enhancing log detail and organization. Type should be `LOG_ENTRY`.
+    - Outputs:

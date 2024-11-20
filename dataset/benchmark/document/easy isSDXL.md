@@ -1,0 +1,6 @@
+- `easy isSDXL`: The `easy isSDXL` node is designed to determine if the current model configuration or environment is set to use the SDXL (Stable Diffusion XL) model. This node abstractly assesses the operational context to ensure compatibility or optimize settings for utilizing the SDXL model, facilitating seamless integration or transition between different model scales.
+    - Inputs:
+        - `optional_pipe` (Optional): An optional parameter that allows specifying a pipeline configuration. Its presence can influence the determination process by providing context about the operational pipeline. Type should be `PIPE_LINE`.
+        - `optional_clip` (Optional): An optional parameter that allows specifying a CLIP model configuration. Its inclusion can affect the determination process by providing additional context about the model environment. Type should be `CLIP`.
+    - Outputs:
+        - `boolean`: Indicates whether the current model configuration or environment is set to use the SDXL model, returning a boolean value. Type should be `BOOLEAN`.

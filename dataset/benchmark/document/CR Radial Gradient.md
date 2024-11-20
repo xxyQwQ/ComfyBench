@@ -1,0 +1,14 @@
+- `CR Radial Gradient`: The CR Radial Gradient node is designed to create visually appealing radial gradient patterns. It leverages mathematical models to blend colors or intensities from a central point outward, allowing for the creation of dynamic and customizable radial gradients that can enhance the visual aesthetics of graphics or UI elements.
+    - Inputs:
+        - `width` (Required): Sets the width of the canvas, influencing the radial gradient's spread and how it occupies the visual space. Type should be `INT`.
+        - `height` (Required): Determines the height of the canvas on which the radial gradient is applied, affecting the scale and distribution of the gradient pattern. Type should be `INT`.
+        - `start_color` (Required): Specifies the starting color of the radial gradient. It sets the tone for the center of the gradient, influencing the overall appearance and mood of the generated pattern. Type should be `COMBO[STRING]`.
+        - `end_color` (Required): Defines the ending color of the radial gradient. This color gradually blends with the starting color towards the edges, creating a smooth transition and adding depth to the visual effect. Type should be `COMBO[STRING]`.
+        - `gradient_distance` (Required): Specifies the extent of the gradient's transition area, affecting how gradually the colors blend from the center to the edges. Type should be `FLOAT`.
+        - `radial_center_x` (Required): Determines the x-coordinate of the radial gradient's center point on the canvas, allowing for precise positioning of the gradient's origin. Type should be `FLOAT`.
+        - `radial_center_y` (Required): Sets the y-coordinate of the radial gradient's center point on the canvas, enabling accurate placement of the gradient's starting point. Type should be `FLOAT`.
+        - `start_color_hex` (Optional): Provides a hexadecimal representation of the custom starting color, offering precise control over the gradient's initial color scheme. Type should be `STRING`.
+        - `end_color_hex` (Optional): Gives a hexadecimal code for the custom ending color, allowing for exact specification of the gradient's final color in the transition. Type should be `STRING`.
+    - Outputs:
+        - `IMAGE`: The resulting image featuring the applied radial gradient, showcasing the blend of specified colors in a radial pattern. Type should be `IMAGE`.
+        - `show_Help`: Provides a link or guidance for further assistance or information about the radial gradient node. Type should be `STRING`.

@@ -1,0 +1,10 @@
+- `Triangle Event Curve [Dream]`: The Triangle Event Curve node generates a triangular-shaped curve over time, designed for creating dynamic, event-driven animations. It calculates values based on a frame counter and parameters defining the curve's peak, width, and center, making it suitable for timed animations and transitions.
+    - Inputs:
+        - `frame_counter` (Required): Represents the current frame in the animation, used to calculate the curve's value at any given time. Type should be `FRAME_COUNTER`.
+        - `max_value` (Required): The peak value of the triangle curve, defining its maximum height. Type should be `FLOAT`.
+        - `min_value` (Required): The base value of the triangle curve, defining its minimum height. Type should be `FLOAT`.
+        - `width_seconds` (Required): The duration in seconds over which the peak of the triangle curve is reached from its base value. Type should be `FLOAT`.
+        - `center_seconds` (Required): The point in time (in seconds) at which the peak of the triangle curve occurs. Type should be `FLOAT`.
+    - Outputs:
+        - `FLOAT`: The calculated float value of the curve at the current frame. Type should be `FLOAT`.
+        - `INT`: An integer representation of the calculated curve value at the current frame. Type should be `INT`.

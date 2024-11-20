@@ -1,6 +1,0 @@
-- `JWMaskSequenceJoin`: This node is designed to join two mask sequences into a single, concatenated mask sequence. It operates by merging the input mask sequences along a specified dimension, effectively combining them into a unified sequence that can be used for further processing or analysis.
-    - Parameters:
-    - Inputs:
-        - `mask_sequence_i`: unknown Type should be `MASK_SEQUENCE`.
-    - Outputs:
-        - `mask_sequence`: The resulting mask sequence obtained by concatenating the two input mask sequences. This unified sequence can be utilized for subsequent operations that require a combined view of the input masks. Type should be `MASK_SEQUENCE`.

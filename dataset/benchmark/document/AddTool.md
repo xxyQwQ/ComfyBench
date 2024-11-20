@@ -1,0 +1,8 @@
+- `AddTool`: Facilitates the dynamic addition of tools to conversational agents by cloning and registering functions within these agents. This process enhances the agents' capabilities, allowing them to perform additional tasks as specified by the tool being added.
+    - Inputs:
+        - `tool` (Required): Represents the tool to be added, including its function, name, and description. This parameter is crucial for defining the new capabilities to be integrated into the agent. Type should be `TOOL`.
+        - `assistant` (Required): The conversational agent to which the tool will be added. This agent is cloned to ensure modifications do not affect the original instance. Type should be `AGENT`.
+        - `executor` (Optional): An optional agent responsible for executing the tool's function. If not provided, the assistant itself is used as the executor. Type should be `AGENT`.
+    - Outputs:
+        - `assistant`: The modified conversational agent with the new tool added. Type should be `AGENT`.
+        - `executor`: The agent designated to execute the added tool's function, which may be the same as the assistant if no executor is specified. Type should be `AGENT`.

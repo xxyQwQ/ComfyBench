@@ -1,0 +1,13 @@
+- `GenerateNoise`: The GenerateNoise node is designed to create noise patterns that can be used to augment or modify latent representations in generative models. It provides a flexible way to generate noise with specific characteristics, such as size, seed, and intensity, allowing for controlled variations in the generated content.
+    - Inputs:
+        - `width` (Required): Determines the width of the generated noise pattern, enabling customization of the noise to fit specific dimensions. Type should be `INT`.
+        - `height` (Required): Sets the height of the generated noise pattern, allowing for the generation of noise that matches the desired dimensions. Type should be `INT`.
+        - `batch_size` (Required): Specifies the number of noise samples to generate, allowing for batch processing of multiple noise patterns simultaneously. Type should be `INT`.
+        - `seed` (Required): Controls the randomness of the noise generation, ensuring reproducibility of the noise patterns when the same seed is used. Type should be `INT`.
+        - `multiplier` (Required): Adjusts the intensity of the generated noise, providing a means to amplify or reduce the noise effect. Type should be `FLOAT`.
+        - `constant_batch_noise` (Required): When enabled, uses the same noise pattern across all samples in a batch, ensuring uniform noise characteristics. Type should be `BOOLEAN`.
+        - `normalize` (Required): Normalizes the generated noise, ensuring that its distribution has a standard deviation of 1. Type should be `BOOLEAN`.
+        - `model` (Optional): Optional parameter that, if provided, can influence the noise generation process based on the model's characteristics, such as adjusting the noise to align with specific model requirements or enhancing compatibility with the model's latent space. Type should be `MODEL`.
+        - `sigmas` (Optional): Optional parameter that allows for scaling the noise based on the difference between two sigma values, typically used in diffusion models. This scaling adjusts the intensity and variability of the noise, directly influencing the characteristics of the generated patterns. Type should be `SIGMAS`.
+    - Outputs:
+        - `latent`: The generated noise pattern, ready to be used in further processing or as part of a generative model's input. Type should be `LATENT`.

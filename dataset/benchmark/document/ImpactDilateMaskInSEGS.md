@@ -1,0 +1,6 @@
+- `ImpactDilateMaskInSEGS`: This node applies a dilation operation to the masks within a collection of segmentation elements (SEGS), potentially expanding their boundaries. It's designed to modify the spatial geometry of segmentation masks, making them larger or smaller based on the dilation parameter.
+    - Inputs:
+        - `segs` (Required): Represents the collection of segmentation elements (SEGS) to which the dilation operation will be applied. It's crucial for defining the input segmentation masks that will undergo geometric transformation. Type should be `SEGS`.
+        - `dilation` (Required): Specifies the intensity of the dilation operation. Positive values cause the masks to expand, while negative values lead to contraction. This parameter directly influences the geometric transformation of the segmentation masks. Type should be `INT`.
+    - Outputs:
+        - `segs`: The output is a modified collection of segmentation elements (SEGS) where each mask has been dilated according to the specified dilation parameter. Type should be `SEGS`.

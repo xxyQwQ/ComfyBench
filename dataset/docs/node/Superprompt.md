@@ -1,8 +1,0 @@
-- `Superprompt`: The Superprompt node utilizes a T5 model fine-tuned on the SuperPrompt dataset to enhance text prompts with more detailed descriptions. This process is designed to improve the performance of text-to-image models by providing them with more elaborate prompts.
-    - Parameters:
-        - `instruction_prompt`: A guiding instruction for the prompt expansion, setting the context for how the prompt should be elaborated. Type should be `STRING`.
-        - `prompt`: The initial text prompt to be expanded into a more detailed description. Type should be `STRING`.
-        - `max_new_tokens`: Specifies the maximum number of new tokens to be generated, controlling the length of the expanded prompt. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `string`: The enhanced, more detailed version of the original text prompt. Type should be `STRING`.

@@ -1,0 +1,5 @@
+- `SaltMaskCeilingRegion`: This node is designed to identify and isolate the ceiling regions within a given set of masks. It processes each mask to highlight the ceiling areas, facilitating focused analysis or modifications on these specific regions.
+    - Inputs:
+        - `masks` (Required): The input masks to be processed for ceiling region identification. This parameter is crucial for determining the areas within each mask that correspond to ceiling regions. Type should be `MASK`.
+    - Outputs:
+        - `MASKS`: The output masks with the ceiling regions identified and isolated from the original input masks. Type should be `MASK`.

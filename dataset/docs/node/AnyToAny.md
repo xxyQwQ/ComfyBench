@@ -1,7 +1,0 @@
-- `AnyToAny`: The AnyToAny node is designed to dynamically evaluate and transform input data based on a user-defined function. It abstracts the complexity of applying custom operations on data, allowing for versatile data manipulation and transformation.
-    - Parameters:
-        - `function`: A string representing a lambda function defined by the user. This function dictates how the input value 'v' is transformed, showcasing the node's capability to execute custom data manipulations. Type should be `STRING`.
-    - Inputs:
-        - `v`: Represents the input value to be transformed. Its flexibility in accepting any data type makes it central to the node's operation, enabling a wide range of transformations. Type should be `*`.
-    - Outputs:
-        - `*`: The output is dynamically determined by the user-defined function, showcasing the node's versatility in handling and transforming various data types. Type should be `*`.

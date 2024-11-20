@@ -1,0 +1,7 @@
+- `ModelMergeSimple`: The ModelMergeSimple node is designed for merging two models by blending their parameters based on a specified ratio. This node facilitates the creation of hybrid models that combine the strengths or characteristics of both input models.
+    - Inputs:
+        - `model1` (Required): The first model to be merged. It serves as the base model onto which patches from the second model are applied. Type should be `MODEL`.
+        - `model2` (Required): The second model whose patches are applied onto the first model, influenced by the specified ratio. Type should be `MODEL`.
+        - `ratio` (Required): Determines the blend ratio between the two models' parameters, affecting the degree to which each model influences the merged output. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The resulting merged model, incorporating elements from both input models according to the specified ratio. Type should be `MODEL`.

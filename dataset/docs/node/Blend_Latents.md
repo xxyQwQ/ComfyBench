@@ -1,9 +1,0 @@
-- `Blend Latents`: The Blend Latents node is designed to blend two sets of latent representations using a variety of blending modes such as add, multiply, divide, subtract, overlay, screen, difference, exclusion, hard light, linear dodge, soft light, and random noise. This blending process allows for the creation of new, hybrid latent representations by combining features from both input sets in a controlled manner, leveraging different mathematical operations to achieve diverse visual effects.
-    - Parameters:
-        - `operation`: Specifies the blending mode to be used, such as add, multiply, divide, etc. This choice significantly affects the visual outcome of the blending process. Type should be `COMBO[STRING]`.
-        - `blend`: A float value representing the blending factor, which determines the proportion of influence each set of latents has on the final blended output. Type should be `FLOAT`.
-    - Inputs:
-        - `latent_a`: The first set of latent representations to be blended. It plays a crucial role in determining the base characteristics of the blended output. Type should be `LATENT`.
-        - `latent_b`: The second set of latent representations to be blended with the first. It contributes additional characteristics to the blended output, influencing the final visual effect. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The resulting set of blended latent representations, which combines features from both input sets according to the specified blending mode and factor. Type should be `LATENT`.

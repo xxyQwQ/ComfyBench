@@ -1,7 +1,0 @@
-- `Json comparator [Crystools]`: This node is designed to compare two JSON objects, identifying differences between them such as added, removed, or changed elements. It abstracts the complexity of deep JSON comparison, providing a straightforward way to visualize changes between two JSON states.
-    - Parameters:
-    - Inputs:
-        - `json_old`: The original JSON object to be compared. It serves as the baseline for the comparison. Type should be `JSON`.
-        - `json_new`: The new JSON object to be compared against the original. Differences detected between this and the original JSON will be highlighted. Type should be `JSON`.
-    - Outputs:
-        - `json_compared`: A string representation of the differences found between the two JSON objects, including added, removed, or changed elements. Type should be `JSON`.

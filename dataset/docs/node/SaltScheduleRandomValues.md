@@ -1,9 +1,0 @@
-- `SaltScheduleRandomValues`: This node is designed to generate a list of random values within a specified range, optionally forcing the values to be integers. It's useful for creating randomized schedules or sequences where variability is desired.
-    - Parameters:
-        - `count`: Specifies the number of random values to generate, dictating the length of the output list. Type should be `INT`.
-        - `min_value`: Defines the minimum value that can be generated, setting the lower bound of the random range. Type should be `FLOAT`.
-        - `max_value`: Sets the upper limit for the random values, establishing the maximum possible value in the range. Type should be `FLOAT`.
-        - `force_integer`: Determines whether the generated random values should be integers, adding a layer of control over the output data type. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `schedule_list`: The list of generated random values, adhering to the specified constraints and data type. Type should be `LIST`.

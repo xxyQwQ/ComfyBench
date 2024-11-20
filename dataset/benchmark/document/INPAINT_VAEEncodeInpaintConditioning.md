@@ -1,0 +1,12 @@
+- `INPAINT_VAEEncodeInpaintConditioning`: This node is designed for encoding and conditioning in the context of inpainting tasks, leveraging a Variational Autoencoder (VAE) to process and transform image pixels and masks into a format suitable for inpainting. It encapsulates the functionality to encode both positive and negative conditioning alongside generating latent representations for inpainting and sampling.
+    - Inputs:
+        - `positive` (Required): Represents the positive conditioning input, crucial for guiding the inpainting process in a desired direction. Type should be `CONDITIONING`.
+        - `negative` (Required): Serves as the negative conditioning input, used to steer the inpainting away from undesired outcomes. Type should be `CONDITIONING`.
+        - `vae` (Required): The Variational Autoencoder (VAE) model used for encoding the image pixels into a latent space representation. Type should be `VAE`.
+        - `pixels` (Required): The image pixels to be inpainted, serving as the primary data for the encoding and conditioning process. Type should be `IMAGE`.
+        - `mask` (Required): The mask indicating areas to inpaint, essential for focusing the inpainting process on specific regions of the image. Type should be `MASK`.
+    - Outputs:
+        - `positive`: The encoded and conditioned positive output, ready for inpainting. Type should be `CONDITIONING`.
+        - `negative`: The encoded and conditioned negative output, prepared for the inpainting process. Type should be `CONDITIONING`.
+        - `latent_inpaint`: A latent representation specifically tailored for inpainting, including samples and a noise mask. Type should be `LATENT`.
+        - `latent_samples`: The latent samples generated during the encoding process, useful for further inpainting tasks. Type should be `LATENT`.

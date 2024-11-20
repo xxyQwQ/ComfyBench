@@ -1,8 +1,0 @@
-- `ADE_LoadAnimateDiffModelWithCameraCtrl`: This node is designed to load an AnimateDiff model with integrated camera control capabilities, enabling the application of camera movements and adjustments directly within the AnimateDiff framework. It facilitates the incorporation of dynamic camera control parameters into the AnimateDiff model, enhancing the animation process with more sophisticated visual effects.
-    - Parameters:
-        - `model_name`: Specifies the name of the motion model to be loaded. It is crucial for identifying the specific AnimateDiff model to which camera control features will be added. Type should be `COMBO[STRING]`.
-        - `camera_ctrl`: Defines the camera control parameters to be injected into the AnimateDiff model. This input is essential for customizing the camera movements and effects within the animation. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `ad_settings`: Optional settings for the AnimateDiff model that allow for further customization of the animation process. Type should be `AD_SETTINGS`.
-    - Outputs:
-        - `MOTION_MODEL`: The modified AnimateDiff model with integrated camera control capabilities, ready for animation tasks. Type should be `MOTION_MODEL_ADE`.

@@ -1,0 +1,14 @@
+- `SaltMaskCropRegion`: This node focuses on cropping regions from a batch of masks based on a specified region type and padding. It dynamically adjusts the crop to focus on areas of interest within each mask, resizing the cropped regions to a uniform size for batch processing. The node is designed to enhance or isolate specific features within masks, facilitating further analysis or processing.
+    - Inputs:
+        - `masks` (Required): A batch of masks to be processed for cropping. This parameter is crucial for determining the areas within each mask that will be cropped based on the specified region type and padding. Type should be `MASK`.
+        - `padding` (Required): The padding value adds a specified number of pixels around the crop region. This parameter allows for flexibility in the size of the cropped area, ensuring that important features are not clipped. Type should be `INT`.
+        - `region_type` (Required): Specifies the type of region to focus on for cropping, such as 'dominant'. This parameter influences how the cropping algorithm identifies and isolates areas of interest within each mask. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `cropped_masks`: The batch of masks after cropping, resized to a uniform size for consistency across the batch. Type should be `MASK`.
+        - `crop_data_batch`: A list of crop data for each mask, detailing the specific crop dimensions and locations. Type should be `CROP_DATA_BATCH`.
+        - `top_int`: The top coordinate of the crop region for the first mask in the batch. Type should be `INT`.
+        - `left_int`: The left coordinate of the crop region for the first mask in the batch. Type should be `INT`.
+        - `right_int`: The right coordinate of the crop region for the first mask in the batch. Type should be `INT`.
+        - `bottom_int`: The bottom coordinate of the crop region for the first mask in the batch. Type should be `INT`.
+        - `width_int`: The width of the cropped region for the first mask in the batch, providing insight into the size of the cropped area. Type should be `INT`.
+        - `height_int`: The height of the cropped region for the first mask in the batch, offering a measure of the cropped area's size. Type should be `INT`.

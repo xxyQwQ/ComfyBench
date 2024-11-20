@@ -1,0 +1,9 @@
+- `OneButtonArtify`: The OneButtonArtify node is designed to transform text prompts into art-inspired versions by incorporating artistic styles and elements. It allows users to specify an artist, the number of artists to influence the output, and the mode of artification, providing a creative and customizable approach to generating art-themed text prompts.
+    - Inputs:
+        - `prompt` (Required): The main text input that will be transformed into an art-inspired version. It serves as the base content for artification. Type should be `STRING`.
+        - `artist` (Required): Specifies the artist or artistic style to apply to the prompt, allowing for a wide range of artistic influences on the output. Type should be `COMBO[STRING]`.
+        - `amount_of_artists` (Required): Determines how many artists' styles will influence the artified prompt, offering control over the diversity of artistic expression. Type should be `COMBO[STRING]`.
+        - `artify_mode` (Required): Defines the mode of artification, such as standard or other specified modes, influencing how the artistic transformation is applied. Type should be `COMBO[STRING]`.
+        - `seed` (Optional): An optional parameter that sets the seed for random elements in the artification process, ensuring reproducibility of results. Type should be `INT`.
+    - Outputs:
+        - `artified_prompt`: The result of the artification process, a text prompt transformed by specified artistic styles and elements. Type should be `STRING`.

@@ -1,0 +1,5 @@
+- `IG Float`: The IG Float node is designed to handle floating-point numbers within a specified range, allowing for precise numerical inputs in various computational tasks. It serves as a fundamental building block in operations requiring decimal values, facilitating accurate calculations and data manipulation.
+    - Inputs:
+        - `value` (Required): Specifies the floating-point number to be processed. This parameter is crucial for defining the numerical input that the node will handle, directly influencing the output based on the given value. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: Returns the processed floating-point number, which is the same as the input value. This output is essential for further numerical computations or as input to other nodes requiring decimal values. Type should be `FLOAT`.

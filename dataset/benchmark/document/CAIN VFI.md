@@ -1,0 +1,9 @@
+- `CAIN VFI`: The CAIN VFI node is designed for video frame interpolation, leveraging deep learning models to predict intermediate frames between two consecutive frames in a video sequence. It utilizes the CAIN architecture, which focuses on capturing temporal and spatial details through an encoder-decoder structure, to enhance the smoothness and quality of video playback.
+    - Inputs:
+        - `ckpt_name` (Required): The checkpoint name specifies the pre-trained model to be used for frame interpolation, enabling the node to load the appropriate weights for the CAIN model. Type should be `COMBO[STRING]`.
+        - `frames` (Required): A tensor containing the consecutive frames of a video. These frames are the input to the CAIN model for generating intermediate frames. Type should be `IMAGE`.
+        - `clear_cache_after_n_frames` (Required): This parameter controls the cache clearing mechanism to manage memory usage during the frame interpolation process. Type should be `INT`.
+        - `multiplier` (Required): Defines the number of intermediate frames to be generated between each pair of consecutive frames, dictating the smoothness of the output video. Type should be `INT`.
+        - `optional_interpolation_states` (Optional): Optional states that can be passed to influence the interpolation process, offering flexibility for different video processing scenarios and potentially affecting the selection of frames for interpolation. Type should be `INTERPOLATION_STATES`.
+    - Outputs:
+        - `image`: The output is a tensor of interpolated frames, enhancing the video's fluidity by filling in the gaps between original frames. Type should be `IMAGE`.

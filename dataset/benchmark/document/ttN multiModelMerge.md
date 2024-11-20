@@ -1,0 +1,21 @@
+- `ttN multiModelMerge`: The `ttN_multiModelMerge` node specializes in combining multiple models or CLIPs through various interpolation methods, enabling the creation of hybrid models that leverage the strengths of each input model. It supports a range of interpolation strategies, such as weighted sum and addition of differences, to fine-tune the merging process according to specific requirements.
+    - Inputs:
+        - `ckpt_A_name` (Required): Specifies the checkpoint name for model A, used as an input for model merging. Type should be `COMBO[STRING]`.
+        - `config_A_name` (Required): Specifies the configuration name for model A, used alongside the checkpoint name to load the model. Type should be `COMBO[STRING]`.
+        - `ckpt_B_name` (Required): Specifies the checkpoint name for model B, used as an input for model merging. Type should be `COMBO[STRING]`.
+        - `config_B_name` (Required): Specifies the configuration name for model B, used alongside the checkpoint name to load the model. Type should be `COMBO[STRING]`.
+        - `ckpt_C_name` (Required): Specifies the checkpoint name for model C, used as an input for model merging. Type should be `COMBO[STRING]`.
+        - `config_C_name` (Required): Specifies the configuration name for model C, used alongside the checkpoint name to load the model. Type should be `COMBO[STRING]`.
+        - `model_interpolation` (Required): Defines the interpolation method to be used for merging models. Type should be `COMBO[STRING]`.
+        - `model_multiplier` (Required): The multiplier factor used in the interpolation of models. Type should be `FLOAT`.
+        - `clip_interpolation` (Required): Defines the interpolation method to be used for merging CLIP models. Type should be `COMBO[STRING]`.
+        - `clip_multiplier` (Required): The multiplier factor used in the interpolation of CLIP models. Type should be `FLOAT`.
+        - `model_A_override` (Optional): Overrides the model A with a specified model, bypassing the need for a checkpoint. Type should be `MODEL`.
+        - `model_B_override` (Optional): Overrides the model B with a specified model, bypassing the need for a checkpoint. Type should be `MODEL`.
+        - `model_C_override` (Optional): Overrides the model C with a specified model, bypassing the need for a checkpoint. Type should be `MODEL`.
+        - `clip_A_override` (Optional): Overrides the CLIP model A with a specified CLIP, bypassing the need for a checkpoint. Type should be `CLIP`.
+        - `clip_B_override` (Optional): Overrides the CLIP model B with a specified CLIP, bypassing the need for a checkpoint. Type should be `CLIP`.
+        - `clip_C_override` (Optional): Overrides the CLIP model C with a specified CLIP, bypassing the need for a checkpoint. Type should be `CLIP`.
+    - Outputs:
+        - `model`: The resulting merged model, which is a hybrid of the input models, incorporating features from both according to the chosen interpolation method. Type should be `MODEL`.
+        - `clip`: The resulting merged CLIP model, combining the features of both input CLIP models based on the specified interpolation strategy. Type should be `CLIP`.

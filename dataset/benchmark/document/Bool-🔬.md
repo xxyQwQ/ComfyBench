@@ -1,0 +1,5 @@
+- `Bool-🔬`: The Bool node is designed to process boolean inputs, performing logical operations based on the provided boolean value.
+    - Inputs:
+        - `value` (Required): Represents the boolean input to the node, determining the logical operation to be performed. Type should be `BOOLEAN`.
+    - Outputs:
+        - `BOOLEAN`: Outputs the processed boolean value, reflecting the result of the logical operation. Type should be `BOOLEAN`.

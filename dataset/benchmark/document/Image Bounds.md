@@ -1,0 +1,5 @@
+- `Image Bounds`: The Image Bounds node is designed to calculate the bounding box of an image, effectively identifying the outermost edges where content exists. This functionality is crucial for tasks that require understanding of image dimensions and spatial content, such as cropping, resizing, or further image analysis.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the input image for which the bounding box is to be calculated. It plays a critical role in determining the spatial limits of the content within the image. Type should be `IMAGE`.
+    - Outputs:
+        - `image_bounds`: The 'image_bounds' output provides the calculated bounding box of the input image, represented as a list of tuples with the format (min_row, max_row, min_col, max_col) for each image in the batch. Type should be `IMAGE_BOUNDS`.

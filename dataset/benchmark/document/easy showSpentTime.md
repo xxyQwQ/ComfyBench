@@ -1,0 +1,5 @@
+- `easy showSpentTime`: The `showSpentTime` node is designed to display the time spent on a particular operation within a pipeline. It captures and reports the duration of specific tasks, aiding in performance analysis and optimization.
+    - Inputs:
+        - `pipe` (Required): The `pipe` parameter represents the pipeline context, providing essential information about the current state and settings of the pipeline, including time-related data. Type should be `PIPE_LINE`.
+        - `spent_time` (Required): The `spent_time` parameter optionally specifies the time spent on the operation. If not provided, the node will attempt to calculate or retrieve this information from the pipeline context. Type should be `INFO`.
+    - Outputs:

@@ -1,6 +1,0 @@
-- `Int Input [Dream]`: The 'Int Input' node allows users to input integer values into a system, providing a straightforward interface for numerical data entry. This node is essential for scenarios requiring precise numerical inputs, such as setting parameters or configurations that rely on integer values.
-    - Parameters:
-        - `value`: Represents the integer value to be input by the user. It is crucial for defining the exact numerical input that the system will process. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `INT`: Outputs the integer value input by the user, facilitating its use in subsequent operations or calculations within the system. Type should be `INT`.

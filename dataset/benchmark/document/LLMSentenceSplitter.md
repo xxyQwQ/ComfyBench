@@ -1,0 +1,6 @@
+- `LLMSentenceSplitter`: The LLMSentenceSplitter node is designed to segment text into smaller, manageable chunks based on specified size and overlap criteria. This functionality is crucial for processing large documents or texts in a way that makes them more amenable to detailed analysis or further processing steps.
+    - Inputs:
+        - `chunk_size` (Required): Specifies the maximum size of each text chunk. It determines how large each segment of text will be, directly impacting the granularity of the splitting process. Type should be `INT`.
+        - `chunk_overlap` (Required): Defines the number of characters that will overlap between consecutive text chunks. This overlap ensures continuity and context preservation across the segmented text. Type should be `INT`.
+    - Outputs:
+        - `llm_sentence_splitter`: Produces an instance of a SentenceSplitter, configured with the provided chunk size and overlap, ready to be used for text segmentation. Type should be `LLM_SENTENCE_SPLITTER`.

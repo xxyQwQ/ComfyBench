@@ -1,7 +1,0 @@
-- `Unary Mask Op`: The Unary Mask Op node applies a specified unary operation to a given mask image, transforming it according to the operation chosen. This node supports operations such as inverting, averaging, rounding, clamping, and taking the absolute value of the mask, enabling various forms of mask manipulation.
-    - Parameters:
-        - `op`: The 'op' parameter specifies the unary operation to apply to the mask image, such as invert, average, round, clamp, or abs. This choice dictates the nature of the transformation performed on the mask. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The 'image' parameter represents the mask image to be transformed. It is crucial for determining the base data on which the unary operation will be applied, directly influencing the outcome of the transformation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The transformed mask image, resulting from the application of the specified unary operation. Type should be `IMAGE`.

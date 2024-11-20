@@ -1,0 +1,8 @@
+- `SAIPrimitiveConverter`: The SAIPrimitiveConverter node is designed to facilitate the conversion of input values between different primitive data types, such as strings, lists, and dictionaries. It dynamically processes input based on specified output types and conditions, offering flexibility in handling various data structures and formats.
+    - Inputs:
+        - `input_value` (Required): The raw input value to be converted. Its role is pivotal in determining the final output, as the conversion process adapts based on this value's type and content. Type should be `*`.
+        - `output_type` (Required): Specifies the desired type of the conversion output, such as 'LIST', 'DICT', or 'STRING', guiding the conversion process and determining the structure of the result. Type should be `COMBO[STRING]`.
+        - `sub_data_type` (Optional): An optional parameter that further specifies the type of the elements within the input value, enhancing the conversion accuracy for complex data structures. Type should be `COMBO[STRING]`.
+        - `index_or_key` (Optional): An optional parameter used to extract a specific element from the input value when converting to a 'STRING' type, based on either an index in a list or a key in a dictionary. Type should be `STRING`.
+    - Outputs:
+        - `output`: The result of the conversion process, which can vary in type (e.g., list, dictionary, string) based on the specified output type and conditions of the input. Type should be `*`.

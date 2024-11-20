@@ -1,0 +1,8 @@
+- `LayerColor_ Brightness & Contrast`: This node is designed to adjust the brightness, contrast, and saturation of images. It processes each image individually, allowing for fine-tuned enhancements to image aesthetics by modifying these three key visual parameters.
+    - Inputs:
+        - `image` (Required): The input image or images to be processed. This parameter is crucial for the node's operation as it directly influences the visual output by applying the specified adjustments. Type should be `IMAGE`.
+        - `brightness` (Required): Determines the level of brightness adjustment to be applied to the input images. A pivotal parameter for altering the image's luminance. Type should be `FLOAT`.
+        - `contrast` (Required): Specifies the degree of contrast adjustment. This parameter is essential for enhancing or reducing the difference between the darkest and lightest tones in the image. Type should be `FLOAT`.
+        - `saturation` (Required): Controls the saturation level, affecting the intensity of the image's colors. It plays a significant role in the visual impact of the image. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output images after applying brightness, contrast, and saturation adjustments. This reflects the visual modifications made to the input images, showcasing the node's capability to enhance image aesthetics. Type should be `IMAGE`.

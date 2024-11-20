@@ -1,0 +1,5 @@
+- `LineArt_Preprocessor_Provider_for_SEGS __Inspire`: This node provides a preprocessor for generating line art from images, tailored for use with SEGS (Semantic Edge Guided Synthesis) models. It allows for the adjustment of the coarseness of the line art, enabling a range of artistic effects from fine to bold lines.
+    - Inputs:
+        - `coarse` (Required): Determines whether the line art generated should be coarse or fine. Enabling this option results in bolder, more pronounced lines, while disabling it produces finer, more detailed line art. Type should be `BOOLEAN`.
+    - Outputs:
+        - `segs_preprocessor`: Returns an object that can preprocess images into line art suitable for SEGS models, facilitating the creation of stylized images or animations. Type should be `SEGS_PREPROCESSOR`.

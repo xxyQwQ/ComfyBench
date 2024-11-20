@@ -1,0 +1,6 @@
+- `TextFileLineIterator`: The TextFileLineIterator node is designed to read and return a specific line from a text file, based on a given line index. It abstracts the process of file handling, reading, and line selection, making it easier to extract text data programmatically.
+    - Inputs:
+        - `file_path` (Required): Specifies the path to the text file from which a line will be read. It is crucial for locating and accessing the file's content. Type should be `STRING`.
+        - `line_index` (Required): Determines the index of the line to be retrieved from the text file. The index is wrapped around using modulo to ensure it falls within the file's line count, allowing cyclic access. Type should be `INT`.
+    - Outputs:
+        - `string`: Returns the text of the specified line from the text file, stripped of any surrounding whitespace. Type should be `STRING`.

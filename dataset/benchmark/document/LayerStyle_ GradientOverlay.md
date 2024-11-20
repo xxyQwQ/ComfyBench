@@ -1,0 +1,15 @@
+- `LayerStyle_ GradientOverlay`: The GradientOverlay node applies a gradient overlay effect to images, allowing for the blending of layer images with background images using specified gradients, blend modes, and opacity settings. It provides a way to enhance visual aesthetics or achieve specific design goals by modifying the appearance of images.
+    - Inputs:
+        - `background_image` (Required): The background image over which the gradient overlay will be applied. It serves as the base layer for the overlay effect. Type should be `IMAGE`.
+        - `layer_image` (Required): The layer image to which the gradient overlay effect will be applied. This image is blended with the background image according to the specified gradient and blend mode. Type should be `IMAGE`.
+        - `invert_mask` (Required): A boolean flag to indicate whether the mask should be inverted. This affects which parts of the layer image the gradient overlay will be applied to. Type should be `BOOLEAN`.
+        - `blend_mode` (Required): The blend mode used to combine the layer image with the background image under the gradient overlay effect. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): The opacity level of the gradient overlay, determining how transparent the overlay appears over the background image. Type should be `INT`.
+        - `start_color` (Required): The starting color of the gradient overlay. It defines the initial color of the gradient effect applied to the layer image. Type should be `STRING`.
+        - `start_alpha` (Required): The starting opacity of the gradient overlay, affecting the transparency of the start color. Type should be `INT`.
+        - `end_color` (Required): The ending color of the gradient overlay. It specifies the final color in the gradient transition applied to the layer image. Type should be `STRING`.
+        - `end_alpha` (Required): The ending opacity of the gradient overlay, affecting the transparency of the end color. Type should be `INT`.
+        - `angle` (Required): The angle at which the gradient is applied, affecting the direction of the color transition on the layer image. Type should be `INT`.
+        - `layer_mask` (Optional): An optional mask that can be used to limit the area of the layer image affected by the gradient overlay. If provided, it specifies the exact areas where the gradient effect should be applied. Type should be `MASK`.
+    - Outputs:
+        - `image`: The resulting image after applying the gradient overlay effect, combining the background and layer images with the specified gradient, blend mode, and opacity settings. Type should be `IMAGE`.

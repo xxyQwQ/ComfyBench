@@ -1,0 +1,5 @@
+- `LayerUtility_ ShowBlindWaterMark`: This node is designed to decode and reveal blind watermarks embedded within images. It processes each image to extract the watermark, demonstrating the capability to reverse the watermarking process and retrieve hidden information.
+    - Inputs:
+        - `image` (Required): The input image from which the blind watermark is to be decoded. This image is expected to have a watermark embedded in it, which this node aims to extract and reveal. Type should be `IMAGE`.
+    - Outputs:
+        - `watermark_image`: The output image that contains the decoded watermark, extracted from the input image. This image represents the hidden information that was embedded within the original image. Type should be `IMAGE`.

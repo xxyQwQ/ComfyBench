@@ -1,0 +1,6 @@
+- `Text List to Text`: The node is designed to concatenate a list of text strings into a single text string, using a specified delimiter. It can handle special cases, such as converting a literal newline delimiter into an actual newline character, to facilitate various text formatting needs.
+    - Inputs:
+        - `delimiter` (Required): Specifies the string that will be used to separate each text item in the list. A special case is handled where a literal '\n' is converted to an actual newline character, allowing for multi-line text generation. Type should be `STRING`.
+        - `text_list` (Required): The list of text strings to be concatenated. This input is crucial for the node's functionality, as it directly influences the composition and structure of the final merged text output, enabling a wide range of text processing and formatting applications. Type should be `LIST`.
+    - Outputs:
+        - `string`: The resulting single text string formed by concatenating the input list of text strings, separated by the specified delimiter. Type should be `STRING`.

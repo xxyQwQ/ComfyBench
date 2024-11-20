@@ -1,0 +1,14 @@
+- `LayerMask_ RmBgUltra V2`: This node specializes in removing backgrounds from images with an enhanced version of the algorithm, aiming for higher accuracy and detail preservation. It processes images to extract foreground elements by applying advanced techniques to improve edge definition and reduce artifacts, making it suitable for complex image compositions.
+    - Inputs:
+        - `image` (Required): The input image or images to be processed for background removal. This parameter is crucial as it directly influences the effectiveness of the background removal process. Type should be `IMAGE`.
+        - `detail_method` (Required): Specifies the method used to enhance or preserve detail in the image during the background removal process, affecting the precision of edge handling. Type should be `COMBO[STRING]`.
+        - `detail_erode` (Required): Defines the amount of erosion applied to the detail in the image, influencing the edge softness and detail preservation. Type should be `INT`.
+        - `detail_dilate` (Required): Specifies the amount of dilation applied to the detail in the image, affecting the edge sharpness and detail enhancement. Type should be `INT`.
+        - `black_point` (Required): Defines the black point threshold for adjusting the contrast of the mask, influencing the visibility of darker areas in the resulting image. Type should be `FLOAT`.
+        - `white_point` (Required): Sets the white point threshold for mask contrast adjustment, impacting the brightness and visibility of lighter areas in the output. Type should be `FLOAT`.
+        - `process_detail` (Required): A boolean flag indicating whether to apply additional processing to enhance image details, affecting the overall quality and clarity of the foreground extraction. Type should be `BOOLEAN`.
+        - `device` (Required): Specifies the device (CPU or GPU) on which the node's computations are performed, affecting performance and efficiency. Type should be `COMBO[STRING]`.
+        - `max_megapixels` (Required): Limits the maximum size of images processed by the node to prevent excessive memory usage, affecting processing speed and resource allocation. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The collection of images with the background removed, showcasing the foreground elements with enhanced clarity and detail. Type should be `IMAGE`.
+        - `mask`: The corresponding masks indicating the areas of the image where the background has been removed, useful for further image processing tasks. Type should be `MASK`.

@@ -1,0 +1,9 @@
+- `LLMHtmlComposer`: The LLMHtmlComposer node is designed to generate HTML content based on given text input, classifier list, and optional extra directions. It leverages a language model to compose either a full HTML page document or an HTML snippet, depending on the specified mode, ensuring the output is well-structured and valid.
+    - Inputs:
+        - `llm_model` (Required): Represents the language model used for generating HTML content. It's crucial for interpreting the input text and classifiers to produce the desired HTML output. Type should be `LLM_MODEL`.
+        - `text_input` (Required): The primary text input from which the HTML content will be generated. This text serves as the base for the composition process. Type should be `STRING`.
+        - `classifier_list` (Required): A list of classifiers provided as a comma-separated string. These classifiers guide the language model in generating HTML content that aligns with specific criteria or categories. Type should be `STRING`.
+        - `extra_directions` (Optional): Optional additional instructions to further guide the HTML generation process, allowing for more customized outputs. Type should be `STRING`.
+        - `composer_mode` (Optional): Specifies the mode of HTML composition, either as a full HTML page document or an HTML snippet, influencing the structure and inclusion of HTML elements in the output. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `html_output`: The generated HTML content, either as a full HTML page or an HTML snippet, based on the input text, classifiers, and optional directions. Type should be `STRING`.

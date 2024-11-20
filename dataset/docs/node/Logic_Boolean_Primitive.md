@@ -1,6 +1,0 @@
-- `Logic Boolean Primitive`: The Logic Boolean Primitive node is designed to process a single boolean input and return it unchanged. This node serves as a fundamental building block in logical operations, allowing for the straightforward handling and passing of boolean values within a logic-based workflow.
-    - Parameters:
-        - `boolean`: The boolean input to be processed. This parameter is crucial as it directly determines the output of the node, effectively making the node act as a pass-through for the boolean value. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `boolean`: The unchanged boolean input. This output is significant as it allows the boolean value to be used directly in subsequent logical operations or conditions. Type should be `BOOLEAN`.

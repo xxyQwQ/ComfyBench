@@ -1,0 +1,9 @@
+- `Export API`: The Export API node is designed to facilitate the exporting of API configurations, including prompts and their associated settings, to a specified output path. It supports customization of the filename, optional parsing of text tokens, and the choice to save prompt configurations for future use.
+    - Inputs:
+        - `save_prompt_api` (Required): Indicates whether the prompt configuration should be saved for future API calls, enabling easy reuse of configurations. Type should be `COMBO[STRING]`.
+        - `output_path` (Required): Specifies the destination path where the API configurations will be exported. This path determines where the exported files will be saved. Type should be `STRING`.
+        - `filename_prefix` (Required): Defines the prefix for the filenames of the exported API configurations, allowing for easy identification and organization. Type should be `STRING`.
+        - `filename_delimiter` (Required): Specifies the delimiter to be used in the filenames, separating different parts of the filename for clarity. Type should be `STRING`.
+        - `filename_number_padding` (Required): Determines the padding for numerical parts of the filename, ensuring consistent filename lengths and sorting order. Type should be `INT`.
+        - `parse_text_tokens` (Required): Determines whether text tokens within the prompt should be parsed, allowing for dynamic content generation based on the prompt. Type should be `BOOLEAN`.
+    - Outputs:

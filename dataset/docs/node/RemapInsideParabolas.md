@@ -1,6 +1,0 @@
-- `RemapInsideParabolas`: This node is designed to perform a remapping operation based on the geometry of two parabolas within an image. It adjusts the image's pixels according to the specified parabolas, aiming to transform or correct the image's perspective or distortion in a way that aligns with these curves.
-    - Parameters:
-    - Inputs:
-        - `dst_mask_with_i_parabolas`: Specifies the destination mask that contains parabolas. This mask is crucial for determining the transformation's geometry and guiding the remapping process. Type should be `MASK`.
-    - Outputs:
-        - `remap`: The output is a transformed version of the input image, adjusted according to the geometry of the specified parabolas. Type should be `REMAP`.

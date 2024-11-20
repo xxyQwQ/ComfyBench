@@ -1,7 +1,0 @@
-- `Image Brightness Adjustment [Dream]`: This node adjusts the brightness of an image based on a specified factor, enhancing or dimming the image's overall luminance.
-    - Parameters:
-        - `factor`: A multiplier for adjusting the brightness. Values greater than 1.0 increase brightness, while values less than 1.0 decrease it. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The image to be processed for brightness adjustment. It serves as the primary input on which the brightness modification is performed. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The resulting image after the brightness adjustment has been applied. Type should be `IMAGE`.

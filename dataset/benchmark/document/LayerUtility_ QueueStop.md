@@ -1,0 +1,7 @@
+- `LayerUtility_ QueueStop`: This node is designed to control the execution flow within a queue by providing the functionality to either stop or continue the queue based on specified conditions. It plays a crucial role in managing the execution order and conditions within complex workflows, allowing for dynamic control over the process flow.
+    - Inputs:
+        - `any` (Required): A generic input parameter that can be of any type, serving as a placeholder for data that might be passed through the node without alteration. Type should be `*`.
+        - `mode` (Required): Specifies the operation mode of the node, which can either be 'stop' to halt the queue or 'continue' to proceed without interruption. This allows for conditional control over the queue's execution. Type should be `COMBO[STRING]`.
+        - `stop` (Required): A boolean parameter that, when true and the mode is set to 'stop', triggers the stopping of the queue. This provides a direct mechanism to halt the queue's execution based on logical conditions. Type should be `BOOLEAN`.
+    - Outputs:
+        - `any`: Returns the input data unmodified, allowing for the data to be passed through or halted based on the node's execution logic. Type should be `*`.

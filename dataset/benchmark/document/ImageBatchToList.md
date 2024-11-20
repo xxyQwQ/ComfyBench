@@ -1,0 +1,5 @@
+- `ImageBatchToList`: The node is designed to convert a batch of images into a list format, facilitating operations that require individual image processing or manipulation within a batch context. It abstracts the complexity of handling batches of images, making it easier to apply transformations or analyses on each image separately.
+    - Inputs:
+        - `images` (Required): Represents the batch of images to be converted into a list. This input is crucial for enabling the node to iterate over each image in the batch and apply necessary transformations or analyses individually. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The output is a list of images that were originally part of a single batch. This allows for individual image processing or manipulation post conversion. Type should be `IMAGE`.

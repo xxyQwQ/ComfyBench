@@ -1,6 +1,0 @@
-- `CM_IntToBool`: The node transforms an integer input into a boolean output, effectively converting numerical values into binary conditions based on their equivalence to zero.
-    - Parameters:
-        - `a`: The integer input to be converted into a boolean. If the input is non-zero, the output is True; otherwise, it is False. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `bool`: The boolean result of the conversion, indicating whether the input integer was non-zero. Type should be `BOOL`.

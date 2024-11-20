@@ -1,0 +1,9 @@
+- `SDXL Empty Latent Image (rgthree)`: This node is designed to generate an empty latent image based on specified dimensions and scale it according to a clip scale. It primarily serves as a foundational step in image generation processes, where the creation of an initial, blank latent space is required before further manipulations or additions.
+    - Inputs:
+        - `dimensions` (Required): Specifies the dimensions of the latent image to be generated, offering a selection of predefined sizes with aspect ratios ranging from landscape to portrait and square. This parameter is crucial for determining the base size of the latent image. Type should be `COMBO[STRING]`.
+        - `clip_scale` (Required): Determines the scaling factor to be applied to the dimensions of the latent image, affecting the final size of the clip area. This parameter plays a significant role in adjusting the resolution of the generated image. Type should be `FLOAT`.
+        - `batch_size` (Required): Controls the number of latent images to generate in a single batch, allowing for efficient processing of multiple images simultaneously. Type should be `INT`.
+    - Outputs:
+        - `LATENT`: The generated empty latent image. Type should be `LATENT`.
+        - `CLIP_WIDTH`: The width of the clip area after applying the clip scale to the original dimensions. Type should be `INT`.
+        - `CLIP_HEIGHT`: The height of the clip area after applying the clip scale to the original dimensions. Type should be `INT`.

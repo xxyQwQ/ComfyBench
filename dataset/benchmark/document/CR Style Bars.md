@@ -1,0 +1,11 @@
+- `CR Style Bars`: The CR Style Bars node is designed to generate stylized bar patterns within a graphical context, utilizing various orientations and styles to create visually appealing designs. It leverages mathematical and graphical algorithms to produce patterns that can be customized in terms of orientation, color, and frequency, making it a versatile tool for creating background textures or decorative elements in a digital environment.
+    - Inputs:
+        - `mode` (Required): Specifies the mode of the bar pattern, such as color bars, sin wave, or gradient bars, defining the fundamental pattern type. Type should be `COMBO[STRING]`.
+        - `width` (Required): Determines the width of the output image in pixels, affecting the scale of the bar pattern. Type should be `INT`.
+        - `height` (Required): Determines the height of the output image in pixels, affecting the scale of the bar pattern. Type should be `INT`.
+        - `bar_style` (Required): Defines the style of the bars in the pattern, influencing the visual texture and complexity. Type should be `COMBO[STRING]`.
+        - `orientation` (Required): Sets the orientation of the bars, either vertical or horizontal, impacting the pattern's directionality. Type should be `COMBO[STRING]`.
+        - `bar_frequency` (Required): Controls the frequency of the bars within the pattern, adjusting the density and spacing of the bars. Type should be `INT`.
+    - Outputs:
+        - `IMAGE`: The generated stylized bar pattern as an image, showcasing the customized pattern based on the input parameters provided. Type should be `IMAGE`.
+        - `show_help`: Provides helpful information or guidance related to the use of the node and its functionalities. Type should be `STRING`.

@@ -1,9 +1,0 @@
-- `VPScheduler`: The VPScheduler node is designed to generate a sequence of noise levels (sigmas) for variational path sampling in diffusion models, based on specified scheduling parameters.
-    - Parameters:
-        - `steps`: Defines the total number of steps in the noise schedule, affecting the granularity and length of the generated sigma sequence. Type should be `INT`.
-        - `beta_d`: Specifies the beta decay parameter, influencing the rate at which noise levels decrease throughout the schedule. Type should be `FLOAT`.
-        - `beta_min`: Sets the minimum beta value, determining the lowest noise level in the schedule. Type should be `FLOAT`.
-        - `eps_s`: Adjusts the epsilon start value, fine-tuning the initial noise level. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `sigmas`: A sequence of noise levels (sigmas) calculated for variational path sampling, tailored to the input scheduling parameters. Type should be `SIGMAS`.

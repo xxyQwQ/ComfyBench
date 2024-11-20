@@ -1,0 +1,13 @@
+- `Create Video from Path`: This node facilitates the creation of videos from a sequence of images, allowing for customizable transitions, frame delays, and video properties such as frame rate and resolution. It leverages computer vision techniques to generate smooth transitions between images, making it ideal for creating morphing effects or slideshows.
+    - Inputs:
+        - `transition_frames` (Required): Specifies the number of frames to be used for transitions between images, enabling smooth morphing effects. Type should be `INT`.
+        - `image_delay_sec` (Required): Determines the delay (in seconds) for each image before transitioning to the next, allowing for control over the viewing duration of each image in the video. Type should be `FLOAT`.
+        - `fps` (Required): Sets the frames per second (fps) for the output video, influencing the smoothness and playback speed. Type should be `INT`.
+        - `max_size` (Required): Defines the maximum size (in pixels) for the width or height of the images, ensuring that the video maintains a consistent resolution. Type should be `INT`.
+        - `input_path` (Required): The directory path where the input images are located. Type should be `STRING`.
+        - `output_path` (Required): The directory path where the output video will be saved. Type should be `STRING`.
+        - `filename` (Required): The name of the output video file. Type should be `STRING`.
+        - `codec` (Required): The codec used for encoding the video, affecting compatibility and quality. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `filepath_text`: The path to the created video file. Type should be `STRING`.
+        - `filename_text`: The name of the created video file, confirming the output. Type should be `STRING`.

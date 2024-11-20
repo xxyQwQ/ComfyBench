@@ -1,7 +1,0 @@
-- `ImageFilterMax`: The ImageFilterMax node applies a maximum filter to images, enhancing the brightest areas and potentially useful for noise reduction or highlighting features.
-    - Parameters:
-        - `size`: Determines the size of the filter kernel, affecting the extent of the maximum filtering effect. Type should be `INT`.
-    - Inputs:
-        - `images`: Specifies the images to be processed, serving as the primary input for the filter operation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: Produces the processed images after applying the maximum filter, highlighting the brightest areas. Type should be `IMAGE`.

@@ -1,7 +1,0 @@
-- `ControlNetLoaderAdvanced`: This node is designed to load an advanced ControlNet model, optionally incorporating a timestep keyframe group for enhanced control. It abstracts the complexities of fetching and initializing ControlNet models, ensuring they are ready for further manipulation or application within a broader system.
-    - Parameters:
-        - `control_net_name`: Specifies the name of the ControlNet model to be loaded. This name is used to locate the model within a predefined directory structure. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `timestep_keyframe`: An optional parameter that allows for the inclusion of a timestep keyframe group, providing additional control and customization capabilities for the loaded ControlNet model. Type should be `TIMESTEP_KEYFRAME`.
-    - Outputs:
-        - `control_net`: Returns the loaded ControlNet model, ready for use in various applications that require advanced control mechanisms. Type should be `CONTROL_NET`.

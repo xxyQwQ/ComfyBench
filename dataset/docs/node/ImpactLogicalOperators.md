@@ -1,8 +1,0 @@
-- `ImpactLogicalOperators`: This node performs logical operations (AND, OR, XOR) on two boolean inputs, returning the result of the operation as a boolean value. It abstracts the complexity of logical decision-making processes into a simple interface, enabling conditional logic flows within a system.
-    - Parameters:
-        - `operator`: Specifies the logical operation to be performed: AND, OR, XOR. This determines how the two boolean inputs will be combined to produce the output. Type should be `COMBO[STRING]`.
-        - `bool_a`: The first boolean input for the logical operation. Acts as one of the operands in the logical expression. Type should be `BOOLEAN`.
-        - `bool_b`: The second boolean input for the logical operation. Acts as the other operand in the logical expression. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `boolean`: The result of the logical operation performed on the two input booleans. Type should be `BOOLEAN`.

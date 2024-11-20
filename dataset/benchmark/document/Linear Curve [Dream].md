@@ -1,0 +1,8 @@
+- `Linear Curve [Dream]`: The Linear Curve node provides a linear interpolation between an initial and a final value over a sequence of frames, typically used to create smooth transitions or animations.
+    - Inputs:
+        - `frame_counter` (Required): Tracks the progression of frames, dictating the current position in the interpolation process. Type should be `FRAME_COUNTER`.
+        - `initial_value` (Required): Specifies the starting value of the linear interpolation, serving as the base for the animation or transition. Type should be `FLOAT`.
+        - `final_value` (Required): Defines the end value of the linear interpolation, determining the target of the animation or transition. Type should be `FLOAT`.
+    - Outputs:
+        - `FLOAT`: The interpolated float value at the current frame, reflecting the linear progression. Type should be `FLOAT`.
+        - `INT`: The interpolated value rounded to the nearest integer, providing a discrete step in the progression. Type should be `INT`.

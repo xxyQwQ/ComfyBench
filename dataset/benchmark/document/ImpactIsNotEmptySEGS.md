@@ -1,0 +1,5 @@
+- `ImpactIsNotEmptySEGS`: This node checks if a given SEGS (segmentation data structure) is not empty. It is useful for determining whether segmentation results contain any segments, aiding in decision-making processes within workflows that involve image segmentation.
+    - Inputs:
+        - `segs` (Required): The SEGS input represents the segmentation data structure to be checked for non-emptiness. It is crucial for determining the presence of segmentation results. Type should be `SEGS`.
+    - Outputs:
+        - `boolean`: The output is a boolean indicating whether the input SEGS contains any segments. True means there are segments present, and False indicates an empty SEGS. Type should be `BOOLEAN`.

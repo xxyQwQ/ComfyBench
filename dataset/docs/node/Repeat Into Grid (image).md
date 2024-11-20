@@ -1,8 +1,0 @@
-- `Repeat Into Grid (image)`: This node tiles the input image samples into a grid of configurable dimensions, effectively repeating the image across a specified number of rows and columns to create a larger, grid-like composite image.
-    - Parameters:
-        - `columns`: Specifies the number of columns in the grid. It determines how many times the input image is repeated horizontally. Type should be `INT`.
-        - `rows`: Specifies the number of rows in the grid. It determines how many times the input image is repeated vertically. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be tiled across the grid. It determines the base image that will be repeated across the specified grid dimensions. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a single image composed of the input image tiled according to the specified rows and columns, forming a grid. Type should be `IMAGE`.

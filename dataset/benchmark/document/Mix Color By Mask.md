@@ -1,0 +1,9 @@
+- `Mix Color By Mask`: The Mix Color By Mask node blends a specified color into an image based on a provided mask, allowing for selective colorization or recoloring of parts of the image.
+    - Inputs:
+        - `image` (Required): The original image to be processed. The mask determines which parts of this image will be blended with the specified color. Type should be `IMAGE`.
+        - `r` (Required): The red component of the color to blend into the image, scaled from 0 to 255. It influences the final color's red intensity in the masked areas. Type should be `INT`.
+        - `g` (Required): The green component of the color to blend into the image, scaled from 0 to 255. It affects the final color's green intensity in the masked areas. Type should be `INT`.
+        - `b` (Required): The blue component of the color to blend into the image, scaled from 0 to 255. It impacts the final color's blue intensity in the masked areas. Type should be `INT`.
+        - `mask` (Required): The mask used to determine where the specified color should be blended into the original image. Areas of the mask with higher values will have more of the color applied. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The resulting image after blending the specified color into the original image based on the mask. Type should be `IMAGE`.

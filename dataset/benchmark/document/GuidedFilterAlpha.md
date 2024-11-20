@@ -1,0 +1,8 @@
+- `GuidedFilterAlpha`: The GuidedFilterAlpha node applies a guided filter to an image using a specified alpha mask. This process smooths the image while preserving edge details, guided by the alpha mask. It's designed for enhancing images or compositing tasks where maintaining edge integrity is crucial.
+    - Inputs:
+        - `images` (Required): The input images to be filtered. This parameter is crucial for defining the visual content that will undergo the guided filtering process. Type should be `IMAGE`.
+        - `alpha` (Required): The alpha mask used to guide the filtering process. It influences how the filtering is applied, particularly around edges, to preserve details. Type should be `IMAGE`.
+        - `filter_radius` (Required): Defines the radius of the filter. A larger radius increases the area of influence for smoothing, affecting the level of detail preservation. Type should be `INT`.
+        - `sigma` (Required): Controls the degree of smoothing. Higher values result in more aggressive smoothing, affecting the filter's sensitivity to edges. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The filtered image, where the guided filter has been applied according to the alpha mask and other parameters. Type should be `IMAGE`.

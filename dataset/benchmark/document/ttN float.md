@@ -1,0 +1,7 @@
+- `ttN float`: The `ttN float` node is designed to perform conversions involving floating-point numbers. It takes a floating-point number as input and outputs the same number in three different formats: as a float, as an integer by truncating the decimal part, and as a string representation of the float. This node is useful in scenarios where different representations of a floating-point number are needed for further processing or display purposes.
+    - Inputs:
+        - `float` (Required): The `float` parameter is the primary input for the `ttN float` node, representing the floating-point number to be converted. It is crucial for determining the output in three different formats: float, integer, and string. The precision and value of this input directly affect the conversion results. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: The original floating-point number inputted to the node, unchanged. Type should be `FLOAT`.
+        - `int`: The integer part of the input floating-point number, obtained by truncating the decimal part. Type should be `INT`.
+        - `text`: The string representation of the input floating-point number, preserving its decimal part. Type should be `STRING`.

@@ -1,0 +1,8 @@
+- `VAEEncodeForInpaint`: This node is designed for encoding images into a latent representation suitable for inpainting tasks, incorporating additional preprocessing steps to adjust the input image and mask for optimal encoding by the VAE model.
+    - Inputs:
+        - `pixels` (Required): The input image to be encoded. This image undergoes preprocessing and resizing to match the VAE model's expected input dimensions before encoding. Type should be `IMAGE`.
+        - `vae` (Required): The VAE model used for encoding the image into its latent representation. It plays a crucial role in the transformation process, determining the quality and characteristics of the output latent space. Type should be `VAE`.
+        - `mask` (Required): A mask indicating the regions of the input image to be inpainted. It is used to modify the image before encoding, ensuring that the VAE focuses on the relevant areas. Type should be `MASK`.
+        - `grow_mask_by` (Required): Specifies how much to expand the inpainting mask to ensure seamless transitions in the latent space. A larger value increases the area affected by inpainting. Type should be `INT`.
+    - Outputs:
+        - `latent`: The output includes the encoded latent representation of the image and a noise mask, both crucial for subsequent inpainting tasks. Type should be `LATENT`.

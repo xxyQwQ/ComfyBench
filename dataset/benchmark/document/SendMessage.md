@@ -1,0 +1,8 @@
+- `SendMessage`: The SendMessage node facilitates communication between agents by allowing one agent to send a message to another. It abstracts the complexities of agent interaction, ensuring messages are delivered and processed correctly.
+    - Inputs:
+        - `recipient` (Required): Specifies the agent receiving the message. It plays a crucial role in determining the message's destination. Type should be `AGENT`.
+        - `sender` (Required): Identifies the agent sending the message. It is essential for tracking the source of the message and for potential reply mechanisms. Type should be `AGENT`.
+        - `message` (Required): Contains the text of the message being sent. This parameter is vital for the communication process, allowing agents to exchange information. Type should be `STRING`.
+    - Outputs:
+        - `recipient`: The recipient agent, potentially modified after receiving the message. Type should be `AGENT`.
+        - `sender`: The sender agent, potentially modified after sending the message. Type should be `AGENT`.

@@ -1,0 +1,9 @@
+- `CR Set Value On Boolean`: This node dynamically assigns a value based on a boolean input, allowing for conditional logic within node flows. It provides a straightforward mechanism to output different values depending on whether a given boolean condition is true or false.
+    - Inputs:
+        - `boolean` (Required): Determines the branch of conditional logic to follow. If true, the node outputs the value specified for 'true' conditions; otherwise, it outputs the value for 'false' conditions. Type should be `BOOLEAN`.
+        - `value_if_true` (Required): The value to output if the 'boolean' input is true. This allows for dynamic responses based on conditional checks. Type should be `FLOAT`.
+        - `value_if_false` (Required): The value to output if the 'boolean' input is false. This enables the node to adapt its output based on the evaluated condition. Type should be `FLOAT`.
+    - Outputs:
+        - `INT`: The integer representation of the output value, providing a numeric outcome based on the boolean condition. Type should be `INT`.
+        - `FLOAT`: The floating-point representation of the output value, offering a more precise numeric outcome. Type should be `FLOAT`.
+        - `show_help`: A URL to the node's documentation, offering additional help and examples. Type should be `STRING`.

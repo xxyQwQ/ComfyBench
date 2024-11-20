@@ -1,0 +1,7 @@
+- `RGB_HexToHSV __Inspire`: The RGB_HexToHSV node is designed to convert RGB color values in hexadecimal format to their corresponding HSV (Hue, Saturation, Value) representation. This conversion facilitates tasks that require understanding or manipulation of colors in terms of their hue, saturation, and value components, rather than the RGB color model.
+    - Inputs:
+        - `rgb_hex` (Required): The 'rgb_hex' parameter represents the RGB color value in hexadecimal format that is to be converted to HSV. This input is crucial for the conversion process, as it directly influences the output HSV values. Type should be `STRING`.
+    - Outputs:
+        - `hue`: The 'hue' output represents the color's position on the color wheel, expressed in degrees from 0 to 360. Type should be `FLOAT`.
+        - `saturation`: The 'saturation' output indicates the intensity of the color, ranging from 0 (grey) to 1 (full color). Type should be `FLOAT`.
+        - `value`: The 'value' output measures the brightness of the color, with 0 being completely dark (black) and 1 being fully bright (the color itself). Type should be `FLOAT`.

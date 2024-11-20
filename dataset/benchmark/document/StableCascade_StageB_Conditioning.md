@@ -1,0 +1,6 @@
+- `StableCascade_StageB_Conditioning`: This node is designed for conditioning in the context of a stable cascade process, specifically at stage B. It integrates prior information from a later stage (stage C) into the conditioning data, preparing it for subsequent processing steps.
+    - Inputs:
+        - `conditioning` (Required): The conditioning data to be modified, incorporating prior information from stage C for enhanced processing. Type should be `CONDITIONING`.
+        - `stage_c` (Required): The prior information from stage C, used to enrich the conditioning data with relevant context. Type should be `LATENT`.
+    - Outputs:
+        - `conditioning`: The modified conditioning data, now augmented with prior information from stage C. Type should be `CONDITIONING`.

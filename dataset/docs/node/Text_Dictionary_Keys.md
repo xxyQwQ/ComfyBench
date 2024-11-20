@@ -1,6 +1,0 @@
-- `Text Dictionary Keys`: This node extracts the keys from a given dictionary, providing a straightforward way to identify all the unique identifiers within a dictionary structure.
-    - Parameters:
-    - Inputs:
-        - `dictionary`: The dictionary from which keys are to be extracted. It is essential for identifying the unique identifiers within the provided dictionary structure. Type should be `DICT`.
-    - Outputs:
-        - `list`: A list of keys extracted from the provided dictionary. Type should be `LIST`.

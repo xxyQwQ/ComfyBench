@@ -1,0 +1,16 @@
+- `LoadVideoFromUrl`: The LoadVideoFromUrl node is designed to facilitate the loading of video content from URLs into a usable format for further processing or analysis. It supports handling various URL schemes, including direct links to video files, local file paths, and specialized URLs with parameters for video retrieval. This node also includes functionality to manage video files by downloading or relocating them as needed, ensuring compatibility with the system's file structure.
+    - Inputs:
+        - `video` (Required): The 'video' parameter is the URL or path of the video to be loaded. It plays a crucial role in determining the source from which the video will be fetched or loaded, directly influencing the node's processing logic and output. Type should be `STRING`.
+        - `force_rate` (Required): This parameter allows for the specification of a forced frame rate for the loaded video, affecting the temporal resolution and playback speed. Type should be `INT`.
+        - `force_size` (Required): Allows setting a forced resolution for the loaded video, which can alter the spatial dimensions of the output frames. Type should be `COMBO[STRING]`.
+        - `custom_width` (Required): Specifies a custom width for the output video frames, overriding the default or source video's width. Type should be `INT`.
+        - `custom_height` (Required): Specifies a custom height for the output video frames, overriding the default or source video's height. Type should be `INT`.
+        - `frame_load_cap` (Required): Limits the number of frames to be loaded from the video, useful for reducing memory usage or focusing on specific segments. Type should be `INT`.
+        - `skip_first_frames` (Required): Skips a specified number of frames from the beginning of the video, useful for bypassing unneeded content or intros. Type should be `INT`.
+        - `select_every_nth` (Required): Loads every nth frame from the video, allowing for temporal downsampling and reduced dataset size. Type should be `INT`.
+        - `meta_batch` (Optional): A parameter for batch processing metadata, potentially used for optimizing load operations or handling multiple videos. Type should be `VHS_BatchManager`.
+        - `vae` (Optional): An optional VAE model parameter for potential preprocessing or encoding of video frames. Type should be `VAE`.
+    - Outputs:
+        - `frames`: A list of loaded videos, each represented as a tensor. This output is crucial for subsequent video processing tasks. Type should be `IMAGE`.
+        - `frame_count`: A list containing the number of frames for each video loaded. This information is essential for frame-based video analysis and processing. Type should be `INT`.
+        - `has_video`: A boolean indicating whether any video was successfully loaded. This flag can be used to trigger further processing or handle errors. Type should be `BOOLEAN`.

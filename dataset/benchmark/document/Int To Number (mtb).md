@@ -1,0 +1,5 @@
+- `Int To Number (mtb)`: Converts an integer to a number within a specified range, ensuring compatibility with the WAS Suite's numerical data types.
+    - Inputs:
+        - `int` (Required): The integer input to be converted to a number. This parameter is crucial for defining the exact value that will undergo conversion. Type should be `INT`.
+    - Outputs:
+        - `number`: The output number, directly corresponding to the input integer. Type should be `NUMBER`.

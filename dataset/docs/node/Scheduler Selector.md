@@ -1,6 +1,0 @@
-- `Scheduler Selector`: The Scheduler Selector node is designed to facilitate the selection of a scheduler from a predefined list of schedulers available within the Comfy samplers. It abstracts the complexity of scheduler selection, providing a streamlined interface for users to choose the most suitable scheduler for their image generation or modification tasks.
-    - Parameters:
-        - `scheduler`: Specifies the scheduler to be selected. This parameter allows users to choose from a list of available schedulers, impacting the image generation process by determining the scheduling algorithm used. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `scheduler`: Returns the selected scheduler's name. This output is crucial for further processing steps that require a specific scheduler to be identified and used. Type should be `COMBO[STRING]`.

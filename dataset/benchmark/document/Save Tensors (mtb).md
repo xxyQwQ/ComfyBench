@@ -1,0 +1,7 @@
+- `Save Tensors (mtb)`: The Save Tensors node is designed for saving torch tensors, such as images, masks, or latent representations, to disk. This functionality is particularly useful for debugging purposes outside of the Comfy environment, allowing for the inspection and analysis of tensor data generated within custom workflows.
+    - Inputs:
+        - `filename_prefix` (Required): Specifies the prefix for the filename under which the tensor will be saved. This parameter helps in organizing and identifying saved tensors for debugging purposes. Type should be `STRING`.
+        - `image` (Optional): An optional image tensor that can be saved to disk. This allows for the storage and later inspection of image data. Type should be `IMAGE`.
+        - `mask` (Optional): An optional mask tensor that can be saved to disk. Useful for debugging and analyzing mask data applied in image processing. Type should be `MASK`.
+        - `latent` (Optional): An optional latent tensor that can be saved to disk. Facilitates the debugging and examination of latent representations in models. Type should be `LATENT`.
+    - Outputs:

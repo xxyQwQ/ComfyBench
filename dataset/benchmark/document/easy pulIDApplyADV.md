@@ -1,0 +1,15 @@
+- `easy pulIDApplyADV`: The `easy pulIDApplyADV` node is designed to enhance images by applying advanced PulID transformations. It leverages PulID models, InsightFace for facial analysis, and optionally EVA Clip for additional enhancements. This node is capable of adjusting images based on various parameters such as weight, projection, fidelity, and noise, offering a flexible approach to image manipulation.
+    - Inputs:
+        - `model` (Required): The model input is the base model onto which the PulID transformations will be applied. It is central to the node's operation, serving as the foundation for the enhancements. Type should be `MODEL`.
+        - `pulid_file` (Required): Specifies the PulID file to be used for the transformation. It is crucial for defining the specific PulID model that will be applied to the input model. Type should be `COMBO[STRING]`.
+        - `insightface` (Required): Determines the InsightFace model to be used for facial analysis, supporting different computation backends. It plays a key role in facial feature detection and analysis within the image. Type should be `COMBO[STRING]`.
+        - `image` (Required): The input image to be enhanced. It is directly affected by the PulID transformations, with changes being applied based on the specified parameters. Type should be `IMAGE`.
+        - `weight` (Required): Controls the intensity of the PulID transformation applied to the image. It allows for fine-tuning the impact of the transformation on the final output. Type should be `FLOAT`.
+        - `projection` (Required): Defines the projection method used in the transformation process. It influences how the PulID model interprets and applies enhancements to the image. Type should be `COMBO[STRING]`.
+        - `fidelity` (Required): Adjusts the fidelity of the transformation, affecting the accuracy and detail preservation in the enhanced image. Type should be `INT`.
+        - `noise` (Required): Specifies the level of noise to be added to the transformation. It can be used to introduce variability or texture into the enhanced image. Type should be `FLOAT`.
+        - `start_at` (Required): Determines the starting point of the transformation within the image. It allows for targeted application of the PulID enhancements. Type should be `FLOAT`.
+        - `end_at` (Required): Specifies the ending point of the transformation within the image, enabling precise control over the area affected by the PulID enhancements. Type should be `FLOAT`.
+        - `attn_mask` (Optional): An optional attention mask that can be applied to focus the PulID transformation on specific areas of the image. Type should be `MASK`.
+    - Outputs:
+        - `model`: The enhanced model output, which has undergone the PulID transformation. It reflects the applied enhancements and adjustments. Type should be `MODEL`.

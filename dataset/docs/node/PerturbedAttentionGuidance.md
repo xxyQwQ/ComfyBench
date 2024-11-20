@@ -1,7 +1,0 @@
-- `PerturbedAttentionGuidance`: The PerturbedAttentionGuidance node introduces a method to modify the attention mechanism within a given model by applying a perturbation function. This alteration aims to explore the effects of perturbed attention on the model's performance, potentially enhancing its ability to focus on relevant features by adjusting the attention weights.
-    - Parameters:
-        - `scale`: The scale parameter controls the intensity of the perturbation applied to the attention mechanism. It plays a significant role in determining the extent to which the original attention weights are modified. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The model parameter represents the neural network model to which the perturbed attention guidance will be applied. It is crucial for defining the base architecture that will undergo the perturbation process. Type should be `MODEL`.
-    - Outputs:
-        - `model`: Returns a modified version of the input model, where the attention mechanism has been perturbed according to the specified scale. Type should be `MODEL`.

@@ -1,7 +1,0 @@
-- `SAM Parameters`: The SAM Parameters node is designed to generate and manage parameters for segmentation and masking operations within the WAS Suite's Image/Masking category. It abstracts the complexity of parameter configuration, allowing users to specify points and labels for segmentation tasks.
-    - Parameters:
-        - `points`: Defines the coordinates for segmentation points in a string format, which are crucial for determining the areas of interest within an image. Type should be `STRING`.
-        - `labels`: Specifies the labels associated with each point, playing a key role in the segmentation process by categorizing different regions of interest. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `sam_parameters`: A structured set of parameters including points and labels, ready for use in segmentation and masking operations. Type should be `SAM_PARAMETERS`.

@@ -1,0 +1,8 @@
+- `ImpactFrom_SEG_ELT_bbox`: This node is designed to extract the bounding box coordinates from a given segmentation element, providing a straightforward way to access the spatial boundaries of an object within an image.
+    - Inputs:
+        - `bbox` (Required): The bounding box of a segmentation element, specifying the spatial boundaries of an object within an image. It is crucial for determining the area of interest. Type should be `SEG_ELT_bbox`.
+    - Outputs:
+        - `left`: The left coordinate of the bounding box. Type should be `INT`.
+        - `top`: The top coordinate of the bounding box. Type should be `INT`.
+        - `right`: The right coordinate of the bounding box. Type should be `INT`.
+        - `bottom`: The bottom coordinate of the bounding box. Type should be `INT`.

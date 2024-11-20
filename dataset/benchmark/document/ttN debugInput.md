@@ -1,0 +1,7 @@
+- `ttN debugInput`: The node is designed for debugging purposes, allowing users to input various parameters and observe their effects in a controlled environment. It primarily focuses on capturing and displaying input values to facilitate troubleshooting and analysis of data flow within the system.
+    - Inputs:
+        - `print_to_console` (Required): Determines whether the debug information should be printed to the console, enabling or disabling console output. Type should be `BOOLEAN`.
+        - `console_title` (Required): Specifies the title to be displayed on the console during debugging, serving as an identifier for the debug session. Type should be `STRING`.
+        - `console_color` (Required): Specifies the color in which the console text is displayed, allowing for visual differentiation of debug outputs. Type should be `COMBO[STRING]`.
+        - `debug` (Optional): An optional parameter for additional debugging information, enhancing the granularity of the debug output. Type should be ``.
+    - Outputs:

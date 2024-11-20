@@ -1,0 +1,12 @@
+- `RegionalSeedExplorerMask __Inspire`: The RegionalSeedExplorerMask node is designed to explore and apply variations to noise patterns based on seed prompts and masks. It enables the customization of generative processes in specific regions of an image, enhancing creativity and control in image synthesis.
+    - Inputs:
+        - `mask` (Required): The mask parameter specifies the region of the image where the noise variations will be applied, allowing for targeted modifications. Type should be `MASK`.
+        - `noise` (Required): The noise parameter represents the initial noise pattern that will be modified according to the seed prompts and mask. Type should be `NOISE`.
+        - `seed_prompt` (Required): The seed_prompt parameter allows users to input specific seed prompts that guide the variation of the noise pattern in the masked region. Type should be `STRING`.
+        - `enable_additional` (Required): This boolean parameter enables the inclusion of an additional seed and its strength in the variation process, offering further customization. Type should be `BOOLEAN`.
+        - `additional_seed` (Required): When additional variations are enabled, this parameter specifies the additional seed to be used. Type should be `INT`.
+        - `additional_strength` (Required): This parameter sets the strength of the additional seed's influence on the noise variation. Type should be `FLOAT`.
+        - `noise_mode` (Required): Specifies whether the noise processing should be performed on the CPU or GPU, affecting performance. Type should be `COMBO[STRING]`.
+        - `variation_method` (Optional): Determines the method of applying variations to the noise, such as linear, allowing for different types of noise modifications. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `noise`: The modified noise pattern after applying the seed prompts and variations according to the mask. Type should be `NOISE`.

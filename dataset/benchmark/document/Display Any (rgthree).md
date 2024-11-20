@@ -1,0 +1,4 @@
+- `Display Any (rgthree)`: The Display Any node is designed to display any type of data, handling various data formats and types gracefully. It attempts to serialize the input data into a JSON string for display, falling back to a simple string representation if serialization fails, thereby ensuring that any data can be visualized.
+    - Inputs:
+        - `source` (Required): The 'source' parameter accepts any type of data, making this node highly versatile for displaying diverse data formats. It plays a crucial role in the node's ability to handle and visualize any input data, regardless of its complexity or type. Type should be `*`.
+    - Outputs:

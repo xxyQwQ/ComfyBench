@@ -1,0 +1,7 @@
+- `IG Analyze SSIM`: The IG Analyze SSIM node is designed to assess the similarity between consecutive images in a given folder using the Structural Similarity Index Measure (SSIM). It calculates SSIM values for pairs of consecutive images, potentially indicating changes or variations in visual content. Additionally, it visualizes these SSIM values through a plot, providing a graphical representation of similarity trends across the image sequence.
+    - Inputs:
+        - `folder` (Required): The 'folder' parameter specifies the directory containing the images to be analyzed. It is crucial for determining the set of images on which SSIM calculations and comparisons are performed. Type should be `STRING`.
+        - `ymin` (Optional): The 'ymin' parameter sets the minimum value on the y-axis of the SSIM plot, allowing for customization of the plot's vertical scale to better visualize the SSIM data. Type should be `FLOAT`.
+        - `ymax` (Optional): The 'ymax' parameter sets the maximum value on the y-axis of the SSIM plot, enabling adjustment of the plot's vertical scale for optimal visualization of the SSIM trends. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output is an image tensor representing the plotted SSIM data between consecutive images. This graphical output provides a visual summary of the structural similarity trends across the image sequence. Type should be `IMAGE`.

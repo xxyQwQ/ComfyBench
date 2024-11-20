@@ -1,0 +1,87 @@
+{
+    "13": {
+        "_meta": {
+            "title": "ReActor \ud83c\udf0c Fast Face Swap"
+        },
+        "class_type": "ReActorFaceSwap",
+        "inputs": {
+            "codeformer_weight": 0.5,
+            "console_log_level": 0,
+            "detect_gender_input": "no",
+            "detect_gender_source": "no",
+            "enabled": true,
+            "face_restore_model": "codeformer-v0.1.0.pth",
+            "face_restore_visibility": 1,
+            "facedetection": "retinaface_resnet50",
+            "input_faces_index": "0",
+            "input_image": [
+                "17",
+                0
+            ],
+            "source_faces_index": "0",
+            "source_image": [
+                "18",
+                0
+            ],
+            "swap_model": "inswapper_128.onnx"
+        }
+    },
+    "14": {
+        "_meta": {
+            "title": "Load Upscale Model"
+        },
+        "class_type": "UpscaleModelLoader",
+        "inputs": {
+            "model_name": "4x-UltraSharp.pth"
+        }
+    },
+    "15": {
+        "_meta": {
+            "title": "Upscale Image (using Model)"
+        },
+        "class_type": "ImageUpscaleWithModel",
+        "inputs": {
+            "image": [
+                "13",
+                0
+            ],
+            "upscale_model": [
+                "14",
+                0
+            ]
+        }
+    },
+    "17": {
+        "_meta": {
+            "title": "Load Image"
+        },
+        "class_type": "LoadImage",
+        "inputs": {
+            "image": "target.jpg",
+            "upload": "image"
+        }
+    },
+    "18": {
+        "_meta": {
+            "title": "Load Image"
+        },
+        "class_type": "LoadImage",
+        "inputs": {
+            "image": "source.jpg",
+            "upload": "image"
+        }
+    },
+    "20": {
+        "_meta": {
+            "title": "Save Image"
+        },
+        "class_type": "SaveImage",
+        "inputs": {
+            "filename_prefix": "swapped",
+            "images": [
+                "15",
+                0
+            ]
+        }
+    }
+}

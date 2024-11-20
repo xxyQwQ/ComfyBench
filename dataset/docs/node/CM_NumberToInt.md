@@ -1,6 +1,0 @@
-- `CM_NumberToInt`: The CM_NumberToInt node is designed for converting numerical values from a generic number type to an integer type. This node facilitates the type casting process within mathematical or computational operations, ensuring compatibility and precision in scenarios where integer-specific operations are required.
-    - Parameters:
-    - Inputs:
-        - `a`: The input 'a' represents the numerical value to be converted to an integer. This parameter is crucial for the conversion process, determining the resultant integer value. Type should be `NUMBER`.
-    - Outputs:
-        - `int`: The output is the integer representation of the input numerical value, achieved through type conversion. Type should be `INT`.

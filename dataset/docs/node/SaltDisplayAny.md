@@ -1,6 +1,0 @@
-- `SaltDisplayAny`: The SaltDisplayAny node is designed to universally display any type of input data, converting it into a human-readable format or indicating if the data type cannot be displayed. It supports a wide range of data types, including basic types like strings and numbers, complex data structures like dictionaries and lists, and even PyTorch tensors, making it a versatile utility for data visualization and debugging.
-    - Parameters:
-    - Inputs:
-        - `input_value`: The input_value parameter accepts any data type, making this node highly versatile for displaying various forms of data. It determines the content that will be converted into a readable format or indicated as non-displayable, depending on the data type. Type should be `*`.
-    - Outputs:
-        - `output`: The output parameter provides a human-readable representation of the input data or a message indicating that the data type cannot be displayed. It is essential for visualizing the data in a user-friendly manner. Type should be `*`.

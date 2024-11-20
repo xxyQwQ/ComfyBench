@@ -1,0 +1,15 @@
+- `SubjectStylerAdvanced`: The SubjectStylerAdvanced node is designed to apply advanced styling options to text prompts based on a selection of subject-related styles. It allows for the customization of positive and negative prompts through a variety of subject-specific templates, enhancing the generation of styled text for creative and descriptive purposes.
+    - Inputs:
+        - `text_positive_g` (Required): The global positive text prompt to be styled. It serves as the base content for applying subject-specific styling transformations, affecting the overall thematic presentation. Type should be `STRING`.
+        - `text_positive_l` (Required): The local positive text prompt to be styled. This parameter allows for finer control over the styling applied to specific parts of the positive prompt, contributing to a more nuanced and detailed output. Type should be `STRING`.
+        - `text_negative` (Required): The negative text prompt to be styled. It is used to specify content that should be contrasted with or excluded from the positive prompts, guiding the styling process to avoid certain themes or elements. Type should be `STRING`.
+        - `subject` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Specifies how the negative prompt styling should be applied: to both global and local positive prompts, only to the global prompt, or only to the local prompt. This choice allows for targeted styling adjustments based on the desired outcome. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag indicating whether to log the input and styled prompts for debugging or review purposes. Enabling this option provides transparency into the styling process and the effects of selected templates. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The styled global positive text prompt, reflecting the applied subject-specific styling options. Type should be `STRING`.
+        - `text_positive_l`: The styled local positive text prompt, showcasing the nuanced styling effects on specific parts of the prompt. Type should be `STRING`.
+        - `text_positive`: An additional styled positive text prompt, offering another layer of creative styling output. Type should be `STRING`.
+        - `text_negative_g`: The styled global negative text prompt, indicating how negative themes or elements have been artistically integrated or excluded. Type should be `STRING`.
+        - `text_negative_l`: The styled local negative text prompt, providing insight into the detailed exclusion or alteration of negative elements in specific parts of the prompt. Type should be `STRING`.
+        - `text_negative`: The fully styled negative text prompt, demonstrating the comprehensive application of subject-specific styling to avoid or contrast certain themes. Type should be `STRING`.

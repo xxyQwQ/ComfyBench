@@ -1,0 +1,11 @@
+- `CR Load GIF As List`: This node is designed to load GIF images as a list, allowing for the manipulation and analysis of individual frames within the GIF. It provides functionality to specify the starting frame and the maximum number of frames to be loaded, making it a versatile tool for handling GIF animations in a granular manner.
+    - Inputs:
+        - `input_folder` (Required): Specifies the folder containing the GIF file to be loaded. This parameter is crucial for locating the GIF file within the filesystem. Type should be `COMBO[STRING]`.
+        - `gif_filename` (Required): The name of the GIF file to be loaded. This parameter works in conjunction with `input_folder` to construct the full path to the GIF file. Type should be `STRING`.
+        - `start_frame` (Required): Determines the starting frame from which the GIF should be loaded. This allows for skipping initial frames and starting from a specific point in the animation. Type should be `INT`.
+        - `max_frames` (Required): Limits the number of frames to be loaded from the GIF. This is useful for controlling the amount of data processed and focusing on a specific segment of the animation. Type should be `INT`.
+        - `input_path` (Optional): An optional parameter that directly specifies the path to the GIF file, bypassing the need for `input_folder` and `gif_filename`. Type should be `STRING`.
+    - Outputs:
+        - `IMAGE`: A list of tensors representing the loaded frames of the GIF. Each tensor corresponds to an individual frame, allowing for frame-by-frame manipulation. Type should be `IMAGE`.
+        - `MASK`: A list of tensors representing the alpha masks of the loaded frames. This is useful for operations that require knowledge of the transparency or opacity of each frame. Type should be `MASK`.
+        - `show_help`: A URL to the help documentation for this node, providing additional information and guidance on its usage. Type should be `STRING`.

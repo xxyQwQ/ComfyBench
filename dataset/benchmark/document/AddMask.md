@@ -1,0 +1,6 @@
+- `AddMask`: The AddMask node is designed to combine two mask inputs into a single mask output, effectively merging the areas covered by each input mask. This operation is useful in scenarios where the visual or logical integration of mask regions is required, such as in image processing tasks that involve layering or combining features from different sources.
+    - Inputs:
+        - `mask1` (Required): The first mask input for the addition operation. It plays a crucial role in determining the initial areas to be combined with the second mask. Type should be `MASK`.
+        - `mask2` (Required): The second mask input for the addition operation. It specifies additional areas to be combined with the first mask, contributing to the final merged output. Type should be `MASK`.
+    - Outputs:
+        - `mask`: The result of combining the two input masks. This output represents the merged area covered by both input masks, providing a unified mask that encompasses the features of both. Type should be `MASK`.

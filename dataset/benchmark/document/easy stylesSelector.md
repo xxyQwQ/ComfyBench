@@ -1,0 +1,8 @@
+- `easy stylesSelector`: The `easy stylesSelector` node is designed to facilitate the selection of styles for prompts in a user-friendly manner. It abstracts the complexity of choosing and applying styles by providing a simplified interface for users to select from predefined style options, enhancing the customization and creativity of prompt generation.
+    - Inputs:
+        - `styles` (Required): This parameter allows users to select from a list of predefined styles, determining the visual and thematic presentation of the prompt. Type should be `COMBO[STRING]`.
+        - `positive` (Optional): The positive prompt input where users can specify custom text to influence the style selection process positively. Type should be `STRING`.
+        - `negative` (Optional): The negative prompt input where users can specify custom text to influence the style selection process negatively. Type should be `STRING`.
+    - Outputs:
+        - `positive`: The positive styled prompt, reflecting the user's style selection and customizations. Type should be `STRING`.
+        - `negative`: The negative styled prompt, reflecting the user's style selection and customizations. Type should be `STRING`.

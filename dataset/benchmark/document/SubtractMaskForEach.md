@@ -1,0 +1,6 @@
+- `SubtractMaskForEach`: The SubtractMaskForEach node is designed to perform a bitwise subtraction operation between segmentation masks (SEGS) and a base mask, producing a modified set of segmentation masks. This operation is useful in scenarios where it's necessary to remove specific features or areas from a set of segmentation masks based on another mask.
+    - Inputs:
+        - `base_segs` (Required): The base segmentation masks (SEGS) from which features or areas will be subtracted. Type should be `SEGS`.
+        - `mask_segs` (Required): The segmentation masks (SEGS) that will be used as the subtraction mask, indicating the features or areas to be removed from the base segmentation masks. Type should be `SEGS`.
+    - Outputs:
+        - `segs`: The resulting set of segmentation masks (segs) after the subtraction operation, with specific features or areas removed. Type should be `SEGS`.

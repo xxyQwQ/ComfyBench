@@ -1,0 +1,7 @@
+- `SaltJSONSelectNthItems`: This node is designed to select a specified number of items starting from a given index within a JSON object. It aims to facilitate the extraction of specific portions of JSON data based on positional selection, making it easier to work with subsets of JSON structures.
+    - Inputs:
+        - `json_input` (Required): The JSON string from which items will be selected. It is crucial as it provides the data that the node operates on, determining the scope of selection. Type should be `STRING`.
+        - `start_index` (Required): The starting index from which items will be selected. It defines the beginning of the selection range within the JSON object. Type should be `INT`.
+        - `count` (Required): The number of items to be selected starting from the start_index. It specifies the size of the subset to be extracted from the JSON object. Type should be `INT`.
+    - Outputs:
+        - `selection`: The JSON string representing the selected items. It is the result of extracting a subset of items from the input JSON based on the specified start index and count. Type should be `STRING`.

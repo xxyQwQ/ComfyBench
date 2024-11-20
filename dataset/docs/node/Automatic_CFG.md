@@ -1,7 +1,0 @@
-- `Automatic CFG`: The Automatic CFG node applies a dynamic configuration to models, enhancing their performance by adjusting parameters based on the 'boost' flag. This adjustment aims to optimize the model's operation, potentially improving efficiency and output quality.
-    - Parameters:
-        - `boost`: The 'boost' flag determines the intensity of the configuration adjustments. Enabling 'boost' applies a more aggressive optimization strategy, potentially leading to significant enhancements in model performance. Type should be `BOOLEAN`.
-    - Inputs:
-        - `model`: The 'model' parameter represents the model to which the dynamic configuration will be applied. It is crucial for defining the base upon which the adjustments and optimizations are performed. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The output is a modified version of the input model, optimized through dynamic configuration adjustments for improved performance. Type should be `MODEL`.

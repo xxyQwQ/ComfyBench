@@ -1,0 +1,15 @@
+- `ADE_AnimateDiffModelSettings`: This node is designed to configure motion model settings for the AnimateDiff process, allowing users to adjust motion scale parameters and apply optional mask motion scaling to fine-tune the animation effects.
+    - Inputs:
+        - `pe_strength` (Required): Determines the strength of positional encoding adjustments, influencing the overall animation dynamics. Type should be `FLOAT`.
+        - `attn_strength` (Required): Controls the strength of attention adjustments, affecting how motion influences are applied across the animation. Type should be `FLOAT`.
+        - `other_strength` (Required): Adjusts the strength of other model parameters not explicitly categorized, offering additional fine-tuning of the animation. Type should be `FLOAT`.
+        - `motion_pe_stretch` (Required): Specifies the amount by which positional encoding is stretched, altering the motion's perceived speed and extent. Type should be `INT`.
+        - `cap_initial_pe_length` (Required): Caps the initial positional encoding length, potentially limiting the range of motion. Type should be `INT`.
+        - `interpolate_pe_to_length` (Required): Defines the length to which positional encoding is interpolated, affecting the smoothness and range of motion. Type should be `INT`.
+        - `initial_pe_idx_offset` (Required): Sets the initial positional encoding index offset, adjusting the starting point of the motion. Type should be `INT`.
+        - `final_pe_idx_offset` (Required): Determines the final positional encoding index offset, adjusting the endpoint of the motion. Type should be `INT`.
+        - `mask_motion_scale` (Optional): An optional mask to scale motion selectively across different parts of the image, enabling more detailed control over the animation. Type should be `MASK`.
+        - `min_motion_scale` (Optional): Specifies the minimum scale for motion, influencing the subtlety of the animation. Lower values result in more subtle motion effects. Type should be `FLOAT`.
+        - `max_motion_scale` (Optional): Defines the maximum scale for motion, affecting the intensity of the animation. Higher values lead to more pronounced motion effects. Type should be `FLOAT`.
+    - Outputs:
+        - `ad_settings`: Outputs the configured motion model settings, encapsulating adjustments to motion scale and optional mask motion scaling. Type should be `AD_SETTINGS`.

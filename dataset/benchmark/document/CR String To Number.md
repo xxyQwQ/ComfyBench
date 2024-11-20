@@ -1,0 +1,8 @@
+- `CR String To Number`: This node is designed to convert a string representation of a number into its numerical form, offering options for rounding the result to the nearest integer, rounding up, or rounding down. It abstracts the complexity of handling numeric conversions and rounding decisions from the user, providing a straightforward interface for processing textual numeric data.
+    - Inputs:
+        - `text` (Required): The text input is the string representation of a number that the node attempts to convert into a numerical form. Its correctness is crucial for the successful execution of the node. Type should be `STRING`.
+        - `round_integer` (Required): This parameter determines the rounding strategy (nearest, up, or down) to be applied to the converted number, affecting the final integer output. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `INT`: The integer output of the conversion process, affected by the chosen rounding strategy. Type should be `INT`.
+        - `FLOAT`: The floating-point representation of the input text, providing a non-rounded numerical version. Type should be `FLOAT`.
+        - `show_help`: A URL to the node's documentation, offering additional help and examples. Type should be `STRING`.

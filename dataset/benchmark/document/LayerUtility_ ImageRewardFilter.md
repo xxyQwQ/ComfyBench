@@ -1,0 +1,8 @@
+- `LayerUtility_ ImageRewardFilter`: The ImageRewardFilter node filters and ranks images based on their relevance to a given prompt using a reward model. It selects the top images as per the specified output number, effectively curating a subset of images that best match the prompt criteria.
+    - Inputs:
+        - `images` (Required): A collection of images to be evaluated and filtered based on their relevance to the prompt. This input is crucial for determining which images are retained and which are discarded, based on their scores from the reward model. Type should be `IMAGE`.
+        - `prompt` (Required): The text prompt against which the images are evaluated. This prompt guides the reward model in scoring the images, influencing which images are considered most relevant. Type should be `STRING`.
+        - `output_num` (Required): Specifies the number of top-scoring images to retain. This parameter controls the size of the output image set, ensuring only the most relevant images are selected. Type should be `INT`.
+    - Outputs:
+        - `images`: The subset of input images that were ranked highest by the reward model, deemed most relevant to the prompt. Type should be `IMAGE`.
+        - `obsolete_images`: Images that were scored lower by the reward model and not included in the top selections based on the output number. Type should be `IMAGE`.

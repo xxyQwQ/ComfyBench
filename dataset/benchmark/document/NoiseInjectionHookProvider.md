@@ -1,0 +1,9 @@
+- `NoiseInjectionHookProvider`: The NoiseInjectionHookProvider node is designed to inject noise into a given input based on a specified schedule, source, and strength parameters. It aims to enhance or alter the characteristics of the input by applying noise, which can be useful in various image and signal processing tasks to simulate real-world conditions or to introduce variability.
+    - Inputs:
+        - `schedule_for_iteration` (Required): Specifies the schedule to be used for noise injection, affecting how noise is applied over iterations. It plays a crucial role in determining the pattern and intensity of noise injection throughout the process. Type should be `COMBO[STRING]`.
+        - `source` (Required): Indicates the source of the noise to be injected, which can be either CPU or GPU generated noise, affecting the characteristics of the noise. Type should be `COMBO[STRING]`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the noise pattern when the same seed is used. Type should be `INT`.
+        - `start_strength` (Required): The initial strength of the noise to be injected, influencing the intensity of the noise at the beginning of the process. Type should be `FLOAT`.
+        - `end_strength` (Required): The final strength of the noise to be injected, determining the intensity of the noise at the end of the process. Type should be `FLOAT`.
+    - Outputs:
+        - `pk_hook`: The output is a hook that conditions the input by injecting noise according to the specified parameters. Type should be `PK_HOOK`.

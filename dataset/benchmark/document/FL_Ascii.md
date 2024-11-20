@@ -1,0 +1,9 @@
+- `FL_Ascii`: The FL_Ascii node transforms images into ASCII art by resizing the input image based on specified spacing and then mapping pixel brightness values to characters. This process creates a text-based visual representation of the image, utilizing a specified font size, font name, and character set.
+    - Inputs:
+        - `image` (Required): The input image to be transformed into ASCII art. It serves as the canvas for the ASCII art effect. Type should be `IMAGE`.
+        - `spacing` (Required): Determines the spacing between characters in the ASCII art, effectively controlling the resolution of the output. Type should be `INT`.
+        - `font_size` (Required): Specifies the font size used for the characters in the ASCII art, impacting the detail and readability of the output. Type should be `INT`.
+        - `font_name` (Required): The name of the font used to render characters in the ASCII art, influencing the style and appearance of the output. Type should be `COMBO[STRING]`.
+        - `characters` (Required): A string of characters used to represent different brightness levels in the ASCII art, where each character's position in the string corresponds to a specific range of brightness. Type should be `STRING`.
+    - Outputs:
+        - `image`: The resulting ASCII art as an image, where the original image is represented by a matrix of characters. Type should be `IMAGE`.

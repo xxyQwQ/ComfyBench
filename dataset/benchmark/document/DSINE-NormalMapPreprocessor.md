@@ -1,0 +1,8 @@
+- `DSINE-NormalMapPreprocessor`: The DSINE Normal Map Preprocessor node is designed to preprocess images for normal map generation using the DSINE model. It adjusts the field of view and iteration parameters to optimize the model's performance for generating detailed normal maps from input images.
+    - Inputs:
+        - `image` (Required): The image input is the target for normal map generation, serving as the base for the model to apply its processing and generate the normal map. Type should be `IMAGE`.
+        - `fov` (Optional): The field of view parameter adjusts the perspective from which the normal map is generated, affecting the depth perception and detail in the resulting image. Type should be `FLOAT`.
+        - `iterations` (Optional): The iterations parameter controls the number of refinement steps the model performs, impacting the accuracy and detail of the generated normal map. Type should be `INT`.
+        - `resolution` (Optional): The resolution parameter specifies the output resolution of the generated normal map, affecting the level of detail and clarity. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a normal map image, which visually represents surface normals as colors, providing detailed information about the surface geometry of the input image. Type should be `IMAGE`.

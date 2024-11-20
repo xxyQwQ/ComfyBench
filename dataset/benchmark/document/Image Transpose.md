@@ -1,0 +1,12 @@
+- `Image Transpose`: The Image Overlay node is designed to overlay one image onto another with specified dimensions, location, rotation, and feathering options. It enables complex image composition tasks, allowing for precise control over how images are combined and manipulated.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the base image onto which the overlay will be applied. It is fundamental in defining the canvas for the transformation. Type should be `IMAGE`.
+        - `image_overlay` (Required): The 'image_overlay' parameter specifies the image to be overlaid on the base image. This image will undergo transformations and be composited onto the base image. Type should be `IMAGE`.
+        - `width` (Required): Specifies the width of the overlay image after resizing, playing a critical role in how the overlay fits onto the base image. Type should be `INT`.
+        - `height` (Required): Specifies the height of the overlay image after resizing, crucial for adjusting the overlay's fit on the base image. Type should be `INT`.
+        - `X` (Required): The X coordinate for the top-left corner of the overlay image on the base image, determining the overlay's horizontal placement. Type should be `INT`.
+        - `Y` (Required): The Y coordinate for the top-left corner of the overlay image on the base image, determining the overlay's vertical placement. Type should be `INT`.
+        - `rotation` (Required): Defines the rotation angle of the overlay image, allowing for dynamic orientation adjustments. Type should be `INT`.
+        - `feathering` (Required): Specifies the feathering radius for the overlay edges, enabling smooth transitions between the overlay and the base image. Type should be `INT`.
+    - Outputs:
+        - `image`: The output 'image' parameter contains the composited image after applying the specified transformations and overlay operations. Type should be `IMAGE`.

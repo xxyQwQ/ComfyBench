@@ -1,0 +1,14 @@
+- `CreateShapeMask`: This node is designed to generate a series of masks or a single mask with a specified shape, allowing for dynamic creation of animated masks by adjusting the shape's size over a sequence of frames. It supports customization of the mask's dimensions, shape, and growth per frame, making it versatile for various masking applications.
+    - Inputs:
+        - `shape` (Required): Specifies the geometric shape of the mask to be created. It determines the visual form of the mask, affecting its appearance and utility in masking operations. Type should be `COMBO[STRING]`.
+        - `frames` (Required): Defines the number of frames (or masks) to generate. This allows for the creation of animated masks by specifying more than one frame. Type should be `INT`.
+        - `location_x` (Required): The x-coordinate of the shape's center location within the mask. It determines where the shape will be positioned horizontally. Type should be `INT`.
+        - `location_y` (Required): The y-coordinate of the shape's center location within the mask. It determines where the shape will be positioned vertically. Type should be `INT`.
+        - `grow` (Required): Specifies the amount by which the shape's size should increase or decrease across frames, enabling dynamic resizing for animated effects. Type should be `INT`.
+        - `frame_width` (Required): The width of the mask frame, defining the horizontal dimension of the mask. Type should be `INT`.
+        - `frame_height` (Required): The height of the mask frame, defining the vertical dimension of the mask. Type should be `INT`.
+        - `shape_width` (Required): The initial width of the shape within the mask, determining its size. Type should be `INT`.
+        - `shape_height` (Required): The initial height of the shape within the mask, determining its size. Type should be `INT`.
+    - Outputs:
+        - `mask`: The generated mask with the specified shape and dimensions. Type should be `MASK`.
+        - `mask_inverted`: An inverted version of the generated mask, where the shape is transparent and the rest of the mask is opaque. Type should be `MASK`.

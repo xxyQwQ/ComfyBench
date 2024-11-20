@@ -1,8 +1,0 @@
-- `CM_Vec3ToScalarBinaryOperation`: This node performs a binary operation between two 3-dimensional vectors (Vec3) and returns a scalar value as a result. It supports a variety of operations such as dot product and distance calculation, abstracting complex mathematical operations into a simple interface.
-    - Parameters:
-        - `op`: Specifies the binary operation to be performed on the two Vec3 inputs, such as dot product or distance calculation. This choice determines how the vectors are mathematically combined. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `a`: The first 3-dimensional vector (Vec3) input for the binary operation. Type should be `VEC3`.
-        - `b`: The second 3-dimensional vector (Vec3) input for the binary operation. Type should be `VEC3`.
-    - Outputs:
-        - `float`: The scalar result of the binary operation performed on the two Vec3 inputs. Type should be `FLOAT`.

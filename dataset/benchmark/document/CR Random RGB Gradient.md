@@ -1,0 +1,7 @@
+- `CR Random RGB Gradient`: This node generates a multiline text string representing a random RGB gradient, based on a given seed and the number of rows specified. It aims to provide a simple way to create diverse and random color gradients for various applications.
+    - Inputs:
+        - `seed` (Required): The seed parameter initializes the random number generator, ensuring the reproducibility of the gradient pattern. It plays a crucial role in generating consistent results across different executions. Type should be `INT`.
+        - `rows` (Required): The rows parameter determines the number of color steps in the gradient, affecting the gradient's smoothness and complexity. It directly influences the length and variation of the generated multiline text. Type should be `INT`.
+    - Outputs:
+        - `multiline_text`: A string containing multiple lines, each representing a step in the RGB gradient with random colors. Type should be `STRING`.
+        - `show_help`: A URL string providing access to additional help and documentation related to the node. Type should be `STRING`.

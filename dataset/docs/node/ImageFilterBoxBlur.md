@@ -1,8 +1,0 @@
-- `ImageFilterBoxBlur`: The ImageFilterBoxBlur node applies a box blur effect to images, utilizing a specified blur size in both the x and y dimensions to achieve a uniform smoothing effect.
-    - Parameters:
-        - `size_x`: Specifies the horizontal size of the blur effect. It determines the width of the kernel used in the box blur operation. Type should be `INT`.
-        - `size_y`: Specifies the vertical size of the blur effect. It determines the height of the kernel used in the box blur operation. Type should be `INT`.
-    - Inputs:
-        - `images`: The images to be processed. This parameter is crucial for defining the input images on which the box blur effect will be applied. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is the processed images with the box blur effect applied, providing a uniformly smoothed appearance. Type should be `IMAGE`.

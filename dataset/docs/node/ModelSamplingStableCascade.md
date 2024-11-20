@@ -1,7 +1,0 @@
-- `ModelSamplingStableCascade`: This node is designed to enhance the sampling process of models by applying a stable cascade patch. It clones the input model and integrates advanced sampling techniques, thereby potentially improving the model's performance or altering its behavior in a specified manner.
-    - Parameters:
-        - `shift`: A floating-point value that specifies the degree of shift to be applied during the sampling process. This parameter influences how the model's behavior is altered by the patch. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The model to which the stable cascade sampling patch will be applied. This parameter is crucial as it determines the base model that will undergo modification. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The modified model with the stable cascade sampling patch applied. This output reflects the enhanced or altered version of the input model. Type should be `MODEL`.

@@ -1,0 +1,7 @@
+- `SplitSigmas`: The `SplitSigmas` node is designed to partition a sequence of sigma values into two subsets based on a specified step index. This functionality is crucial for custom sampling strategies in generative models, where manipulating the noise levels can significantly impact the model's output quality and diversity.
+    - Inputs:
+        - `sigmas` (Required): The sequence of sigma values to be split. This parameter is central to the node's operation as it determines the basis for the partitioning process. Type should be `SIGMAS`.
+        - `step` (Required): The index at which the sigma sequence is split into two subsets. This parameter directly influences the composition of the resulting sigma subsets, affecting the sampling process. Type should be `INT`.
+    - Outputs:
+        - `high_sigmas`: The subset of sigma values before the specified step index, representing higher noise levels. Type should be `SIGMAS`.
+        - `low_sigmas`: The subset of sigma values from the specified step index onwards, representing lower noise levels. Type should be `SIGMAS`.

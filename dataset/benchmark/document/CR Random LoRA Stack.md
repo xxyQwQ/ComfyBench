@@ -1,0 +1,23 @@
+- `CR Random LoRA Stack`: The CR_RandomLoRAStack node is designed to manage and manipulate stacks of LoRA (Low-Rank Adaptation) instances, specifically focusing on randomizing and applying LoRA modifications to models. It enables the dynamic adjustment of model weights through LoRA techniques, supporting exclusive modes, stride-based re-randomization, and the integration of multiple LoRA instances into a single stack.
+    - Inputs:
+        - `exclusive_mode` (Required): Determines whether only one LoRA instance should be applied at a time, enabling a mode where the instance with the highest chance is selected exclusively. Type should be `COMBO[STRING]`.
+        - `stride` (Required): Sets the minimum number of cycles before a re-randomization of the LoRA weights is performed, controlling the frequency of weight adjustments. Type should be `INT`.
+        - `force_randomize_after_stride` (Required): Forces a re-randomization of the LoRA weights after a specified number of cycles, ensuring dynamic adjustments over time. Type should be `COMBO[STRING]`.
+        - `lora_name_1` (Required): Specifies the first LoRA instance's name, part of the trio of LoRA instances that can be applied. Type should be `COMBO[STRING]`.
+        - `switch_1` (Required): Controls whether the first LoRA instance is active or not, allowing for selective application. Type should be `COMBO[STRING]`.
+        - `chance_1` (Required): Determines the chance of the first LoRA instance being applied, used in exclusive mode to select the most likely instance. Type should be `FLOAT`.
+        - `model_weight_1` (Required): Defines the model weight for the first LoRA instance, influencing how it modifies the model. Type should be `FLOAT`.
+        - `clip_weight_1` (Required): Sets the clipping weight for the first LoRA instance, affecting its impact on the model. Type should be `FLOAT`.
+        - `lora_name_2` (Required): Specifies the second LoRA instance's name, part of the trio of LoRA instances that can be applied. Type should be `COMBO[STRING]`.
+        - `switch_2` (Required): Controls whether the second LoRA instance is active or not, allowing for selective application. Type should be `COMBO[STRING]`.
+        - `chance_2` (Required): Determines the chance of the second LoRA instance being applied, used in exclusive mode to select the most likely instance. Type should be `FLOAT`.
+        - `model_weight_2` (Required): Defines the model weight for the second LoRA instance, influencing how it modifies the model. Type should be `FLOAT`.
+        - `clip_weight_2` (Required): Sets the clipping weight for the second LoRA instance, affecting its impact on the model. Type should be `FLOAT`.
+        - `lora_name_3` (Required): Specifies the third LoRA instance's name, part of the trio of LoRA instances that can be applied. Type should be `COMBO[STRING]`.
+        - `switch_3` (Required): Controls whether the third LoRA instance is active or not, allowing for selective application. Type should be `COMBO[STRING]`.
+        - `chance_3` (Required): Determines the chance of the third LoRA instance being applied, used in exclusive mode to select the most likely instance. Type should be `FLOAT`.
+        - `model_weight_3` (Required): Defines the model weight for the third LoRA instance, influencing how it modifies the model. Type should be `FLOAT`.
+        - `clip_weight_3` (Required): Sets the clipping weight for the third LoRA instance, affecting its impact on the model. Type should be `FLOAT`.
+        - `lora_stack` (Optional): An optional stack of existing LoRA instances to be extended or modified by the current operation. Type should be `LORA_STACK`.
+    - Outputs:
+        - `lora_stack`: Returns a modified stack of LoRA instances, incorporating the adjustments and randomizations specified in the input parameters. Type should be `LORA_STACK`.

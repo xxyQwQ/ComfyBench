@@ -1,0 +1,7 @@
+- `ImageFromBatch+`: This node is designed to extract a specific segment from a batch of images based on the starting index and the length of the segment desired. It enables selective retrieval of images from a larger batch, facilitating operations that require processing or analysis of subsets of image collections.
+    - Inputs:
+        - `image` (Required): The batch of images from which a segment is to be extracted. It serves as the primary input for determining the subset of images to be processed. Type should be `IMAGE`.
+        - `start` (Required): The starting index from which the image segment extraction begins. It defines the initial position in the batch from which images are to be retrieved, allowing for targeted selection within the batch. Type should be `INT`.
+        - `length` (Required): Specifies the number of images to extract from the batch, starting from the 'start' index. It determines the size of the image segment to be retrieved, enabling precise control over the subset size. Type should be `INT`.
+    - Outputs:
+        - `image`: The extracted segment of images from the specified batch. This output facilitates further processing or analysis of the selected subset of images. Type should be `IMAGE`.

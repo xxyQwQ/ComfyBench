@@ -1,0 +1,15 @@
+- `LoadAndResizeImage`: This node is designed to load images from a specified path and resize them according to given dimensions, maintaining the aspect ratio if required. It supports handling of image masks, allowing for simultaneous resizing and optional adjustment of the mask channel. The node is capable of processing single images or batches, adapting to various image formats and ensuring compatibility with further image processing tasks.
+    - Inputs:
+        - `image` (Required): The image or path to the image to be loaded and resized. It serves as the primary input for the node's operation, determining the content that will undergo resizing and potential mask adjustment. Type should be `COMBO[STRING]`.
+        - `resize` (Required): A boolean flag indicating whether the image should be resized. This parameter influences the node's decision to alter the image dimensions or maintain the original size. Type should be `BOOLEAN`.
+        - `width` (Required): The desired width of the output image. It plays a crucial role in determining the final dimensions of the resized image, especially when maintaining aspect ratio. Type should be `INT`.
+        - `height` (Required): The desired height of the output image. Similar to width, it affects the final dimensions of the resized image and is essential for aspect ratio calculations. Type should be `INT`.
+        - `repeat` (Required): Indicates whether the image should be repeated to fill a larger canvas if necessary. This parameter is relevant for batch processing or specific layout requirements. Type should be `INT`.
+        - `keep_proportion` (Required): A flag to maintain the original aspect ratio of the image during resizing. It ensures that the resized image retains its proportional dimensions, avoiding distortion. Type should be `BOOLEAN`.
+        - `divisible_by` (Required): Ensures the dimensions of the resized image are divisible by a specified number. This is often required for compatibility with certain image processing or machine learning models. Type should be `INT`.
+        - `mask_channel` (Required): Specifies the channel of the image to be used as a mask, allowing for selective processing or adjustment in conjunction with the main image resizing. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The resized image, potentially alongside its mask, ready for further processing or analysis. This output is central to the node's purpose of preparing images for subsequent steps in a workflow. Type should be `IMAGE`.
+        - `mask`: The mask associated with the resized image, if applicable, providing additional data for selective processing or analysis. Type should be `MASK`.
+        - `width`: The width of the resized image, reflecting the final dimensions after processing. Type should be `INT`.
+        - `height`: The height of the resized image, indicating the final dimensions post-resizing. Type should be `INT`.

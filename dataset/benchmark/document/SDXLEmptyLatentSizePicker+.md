@@ -1,0 +1,8 @@
+- `SDXLEmptyLatentSizePicker+`: This node is designed to select an appropriate latent size for a given resolution and batch size, specifically tailored for the SDXL model. It calculates the dimensions of the latent space required to accommodate the specified resolution and batch size, ensuring compatibility with the model's architecture.
+    - Inputs:
+        - `resolution` (Required): Specifies the desired output resolution from a predefined list of resolutions, each associated with a scaling factor. This parameter is crucial for determining the dimensions of the generated latent space, directly influencing the quality and detail of the generated content. Type should be `COMBO[STRING]`.
+        - `batch_size` (Required): Defines the number of latent samples to generate in one batch. This parameter is essential for managing the computational load and memory usage, impacting the efficiency of the generation process. Type should be `INT`.
+    - Outputs:
+        - `LATENT`: A tensor representing the generated latent space, structured to match the SDXL model's expected input dimensions. Type should be `LATENT`.
+        - `width`: The width of the latent space, derived from the specified resolution. Type should be `INT`.
+        - `height`: The height of the latent space, derived from the specified resolution. Type should be `INT`.

@@ -1,0 +1,30 @@
+- `LayerMask_ SegformerB2ClothesUltra`: This node specializes in segmenting clothing from images using the Segformer B2 model. It processes images to identify and isolate clothing items, leveraging advanced semantic segmentation techniques to achieve high precision and detail in the segmentation results.
+    - Inputs:
+        - `image` (Required): The input image, which the node processes to segment clothing. It's crucial for the segmentation task, as the model applies semantic segmentation techniques to this input to isolate clothing items. Type should be `IMAGE`.
+        - `face` (Required): unknown Type should be `BOOLEAN`.
+        - `hair` (Required): unknown Type should be `BOOLEAN`.
+        - `hat` (Required): unknown Type should be `BOOLEAN`.
+        - `sunglass` (Required): unknown Type should be `BOOLEAN`.
+        - `left_arm` (Required): unknown Type should be `BOOLEAN`.
+        - `right_arm` (Required): unknown Type should be `BOOLEAN`.
+        - `left_leg` (Required): unknown Type should be `BOOLEAN`.
+        - `right_leg` (Required): unknown Type should be `BOOLEAN`.
+        - `upper_clothes` (Required): unknown Type should be `BOOLEAN`.
+        - `skirt` (Required): unknown Type should be `BOOLEAN`.
+        - `pants` (Required): unknown Type should be `BOOLEAN`.
+        - `dress` (Required): unknown Type should be `BOOLEAN`.
+        - `belt` (Required): unknown Type should be `BOOLEAN`.
+        - `shoe` (Required): unknown Type should be `BOOLEAN`.
+        - `bag` (Required): unknown Type should be `BOOLEAN`.
+        - `scarf` (Required): unknown Type should be `BOOLEAN`.
+        - `detail_method` (Required): unknown Type should be `COMBO[STRING]`.
+        - `detail_erode` (Required): unknown Type should be `INT`.
+        - `detail_dilate` (Required): unknown Type should be `INT`.
+        - `black_point` (Required): unknown Type should be `FLOAT`.
+        - `white_point` (Required): unknown Type should be `FLOAT`.
+        - `process_detail` (Required): unknown Type should be `BOOLEAN`.
+        - `device` (Required): unknown Type should be `COMBO[STRING]`.
+        - `max_megapixels` (Required): unknown Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The segmented image with clothing items isolated, returned as a tensor. It represents the visual result of the segmentation process. Type should be `IMAGE`.
+        - `mask`: The segmentation mask, indicating the areas of the image identified as clothing. It provides a binary or multi-class mask highlighting the segmented clothing areas. Type should be `MASK`.

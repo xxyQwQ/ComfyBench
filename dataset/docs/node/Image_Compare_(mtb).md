@@ -1,8 +1,0 @@
-- `Image Compare (mtb)`: This node compares two images using different modes such as checkerboard, diff, or blend, and returns a difference image that highlights the variations between them.
-    - Parameters:
-        - `mode`: Specifies the method of comparison (checkerboard, diff, blend) to apply, influencing how the differences between the images are visualized. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `imageA`: The first image to compare. It plays a crucial role in the comparison process as one of the two images being analyzed for differences. Type should be `IMAGE`.
-        - `imageB`: The second image to compare. It is essential for the comparison process, serving as the counterpart to the first image in identifying differences. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The resulting image after comparison, highlighting differences based on the selected mode. Type should be `IMAGE`.

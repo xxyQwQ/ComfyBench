@@ -1,8 +1,0 @@
-- `easy promptConcat`: The `promptConcat` node is designed to concatenate two text prompts with an optional separator, allowing for the dynamic creation of combined text strings. This functionality is particularly useful in scenarios where text from different sources needs to be merged into a single string, maintaining flexibility in how the texts are joined.
-    - Parameters:
-        - `prompt1`: The first text prompt to be concatenated. It serves as the initial part of the new combined text string. Type should be `STRING`.
-        - `prompt2`: The second text prompt to be concatenated. It follows the first prompt in the new combined text string. Type should be `STRING`.
-        - `separator`: An optional string used to separate the two prompts in the combined text string. If not specified, the prompts are concatenated directly without any separator. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `prompt`: The resulting text string after concatenating `prompt1` and `prompt2` with the optional `separator`. This output is useful for further text processing or output display. Type should be `STRING`.

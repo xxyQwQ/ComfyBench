@@ -1,9 +1,0 @@
-- `ImageFilterBilateralBlur`: The ImageFilterBilateralBlur node applies a bilateral filter to images, a process that reduces noise while keeping edges sharp, by considering both spatial proximity and pixel value differences.
-    - Parameters:
-        - `size`: Specifies the diameter of each pixel neighborhood that is used during filtering. A larger size means more pixels are considered for each target pixel, potentially leading to stronger smoothing. Type should be `INT`.
-        - `sigma_color`: Controls how much an image's color space will influence the bilateral filter. Higher values allow pixels with larger intensity differences to influence each other. Type should be `FLOAT`.
-        - `sigma_intensity`: Determines the range of intensity (brightness) differences in the image that will influence the bilateral filtering. Higher values result in more pixels influencing each other based on their intensity differences. Type should be `FLOAT`.
-    - Inputs:
-        - `images`: The images to be processed. This input is crucial for defining the visual content that the bilateral filter will be applied to. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed image after applying the bilateral blur filter, which aims to reduce noise while preserving edges. Type should be `IMAGE`.

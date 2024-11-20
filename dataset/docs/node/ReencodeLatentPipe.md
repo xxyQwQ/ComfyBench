@@ -1,9 +1,0 @@
-- `ReencodeLatentPipe`: This node is designed to re-encode latent representations by transforming them through a specified input and output basic pipe. It facilitates the modification of latent spaces, enabling the transition of samples from one latent representation to another, potentially enhancing or altering their characteristics.
-    - Parameters:
-        - `tile_mode`: Specifies the mode of tiling to be used during the re-encoding process, affecting how the samples are decoded and encoded. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `samples`: The latent samples to be re-encoded. These samples are the starting point for the transformation process. Type should be `LATENT`.
-        - `input_basic_pipe`: The basic pipe through which the samples are initially passed for decoding or transformation. Type should be `BASIC_PIPE`.
-        - `output_basic_pipe`: The basic pipe used for the final encoding or transformation of the samples, determining their new latent representation. Type should be `BASIC_PIPE`.
-    - Outputs:
-        - `latent`: The re-encoded latent samples, representing the transformed latent space. Type should be `LATENT`.

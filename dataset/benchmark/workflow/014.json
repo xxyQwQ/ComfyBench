@@ -1,0 +1,219 @@
+{
+    "33": {
+        "inputs": {
+            "image": "cat_stand.jpg",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "38": {
+        "inputs": {
+            "grow_mask_by": 0,
+            "pixels": [
+                "33",
+                0
+            ],
+            "vae": [
+                "112",
+                2
+            ],
+            "mask": [
+                "113",
+                0
+            ]
+        },
+        "class_type": "VAEEncodeForInpaint",
+        "_meta": {
+            "title": "VAE Encode (for Inpainting)"
+        }
+    },
+    "59": {
+        "inputs": {
+            "text": "text, watermark",
+            "speak_and_recognation": true,
+            "clip": [
+                "112",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "60": {
+        "inputs": {
+            "text": "a dog",
+            "speak_and_recognation": true,
+            "clip": [
+                "112",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "101": {
+        "inputs": {
+            "prompt": "cat",
+            "threshold": 0.2,
+            "sam_model": [
+                "103",
+                0
+            ],
+            "grounding_dino_model": [
+                "102",
+                0
+            ],
+            "image": [
+                "33",
+                0
+            ]
+        },
+        "class_type": "GroundingDinoSAMSegment (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoSAMSegment (segment anything)"
+        }
+    },
+    "102": {
+        "inputs": {
+            "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+        },
+        "class_type": "GroundingDinoModelLoader (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoModelLoader (segment anything)"
+        }
+    },
+    "103": {
+        "inputs": {
+            "model_name": "sam_vit_l (1.25GB)"
+        },
+        "class_type": "SAMModelLoader (segment anything)",
+        "_meta": {
+            "title": "SAMModelLoader (segment anything)"
+        }
+    },
+    "105": {
+        "inputs": {
+            "add_noise": "enable",
+            "noise_seed": 858603438156931,
+            "steps": 20,
+            "cfg": 8,
+            "sampler_name": "dpmpp_2m",
+            "scheduler": "normal",
+            "start_at_step": 0,
+            "end_at_step": 10000,
+            "return_with_leftover_noise": "disable",
+            "model": [
+                "112",
+                0
+            ],
+            "positive": [
+                "60",
+                0
+            ],
+            "negative": [
+                "59",
+                0
+            ],
+            "latent_image": [
+                "38",
+                0
+            ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+            "title": "KSampler (Advanced)"
+        }
+    },
+    "106": {
+        "inputs": {
+            "samples": [
+                "109",
+                0
+            ],
+            "vae": [
+                "112",
+                2
+            ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+            "title": "VAE Decode"
+        }
+    },
+    "109": {
+        "inputs": {
+            "add_noise": "enable",
+            "noise_seed": 576713408471301,
+            "steps": 20,
+            "cfg": 8,
+            "sampler_name": "dpmpp_2m",
+            "scheduler": "normal",
+            "start_at_step": 0,
+            "end_at_step": 10000,
+            "return_with_leftover_noise": "disable",
+            "model": [
+                "112",
+                0
+            ],
+            "positive": [
+                "60",
+                0
+            ],
+            "negative": [
+                "59",
+                0
+            ],
+            "latent_image": [
+                "105",
+                0
+            ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+            "title": "KSampler (Advanced)"
+        }
+    },
+    "112": {
+        "inputs": {
+            "ckpt_name": "dreamshaper_8Inpainting.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {
+            "title": "Load Checkpoint"
+        }
+    },
+    "113": {
+        "inputs": {
+            "expand": 5,
+            "tapered_corners": true,
+            "mask": [
+                "101",
+                1
+            ]
+        },
+        "class_type": "GrowMask",
+        "_meta": {
+            "title": "GrowMask"
+        }
+    },
+    "115": {
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "106",
+                0
+            ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+            "title": "Save Image"
+        }
+    }
+}

@@ -1,7 +1,0 @@
-- `CLIPEncodeMultiple`: The CLIPEncodeMultiple node is designed to encode multiple inputs using a CLIP model, producing a list of conditionings based on the inputs. It abstracts the complexity of handling multiple inputs and leverages the CLIP model's capabilities to generate relevant conditionings for each input.
-    - Parameters:
-        - `inputs_len`: Specifies the number of inputs to be encoded. It affects the number of iterations and consequently the size of the output list of conditionings. Type should be `INT`.
-    - Inputs:
-        - `clip`: The CLIP model used for encoding the inputs. It is crucial for determining how the inputs are processed and encoded into conditionings. Type should be `CLIP`.
-    - Outputs:
-        - `conditioning`: A list of conditionings generated from the inputs. Each element in the list corresponds to the conditioning of an individual input. Type should be `CONDITIONING`.

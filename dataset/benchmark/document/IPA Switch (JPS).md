@@ -1,0 +1,6 @@
+- `IPA Switch (JPS)`: The IPA Switch node is designed to select and output one of several IP Adapter configurations based on a given selection input. It facilitates dynamic switching between different IP Adapter settings, allowing for flexible adaptation to various processing needs within a pipeline.
+    - Inputs:
+        - `select` (Required): Determines which IP Adapter configuration to output, based on the numerical selection. Type should be `INT`.
+        - `ipa_i` (Optional): Represents a series of optional IP Adapter configurations (ipa_1 to ipa_5) that can be selected for output. 'i' ranges from 1 to 5, where ipa_1 is mandatory and the rest are optional, allowing for dynamic selection based on 'select'. Type should be `IPADAPTER`.
+    - Outputs:
+        - `IPA_out`: The selected IP Adapter configuration. Type should be `IPADAPTER`.

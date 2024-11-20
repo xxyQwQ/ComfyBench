@@ -1,0 +1,7 @@
+- `AddAlpha`: The `AddAlpha` node is designed to add an alpha channel to RGB images, allowing for the manipulation of image transparency. It supports optional inversion of the alpha channel, providing flexibility in handling transparency effects.
+    - Inputs:
+        - `rgb_image` (Required): The RGB image to which an alpha channel will be added. This is the primary image input for transparency manipulation. Type should be `IMAGE`.
+        - `alpha` (Optional): An optional alpha channel to be added to the RGB image. If provided, it specifies the transparency levels for the image. Type should be `IMAGE`.
+        - `method` (Optional): An optional method specifying how the alpha channel should be applied. It can either add the alpha channel directly or invert it, affecting the transparency effect. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The resulting image with an alpha channel added, enabling transparency manipulation. Type should be `IMAGE`.

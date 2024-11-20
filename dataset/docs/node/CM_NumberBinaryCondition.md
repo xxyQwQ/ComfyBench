@@ -1,8 +1,0 @@
-- `CM_NumberBinaryCondition`: This node performs binary conditional operations on numbers, evaluating the relationship between two numeric inputs based on a specified condition.
-    - Parameters:
-        - `op`: Specifies the binary conditional operation to be performed, determining how the two numbers are compared. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `a`: The first number to be compared in the conditional operation. Type should be `NUMBER`.
-        - `b`: The second number to be compared in the conditional operation. Type should be `NUMBER`.
-    - Outputs:
-        - `bool`: The result of the binary conditional operation, indicating whether the specified condition holds true between the two numbers. Type should be `BOOL`.

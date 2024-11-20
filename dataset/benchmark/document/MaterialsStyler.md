@@ -1,0 +1,9 @@
+- `MaterialsStyler`: The MaterialsStyler node dynamically applies styling to text prompts based on a selection of material-themed templates. It allows users to enhance or modify the aesthetic and thematic aspects of their prompts by incorporating material-specific styles, aiming to achieve a more targeted and refined output.
+    - Inputs:
+        - `text_positive` (Required): The positive aspect of the text prompt to be styled. It plays a crucial role in determining the overall positive tone and theme of the styled output. Type should be `STRING`.
+        - `text_negative` (Required): The negative aspect of the text prompt to be styled. It is essential for defining the elements to be downplayed or avoided in the styled output, contributing to a more nuanced result. Type should be `STRING`.
+        - `materials` (Required): Specifies the material-themed template to apply to the text prompts. This selection is central to customizing the styling process, directly influencing the aesthetic and thematic outcome. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag indicating whether to log the prompt styling process. Enabling this option provides transparency and insight into the styling decisions made. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive`: The styled positive aspect of the text prompt, reflecting the applied material-themed styling. Type should be `STRING`.
+        - `text_negative`: The styled negative aspect of the text prompt, showcasing the adjustments made to downplay or avoid certain elements. Type should be `STRING`.

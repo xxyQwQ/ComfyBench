@@ -1,0 +1,10 @@
+- `GetSigma`: The GetSigma node is designed to calculate a specific sigma value based on a given model, sampler, scheduler, and step parameters. It abstracts the complexity of interacting with different samplers and schedulers to provide a straightforward way to obtain a sigma value, which is crucial for controlling the noise level in generative models.
+    - Inputs:
+        - `model` (Required): The model parameter specifies the generative model to be used for sigma calculation. It is crucial for determining the appropriate noise level based on the model's characteristics and configurations. Type should be `MODEL`.
+        - `sampler_name` (Required): The sampler_name parameter identifies the specific sampling strategy to be employed. This choice affects how sigma values are computed and applied, tailoring the noise injection process to the selected sampler's methodology. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler parameter determines the scheduling algorithm for adjusting noise levels throughout the generative process. It plays a key role in fine-tuning the progression of sigma values over specified steps. Type should be `COMBO[STRING]`.
+        - `steps` (Required): Specifies the total number of steps to consider for sigma calculation. It defines the scope within which the start and end steps are evaluated, impacting the final sigma value. Type should be `INT`.
+        - `start_at_step` (Required): The starting step from which to begin calculating sigma. This parameter allows for flexibility in determining the initial noise level, influencing the early stages of the generative process. Type should be `INT`.
+        - `end_at_step` (Required): The ending step at which to stop calculating sigma. It sets the final point for noise adjustment, affecting the outcome of the generative model's output. Type should be `INT`.
+    - Outputs:
+        - `float`: Returns the calculated sigma value, which is a measure of the noise level to be applied. This value is critical for controlling the generative process's fidelity and diversity. Type should be `FLOAT`.

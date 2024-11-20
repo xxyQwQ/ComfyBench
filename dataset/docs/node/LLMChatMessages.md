@@ -1,7 +1,0 @@
-- `LLMChatMessages`: This node is designed to encapsulate system and user prompts into structured chat messages, facilitating the preparation of these messages for further processing or interaction within chat-based applications.
-    - Parameters:
-        - `prompt`: unknown Type should be `STRING`.
-        - `role`: unknown Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `llm_message`: Outputs a list of structured chat messages that combine system and user inputs into a cohesive sequence for interaction. Type should be `LIST`.

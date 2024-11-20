@@ -1,8 +1,0 @@
-- `WidgetToString`: This node is designed to extract and return the value of a specified widget from a given node within a workflow. It focuses on retrieving widget values as strings, optionally aggregating all widget values from the specified node if required.
-    - Parameters:
-        - `id`: Specifies the unique identifier of the node from which to extract the widget value, playing a crucial role in identifying the correct node within a workflow. Type should be `INT`.
-        - `widget_name`: The name of the widget whose value is to be retrieved, determining which specific widget's value is extracted from the node. Type should be `STRING`.
-        - `return_all`: A boolean flag that, when set to true, changes the node's behavior to return all widget values from the specified node instead of just the value of a single widget. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `string`: The extracted widget value(s) as a string, which may represent a single widget's value or a concatenation of multiple widget values if 'return_all' is true. Type should be `STRING`.

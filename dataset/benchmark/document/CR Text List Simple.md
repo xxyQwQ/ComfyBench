@@ -1,0 +1,11 @@
+- `CR Text List Simple`: This node is designed to create a simple list of texts from individual text inputs and an optional list of texts. It allows for the aggregation of up to five separate text inputs and an additional list of texts into a single list, facilitating the organization and manipulation of text data in a streamlined manner.
+    - Inputs:
+        - `text_1` (Optional): The first text input to be included in the list. It's a foundational element for constructing the list, contributing to the overall content. Type should be `STRING`.
+        - `text_2` (Optional): The second text input to be included in the list. It adds to the list's content, following the first text input. Type should be `STRING`.
+        - `text_3` (Optional): The third text input to be included in the list. It continues to build upon the list's content, following the second text input. Type should be `STRING`.
+        - `text_4` (Optional): The fourth text input to be included in the list. It further enriches the list's content, following the third text input. Type should be `STRING`.
+        - `text_5` (Optional): The fifth text input to be included in the list. It completes the initial set of individual text inputs, adding depth to the list's content. Type should be `STRING`.
+        - `text_list_simple` (Optional): An optional list of texts that can be appended to the list. This parameter allows for the inclusion of pre-existing lists, enhancing the node's flexibility. Type should be `TEXT_LIST_SIMPLE`.
+    - Outputs:
+        - `TEXT_LIST_SIMPLE`: The compiled list of texts, combining individual text inputs and any provided list of texts into a unified collection. Type should be `TEXT_LIST_SIMPLE`.
+        - `show_help`: A URL providing access to additional help and documentation related to the node. Type should be `STRING`.

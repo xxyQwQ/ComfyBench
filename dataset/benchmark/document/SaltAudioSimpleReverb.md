@@ -1,0 +1,7 @@
+- `SaltAudioSimpleReverb`: This node applies a simple reverb effect to an audio input, simulating the sound reflection and decay characteristics of a physical space. It allows for the adjustment of the reverb level and decay time to tailor the effect.
+    - Inputs:
+        - `audio` (Required): The raw audio data to which the reverb effect will be applied. This input is crucial for defining the base sound that will be processed. Type should be `AUDIO`.
+        - `reverb_level` (Required): Specifies the intensity of the reverb effect. A higher value results in a more pronounced reverb, simulating a larger or more reflective space. Type should be `FLOAT`.
+        - `decay` (Required): Determines the rate at which the reverb effect fades away. A higher decay value simulates a longer echo, as if the sound is reflecting off distant surfaces. Type should be `FLOAT`.
+    - Outputs:
+        - `audio`: The processed audio data with the reverb effect applied, reflecting the adjustments made through the input parameters. Type should be `AUDIO`.

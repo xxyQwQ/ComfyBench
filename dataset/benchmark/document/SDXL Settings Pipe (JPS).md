@@ -1,0 +1,15 @@
+- `SDXL Settings Pipe (JPS)`: The SDXL Settings Pipe node is designed to process and return a comprehensive set of settings for image generation, including resolution, sampling, scheduling, and other configuration parameters. It abstracts the complexity of configuring various aspects of image generation into a simple interface, enabling users to easily specify and retrieve detailed settings for their image generation tasks.
+    - Inputs:
+        - `sdxl_settings` (Required): Serves as the comprehensive input encapsulating all necessary settings for the SDXL image generation process. It is essential for determining the configuration and resultant behavior of the image generation. Type should be `BASIC_PIPE`.
+    - Outputs:
+        - `image_res`: The resolution of the generated image. Type should be `INT`.
+        - `width`: The width of the generated image in pixels. Type should be `INT`.
+        - `height`: The height of the generated image in pixels. Type should be `INT`.
+        - `res_factor`: A factor influencing the resolution of the generated image. Type should be `INT`.
+        - `sampler_name`: The name of the sampling method used for image generation. Type should be `COMBO[STRING]`.
+        - `scheduler`: The scheduling method used during the image generation process. Type should be `COMBO[STRING]`.
+        - `steps`: The number of steps to be taken in the image generation process. Type should be `INT`.
+        - `cfg`: A configuration parameter affecting the generation process. Type should be `FLOAT`.
+        - `cfg_rescale`: A parameter for rescaling the configuration during the generation process. Type should be `FLOAT`.
+        - `clip_skip`: Indicates the number of clipping steps to skip during the generation process. Type should be `INT`.
+        - `filename`: The name of the file where the generated image will be saved. Type should be `STRING`.

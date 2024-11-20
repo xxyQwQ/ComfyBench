@@ -1,0 +1,7 @@
+- `AV_LoraListStacker`: The AV_LoraListStacker node is designed to manage and stack configurations for Lora models, facilitating the dynamic integration and application of multiple Lora models into a processing pipeline. It abstracts the complexity of handling Lora model parameters and ensures that the models are applied in a sequence that respects the intended layering and strength adjustments.
+    - Inputs:
+        - `data` (Required): The 'data' input contains the list of Lora models and their configurations in JSON format, dictating how each Lora model should be applied to the base model. Type should be `STRING`.
+        - `base_url` (Optional): The 'base_url' optional input provides a default URL prefix for fetching Lora models not locally available, facilitating remote model retrieval. Type should be `STRING`.
+        - `lora_stack` (Optional): The 'lora_stack' input allows for the inclusion of an existing stack of Lora models to be further processed or integrated with new Lora configurations. Type should be `LORA_STACK`.
+    - Outputs:
+        - `lora_stack`: Returns the updated stack of Lora models after integrating the specified Lora model adjustments. Type should be `LORA_STACK`.

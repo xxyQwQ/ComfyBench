@@ -1,0 +1,7 @@
+- `CR Output Schedule To File`: This node is designed to output animation schedules to a file, supporting both CSV and text formats. It ensures unique file naming to avoid overwriting existing files and provides flexibility in specifying the output file path, name, and extension.
+    - Inputs:
+        - `output_file_path` (Required): Specifies the directory path where the output file will be saved. It plays a crucial role in determining the location of the generated file. Type should be `STRING`.
+        - `file_name` (Required): The base name of the output file. This name is essential for identifying the file and can be modified to ensure uniqueness if a file with the same name already exists. Type should be `STRING`.
+        - `file_extension` (Required): Determines the format of the output file (e.g., 'csv' or 'txt'). This affects how the schedule data is formatted and saved. Type should be `COMBO[STRING]`.
+        - `schedule` (Required): The animation schedule data to be written to the file. This data is central to the node's purpose, as it represents the content that will be saved in the specified format. Type should be `SCHEDULE`.
+    - Outputs:

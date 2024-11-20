@@ -1,0 +1,11 @@
+- `Lora Loader (JPS)`: The Lora Loader (JPS) node is designed to dynamically load and apply LoRA (Low-Rank Adaptation) adjustments to models and/or CLIP components based on specified parameters. It facilitates the customization of model behavior and performance without altering the original model architecture, enabling fine-tuned control over model outputs.
+    - Inputs:
+        - `model` (Required): The model parameter represents the base model to which the LoRA adjustments will be applied. It is crucial for defining the starting point of the adaptation process. Type should be `MODEL`.
+        - `clip` (Required): The clip parameter signifies the CLIP model component that may also undergo LoRA adjustments, allowing for enhanced or modified functionality in tasks involving text and image processing. Type should be `CLIP`.
+        - `switch` (Required): This parameter controls whether LoRA adjustments are applied or not, offering a straightforward mechanism to enable or disable the adaptation process. Type should be `COMBO[STRING]`.
+        - `lora_name` (Required): Specifies the name of the LoRA file to be loaded and applied, serving as a key identifier for retrieving the appropriate adaptation parameters. Type should be `COMBO[STRING]`.
+        - `strength_model` (Required): Determines the intensity of the LoRA adjustments applied to the model, enabling precise control over the adaptation's impact. Type should be `FLOAT`.
+        - `strength_clip` (Required): Sets the intensity of the LoRA adjustments for the CLIP component, allowing for tailored modifications to its behavior. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The modified model with LoRA adjustments applied, reflecting changes in behavior or performance as specified by the input parameters. Type should be `MODEL`.
+        - `clip`: The CLIP component with LoRA adjustments applied, if applicable, showcasing the adaptability of the node to various model components. Type should be `CLIP`.

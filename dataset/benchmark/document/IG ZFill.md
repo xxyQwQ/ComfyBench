@@ -1,0 +1,6 @@
+- `IG ZFill`: The IG ZFill node is designed to pad a given integer value with zeros up to a specified length. It is useful for formatting numbers to ensure they meet a certain string length requirement, enhancing readability or meeting specific data format standards.
+    - Inputs:
+        - `value` (Required): The integer value to be padded with leading zeros. This parameter determines the number to be formatted. Type should be `INT`.
+        - `fill` (Required): Specifies the total length of the resulting string after padding with zeros. It determines how many leading zeros are added to the input value. Type should be `INT`.
+    - Outputs:
+        - `string`: The formatted string with the input value padded with leading zeros to meet the specified total length. Type should be `STRING`.

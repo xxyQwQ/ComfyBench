@@ -1,0 +1,8 @@
+- `Image Canny Filter`: The Image Canny Filter node is designed to detect edges in an image using the Canny edge detection algorithm. It processes an input image to highlight its edges, making it useful for image analysis and preprocessing tasks where edge detection is crucial.
+    - Inputs:
+        - `images` (Required): The input image tensor to be processed for edge detection. It is crucial for identifying and highlighting the edges within the image. Type should be `IMAGE`.
+        - `enable_threshold` (Required): A boolean flag to enable or disable the thresholding in edge detection. This affects how edges are detected based on the specified thresholds. Type should be `COMBO[STRING]`.
+        - `threshold_low` (Required): The lower threshold for the hysteresis procedure in edge detection. It determines the minimum intensity gradient of edges to be considered. Type should be `FLOAT`.
+        - `threshold_high` (Required): The upper threshold for the hysteresis procedure in edge detection. It sets the maximum intensity gradient of edges to be detected. Type should be `FLOAT`.
+    - Outputs:
+        - `images`: The output image tensor with detected edges highlighted. It is useful for further image analysis or preprocessing steps. Type should be `IMAGE`.

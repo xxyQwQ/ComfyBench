@@ -1,0 +1,12 @@
+- `BatchCropFromMask`: This node is designed to process a batch of masks and corresponding images, identifying and cropping out the relevant areas based on the masks. It calculates the optimal bounding box for each mask to ensure that the cropped images are centered and of uniform size, enhancing the consistency of the output. The node also handles cases of empty masks by segregating them, ensuring that only masks with content are processed.
+    - Inputs:
+        - `original_images` (Required): A batch of original images corresponding to the masks. These images are cropped according to the calculated bounding boxes derived from the masks. Type should be `IMAGE`.
+        - `masks` (Required): A batch of masks to be processed. These masks are used to determine the areas of interest in the corresponding images, guiding the cropping process. Type should be `MASK`.
+        - `crop_size_mult` (Required): A multiplier that adjusts the size of the cropping area, allowing for flexibility in the size of the output images. Type should be `FLOAT`.
+        - `bbox_smooth_alpha` (Required): A smoothing factor applied to the bounding box dimensions to mitigate abrupt changes in size between different crops, ensuring a more uniform output size. Type should be `FLOAT`.
+    - Outputs:
+        - `original_images`: The original images provided for processing. Type should be `IMAGE`.
+        - `cropped_images`: The images cropped according to the calculated bounding boxes from the masks. Type should be `IMAGE`.
+        - `bboxes`: The bounding boxes calculated for each mask, used to crop the images. Type should be `BBOX`.
+        - `width`: The width of the largest bounding box calculated from the masks. Type should be `INT`.
+        - `height`: The height of the largest bounding box calculated from the masks. Type should be `INT`.

@@ -1,0 +1,10 @@
+- `ConstrainImageforVideo_pysssss`: This node is designed to adjust the dimensions of an image to fit within specified maximum and minimum sizes, ensuring the aspect ratio is maintained. It offers the option to crop the image if necessary to meet the size constraints.
+    - Inputs:
+        - `images` (Required): The images to be processed. They are adjusted to fit within the specified size constraints while maintaining their aspect ratio. Type should be `IMAGE`.
+        - `max_width` (Required): The maximum width allowed for the images. Images wider than this will be resized to this width. Type should be `INT`.
+        - `max_height` (Required): The maximum height allowed for the images. Images taller than this will be resized to this height. Type should be `INT`.
+        - `min_width` (Required): The minimum width allowed for the images. Images narrower than this will be resized to this width. Type should be `INT`.
+        - `min_height` (Required): The minimum height allowed for the images. Images shorter than this will be resized to this height. Type should be `INT`.
+        - `crop_if_required` (Required): Determines whether images should be cropped to meet the size constraints if resizing alone is insufficient. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `IMAGE`: The processed images, resized and optionally cropped to fit within the specified size constraints. Type should be `IMAGE`.

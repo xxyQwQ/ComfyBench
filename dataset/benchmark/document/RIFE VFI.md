@@ -1,0 +1,12 @@
+- `RIFE VFI`: The RIFE_VFI node is designed for video frame interpolation, leveraging deep learning techniques to predict and generate intermediate frames between existing frames in a video sequence. This process enhances video fluidity and can be used for various applications such as slow-motion video generation, video restoration, and improving video frame rates.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the checkpoint name for the model to use, which determines the pre-trained weights and potentially the model architecture for frame interpolation. Type should be `COMBO[STRING]`.
+        - `frames` (Required): A sequence of images or frames that the node will process to generate interpolated frames. This is the core input that drives the interpolation process. Type should be `IMAGE`.
+        - `clear_cache_after_n_frames` (Required): Indicates after how many frames the node should clear its cache to manage memory usage efficiently during the interpolation process. Type should be `INT`.
+        - `multiplier` (Required): Defines the number of intermediate frames to be generated between each pair of input frames, directly affecting the smoothness of the output video. Type should be `INT`.
+        - `fast_mode` (Required): Enables a faster but potentially less accurate mode of frame interpolation, optimizing for speed over precision. Type should be `BOOLEAN`.
+        - `ensemble` (Required): Activates ensemble mode, which may use multiple models or techniques in tandem to improve the quality of the interpolated frames. Type should be `BOOLEAN`.
+        - `scale_factor` (Required): Adjusts the scale of the input frames before processing, which can influence the interpolation quality and performance. Type should be `COMBO[FLOAT]`.
+        - `optional_interpolation_states` (Optional): Optional states that can control the interpolation process, allowing for advanced customization or optimization based on specific requirements. Type should be `INTERPOLATION_STATES`.
+    - Outputs:
+        - `image`: The output consists of a sequence of interpolated frames, enhancing the fluidity and frame rate of the input video sequence. Type should be `IMAGE`.

@@ -1,7 +1,0 @@
-- `Image Analyze`: This node is designed to analyze images by applying specific filters based on the selected mode, such as 'Black White Levels' or 'RGB Levels'. It converts images into a format suitable for analysis, applies the chosen filter, and returns the analyzed image.
-    - Parameters:
-        - `mode`: Determines the type of analysis to be performed on the image, with options including 'Black White Levels' and 'RGB Levels'. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The image to be analyzed. It is the primary input for the analysis process. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The analyzed image after applying the selected filter. Type should be `IMAGE`.

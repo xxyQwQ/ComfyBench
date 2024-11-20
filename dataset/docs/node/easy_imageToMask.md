@@ -1,7 +1,0 @@
-- `easy imageToMask`: This node is designed to convert images into masks based on specific criteria or attributes. It encapsulates the functionality to process an image and extract a mask representation, which can be used for various applications such as image editing, compositing, or further image analysis.
-    - Parameters:
-        - `channel`: Specifies the color channel ('red', 'green', 'blue', 'alpha') used to generate the mask. This parameter determines which part of the image is used to create the mask, based on the selected color channel. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The input image from which the mask will be generated. The image is processed to identify and isolate specific features or colors that define the mask. Type should be `IMAGE`.
-    - Outputs:
-        - `mask`: The output mask generated from the input image. This mask isolates specific features or colors from the original image, providing a binary or grayscale representation for further processing. Type should be `MASK`.

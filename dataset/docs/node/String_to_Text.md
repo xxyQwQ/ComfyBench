@@ -1,6 +1,0 @@
-- `String to Text`: The String to Text node is designed to convert string data into a text format suitable for further processing or display. This node plays a crucial role in data preparation and transformation, ensuring that string inputs are correctly formatted as text for compatibility with subsequent nodes or operations within a workflow.
-    - Parameters:
-        - `string`: The string input parameter represents the raw string data that needs to be converted into text format. This parameter is essential for the node's operation as it directly influences the output text, ensuring that the input string is properly formatted and ready for further processing. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The string output parameter represents the converted text format of the input string. This output is crucial for downstream processing or display purposes, ensuring that the data is in the correct format for further use. Type should be `STRING`.

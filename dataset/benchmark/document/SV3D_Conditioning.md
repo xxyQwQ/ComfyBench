@@ -1,0 +1,13 @@
+- `SV3D_Conditioning`: The SV3D_Conditioning node is designed to apply specific 3D conditioning transformations to input data, facilitating the generation or manipulation of 3D content. It focuses on enhancing or modifying the 3D aspects of the data, such as spatial dimensions, depth perception, or other 3D-related attributes, to achieve desired outcomes in 3D model generation or adjustment.
+    - Inputs:
+        - `clip_vision` (Required): Represents the visual understanding component, crucial for interpreting and processing the visual aspects of the input data. Type should be `CLIP_VISION`.
+        - `init_image` (Required): Serves as the initial image input, providing a visual basis for subsequent 3D conditioning transformations. Type should be `IMAGE`.
+        - `vae` (Required): Involves a variational autoencoder, essential for encoding and decoding images in the process of generating or modifying 3D content. Type should be `VAE`.
+        - `width` (Required): Specifies the width of the output image, influencing the spatial dimensions of the 3D content. Type should be `INT`.
+        - `height` (Required): Determines the height of the output image, affecting the spatial dimensions of the 3D content. Type should be `INT`.
+        - `video_frames` (Required): Defines the number of frames for video content, relevant in scenarios involving 3D video generation or manipulation. Type should be `INT`.
+        - `elevation` (Required): Controls the elevation angle, impacting the perception of depth and spatial orientation in the 3D content. Type should be `FLOAT`.
+    - Outputs:
+        - `positive`: Represents the positive conditioning aspect, enhancing specific desired features or attributes in the 3D content. Type should be `CONDITIONING`.
+        - `negative`: Denotes the negative conditioning aspect, suppressing undesired features or attributes in the 3D content. Type should be `CONDITIONING`.
+        - `latent`: Encapsulates the latent representation of the 3D content, crucial for various generative or transformative processes. Type should be `LATENT`.

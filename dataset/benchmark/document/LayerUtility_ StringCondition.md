@@ -1,0 +1,8 @@
+- `LayerUtility_ StringCondition`: The StringCondition node is designed to evaluate text against specified conditions, such as inclusion or exclusion of a substring, and return a boolean result along with the result in string format. This functionality allows for conditional logic to be applied based on text content, enabling dynamic flow control and content filtering within a data processing pipeline.
+    - Inputs:
+        - `text` (Required): The 'text' parameter is the primary string to be evaluated against the given condition. Its role is crucial as it determines the context in which the condition is applied, directly influencing the outcome of the node's execution. Type should be `STRING`.
+        - `condition` (Required): The 'condition' parameter specifies the type of string evaluation to perform, such as 'include' or 'exclude', dictating whether the substring should be present or absent in the text for the condition to be considered true. Type should be `COMBO[STRING]`.
+        - `sub_string` (Required): The 'sub_string' parameter is the string fragment to be searched within the 'text' parameter. Its presence or absence, based on the 'condition', determines the boolean outcome of the node's operation. Type should be `STRING`.
+    - Outputs:
+        - `output`: Indicates whether the specified condition (inclusion or exclusion of a substring) was met in the text. Type should be `BOOLEAN`.
+        - `string`: A string representation of the boolean result, providing a textual indication of whether the condition was met. Type should be `STRING`.

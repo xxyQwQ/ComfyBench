@@ -1,7 +1,0 @@
-- `SaltScheduleSmoothing`: The SaltScheduleSmoothing node is designed to apply a smoothing filter to a schedule list, using a specified smoothing factor to blend between consecutive values. This process aims to create a more gradual transition between points in the schedule, enhancing the overall smoothness of the sequence.
-    - Parameters:
-        - `smoothing_factor`: The smoothing_factor determines the degree of smoothing applied to the schedule list. A higher factor results in a smoother transition between points, directly affecting the smoothness of the output. Type should be `FLOAT`.
-    - Inputs:
-        - `schedule_list`: The schedule_list is the sequence of values to be smoothed. It serves as the primary data upon which the smoothing operation is performed, influencing the smoothness of the resulting schedule. Type should be `LIST`.
-    - Outputs:
-        - `schedule_list`: The output is a smoothed version of the input schedule list, with transitions between points made more gradual by the smoothing process. Type should be `LIST`.

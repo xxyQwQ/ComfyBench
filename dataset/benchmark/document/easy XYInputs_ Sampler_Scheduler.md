@@ -1,0 +1,8 @@
+- `easy XYInputs_ Sampler_Scheduler`: This node is designed to integrate and manage the interaction between a sampler and a scheduler within a sampling process. It facilitates the configuration and execution of sampling strategies by allowing users to specify a sampler and a scheduler, along with their respective parameters, to generate or modify sample outputs effectively.
+    - Inputs:
+        - `target_parameter` (Required): This parameter is crucial for defining the specific target or goal that the sampling process aims to achieve, directly influencing the outcome and effectiveness of the sampling strategy. Type should be `COMBO[STRING]`.
+        - `input_count` (Required): Determines the number of inputs to be processed, affecting the node's execution by scaling the sampling operation according to the provided input volume. Type should be `INT`.
+        - `sampler_i` (Required): Specifies the index of the sampler to be used, selecting from a predefined list of available samplers. This choice impacts the sampling method and its characteristics. Type should be `COMBO[STRING]`.
+        - `scheduler_i` (Required): Indicates the index of the scheduler, chosen from a set of available scheduling algorithms. This selection influences the timing and adjustment of sampling parameters throughout the process. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `X or Y`: Outputs a result that is contingent upon the configuration and interaction of the sampler and scheduler. The exact nature of the output (X or Y) depends on the specific parameters and algorithms employed. Type should be `X_Y`.

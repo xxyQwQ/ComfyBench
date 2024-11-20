@@ -1,0 +1,7 @@
+- `SaltAudioVisualizer`: Provides a visual representation of audio data, enabling users to visualize the waveform or spectrum of audio clips. This can be particularly useful for analyzing the audio's structure, identifying specific parts, or simply for aesthetic visualization purposes.
+    - Inputs:
+        - `audio` (Required): The audio data to be visualized. It is crucial for understanding the audio's structure and for generating its visual representation. Type should be `AUDIO`.
+        - `frame_rate` (Required): Defines the number of frames per second for the visualization, affecting the smoothness and detail of the output. Type should be `INT`.
+        - `start_frame` (Optional): Specifies the starting frame for the visualization, allowing for partial visualization of the audio clip. Type should be `INT`.
+        - `end_frame` (Optional): Determines the ending frame for the visualization, enabling users to focus on a specific segment of the audio clip. Type should be `INT`.
+    - Outputs:

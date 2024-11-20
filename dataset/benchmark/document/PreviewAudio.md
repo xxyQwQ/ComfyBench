@@ -1,0 +1,4 @@
+- `PreviewAudio`: The PreviewAudio node is designed for creating temporary audio previews. It generates audio files with a temporary marker and stores them in a designated temporary directory, facilitating the review or testing of audio content before final processing or saving.
+    - Inputs:
+        - `audio` (Required): The primary audio input required for generating a preview. This input is essential for the node to process and create a temporary audio file. Type should be `AUDIO`.
+    - Outputs:

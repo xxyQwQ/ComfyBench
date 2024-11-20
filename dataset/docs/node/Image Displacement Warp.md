@@ -1,8 +1,0 @@
-- `Image Displacement Warp`: This node applies a displacement warp effect to an image based on a provided displacement map and amplitude. It adjusts the positions of pixels in the original image according to the displacement values, creating a visually distorted version of the image that simulates physical displacement.
-    - Parameters:
-        - `amplitude`: A scalar value that scales the displacement effect. Higher values result in more pronounced displacement. Type should be `FLOAT`.
-    - Inputs:
-        - `images`: The original images to be warped. They serve as the base for applying the displacement effect. Type should be `IMAGE`.
-        - `displacement_maps`: Grayscale images representing the displacement maps. Each pixel's intensity in these maps indicates the displacement amount for the corresponding pixel in the original images. Type should be `IMAGE`.
-    - Outputs:
-        - `images`: The resulting images after applying the displacement warp effect. They showcase the original images with the displacement effect applied. Type should be `IMAGE`.

@@ -1,0 +1,7 @@
+- `LayerColor_ ColorAdapter`: The ColorAdapter node is designed to adapt the color of an image to match a reference image's color scheme, applying a specified opacity level to blend the adapted image. It processes each image in a batch, adjusting colors to closely resemble the reference, and supports images with transparency by maintaining the alpha channel.
+    - Inputs:
+        - `image` (Required): The input image or images to be color adapted. This parameter is crucial for defining the source images whose colors need to be adjusted to match the reference image. Type should be `IMAGE`.
+        - `color_ref_image` (Required): The reference image or images used to adapt the color scheme of the input images. It plays a key role in determining the target color profile for the adaptation process. Type should be `IMAGE`.
+        - `opacity` (Required): The opacity level applied to the blended image, affecting the intensity of the color adaptation. It allows for fine-tuning the strength of the color match between the input and reference images. Type should be `INT`.
+    - Outputs:
+        - `image`: The batch of images after color adaptation, blended with the original images at the specified opacity level. It represents the final output where each image's color has been adjusted to match the reference. Type should be `IMAGE`.

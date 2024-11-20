@@ -1,9 +1,0 @@
-- `Load image with metadata [Crystools]`: This node is designed to load images along with their associated metadata, facilitating the integration and manipulation of image data within a broader data processing or analysis workflow. It emphasizes the seamless handling of images and their intrinsic information, aiming to streamline tasks that require both visual and contextual data.
-    - Parameters:
-        - `image`: The image parameter represents the target image file to be loaded. It is crucial for the node's operation as it determines the source of both the visual content and the associated metadata, which are essential for subsequent processing or analysis. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `image`: The processed image data, ready for further manipulation or analysis. Type should be `IMAGE`.
-        - `mask`: A mask generated from the image, useful for operations that require differentiation of image regions. Type should be `MASK`.
-        - `prompt`: Extracted prompt information from the image's metadata, providing context or instructions related to the image. Type should be `JSON`.
-        - `Metadata RAW`: The comprehensive metadata associated with the image, encapsulating all contextual information extracted during the loading process. Type should be `METADATA_RAW`.

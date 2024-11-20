@@ -1,0 +1,7 @@
+- `SeargeImageSave`: The SeargeImageSave node is designed to manage the saving of images generated within the SeargeSDXL framework. It incorporates logic to handle various states of image saving, including enabling or disabling the saving of upscaled images and applying fixes for high-resolution image saving. This node plays a crucial role in the image generation pipeline by ensuring that images are saved according to user preferences and settings, including the handling of special cases such as saving to specific directories.
+    - Inputs:
+        - `images` (Required): Specifies the images to be saved, serving as the primary content for the node's saving functionalities. Type should be `IMAGE`.
+        - `filename_prefix` (Required): Defines the prefix for filenames under which images will be saved, influencing the naming convention used for saved images. Type should be `STRING`.
+        - `state` (Required): Determines the state of image saving (enabled or disabled), directly affecting whether images are saved or not. Type should be `ENABLE_STATE`.
+        - `save_to` (Required): Indicates the directory (output or input folder) where images should be saved, guiding the node's decision on where to store generated images. Type should be `SAVE_FOLDER`.
+    - Outputs:

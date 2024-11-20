@@ -1,9 +1,0 @@
-- `DensePosePreprocessor`: The DensePosePreprocessor node is designed to estimate dense human body poses from images. It preprocesses images using a selected DensePose model and color map to generate detailed body pose estimations.
-    - Parameters:
-        - `model`: Specifies the DensePose model to be used for pose estimation. The choice of model can affect the accuracy and performance of the pose estimation. Type should be `COMBO[STRING]`.
-        - `cmap`: Determines the color map used for visualizing the pose estimation results. Different color maps can provide varying visual clarity and aesthetic appeal. Type should be `COMBO[STRING]`.
-        - `resolution`: The resolution to which the input image is resized before processing. A higher resolution can lead to more detailed pose estimations but may increase processing time. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for dense pose estimation. This image is the primary input on which the pose estimation is performed. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: Produces an image with the dense pose estimation visualized according to the selected color map. Type should be `IMAGE`.

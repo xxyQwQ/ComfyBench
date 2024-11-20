@@ -1,5 +1,0 @@
-- `ImpactLogger`: The ImpactLogger node is designed for debugging purposes within the ImpactPack. It logs data, including its shape if applicable, along with a specified prompt and additional PNG information, to the console. This functionality aids in tracking and understanding the flow of data and operations within a workflow.
-    - Parameters:
-    - Inputs:
-        - `data`: The primary data to be logged. Its shape is logged if available, providing insights into the data structure being processed. Type should be `*`.
-    - Outputs:

@@ -1,0 +1,21 @@
+- `ttN conditioning`: The node focuses on applying conditioning transformations to input data, leveraging advanced encoding techniques to enhance or modify the data based on specified conditions. It abstracts complex conditioning logic into a more accessible interface for users, aiming to streamline the process of data manipulation and enrichment.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for conditioning, playing a central role in how the input data is processed and transformed. Type should be `MODEL`.
+        - `clip` (Required): Defines the CLIP model parameters to be used in conjunction with the main model for conditioning, affecting the outcome of the transformation. Type should be `CLIP`.
+        - `loras` (Required): Specifies the LoRA configurations to be applied, influencing the conditioning process by adjusting the model's behavior. Type should be `STRING`.
+        - `positive` (Required): The positive text input for conditioning, used to guide the model towards desired attributes or outcomes. Type should be `STRING`.
+        - `positive_token_normalization` (Required): Normalization method for the positive text, affecting how the text is processed before conditioning. Type should be `COMBO[STRING]`.
+        - `positive_weight_interpretation` (Required): Determines how the positive text's weight is interpreted during the conditioning process, influencing the model's adjustments. Type should be `COMBO[STRING]`.
+        - `negative` (Required): The negative text input for conditioning, used to steer the model away from undesired attributes or outcomes. Type should be `STRING`.
+        - `negative_token_normalization` (Required): Normalization method for the negative text, affecting how the text is processed before conditioning. Type should be `COMBO[STRING]`.
+        - `negative_weight_interpretation` (Required): Determines how the negative text's weight is interpreted during the conditioning process, influencing the model's adjustments. Type should be `COMBO[STRING]`.
+        - `optional_lora_stack` (Optional): An optional stack of LoRA configurations to be applied, providing additional customization to the conditioning process. Type should be `LORA_STACK`.
+        - `prepend_positive` (Optional): Text to prepend to the positive input, further customizing the conditioning process. Type should be `STRING`.
+        - `prepend_negative` (Optional): Text to prepend to the negative input, further customizing the conditioning process. Type should be `STRING`.
+    - Outputs:
+        - `model`: Returns the conditioned model after applying the specified transformations. Type should be `MODEL`.
+        - `positive`: Outputs the positive conditioning effects applied to the model. Type should be `CONDITIONING`.
+        - `negative`: Outputs the negative conditioning effects applied to the model. Type should be `CONDITIONING`.
+        - `clip`: Returns the CLIP model parameters used during the conditioning process. Type should be `CLIP`.
+        - `pos_string`: Outputs the final positive string after conditioning, reflecting the combined and processed input. Type should be `STRING`.
+        - `neg_string`: Outputs the final negative string after conditioning, reflecting the combined and processed input. Type should be `STRING`.

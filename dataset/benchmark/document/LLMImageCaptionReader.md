@@ -1,0 +1,7 @@
+- `LLMImageCaptionReader`: The LLMImageCaptionReader node is designed to interpret and describe image files by generating captions, effectively converting visual content into descriptive text documents. This process facilitates the integration of image data into text-based indexing and search systems, such as the llama_index Document structure.
+    - Inputs:
+        - `path` (Required): Specifies the file path of the image to be captioned. This is a crucial input as it determines the source image for caption generation. Type should be `STRING`.
+        - `prompt` (Optional): An optional text input that can guide or influence the caption generation process, allowing for more tailored or context-specific descriptions. Type should be `STRING`.
+        - `extra_info` (Optional): Optional additional information provided as a string, which can be used to pass extra parameters or context for the caption generation process. Type should be `STRING`.
+    - Outputs:
+        - `documents`: The output is a document object that contains the generated caption, encapsulating the image description in a structured text format. Type should be `DOCUMENT`.

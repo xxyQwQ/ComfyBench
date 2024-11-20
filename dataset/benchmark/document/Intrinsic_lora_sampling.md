@@ -1,0 +1,14 @@
+- `Intrinsic_lora_sampling`: This node enables the application of intrinsic LoRAs (Low-Rank Adaptations) to models for specific tasks such as depth map generation, surface normal estimation, albedo, and shading. It leverages LoRAs to modify the behavior of pre-trained models without extensive retraining, focusing on enhancing or altering the model's output based on the task at hand.
+    - Inputs:
+        - `model` (Required): The model to which the intrinsic LoRA will be applied. It serves as the base for modifications and enhancements specific to the desired task. Type should be `MODEL`.
+        - `lora_name` (Required): The name of the LoRA to be applied, selected from a predefined list of available intrinsic LoRAs. Type should be `COMBO[STRING]`.
+        - `task` (Required): Specifies the task for which the model's output is being adapted, such as depth map generation or surface normal estimation. The default task is depth map generation. Type should be `COMBO[STRING]`.
+        - `text` (Required): A text prompt that guides the model's adaptation process for the specified task, enhancing the relevance of the output to the input text. Type should be `STRING`.
+        - `clip` (Required): A CLIP model used for encoding the text prompt into a format that guides the adaptation process. Type should be `CLIP`.
+        - `vae` (Required): A VAE (Variational Autoencoder) model used for encoding or decoding the samples during the adaptation process. Type should be `VAE`.
+        - `per_batch` (Required): The number of samples processed per batch, affecting the efficiency and speed of the adaptation process. Type should be `INT`.
+        - `image` (Optional): An optional input image that can be used as a basis for the adaptation process, providing a visual context. Type should be `IMAGE`.
+        - `optional_latent` (Optional): An optional latent representation that can be used instead of generating one from an input image, offering a shortcut in the adaptation process. Type should be `LATENT`.
+    - Outputs:
+        - `image`: The output image after applying the intrinsic LoRA, adapted for the specified task. Type should be `IMAGE`.
+        - `latent`: The latent representation of the output image, providing a deeper insight into the model's adaptation process. Type should be `LATENT`.

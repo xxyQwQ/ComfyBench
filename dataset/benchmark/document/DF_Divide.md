@@ -1,0 +1,6 @@
+- `DF_Divide`: The DivideNode facilitates the division of two numerical values, providing a straightforward way to perform arithmetic division operations within a node-based programming environment.
+    - Inputs:
+        - `Numerator` (Required): Specifies the dividend in the division operation, determining the value to be divided. Type should be `FLOAT`.
+        - `Denominator` (Required): Determines the divisor in the division operation, affecting the outcome by dividing the numerator. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: The result of dividing the Numerator by the Denominator, expressed as a floating-point number. Type should be `FLOAT`.

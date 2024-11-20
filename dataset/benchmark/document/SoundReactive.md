@@ -1,0 +1,11 @@
+- `SoundReactive`: The SoundReactive node dynamically adjusts its output based on the sound level input, allowing for real-time audio-reactive applications. It is designed to work with browser-based sound input and supports real-time diffusion processes with autoqueue functionality.
+    - Inputs:
+        - `sound_level` (Required): Specifies the sound level to react to. It is a key factor in determining the node's output, adjusting the response based on the input sound level. Type should be `FLOAT`.
+        - `start_range_hz` (Required): Defines the starting frequency range in Hertz for processing. It sets the lower bound of the frequency range of interest. Type should be `INT`.
+        - `end_range_hz` (Required): Sets the ending frequency range in Hertz for processing. It determines the upper limit of the frequency spectrum to be considered. Type should be `INT`.
+        - `multiplier` (Required): A multiplier applied to the sound level, allowing for amplification or attenuation of the input signal. Type should be `FLOAT`.
+        - `smoothing_factor` (Required): Controls the smoothing of the sound level input, providing a way to reduce abrupt changes and fluctuations. Type should be `FLOAT`.
+        - `normalize` (Required): A boolean flag indicating whether the sound level should be normalized, affecting the scale of the output. Type should be `BOOLEAN`.
+    - Outputs:
+        - `sound_level`: The adjusted sound level after applying the node's processing, reflecting changes based on the input and node settings. Type should be `FLOAT`.
+        - `sound_level_int`: An integer representation of the adjusted sound level, offering a discrete version of the output for certain applications. Type should be `INT`.

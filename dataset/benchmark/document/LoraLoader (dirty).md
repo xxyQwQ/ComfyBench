@@ -1,0 +1,10 @@
+- `LoraLoader (dirty)`: The LoraLoader (dirty) node is designed to dynamically load LoRA (Low-Rank Adaptation) parameters into models and CLIP instances, allowing for the customization and fine-tuning of these components based on specified LoRA files and strength parameters. It serves as a bridge between static model states and adaptable, performance-enhanced versions tailored to specific tasks or datasets.
+    - Inputs:
+        - `model` (Required): The model parameter represents the pre-trained model into which LoRA parameters will be loaded. It is crucial for defining the base architecture that will be enhanced with LoRA adaptations. Type should be `MODEL`.
+        - `clip` (Required): The clip parameter signifies the CLIP model instance that will be adjusted using LoRA parameters. It plays a key role in adapting the CLIP model for enhanced performance in specific tasks. Type should be `CLIP`.
+        - `lora_name` (Required): The lora_name parameter specifies the filename of the LoRA parameters to be loaded. It determines which specific LoRA adaptations will be applied to the model and CLIP instances. Type should be `STRING`.
+        - `strength_model` (Required): This parameter controls the intensity of the LoRA adaptation applied to the model. It allows for fine-tuning the impact of LoRA parameters on the model's performance. Type should be `FLOAT`.
+        - `strength_clip` (Required): Similar to strength_model, this parameter adjusts the intensity of the LoRA adaptation on the CLIP model, enabling precise control over its influence. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The modified model with LoRA parameters applied, reflecting the adaptations made for enhanced performance or customization. Type should be `MODEL`.
+        - `clip`: The adjusted CLIP model with LoRA parameters incorporated, showcasing the enhancements made for improved task-specific performance. Type should be `CLIP`.

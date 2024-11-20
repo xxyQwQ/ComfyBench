@@ -1,9 +1,0 @@
-- `DownloadInstanceDiffusionModels`: This node is responsible for downloading and loading the necessary models for instance diffusion processes, including PositionNet, Fusers, and ScaleU models. It ensures that the required models are available locally, downloading them if they are not present, and then loads them into memory for use in instance diffusion tasks.
-    - Parameters:
-        - `use_segs`: Indicates whether segmentation information should be used in the PositionNet model, affecting how the model is prepared and loaded. Type should be `BOOLEAN`.
-        - `fusers_scale`: Specifies the scale factor to be applied to the Fusers model, influencing the preparation and loading of the model to adjust its output according to the desired scale. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `positionnet`: Returns the loaded PositionNet model, prepared and ready for use in instance diffusion tasks. Type should be `POSITIONNET`.
-        - `fusers`: Provides the loaded Fusers models as a list, adjusted according to the specified scale and ready for integration in instance diffusion processes. Type should be `FUSERS`.
-        - `scaleu`: Delivers the loaded ScaleU models, making them available for use in enhancing the instance diffusion capabilities. Type should be `SCALEU`.

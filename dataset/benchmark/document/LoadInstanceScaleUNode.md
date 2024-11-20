@@ -1,0 +1,5 @@
+- `LoadInstanceScaleUNode`: This node is designed to load a specific instance of the ScaleU model from a given filename. It utilizes a checkpoint retrieval mechanism to load the model's state and prepares the ScaleU networks for subsequent use in the instance diffusion process.
+    - Inputs:
+        - `model_filename` (Required): Specifies the filename of the model to be loaded. This parameter is crucial as it determines which specific ScaleU model instance is retrieved and loaded for use. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `scaleu`: Returns a dictionary containing a list of ScaleU model instances, ready for integration into the instance diffusion framework. Type should be `SCALEU`.

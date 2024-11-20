@@ -1,0 +1,7 @@
+- `easy imageSplitGrid`: The `easy imageSplitGrid` node is designed for splitting a single image into multiple smaller images based on specified grid dimensions. It allows for the division of an image into a grid of smaller, equally sized images, facilitating operations that require processing or analyzing parts of an image separately.
+    - Inputs:
+        - `images` (Required): The input image to be split into a grid. This image is divided according to the specified row and column parameters, resulting in multiple smaller images. Type should be `IMAGE`.
+        - `row` (Required): Specifies the number of rows in the grid. This determines how many horizontal splits will be made on the input image. Type should be `INT`.
+        - `column` (Required): Specifies the number of columns in the grid. This determines how many vertical splits will be made on the input image. Type should be `INT`.
+    - Outputs:
+        - `images`: The output is a batch of images that have been split according to the specified grid dimensions. Each image in the batch represents a segment of the original image as defined by the grid. Type should be `IMAGE`.

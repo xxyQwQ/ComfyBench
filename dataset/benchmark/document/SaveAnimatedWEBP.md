@@ -1,0 +1,9 @@
+- `SaveAnimatedWEBP`: This node is designed for saving a sequence of images as an animated WEBP file. It handles the aggregation of individual frames into a cohesive animation, applying specified metadata, and optimizing the output based on quality and compression settings.
+    - Inputs:
+        - `images` (Required): A list of images to be saved as frames in the animated WEBP. This parameter is essential for defining the visual content of the animation. Type should be `IMAGE`.
+        - `filename_prefix` (Required): Specifies the base name for the output file, which will be appended with a counter and the '.webp' extension. This parameter is crucial for identifying and organizing the saved files. Type should be `STRING`.
+        - `fps` (Required): The frames per second rate for the animation, influencing the playback speed. Type should be `FLOAT`.
+        - `lossless` (Required): A boolean indicating whether to use lossless compression, affecting the file size and quality of the animation. Type should be `BOOLEAN`.
+        - `quality` (Required): A value between 0 and 100 that sets the compression quality level, with higher values resulting in better image quality but larger file sizes. Type should be `INT`.
+        - `method` (Required): Specifies the compression method to use, which can impact the encoding speed and file size. Type should be `COMBO[STRING]`.
+    - Outputs:

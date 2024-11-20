@@ -1,8 +1,0 @@
-- `RemapRange`: The RemapRange node is designed to adjust the intensity range of an image by remapping its black and white points. This process can enhance the visual contrast or adjust the overall brightness and darkness levels of the image.
-    - Parameters:
-        - `blackpoint`: The lower bound of the intensity range to remap to black. Values below this point will be adjusted to black, affecting the image's contrast and brightness. Type should be `FLOAT`.
-        - `whitepoint`: The upper bound of the intensity range to remap to white. Values above this point will be adjusted to white, influencing the image's contrast and brightness levels. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The input image to be processed. This image will have its intensity levels adjusted based on the specified black and white points. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output image after the intensity levels have been remapped according to the specified black and white points. Type should be `IMAGE`.

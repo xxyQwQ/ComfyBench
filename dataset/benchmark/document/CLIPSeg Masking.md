@@ -1,0 +1,8 @@
+- `CLIPSeg Masking`: This node leverages the CLIPSeg model for image segmentation, utilizing both textual and visual inputs to generate a segmentation mask. It's designed to understand and segment images based on textual descriptions, providing a flexible approach to image analysis that combines the capabilities of CLIP models with segmentation techniques.
+    - Inputs:
+        - `image` (Required): The input image to be segmented. It serves as the visual context for the segmentation process, allowing the model to generate a mask that highlights areas of interest based on the accompanying text. Type should be `IMAGE`.
+        - `text` (Required): An optional textual description that guides the segmentation process, enabling the model to focus on specific elements within the image as described by the text. Type should be `STRING`.
+        - `clipseg_model` (Optional): An optional pre-loaded CLIPSeg model and processor. If provided, it bypasses the default model loading process, allowing for customization and potentially faster processing. Type should be `CLIPSEG_MODEL`.
+    - Outputs:
+        - `MASK`: The output is a segmentation mask that highlights areas of interest in the image as determined by the textual description and visual analysis. Type should be `MASK`.
+        - `MASK_IMAGE`: An inverted version of the segmentation mask, represented as an image, which can be used for further image processing or visualization. Type should be `IMAGE`.

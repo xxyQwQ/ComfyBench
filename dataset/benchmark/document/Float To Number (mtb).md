@@ -1,0 +1,5 @@
+- `Float To Number (mtb)`: This node is designed to convert floating-point numbers into a more general number format, facilitating compatibility and data exchange within the WAS Suite ecosystem.
+    - Inputs:
+        - `float` (Required): The floating-point number to be converted into a general number format. This input is crucial for the node's operation as it directly influences the output number. Type should be `FLOAT`.
+    - Outputs:
+        - `number`: The converted general number format from the input floating-point number. Type should be `NUMBER`.

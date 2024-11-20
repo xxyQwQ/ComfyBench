@@ -1,0 +1,8 @@
+- `SaltCLIPSegMasking`: This node is designed for batch processing of images to generate segmentation masks based on textual descriptions using the CLIPSeg model. It leverages a combination of image and text inputs to produce detailed segmentation masks that align with the given text descriptions, facilitating advanced image manipulation and analysis tasks.
+    - Inputs:
+        - `images` (Required): A batch of images to be processed for segmentation. These images are transformed and resized to match the master image size for consistent mask generation. Type should be `IMAGE`.
+        - `text` (Required): An optional textual description that guides the segmentation process, allowing for targeted mask generation based on textual cues. Type should be `STRING`.
+        - `clipseg_model` (Optional): An optional pre-loaded CLIPSeg model and processor to be used for segmentation. If not provided, the node will load a default model. Type should be `CLIPSEG_MODEL`.
+    - Outputs:
+        - `masks`: Segmentation masks corresponding to the input images, adjusted to the master image size. Type should be `MASK`.
+        - `mask_images`: RGB representations of the segmentation masks for visualization purposes. Type should be `IMAGE`.

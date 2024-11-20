@@ -1,0 +1,14 @@
+- `CR Simple Image Compare`: The CR Simple Image Compare node is designed to facilitate the comparison of two images within a graphical interface. It abstracts the complexities involved in image comparison, providing a straightforward way for users to visually assess and contrast the differences or similarities between images.
+    - Inputs:
+        - `text1` (Required): The first text input for comparison, allowing users to label or describe the first image. Type should be `STRING`.
+        - `text2` (Required): The second text input for comparison, enabling labeling or description of the second image for a clear contrast. Type should be `STRING`.
+        - `footer_height` (Required): Specifies the height of the footer area where additional information or labels can be displayed. Type should be `INT`.
+        - `font_name` (Required): The name of the font used for text rendering in the comparison interface, allowing customization of text appearance. Type should be `COMBO[STRING]`.
+        - `font_size` (Required): Determines the size of the font used for text, affecting the readability and visual impact of text labels. Type should be `INT`.
+        - `mode` (Required): Defines the comparison mode, such as side-by-side or overlay, offering different ways to visualize the differences or similarities. Type should be `COMBO[STRING]`.
+        - `border_thickness` (Required): Specifies the thickness of the border around images, adding a visual separation that can enhance the comparison. Type should be `INT`.
+        - `image1` (Optional): The first image to be compared, serving as the baseline for visual assessment. Type should be `IMAGE`.
+        - `image2` (Optional): The second image for comparison, allowing users to visually identify differences or similarities with the first image. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The resulting image after comparison, showcasing the differences or similarities identified between the two images. Type should be `IMAGE`.
+        - `show_help`: A flag indicating whether help information about using the comparison tool should be displayed, aiding user understanding. Type should be `STRING`.

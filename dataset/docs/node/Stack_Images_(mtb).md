@@ -1,6 +1,0 @@
-- `Stack Images (mtb)`: The Stack Images node is designed to combine multiple input images into a single image by stacking them either horizontally or vertically, based on the specified orientation.
-    - Parameters:
-        - `vertical`: Determines the orientation of the stacking process. If true, images are stacked vertically; otherwise, they are stacked horizontally. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `image`: The output is a single image that results from stacking the input images in the specified orientation. Type should be `IMAGE`.

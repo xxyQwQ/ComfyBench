@@ -1,0 +1,18 @@
+- `SDXL Basic Settings Pipe (JPS)`: This node processes basic settings for SDXL, translating a structured input of settings into specific output values that are essential for image generation processes. It encapsulates the functionality to parse and convert settings related to resolution, sampling, and image refinement parameters into a format that can be utilized by downstream processes or components.
+    - Inputs:
+        - `sdxl_basic_settings` (Required): Represents the basic settings for SDXL, including resolution, sampling, and image refinement parameters. It is crucial for determining the output values that configure the image generation process. Type should be `BASIC_PIPE`.
+    - Outputs:
+        - `image_res`: The resolution of the generated image. Type should be `INT`.
+        - `width`: The width of the generated image in pixels. Type should be `INT`.
+        - `height`: The height of the generated image in pixels. Type should be `INT`.
+        - `sampler_name`: The name of the sampler used for image generation. Type should be `COMBO[STRING]`.
+        - `scheduler`: The scheduler used alongside the sampler for image generation. Type should be `COMBO[STRING]`.
+        - `steps_total`: The total number of steps for the image generation process. Type should be `INT`.
+        - `step_split`: The step split value used in the image generation process. Type should be `INT`.
+        - `cfg`: The CFG scale used in the image generation process. Type should be `FLOAT`.
+        - `cfg_rescale`: The CFG rescale value, adjusting the influence of CFG on the process. Type should be `FLOAT`.
+        - `cfg_refiner`: The CFG refiner scale, refining the CFG's effect. Type should be `FLOAT`.
+        - `ascore_refiner`: The ascore refiner value, refining the ascore's effect. Type should be `FLOAT`.
+        - `res_factor`: The resolution factor, influencing the overall image resolution. Type should be `INT`.
+        - `clip_skip`: The number of CLIP model skips during the generation process. Type should be `INT`.
+        - `filename`: The filename for the generated image. Type should be `STRING`.

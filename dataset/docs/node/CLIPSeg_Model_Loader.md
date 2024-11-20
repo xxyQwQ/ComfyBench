@@ -1,6 +1,0 @@
-- `CLIPSeg Model Loader`: This node is designed to load a CLIPSeg model, which is a specialized model for image segmentation using CLIP (Contrastive Language–Image Pretraining). It facilitates the integration of CLIPSeg's capabilities into workflows, enabling advanced image segmentation tasks that leverage both textual and visual information.
-    - Parameters:
-        - `model`: Specifies the model to be loaded. The default model is 'CIDAS/clipseg-rd64-refined'. This parameter allows for the selection of different CLIPSeg models based on the task requirements. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `clipseg_model`: Outputs a tuple containing the CLIPSeg model and its processor, ready for image segmentation tasks. Type should be `CLIPSEG_MODEL`.

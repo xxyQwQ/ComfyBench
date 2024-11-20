@@ -1,0 +1,6 @@
+- `Latent Size to Number`: The Latent Size to Number node is designed to extract the width and height dimensions of tensors within a given set of samples and convert these dimensions into various numerical formats. It serves the purpose of providing a detailed breakdown of tensor sizes, facilitating operations that require specific dimensional data.
+    - Inputs:
+        - `samples` (Required): The 'samples' parameter is expected to contain tensors from which the width and height dimensions are to be extracted. This parameter is crucial for the node's operation as it directly influences the output by determining the dimensions to be analyzed and converted. Type should be `LATENT`.
+    - Outputs:
+        - `tensor_w_num`: Represents the width of the first tensor in the samples, provided in multiple numerical formats. Type should be `NUMBER`.
+        - `tensor_h_num`: Represents the height of the first tensor in the samples, provided in multiple numerical formats. Type should be `NUMBER`.

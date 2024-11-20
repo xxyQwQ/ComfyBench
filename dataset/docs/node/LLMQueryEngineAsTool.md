@@ -1,8 +1,0 @@
-- `LLMQueryEngineAsTool`: This node serves as a tool for executing queries using a language model, designed to facilitate complex information retrieval and processing tasks. It abstracts the intricacies of querying language models, providing a streamlined interface for users to leverage advanced natural language understanding capabilities.
-    - Parameters:
-        - `name`: Specifies the name of the tool, serving as an identifier and descriptor for the query engine. Type should be `STRING`.
-        - `description`: Provides a detailed description of the tool's purpose and functionality, offering context and guidance for its use. Type should be `STRING`.
-    - Inputs:
-        - `llm_index`: Identifies the specific index or database to be queried, allowing for targeted information retrieval based on the input query. Type should be `LLM_INDEX`.
-    - Outputs:
-        - `query_tool`: The output of the node, which includes the tool configured for query processing, encapsulating the function and its parameters. Type should be `TOOL`.

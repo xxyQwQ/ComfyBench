@@ -1,0 +1,12 @@
+- `Pack SDXL Tuple`: The Pack SDXL Tuple node is designed to aggregate multiple model and conditioning parameters into a single, structured tuple. This facilitates the efficient handling and transfer of a comprehensive set of parameters between different stages of a generative AI pipeline, particularly in scenarios involving base and refiner models along with their respective conditioning inputs.
+    - Inputs:
+        - `base_model` (Required): Represents the base generative model to be included in the tuple, playing a crucial role in the initial stages of generation. Type should be `MODEL`.
+        - `base_clip` (Required): Specifies the base CLIP model used for guiding the generation towards the desired outcome. Type should be `CLIP`.
+        - `base_positive` (Required): Defines positive conditioning inputs for the base model, influencing the direction of content generation. Type should be `CONDITIONING`.
+        - `base_negative` (Required): Describes negative conditioning inputs for the base model, used to steer away from undesired content. Type should be `CONDITIONING`.
+        - `refiner_model` (Required): Represents the refiner model that fine-tunes or enhances the output of the base model. Type should be `MODEL`.
+        - `refiner_clip` (Required): Specifies the refiner CLIP model used for additional guidance in the refining stage. Type should be `CLIP`.
+        - `refiner_positive` (Required): Defines positive conditioning inputs for the refiner model, further directing the refinement process. Type should be `CONDITIONING`.
+        - `refiner_negative` (Required): Describes negative conditioning inputs for the refiner model, helping to eliminate undesired aspects in the refinement stage. Type should be `CONDITIONING`.
+    - Outputs:
+        - `SDXL_TUPLE`: The structured tuple containing all specified models and conditioning inputs, ready for use in subsequent processing stages. Type should be `SDXL_TUPLE`.

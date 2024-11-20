@@ -1,0 +1,6 @@
+- `Text Add Token by Input`: This node facilitates the addition of custom tokens to a text processing context, allowing for dynamic content manipulation. It supports specifying a token name and value, and optionally printing the current set of tokens for verification or debugging purposes.
+    - Inputs:
+        - `token_name` (Required): The name of the token to be added. It is crucial for identifying the token within the text processing context. Type should be `STRING`.
+        - `token_value` (Required): The value associated with the token name. This value is substituted in place of the token name during text processing. Type should be `STRING`.
+        - `print_current_tokens` (Required): A flag to indicate whether the current list of tokens should be printed. Useful for debugging or verification. Type should be `COMBO[STRING]`.
+    - Outputs:

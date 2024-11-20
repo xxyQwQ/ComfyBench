@@ -1,8 +1,0 @@
-- `Repeat Into Grid (latent)`: This node tiles the input latent samples into a grid of configurable dimensions, effectively repeating the samples across a specified number of rows and columns to create a larger, grid-like structure.
-    - Parameters:
-        - `columns`: Specifies the number of columns in the grid. This affects the horizontal repetition of the samples. Type should be `INT`.
-        - `rows`: Specifies the number of rows in the grid. This affects the vertical repetition of the samples. Type should be `INT`.
-    - Inputs:
-        - `samples`: The latent samples to be tiled into a grid. This input is crucial for determining the pattern and content of the resulting grid. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The resulting latent samples arranged in a grid, with the original samples repeated according to the specified rows and columns. Type should be `LATENT`.

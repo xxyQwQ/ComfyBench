@@ -1,0 +1,6 @@
+- `ImagePosterize+`: The ImagePosterize node is designed for image processing tasks, specifically to posterize images. It simplifies the color palette of an image based on a threshold, effectively reducing the number of colors to create a stylized effect. This node operates on the principle of comparing pixel values against a threshold and adjusting them accordingly to achieve the posterization effect.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the input image to be posterized. It is crucial for defining the visual content that will undergo the posterization process. Type should be `IMAGE`.
+        - `threshold` (Required): The 'threshold' parameter determines the cutoff value for posterization. Pixels above this threshold will be treated differently from those below it, playing a key role in defining the posterization effect's intensity and appearance. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output is a posterized version of the input image, where the color palette has been simplified according to the specified threshold. Type should be `IMAGE`.

@@ -1,0 +1,5 @@
+- `Text Dictionary Convert`: This node is designed to convert a string representation of a dictionary into an actual dictionary object. It is particularly useful in scenarios where dictionary data is received in text format and needs to be programmatically manipulated or accessed.
+    - Inputs:
+        - `dictionary_text` (Required): The string representation of a dictionary that needs to be converted into a dictionary object. This parameter is crucial for the node's operation as it directly influences the conversion process. Type should be `STRING`.
+    - Outputs:
+        - `dict`: The converted dictionary object, allowing for programmatic access and manipulation of the data initially provided in string format. Type should be `DICT`.

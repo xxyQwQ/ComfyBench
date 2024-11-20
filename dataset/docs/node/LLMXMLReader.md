@@ -1,7 +1,0 @@
-- `LLMXMLReader`: The LLMXMLReader node specializes in reading XML files and converting them into a format suitable for further processing or analysis within the llama_index ecosystem. It leverages the XMLReader base to parse XML documents, enriching them with optional additional information if provided.
-    - Parameters:
-        - `path`: Specifies the filesystem path to the XML file to be read. This is a crucial input as it determines the source document for processing. Type should be `STRING`.
-        - `extra_info`: Allows for the inclusion of additional, user-defined information that can be utilized during the reading process, offering a way to pass extra context or directives. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `documents`: Outputs the processed document in a format that is compatible with the llama_index ecosystem, ready for further analysis or manipulation. Type should be `DOCUMENT`.

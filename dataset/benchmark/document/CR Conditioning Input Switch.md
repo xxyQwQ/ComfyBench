@@ -1,0 +1,8 @@
+- `CR Conditioning Input Switch`: This node allows for the dynamic selection between two conditioning inputs based on a specified integer input. It facilitates conditional logic in data flow, enabling the choice of different conditioning paths within a workflow.
+    - Inputs:
+        - `Input` (Required): Determines which conditioning input to pass through. An input of 1 selects the first conditioning option, while an input of 2 selects the second. Type should be `INT`.
+        - `conditioning1` (Optional): The first conditioning option that can be selected based on the input value. Type should be `CONDITIONING`.
+        - `conditioning2` (Optional): The second conditioning option that can be selected based on the input value. Type should be `CONDITIONING`.
+    - Outputs:
+        - `CONDITIONING`: The selected conditioning input based on the provided integer input. Type should be `CONDITIONING`.
+        - `show_help`: Provides a URL to the help documentation for this node. Type should be `STRING`.

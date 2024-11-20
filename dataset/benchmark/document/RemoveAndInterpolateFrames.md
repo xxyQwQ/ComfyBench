@@ -1,0 +1,6 @@
+- `RemoveAndInterpolateFrames`: The RemoveAndInterpolateFrames node is designed to selectively remove specified frames from a sequence of images and interpolate new frames to fill the gaps, ensuring a smooth transition between frames. This process leverages frame interpolation techniques to enhance the fluidity of motion within the sequence, making it particularly useful for applications requiring high-quality video frame manipulation.
+    - Inputs:
+        - `images` (Required): The tensor containing a sequence of images from which specific frames will be removed and between which new frames will be interpolated. It plays a crucial role in determining the input and output quality of the interpolation process. Type should be `IMAGE`.
+        - `frames_to_drop` (Required): A string representation of a list indicating the indices of frames to be removed from the sequence. This parameter directly influences which frames are interpolated and replaced, impacting the final video output. Type should be `STRING`.
+    - Outputs:
+        - `image`: unknown Type should be `IMAGE`.

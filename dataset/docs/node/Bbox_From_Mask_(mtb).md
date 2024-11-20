@@ -1,9 +1,0 @@
-- `Bbox From Mask (mtb)`: The `Bbox From Mask` node is designed to extract a bounding box from a given mask, optionally inverting the mask and considering an image for size compatibility. It aims to identify the minimal bounding area that encapsulates the non-zero elements of the mask, providing a foundational tool for image cropping and processing tasks.
-    - Parameters:
-        - `invert`: A boolean flag indicating whether the mask should be inverted before extracting the bounding box. This inversion can alter the focus area within the mask, affecting the resulting bounding box. Type should be `BOOLEAN`.
-    - Inputs:
-        - `mask`: The mask tensor from which the bounding box is to be extracted. It plays a crucial role in determining the area of interest within an image or a set of images. Type should be `MASK`.
-        - `image`: An optional image tensor that, if provided, ensures the extracted bounding box is compatible with the image's dimensions. It's used for additional validation and processing when both mask and image are provided. Type should be `IMAGE`.
-    - Outputs:
-        - `bbox`: The bounding box extracted from the mask, represented as a tuple of coordinates and dimensions (x, y, width, height). Type should be `BBOX`.
-        - `image (optional)`: unknown Type should be `IMAGE`.

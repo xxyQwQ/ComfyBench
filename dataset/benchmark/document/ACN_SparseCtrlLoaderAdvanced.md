@@ -1,0 +1,14 @@
+- `ACN_SparseCtrlLoaderAdvanced`: This node is designed for loading and initializing the Sparse ControlNet models, facilitating the integration of sparse control mechanisms into the advanced control network architecture. It abstracts the complexities of model loading, ensuring that the Sparse ControlNet models are properly set up for subsequent operations.
+    - Inputs:
+        - `sparsectrl_name` (Required): Specifies the name of the Sparse ControlNet model to be loaded, crucial for identifying the correct model file. Type should be `COMBO[STRING]`.
+        - `use_motion` (Required): A boolean flag that determines whether motion-based control mechanisms should be applied, influencing the dynamic aspects of the control. Type should be `BOOLEAN`.
+        - `motion_strength` (Required): Defines the intensity of the motion effect, adjusting how strongly motion influences the control mechanism. Type should be `FLOAT`.
+        - `motion_scale` (Required): Sets the scale of motion effects, modifying the extent to which motion is factored into the control process. Type should be `FLOAT`.
+        - `sparse_method` (Optional): Selects the method for sparse control, impacting the strategy for sparse adjustments within the network. Type should be `SPARSE_METHOD`.
+        - `tk_optional` (Optional): Optional timestep keyframe input for more granular control over animation or motion effects. Type should be `TIMESTEP_KEYFRAME`.
+        - `context_aware` (Optional): Enables context-aware adjustments, allowing the model to adapt its control strategy based on contextual information. Type should be `COMBO[STRING]`.
+        - `sparse_hint_mult` (Optional): Multiplier for hints in sparse control, affecting how hint-based adjustments are scaled. Type should be `FLOAT`.
+        - `sparse_nonhint_mult` (Optional): Multiplier for non-hint adjustments, influencing the strength of control without explicit hints. Type should be `FLOAT`.
+        - `sparse_mask_mult` (Optional): Multiplier for mask-based adjustments in sparse control, determining the influence of mask inputs on the control strategy. Type should be `FLOAT`.
+    - Outputs:
+        - `control_net`: The loaded Sparse ControlNet model, ready for integration and use within the advanced control network. Type should be `CONTROL_NET`.

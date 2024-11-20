@@ -1,0 +1,9 @@
+- `PromptScheduleNodeFlow`: This node is designed to dynamically construct and manipulate JSON strings based on input text and numerical parameters, facilitating the scheduling of content in a structured format. It primarily serves to augment input text with additional context or parameters, thereby enabling more complex or conditional content generation workflows.
+    - Inputs:
+        - `text` (Required): The primary text input that will be included in the constructed JSON string, serving as the main content or subject of the scheduling operation. Type should be `STRING`.
+        - `num_frames` (Required): A numerical parameter that specifies the starting point for the scheduling operation, affecting the key under which the new content will be placed in the JSON structure. Type should be `INT`.
+        - `in_text` (Optional): An optional initial JSON string to which the new content will be appended, allowing for incremental construction of complex JSON structures. Type should be `STRING`.
+        - `max_frames` (Optional): A numerical parameter that, when combined with 'num_frames', determines the key for the new content in the JSON structure, influencing the scheduling sequence. Type should be `INT`.
+    - Outputs:
+        - `int`: The new maximum frame count, derived from the input 'num_frames' and 'max_frames', indicating the next available key in the JSON structure. Type should be `INT`.
+        - `string`: The newly constructed JSON string, containing the scheduled content with keys based on the input parameters. Type should be `STRING`.

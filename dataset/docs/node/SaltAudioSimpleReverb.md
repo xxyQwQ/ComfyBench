@@ -1,8 +1,0 @@
-- `SaltAudioSimpleReverb`: The SaltAudioSimpleReverb node applies a reverb effect to an audio input, simulating the sound reflection characteristics of a physical space. It allows for the adjustment of reverb level and decay to tailor the effect.
-    - Parameters:
-        - `reverb_level`: Determines the intensity of the reverb effect applied to the audio, influencing the perceived size and reflectiveness of the virtual space. Type should be `FLOAT`.
-        - `decay`: Controls the rate at which the reverb effect fades away, simulating the absorption characteristics of the simulated space. Type should be `FLOAT`.
-    - Inputs:
-        - `audio`: The audio input to which the reverb effect will be applied. It serves as the raw material for the reverb simulation. Type should be `AUDIO`.
-    - Outputs:
-        - `audio`: The audio output with the reverb effect applied, simulating the acoustic characteristics of a reverberant space. Type should be `AUDIO`.

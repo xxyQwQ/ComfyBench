@@ -1,6 +1,0 @@
-- `DF_Integer`: The DF_Integer node is designed to convert floating-point numbers to integers by rounding them down to the nearest whole number. It serves as a fundamental tool for operations requiring integer values, such as indexing or discrete mathematics, by ensuring numerical inputs are appropriately formatted for such contexts.
-    - Parameters:
-        - `Value`: The 'Value' parameter accepts a floating-point number and rounds it down to the nearest integer, facilitating operations that require whole numbers. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `int`: The output is an integer representation of the input floating-point number, rounded down to the nearest whole number. Type should be `INT`.

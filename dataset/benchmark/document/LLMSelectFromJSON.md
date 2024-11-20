@@ -1,0 +1,7 @@
+- `LLMSelectFromJSON`: This node is designed to select specific data from a JSON input based on a given JSON path. It allows for the extraction of data by parsing the JSON structure and applying a JSONPath expression to identify and return the desired piece of data at a specified index.
+    - Inputs:
+        - `json_input` (Required): The JSON string from which data is to be extracted. It serves as the primary data source for the operation. Type should be `STRING`.
+        - `json_path` (Required): A JSONPath expression specifying the path to the desired data within the JSON input. It determines the specific piece of data to be extracted. Type should be `STRING`.
+        - `match_index` (Required): The index of the match to return when multiple matches are found for the JSONPath expression. It controls which piece of data is selected when the path yields multiple results. Type should be `INT`.
+    - Outputs:
+        - `selection`: The selected data from the JSON input as a JSON string. It represents the result of applying the JSONPath expression to the input. Type should be `STRING`.

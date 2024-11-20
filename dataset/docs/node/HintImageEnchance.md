@@ -1,9 +1,0 @@
-- `HintImageEnchance`: This node is designed to enhance and resize hint images for image generation tasks. It supports multiple resizing modes to fit the generated image's dimensions, ensuring the hint images are appropriately scaled and processed for optimal use in the generation process.
-    - Parameters:
-        - `image_gen_width`: The target width for the generated images. This parameter determines how the hint images are resized horizontally. Type should be `INT`.
-        - `image_gen_height`: The target height for the generated images. This parameter influences the vertical resizing of the hint images. Type should be `INT`.
-        - `resize_mode`: Specifies the mode of resizing to be applied to the hint images, such as fitting within or stretching to the target dimensions. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `hint_image`: The collection of hint images to be enhanced and resized. These images serve as guidance for the image generation process, influencing the output's appearance. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The enhanced and resized hint images, ready for use in the image generation process. Type should be `IMAGE`.

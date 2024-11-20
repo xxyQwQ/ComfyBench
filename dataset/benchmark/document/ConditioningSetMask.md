@@ -1,0 +1,8 @@
+- `ConditioningSetMask`: This node is designed to modify the conditioning of a generative model by applying a mask and optionally setting the conditioning area to the bounds of the mask. It allows for the dynamic adjustment of the conditioning's influence through a strength parameter, enabling fine-tuned control over the generative process.
+    - Inputs:
+        - `conditioning` (Required): The conditioning data to be modified, serving as the context for the generative model's output. Type should be `CONDITIONING`.
+        - `mask` (Required): A mask tensor used to specify the area of the conditioning to be modified. Type should be `MASK`.
+        - `strength` (Required): A scalar value that determines the intensity of the mask's effect on the conditioning. Type should be `FLOAT`.
+        - `set_cond_area` (Required): A flag to determine whether the conditioning area should be set to the mask bounds or not. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `conditioning`: The modified conditioning data, with the mask applied and potentially adjusted according to the specified area and strength. Type should be `CONDITIONING`.

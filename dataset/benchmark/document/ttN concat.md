@@ -1,0 +1,8 @@
+- `ttN concat`: The ttN concat node is designed for concatenating text strings, providing a simple yet flexible way to merge multiple text inputs into a single string. This functionality is essential in text processing workflows where combining pieces of text in various configurations is required.
+    - Inputs:
+        - `text1` (Required): The first text string to be concatenated. It serves as the initial part of the final concatenated text. Type should be `STRING`.
+        - `text2` (Required): The second text string to be concatenated. It follows the first text in the final concatenated output. Type should be `STRING`.
+        - `text3` (Required): The third text string to be concatenated. It is added after the first and second texts in the final output. Type should be `STRING`.
+        - `delimiter` (Required): A string used to separate the concatenated texts. It defines how the texts are joined together in the final output. Type should be `STRING`.
+    - Outputs:
+        - `concat`: The result of concatenating the input texts separated by the specified delimiter. Type should be `STRING`.

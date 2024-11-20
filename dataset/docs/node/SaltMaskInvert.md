@@ -1,6 +1,0 @@
-- `SaltMaskInvert`: The SaltMaskInvert node is designed to invert the pixel values of mask regions, effectively flipping the mask's foreground and background. This operation is fundamental in image processing tasks where the focus is on the inverse of the given regions.
-    - Parameters:
-    - Inputs:
-        - `masks`: The input masks to be inverted. This parameter is crucial as it directly influences the inversion process, determining which areas of the mask will be flipped. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The inverted masks, with pixel values flipped from the original input. This output is significant for subsequent image processing or analysis tasks that require the inverted mask regions. Type should be `MASK`.

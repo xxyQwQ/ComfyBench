@@ -1,0 +1,7 @@
+- `Resize Image for SDXL`: The ResizeImageSDXL node is designed for resizing images specifically for the SDXL model, offering options for different upscale methods and cropping techniques to adjust the image dimensions as needed.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the image to be resized. It plays a crucial role in determining the final output by serving as the base for resizing operations. Type should be `IMAGE`.
+        - `upscale_method` (Required): The 'upscale_method' parameter allows the selection of a method for upscaling the image, affecting the quality and characteristics of the resized image. Type should be `COMBO[STRING]`.
+        - `crop` (Required): The 'crop' parameter specifies the cropping technique to be applied before or after resizing, influencing the portion of the image that is retained or discarded. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The output is a resized image, adjusted according to the specified upscale method and cropping technique. Type should be `IMAGE`.

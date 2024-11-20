@@ -1,5 +1,0 @@
-- `Color_Preprocessor_Provider_for_SEGS __Inspire`: The Color Preprocessor Provider for SEGS in the Inspire Pack is designed to preprocess images for segmentation tasks by applying color processing techniques. This node is part of the SEGS (Segmentation) category within the Inspire Pack and aims to enhance image data for better segmentation performance.
-    - Parameters:
-    - Inputs:
-    - Outputs:
-        - `segs_preprocessor`: Outputs a preprocessed image object tailored for segmentation tasks, encapsulating the necessary adjustments made during the color processing stage. Type should be `SEGS_PREPROCESSOR`.

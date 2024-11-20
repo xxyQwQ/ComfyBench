@@ -1,0 +1,14 @@
+- `InstantID Source Prepare Pipe (JPS)`: This node is designed to prepare source images for InstantID processing by applying a series of transformations such as resizing, cropping, and flipping. It allows for detailed customization of the image preparation process to fit specific requirements for InstantID analysis.
+    - Inputs:
+        - `imageprepare_settings` (Required): Specifies the settings for preparing the source image, including resizing, cropping, and flipping parameters. This configuration directly influences the output image's dimensions and appearance, tailoring it for optimal InstantID processing. Type should be `BASIC_PIPE`.
+    - Outputs:
+        - `resize_to`: The target size to which the source image will be resized. Type should be `INT`.
+        - `offset_width`: The horizontal offset applied during the image preparation process. Type should be `INT`.
+        - `offset_height`: The vertical offset applied during the image preparation process. Type should be `INT`.
+        - `crop_left`: The amount of pixels cropped from the left side of the image. Type should be `INT`.
+        - `crop_right`: The amount of pixels cropped from the right side of the image. Type should be `INT`.
+        - `crop_top`: The amount of pixels cropped from the top of the image. Type should be `INT`.
+        - `crop_bottom`: The amount of pixels cropped from the bottom of the image. Type should be `INT`.
+        - `interpolation`: The method used for resizing the image. Type should be `COMBO[STRING]`.
+        - `sharpening`: The level of sharpening applied to the image. Type should be `FLOAT`.
+        - `flip`: Specifies if the image should be flipped and along which axis. Type should be `COMBO[STRING]`.

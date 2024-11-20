@@ -1,0 +1,8 @@
+- `GetImageSizeAndCount`: This node is designed to analyze an image to determine its width, height, and batch size, and then pass the image through unchanged. It serves the purpose of extracting dimensional and quantity information from a batch of images, which can be crucial for further processing steps that require knowledge of the image's size or the total number of images in a batch.
+    - Inputs:
+        - `image` (Required): The input image or batch of images for which the size and count information is to be determined. This parameter is essential for the node to perform its analysis and return the dimensions and batch size of the image(s). Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The original image or batch of images passed through the node unchanged. Type should be `IMAGE`.
+        - `width`: The width of the input image(s). Type should be `INT`.
+        - `height`: The height of the input image(s). Type should be `INT`.
+        - `count`: The total number of images in the batch. Type should be `INT`.

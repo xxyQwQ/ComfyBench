@@ -1,6 +1,0 @@
-- `ttN text`: The ttN text node is designed for handling text input, specifically allowing for multiline text input with dynamic prompts. It serves as a foundational element in text processing within the ttN/text category, enabling the customization and manipulation of text data.
-    - Parameters:
-        - `text`: This parameter accepts a string of text, potentially spanning multiple lines, and supports dynamic prompts. It's essential for defining the text content to be processed or manipulated by the node. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `text`: Outputs the processed or manipulated text as a string, maintaining the input's integrity and format. Type should be `STRING`.

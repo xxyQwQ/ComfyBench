@@ -1,0 +1,25 @@
+- `SeargeSDXLImage2ImageSampler`: This node specializes in image-to-image sampling, incorporating a high-resolution fix to enhance the quality of the output images. It leverages advanced sampling techniques to refine and generate images based on input conditions, aiming to produce high-fidelity results that closely match the specified criteria.
+    - Inputs:
+        - `base_model` (Required): Specifies the base model used for the initial phase of image generation, influencing the core structure and style of the output. Type should be `MODEL`.
+        - `base_positive` (Required): Positive conditioning text or criteria to guide the base model towards desired image attributes. Type should be `CONDITIONING`.
+        - `base_negative` (Required): Negative conditioning text or criteria to instruct the base model on what attributes to avoid in the image generation process. Type should be `CONDITIONING`.
+        - `refiner_model` (Required): Defines the model used in the refinement phase, aimed at enhancing details and adjusting aspects of the initially generated image. Type should be `MODEL`.
+        - `refiner_positive` (Required): Positive conditioning for the refinement phase, focusing on enhancing or adding desired details to the image. Type should be `CONDITIONING`.
+        - `refiner_negative` (Required): Negative conditioning for the refinement phase, aimed at removing or minimizing undesired details in the image. Type should be `CONDITIONING`.
+        - `image` (Required): The initial image or its latent representation to be refined, serving as the starting point for the refinement process. Type should be `IMAGE`.
+        - `vae` (Required): The variational autoencoder used for processing the image or its latent representation. Type should be `VAE`.
+        - `noise_seed` (Required): A seed value for noise generation, ensuring reproducibility in the sampling process. Type should be `INT`.
+        - `steps` (Required): The number of steps to be taken in the sampling process, affecting the detail and quality of the final image. Type should be `INT`.
+        - `cfg` (Required): Configuration parameter influencing the sampling process's complexity and detail level. Type should be `FLOAT`.
+        - `sampler_name` (Required): The name of the sampling algorithm to be used, determining the approach to image generation and refinement. Type should be `SAMPLER_NAME`.
+        - `scheduler` (Required): Specifies the scheduling algorithm for controlling the sampling process, impacting the progression and quality of image refinement. Type should be `SCHEDULER_NAME`.
+        - `base_ratio` (Required): Determines the balance between the base and refiner models' contributions to the final image. Type should be `FLOAT`.
+        - `denoise` (Required): The degree of denoising applied during the refinement process, affecting the smoothness and clarity of the image. Type should be `FLOAT`.
+        - `upscale_model` (Optional): unknown Type should be `UPSCALE_MODEL`.
+        - `scaled_width` (Optional): The target width for scaling the image during the refinement process. Type should be `INT`.
+        - `scaled_height` (Optional): The target height for scaling the image during the refinement process. Type should be `INT`.
+        - `noise_offset` (Optional): An offset applied to the noise seed, allowing for variation in the noise pattern during the refinement process. Type should be `INT`.
+        - `refiner_strength` (Optional): Controls the intensity of the refinement process, affecting how much the refiner model alters the initial image. Type should be `FLOAT`.
+        - `softness` (Optional): Adjusts the softness of the image, influencing the blending and transition effects during refinement. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The final refined image, showcasing the combined effects of base and refinement conditioning, along with the applied sampling techniques. Type should be `IMAGE`.

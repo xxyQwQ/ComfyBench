@@ -1,0 +1,8 @@
+- `BLIP Analyze Image`: The node provides functionality for analyzing images using the BLIP model, capable of generating captions or answering questions about the image content. It leverages pre-trained BLIP models for either caption generation or visual question answering, depending on the mode selected.
+    - Inputs:
+        - `image` (Required): The image to be analyzed by the BLIP model. It is the primary input that determines the content of the generated caption or the context for the question answering. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the operation mode of the BLIP model, either generating captions for the image or answering questions about it. This mode selection alters the model's behavior and output. Type should be `COMBO[STRING]`.
+        - `question` (Required): The question to be answered about the image, required when the mode is set to 'interrogate' for visual question answering. Type should be `STRING`.
+        - `blip_model` (Optional): An optional parameter specifying a pre-loaded BLIP model to be used for analysis, allowing for customization and efficiency improvements. Type should be `BLIP_MODEL`.
+    - Outputs:
+        - `string`: The output from the BLIP model, which can be either a caption describing the image or an answer to a question posed about the image content. Type should be `STRING`.

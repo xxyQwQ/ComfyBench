@@ -1,0 +1,9 @@
+- `StringFunction_pysssss`: The String Function node provides utilities for manipulating strings, including appending multiple strings together, replacing parts of a string based on a pattern, and tidying up strings by removing extra spaces or adjusting tags. It's designed to offer a range of common string operations that can be dynamically applied based on the input parameters.
+    - Inputs:
+        - `action` (Required): Specifies the string operation to perform, such as appending strings together or replacing parts of a string with another. This choice determines how the other inputs are used and the overall behavior of the node. Type should be `COMBO[STRING]`.
+        - `tidy_tags` (Required): Determines whether the output string should be tidied by removing extra spaces and adjusting tags, enhancing readability and consistency. Type should be `COMBO[STRING]`.
+        - `text_a` (Optional): The primary text input for operations. It serves as the base string for append and replace actions. Type should be `STRING`.
+        - `text_b` (Optional): Secondary text input that can be appended to 'text_a' or used as the search pattern for replacements. Type should be `STRING`.
+        - `text_c` (Optional): In replace actions, this text replaces occurrences of 'text_b' in 'text_a'. In append actions, it's concatenated with 'text_a' and 'text_b'. Type should be `STRING`.
+    - Outputs:
+        - `string`: The result of the string manipulation operation, returned as a string. Type should be `STRING`.

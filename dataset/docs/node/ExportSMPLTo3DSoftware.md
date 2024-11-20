@@ -1,7 +1,0 @@
-- `ExportSMPLTo3DSoftware`: This node is designed to facilitate the export of SMPL models to 3D software, streamlining the process of integrating these models into various 3D CGI workflows. It abstracts the complexities involved in the conversion and export process, making it easier for users to utilize SMPL models within their preferred 3D environments.
-    - Parameters:
-        - `foldername_prefix`: The foldername_prefix input allows users to specify a prefix for the output folder where the exported models will be saved, providing a way to organize the exported files. Type should be `STRING`.
-        - `format`: The format input determines the file format for the exported models, such as 'glb', allowing users to choose a format that is compatible with their 3D software environments. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `smpl`: The smpl input specifies the SMPL models to be exported. This input is crucial for the node's operation, directly influencing its ability to process and prepare the models for export to 3D software, impacting the overall workflow and output quality. Type should be `SMPL`.
-    - Outputs:

@@ -1,6 +1,0 @@
-- `easy imageChooser`: The node 'easy imageChooser' facilitates the selection of images from a provided batch, allowing users to choose specific images for further processing or analysis. It integrates with a user interface component to display images and capture user selections, streamlining the workflow for image-based tasks.
-    - Parameters:
-    - Inputs:
-        - `images`: The 'images' parameter represents the batch of images from which the user can select. It is crucial for providing the visual content that will be displayed to the user for selection, affecting the node's execution by determining which images are available for choice. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The 'image' parameter returns the tensors of the images selected by the user, facilitating further processing or analysis of these chosen images. Type should be `IMAGE`.

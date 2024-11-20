@@ -1,0 +1,5 @@
+- `SeargeCustomAfterVaeDecode`: This node is designed to process the output of a VAE decoding stage, specifically handling custom outputs. It retrieves and optionally post-processes the decoded image, providing a flexible mechanism to integrate custom processing or adjustments post VAE decoding.
+    - Inputs:
+        - `custom_output` (Required): The custom output from a previous stage, expected to contain VAE decoded data along with any additional custom parameters or results that need further processing. Type should be `SRG_STAGE_OUTPUT`.
+    - Outputs:
+        - `image`: The final processed image, which may be the original decoded image or a post-processed version, depending on the presence of post-processing steps. Type should be `IMAGE`.

@@ -1,0 +1,15 @@
+- `LayerStyle_ InnerShadow V2`: The InnerShadow V2 node is designed to apply an inner shadow effect to a given layer image, enhancing visual depth and dimensionality. It processes images by applying a shadow inside the layer boundaries based on specified parameters such as shadow color, distance, blur, and opacity, ensuring a more dynamic and visually appealing result.
+    - Inputs:
+        - `background_image` (Required): The background image over which the layer image will be placed. It serves as the canvas for the inner shadow effect, ensuring that the shadow blends seamlessly with the background. Type should be `IMAGE`.
+        - `layer_image` (Required): The layer image to which the inner shadow effect will be applied. This image is modified to include the shadow, creating a sense of depth within the layer itself. Type should be `IMAGE`.
+        - `invert_mask` (Required): A boolean flag indicating whether the mask should be inverted. This affects how the shadow effect is applied relative to the masked areas. Type should be `BOOLEAN`.
+        - `blend_mode` (Required): The blending mode used to combine the shadow with the layer, affecting how the shadow merges with the layer's colors and textures. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): The opacity of the inner shadow, controlling the transparency of the shadow effect for subtler or more pronounced visual impact. Type should be `INT`.
+        - `distance_x` (Required): The horizontal displacement of the shadow within the layer, allowing for the customization of the shadow's position relative to the layer. Type should be `INT`.
+        - `distance_y` (Required): The vertical displacement of the shadow within the layer, enabling the adjustment of the shadow's vertical position for a more tailored effect. Type should be `INT`.
+        - `grow` (Required): The amount by which the shadow's size is increased beyond the original layer boundaries, contributing to a more pronounced shadow effect. Type should be `INT`.
+        - `blur` (Required): The level of blur applied to the shadow, determining the softness of the shadow edges for a more natural and integrated appearance. Type should be `INT`.
+        - `shadow_color` (Required): The color of the inner shadow, allowing for the customization of the shadow to match or contrast with the layer and background for desired visual effects. Type should be `STRING`.
+        - `layer_mask` (Optional): An optional mask that defines the area of the layer image where the inner shadow effect should be applied, providing additional control over the effect's application. Type should be `MASK`.
+    - Outputs:
+        - `image`: The resulting image after applying the inner shadow effect, showcasing the enhanced visual depth and dimensionality of the layer. Type should be `IMAGE`.

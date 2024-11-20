@@ -1,0 +1,6 @@
+- `JWImageExtractFromBatch`: This node extracts a single image from a batch of images based on the specified index, allowing for individual image processing or analysis.
+    - Inputs:
+        - `images` (Required): The batch of images from which a single image will be extracted. It's crucial for selecting the specific image to process or analyze. Type should be `IMAGE`.
+        - `index` (Required): The index of the image to be extracted from the batch. It determines which image is selected for extraction. Type should be `INT`.
+    - Outputs:
+        - `image`: The extracted single image from the specified index of the input batch. Type should be `IMAGE`.

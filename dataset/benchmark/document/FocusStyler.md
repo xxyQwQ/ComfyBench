@@ -1,0 +1,9 @@
+- `FocusStyler`: FocusStyler is designed to apply specific styling effects to text prompts based on predefined templates, enhancing their descriptive quality for generating stylized images. It dynamically adjusts the input prompts according to the selected styling options, aiming to refine the visual output according to the focus theme.
+    - Inputs:
+        - `text_positive` (Required): The positive text prompt to be styled, serving as the primary input for generating stylized descriptions. Its modification is central to achieving the desired thematic focus in the visual output. Type should be `STRING`.
+        - `text_negative` (Required): The negative text prompt to be styled, used to negate or counterbalance aspects of the image generation. Altering this prompt helps fine-tune the focus of the generated imagery. Type should be `STRING`.
+        - `focus` (Required): Specifies the styling focus to be applied to the text prompts, guiding the thematic direction of the styling effects. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag indicating whether to log the input and output prompts for debugging or analysis purposes. Enabling this option provides insight into how the styling affects the prompts. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive`: The styled positive text prompt, reflecting the applied focus theme to guide the image generation process. Type should be `STRING`.
+        - `text_negative`: The styled negative text prompt, adjusted to complement the focus theme in negating undesired elements. Type should be `STRING`.

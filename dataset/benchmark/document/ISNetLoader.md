@@ -1,0 +1,6 @@
+- `ISNetLoader`: The ISNetLoader node is designed for loading ISNet models, allowing for the selection of a specific model by name or overriding it with an alternative model if specified. This functionality supports dynamic model loading for image segmentation tasks within the Art Venture/Segmentation category, enhancing flexibility in model management and deployment.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the ISNet model to be loaded. This parameter enables the selection of a model from a predefined list of available ISNet models, facilitating targeted model loading based on specific requirements. Type should be `COMBO[STRING]`.
+        - `model_override` (Required): Allows for the specification of an alternative ISNet model to be loaded, overriding the default model selection. This parameter provides flexibility in model usage, accommodating changes or updates in model preferences without altering the core configuration. Type should be `STRING`.
+    - Outputs:
+        - `isnet_model`: Returns the loaded ISNet model, ready for use in image segmentation tasks. This output facilitates the direct application of the model to relevant image processing workflows. Type should be `ISNET_MODEL`.

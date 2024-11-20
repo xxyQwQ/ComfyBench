@@ -1,0 +1,130 @@
+{
+    "50": {
+        "inputs": {
+            "image": "play_guitar.jpg",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "63": {
+        "inputs": {
+            "width": 1024,
+            "height": 576,
+            "video_frames": 24,
+            "motion_bucket_id": 100,
+            "fps": 6,
+            "augmentation_level": 0,
+            "clip_vision": [
+                "64",
+                1
+            ],
+            "init_image": [
+                "50",
+                0
+            ],
+            "vae": [
+                "64",
+                2
+            ]
+        },
+        "class_type": "SVD_img2vid_Conditioning",
+        "_meta": {
+            "title": "SVD_img2vid_Conditioning"
+        }
+    },
+    "64": {
+        "inputs": {
+            "ckpt_name": "svd_xt_1_1.safetensors"
+        },
+        "class_type": "ImageOnlyCheckpointLoader",
+        "_meta": {
+            "title": "Image Only Checkpoint Loader (img2vid model)"
+        }
+    },
+    "70": {
+        "inputs": {
+            "samples": [
+                "92",
+                0
+            ],
+            "vae": [
+                "64",
+                2
+            ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+            "title": "VAE Decode"
+        }
+    },
+    "89": {
+        "inputs": {
+            "min_cfg": 1,
+            "model": [
+                "64",
+                0
+            ]
+        },
+        "class_type": "VideoLinearCFGGuidance",
+        "_meta": {
+            "title": "VideoLinearCFGGuidance"
+        }
+    },
+    "92": {
+        "inputs": {
+            "add_noise": "enable",
+            "noise_seed": 49770757027309,
+            "steps": 20,
+            "cfg": 2.52,
+            "sampler_name": "euler",
+            "scheduler": "ddim_uniform",
+            "start_at_step": 0,
+            "end_at_step": 10000,
+            "return_with_leftover_noise": "disable",
+            "model": [
+                "89",
+                0
+            ],
+            "positive": [
+                "63",
+                0
+            ],
+            "negative": [
+                "63",
+                1
+            ],
+            "latent_image": [
+                "63",
+                2
+            ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+            "title": "KSampler (Advanced)"
+        }
+    },
+    "95": {
+        "inputs": {
+            "frame_rate": 8,
+            "loop_count": 0,
+            "filename_prefix": "svd",
+            "format": "video/h264-mp4",
+            "pix_fmt": "yuv420p",
+            "crf": 19,
+            "save_metadata": true,
+            "pingpong": false,
+            "save_output": true,
+            "images": [
+                "70",
+                0
+            ]
+        },
+        "class_type": "VHS_VideoCombine",
+        "_meta": {
+            "title": "Video Combine \ud83c\udfa5\ud83c\udd65\ud83c\udd57\ud83c\udd62"
+        }
+    }
+}

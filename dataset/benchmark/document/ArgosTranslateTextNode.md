@@ -1,0 +1,7 @@
+- `ArgosTranslateTextNode`: This node specializes in translating text from one language to another, leveraging the Argos Translate library. It modifies the input types inherited from its parent class to exclude the 'clip' parameter, focusing solely on text translation without the need for additional conditioning inputs.
+    - Inputs:
+        - `from_translate` (Required): Specifies the source language code from which the text will be translated. It plays a crucial role in determining the translation process by identifying the original language of the input text. Type should be `COMBO[STRING]`.
+        - `to_translate` (Required): Defines the target language code to which the text will be translated. This parameter is essential for guiding the translation engine towards the desired output language. Type should be `COMBO[STRING]`.
+        - `text` (Required): The text to be translated. This parameter is central to the node's functionality, as it provides the content that will undergo the translation process. Type should be `STRING`.
+    - Outputs:
+        - `text`: The translated text. This output is the direct result of the translation process, providing users with text that has been converted from the source to the target language. Type should be `STRING`.

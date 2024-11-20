@@ -1,0 +1,9 @@
+- `Image Film Grain`: The node applies a film grain effect to images, simulating the appearance of traditional film photography. It allows customization of the grain's density, intensity, and highlights, offering a way to add texture and a vintage feel to digital images.
+    - Inputs:
+        - `image` (Required): The input image to which the film grain effect will be applied. This parameter is crucial as it determines the base image that will be transformed. Type should be `IMAGE`.
+        - `density` (Required): Controls the density of the grain effect, affecting how many noise pixels are added to the image. Higher values result in a more pronounced grain effect. Type should be `FLOAT`.
+        - `intensity` (Required): Adjusts the intensity of the grain effect, influencing the visibility and impact of the grain on the final image. Type should be `FLOAT`.
+        - `highlights` (Required): Modifies the brightness of the highlights in the image, allowing for finer control over the appearance of the grain in lighter areas. Type should be `FLOAT`.
+        - `supersample_factor` (Required): A factor for supersampling the image before applying the grain, which can enhance the quality of the effect. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image with the film grain effect applied, including adjustments to density, intensity, and highlights. Type should be `IMAGE`.

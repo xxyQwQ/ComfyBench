@@ -1,8 +1,0 @@
-- `ImpactHFTransformersClassifierProvider`: This node provides a mechanism to classify text or images using a selection of pre-trained Hugging Face transformer models or a manually specified model. It supports dynamic selection of the model repository based on user input and can operate in different device modes to optimize performance.
-    - Parameters:
-        - `preset_repo_id`: Specifies the pre-trained Hugging Face transformer model to use for classification. It can be selected from a predefined list or set to 'Manual repo id' to use a custom model specified by the 'manual_repo_id' parameter. Type should be `COMBO[STRING]`.
-        - `manual_repo_id`: Allows for the specification of a custom Hugging Face transformer model repository ID when 'preset_repo_id' is set to 'Manual repo id'. This enables the use of models not included in the predefined list. Type should be `STRING`.
-        - `device_mode`: Determines the device (CPU or GPU) on which the classification model will run, optimizing for performance or resource availability. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `transformers_classifier`: The output is a Hugging Face transformer classifier pipeline, ready for performing classifications. Type should be `TRANSFORMERS_CLASSIFIER`.

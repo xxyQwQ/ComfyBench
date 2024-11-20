@@ -1,0 +1,9 @@
+- `Inset Image Bounds`: This node is designed to adjust the boundaries of an image by applying insets, effectively shrinking the image's visible area by specified amounts from each edge. It's useful for creating margins or focusing on central parts of an image without resizing.
+    - Inputs:
+        - `image_bounds` (Required): Specifies the original boundaries of the image to be inset. It's crucial for determining the new, inset boundaries based on the provided inset values. Type should be `IMAGE_BOUNDS`.
+        - `inset_left` (Required): Defines the amount by which the left boundary of the image is to be inset, reducing the visible width from the left side. Type should be `INT`.
+        - `inset_right` (Required): Defines the amount by which the right boundary of the image is to be inset, reducing the visible width from the right side. Type should be `INT`.
+        - `inset_top` (Required): Defines the amount by which the top boundary of the image is to be inset, reducing the visible height from the top. Type should be `INT`.
+        - `inset_bottom` (Required): Defines the amount by which the bottom boundary of the image is to be inset, reducing the visible height from the bottom. Type should be `INT`.
+    - Outputs:
+        - `image_bounds`: The new, inset image boundaries after applying the specified insets to each side of the original boundaries. Type should be `IMAGE_BOUNDS`.

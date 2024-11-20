@@ -1,8 +1,0 @@
-- `Show any [Crystools]`: This node is designed for debugging purposes, allowing the visualization of any value in the console or display. It supports a wide range of data types, making it versatile for inspecting values during development.
-    - Parameters:
-        - `console`: Determines if the value should be printed to the console. It enhances debugging by allowing direct observation of values. Type should be `BOOLEAN`.
-        - `display`: Controls whether the value is displayed on the UI, facilitating user interaction and visualization of data. Type should be `BOOLEAN`.
-        - `prefix`: An optional prefix to be added before the value when printed to the console, aiding in distinguishing between different debug outputs. Type should be `STRING`.
-    - Inputs:
-        - `any_value`: The value to be shown. It can be of any data type, making this node highly versatile for debugging purposes. Type should be `*`.
-    - Outputs:

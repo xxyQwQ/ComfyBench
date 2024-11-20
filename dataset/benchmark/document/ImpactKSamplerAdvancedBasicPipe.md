@@ -1,0 +1,18 @@
+- `ImpactKSamplerAdvancedBasicPipe`: This node provides an advanced sampling mechanism tailored for generating or modifying images through a sophisticated pipeline. It leverages a combination of models and custom sampling strategies to enhance the quality and control of the output images, focusing on achieving specific visual impacts or adjustments.
+    - Inputs:
+        - `basic_pipe` (Required): Represents the core components required for sampling, including models and configurations, essential for the advanced sampling process. Type should be `BASIC_PIPE`.
+        - `add_noise` (Required): Indicates whether additional noise should be introduced in the sampling process. Type should be `BOOLEAN`.
+        - `noise_seed` (Required): Provides a seed for the random noise generation, ensuring reproducibility in the sampling outcomes. Type should be `INT`.
+        - `steps` (Required): Determines the total number of steps in the sampling process, affecting the detail and quality of the generated images. Type should be `INT`.
+        - `cfg` (Required): Specifies the classifier free guidance value, influencing the direction and strength of the sampling process. Type should be `FLOAT`.
+        - `sampler_name` (Required): Identifies the specific sampler to be used, allowing for customization of the sampling strategy. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Defines the noise schedule to be applied during the sampling process, affecting the progression of noise addition or removal. Type should be `COMBO[STRING]`.
+        - `latent_image` (Required): The initial latent image to be modified or enhanced through the sampling process. Type should be `LATENT`.
+        - `start_at_step` (Required): Specifies the starting step for the sampling process within the defined range of steps. Type should be `INT`.
+        - `end_at_step` (Required): Defines the ending step for the sampling, allowing for partial application of the sampling process. Type should be `INT`.
+        - `return_with_leftover_noise` (Required): Decides whether the output latent image should retain some of the introduced noise, affecting the final image texture. Type should be `BOOLEAN`.
+        - `scheduler_func_opt` (Optional): [OPTIONAL] Specifies an alternative noise schedule generation function, offering flexibility beyond the predefined scheduler. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `basic_pipe`: The core components used in the sampling process, returned unchanged. Type should be `BASIC_PIPE`.
+        - `latent`: The resulting latent image after the sampling process, ready for further processing or conversion to an image. Type should be `LATENT`.
+        - `vae`: The VAE model used in the sampling process, facilitating transformations between latent and image spaces. Type should be `VAE`.

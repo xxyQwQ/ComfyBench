@@ -1,0 +1,8 @@
+- `GroupChatManagerCreator`: The GroupChatManagerCreator node specializes in creating a group chat manager agent designed to oversee and manage group chat interactions among multiple agents. It is tailored for scenarios where group chat functionality is essential, providing tools to configure and control the chat environment effectively.
+    - Inputs:
+        - `name` (Required): The 'name' parameter specifies the name of the group chat manager. It is a key identifier for the chat manager within the group chat environment. Type should be `STRING`.
+        - `system_message` (Required): The 'system_message' parameter is a customizable message that the group chat manager can use to communicate system-level information within the group chat. Type should be `STRING`.
+        - `llm_model` (Optional): The 'llm_model' parameter allows for the specification of a language model to be used by the group chat manager, enabling advanced language understanding and response generation capabilities. Type should be `LLM_MODEL`.
+        - `max_consecutive_auto_reply` (Optional): This parameter sets the maximum number of consecutive automatic replies the group chat manager can send, helping to prevent spam and maintain conversation quality. Type should be `INT`.
+    - Outputs:
+        - `group_manager`: The output is a configured group manager agent, ready to be deployed in managing group chat interactions. Type should be `GROUP_MANAGER`.

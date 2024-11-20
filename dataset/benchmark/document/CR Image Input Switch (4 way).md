@@ -1,0 +1,10 @@
+- `CR Image Input Switch (4 way)`: This node allows for the selection of one out of four possible image inputs based on a specified integer input. It is designed to facilitate dynamic image input selection within a workflow, providing flexibility in choosing which image to process or display next.
+    - Inputs:
+        - `Input` (Required): Determines which of the four image inputs to select and return. The integer value ranges from 1 to 4, each corresponding to a different image input. Type should be `INT`.
+        - `image1` (Optional): The first image option that can be selected. Type should be `IMAGE`.
+        - `image2` (Optional): The second image option that can be selected. Type should be `IMAGE`.
+        - `image3` (Optional): The third image option that can be selected. Type should be `IMAGE`.
+        - `image4` (Optional): The fourth image option that can be selected. Type should be `IMAGE`.
+    - Outputs:
+        - `IMAGE`: The image selected based on the input integer value. Type should be `IMAGE`.
+        - `show_help`: A URL providing help and documentation for using the node. Type should be `STRING`.

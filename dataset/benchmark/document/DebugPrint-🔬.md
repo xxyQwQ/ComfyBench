@@ -1,0 +1,4 @@
+- `DebugPrint-🔬`: The DebugPrint node is designed for logging purposes, specifically to print any given input to the console. This functionality aids in debugging by allowing the visualization of data flow through the node.
+    - Inputs:
+        - `ANY` (Required): Represents any input that the node will log to the console. Its flexibility allows for a wide range of data types to be printed, aiding in debugging and data flow analysis. Type should be `{}`.
+    - Outputs:

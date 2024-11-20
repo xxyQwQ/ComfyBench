@@ -1,0 +1,55 @@
+- `ttN pipeLoaderSDXL_v2`: This node is designed for advanced data loading and preprocessing in a pipeline, specifically tailored for handling large-scale datasets with efficiency and speed. It leverages specialized techniques to optimize data throughput and preprocessing, making it suitable for high-performance computing environments.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the checkpoint name for loading the model, serving as a key input for initializing the pipeline with the desired model state. Type should be `COMBO[STRING]`.
+        - `config_name` (Required): Determines the configuration to be used alongside the checkpoint, allowing for customization of the model's initialization parameters. Type should be `COMBO[STRING]`.
+        - `vae_name` (Required): Identifies the VAE model to be loaded, crucial for the pipeline's operation in handling specific data transformations or enhancements. Type should be `COMBO[STRING]`.
+        - `clip_skip` (Required): Defines the number of layers to skip in the CLIP model, adjusting the depth of feature extraction and influencing the model's performance. Type should be `INT`.
+        - `loras` (Required): Specifies custom LoRA configurations, enabling fine-tuning of the model's behavior through weight adjustments and optional CLIP weight modifications. Type should be `STRING`.
+        - `refiner_ckpt_name` (Required): Optional input for loading a secondary refinement model, enhancing the pipeline's output through additional processing steps. Type should be `COMBO[STRING]`.
+        - `refiner_config_name` (Required): Selects the configuration for the refinement model, similar to the main model configuration, for tailored processing adjustments. Type should be `COMBO[STRING]`.
+        - `positive_g` (Required): Global positive textual inputs that specify overarching inclusion criteria for the dataset, guiding the model's focus. Type should be `STRING`.
+        - `positive_l` (Required): Local positive textual inputs that detail finer inclusion criteria, allowing for more granular control over the dataset's composition. Type should be `STRING`.
+        - `negative_g` (Required): Global negative textual inputs that outline broad exclusion criteria, specifying what data or parameters should be avoided. Type should be `STRING`.
+        - `negative_l` (Required): Local negative textual inputs that provide detailed exclusion criteria, offering precise control over what is omitted from the dataset. Type should be `STRING`.
+        - `conditioning_aspect` (Required): Defines the aspect ratio for conditioning, influencing the shape and dimensions of the generated or processed data. Type should be `COMBO[STRING]`.
+        - `conditioning_width` (Required): unknown Type should be `INT`.
+        - `conditioning_height` (Required): unknown Type should be `INT`.
+        - `crop_width` (Required): unknown Type should be `INT`.
+        - `crop_height` (Required): unknown Type should be `INT`.
+        - `target_aspect` (Required): unknown Type should be `COMBO[STRING]`.
+        - `target_width` (Required): unknown Type should be `INT`.
+        - `target_height` (Required): unknown Type should be `INT`.
+        - `positive_ascore` (Required): unknown Type should be `INT`.
+        - `negative_ascore` (Required): unknown Type should be `INT`.
+        - `empty_latent_aspect` (Required): unknown Type should be `COMBO[STRING]`.
+        - `empty_latent_width` (Required): unknown Type should be `INT`.
+        - `empty_latent_height` (Required): unknown Type should be `INT`.
+        - `batch_size` (Required): unknown Type should be `INT`.
+        - `seed` (Required): unknown Type should be `INT`.
+        - `model_override` (Optional): unknown Type should be `MODEL`.
+        - `clip_override` (Optional): unknown Type should be `CLIP`.
+        - `optional_lora_stack` (Optional): unknown Type should be `LORA_STACK`.
+        - `optional_controlnet_stack` (Optional): unknown Type should be `CONTROL_NET_STACK`.
+        - `refiner_model_override` (Optional): unknown Type should be `MODEL`.
+        - `refiner_clip_override` (Optional): unknown Type should be `CLIP`.
+        - `prepend_positive_g` (Optional): unknown Type should be `STRING`.
+        - `prepend_positive_l` (Optional): unknown Type should be `STRING`.
+        - `prepend_negative_g` (Optional): unknown Type should be `STRING`.
+        - `prepend_negative_l` (Optional): unknown Type should be `STRING`.
+    - Outputs:
+        - `sdxl_pipe`: The comprehensive pipeline output, encapsulating the processed data and model states for further use. Type should be `PIPE_LINE_SDXL`.
+        - `model`: The loaded model's state, ready for integration into the pipeline for data processing or generation tasks. Type should be `MODEL`.
+        - `positive`: The positive conditioning output, representing the data or features to be emphasized in the pipeline's processing. Type should be `CONDITIONING`.
+        - `negative`: The negative conditioning output, indicating the data or features to be de-emphasized or excluded. Type should be `CONDITIONING`.
+        - `vae`: The VAE model loaded into the pipeline, crucial for specific data transformations or enhancements. Type should be `VAE`.
+        - `clip`: The CLIP model integrated into the pipeline, essential for extracting or processing textual and visual features. Type should be `CLIP`.
+        - `refiner_model`: The refinement model loaded into the pipeline for enhanced processing capabilities. Type should be `MODEL`.
+        - `refiner_positive`: The positive conditioning output from the refinement model, further specifying inclusion criteria. Type should be `CONDITIONING`.
+        - `refiner_negative`: The negative conditioning output from the refinement model, further specifying exclusion criteria. Type should be `CONDITIONING`.
+        - `refiner_clip`: The CLIP model integrated into the refinement process, enhancing the pipeline's ability to process textual and visual features. Type should be `CLIP`.
+        - `latent`: The latent representation generated by the pipeline, serving as a foundational component for further data manipulation or generation. Type should be `LATENT`.
+        - `seed`: A seed value for ensuring reproducibility in the pipeline's operations, affecting randomness in data processing. Type should be `INT`.
+        - `width`: The width dimension for the output data, defining the horizontal size of generated images or processed data. Type should be `INT`.
+        - `height`: The height dimension for the output data, defining the vertical size of generated images or processed data. Type should be `INT`.
+        - `pos_string`: A textual representation of the positive conditioning, summarizing the inclusion criteria for the dataset. Type should be `STRING`.
+        - `neg_string`: A textual representation of the negative conditioning, summarizing the exclusion criteria for the dataset. Type should be `STRING`.

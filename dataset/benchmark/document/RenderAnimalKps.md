@@ -1,0 +1,5 @@
+- `RenderAnimalKps`: The RenderAnimalKps node is designed to process pose keypoints data for animals, converting it into a visual representation. It decodes the input keypoints, applies pose rendering to generate an image of the animal's pose, and returns the image as a numpy array.
+    - Inputs:
+        - `kps` (Required): The 'kps' parameter represents the pose keypoints data for an animal. It is crucial for rendering the visual representation of the animal's pose, as it contains the spatial information needed to accurately depict the pose. Type should be `POSE_KEYPOINT`.
+    - Outputs:
+        - `image`: The output is an image representation of the animal's pose, provided as a numpy array. Type should be `IMAGE`.

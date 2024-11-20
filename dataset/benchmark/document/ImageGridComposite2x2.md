@@ -1,0 +1,8 @@
+- `ImageGridComposite2x2`: This node is designed to concatenate four input images into a 2x2 grid, effectively creating a composite image that showcases all inputs in a structured layout. It serves the purpose of visually aggregating multiple images into a single, cohesive unit for easier comparison, presentation, or further processing.
+    - Inputs:
+        - `image1` (Required): The first image to be placed in the top-left corner of the 2x2 grid. It plays a crucial role in the overall composition by starting the visual sequence. Type should be `IMAGE`.
+        - `image2` (Required): The second image to be placed in the top-right corner of the 2x2 grid. It complements the first image, continuing the visual narrative. Type should be `IMAGE`.
+        - `image3` (Required): The third image to be placed in the bottom-left corner of the 2x2 grid. It adds to the visual diversity and complexity of the composite image. Type should be `IMAGE`.
+        - `image4` (Required): The fourth image to be placed in the bottom-right corner of the 2x2 grid. It completes the visual arrangement, providing a balanced and cohesive look. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The composite image resulting from concatenating the four input images into a 2x2 grid. This output is useful for visual analysis, presentation, or as input to further image processing tasks. Type should be `IMAGE`.

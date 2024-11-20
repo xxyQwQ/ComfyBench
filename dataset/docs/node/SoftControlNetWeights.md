@@ -1,8 +1,0 @@
-- `SoftControlNetWeights`: The SoftControlNetWeights node is designed for generating dynamic control net weights based on a series of individual weight parameters and an optional flip weights flag. This configuration allows for customizing the distribution and orientation of control net weights, enabling precise adjustments to the control net's behavior.
-    - Parameters:
-        - `weight_i`: Specifies the value for an individual weight in the control net, contributing to the overall weight configuration. The index 'i' ranges from 0 to 3, indicating each specific weight's position. Type should be `FLOAT`.
-        - `flip_weights`: A boolean flag that, when set to true, flips the weights, altering their application and effect on the control net. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `CN_WEIGHTS`: Represents the customized control net weights, adjusted according to the specified individual weight values and flip flag. Type should be `CONTROL_NET_WEIGHTS`.
-        - `TK_SHORTCUT`: A timestep keyframe group that incorporates the customized control weights, facilitating their application in temporal control scenarios. Type should be `TIMESTEP_KEYFRAME`.

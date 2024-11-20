@@ -1,0 +1,9 @@
+- `LLMChat`: The LLMChat node facilitates interactive chat sessions with a language model, allowing users to submit queries and receive responses. It dynamically initializes or resets the chat engine based on the session requirements, ensuring tailored interactions.
+    - Inputs:
+        - `llm_model` (Required): Specifies the language model configuration for the chat session, including any necessary model details for initialization. Type should be `LLM_MODEL`.
+        - `llm_context` (Optional): Provides context or additional settings for the language model, potentially influencing the chat session's behavior. Type should be `LLM_CONTEXT`.
+        - `llm_message` (Optional): A list of messages that have been part of the chat session, used to maintain context or continuity in the conversation. Type should be `LIST`.
+        - `llm_documents` (Optional): A list of documents that can be referenced by the language model during the chat session, enriching the responses. Type should be `DOCUMENT`.
+        - `prompt` (Optional): The user's input or question to the language model, serving as the basis for generating a response. Type should be `STRING`.
+    - Outputs:
+        - `response`: The language model's response to the user's query, encapsulating the interaction's outcome. Type should be `STRING`.

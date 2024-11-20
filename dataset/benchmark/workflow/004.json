@@ -1,0 +1,174 @@
+{
+    "1": {
+        "_meta": {
+            "title": "Load Checkpoint"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "inputs": {
+            "ckpt_name": "dreamshaper_8.safetensors"
+        }
+    },
+    "10": {
+        "_meta": {
+            "title": "Empty Latent Image"
+        },
+        "class_type": "EmptyLatentImage",
+        "inputs": {
+            "batch_size": 1,
+            "height": 512,
+            "width": 512
+        }
+    },
+    "11": {
+        "_meta": {
+            "title": "VAE Decode"
+        },
+        "class_type": "VAEDecode",
+        "inputs": {
+            "samples": [
+                "9",
+                0
+            ],
+            "vae": [
+                "2",
+                0
+            ]
+        }
+    },
+    "12": {
+        "_meta": {
+            "title": "Save Image"
+        },
+        "class_type": "SaveImage",
+        "inputs": {
+            "filename_prefix": "IPAdapter",
+            "images": [
+                "11",
+                0
+            ]
+        }
+    },
+    "16": {
+        "_meta": {
+            "title": "IPAdapter Advanced"
+        },
+        "class_type": "IPAdapterAdvanced",
+        "inputs": {
+            "clip_vision": [
+                "4",
+                0
+            ],
+            "combine_embeds": "concat",
+            "embeds_scaling": "V only",
+            "end_at": 1,
+            "image": [
+                "6",
+                0
+            ],
+            "ipadapter": [
+                "3",
+                0
+            ],
+            "model": [
+                "1",
+                0
+            ],
+            "start_at": 0,
+            "weight": 1,
+            "weight_type": "linear"
+        }
+    },
+    "2": {
+        "_meta": {
+            "title": "Load VAE"
+        },
+        "class_type": "VAELoader",
+        "inputs": {
+            "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+        }
+    },
+    "3": {
+        "_meta": {
+            "title": "IPAdapter Model Loader"
+        },
+        "class_type": "IPAdapterModelLoader",
+        "inputs": {
+            "ipadapter_file": "ip-adapter_sd15.safetensors"
+        }
+    },
+    "4": {
+        "_meta": {
+            "title": "Load CLIP Vision"
+        },
+        "class_type": "CLIPVisionLoader",
+        "inputs": {
+            "clip_name": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
+        }
+    },
+    "6": {
+        "_meta": {
+            "title": "Load Image"
+        },
+        "class_type": "LoadImage",
+        "inputs": {
+            "image": "woman_portrait.jpg",
+            "upload": "image"
+        }
+    },
+    "7": {
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "1",
+                1
+            ],
+            "text": "beautiful renaissance girl, detailed"
+        }
+    },
+    "8": {
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "1",
+                1
+            ],
+            "text": "blurry, horror"
+        }
+    },
+    "9": {
+        "_meta": {
+            "title": "KSampler"
+        },
+        "class_type": "KSampler",
+        "inputs": {
+            "cfg": 6,
+            "denoise": 1,
+            "latent_image": [
+                "10",
+                0
+            ],
+            "model": [
+                "16",
+                0
+            ],
+            "negative": [
+                "8",
+                0
+            ],
+            "positive": [
+                "7",
+                0
+            ],
+            "sampler_name": "ddim",
+            "scheduler": "ddim_uniform",
+            "seed": 937143485600286,
+            "steps": 25
+        }
+    }
+}

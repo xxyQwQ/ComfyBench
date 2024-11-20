@@ -1,8 +1,0 @@
-- `Enable Disable Switch (JPS)`: This node is designed to toggle between enabling and disabling states based on specific conditions. It evaluates the equality of two integer inputs against a predefined match condition to determine the output state, facilitating dynamic control flows within a system.
-    - Parameters:
-        - `select`: An integer input that is compared against another input to determine the switch state. Its value influences the node's decision to enable or disable. Type should be `INT`.
-        - `compare`: An integer input that is compared with the 'select' input to determine the switch state. This comparison is crucial for the node's functionality. Type should be `INT`.
-        - `match`: A predefined condition that dictates whether the switch should be set to enable or disable based on the comparison of 'select' and 'compare' inputs. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `enable_disable`: The output state of the switch, which can be either 'enable' or 'disable', determined by the input conditions. Type should be `COMBO[STRING]`.

@@ -1,0 +1,9 @@
+- `Sepconv VFI`: The Sepconv VFI node is designed for video frame interpolation using separable convolutional networks. It enhances video quality by interpolating additional frames between existing ones, leveraging deep learning techniques to predict and generate intermediate frames with high accuracy and visual fidelity. This process is crucial for increasing the frame rate of videos, improving slow-motion effects, and enhancing the overall viewing experience.
+    - Inputs:
+        - `ckpt_name` (Required): The checkpoint name for the model, specifying the pre-trained weights to be used for frame interpolation. Type should be `COMBO[STRING]`.
+        - `frames` (Required): The sequence of frames to be interpolated, provided as a batch of images. Type should be `IMAGE`.
+        - `clear_cache_after_n_frames` (Required): Controls the cache clearing mechanism to manage memory usage, specifying after how many frames the cache should be cleared. Type should be `INT`.
+        - `multiplier` (Required): Defines the frame rate multiplier, indicating how many intermediate frames should be generated between each pair of original frames. Type should be `INT`.
+        - `optional_interpolation_states` (Optional): Optional states for controlling the interpolation process, allowing for customization of the frame generation. Type should be `INTERPOLATION_STATES`.
+    - Outputs:
+        - `image`: The output interpolated frames, enhancing the original video by increasing its frame rate through the addition of generated intermediate frames. Type should be `IMAGE`.

@@ -1,0 +1,15 @@
+- `easy preSamplingDynamicCFG`: The node 'easy preSamplingDynamicCFG' is designed to configure and apply dynamic control flow guidance (CFG) settings for pre-sampling processes in generative models. It allows for the customization of CFG parameters to influence the generation process, aiming to enhance the quality and relevance of the generated content by dynamically adjusting the guidance based on specified conditions.
+    - Inputs:
+        - `pipe` (Required): Specifies the pipeline configuration to which the dynamic CFG settings will be applied. It is essential for integrating the dynamic CFG adjustments into the pre-sampling process. Type should be `PIPE_LINE`.
+        - `steps` (Required): Determines the number of steps for the pre-sampling process, affecting the granularity and detail of the generation. Type should be `INT`.
+        - `cfg` (Required): Sets the base CFG scale, influencing the strength of the conditioning on the generation process. Type should be `FLOAT`.
+        - `cfg_mode` (Required): Defines the mode of CFG application, allowing for different strategies in guiding the generative model. Type should be `COMBO[STRING]`.
+        - `cfg_scale_min` (Required): Specifies the minimum CFG scale, setting a lower bound on the guidance strength. Type should be `FLOAT`.
+        - `sampler_name` (Required): Identifies the sampler to be used in conjunction with the dynamic CFG settings, impacting the method of generation. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): unknown Type should be `COMBO[STRING]`.
+        - `denoise` (Required): unknown Type should be `FLOAT`.
+        - `seed` (Required): unknown Type should be `INT`.
+        - `image_to_latent` (Optional): unknown Type should be `IMAGE`.
+        - `latent` (Optional): unknown Type should be `LATENT`.
+    - Outputs:
+        - `pipe`: Returns the updated pipeline configuration, now including the dynamic CFG settings for pre-sampling. Type should be `PIPE_LINE`.

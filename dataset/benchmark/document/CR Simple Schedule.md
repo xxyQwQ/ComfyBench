@@ -1,0 +1,9 @@
+- `CR Simple Schedule`: This node is designed to process and format animation schedules, simplifying the creation and management of animation timelines by allowing users to define schedules in a straightforward manner.
+    - Inputs:
+        - `schedule` (Required): The 'schedule' parameter represents the animation schedule to be processed. It is crucial for defining the sequence and timing of animations, impacting the node's execution and the resulting animation timeline. Type should be `STRING`.
+        - `schedule_type` (Required): The 'schedule_type' parameter specifies the type of the schedule, influencing how the schedule is interpreted and processed by the node. Type should be `COMBO[STRING]`.
+        - `schedule_alias` (Required): The 'schedule_alias' parameter provides an alias for the schedule, facilitating easier identification and management of multiple schedules. Type should be `STRING`.
+        - `schedule_format` (Required): The 'schedule_format' parameter determines the format in which the schedule is to be processed, affecting the interpretation and output of the animation schedule. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `SCHEDULE`: A list of formatted schedule lines, ready for further processing or execution in animation workflows. Type should be `SCHEDULE`.
+        - `show_help`: A URL providing additional help and documentation related to the node's functionality. Type should be `STRING`.

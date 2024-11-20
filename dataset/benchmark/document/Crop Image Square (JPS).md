@@ -1,0 +1,12 @@
+- `Crop Image Square (JPS)`: This node is designed to crop an image into a square shape based on specified parameters such as crop position, offsets, zoom level, interpolation method, target resolution, and sharpening intensity. It allows for precise control over the cropping process to achieve the desired square crop of an image.
+    - Inputs:
+        - `image` (Required): The image to be cropped into a square shape. This parameter is crucial as it defines the source image that will undergo the cropping process. Type should be `IMAGE`.
+        - `crop_position` (Required): Specifies the position from which the crop should start, allowing for targeted cropping based on the image's composition. Type should be `COMBO[STRING]`.
+        - `offset_x` (Required): The horizontal offset from the specified crop position, enabling fine-tuning of the crop's starting point on the x-axis. Type should be `INT`.
+        - `offset_y` (Required): The vertical offset from the specified crop position, enabling fine-tuning of the crop's starting point on the y-axis. Type should be `INT`.
+        - `zoom` (Required): Determines the zoom level applied to the image before cropping, allowing for closer focus on specific areas of the image. Type should be `FLOAT`.
+        - `interpolation` (Required): The method used for resizing the image during the cropping process, affecting the quality of the cropped image. Type should be `COMBO[STRING]`.
+        - `target_rez` (Required): The target resolution for the cropped image, specifying the desired dimensions of the output square image. Type should be `INT`.
+        - `sharpening` (Required): The intensity of sharpening applied to the cropped image, enhancing its details and edges. Type should be `FLOAT`.
+    - Outputs:
+        - `IMAGE`: The resulting image after the cropping process, which has been adjusted to meet the specified square shape, resolution, and quality enhancements. Type should be `IMAGE`.

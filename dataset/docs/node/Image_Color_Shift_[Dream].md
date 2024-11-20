@@ -1,9 +1,0 @@
-- `Image Color Shift [Dream]`: This node is designed to adjust the color balance of an image by applying multipliers to the red, green, and blue color channels, allowing for fine-tuned color correction or creative color adjustments.
-    - Parameters:
-        - `red_multiplier`: A multiplier for the red channel, adjusting the intensity of red colors in the image. Type should be `FLOAT`.
-        - `green_multiplier`: A multiplier for the green channel, adjusting the intensity of green colors in the image. Type should be `FLOAT`.
-        - `blue_multiplier`: A multiplier for the blue channel, adjusting the intensity of blue colors in the image. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The input image to be color-shifted. It serves as the base for applying color adjustments. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output image after the color shift has been applied, reflecting the adjustments made to the color channels. Type should be `IMAGE`.

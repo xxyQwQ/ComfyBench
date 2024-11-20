@@ -1,0 +1,7 @@
+- `Substract Int Int (JPS)`: This node performs subtraction between two integer inputs, providing both integer and floating-point representations of the result. It is designed to facilitate mathematical operations within the JPS Nodes/Math category, offering a straightforward way to compute the difference between two numbers.
+    - Inputs:
+        - `int_a` (Required): The first integer input for the subtraction operation. It serves as the minuend in the subtraction. Type should be `INT`.
+        - `int_b` (Required): The second integer input for the subtraction operation. It acts as the subtrahend, being subtracted from the first input. Type should be `INT`.
+    - Outputs:
+        - `int_substract`: The result of the subtraction operation as an integer. Type should be `INT`.
+        - `float_substract`: The result of the subtraction operation represented as a floating-point number, providing precision flexibility. Type should be `FLOAT`.

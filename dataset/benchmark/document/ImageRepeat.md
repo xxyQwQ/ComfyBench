@@ -1,0 +1,6 @@
+- `ImageRepeat`: The ImageRepeat node is designed to duplicate a given image a specified number of times, creating a batch of identical images. This functionality is useful for operations that require multiple instances of the same image for batch processing or augmentation purposes.
+    - Inputs:
+        - `images` (Required): Specifies the image to be repeated. It is crucial for defining the base image that will be duplicated across the batch. Type should be `IMAGE`.
+        - `amount` (Required): Determines the number of times the input image is repeated. It directly influences the size of the output batch, allowing for flexible batch creation. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a batch of images, each identical to the input image, repeated according to the specified amount. Type should be `IMAGE`.

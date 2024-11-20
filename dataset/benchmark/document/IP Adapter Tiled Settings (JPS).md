@@ -1,0 +1,18 @@
+- `IP Adapter Tiled Settings (JPS)`: This node is designed to configure and adapt image processing settings for tiled image generation, allowing for detailed customization of the image processing pipeline. It facilitates the adjustment of various parameters such as model selection, weight types, noise levels, and interpolation methods to tailor the image generation process to specific needs.
+    - Inputs:
+        - `ipa_model` (Required): Specifies the model used in the image processing operation, affecting the overall quality and characteristics of the generated image. Type should be `COMBO[STRING]`.
+        - `ipa_wtype` (Required): Determines the weight type for the image processing, influencing how weights are applied throughout the generation process. Type should be `COMBO[STRING]`.
+        - `ipa_weight` (Required): Sets the weight for the image processing, adjusting the influence of certain parameters on the final output. Type should be `FLOAT`.
+        - `ipa_noise` (Required): Defines the level of noise to be added to the image processing, impacting the texture and detail of the generated image. Type should be `FLOAT`.
+        - `ipa_start` (Required): Marks the starting point for the image processing operation, setting the initial conditions. Type should be `FLOAT`.
+        - `ipa_end` (Required): Indicates the end point for the image processing operation, finalizing the conditions under which the image is generated. Type should be `FLOAT`.
+        - `tile_short` (Required): Specifies the shortest side of the tile, affecting the overall tiling strategy and output dimensions. Type should be `INT`.
+        - `tile_weight` (Required): Determines the weight applied to tiles during the image processing, influencing the balance between different tiles. Type should be `FLOAT`.
+        - `zoom` (Required): Sets the zoom level for the image processing, altering the focus and scale of the generated image. Type should be `INT`.
+        - `offset_w` (Required): Adjusts the horizontal offset for the image processing, shifting the image generation focus horizontally. Type should be `INT`.
+        - `offset_h` (Required): Adjusts the vertical offset for the image processing, shifting the image generation focus vertically. Type should be `INT`.
+        - `prepare_type` (Required): Defines the preparation type for the image processing, setting the approach for how images are prepared before processing. Type should be `COMBO[STRING]`.
+        - `prepare_intpol` (Required): Specifies the interpolation method used in the image processing, affecting the smoothness and quality of the generated image. Type should be `COMBO[STRING]`.
+        - `prepare_sharpening` (Required): Sets the level of sharpening applied during the image processing, enhancing the clarity and detail of the generated image. Type should be `FLOAT`.
+    - Outputs:
+        - `ip_adapter_tiled_settings`: Returns a comprehensive set of settings tailored for tiled image processing, encapsulating model details, weight adjustments, noise levels, and more, to optimize the image generation pipeline. Type should be `BASIC_PIPE`.

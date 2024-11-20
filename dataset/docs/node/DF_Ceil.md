@@ -1,6 +1,0 @@
-- `DF_Ceil`: The DF_Ceil node rounds up a given floating-point number to the nearest integer, effectively implementing the mathematical ceiling function.
-    - Parameters:
-        - `Value`: Specifies the floating-point number to be rounded up to its nearest integer value. This input is crucial for determining the output of the node. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `int`: Represents the integer result of rounding up the input floating-point number. Type should be `INT`.

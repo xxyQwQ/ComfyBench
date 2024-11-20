@@ -1,7 +1,0 @@
-- `AlphaChanelAsMask`: The AlphaChanelAsMask node is designed for processing images to extract or invert their alpha channel, effectively transforming the alpha channel into a mask. This operation allows for the manipulation of image transparency in a manner that can be customized through the method parameter, supporting both standard and inverted alpha channel extraction.
-    - Parameters:
-        - `method`: The 'method' parameter dictates the mode of alpha channel processing, allowing for either the standard extraction of the alpha channel or its inversion. This choice affects the resulting mask's representation of transparency. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: The 'images' parameter represents the input images for which the alpha channel is to be processed. It plays a crucial role in determining the transparency aspects of the image that are to be extracted or manipulated. Type should be `IMAGE`.
-    - Outputs:
-        - `mask`: The output is a mask derived from the alpha channel of the input images, which can either represent the direct alpha channel or its inverse, depending on the processing method chosen. Type should be `MASK`.

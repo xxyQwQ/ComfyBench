@@ -1,0 +1,9 @@
+- `SaltFilmicTransitions`: This node specializes in generating filmic transitions between two sets of images, offering a variety of modes such as swipes and circle expansions. It allows for the creation of smooth, visually appealing transitions with customizable frame counts and optional mask blur effects, enhancing the dynamic storytelling capabilities of image sequences.
+    - Inputs:
+        - `images_a` (Required): The first set of images to transition from. These images serve as the starting point for the filmic transition effect. Type should be `IMAGE`.
+        - `images_b` (Required): The second set of images to transition to. These images serve as the destination for the filmic transition effect. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the type of transition effect to apply, such as swipe directions or circle expansions. This choice determines the visual style of the transition between the two image sets. Type should be `COMBO[STRING]`.
+        - `transition_frames` (Required): The number of frames to use for the transition, allowing control over the speed and smoothness of the effect. Type should be `INT`.
+        - `mask_blur_schedule` (Optional): An optional schedule for blurring the mask used in the transition, enabling dynamic blur effects throughout the transition process. Type should be `LIST`.
+    - Outputs:
+        - `images`: The resulting set of images after applying the filmic transition, combined into a single tensor. Type should be `IMAGE`.

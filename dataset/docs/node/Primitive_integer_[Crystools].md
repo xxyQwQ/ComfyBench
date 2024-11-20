@@ -1,6 +1,0 @@
-- `Primitive integer [Crystools]`: This node is designed to handle integer values, providing a straightforward way to work with integers within the Crystools framework. It encapsulates the functionality required to input, process, and return integer values, simplifying the handling of numeric data.
-    - Parameters:
-        - `int`: Represents the integer value to be processed by the node. It is essential for executing the node's functionality, as it directly influences the output integer value. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `int`: The output of this node is the integer value that was input, allowing for seamless integration and further processing within the Crystools framework. Type should be `INT`.

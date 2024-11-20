@@ -1,0 +1,7 @@
+- `CM_BoolBinaryOperation`: This node performs binary operations on boolean values, allowing for the combination and manipulation of boolean logic.
+    - Inputs:
+        - `op` (Required): Specifies the binary operation to perform on the boolean inputs, such as 'And', 'Or', 'Xor', etc. This choice determines how the two boolean inputs will be combined. Type should be `COMBO[STRING]`.
+        - `a` (Required): The first boolean input for the binary operation. Type should be `BOOL`.
+        - `b` (Required): The second boolean input for the binary operation. Type should be `BOOL`.
+    - Outputs:
+        - `bool`: The result of the specified binary operation on the two boolean inputs. Type should be `BOOL`.

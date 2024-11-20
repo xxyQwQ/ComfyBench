@@ -1,7 +1,0 @@
-- `JWFloatToString`: This node is designed to convert a floating-point number into its string representation, facilitating the integration of numerical data with text-based processes or outputs.
-    - Parameters:
-        - `value`: The floating-point number to be converted into a string. This parameter is crucial for defining the specific numerical value that will undergo conversion. Type should be `FLOAT`.
-        - `format_string`: A format string specifying how the floating-point number should be formatted when converted to a string. This allows for customization of the output string, including precision, padding, and other formatting options. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The string representation of the input floating-point number, formatted according to the provided format string. Type should be `STRING`.

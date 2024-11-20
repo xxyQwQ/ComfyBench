@@ -1,0 +1,8 @@
+- `RenderPeopleKps`: This node is designed for rendering human pose keypoints into images. It processes pose keypoints data, applying options to render body, hand, and face details, and outputs the rendered image as a numpy array.
+    - Inputs:
+        - `kps` (Required): The pose keypoints data to be rendered. It is crucial for determining the positions and orientations of different body parts in the rendered image. Type should be `POSE_KEYPOINT`.
+        - `render_body` (Required): A boolean flag to indicate whether to render the body keypoints. It affects the visual representation of the body in the output image. Type should be `BOOLEAN`.
+        - `render_hand` (Required): A boolean flag to indicate whether to render the hand keypoints. It influences the inclusion of hand details in the rendered image. Type should be `BOOLEAN`.
+        - `render_face` (Required): A boolean flag to indicate whether to render the face keypoints. It determines the depiction of facial features in the output image. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output is a rendered image of human pose keypoints, represented as a numpy array. Type should be `IMAGE`.

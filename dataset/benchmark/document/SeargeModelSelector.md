@@ -1,0 +1,8 @@
+- `SeargeModelSelector`: The SeargeModelSelector node facilitates the selection of models for various stages of image generation and refinement within the ComfyUI framework, specifically designed for the SDXL environment. It allows users to specify base, refiner, and VAE checkpoints, optionally incorporating additional data streams for enhanced customization.
+    - Inputs:
+        - `base_checkpoint` (Required): Specifies the base model checkpoint for the initial stage of image generation, serving as the foundation for further processing. Type should be `COMBO[STRING]`.
+        - `refiner_checkpoint` (Required): Determines the refiner model checkpoint used to refine the initial image outputs, enhancing their quality or details. Type should be `COMBO[STRING]`.
+        - `vae_checkpoint` (Required): Indicates the VAE model checkpoint, which is used for variational autoencoder processes, potentially embedding additional information into the generation process. Type should be `COMBO[STRING]`.
+        - `data` (Optional): An optional data stream that can be used for further customization or processing within the image generation pipeline. Type should be `SRG_DATA_STREAM`.
+    - Outputs:
+        - `data`: Returns a data stream that includes the selected model checkpoints, ready for use in subsequent image generation stages. Type should be `SRG_DATA_STREAM`.

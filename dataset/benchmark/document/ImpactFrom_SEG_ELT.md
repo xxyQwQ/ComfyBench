@@ -1,0 +1,12 @@
+- `ImpactFrom_SEG_ELT`: The `ImpactFrom_SEG_ELT` node is designed to process segmentation elements (SEG_ELT) by extracting and transforming relevant information such as cropped images, masks, and bounding boxes. It aims to facilitate further analysis or manipulation of these elements by providing detailed attributes including crop regions, bounding boxes, control network wrappers, confidence levels, and labels.
+    - Inputs:
+        - `seg_elt` (Required): The segmentation element (SEG_ELT) input is crucial for extracting and transforming detailed attributes such as cropped images, masks, and bounding boxes. It serves as the foundation for the node's operation, enabling the analysis or manipulation of segmentation data. Type should be `SEG_ELT`.
+    - Outputs:
+        - `seg_elt`: Returns the original segmentation element (SEG_ELT) with potentially modified attributes. Type should be `SEG_ELT`.
+        - `cropped_image`: Provides the cropped image extracted from the segmentation element. Type should be `IMAGE`.
+        - `cropped_mask`: Provides the cropped mask associated with the segmentation element. Type should be `MASK`.
+        - `crop_region`: Returns the crop region used to extract the cropped image and mask. Type should be `SEG_ELT_crop_region`.
+        - `bbox`: Returns the bounding box of the segmentation element. Type should be `SEG_ELT_bbox`.
+        - `control_net_wrapper`: Provides the control network wrapper associated with the segmentation element. Type should be `SEG_ELT_control_net_wrapper`.
+        - `confidence`: Returns the confidence level of the segmentation element. Type should be `FLOAT`.
+        - `label`: Provides the label assigned to the segmentation element. Type should be `STRING`.

@@ -1,9 +1,0 @@
-- `FaceRestoreCFWithModel`: This node is designed to restore faces in images using a face restoration model. It leverages advanced deep learning techniques to enhance the quality of faces in images, addressing issues such as blurriness, noise, and artifacts. The node operates by detecting faces, processing each face individually with the restoration model, and then integrating the enhanced faces back into the original image.
-    - Parameters:
-        - `facedetection`: The face detection model used to identify faces within the input image. It ensures that each face is accurately detected before restoration. Type should be `COMBO[STRING]`.
-        - `codeformer_fidelity`: A parameter controlling the fidelity of the restoration process. It adjusts the balance between enhancing details and preserving the original appearance. Type should be `FLOAT`.
-    - Inputs:
-        - `facerestore_model`: The face restoration model used for enhancing the quality of faces in images. It plays a crucial role in the node's ability to improve image clarity and detail. Type should be `FACERESTORE_MODEL`.
-        - `image`: The input image containing faces to be restored. This image is processed to detect and enhance faces individually. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output image with faces restored. It showcases the enhanced clarity and detail of faces after processing. Type should be `IMAGE`.

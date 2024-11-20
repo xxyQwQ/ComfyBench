@@ -1,0 +1,5 @@
+- `PreviewLatent`: The PreviewLatent node provides a mechanism to generate visual previews of latent representations. It leverages a base model and optional parameters to produce images that visually represent the encoded information within a latent space.
+    - Inputs:
+        - `latent` (Required): The latent representation to be visualized. This is the core input for generating the preview image. Type should be `LATENT`.
+    - Outputs:
+        - `latent`: Returns the same latent input, allowing for potential further processing or analysis. Type should be `LATENT`.

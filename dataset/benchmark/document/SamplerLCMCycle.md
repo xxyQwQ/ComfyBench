@@ -1,0 +1,8 @@
+- `SamplerLCMCycle`: The SamplerLCMCycle node is designed to generate a custom sampler based on the LCM (Least Common Multiple) cycle method, incorporating options for Euler steps, LCM steps, sigma tweaking, and ancestral sampling to tailor the sampling process.
+    - Inputs:
+        - `euler_steps` (Required): Specifies the number of Euler steps to be used in the LCM cycle, affecting the granularity of the sampling process. Type should be `INT`.
+        - `lcm_steps` (Required): Determines the number of LCM steps in the cycle, influencing the sampling's adherence to the LCM pattern. Type should be `INT`.
+        - `tweak_sigmas` (Required): A boolean flag that, when enabled, tweaks the sigma values used in the sampling process for potentially enhanced results. Type should be `BOOLEAN`.
+        - `ancestral` (Required): Controls the ancestral sampling rate, offering a way to adjust the influence of previous generations on the current sample. Type should be `FLOAT`.
+    - Outputs:
+        - `sampler`: Produces a custom sampler configured according to the specified LCM cycle parameters. Type should be `SAMPLER`.

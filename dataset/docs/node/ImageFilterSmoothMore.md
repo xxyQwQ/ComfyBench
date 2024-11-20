@@ -1,6 +1,0 @@
-- `ImageFilterSmoothMore`: The ImageFilterSmoothMore node applies a more intensive smoothing filter to images, enhancing their visual softness beyond the basic smoothing level.
-    - Parameters:
-    - Inputs:
-        - `images`: Specifies the images to be processed with an enhanced smoothing filter, aiming to increase their visual softness. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: Returns images that have undergone an enhanced smoothing process, resulting in a softer visual appearance. Type should be `IMAGE`.

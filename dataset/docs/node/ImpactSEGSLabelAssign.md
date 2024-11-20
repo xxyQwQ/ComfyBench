@@ -1,7 +1,0 @@
-- `ImpactSEGSLabelAssign`: This node is designed to assign user-defined labels to segments (SEGS) within a dataset, enhancing data annotation and organization for further processing or analysis.
-    - Parameters:
-        - `labels`: A list of labels to be assigned to the segments, provided as a comma-separated string. This parameter is essential for the customization and detailed categorization of the segments. Type should be `STRING`.
-    - Inputs:
-        - `segs`: The segments to which labels will be assigned. It is crucial for organizing and categorizing data segments for analysis. Type should be `SEGS`.
-    - Outputs:
-        - `SEGS`: The segments with newly assigned labels, facilitating enhanced data management and analysis. Type should be `SEGS`.

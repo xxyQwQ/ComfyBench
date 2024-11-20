@@ -1,6 +1,0 @@
-- `KSamplerSelect`: The KSamplerSelect node is designed to select a specific sampler based on the provided sampler name. It abstracts the complexity of sampler selection, allowing users to easily switch between different sampling strategies for their tasks.
-    - Parameters:
-        - `sampler_name`: Specifies the name of the sampler to be selected. This parameter determines which sampling strategy will be used, impacting the overall sampling behavior and results. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `sampler`: Returns the selected sampler object, ready to be used for sampling tasks. Type should be `SAMPLER`.

@@ -1,6 +1,0 @@
-- `VaeClamp`: The VaeClamp node is designed to pass through Variational Autoencoder (VAE) models without modification. It serves as a utility within a pipeline to ensure compatibility or enforce constraints without altering the VAE model itself.
-    - Parameters:
-    - Inputs:
-        - `vae`: The 'vae' input is a Variational Autoencoder (VAE) model that this node takes as input and returns unaltered. It is essential for maintaining the integrity of the VAE model within a processing pipeline. Type should be `VAE`.
-    - Outputs:
-        - `vae`: Returns the unmodified Variational Autoencoder (VAE) model passed into the node. Type should be `VAE`.

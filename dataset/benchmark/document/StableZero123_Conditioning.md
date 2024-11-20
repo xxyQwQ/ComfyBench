@@ -1,0 +1,14 @@
+- `StableZero123_Conditioning`: This node is designed to apply specific conditioning transformations tailored for the StableZero123 model, enhancing its ability to generate or process 3D content. It focuses on adjusting and optimizing the input data to better suit the model's requirements for 3D generation tasks.
+    - Inputs:
+        - `clip_vision` (Required): The 'clip_vision' input is used to provide visual context or cues that the model can use to guide the generation process, enhancing the relevance and accuracy of the 3D content produced. Type should be `CLIP_VISION`.
+        - `init_image` (Required): The 'init_image' input serves as an initial image or starting point for the generation process, allowing the model to modify or build upon this base to create the final 3D content. Type should be `IMAGE`.
+        - `vae` (Required): The 'vae' input refers to a Variational Autoencoder used for encoding and decoding images, playing a crucial role in the model's ability to understand and manipulate visual data. Type should be `VAE`.
+        - `width` (Required): The 'width' input specifies the desired width of the output image, allowing for customization of the generated content's dimensions. Type should be `INT`.
+        - `height` (Required): The 'height' input determines the desired height of the output image, enabling control over the size of the generated 3D content. Type should be `INT`.
+        - `batch_size` (Required): The 'batch_size' input indicates the number of images to be processed or generated in a single batch, affecting the model's performance and efficiency. Type should be `INT`.
+        - `elevation` (Required): The 'elevation' input allows for specifying the elevation angle for 3D model viewing, enabling different perspectives of the generated content. Type should be `FLOAT`.
+        - `azimuth` (Required): The 'azimuth' input enables setting the azimuth angle for 3D model viewing, offering various viewpoints of the generated 3D content. Type should be `FLOAT`.
+    - Outputs:
+        - `positive`: This output delivers conditioning data that positively influences the generation process, enhancing the desired aspects of the generated content. Type should be `CONDITIONING`.
+        - `negative`: This output provides conditioning data intended to negate or avoid certain elements, refining the generation process by excluding undesired aspects. Type should be `CONDITIONING`.
+        - `latent`: The 'latent' output represents the encoded latent space representation of the input data, crucial for the model's understanding and manipulation of the content. Type should be `LATENT`.

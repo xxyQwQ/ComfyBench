@@ -1,0 +1,314 @@
+{
+    "13": {
+        "_meta": {
+            "title": "Unsampler"
+        },
+        "class_type": "BNK_Unsampler",
+        "inputs": {
+            "cfg": 1,
+            "end_at_step": 0,
+            "latent_image": [
+                "15",
+                0
+            ],
+            "model": [
+                "4",
+                0
+            ],
+            "negative": [
+                "7",
+                0
+            ],
+            "normalize": "disable",
+            "positive": [
+                "6",
+                0
+            ],
+            "sampler_name": "dpmpp_2m",
+            "scheduler": "karras",
+            "steps": 25
+        }
+    },
+    "14": {
+        "_meta": {
+            "title": "Load Source Image"
+        },
+        "class_type": "LoadImage",
+        "inputs": {
+            "image": "woman_portrait.jpg",
+            "upload": "image"
+        }
+    },
+    "15": {
+        "_meta": {
+            "title": "VAE Encode"
+        },
+        "class_type": "VAEEncode",
+        "inputs": {
+            "pixels": [
+                "14",
+                0
+            ],
+            "vae": [
+                "26",
+                0
+            ]
+        }
+    },
+    "16": {
+        "_meta": {
+            "title": "KSampler (Advanced)"
+        },
+        "class_type": "KSamplerAdvanced",
+        "inputs": {
+            "add_noise": "disable",
+            "cfg": 2.5,
+            "end_at_step": 25,
+            "latent_image": [
+                "13",
+                0
+            ],
+            "model": [
+                "4",
+                0
+            ],
+            "negative": [
+                "30",
+                1
+            ],
+            "noise_seed": 0,
+            "positive": [
+                "30",
+                0
+            ],
+            "return_with_leftover_noise": "disable",
+            "sampler_name": "dpmpp_2m",
+            "scheduler": "karras",
+            "start_at_step": 0,
+            "steps": 25
+        }
+    },
+    "18": {
+        "_meta": {
+            "title": "ControlNet Mask A"
+        },
+        "class_type": "PreviewImage",
+        "inputs": {
+            "images": [
+                "44",
+                0
+            ]
+        }
+    },
+    "19": {
+        "_meta": {
+            "title": "Load ControlNet Model A"
+        },
+        "class_type": "ControlNetLoader",
+        "inputs": {
+            "control_net_name": "control_v11f1p_sd15_depth_fp16.safetensors"
+        }
+    },
+    "21": {
+        "_meta": {
+            "title": "Destination Prompt"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "a (cartoon) of a happy girl wearing sunglasses"
+        }
+    },
+    "24": {
+        "_meta": {
+            "title": "Destination Prompt (Negative)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "text, watermark"
+        }
+    },
+    "25": {
+        "_meta": {
+            "title": "Apply ControlNet (Advanced)"
+        },
+        "class_type": "ControlNetApplyAdvanced",
+        "inputs": {
+            "control_net": [
+                "19",
+                0
+            ],
+            "end_percent": 0.5,
+            "image": [
+                "44",
+                0
+            ],
+            "negative": [
+                "24",
+                0
+            ],
+            "positive": [
+                "21",
+                0
+            ],
+            "start_percent": 0,
+            "strength": 0.3
+        }
+    },
+    "26": {
+        "_meta": {
+            "title": "Load VAE"
+        },
+        "class_type": "VAELoader",
+        "inputs": {
+            "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+        }
+    },
+    "28": {
+        "_meta": {
+            "title": "ControlNet Mask B"
+        },
+        "class_type": "PreviewImage",
+        "inputs": {
+            "images": [
+                "43",
+                0
+            ]
+        }
+    },
+    "29": {
+        "_meta": {
+            "title": "Load ControlNet Model B"
+        },
+        "class_type": "ControlNetLoader",
+        "inputs": {
+            "control_net_name": "control_v11p_sd15_lineart_fp16.safetensors"
+        }
+    },
+    "30": {
+        "_meta": {
+            "title": "Apply ControlNet (Advanced)"
+        },
+        "class_type": "ControlNetApplyAdvanced",
+        "inputs": {
+            "control_net": [
+                "29",
+                0
+            ],
+            "end_percent": 0.5,
+            "image": [
+                "43",
+                0
+            ],
+            "negative": [
+                "25",
+                1
+            ],
+            "positive": [
+                "25",
+                0
+            ],
+            "start_percent": 0,
+            "strength": 0.1
+        }
+    },
+    "4": {
+        "_meta": {
+            "title": "Load Checkpoint"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "inputs": {
+            "ckpt_name": "v1-5-pruned-emaonly.ckpt"
+        }
+    },
+    "43": {
+        "_meta": {
+            "title": "AIO Aux Preprocessor"
+        },
+        "class_type": "AIO_Preprocessor",
+        "inputs": {
+            "image": [
+                "14",
+                0
+            ],
+            "preprocessor": "LineArtPreprocessor",
+            "resolution": 512
+        }
+    },
+    "44": {
+        "_meta": {
+            "title": "AIO Aux Preprocessor"
+        },
+        "class_type": "AIO_Preprocessor",
+        "inputs": {
+            "image": [
+                "14",
+                0
+            ],
+            "preprocessor": "Zoe-DepthMapPreprocessor",
+            "resolution": 512
+        }
+    },
+    "49": {
+        "_meta": {
+            "title": "Save Image"
+        },
+        "class_type": "SaveImage",
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "8",
+                0
+            ]
+        }
+    },
+    "6": {
+        "_meta": {
+            "title": "Source Prompt"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "a photo of a girl smiling"
+        }
+    },
+    "7": {
+        "_meta": {
+            "title": "Source Prompt (Negative)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "text, watermark"
+        }
+    },
+    "8": {
+        "_meta": {
+            "title": "VAE Decode"
+        },
+        "class_type": "VAEDecode",
+        "inputs": {
+            "samples": [
+                "16",
+                0
+            ],
+            "vae": [
+                "26",
+                0
+            ]
+        }
+    }
+}

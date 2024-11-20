@@ -1,7 +1,0 @@
-- `Inference_Core_ScribblePreprocessor`: The ScribblePreprocessor node is designed for preprocessing images to detect and extract scribble lines. It utilizes a specialized model to process the input image and enhance or isolate scribble-like features, making it suitable for applications requiring line extraction or artistic effect enhancements.
-    - Parameters:
-        - `resolution`: Specifies the resolution to which the input image is scaled before processing. A higher resolution can lead to more detailed scribble line detection but may increase computation time. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for scribble line detection and extraction. This parameter is crucial for defining the visual content that the model will analyze and manipulate. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed image with scribble lines detected and enhanced or isolated, suitable for further artistic or analytical applications. Type should be `IMAGE`.

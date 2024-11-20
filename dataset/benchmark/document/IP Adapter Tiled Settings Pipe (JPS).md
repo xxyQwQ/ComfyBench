@@ -1,0 +1,18 @@
+- `IP Adapter Tiled Settings Pipe (JPS)`: The IP Adapter Tiled Settings Pipe node is designed to configure and apply image processing adapter settings for tiled images. It allows for the customization of various image processing parameters to enhance or modify the tiled images according to the specified settings.
+    - Inputs:
+        - `ip_adapter_settings` (Required): Defines the comprehensive configuration for image processing adapter settings tailored for tiled images, impacting the processing and enhancement outcomes by adjusting parameters such as model, weight types, noise levels, and more. Type should be `BASIC_PIPE`.
+    - Outputs:
+        - `ipa_model`: The model used for image processing. Type should be `INT`.
+        - `ipa_wtype`: The weight type applied during image processing. Type should be `COMBO[STRING]`.
+        - `ipa_weight`: The weight applied to the image processing. Type should be `FLOAT`.
+        - `ipa_noise`: The noise level applied to the image. Type should be `FLOAT`.
+        - `ipa_start`: The start point for image processing. Type should be `FLOAT`.
+        - `ipa_end`: The end point for image processing. Type should be `FLOAT`.
+        - `tile_short`: The short side length of the tile. Type should be `INT`.
+        - `tile_weight`: The weight applied to the tile. Type should be `FLOAT`.
+        - `zoom`: The zoom level applied to the image. Type should be `INT`.
+        - `offset_w`: The width offset applied to the image. Type should be `INT`.
+        - `offset_h`: The height offset applied to the image. Type should be `INT`.
+        - `prepare_type`: The preparation type used for the image. Type should be `INT`.
+        - `prepare_intpol`: The interpolation method used for image preparation. Type should be `COMBO[STRING]`.
+        - `prepare_sharpening`: The sharpening level applied to the image. Type should be `FLOAT`.

@@ -1,0 +1,6 @@
+- `CM_FloatUnaryOperation`: This node performs unary operations on floating-point numbers, allowing for the application of a variety of mathematical functions to a single float input.
+    - Inputs:
+        - `op` (Required): Specifies the unary operation to be performed on the input float. The choice of operation directly influences the outcome. Type should be `COMBO[STRING]`.
+        - `a` (Required): The floating-point number to be operated on. It serves as the input to the unary operation specified. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: The result of applying the specified unary operation on the input float. Type should be `FLOAT`.

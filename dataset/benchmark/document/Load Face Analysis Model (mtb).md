@@ -1,0 +1,5 @@
+- `Load Face Analysis Model (mtb)`: This node is designed to load a face analysis model, facilitating the analysis of facial features and characteristics within images. It supports the selection of different model types to accommodate various analysis needs.
+    - Inputs:
+        - `faceswap_model` (Required): Specifies the model to be used for face analysis. The choice of model affects the accuracy and type of analysis performed. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `face_analysis_model`: The loaded face analysis model, ready for performing facial feature analysis. Type should be `FACE_ANALYSIS_MODEL`.

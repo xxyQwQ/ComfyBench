@@ -1,0 +1,9 @@
+- `SEGSPaste`: This node specializes in blending and manipulating image segments, leveraging latent space representations to achieve seamless integration of visual elements. It focuses on the precise control over the placement and blending of image segments within a given scene, enhancing the overall composition through advanced conditioning techniques.
+    - Inputs:
+        - `image` (Required): A string path or identifier for an image that is to be blended or manipulated within the scene. It serves as a secondary input for visual reference or direct integration. Type should be `IMAGE`.
+        - `segs` (Required): Represents the segments to be manipulated or blended, providing the primary elements for visual composition within the node. Type should be `SEGS`.
+        - `feather` (Required): Defines the feathering amount for the edges of the segments, allowing for smoother integration into the target scene. Type should be `INT`.
+        - `alpha` (Required): Specifies the opacity level of the segments, enabling fine-tuned control over their visibility and blending with the background. Type should be `INT`.
+        - `ref_image_opt` (Optional): Optional. A reference image that can be used for additional context or alignment purposes during the manipulation process. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: Outputs the modified image after the blending and manipulation processes, incorporating the segments seamlessly into the scene. Type should be `IMAGE`.

@@ -1,0 +1,9 @@
+- `Match Dimensions (mtb)`: The MTB_MatchDimensions node is designed to adjust the dimensions of source images to match those of reference images along a specified dimension (height or width), ensuring the aspect ratio is preserved. This functionality is crucial for tasks requiring uniform image dimensions without distorting the image content.
+    - Inputs:
+        - `source` (Required): The source image whose dimensions are to be adjusted. It plays a critical role in determining the new dimensions while preserving the aspect ratio. Type should be `IMAGE`.
+        - `reference` (Required): The reference image provides the target dimensions to match. It sets the benchmark for adjusting the source image, ensuring consistency in dimensions across images. Type should be `IMAGE`.
+        - `match` (Required): Specifies the dimension (height or width) along which the source image's dimensions should be matched to the reference image. It guides the adjustment process, ensuring the aspect ratio is preserved. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The adjusted image with dimensions matched to the reference image, preserving the aspect ratio. Type should be `IMAGE`.
+        - `new_width`: The new width of the adjusted image after matching dimensions. Type should be `INT`.
+        - `new_height`: The new height of the adjusted image after matching dimensions. Type should be `INT`.

@@ -1,0 +1,7 @@
+- `TTPlanet_TileSimple_Preprocessor`: This node is designed for preprocessing images by applying a simple tiling effect, which involves scaling and blurring to enhance or modify the image's appearance for further processing or analysis.
+    - Inputs:
+        - `image` (Required): The input image to be processed. It serves as the primary data for the tiling effect application. Type should be `IMAGE`.
+        - `scale_factor` (Required): Determines the scaling factor for the image, affecting the size of the tiles in the processed image. Type should be `FLOAT`.
+        - `blur_strength` (Required): Adjusts the strength of the blur applied to the image, influencing the smoothness of the tile edges. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The processed image with the applied tiling effect, ready for further processing or analysis. Type should be `IMAGE`.

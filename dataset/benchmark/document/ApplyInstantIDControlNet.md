@@ -1,0 +1,14 @@
+- `ApplyInstantIDControlNet`: This node is designed to apply a control network to modify facial embeddings based on specified conditions, leveraging insights from facial analysis and control network parameters to achieve targeted modifications in facial representations.
+    - Inputs:
+        - `face_embeds` (Required): Facial embeddings that represent the key features of a face, serving as the input for targeted modifications. Type should be `FACE_EMBEDS`.
+        - `control_net` (Required): The control network model used to apply modifications to the facial embeddings. Type should be `CONTROL_NET`.
+        - `image_kps` (Required): Key points from the image that are used to guide the modifications applied by the control network. Type should be `IMAGE`.
+        - `positive` (Required): Positive conditioning phrases or keywords that guide the direction of the modifications. Type should be `CONDITIONING`.
+        - `negative` (Required): Negative conditioning phrases or keywords that specify undesired attributes to be avoided in the modifications. Type should be `CONDITIONING`.
+        - `strength` (Required): The intensity of the modifications applied by the control network. Type should be `FLOAT`.
+        - `start_at` (Required): The starting point in the process where modifications begin to be applied. Type should be `FLOAT`.
+        - `end_at` (Required): The ending point in the process where modifications cease to be applied. Type should be `FLOAT`.
+        - `mask` (Optional): An optional mask that can be used to localize the modifications applied by the control network. Type should be `MASK`.
+    - Outputs:
+        - `positive`: The modified positive conditioning after applying the control network, reflecting the targeted modifications. Type should be `CONDITIONING`.
+        - `negative`: The modified negative conditioning after applying the control network, reflecting the avoidance of specified undesired attributes. Type should be `CONDITIONING`.

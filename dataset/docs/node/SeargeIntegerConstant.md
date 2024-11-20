@@ -1,6 +1,0 @@
-- `SeargeIntegerConstant`: The SeargeIntegerConstant node is designed to provide a constant integer value as output. It serves as a simple utility within a larger system to supply fixed numerical values, facilitating operations or calculations that require a specific, unchanging integer.
-    - Parameters:
-        - `value`: Specifies the constant integer value to be returned by the node. This parameter allows for the customization of the output based on the user's needs, ensuring flexibility in providing a specific integer constant. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `value`: The constant integer value specified by the input parameter. This output is used in subsequent operations or calculations that require a fixed integer. Type should be `INT`.

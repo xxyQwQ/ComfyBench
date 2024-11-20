@@ -1,0 +1,23 @@
+- `SDXL Fundamentals MultiPipe (JPS)`: The SDXL Fundamentals MultiPipe node is designed to aggregate and streamline the process of configuring fundamental components for image synthesis, including models, clips, and conditioning settings. It simplifies the setup by allowing optional inputs for various components and returns a comprehensive set of configurations, making it a central node for initializing and refining image generation pipelines.
+    - Inputs:
+        - `vae` (Optional): Optional VAE component for the image synthesis process, affecting the initial stages of image generation. Type should be `VAE`.
+        - `model_base` (Optional): Optional base model for the initial image generation process, influencing the core synthesis mechanism. Type should be `MODEL`.
+        - `model_refiner` (Optional): Optional refiner model to enhance the details of the generated images, improving the final output quality. Type should be `MODEL`.
+        - `clip_base` (Optional): Optional CLIP model for the base setup, used for guiding the image synthesis towards the desired outcome based on textual descriptions. Type should be `CLIP`.
+        - `clip_refiner` (Optional): Optional CLIP model for refining the generated images, ensuring closer alignment with the intended visual concepts. Type should be `CLIP`.
+        - `pos_base` (Optional): Optional base positive conditioning to steer the image generation towards specific attributes or themes. Type should be `CONDITIONING`.
+        - `neg_base` (Optional): Optional base negative conditioning to avoid certain attributes or themes in the generated images. Type should be `CONDITIONING`.
+        - `pos_refiner` (Optional): Optional refiner positive conditioning to further refine the generated images towards more specific attributes or themes. Type should be `CONDITIONING`.
+        - `neg_refiner` (Optional): Optional refiner negative conditioning to further avoid certain attributes or themes in the refined images. Type should be `CONDITIONING`.
+        - `seed` (Optional): Optional seed for deterministic image generation, ensuring reproducibility of the results. Type should be `INT`.
+    - Outputs:
+        - `vae`: The VAE component used in the image synthesis process. Type should be `VAE`.
+        - `model_base`: The base model used for the initial image generation. Type should be `MODEL`.
+        - `model_refiner`: The refiner model used to enhance the details of the generated images. Type should be `MODEL`.
+        - `clip_base`: The CLIP model used for guiding the image synthesis in the base setup. Type should be `CLIP`.
+        - `clip_refiner`: The CLIP model used for refining the generated images. Type should be `CLIP`.
+        - `pos_base`: The base positive conditioning applied to steer the image generation. Type should be `CONDITIONING`.
+        - `neg_base`: The base negative conditioning applied to avoid certain themes in the generated images. Type should be `CONDITIONING`.
+        - `pos_refiner`: The refiner positive conditioning applied to further refine the generated images. Type should be `CONDITIONING`.
+        - `neg_refiner`: The refiner negative conditioning applied to further avoid certain themes in the refined images. Type should be `CONDITIONING`.
+        - `seed`: The seed used for deterministic image generation. Type should be `INT`.

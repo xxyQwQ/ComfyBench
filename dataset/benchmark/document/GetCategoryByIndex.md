@@ -1,0 +1,9 @@
+- `GetCategoryByIndex`: The GetCategoryByIndex node is designed to filter and retrieve specific categories of data based on a given index. It operates by selecting subsets of features and captions that match the specified index, effectively isolating a particular category from a larger dataset.
+    - Inputs:
+        - `id` (Required): The 'id' parameter specifies the index of the category to be retrieved. It determines which category's features and captions are selected, playing a crucial role in the node's operation by filtering the dataset according to this index. Type should be `INT`.
+        - `features` (Required): The 'features' parameter represents the numerical data or attributes associated with each item in the dataset. It is essential for identifying and isolating the category corresponding to the given index. Type should be `NP_ARRAY`.
+        - `captions` (Required): The 'captions' parameter consists of textual descriptions or titles associated with each item in the dataset. It is used alongside 'id' and 'features' to select and return the relevant captions for the specified category. Type should be `LIST`.
+        - `labels` (Required): The 'labels' parameter contains the indices or identifiers for each category within the dataset. It is used to match the 'id' parameter and filter the dataset to retrieve the specified category's data. Type should be `LIST`.
+    - Outputs:
+        - `features`: Returns the filtered features corresponding to the specified category index, isolating a subset of the dataset's numerical attributes. Type should be `NP_ARRAY`.
+        - `captions`: Returns the filtered captions corresponding to the specified category index, providing textual descriptions for the isolated subset of items. Type should be `LIST`.

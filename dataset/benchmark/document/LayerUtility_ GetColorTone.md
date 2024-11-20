@@ -1,0 +1,7 @@
+- `LayerUtility_ GetColorTone`: This node is designed to analyze an image and determine its dominant or average color tone, returning the result in both HEX and HSV formats. It provides a straightforward way for users to extract color information from images, which can be useful in various applications such as theming, design, and visual analysis.
+    - Inputs:
+        - `image` (Required): The image to analyze for color tone. This is the primary input on which the color analysis is performed. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the method of color analysis: 'main_color' for dominant color or 'average' for average color of the image. This choice affects the outcome of the color tone analysis. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `RGB color in HEX`: The dominant or average color of the image represented as a HEX code. Type should be `STRING`.
+        - `HSV color in list`: The dominant or average color of the image represented in HSV format, provided as a list. Type should be `LIST`.

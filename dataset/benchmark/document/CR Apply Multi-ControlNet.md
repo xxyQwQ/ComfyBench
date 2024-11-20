@@ -1,0 +1,10 @@
+- `CR Apply Multi-ControlNet`: This node is designed to apply a stack of multiple ControlNets to a given set of conditioning data. It iterates through each ControlNet in the stack, applying them sequentially to modify the conditioning data based on the ControlNet's specifications and the provided image, strength, and percentage range. This allows for complex and layered modifications to the conditioning data, enabling more nuanced and controlled generation processes.
+    - Inputs:
+        - `base_positive` (Required): The initial positive conditioning data to which the ControlNet stack will be applied. This data serves as the starting point for the sequential application of ControlNets. Type should be `CONDITIONING`.
+        - `base_negative` (Required): The initial negative conditioning data to which the ControlNet stack will be applied. Similar to 'base_positive', this data is modified sequentially by the ControlNet stack. Type should be `CONDITIONING`.
+        - `switch` (Required): A control switch to enable or disable the application of the ControlNet stack. If set to 'Off', the node will bypass the application process and return the original conditioning data. Type should be `COMBO[STRING]`.
+        - `controlnet_stack` (Required): A list of tuples, each representing a ControlNet to be applied. Each tuple contains the ControlNet's name or object, the image to use for control hints, the strength of application, and the start and end percentages for application range. Type should be `CONTROL_NET_STACK`.
+    - Outputs:
+        - `base_pos`: unknown Type should be `CONDITIONING`.
+        - `base_neg`: unknown Type should be `CONDITIONING`.
+        - `show_help`: A URL providing help and additional information about the node and its usage. Type should be `STRING`.

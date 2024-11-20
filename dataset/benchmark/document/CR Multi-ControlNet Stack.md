@@ -1,0 +1,24 @@
+- `CR Multi-ControlNet Stack`: This node is designed to create a stack of ControlNet configurations, each with its own switch, allowing for the dynamic application of multiple ControlNet effects based on specified conditions. It facilitates the layering and conditional application of various ControlNet adjustments to images, enhancing flexibility and control in image manipulation workflows.
+    - Inputs:
+        - `switch_1` (Optional): Determines whether the first ControlNet configuration in the stack is active ('On') or inactive ('Off'). Type should be `COMBO[STRING]`.
+        - `controlnet_1` (Optional): The first ControlNet configuration to be applied, if 'switch_1' is 'On'. Type should be `COMBO[STRING]`.
+        - `controlnet_strength_1` (Optional): The strength of the first ControlNet effect. Type should be `FLOAT`.
+        - `start_percent_1` (Optional): The starting percentage of the image where the first ControlNet effect begins to apply. Type should be `FLOAT`.
+        - `end_percent_1` (Optional): The ending percentage of the image where the first ControlNet effect stops applying. Type should be `FLOAT`.
+        - `switch_2` (Optional): Determines whether the second ControlNet configuration in the stack is active ('On') or inactive ('Off'). Type should be `COMBO[STRING]`.
+        - `controlnet_2` (Optional): The second ControlNet configuration to be applied, if 'switch_2' is 'On'. Type should be `COMBO[STRING]`.
+        - `controlnet_strength_2` (Optional): The strength of the second ControlNet effect. Type should be `FLOAT`.
+        - `start_percent_2` (Optional): The starting percentage of the image where the second ControlNet effect begins to apply. Type should be `FLOAT`.
+        - `end_percent_2` (Optional): The ending percentage of the image where the second ControlNet effect stops applying. Type should be `FLOAT`.
+        - `switch_3` (Optional): Determines whether the third ControlNet configuration in the stack is active ('On') or inactive ('Off'). Type should be `COMBO[STRING]`.
+        - `controlnet_3` (Optional): The third ControlNet configuration to be applied, if 'switch_3' is 'On'. Type should be `COMBO[STRING]`.
+        - `controlnet_strength_3` (Optional): The strength of the third ControlNet effect. Type should be `FLOAT`.
+        - `start_percent_3` (Optional): The starting percentage of the image where the third ControlNet effect begins to apply. Type should be `FLOAT`.
+        - `end_percent_3` (Optional): The ending percentage of the image where the third ControlNet effect stops applying. Type should be `FLOAT`.
+        - `image_1` (Optional): The image to which the first ControlNet configuration is applied. Type should be `IMAGE`.
+        - `image_2` (Optional): The image to which the second ControlNet configuration is applied. Type should be `IMAGE`.
+        - `image_3` (Optional): The image to which the third ControlNet configuration is applied. Type should be `IMAGE`.
+        - `controlnet_stack` (Optional): A list of additional ControlNet configurations to be applied, each including the ControlNet's name, the image to apply it to, the strength of the effect, and the start and end percentages for the effect's application. Type should be `CONTROL_NET_STACK`.
+    - Outputs:
+        - `CONTROLNET_STACK`: The compiled list of ControlNet configurations to be applied, including those specified individually and those included in the 'controlnet_stack'. Type should be `CONTROL_NET_STACK`.
+        - `show_help`: A URL to the documentation for further assistance on using the CR Multi-ControlNet Stack node. Type should be `STRING`.

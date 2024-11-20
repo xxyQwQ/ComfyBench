@@ -1,0 +1,5 @@
+- `Join XY Inputs of Same Type`: This node is designed to merge two XY inputs of the same type into a single output, handling different types of XY data with specific merging strategies for each type. It ensures that the input types match before proceeding with the merge, providing a unified XY output that combines the input data in a manner appropriate to their type.
+    - Inputs:
+        - `XY_i` (Required): Represents one of the XY inputs to be merged. Its type and values are crucial for determining the merge strategy and ensuring compatibility with the other XY input. Type should be `XY`.
+    - Outputs:
+        - `X or Y`: The merged output of the two XY inputs, which combines their data according to their type and the specific merging logic implemented for each type. Type should be `XY`.

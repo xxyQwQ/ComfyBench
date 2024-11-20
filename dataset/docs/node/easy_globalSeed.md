@@ -1,8 +1,0 @@
-- `easy globalSeed`: The `easy globalSeed` node is designed to manage and control the seed value used across various nodes in a workflow, allowing for consistent or varied randomization effects based on user-defined actions. It supports operations such as fixing, incrementing, decrementing, and randomizing the seed, as well as applying these actions globally or per node, to achieve controlled randomness in the generation process.
-    - Parameters:
-        - `value`: Specifies the base seed value from which the seed management starts, serving as the foundation for subsequent operations like incrementing or randomizing. Type should be `INT`.
-        - `mode`: Determines when the seed control should be applied, either before or after the generation process, allowing for precise timing in the application of seed values. Type should be `BOOLEAN`.
-        - `action`: Defines the operation to be performed on the seed value, such as fixing, incrementing, decrementing, or randomizing, including variations for per-node actions. Type should be `COMBO[STRING]`.
-        - `last_seed`: Optionally stores the last seed value used, facilitating tracking and reuse of seed values across sessions or nodes. Type should be `STRING`.
-    - Inputs:
-    - Outputs:

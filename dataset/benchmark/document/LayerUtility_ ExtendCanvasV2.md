@@ -1,0 +1,13 @@
+- `LayerUtility_ ExtendCanvasV2`: The ExtendCanvasV2 node is designed to enhance the functionality of image manipulation by providing advanced capabilities for extending the canvas of an image. This node aims to offer more sophisticated options and flexibility compared to its predecessor, allowing for more precise and creative adjustments in image composition.
+    - Inputs:
+        - `image` (Required): Specifies the original image to be manipulated. It is the primary input on which the canvas extension operations are performed. Type should be `IMAGE`.
+        - `invert_mask` (Required): A boolean parameter that determines whether the mask applied to the image should be inverted, affecting how the canvas extension is applied in relation to the mask. Type should be `BOOLEAN`.
+        - `top` (Required): Defines the number of pixels to extend the canvas at the top edge of the image. Type should be `INT`.
+        - `bottom` (Required): Specifies the number of pixels to extend the canvas at the bottom edge of the image. Type should be `INT`.
+        - `left` (Required): Indicates the number of pixels to extend the canvas on the left side of the image. Type should be `INT`.
+        - `right` (Required): Determines the number of pixels to extend the canvas on the right side of the image. Type should be `INT`.
+        - `color` (Required): Specifies the color to fill the extended canvas area, allowing for aesthetic customization of the added canvas space. Type should be `STRING`.
+        - `mask` (Optional): An optional mask that can be applied to the image, influencing the areas of the canvas extension. Type should be `MASK`.
+    - Outputs:
+        - `image`: The resulting image after the canvas has been extended, reflecting the specified adjustments. Type should be `IMAGE`.
+        - `mask`: The mask applied to the extended canvas, if any, indicating areas of interest or exclusion in the extended space. Type should be `MASK`.

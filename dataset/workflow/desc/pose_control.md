@@ -1,1 +1,0 @@
-This workflow uses DWPose Estimator combined with ControlNet to guide the generated pose. Given an image, the workflow will estimate the pose of the person in the image and follow the prompt to generate the expected image with the same pose. In this example, we generate a man dancing in the street, whose pose follows the given image of a dancing woman.

@@ -1,0 +1,5 @@
+- `Stack Images (mtb)`: This node is designed to stack multiple input images either vertically or horizontally, based on the specified orientation. It ensures that all images are normalized to the same size and RGBA format before stacking, allowing for consistent and seamless image composition.
+    - Inputs:
+        - `vertical` (Required): Determines the orientation of the stacking process. When true, images are stacked vertically, requiring uniform width across all images. When false, images are stacked horizontally, necessitating uniform height. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output is a single image tensor that represents the stacked composition of the input images, arranged according to the specified orientation. Type should be `IMAGE`.

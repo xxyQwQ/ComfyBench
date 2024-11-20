@@ -1,7 +1,0 @@
-- `FaceAnalysisModels`: The FaceAnalysisModels node is designed to load and configure face analysis models based on specified libraries and providers. It abstracts the complexity of initializing face detection and recognition models, offering a streamlined way to prepare these models for further face analysis tasks.
-    - Parameters:
-        - `library`: Specifies the library to use for face analysis, influencing which face detection and recognition models are loaded and configured. Type should be `COMBO[STRING]`.
-        - `provider`: Determines the computational backend (e.g., CPU, CUDA) for the face analysis models, affecting performance and compatibility. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `analysis_models`: Outputs a configured face analysis model, ready for performing tasks such as face detection, landmark detection, and face recognition. Type should be `ANALYSIS_MODELS`.

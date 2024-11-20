@@ -1,8 +1,0 @@
-- `CR Select ISO Size`: This node allows users to select an ISO paper size from a predefined list of sizes, and returns the dimensions (width and height) of the selected size along with a URL to a help page.
-    - Parameters:
-        - `iso_size`: Specifies the ISO paper size to be selected. The choice of size directly determines the dimensions (width and height) that will be returned. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `width`: The width of the selected ISO paper size. Type should be `INT`.
-        - `height`: The height of the selected ISO paper size. Type should be `INT`.
-        - `show_help`: A URL to a help page providing additional information about selecting ISO sizes. Type should be `STRING`.

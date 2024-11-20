@@ -1,8 +1,0 @@
-- `Switch image [Crystools]`: The 'Switch image [Crystools]' node allows for conditional selection between two image inputs based on a boolean value. It serves as a control flow mechanism in image processing pipelines, enabling dynamic path selection and thus facilitating conditional image manipulation or routing.
-    - Parameters:
-        - `boolean`: The boolean condition that determines which of the two images ('on_true' or 'on_false') is selected as the output. This parameter is central to the node's conditional logic. Type should be `BOOLEAN`.
-    - Inputs:
-        - `on_true`: Specifies the image to be selected if the boolean condition evaluates to true. It plays a crucial role in determining the output based on the condition. Type should be `IMAGE`.
-        - `on_false`: Specifies the image to be selected if the boolean condition evaluates to false. This input ensures that an alternative image can be chosen, providing flexibility in conditional image processing. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output image, which is selected based on the evaluation of the boolean condition. This allows for dynamic image selection within a processing pipeline. Type should be `IMAGE`.

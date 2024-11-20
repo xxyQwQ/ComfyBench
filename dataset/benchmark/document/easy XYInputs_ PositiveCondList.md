@@ -1,0 +1,5 @@
+- `easy XYInputs_ PositiveCondList`: The XYplot_Positive_Cond_List node is designed to process a list of positive conditions, transforming them into a structured format suitable for plotting or further analysis. It focuses on identifying and organizing the conditions based on their positive attributes, facilitating easy visualization or manipulation of data points in a 'positive' context.
+    - Inputs:
+        - `positive` (Required): The 'positive' input accepts a list of conditions, each representing a positive attribute or criterion. This input is crucial for the node's operation, as it determines the conditions that will be processed and structured for output. Type should be `CONDITIONING`.
+    - Outputs:
+        - `X or Y`: Outputs a structured representation of the positive conditions, including their indices and corresponding conditions, ready for plotting or analysis. Type should be `X_Y`.

@@ -1,0 +1,17 @@
+- `Image Save`: The `Image Save` node is designed for saving a collection of images to a specified directory, with options for naming, formatting, and additional metadata. It provides flexibility in how images are stored, including support for history tracking and embedding workflow information within the saved files.
+    - Inputs:
+        - `images` (Required): A collection of images to be saved. This parameter is central to the node's operation, determining the content that will be stored on disk. Type should be `IMAGE`.
+        - `output_path` (Required): The directory where the images will be saved. It allows for organizing saved images in a structured manner. Type should be `STRING`.
+        - `filename_prefix` (Required): A prefix added to the filenames of saved images, aiding in their identification and categorization. Type should be `STRING`.
+        - `filename_delimiter` (Required): The delimiter used between the filename prefix and the numbering in the saved file names, aiding in file organization and readability. Type should be `STRING`.
+        - `filename_number_padding` (Required): The number of digits to use for numbering files, ensuring consistent filename lengths and facilitating sorting. Type should be `INT`.
+        - `filename_number_start` (Required): The starting number for filename numbering, enabling sequential organization of saved images. Type should be `COMBO[STRING]`.
+        - `extension` (Required): The file format in which the images will be saved, such as PNG or JPEG, affecting the image's quality and compatibility. Type should be `COMBO[STRING]`.
+        - `quality` (Required): The quality setting for saved images, applicable to formats like JPEG. It influences the balance between file size and image fidelity. Type should be `INT`.
+        - `lossless_webp` (Required): A flag indicating whether to save images in the WebP format with lossless compression, optimizing for image quality preservation. Type should be `COMBO[STRING]`.
+        - `overwrite_mode` (Required): Controls how the node handles existing files with the same name, allowing for overwriting, skipping, or generating unique names. Type should be `COMBO[STRING]`.
+        - `show_history` (Required): A flag to display the saving history of images, providing insights into the node's operation over time. Type should be `COMBO[STRING]`.
+        - `show_history_by_prefix` (Required): Determines whether to group and display image saving history by filename prefix, aiding in the review of related images. Type should be `COMBO[STRING]`.
+        - `embed_workflow` (Required): A flag to embed workflow information within saved images, linking them to their generation context. Type should be `COMBO[STRING]`.
+        - `show_previews` (Required): Enables the display of image previews during the saving process, offering immediate visual feedback. Type should be `COMBO[STRING]`.
+    - Outputs:

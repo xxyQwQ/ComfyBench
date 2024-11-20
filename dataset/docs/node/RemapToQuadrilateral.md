@@ -1,7 +1,0 @@
-- `RemapToQuadrilateral`: This node specializes in transforming images by remapping them based on quadrilateral shapes. It adjusts the perspective of images or maps them to or from a quadrilateral shape, utilizing various methods including homography.
-    - Parameters:
-        - `mode`: Defines the method used for the remapping process, such as homography or other quadrilateral remapping techniques. The choice of mode affects how the image is transformed. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `dst_mask_with_i_points`: Specifies the destination mask with four points defining the quadrilateral to which the image will be remapped. This input is crucial for determining the transformation's target geometry. Type should be `MASK`.
-    - Outputs:
-        - `remap`: Provides the details of the remapping process, including the transformed image and any relevant geometric transformations applied. Type should be `REMAP`.

@@ -1,0 +1,10 @@
+- `ImpactSEGSRangeFilter`: The ImpactSEGSRangeFilter node is designed to filter segmentation elements (SEGS) based on specified criteria such as area, width, height, coordinates, or confidence level. It allows for the inclusion or exclusion of segments within a given range, enhancing the ability to focus on segments of interest within an image.
+    - Inputs:
+        - `segs` (Required): The segmentation elements to be filtered. This is the primary data upon which the filtering operations are performed. Type should be `SEGS`.
+        - `target` (Required): Specifies the attribute of the segmentation elements to be filtered, such as area, dimensions, or confidence level. This determines the basis on which segments are evaluated and filtered. Type should be `COMBO[STRING]`.
+        - `mode` (Required): Determines the filtering mode, either including segments within the specified range ('inside') or excluding them ('outside'). This affects how segments are selected based on the target attribute's value. Type should be `BOOLEAN`.
+        - `min_value` (Required): The minimum value of the target attribute for a segment to be considered for inclusion or exclusion, depending on the mode. Type should be `INT`.
+        - `max_value` (Required): The maximum value of the target attribute for a segment to be considered for inclusion or exclusion, depending on the mode. Type should be `INT`.
+    - Outputs:
+        - `filtered_SEGS`: The segments that meet the filtering criteria based on the specified target and range. Type should be `SEGS`.
+        - `remained_SEGS`: The segments that do not meet the filtering criteria and are thus excluded based on the specified target and range. Type should be `SEGS`.

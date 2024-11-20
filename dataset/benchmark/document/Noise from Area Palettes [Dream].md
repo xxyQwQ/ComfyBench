@@ -1,0 +1,19 @@
+- `Noise from Area Palettes [Dream]`: The 'Noise from Area Palettes' node generates a noise-based image by blending colors from different area-specific palettes. It utilizes a unique area sharpness parameter to influence the randomness and distribution of colors across specified areas, creating a visually cohesive noise pattern.
+    - Inputs:
+        - `area_sharpness` (Required): Controls the sharpness of the transitions between different area palettes, influencing how distinctly the areas are defined. Type should be `FLOAT`.
+        - `width` (Required): The width of the generated image. Type should be `INT`.
+        - `height` (Required): The height of the generated image. Type should be `INT`.
+        - `blur_amount` (Required): The amount of blur applied to the noise, affecting the smoothness of the color transitions. Type should be `FLOAT`.
+        - `density` (Required): Determines the density of the noise pattern, influencing the overall texture and complexity of the image. Type should be `FLOAT`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the noise pattern. Type should be `INT`.
+        - `top_left_palette` (Optional): Specifies the palette for the top-left area of the image, influencing the color scheme in that specific section. Type should be `RGB_PALETTE`.
+        - `top_center_palette` (Optional): Defines the palette for the top-center area, affecting the color distribution and theme in this particular region. Type should be `RGB_PALETTE`.
+        - `top_right_palette` (Optional): Determines the palette for the top-right area, impacting the color choices and overall aesthetic in that zone. Type should be `RGB_PALETTE`.
+        - `center_left_palette` (Optional): Sets the palette for the center-left area, guiding the color scheme and visual harmony in this segment. Type should be `RGB_PALETTE`.
+        - `center_palette` (Optional): Indicates the palette for the central area of the image, influencing the core color theme and distribution. Type should be `RGB_PALETTE`.
+        - `center_right_palette` (Optional): Specifies the palette for the center-right area, affecting the color dynamics and visual appeal in this section. Type should be `RGB_PALETTE`.
+        - `bottom_left_palette` (Optional): Determines the palette for the bottom-left area, impacting the color scheme and aesthetic consistency in this part. Type should be `RGB_PALETTE`.
+        - `bottom_center_palette` (Optional): Sets the palette for the bottom-center area, guiding the color choices and thematic consistency in this region. Type should be `RGB_PALETTE`.
+        - `bottom_right_palette` (Optional): Defines the palette for the bottom-right area, affecting the color distribution and visual impact in this zone. Type should be `RGB_PALETTE`.
+    - Outputs:
+        - `image`: The generated image, composed of noise patterns derived from the specified area palettes. Type should be `IMAGE`.

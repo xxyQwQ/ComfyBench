@@ -1,0 +1,10 @@
+- `ConditioningSetMaskAndCombine3`: This node is designed to apply a set of masks to conditioning data, potentially modifying the conditioning area based on specified parameters, and then combine these conditioned elements into a single output. It focuses on enhancing or altering the conditioning process by applying multiple masks with varying strengths and areas, facilitating complex conditioning scenarios.
+    - Inputs:
+        - `positive_i` (Required): Specifies a set of positive conditioning elements to be masked and combined. The strength and area of the mask applied to these elements can be adjusted, affecting the final conditioning output. Type should be `CONDITIONING`.
+        - `negative_i` (Required): Specifies a set of negative conditioning elements to be masked and combined. Similar to positive inputs, the mask's strength and area settings influence the conditioning outcome. Type should be `CONDITIONING`.
+        - `mask_i` (Required): The mask applied to the conditioning elements. It defines the area and intensity of the conditioning effect. Type should be `MASK`.
+        - `mask_i_strength` (Required): Defines the strength of the mask applied to the conditioning elements, affecting the intensity of the conditioning. Type should be `FLOAT`.
+        - `set_cond_area` (Required): Determines whether to set the conditioning area to the bounds of the mask or use a default setting, influencing how the mask is applied. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `combined_positive`: The combined result of positive conditioning elements after mask application and processing. Type should be `CONDITIONING`.
+        - `combined_negative`: The combined result of negative conditioning elements after mask application and processing. Type should be `CONDITIONING`.

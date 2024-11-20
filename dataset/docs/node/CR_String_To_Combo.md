@@ -1,7 +1,0 @@
-- `CR String To Combo`: The CR_StringToCombo node is designed to convert a string input into a combination or list based on specified delimiters, facilitating the manipulation and analysis of textual data in a structured format.
-    - Parameters:
-        - `text`: The 'text' parameter accepts a string input that the node will attempt to split into a combination or list based on commas. It plays a crucial role in determining the output structure and content. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `any`: The output is a list derived from the first element of the split input string, intended for further processing or analysis. Type should be `*`.
-        - `show_help`: Provides a URL to the help documentation for the CR_StringToCombo node, offering users guidance and additional information. Type should be `STRING`.

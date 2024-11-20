@@ -1,6 +1,0 @@
-- `String to Integer`: The String to Integer node is designed to convert string representations of integers into their integer form. It is particularly useful in scenarios where integer values are received as strings, such as from JSON inputs, and need to be processed or calculated as numerical values.
-    - Parameters:
-        - `inStr`: The 'inStr' parameter accepts a string representation of an integer. It plays a crucial role in the conversion process by serving as the input that is transformed into an integer value. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `int`: The output is the integer representation of the input string. This conversion facilitates numerical operations and processing on the originally string-typed data. Type should be `INT`.

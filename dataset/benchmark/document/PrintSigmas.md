@@ -1,0 +1,5 @@
+- `PrintSigmas`: The `PrintSigmas` node is designed for utility purposes within a computational graph, specifically to print and return the values of sigma parameters. This functionality aids in debugging and monitoring the flow of sigma values through the graph, providing a simple yet effective means of outputting these values for inspection.
+    - Inputs:
+        - `sigmas` (Required): The `sigmas` parameter represents the sigma values to be printed and returned. It plays a crucial role in the node's operation by serving as the data that is both outputted for user inspection and passed through the node for potential further use. Type should be `SIGMAS`.
+    - Outputs:
+        - `sigmas`: Returns the same sigma values that were input, allowing for further processing or inspection elsewhere in the computational graph. Type should be `SIGMAS`.

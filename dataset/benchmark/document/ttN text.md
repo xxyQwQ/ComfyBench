@@ -1,0 +1,5 @@
+- `ttN text`: The `ttN text` node is designed for text manipulation within the tinyterra ecosystem, offering functionalities to process and transform text data based on dynamic prompts. It encapsulates the ability to handle multiline text inputs, allowing for versatile text processing operations.
+    - Inputs:
+        - `text` (Required): The `text` parameter is the primary input for text manipulation, accepting multiline strings. It supports dynamic prompts, enabling flexible and context-aware text processing. Type should be `STRING`.
+    - Outputs:
+        - `text`: The output is a transformed or processed version of the input text, maintaining the string data type. Type should be `STRING`.

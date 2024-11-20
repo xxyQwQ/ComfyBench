@@ -1,8 +1,0 @@
-- `TilePreprocessor`: The TilePreprocessor node is designed to enhance image quality by applying a tiling effect. It preprocesses images for further processing or analysis, focusing on improving the visual aspects or extracting specific features through tiling.
-    - Parameters:
-        - `pyrUp_iters`: Specifies the number of iterations for the pyramid upscaling process, which affects the intensity of the tiling effect applied to the image. Type should be `INT`.
-        - `resolution`: The target resolution for the output image. This parameter influences the final size and quality of the processed image. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed. It serves as the primary data for the tiling effect application. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: Outputs an image that has undergone the tiling preprocessing, potentially enhancing certain features or aspects for further analysis. Type should be `IMAGE`.

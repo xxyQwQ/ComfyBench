@@ -1,7 +1,0 @@
-- `BoundingRect (contours)`: The BoundingRect node is designed to calculate the bounding rectangle of a contour. It abstracts the process of determining the smallest rectangle that can completely enclose the contour, providing a simple way to understand the spatial extent of the contour.
-    - Parameters:
-        - `return_mode`: Specifies the mode of rectangle calculation to be used. This affects how the bounding rectangle's dimensions are computed and returned. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `contour`: The contour for which the bounding rectangle is to be calculated. This input is crucial as it directly influences the output by determining the spatial extent of the given contour. Type should be `CV_CONTOUR`.
-    - Outputs:
-        - `int`: The output is the bounding rectangle of the specified contour, represented as a tuple of four integers (x, y, width, height), where (x, y) is the top-left corner of the rectangle. Type should be `INT`.

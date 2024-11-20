@@ -1,7 +1,0 @@
-- `LLMSimpleWebPageReaderAdv`: The LLMSimpleWebPageReaderAdv node is designed to fetch and process web pages from a list of URLs, converting them into a structured document format. It optionally converts HTML content to text, facilitating the extraction of readable content from web pages for further analysis or processing.
-    - Parameters:
-        - `html_to_text`: A boolean flag indicating whether to convert HTML content to plain text. This affects the processing of web pages by stripping HTML tags and leaving only the readable text. Type should be `BOOLEAN`.
-    - Inputs:
-        - `urls`: A list of URLs from which web content will be fetched. This is the primary input that drives the node's operation, determining the web pages to be processed. Type should be `LIST`.
-    - Outputs:
-        - `documents`: The structured document format output, containing the processed content from the fetched web pages. Type should be `DOCUMENT`.

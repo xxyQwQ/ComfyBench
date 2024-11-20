@@ -1,0 +1,8 @@
+- `ControlNetHadamard (manual)`: This node applies a control network to a set of images and conditions, adjusting the influence of the control network on the images based on a specified strength. It is designed to modify image conditioning in a batch process, where each image's conditioning is individually adjusted according to the control network's parameters and the specified strength.
+    - Inputs:
+        - `conds` (Required): Conditions to be applied to each image, serving as the basis for the control network's adjustments. These conditions dictate how the images are modified in conjunction with the control network. Type should be `CONDITIONING`.
+        - `control_net` (Required): The control network to be applied across the images, dictating the nature of the adjustments made to their conditioning. It plays a crucial role in how the images' conditions are modified. Type should be `CONTROL_NET`.
+        - `strength` (Required): A scalar value determining the intensity of the control network's influence on the images, allowing for fine-tuned adjustments. This value scales the effect of the control network on the conditioning. Type should be `FLOAT`.
+        - `inputs_len` (Required): Specifies the number of images to be processed, indirectly indicating the batch size for the operation. It determines how many images the control network will be applied to. Type should be `INT`.
+    - Outputs:
+        - `conditioning`: The modified conditions for each image after the application of the control network and the specified strength. It reflects the adjusted image conditioning post-processing. Type should be `CONDITIONING`.

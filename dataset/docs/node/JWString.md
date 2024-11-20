@@ -1,6 +1,0 @@
-- `JWString`: This node transforms a list of strings into a formatted string based on a provided template. It allows for dynamic string manipulation and formatting, enabling the creation of structured text outputs from a list of individual strings.
-    - Parameters:
-        - `text`: unknown Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The resulting string after applying the template formatting to the input string list. Type should be `STRING`.

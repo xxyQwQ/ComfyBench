@@ -1,0 +1,19 @@
+- `CCSR_Upscale`: The node is designed to upscale images or latent representations, leveraging custom scaling methods to enhance the resolution or detail of the input data. It focuses on applying advanced upscaling techniques to improve image quality or adjust the size of latent representations for further processing or visualization.
+    - Inputs:
+        - `ccsr_model` (Required): Specifies the CCSR model to be used for upscaling, which determines the algorithm and approach for enhancing the image or latent representation. Type should be `CCSRMODEL`.
+        - `image` (Required): Represents the input image to be upscaled. The quality and characteristics of the input image directly influence the outcome of the upscaling process. Type should be `IMAGE`.
+        - `resize_method` (Required): Determines the method to be used for resizing during the upscaling process, offering a variety of algorithms such as lanczos among others. Type should be `COMBO[STRING]`.
+        - `scale_by` (Required): Defines the factor by which the image or latent representation is to be scaled. This value allows for precise control over the enlargement of the input data. Type should be `FLOAT`.
+        - `steps` (Required): Specifies the number of steps to be used in the upscaling process, affecting the detail and quality of the upscaled output. Type should be `INT`.
+        - `t_max` (Required): The maximum threshold for the upscaling process, influencing the extent of detail enhancement. Type should be `FLOAT`.
+        - `t_min` (Required): The minimum threshold for the upscaling process, affecting the base level of detail to be enhanced. Type should be `FLOAT`.
+        - `sampling_method` (Required): Specifies the sampling method to be used in the upscaling process, affecting the algorithm's approach to enhancing detail and resolution. Type should be `COMBO[STRING]`.
+        - `tile_size` (Required): Defines the size of tiles to be used in the upscaling process, allowing for efficient processing of large images by breaking them into manageable pieces. Type should be `INT`.
+        - `tile_stride` (Required): Determines the stride of tiling during the upscaling process, affecting the overlap and integration of upscaled tiles. Type should be `INT`.
+        - `vae_tile_size_encode` (Required): Specifies the tile size for the encoding phase in the upscaling process, affecting the resolution and detail of the encoded representation. Type should be `INT`.
+        - `vae_tile_size_decode` (Required): Specifies the tile size for the decoding phase in the upscaling process, affecting the resolution and detail of the decoded output. Type should be `INT`.
+        - `color_fix_type` (Required): Determines the method for color correction during the upscaling process, offering options like 'adain' and 'wavelet' for enhanced visual fidelity. Type should be `COMBO[STRING]`.
+        - `keep_model_loaded` (Required): Indicates whether the CCSR model should remain loaded in memory after the upscaling process, affecting resource utilization and performance. Type should be `BOOLEAN`.
+        - `seed` (Required): Specifies the seed value for random number generation during the upscaling process, ensuring reproducibility of results. Type should be `INT`.
+    - Outputs:
+        - `upscaled_image`: The result of the upscaling process, which is an enhanced-resolution version of the input samples. This output reflects the applied upscaling method and target dimensions. Type should be `IMAGE`.

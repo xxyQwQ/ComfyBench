@@ -1,0 +1,13 @@
+- `Clarity AI Upscaler`: The Clarity AI Upscaler node is designed to enhance image quality through upscaling, utilizing Clarity AI's API to process images based on various artistic and technical parameters. It allows for customization of the upscaling process through attributes like creativity, resemblance, dynamic, fractality, and style, aiming to produce higher-resolution images that meet specific aesthetic or technical requirements.
+    - Inputs:
+        - `image` (Required): The primary image input for upscaling. This is a required parameter that defines the image to be processed and enhanced. Type should be `IMAGE`.
+        - `prompt` (Optional): An optional text prompt that can guide the upscaling process, allowing for more creative or specific enhancements based on textual descriptions. Type should be `STRING`.
+        - `creativity` (Optional): Adjusts the level of creative interpretation applied during the upscaling process. Affects how the AI interprets and enhances the image details. Type should be `FLOAT`.
+        - `resemblance` (Optional): Controls the degree to which the upscaled image should resemble the original, balancing between fidelity and enhancement. Type should be `FLOAT`.
+        - `dynamic` (Optional): Modifies the dynamic range of the upscaled image, potentially enhancing contrast and depth. Type should be `FLOAT`.
+        - `fractality` (Optional): Influences the complexity and detail of textures in the upscaled image, adding more intricate patterns or smoothing out details. Type should be `FLOAT`.
+        - `style` (Optional): Specifies the artistic style to be applied during upscaling, such as default, portrait, or anime, allowing for stylized enhancements. Type should be `COMBO[STRING]`.
+        - `scale_factor` (Optional): Determines the factor by which the image will be upscaled, offering various predefined scaling options. Type should be `COMBO[STRING]`.
+        - `api_key_override` (Optional): Allows for the use of a specific API key for the upscaling process, overriding the default key if necessary. Type should be `STRING`.
+    - Outputs:
+        - `image`: The enhanced, upscaled version of the input image, processed through Clarity AI's upscaling API. Type should be `IMAGE`.

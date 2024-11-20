@@ -1,0 +1,10 @@
+- `Control Net Stacker`: The TSC Control Net Stacker node is designed to aggregate control networks along with their associated images, strengths, and percentage ranges into a stack. This functionality is crucial for managing and applying multiple control networks in a sequential or layered manner, enhancing the flexibility and efficiency of image manipulation processes.
+    - Inputs:
+        - `control_net` (Required): The control network to be added to the stack. It plays a central role in defining the manipulation or adjustment to be applied to the image. Type should be `CONTROL_NET`.
+        - `image` (Required): The image associated with the control network. This image serves as a reference or target for the control network's application. Type should be `IMAGE`.
+        - `strength` (Required): Defines the intensity of the control network's effect on the image, allowing for fine-tuned adjustments. Type should be `FLOAT`.
+        - `start_percent` (Required): Specifies the starting point of the control network's effect in terms of the image's generation process, enabling precise control over the application timing. Type should be `FLOAT`.
+        - `end_percent` (Required): Determines the ending point of the control network's effect, further refining the application's temporal precision. Type should be `FLOAT`.
+        - `cnet_stack` (Optional): An existing stack of control networks to which the new control network will be added, facilitating the accumulation of multiple networks. Type should be `CONTROL_NET_STACK`.
+    - Outputs:
+        - `CNET_STACK`: The updated stack of control networks, each associated with specific images, strengths, and percentage ranges, ready for sequential or layered application. Type should be `CONTROL_NET_STACK`.

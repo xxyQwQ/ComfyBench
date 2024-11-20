@@ -1,0 +1,8 @@
+- `TwoSamplersForMask`: This node is designed to apply different sampling strategies to distinct regions of a latent image, based on a specified mask. It enables the selective enhancement or alteration of image areas by utilizing separate samplers for the masked and unmasked regions, thereby facilitating targeted image manipulation within a unified framework.
+    - Inputs:
+        - `latent_image` (Required): Represents the input latent image to be processed. It serves as the canvas on which different sampling strategies are applied based on the mask. Type should be `LATENT`.
+        - `base_sampler` (Required): Specifies the sampler to be applied to the region outside the mask, influencing the overall appearance of the unmasked areas. Type should be `KSAMPLER`.
+        - `mask_sampler` (Required): Determines the sampler to be applied to the masked region, allowing for targeted manipulation or enhancement of specific areas. Type should be `KSAMPLER`.
+        - `mask` (Required): Defines the region to be selectively sampled or altered, guiding the application of the mask_sampler. Type should be `MASK`.
+    - Outputs:
+        - `latent`: The resulting latent image after applying the specified sampling strategies to the masked and unmasked regions. Type should be `LATENT`.

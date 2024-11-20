@@ -1,9 +1,0 @@
-- `AddTool`: The AddTool node is designed to enhance conversational agents by registering new functionalities or tools to them. It abstracts the process of augmenting agents with additional capabilities, allowing for a more dynamic and versatile interaction experience.
-    - Parameters:
-    - Inputs:
-        - `tool`: Represents the tool to be added to the agent, encapsulating the functionality, name, and description of the tool. Type should be `TOOL`.
-        - `assistant`: The primary conversational agent to which the tool will be added, serving as the main interface for interaction. Type should be `AGENT`.
-        - `executor`: An optional secondary agent that can execute the tool's functionality, defaulting to the primary agent if not specified. Type should be `AGENT`.
-    - Outputs:
-        - `assistant`: The enhanced conversational agent, now equipped with the new tool's capabilities. Type should be `AGENT`.
-        - `executor`: The agent responsible for executing the tool's functionality, which may be the same as the primary agent. Type should be `AGENT`.

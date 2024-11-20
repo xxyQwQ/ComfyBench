@@ -1,6 +1,0 @@
-- `RandomNoise`: The RandomNoise node generates random noise based on a given seed. It is designed to introduce variability into processes by providing a randomized element that can be consistently reproduced using the seed value.
-    - Parameters:
-        - `noise_seed`: The 'noise_seed' parameter specifies the seed for the random noise generation, ensuring reproducibility of the noise pattern for given seed values. It plays a crucial role in the generation of consistent random noise across different executions. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `noise`: This output represents the generated random noise, which can be used to introduce randomness into various processes, such as image generation or sampling, based on the provided seed. Type should be `NOISE`.

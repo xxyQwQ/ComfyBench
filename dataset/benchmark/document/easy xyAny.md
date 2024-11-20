@@ -1,0 +1,8 @@
+- `easy xyAny`: The `easy xyAny` node is designed to facilitate the exploration and manipulation of data points or conditions across two dimensions, X and Y, within a customizable pipeline. It abstracts the complexity of handling various types of inputs and conditions, enabling users to easily plot, modify, or analyze data in a two-dimensional space, tailored to specific needs or experiments.
+    - Inputs:
+        - `X` (Required): Specifies one of the dimensions in a two-dimensional space, serving as a basis for plotting, modifying, or analyzing data. Type should be `*`.
+        - `Y` (Required): Specifies the other dimension in a two-dimensional space, complementing X to enable a comprehensive analysis or visualization of data. Type should be `*`.
+        - `direction` (Required): Determines the orientation or sequence in which data points are processed or plotted, affecting the visualization or analysis outcome. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `X`: Outputs data points or conditions along the X axis, reflecting modifications or analyses performed by the node. Type should be `*`.
+        - `Y`: Outputs data points or conditions along the Y axis, complementing the X output for a full two-dimensional perspective. Type should be `*`.

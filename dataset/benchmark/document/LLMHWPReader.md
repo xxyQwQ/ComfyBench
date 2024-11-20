@@ -1,0 +1,6 @@
+- `LLMHWPReader`: The LLMHWPReader node is designed to read and process HWP (Hangul Word Processor) files, a popular word processing file format in South Korea, converting them into a format suitable for further analysis or processing within the llama_index ecosystem.
+    - Inputs:
+        - `path` (Required): Specifies the file path to the HWP document to be read. This path is essential for locating and accessing the file for processing. Type should be `STRING`.
+        - `extra_info` (Optional): Provides additional information or parameters in JSON string format that may influence how the HWP file is processed, allowing for customizable handling of the file. Type should be `STRING`.
+    - Outputs:
+        - `documents`: Returns the processed HWP file content as a document object, ready for integration into the llama_index ecosystem for further analysis or processing. Type should be `DOCUMENT`.

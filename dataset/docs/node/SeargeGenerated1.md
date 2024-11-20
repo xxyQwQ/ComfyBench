@@ -1,9 +1,0 @@
-- `SeargeGenerated1`: SeargeGenerated1 is designed to manage and generate flow control parameters within the SeargeSDXL framework. It plays a crucial role in orchestrating the flow of data and operations across various stages of the image generation process, ensuring that the right parameters are available at the right time for optimal performance and output quality.
-    - Parameters:
-    - Inputs:
-        - `parameters`: This input represents the parameters required for generating flow control outputs, serving as the foundation for orchestrating the data and operations within the SeargeSDXL framework. Type should be `PARAMETERS`.
-    - Outputs:
-        - `parameters`: Returns the original parameters provided as input, facilitating the flow of data through the system. Type should be `PARAMETERS`.
-        - `operation_selector`: Generates an integer value to select the operation mode, influencing the flow and processing of image generation. Type should be `INT`.
-        - `prompt_style_selector`: Generates an integer value to select the prompt style, affecting the thematic direction of the generation process. Type should be `INT`.
-        - `prompt_style_group`: Generates an integer value to select the prompt style group, further refining the thematic direction of the generation process. Type should be `INT`.

@@ -1,0 +1,6 @@
+- `ImageBatchMultiple+`: The node 'ImageBatchMultiple+' is designed to handle multiple images simultaneously, applying operations that involve combining, transforming, or otherwise processing these images in a batch-oriented manner. It abstracts the complexity of dealing with image dimensions and formats, providing a streamlined approach to batch image manipulation.
+    - Inputs:
+        - `image_i` (Required): Specifies the input images to be processed. It is central to the node's operation, as it determines the images that will undergo manipulation. Type should be `IMAGE`.
+        - `method` (Required): Specifies the approach for resizing or manipulating the images, such as stretching or cropping, which affects the final appearance. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The manipulated images after processing according to the specified parameters. Type should be `IMAGE`.

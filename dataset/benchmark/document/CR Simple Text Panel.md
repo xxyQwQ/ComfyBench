@@ -1,0 +1,18 @@
+- `CR Simple Text Panel`: This node is designed to create simple text panels within a graphical interface, allowing for the display of text in a visually appealing and customizable manner.
+    - Inputs:
+        - `panel_width` (Required): Specifies the width of the text panel. It determines how wide the panel will be, affecting the layout and appearance of the displayed text. Type should be `INT`.
+        - `panel_height` (Required): Defines the height of the text panel. It influences the vertical space available for text display, impacting the overall layout and design. Type should be `INT`.
+        - `text` (Required): The text content to be displayed on the panel. This input allows for customization of the text message, playing a crucial role in the panel's purpose and appearance. Type should be `STRING`.
+        - `font_name` (Required): Selects the font used for the text. The choice of font can significantly affect the panel's aesthetic and readability. Type should be `COMBO[STRING]`.
+        - `font_color` (Required): Determines the color of the text, offering customization options for visual appeal and contrast against the panel background. Type should be `COMBO[STRING]`.
+        - `font_size` (Required): Sets the size of the text font. This parameter affects the text's visibility and how it fits within the panel's dimensions. Type should be `INT`.
+        - `font_outline_thickness` (Required): Specifies the thickness of the text's outline, enhancing readability and visual distinction. Type should be `INT`.
+        - `font_outline_color` (Required): Defines the color of the text's outline, which can enhance text visibility and aesthetic appeal. Type should be `COMBO[STRING]`.
+        - `background_color` (Required): Sets the panel's background color, affecting the overall look and feel of the text panel. Type should be `COMBO[STRING]`.
+        - `align` (Required): Controls the alignment of the text within the panel, affecting the layout and presentation of the content. Type should be `COMBO[STRING]`.
+        - `justify` (Required): Determines the justification of the text, impacting how the text is spaced and aligned horizontally. Type should be `COMBO[STRING]`.
+        - `font_color_hex` (Optional): Specifies the hexadecimal color code for the text color, offering an alternative way to define text color. Type should be `STRING`.
+        - `bg_color_hex` (Optional): Specifies the hexadecimal color code for the background color, providing an alternative way to define the panel's background color. Type should be `STRING`.
+    - Outputs:
+        - `image`: The generated image of the text panel, ready for display or further processing. Type should be `IMAGE`.
+        - `show_help`: A URL providing additional help and documentation for using the text panel node. Type should be `STRING`.

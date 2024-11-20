@@ -1,0 +1,11 @@
+- `ACN_SparseCtrlMergedLoaderAdvanced`: This node is designed for advanced loading of merged Sparse Control Networks, integrating both standard control networks and sparse control mechanisms with enhanced settings for motion. It facilitates the combination of these networks to leverage the strengths of each, providing a more versatile and dynamic control network for applications requiring nuanced control over motion and other attributes.
+    - Inputs:
+        - `sparsectrl_name` (Required): Specifies the name of the sparse control network to be loaded. This name is used to locate the network within a predefined directory structure. Type should be `COMBO[STRING]`.
+        - `control_net_name` (Required): Specifies the name of the standard control network to be merged with the sparse control network. This name is used to identify and load the corresponding standard control network. Type should be `COMBO[STRING]`.
+        - `use_motion` (Required): A boolean flag indicating whether motion settings should be applied to the sparse control network, enhancing its dynamic capabilities. Type should be `BOOLEAN`.
+        - `motion_strength` (Required): Defines the strength of the motion effect to be applied, allowing for fine-tuning of how motion influences the control network's behavior. Type should be `FLOAT`.
+        - `motion_scale` (Required): Sets the scale of motion effects, providing control over the magnitude of motion adjustments within the network. Type should be `FLOAT`.
+        - `sparse_method` (Optional): Determines the method used for sparse control within the network, affecting how control signals are generated and applied. Type should be `SPARSE_METHOD`.
+        - `tk_optional` (Optional): Optional timestep keyframe group to be used for temporal control, offering additional flexibility in how motion and other dynamics are handled. Type should be `TIMESTEP_KEYFRAME`.
+    - Outputs:
+        - `control_net`: The merged and enhanced control network, incorporating both standard and sparse control mechanisms with motion settings applied. Type should be `CONTROL_NET`.

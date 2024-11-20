@@ -1,7 +1,0 @@
-- `Image Rotate Hue`: This node is designed to adjust the hue of an image by applying a specified hue shift within a valid range. It ensures the hue shift stays within acceptable bounds and applies the shift to each pixel, effectively rotating the hue of the entire image.
-    - Parameters:
-        - `hue_shift`: The degree of hue shift to apply to the image, constrained within a specified range to ensure valid hue rotation. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The input image to which the hue rotation will be applied. This image is transformed to ensure compatibility with the hue rotation process. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output image with the applied hue rotation, reflecting the specified hue shift across all pixels. Type should be `IMAGE`.

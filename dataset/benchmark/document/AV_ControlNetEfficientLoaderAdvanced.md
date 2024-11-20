@@ -1,0 +1,17 @@
+- `AV_ControlNetEfficientLoaderAdvanced`: This node represents an advanced version of the ControlNet loader, designed to efficiently load and apply ControlNet configurations for enhanced image manipulation and generation tasks. It extends the capabilities of its base loader with additional functionalities, aiming to provide more sophisticated control and optimization options for processing and applying ControlNet models.
+    - Inputs:
+        - `control_net_name` (Required): Specifies the name of the ControlNet to be loaded. This parameter is crucial for identifying which ControlNet model to apply, directly influencing the outcome of the image manipulation or generation process. Type should be `COMBO[STRING]`.
+        - `positive` (Required): The positive conditioning input for the ControlNet, representing the desired attributes or features to enhance or maintain in the image. Type should be `CONDITIONING`.
+        - `negative` (Required): The negative conditioning input for the ControlNet, representing the attributes or features to diminish or remove from the image. Type should be `CONDITIONING`.
+        - `image` (Required): The image to be processed by the ControlNet, serving as the basis for the application of the conditioning effects. Type should be `IMAGE`.
+        - `strength` (Required): Determines the intensity of the ControlNet's effect on the image, allowing for fine-tuned control over the manipulation. Type should be `FLOAT`.
+        - `start_percent` (Required): Specifies the starting percentage of the effect's application, enabling phased or gradual application of the ControlNet. Type should be `FLOAT`.
+        - `end_percent` (Required): Specifies the ending percentage of the effect's application, allowing for a controlled conclusion to the ControlNet's influence. Type should be `FLOAT`.
+        - `preprocessor` (Required): Selects the preprocessor to be used on the image before applying the ControlNet, affecting the final outcome. Type should be `COMBO[STRING]`.
+        - `control_net_override` (Optional): Allows for the override of the selected ControlNet model. This parameter offers flexibility in dynamically choosing different ControlNet models, potentially enhancing the adaptability of the node to various scenarios. Type should be `STRING`.
+        - `timestep_keyframe` (Optional): Defines a specific timestep or keyframe for the ControlNet application. This parameter enables precise control over the timing of the ControlNet's effects, allowing for more targeted and effective image manipulations. Type should be `TIMESTEP_KEYFRAME`.
+        - `resolution` (Optional): Defines the resolution of the image to be processed, impacting the detail and quality of the ControlNet's application. Type should be `INT`.
+        - `enabled` (Optional): Enables or disables the application of the ControlNet, providing a mechanism to bypass processing when necessary. Type should be `BOOLEAN`.
+    - Outputs:
+        - `positive`: The modified positive conditioning after the ControlNet application, reflecting the enhanced or maintained attributes. Type should be `CONDITIONING`.
+        - `negative`: The modified negative conditioning after the ControlNet application, reflecting the diminished or removed attributes. Type should be `CONDITIONING`.

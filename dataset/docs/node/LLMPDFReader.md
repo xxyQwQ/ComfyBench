@@ -1,7 +1,0 @@
-- `LLMPDFReader`: The LLMPDFReader node is designed to read PDF files and convert them into a llama_index Document format, excluding embedded images. This functionality enables the extraction and processing of text data from PDF documents for further analysis or manipulation.
-    - Parameters:
-        - `path`: Specifies the file system path to the PDF file to be read. It is essential for locating and accessing the file for processing. Type should be `STRING`.
-        - `extra_info`: Provides additional, optional information in a string format that can be used to influence the reading process or handle specific requirements. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `documents`: Returns the content of the PDF file as a llama_index Document, facilitating further data manipulation or analysis. Type should be `DOCUMENT`.

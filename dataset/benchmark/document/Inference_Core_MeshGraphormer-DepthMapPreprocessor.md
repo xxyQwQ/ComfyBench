@@ -1,0 +1,11 @@
+- `Inference_Core_MeshGraphormer-DepthMapPreprocessor`: This node is designed to preprocess images for depth map generation and hand pose estimation using the MeshGraphormer model. It handles the conversion of input images to a format suitable for the model, performs inference to generate depth maps and masks, and processes these outputs for further use in hand refinement tasks.
+    - Inputs:
+        - `image` (Required): The input image or batch of images to be processed for depth map and mask generation. It plays a crucial role in the node's execution as it directly influences the quality and accuracy of the generated depth maps and masks. Type should be `IMAGE`.
+        - `mask_bbox_padding` (Optional): Determines the padding around detected bounding boxes for masks, influencing the size and coverage of the generated masks. Type should be `INT`.
+        - `resolution` (Optional): Specifies the resolution at which the depth map and mask detection should be performed, affecting the detail level of the output. Type should be `INT`.
+        - `mask_type` (Optional): Defines the strategy for mask generation, either based on depth values or tight bounding boxes, affecting the mask's shape and coverage. Type should be `COMBO[STRING]`.
+        - `mask_expand` (Optional): Controls the expansion of masks beyond their original boundaries, useful for ensuring complete coverage of hand areas in depth maps. Type should be `INT`.
+        - `rand_seed` (Optional): A seed value for random number generation, ensuring reproducibility of the mask generation process. Type should be `INT`.
+    - Outputs:
+        - `IMAGE`: The processed images after depth map and mask generation, ready for further analysis or visualization. Type should be `IMAGE`.
+        - `INPAINTING_MASK`: The masks indicating areas to be inpainted or further processed, typically highlighting regions of interest such as hands. Type should be `MASK`.

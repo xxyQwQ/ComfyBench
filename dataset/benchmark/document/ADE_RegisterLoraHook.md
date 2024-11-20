@@ -1,0 +1,11 @@
+- `ADE_RegisterLoraHook`: This node is designed to register LoRA hooks within the AnimateDiff framework, enabling the dynamic modification of model behavior for enhanced animation and image manipulation capabilities.
+    - Inputs:
+        - `model` (Required): The model to which LoRA hooks will be applied, serving as the foundation for dynamic behavior modification. Type should be `MODEL`.
+        - `clip` (Required): The CLIP model that may be optionally modified alongside the primary model, allowing for synchronized adjustments. Type should be `CLIP`.
+        - `lora_name` (Required): The identifier for the specific LoRA hook to be applied, determining the nature of the behavior modification. Type should be `COMBO[STRING]`.
+        - `strength_model` (Required): Defines the intensity of the LoRA hook's effect on the model, allowing for fine-tuned control over behavior modification. Type should be `FLOAT`.
+        - `strength_clip` (Required): Specifies the intensity of the LoRA hook's effect on the CLIP model, enabling precise adjustments to its behavior. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The model with the LoRA hook applied, ready for enhanced animation and image manipulation tasks. Type should be `MODEL`.
+        - `clip`: The optionally modified CLIP model, adjusted in tandem with the primary model for synchronized enhancements. Type should be `CLIP`.
+        - `lora_hook`: The registered LoRA hook, encapsulating the specified modifications for application to the model. Type should be `LORA_HOOK`.

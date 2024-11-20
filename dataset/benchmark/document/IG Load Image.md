@@ -1,0 +1,6 @@
+- `IG Load Image`: The IG Load Image node is designed for loading images from a specified directory, providing functionality to handle image preprocessing such as orientation correction, conversion to a specific color mode, and normalization. It abstracts the complexities of image loading and preprocessing, making it easier to integrate image data into workflows.
+    - Inputs:
+        - `image_path` (Required): The 'image_path' parameter specifies the path to the image to be loaded. It plays a crucial role in determining which image file will be processed, affecting the node's execution and the resulting image data. Type should be `STRING`.
+    - Outputs:
+        - `image`: The 'image' parameter represents the preprocessed image data, ready for further processing or analysis. Type should be `IMAGE`.
+        - `mask`: The 'mask' parameter provides a mask for the loaded image, useful for operations that require segmentation or specific area processing. Type should be `MASK`.

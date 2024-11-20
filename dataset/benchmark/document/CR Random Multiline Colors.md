@@ -1,0 +1,8 @@
+- `CR Random Multiline Colors`: This node generates a multiline string of colors based on the specified type (hex color, RGB, or matplotlib xkcd color names), number of rows, and seed. It's designed to provide a simple way to create a diverse set of color values for various applications, ensuring repeatability with the use of a seed.
+    - Inputs:
+        - `seed` (Required): A seed value to ensure the repeatability of the color values generated. Using the same seed will produce the same set of color values. Type should be `INT`.
+        - `value_type` (Required): Specifies the format of the color values to be generated: hex color, RGB, or matplotlib xkcd color names. This choice determines the structure of the output color values. Type should be `COMBO[STRING]`.
+        - `rows` (Required): Determines the number of color values to be generated, corresponding to the number of lines in the output string. Type should be `INT`.
+    - Outputs:
+        - `multiline_text`: A string containing multiple lines, each representing a color value in the specified format. Type should be `STRING`.
+        - `show_help`: A URL providing additional help and information about the node. Type should be `STRING`.

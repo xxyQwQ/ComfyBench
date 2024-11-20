@@ -1,0 +1,7 @@
+- `TilePreprocessor`: The TilePreprocessor node is designed for preprocessing images to enhance or modify their features for better analysis or further processing. It specifically focuses on manipulating the image's resolution and structure through pyramid upscaling iterations, making it suitable for tasks that require refined image details.
+    - Inputs:
+        - `image` (Required): The input image to be processed. It serves as the primary data for the node's operation, influencing the outcome of the preprocessing. Type should be `IMAGE`.
+        - `pyrUp_iters` (Optional): Specifies the number of pyramid upscaling iterations to apply to the image. This parameter directly affects the level of detail enhancement in the processed image. Type should be `INT`.
+        - `resolution` (Optional): Defines the target resolution for the image after processing. This parameter helps in adjusting the image's size and detail level to suit specific requirements. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed image after pyramid upscaling iterations. It reflects the modifications made to the original image, with potentially enhanced detail and resolution. Type should be `IMAGE`.

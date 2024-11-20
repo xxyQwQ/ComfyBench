@@ -1,9 +1,0 @@
-- `SaltAudioFade`: The SaltAudioFade node applies a fade-in or fade-out effect to an audio clip, enhancing its auditory transitions. This process involves gradually increasing or decreasing the volume of the audio over a specified duration, starting from a given point in the clip.
-    - Parameters:
-        - `fade_type`: Specifies the type of fade effect to apply: 'in' for a fade-in effect, where volume increases, or 'out' for a fade-out effect, where volume decreases. This choice directly influences the auditory transition of the audio clip. Type should be `COMBO[STRING]`.
-        - `fade_duration`: The duration over which the fade effect should occur, measured in seconds. This determines how long the volume transition takes to complete. Type should be `FLOAT`.
-        - `fade_start`: The starting point of the fade effect within the audio clip, measured in seconds. This optional parameter allows for precise control over when the fade begins. Type should be `FLOAT`.
-    - Inputs:
-        - `audio`: The raw audio data to which the fade effect will be applied. This parameter is crucial for defining the audio segment that will undergo the fading process. Type should be `AUDIO`.
-    - Outputs:
-        - `audio`: The modified audio data with the applied fade effect, either fade-in or fade-out, enhancing the auditory experience of the clip. Type should be `AUDIO`.

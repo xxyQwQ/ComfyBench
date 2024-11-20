@@ -1,0 +1,5 @@
+- `ImageListToImageBatch`: This node transforms a list of images into a single batched image tensor, ensuring all images have the same dimensions through upsampling if necessary. It's designed to facilitate operations that require batch processing of images by consolidating multiple images into a unified tensor format.
+    - Inputs:
+        - `images` (Required): A list of image tensors to be batched together. This input is crucial for the node's operation as it determines the composition of the resulting batched image tensor. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The output is a single batched image tensor, which is a consolidated version of the input images, potentially with upsampling applied to maintain dimension consistency. Type should be `IMAGE`.

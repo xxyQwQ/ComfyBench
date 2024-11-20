@@ -1,0 +1,7 @@
+- `Boolean To Int [Dream]`: The 'Boolean To Int' node converts a boolean input into an integer output, allowing for conditional logic to be applied in numerical contexts. It provides a straightforward way to translate true/false conditions into numerical representations for further processing or decision-making.
+    - Inputs:
+        - `boolean` (Required): Determines the condition for the conversion. If true, the 'on_true' value is returned; otherwise, the 'on_false' value is selected. Type should be `BOOLEAN`.
+        - `on_true` (Required): The integer value to return when the 'boolean' input is true. This allows for customization of the true condition's numerical representation. Type should be `INT`.
+        - `on_false` (Required): The integer value to return when the 'boolean' input is false. This enables the false condition to be represented by a specific numerical value. Type should be `INT`.
+    - Outputs:
+        - `result`: The result of the boolean to integer conversion, reflecting either the 'on_true' or 'on_false' value based on the boolean input. Type should be `INT`.

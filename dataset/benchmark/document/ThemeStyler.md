@@ -1,0 +1,9 @@
+- `ThemeStyler`: The ThemeStyler node dynamically applies thematic styling to text prompts based on a selection from predefined themes. It modifies the input text to reflect the chosen theme, enhancing the prompt's expressiveness and specificity for generating styled content.
+    - Inputs:
+        - `text_positive` (Required): The positive aspect of the text prompt to be styled. It influences the thematic direction and tone of the generated content. Type should be `STRING`.
+        - `text_negative` (Required): The negative aspect of the text prompt to be styled. It serves to refine and contrast the thematic styling applied, ensuring balanced and nuanced output. Type should be `STRING`.
+        - `theme` (Required): The specific theme selected to style the text prompt. This choice dictates the thematic elements and characteristics infused into the text. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A flag to enable or disable logging of the prompt styling process, aiding in debugging and refinement. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive`: The styled positive aspect of the text prompt, transformed to embody the selected theme. Type should be `STRING`.
+        - `text_negative`: The styled negative aspect of the text prompt, adjusted to complement the thematic styling of the positive text. Type should be `STRING`.

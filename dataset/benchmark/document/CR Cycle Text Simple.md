@@ -1,0 +1,15 @@
+- `CR Cycle Text Simple`: This node is designed to cycle through a list of text strings in a specified mode, allowing for dynamic text animation within a sequence. It supports sequential cycling through texts based on frame intervals and loop counts, making it suitable for creating text-based animations or dynamic text displays in various applications.
+    - Inputs:
+        - `mode` (Required): Specifies the cycling mode, which determines how the text strings are cycled through. The mode 'Sequential' is supported, enabling the texts to be displayed one after another in order. Type should be `COMBO[STRING]`.
+        - `frame_interval` (Required): The interval, in frames, between each text change. This parameter controls the speed of the text cycling animation. Type should be `INT`.
+        - `loops` (Required): The number of times the entire text list is repeated. This affects the total duration of the text cycling animation. Type should be `INT`.
+        - `current_frame` (Required): The current frame number in the animation sequence. It is used to determine which text string should be displayed based on the frame interval and loops. Type should be `INT`.
+        - `text_1` (Optional): The first text string to be included in the cycling animation. If empty, it will be skipped. Type should be `STRING`.
+        - `text_2` (Optional): The second text string to be included in the cycling animation. If empty, it will be skipped. Type should be `STRING`.
+        - `text_3` (Optional): The third text string to be included in the cycling animation. If empty, it will be skipped. Type should be `STRING`.
+        - `text_4` (Optional): The fourth text string to be included in the cycling animation. If empty, it will be skipped. Type should be `STRING`.
+        - `text_5` (Optional): The fifth text string to be included in the cycling animation. If empty, it will be skipped. Type should be `STRING`.
+        - `text_list_simple` (Optional): An optional list of text strings to be included in the cycling animation, in addition to the individual text inputs. Type should be `TEXT_LIST_SIMPLE`.
+    - Outputs:
+        - `STRING`: The text string that is currently selected to be displayed based on the mode, frame interval, loops, and current frame. Type should be `STRING`.
+        - `show_help`: A URL to a help page providing additional information and guidance on using the CR Cycle Text Simple node. Type should be `STRING`.

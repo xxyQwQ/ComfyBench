@@ -1,0 +1,6 @@
+- `Inference_Core_OneFormer-COCO-SemSegPreprocessor`: This node is designed for semantic segmentation tasks using the OneFormer model specifically trained on the COCO dataset. It preprocesses images to facilitate semantic segmentation, leveraging a pretrained OneFormer model to analyze and segment the input image into different semantic categories.
+    - Inputs:
+        - `image` (Required): The input image to be semantically segmented. This image is processed by the OneFormer model to identify and categorize different semantic elements within the image. Type should be `IMAGE`.
+        - `resolution` (Optional): The resolution parameter specifies the desired output resolution of the segmented image. It affects the granularity and quality of the semantic segmentation performed by the OneFormer model. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a semantically segmented image, where each pixel is classified into one of the semantic categories defined by the COCO dataset. Type should be `IMAGE`.

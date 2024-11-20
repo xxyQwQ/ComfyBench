@@ -1,0 +1,6 @@
+- `ConvertAgentToLlamaindex`: This node is designed to transform an existing agent into a format compatible with LlamaIndex, enabling its integration and utilization within the LlamaIndex ecosystem. It allows for the extension of an agent's capabilities by optionally incorporating a pre-defined embedding model.
+    - Inputs:
+        - `agent` (Required): The agent to be converted. This is the primary input that specifies the agent whose functionalities are to be made compatible with the LlamaIndex format. Type should be `AGENT`.
+        - `optional_embed_model` (Optional): An optional embedding model that can be included to enhance the agent's capabilities within the LlamaIndex ecosystem. Type should be `LLM_EMBED_MODEL`.
+    - Outputs:
+        - `model`: The transformed agent, now in a format that is compatible with LlamaIndex, ready for integration and utilization. Type should be `LLM_MODEL`.

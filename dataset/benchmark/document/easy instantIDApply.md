@@ -1,0 +1,21 @@
+- `easy instantIDApply`: This node facilitates the application of InstantID technology, integrating it with other models and processes within a pipeline to enhance identity verification and analysis capabilities. It leverages InstantID and InsightFace models, along with control network configurations, to process images for identity-related tasks.
+    - Inputs:
+        - `pipe` (Required): Represents the pipeline configuration and state, serving as the foundation for applying InstantID technology. Type should be `PIPE_LINE`.
+        - `image` (Required): The image to be processed, acting as the primary input for identity verification and analysis. Type should be `IMAGE`.
+        - `instantid_file` (Required): Specifies the file path for the InstantID model, essential for loading and applying the model. Type should be `COMBO[STRING]`.
+        - `insightface` (Required): Indicates the InsightFace model to be used, enhancing the identity verification process with facial recognition capabilities. Type should be `COMBO[STRING]`.
+        - `control_net_name` (Required): Specifies the control network name to be used in the process, affecting the application of InstantID. Type should be `COMBO[STRING]`.
+        - `cn_strength` (Required): Determines the strength of the control network's influence on the process. Type should be `FLOAT`.
+        - `cn_soft_weights` (Required): Adjusts the soft weights for the control network, influencing its impact. Type should be `FLOAT`.
+        - `weight` (Required): Sets the overall weight of the InstantID application in the pipeline. Type should be `FLOAT`.
+        - `start_at` (Required): Defines the starting point of the InstantID application within the pipeline. Type should be `FLOAT`.
+        - `end_at` (Required): Specifies the endpoint of the InstantID application within the pipeline. Type should be `FLOAT`.
+        - `noise` (Required): Controls the level of noise to be considered in the InstantID process. Type should be `FLOAT`.
+        - `image_kps` (Optional): Optional keypoints in the image, used for more precise identity verification. Type should be `IMAGE`.
+        - `mask` (Optional): Optional mask to be applied on the image, used for focusing or excluding specific areas. Type should be `MASK`.
+        - `control_net` (Optional): Optional control network settings, providing additional control over the InstantID application. Type should be `CONTROL_NET`.
+    - Outputs:
+        - `pipe`: The updated pipeline configuration after applying InstantID, reflecting changes in the processing state. Type should be `PIPE_LINE`.
+        - `model`: The modified model incorporating InstantID features, ready for further processing or analysis. Type should be `MODEL`.
+        - `positive`: A positive outcome or feature extracted during the InstantID application, potentially used for further analysis. Type should be `CONDITIONING`.
+        - `negative`: A negative outcome or feature extracted during the InstantID application, potentially used for identifying discrepancies or errors. Type should be `CONDITIONING`.

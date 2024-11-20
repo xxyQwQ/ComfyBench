@@ -1,6 +1,0 @@
-- `UpscaleModelLoader`: The UpscaleModelLoader node is designed for loading upscale models from a specified directory. It facilitates the retrieval and preparation of upscale models for image upscaling tasks, ensuring that the models are correctly loaded and configured for evaluation.
-    - Parameters:
-        - `model_name`: Specifies the name of the upscale model to be loaded. This parameter is crucial for identifying and retrieving the correct model file from the upscale models directory. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `upscale_model`: Returns the loaded and prepared upscale model, ready for use in image upscaling tasks. Type should be `UPSCALE_MODEL`.

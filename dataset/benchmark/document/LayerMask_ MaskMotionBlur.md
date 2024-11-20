@@ -1,0 +1,8 @@
+- `LayerMask_ MaskMotionBlur`: The MaskMotionBlur node applies a motion blur effect to a mask, optionally inverting the mask before processing. It allows for the customization of the blur intensity and direction, enabling dynamic visual effects on mask elements.
+    - Inputs:
+        - `mask` (Required): The mask to which the motion blur effect will be applied. It serves as the primary input for the transformation. Type should be `MASK`.
+        - `invert_mask` (Required): A boolean flag that determines whether the input mask should be inverted before applying the motion blur effect. Inversion can highlight or alter areas of interest. Type should be `BOOLEAN`.
+        - `blur` (Required): Specifies the intensity of the motion blur effect. Higher values result in a more pronounced blur, simulating faster motion. Type should be `INT`.
+        - `angle` (Required): Defines the angle of the motion blur effect, allowing for directional blurring that simulates motion in a specific direction. Type should be `FLOAT`.
+    - Outputs:
+        - `mask`: The resulting mask after applying the motion blur effect, potentially inverted based on the input flag. Type should be `MASK`.

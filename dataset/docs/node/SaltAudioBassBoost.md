@@ -1,8 +1,0 @@
-- `SaltAudioBassBoost`: This node enhances the bass frequencies of an audio input, applying a low-pass filter and gain increase to boost the lower end of the audio spectrum.
-    - Parameters:
-        - `cutoff_freq`: The frequency below which the audio will be boosted, serving as the threshold for the low-pass filter. Type should be `INT`.
-        - `boost_dB`: The amount of gain to apply to the frequencies below the cutoff, measured in decibels. Type should be `FLOAT`.
-    - Inputs:
-        - `audio`: The raw audio data to be processed for bass enhancement. Type should be `AUDIO`.
-    - Outputs:
-        - `audio`: The modified audio data with enhanced bass frequencies. Type should be `AUDIO`.

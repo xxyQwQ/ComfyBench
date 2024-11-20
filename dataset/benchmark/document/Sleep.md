@@ -1,0 +1,7 @@
+- `Sleep`: The Sleep node introduces a delay in the execution flow based on a specified amount of time, allowing for timed pauses in processing sequences.
+    - Inputs:
+        - `input` (Required): Acts as a pass-through for any input data, ensuring that the data is returned after the sleep delay without modification. Type should be `*`.
+        - `minutes` (Required): Specifies the duration of the delay in whole minutes, contributing to the total sleep time. Type should be `INT`.
+        - `seconds` (Required): Specifies the duration of the delay in fractional minutes (seconds), allowing for precise control over the total sleep time. Type should be `FLOAT`.
+    - Outputs:
+        - `*`: Returns the input data unchanged after the specified delay, maintaining data integrity through the sleep process. Type should be `*`.

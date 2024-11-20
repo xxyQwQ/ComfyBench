@@ -1,0 +1,30 @@
+- `BatchCreativeInterpolation`: The Batch Creative Interpolation node is designed to facilitate the generation and manipulation of frame sequences in a batch processing manner. It leverages advanced interpolation techniques to creatively adjust and enhance video frames, enabling dynamic frame rate conversion, motion smoothing, and the introduction of novel visual effects. This node is particularly useful in applications requiring high-quality video processing, animation, and effects generation, where frame-by-frame control and precision are paramount.
+    - Inputs:
+        - `positive` (Required): Specifies the positive conditioning input, used to guide the interpolation process towards desired outcomes. Type should be `CONDITIONING`.
+        - `negative` (Required): Specifies the negative conditioning input, used to steer the interpolation process away from undesired outcomes. Type should be `CONDITIONING`.
+        - `images` (Required): Specifies the images to be interpolated, serving as the basis for generating new frames within the sequence. Type should be `IMAGE`.
+        - `model` (Required): Defines the model to be used for the interpolation process, central to generating the interpolated frames. Type should be `MODEL`.
+        - `ipadapter` (Required): Defines the IP adapter used for processing, crucial for integrating with different image processing pipelines. Type should be `IPADAPTER`.
+        - `clip_vision` (Required): Provides the CLIP vision model input, aiding in the contextual understanding and guidance of the interpolation process. Type should be `CLIP_VISION`.
+        - `type_of_frame_distribution` (Required): Determines the method for distributing frames, whether linearly or dynamically, to control the pacing of frame generation. Type should be `COMBO[STRING]`.
+        - `linear_frame_distribution_value` (Required): Specifies the value for linear frame distribution, influencing the uniformity of frame spacing. Type should be `INT`.
+        - `dynamic_frame_distribution_values` (Required): Defines dynamic values for frame distribution, allowing for variable pacing and timing across the sequence. Type should be `STRING`.
+        - `type_of_key_frame_influence` (Required): Selects the method for key frame influence, impacting how key frames affect the interpolation. Type should be `COMBO[STRING]`.
+        - `linear_key_frame_influence_value` (Required): Sets the linear influence value of key frames, determining their impact on the interpolation process. Type should be `STRING`.
+        - `dynamic_key_frame_influence_values` (Required): Specifies dynamic influence values for key frames, offering nuanced control over their effect. Type should be `STRING`.
+        - `type_of_strength_distribution` (Required): Chooses the method for distributing strength, affecting the intensity of interpolation effects. Type should be `COMBO[STRING]`.
+        - `linear_strength_value` (Required): Determines the linear strength value, controlling the overall intensity of the interpolation. Type should be `STRING`.
+        - `dynamic_strength_values` (Required): Provides dynamic strength values, allowing for varied intensity levels throughout the sequence. Type should be `STRING`.
+        - `buffer` (Required): Sets the buffer size for processing, optimizing performance and resource utilization. Type should be `INT`.
+        - `high_detail_mode` (Required): Enables or disables high detail mode, affecting the quality and detail of the interpolated frames. Type should be `BOOLEAN`.
+        - `base_ipa_advanced_settings` (Optional): unknown Type should be `ADVANCED_IPA_SETTINGS`.
+        - `detail_ipa_advanced_settings` (Optional): unknown Type should be `ADVANCED_IPA_SETTINGS`.
+    - Outputs:
+        - `GRAPH`: Provides a graphical representation of the interpolation process, detailing key frame positions and interpolation paths. Type should be `IMAGE`.
+        - `POSITIVE`: unknown Type should be `CONDITIONING`.
+        - `NEGATIVE`: unknown Type should be `CONDITIONING`.
+        - `MODEL`: unknown Type should be `MODEL`.
+        - `KEYFRAME_POSITIONS`: Lists the positions of key frames within the interpolated sequence, crucial for understanding frame distribution. Type should be `STRING`.
+        - `BATCH_SIZE`: Indicates the number of frames processed in a single batch, relevant for performance optimization. Type should be `INT`.
+        - `BUFFER`: Specifies the buffer size used during processing, affecting memory usage and computational efficiency. Type should be `INT`.
+        - `FRAMES_TO_DROP`: Identifies frames that were dropped during the interpolation process, useful for quality control and adjustment. Type should be `STRING`.

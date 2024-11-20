@@ -1,0 +1,5 @@
+- `Number PI`: The Number PI node provides the mathematical constant pi, offering a straightforward way to access this fundamental value within numerical computations and simulations.
+    - Inputs:
+    - Outputs:
+        - `number`: Returns the mathematical constant pi as a floating-point number. Type should be `NUMBER`.
+        - `float`: Returns the mathematical constant pi, ensuring compatibility with operations requiring float data types. Type should be `FLOAT`.

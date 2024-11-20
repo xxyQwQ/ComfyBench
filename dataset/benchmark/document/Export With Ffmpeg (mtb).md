@@ -1,0 +1,10 @@
+- `Export With Ffmpeg (mtb)`: The Export With Ffmpeg (mtb) node provides functionality for exporting media files using FFmpeg, supporting various formats and codecs. It allows for the conversion of image sequences or playlists into video files, with customizable frame rates, formats, and codecs, catering to different requirements for video production.
+    - Inputs:
+        - `fps` (Required): Specifies the frames per second for the video export, affecting the playback speed and smoothness of the resulting video. Type should be `FLOAT`.
+        - `prefix` (Required): A prefix for the output file name, aiding in the organization and identification of exported files. Type should be `STRING`.
+        - `format` (Required): Determines the video file format (e.g., mov, mp4, mkv), influencing compatibility with different players and platforms. Type should be `COMBO[STRING]`.
+        - `codec` (Required): Selects the codec used for encoding the video, impacting the balance between quality and file size. Type should be `COMBO[STRING]`.
+        - `images` (Optional): An optional tensor of images to be exported as a video, enabling the creation of video content from individual frames. Type should be `IMAGE`.
+        - `playlist` (Optional): An optional list of video file paths for concatenation, facilitating the compilation of multiple videos into a single file. Type should be `PLAYLIST`.
+    - Outputs:
+        - `video`: The path to the exported video file, indicating the successful creation of the video. Type should be `VIDEO`.

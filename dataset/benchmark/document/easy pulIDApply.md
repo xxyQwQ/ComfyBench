@@ -1,0 +1,13 @@
+- `easy pulIDApply`: This node facilitates the application of the PulID model to images, enhancing them based on predefined or custom parameters. It integrates with other models like InsightFace for face analysis and Eva Clip for additional processing, aiming to improve image quality or modify images according to specific criteria.
+    - Inputs:
+        - `model` (Required): The base model to which the PulID enhancements will be applied. It serves as the foundation for the image transformation process. Type should be `MODEL`.
+        - `pulid_file` (Required): Specifies the file path to the PulID model to be used for the image enhancement. This parameter allows for the dynamic selection of different PulID models. Type should be `COMBO[STRING]`.
+        - `insightface` (Required): Defines the InsightFace model configuration to be used for face analysis within the image. This can be CPU, CUDA, or ROCM based, affecting the performance and accuracy of face detection. Type should be `COMBO[STRING]`.
+        - `image` (Required): The image to be processed and enhanced by the PulID model. It is the primary input over which the transformations are applied. Type should be `IMAGE`.
+        - `method` (Required): unknown Type should be `COMBO[STRING]`.
+        - `weight` (Required): A floating-point value that adjusts the intensity of the PulID model's effect on the image. It allows for fine-tuning the strength of the enhancements. Type should be `FLOAT`.
+        - `start_at` (Required): Defines the starting point of the effect application in terms of image processing, allowing for partial enhancements. Type should be `FLOAT`.
+        - `end_at` (Required): Specifies the endpoint for the PulID model's effect application, enabling selective enhancement within the image. Type should be `FLOAT`.
+        - `attn_mask` (Optional): An optional mask that can be applied to focus the PulID model's enhancements on specific areas of the image, providing more control over the output. Type should be `MASK`.
+    - Outputs:
+        - `model`: The enhanced model after applying the PulID transformations. It represents the output of the image enhancement process. Type should be `MODEL`.

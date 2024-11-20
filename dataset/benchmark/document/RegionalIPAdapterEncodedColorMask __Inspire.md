@@ -1,0 +1,14 @@
+- `RegionalIPAdapterEncodedColorMask __Inspire`: This node specializes in applying regional image processing adaptations based on encoded color masks, enabling targeted image manipulation and enhancement. It leverages color masks to conditionally apply transformations or effects to specific regions of an image, guided by embedding weights and types.
+    - Inputs:
+        - `color_mask` (Required): The color mask image used to identify specific regions for adaptation. It serves as a key input for determining where the encoded adjustments should be applied. Type should be `IMAGE`.
+        - `mask_color` (Required): A string specifying the color used in the color mask to identify the target region. This color determines which parts of the image will be affected by the regional adaptations. Type should be `STRING`.
+        - `embeds` (Required): Embeddings representing the desired adjustments or effects to be applied to the identified regions. These embeddings guide the adaptation process. Type should be `EMBEDS`.
+        - `weight` (Required): A floating-point value that adjusts the intensity or influence of the applied embeddings on the target regions. Type should be `FLOAT`.
+        - `weight_type` (Required): Specifies the method of applying weights to the embeddings, such as linear or channel-specific penalties, influencing how the adaptations are blended into the target regions. Type should be `COMBO[STRING]`.
+        - `start_at` (Required): Defines the starting point of the effect's intensity gradient, allowing for gradual application of the adaptation from this point onwards. Type should be `FLOAT`.
+        - `end_at` (Required): Sets the endpoint for the effect's intensity gradient, ensuring the adaptation effect tapers off at this specified point. Type should be `FLOAT`.
+        - `unfold_batch` (Required): A boolean indicating whether to process each item in a batch separately, affecting the adaptation's application across multiple images. Type should be `BOOLEAN`.
+        - `neg_embeds` (Optional): Optional embeddings that represent negative adjustments or effects, providing a means to counterbalance or negate certain aspects of the primary embeddings. Type should be `EMBEDS`.
+    - Outputs:
+        - `regional_ipadapter`: The result of applying the regional IP adapter process, encapsulating the conditioned adaptations based on the input parameters. Type should be `REGIONAL_IPADAPTER`.
+        - `mask`: The processed mask derived from the input color mask and mask color, indicating the regions of the image that were targeted for adaptation. Type should be `MASK`.

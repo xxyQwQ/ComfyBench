@@ -1,0 +1,14 @@
+- `InstantIDAttentionPatch`: The InstantIDAttentionPatch node is designed to enhance the attention mechanism within a model by applying specialized patches. These patches adjust the model's attention based on various factors such as image embeddings, noise levels, and specific conditions, aiming to improve the model's focus and performance on tasks related to image and face recognition.
+    - Inputs:
+        - `instantid` (Required): The instantid parameter represents the core configuration or model that the attention patching will be applied to, serving as the foundation for the modifications. Type should be `INSTANTID`.
+        - `insightface` (Required): The insightface parameter is used for face analysis and feature extraction, providing critical data that influences how the attention patches are applied. Type should be `FACEANALYSIS`.
+        - `image` (Required): The image parameter is the input image on which face analysis and feature extraction are performed, directly impacting the attention patching process. Type should be `IMAGE`.
+        - `model` (Required): The model parameter refers to the neural network model that will be modified by the attention patches, affecting its attention mechanism. Type should be `MODEL`.
+        - `weight` (Required): The weight parameter controls the influence of the attention patches on the model, allowing for fine-tuning of the patching effect. Type should be `FLOAT`.
+        - `start_at` (Required): The start_at parameter specifies the beginning point in the model's processing where the attention patches start to take effect, marking the initial phase of modification. Type should be `FLOAT`.
+        - `end_at` (Required): The end_at parameter defines the endpoint in the model's processing where the attention patches conclude their effect, delineating the final phase of modification. Type should be `FLOAT`.
+        - `noise` (Required): The noise parameter introduces randomness into the attention patching process, potentially enhancing the model's robustness and ability to generalize. Type should be `FLOAT`.
+        - `mask` (Optional): The mask parameter allows for selective application of the attention patches, targeting specific areas or features within the image for focused modification. Type should be `MASK`.
+    - Outputs:
+        - `model`: This output type represents the modified model after the application of attention patches, reflecting the adjustments made to its attention mechanism. Type should be `MODEL`.
+        - `face_embeds`: This output type represents the face embeddings generated or utilized during the patching process, which are critical for the targeted modifications. Type should be `FACE_EMBEDS`.

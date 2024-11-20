@@ -1,0 +1,8 @@
+- `ToIPAdapterPipe __Inspire`: The ToIPAdapterPipe node is designed to create a pipeline that integrates various components such as IP adapters, models, and optional vision and face recognition enhancements into a unified processing flow. This setup facilitates the adaptation and enhancement of input data or models for further processing or analysis.
+    - Inputs:
+        - `ipadapter` (Required): The 'ipadapter' parameter is crucial for specifying the IP adapter component to be used in the pipeline, serving as the foundational element for data or model adaptation. Type should be `IPADAPTER`.
+        - `model` (Required): The 'model' parameter identifies the specific model to be integrated into the pipeline, enabling its adaptation or enhancement through the IP adapter. Type should be `MODEL`.
+        - `clip_vision` (Optional): The 'clip_vision' parameter optionally adds vision processing capabilities to the pipeline, leveraging CLIP models for enhanced visual understanding. Type should be `CLIP_VISION`.
+        - `insightface` (Optional): The 'insightface' parameter optionally incorporates face recognition technology into the pipeline, providing advanced facial analysis features. Type should be `INSIGHTFACE`.
+    - Outputs:
+        - `ipadapter_pipe`: This output represents the assembled pipeline, encapsulating the integrated IP adapter, model, and any optional enhancements for vision and face recognition. Type should be `IPADAPTER_PIPE`.

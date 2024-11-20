@@ -1,7 +1,0 @@
-- `LLMIPYNBReader`: The LLMIPYNBReader node specializes in reading and interpreting IPYNB (Jupyter Notebook) files, transforming them into a format suitable for further processing or analysis within the llama_index ecosystem. It leverages the structure and content of IPYNB files to extract documentation or data, facilitating integration with llama_index's document management capabilities.
-    - Parameters:
-        - `path`: Specifies the filesystem path to the IPYNB file to be read. This path is essential for locating and accessing the file for processing. Type should be `STRING`.
-        - `extra_info`: Provides additional, optional information in a string format that can be used to influence the reading process or handle specific requirements for processing the IPYNB file. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `documents`: The processed data from the IPYNB file, formatted as a document suitable for use within the llama_index ecosystem. Type should be `DOCUMENT`.

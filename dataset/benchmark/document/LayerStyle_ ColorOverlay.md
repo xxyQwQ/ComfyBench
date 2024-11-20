@@ -1,0 +1,11 @@
+- `LayerStyle_ ColorOverlay`: The ColorOverlay node applies a color overlay to an image, allowing for the adjustment of blend mode, opacity, and color to achieve various visual effects. It supports the use of an optional layer mask for more precise control over the overlay application.
+    - Inputs:
+        - `background_image` (Required): The base image over which the color overlay will be applied. It serves as the foundational layer for the overlay effect. Type should be `IMAGE`.
+        - `layer_image` (Required): An additional image layer that can be combined with the background image under the specified blend mode and opacity settings. Type should be `IMAGE`.
+        - `invert_mask` (Required): Determines whether the applied mask should be inverted, affecting how the overlay blends with the underlying images. Type should be `BOOLEAN`.
+        - `blend_mode` (Required): Specifies the method of blending the overlay with the background image, influencing the final visual outcome. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): Controls the transparency level of the color overlay, allowing for fine-tuning of the overlay's visibility. Type should be `INT`.
+        - `color` (Required): Defines the color of the overlay, enabling customization of the visual effect. Type should be `STRING`.
+        - `layer_mask` (Optional): An optional mask that can be applied to the overlay, offering enhanced control over the areas affected by the color overlay. Type should be `MASK`.
+    - Outputs:
+        - `image`: The resulting image after applying the color overlay, incorporating all specified adjustments. Type should be `IMAGE`.

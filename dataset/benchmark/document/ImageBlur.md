@@ -1,0 +1,7 @@
+- `ImageBlur`: The ImageBlur node applies a Gaussian blur to an image, utilizing a specified blur radius and sigma value to control the extent and intensity of the blurring effect. This process can help in reducing image noise and detail, creating a smoother appearance.
+    - Inputs:
+        - `image` (Required): The input image to be blurred, provided as a torch.Tensor. This image undergoes a Gaussian blur transformation based on the specified blur radius and sigma. Type should be `IMAGE`.
+        - `blur_radius` (Required): Specifies the radius of the blur effect. A larger radius results in a more pronounced blurring effect. Type should be `INT`.
+        - `sigma` (Required): Determines the spread of the blur effect. A higher sigma value increases the extent of blurring, affecting the smoothness of the output image. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output image after applying the Gaussian blur, returned as a torch.Tensor. This image will have a smoother appearance compared to the input. Type should be `IMAGE`.

@@ -1,0 +1,7 @@
+- `UnGridify (image)`: The UnGridify (image) node is designed to deconstruct a grid of images into its individual tiles. It takes an image composed of a grid layout and separates it into distinct image tiles based on specified row and column parameters, facilitating the manipulation or analysis of each tile independently.
+    - Inputs:
+        - `image` (Required): The composite image arranged in a grid format. This input is crucial for determining the structure from which individual tiles will be extracted. Type should be `IMAGE`.
+        - `columns` (Required): Specifies the number of columns in the grid. This parameter is essential for accurately dividing the image into the correct number of horizontal segments. Type should be `INT`.
+        - `rows` (Required): Indicates the number of rows in the grid. It is vital for splitting the image into the appropriate number of vertical segments. Type should be `INT`.
+    - Outputs:
+        - `image`: A list of images, where each image represents a tile extracted from the original grid. This output allows for further individual processing or analysis of each tile. Type should be `IMAGE`.

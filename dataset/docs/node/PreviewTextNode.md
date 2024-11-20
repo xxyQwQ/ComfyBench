@@ -1,6 +1,0 @@
-- `PreviewTextNode`: The PreviewTextNode provides a simple interface for generating a preview of text inputs. It primarily serves to display the given text in a user-friendly format, allowing for a quick preview before further processing or utilization.
-    - Parameters:
-        - `text`: The primary text input required for generating a preview. It is essential for the node's operation as it directly influences the output displayed to the user. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The processed text is returned as part of the output, encapsulating the previewed text. Type should be `STRING`.

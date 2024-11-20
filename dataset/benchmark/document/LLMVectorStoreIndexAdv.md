@@ -1,0 +1,9 @@
+- `LLMVectorStoreIndexAdv`: The LLMVectorStoreIndexAdv node is designed for advanced vector storage indexing within a language model framework. It extends the capabilities of standard vector indexing by incorporating additional features or optimizations tailored for complex language processing tasks. This node is pivotal for enhancing the efficiency and accuracy of retrieving and managing vectorized representations of text data in large-scale language models.
+    - Inputs:
+        - `llm_model` (Required): Specifies the language model to be used for indexing, serving as the core component for generating vector representations of text. Type should be `LLM_MODEL`.
+        - `document` (Required): The text document to be indexed, which is processed to generate its vector representation. Type should be `DOCUMENT`.
+        - `chunk_size` (Optional): Defines the size of text chunks for processing, allowing for customization of indexing granularity. Type should be `COMBO[INT]`.
+        - `chunk_overlap` (Optional): Determines the overlap between consecutive text chunks to ensure continuity in the indexing process. Type should be `INT`.
+        - `optional_llm_context` (Optional): Provides additional context from a language model to enhance the indexing accuracy. Type should be `LLM_CONTEXT`.
+    - Outputs:
+        - `llm_index`: The result of the indexing process, representing the vectorized form of the input document. Type should be `LLM_INDEX`.

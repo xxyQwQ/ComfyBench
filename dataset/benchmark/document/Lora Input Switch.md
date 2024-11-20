@@ -1,0 +1,10 @@
+- `Lora Input Switch`: The WAS_Lora_Input_Switch node is designed to selectively switch between two sets of model and CLIP inputs based on a boolean condition. It facilitates dynamic input selection for further processing or model application.
+    - Inputs:
+        - `model_a` (Required): The first model input option. This model is selected if the boolean condition is true. Type should be `MODEL`.
+        - `clip_a` (Required): The first CLIP input option. This CLIP is selected if the boolean condition is true. Type should be `CLIP`.
+        - `model_b` (Required): The second model input option. This model is selected if the boolean condition is false. Type should be `MODEL`.
+        - `clip_b` (Required): The second CLIP input option. This CLIP is selected if the boolean condition is false. Type should be `CLIP`.
+        - `boolean` (Required): A boolean condition that determines which set of inputs (model_a and clip_a or model_b and clip_b) is selected. Type should be `BOOLEAN`.
+    - Outputs:
+        - `model`: The selected model based on the boolean condition. Type should be `MODEL`.
+        - `clip`: The selected CLIP based on the boolean condition. Type should be `CLIP`.

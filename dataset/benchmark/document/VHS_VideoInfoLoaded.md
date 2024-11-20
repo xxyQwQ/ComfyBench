@@ -1,0 +1,9 @@
+- `VHS_VideoInfoLoaded`: The VHS_VideoInfoLoaded node is designed to extract and present detailed information about a video that has been loaded into the system. It focuses on providing metrics such as frame rate, frame count, video duration, and the dimensions of the video, facilitating a comprehensive understanding of the video's properties.
+    - Inputs:
+        - `video_info` (Required): The 'video_info' parameter is crucial as it contains the loaded video's metadata, which is essential for extracting the video's detailed information such as fps, frame count, duration, width, and height. This metadata drives the node's execution and results. Type should be `VHS_VIDEOINFO`.
+    - Outputs:
+        - `fps🟦`: Represents the frame rate of the loaded video. Type should be `FLOAT`.
+        - `frame_count🟦`: Indicates the total number of frames in the loaded video. Type should be `INT`.
+        - `duration🟦`: The total duration of the loaded video, typically in seconds. Type should be `FLOAT`.
+        - `width🟦`: The width of the loaded video in pixels. Type should be `INT`.
+        - `height🟦`: The height of the loaded video in pixels. Type should be `INT`.

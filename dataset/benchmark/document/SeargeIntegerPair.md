@@ -1,0 +1,7 @@
+- `SeargeIntegerPair`: The SeargeIntegerPair node is designed to handle pairs of integer values, allowing for the retrieval and manipulation of these pairs within a deprecated integer-based context. It focuses on providing a straightforward interface for working with two integer values, emphasizing simplicity and directness in integer operations.
+    - Inputs:
+        - `value1` (Required): Represents the first integer value in the pair. It is crucial for defining the pair's first component and influences the node's output by serving as one of the two primary integers to be processed. Type should be `INT`.
+        - `value2` (Required): Denotes the second integer value in the pair. This parameter is essential for completing the integer pair and affects the node's functionality by being the second primary integer to be handled alongside 'value1'. Type should be `INT`.
+    - Outputs:
+        - `value 1`: The first integer value of the pair, returned as is from the input without modification. Type should be `INT`.
+        - `value 2`: The second integer value of the pair, returned unchanged from the input, completing the integer pair output. Type should be `INT`.

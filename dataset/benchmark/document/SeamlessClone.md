@@ -1,0 +1,10 @@
+- `SeamlessClone`: The SeamlessClone node is designed for blending two images together in a seamless manner, using various cloning modes to achieve different visual effects. It allows for precise control over the blending process by specifying the source and destination images, a mask to define the blend area, and the position for blending, along with the choice of cloning mode.
+    - Inputs:
+        - `dst` (Required): The destination image onto which the source image will be cloned. It serves as the backdrop for the cloning operation. Type should be `IMAGE`.
+        - `src` (Required): The source image to be cloned onto the destination image. This image will be blended into the destination based on the specified mask and cloning mode. Type should be `IMAGE`.
+        - `src_mask` (Required): A mask image that defines the area of the source image to be cloned. Only the parts of the source image covered by the mask will be blended into the destination. Type should be `IMAGE`.
+        - `flag` (Required): Specifies the cloning mode to be used for blending the images. The available modes are NORMAL, MIXED, and MONOCHROME_TRANSFER, each offering a different visual effect. Type should be `COMBO[STRING]`.
+        - `cx` (Required): The x-coordinate of the center point in the destination image where the source image will be cloned. Type should be `INT`.
+        - `cy` (Required): The y-coordinate of the center point in the destination image where the source image will be cloned. Type should be `INT`.
+    - Outputs:
+        - `image`: The result of the seamless cloning operation, which is a blend of the source and destination images according to the specified parameters. Type should be `IMAGE`.

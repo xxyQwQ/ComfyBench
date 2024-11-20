@@ -1,0 +1,7 @@
+- `ScaleBatchPromptSchedule`: This node is designed to adapt a batch schedule from Fizz' nodes BatchPromptSchedule to a different frame count, effectively scaling the schedule to fit a new timeline while preserving the original pattern.
+    - Inputs:
+        - `input_str` (Required): The string representation of the original batch schedule, specifying frame numbers and their corresponding values. It's crucial for defining the base schedule to be scaled. Type should be `STRING`.
+        - `old_frame_count` (Required): The original frame count of the batch schedule, serving as the basis for scaling calculations. Type should be `INT`.
+        - `new_frame_count` (Required): The target frame count to which the original schedule will be scaled, adjusting the timeline accordingly. Type should be `INT`.
+    - Outputs:
+        - `string`: A string representation of the scaled batch schedule, with adjusted frame numbers and values to match the new frame count. Type should be `STRING`.

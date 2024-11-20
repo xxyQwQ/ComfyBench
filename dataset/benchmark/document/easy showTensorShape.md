@@ -1,0 +1,4 @@
+- `easy showTensorShape`: The `showTensorShape` node is designed to analyze and display the shape of tensor data structures within a given input. It abstracts the complexity of tensor operations, providing a straightforward way to visualize the dimensions and structure of tensors, which is crucial for debugging and understanding data flow in tensor-based computations.
+    - Inputs:
+        - `tensor` (Required): The `tensor` parameter is the primary input for the `showTensorShape` node, representing the tensor whose shape is to be analyzed and displayed. This parameter is essential for the node's operation as it directly influences the output by determining the structure and dimensions of the tensor to be visualized. Type should be `*`.
+    - Outputs:

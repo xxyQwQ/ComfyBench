@@ -1,9 +1,0 @@
-- `MiDaS-NormalMapPreprocessor`: The MiDaS-NormalMapPreprocessor node is designed for generating normal maps from images using the MiDaS model. It preprocesses images to enhance depth estimation, facilitating the creation of detailed normal maps that can be used for various applications such as 3D modeling and augmented reality.
-    - Parameters:
-        - `a`: The 'a' parameter adjusts the intensity of the depth estimation, influencing the contrast and detail in the generated normal map. Type should be `FLOAT`.
-        - `bg_threshold`: The 'bg_threshold' parameter sets the threshold for background separation, helping to isolate the subject from the background in the depth estimation process. Type should be `FLOAT`.
-        - `resolution`: The 'resolution' parameter specifies the resolution at which the depth estimation and normal map generation will be performed, affecting the detail level of the output. Type should be `INT`.
-    - Inputs:
-        - `image`: The 'image' parameter is the input image for which the normal map will be generated, serving as the basis for depth estimation and normal map creation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is an image representing the normal map generated from the input image, providing detailed surface orientation information. Type should be `IMAGE`.

@@ -1,0 +1,8 @@
+- `Image Color Palette`: The Image Color Palette node is designed to generate color palettes from images. It utilizes various algorithms to analyze the colors within an image and produce a palette that represents the most significant or desired colors. This node can be used for tasks such as image analysis, enhancing visual content, or creating thematic color schemes based on images.
+    - Inputs:
+        - `image` (Required): The input image from which the color palette will be generated. This image is analyzed to extract the dominant or specified colors to form the palette. Type should be `IMAGE`.
+        - `colors` (Required): Specifies the number of colors to include in the generated palette. This parameter allows for customization of the palette's complexity and detail. Type should be `INT`.
+        - `mode` (Required): Determines the method used to generate the color palette, such as linear, brightness, tonal, or a combination of brightness and tonal. This affects how colors are selected and organized within the palette. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The visual representation of the generated color palette, typically displayed as an image. This output allows users to see the palette's colors in context. Type should be `IMAGE`.
+        - `color_palettes`: The list of colors in the generated palette, usually provided in a specific format such as RGB or hexadecimal. This output is useful for applying the palette colors in various applications. Type should be `LIST`.

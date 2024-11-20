@@ -1,0 +1,19 @@
+- `XY Input_ Lora Block Weight __Inspire`: This node is designed to process and visualize the weight of different blocks within a Lora model, facilitating an understanding of the model's internal representations through XY plotting. It enables users to compare and contrast the influence of various blocks, offering insights into the model's behavior and aiding in the optimization or interpretation of its workings.
+    - Inputs:
+        - `category_filter` (Required): Filters the analysis to specific categories, allowing for targeted exploration of block weights within the Lora model. Type should be `COMBO[STRING]`.
+        - `lora_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `strength_model` (Required): Adjusts the model's strength parameter, influencing the impact of block weights on the overall analysis. Type should be `FLOAT`.
+        - `strength_clip` (Required): Sets the clipping strength for block weights, refining the visualization by emphasizing more significant weights. Type should be `FLOAT`.
+        - `inverse` (Required): Determines whether to invert the block weights, offering an alternative perspective on their influence. Type should be `BOOLEAN`.
+        - `seed` (Required): Provides a seed for random number generation, ensuring reproducibility of the analysis. Type should be `INT`.
+        - `A` (Required): A parameter influencing the calculation of block weights, part of the model's internal configuration. Type should be `FLOAT`.
+        - `B` (Required): Another parameter affecting the block weight calculation, contributing to the model's analytical depth. Type should be `FLOAT`.
+        - `preset` (Required): Selects a preset configuration for the analysis, streamlining the setup process. Type should be `COMBO[STRING]`.
+        - `block_vectors` (Required): Specifies the vectors representing blocks to be analyzed, directly impacting the visualization output. Type should be `STRING`.
+        - `heatmap_palette` (Required): Chooses the color palette for the heatmap visualization, enhancing the interpretability of results. Type should be `COMBO[STRING]`.
+        - `heatmap_alpha` (Required): Sets the opacity level for the heatmap, allowing for adjustable visualization clarity. Type should be `FLOAT`.
+        - `heatmap_strength` (Required): Determines the intensity of the heatmap, affecting the visual distinction of block weights. Type should be `FLOAT`.
+        - `xyplot_mode` (Required): Selects the mode for XY plotting, defining the visualization's structure and focus. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `X (vectors)`: Outputs the vectors representing the analyzed blocks, ready for XY plotting and further analysis. Type should be `XY`.
+        - `Y (effect_compares)`: Outputs the comparative effects of the analyzed blocks, facilitating a deeper understanding of their impact through visualization. Type should be `XY`.

@@ -1,0 +1,14 @@
+- `easy controlnetLoaderADV`: The `easy controlnetLoaderADV` node specializes in loading advanced control networks for use in generative models, offering enhanced capabilities over standard loaders by supporting additional parameters and configurations. It facilitates the dynamic adjustment and application of control networks to influence the generation process, accommodating complex requirements and customization needs.
+    - Inputs:
+        - `pipe` (Required): Represents the pipeline context in which the control network will be applied, providing a framework for the integration and application of the control network. Type should be `PIPE_LINE`.
+        - `image` (Required): The image to which the control network adjustments will be applied, serving as the direct target for the control network's effects. Type should be `IMAGE`.
+        - `control_net_name` (Required): The name of the control network to be loaded, acting as a key identifier for retrieving the specific control network configuration from a predefined list or directory. Type should be `COMBO[STRING]`.
+        - `control_net` (Optional): An optional parameter allowing for the specification of an already loaded control network, facilitating reuse and efficiency in processing. Type should be `CONTROL_NET`.
+        - `strength` (Optional): Defines the intensity of the control network's effect on the image, allowing for fine-tuned adjustments to the generation process. Type should be `FLOAT`.
+        - `start_percent` (Optional): Specifies the starting point of the control network's effect in terms of the generation process timeline, enabling phased application. Type should be `FLOAT`.
+        - `end_percent` (Optional): Determines the end point of the control network's effect, allowing for precise control over the duration and timing of its influence. Type should be `FLOAT`.
+        - `scale_soft_weights` (Optional): Adjusts the softness of the control network's weights, providing an additional layer of customization for the control network's application. Type should be `FLOAT`.
+    - Outputs:
+        - `pipe`: The updated pipeline context, reflecting the application of the control network. Type should be `PIPE_LINE`.
+        - `positive`: The positive conditioning effects resulting from the control network's application, enhancing the generative model's output. Type should be `CONDITIONING`.
+        - `negative`: The negative conditioning effects, offering a counterbalance to the positive effects and enriching the model's generative capabilities. Type should be `CONDITIONING`.

@@ -1,7 +1,0 @@
-- `GetBoolFromJson`: This node is designed to extract a boolean value from a JSON object based on a specified key. It simplifies the process of retrieving boolean data from complex JSON structures, making it easier to use such data in decision-making processes or conditional flows within an application.
-    - Parameters:
-        - `key`: The key corresponding to the boolean value within the JSON object. This parameter allows for targeted extraction of data, making the operation more efficient. Type should be `STRING`.
-    - Inputs:
-        - `json`: The JSON object from which a boolean value is to be extracted. This parameter is crucial for specifying the source of the data. Type should be `JSON`.
-    - Outputs:
-        - `boolean`: The boolean value retrieved from the JSON object based on the specified key. This output is essential for further logical or conditional operations. Type should be `BOOLEAN`.

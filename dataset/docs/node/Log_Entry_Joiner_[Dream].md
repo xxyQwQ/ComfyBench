@@ -1,6 +1,0 @@
-- `Log Entry Joiner [Dream]`: The Log Entry Joiner node is designed to merge multiple log entries into a single, comprehensive log entry. It facilitates the consolidation of discrete log information, making it easier to manage and interpret log data as a unified entity.
-    - Parameters:
-    - Inputs:
-        - `entry_i`: Represents a log entry to be merged. Each 'entry_i' allows for the sequential combination of log entries, enhancing the comprehensiveness of the resulting log. The index 'i' can range from 0 to 3, indicating the position of the log entry in the merge process. Type should be `LOG_ENTRY`.
-    - Outputs:
-        - `log_entry`: The resulting unified log entry, which combines the information from the individual log entries provided as input. Type should be `LOG_ENTRY`.

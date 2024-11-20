@@ -1,0 +1,8 @@
+- `VHS_SelectEveryNthLatent`: This node is designed to selectively filter latents from a given batch based on specified criteria, effectively thinning the batch to include every nth latent while optionally skipping a number of initial latents. It's particularly useful for reducing the size of a latent batch or for sampling at regular intervals within a batch.
+    - Inputs:
+        - `latents` (Required): The input latent batch to be filtered. This parameter is crucial as it determines the subset of latents that will be selected based on the other criteria. Type should be `LATENT`.
+        - `select_every_nth` (Required): Determines the interval at which latents are selected from the batch. For example, a value of 2 would select every second latent in the batch. Type should be `INT`.
+        - `skip_first_latents` (Required): Specifies the number of initial latents to skip before beginning the selection process. This allows for more control over which latents are included in the resulting subset. Type should be `INT`.
+    - Outputs:
+        - `LATENT`: The filtered subset of latents after applying the selection criteria. Type should be `LATENT`.
+        - `count`: The total number of latents in the filtered subset, providing a quick reference to the size of the output batch. Type should be `INT`.

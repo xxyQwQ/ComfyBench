@@ -1,7 +1,0 @@
-- `DF_Sum`: The SumNode is designed to perform arithmetic addition, taking two float inputs and returning their sum as a float output. This node simplifies the process of adding numbers within a mathematical or computational context, facilitating operations that require summation.
-    - Parameters:
-        - `Value_A`: Represents one of the two values to be added together. Its role is crucial as it directly influences the sum calculation. Type should be `FLOAT`.
-        - `Value_B`: Serves as the second value to be added to the first. Its importance lies in its contribution to the overall sum, affecting the node's output. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The result of adding the two input values. It signifies the computed sum, encapsulating the node's primary function. Type should be `FLOAT`.

@@ -1,9 +1,0 @@
-- `easy promptLine`: The `promptLine` node is designed for the manipulation and generation of text lines based on conditioning inputs, facilitating the creation of new text content or the modification of existing ones. It leverages specific inputs to tailor text outputs for various applications, emphasizing the dynamic generation and transformation of text.
-    - Parameters:
-        - `prompt`: Serves as the foundational text input for manipulation or generation, where its content is crucial in determining the node's text output. Type should be `STRING`.
-        - `start_index`: Determines the starting point within the input text from which processing begins, allowing for targeted manipulation or generation. Type should be `INT`.
-        - `max_rows`: Specifies the maximum number of text lines to be generated or processed, setting a limit on the output's extent. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `STRING`: The output text after processing, reflecting the applied manipulations or generations based on the input conditions. Type should be `STRING`.
-        - `COMBO`: An additional output that may represent an alternative or complementary processing result to the 'STRING' output, typically involving a combination of text and other elements. Type should be `*`.

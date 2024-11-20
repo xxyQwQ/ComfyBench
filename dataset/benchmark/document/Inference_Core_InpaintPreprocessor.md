@@ -1,0 +1,6 @@
+- `Inference_Core_InpaintPreprocessor`: The Inpaint Preprocessor node is designed for image preprocessing in inpainting tasks, where it prepares images by applying masks to indicate areas for inpainting, effectively setting masked pixels to a specific value for further processing.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the input image to be preprocessed for inpainting, serving as the primary data for mask application. Type should be `IMAGE`.
+        - `mask` (Required): The 'mask' parameter specifies the areas of the input image to be inpainted, indicating which pixels should be considered for modification. Type should be `MASK`.
+    - Outputs:
+        - `image`: The output is a preprocessed image with specified areas masked for inpainting, ready for further processing steps. Type should be `IMAGE`.

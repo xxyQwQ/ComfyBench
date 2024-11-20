@@ -1,0 +1,10 @@
+- `easy wildcards`: The 'easy wildcards' node is designed to manage and process wildcards within strings, offering functionalities to define, normalize, read, and replace wildcards. It supports dynamic content generation by allowing the insertion of predefined or random elements into strings based on wildcard patterns. This node facilitates the customization and variability of text outputs, making it a versatile tool for generating dynamic content in applications.
+    - Inputs:
+        - `text` (Required): A string input that supports Lora Block Weight and wildcard functionality, allowing for dynamic content generation through the use of placeholders and predefined text patterns. Type should be `STRING`.
+        - `Select to add LoRA` (Required): Allows the selection of a LoRA to be added to the text, enhancing the input with additional, customizable layers of text transformation. Type should be `COMBO[STRING]`.
+        - `Select to add Wildcard` (Required): Enables the selection of a wildcard to be incorporated into the text, facilitating dynamic substitutions and content variability. Type should be `COMBO[STRING]`.
+        - `seed` (Required): An integer value used to seed random number generators for consistent wildcard replacements across different executions. Type should be `INT`.
+        - `multiline_mode` (Required): A boolean flag indicating whether the input text should be processed in multiline mode, affecting how wildcards and LoRAs are applied. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text`: The original input text with wildcards and LoRAs processed and applied, reflecting the dynamic content generation. Type should be `STRING`.
+        - `populated_text`: The text after processing, showing the result of wildcard and LoRA substitutions, providing a version of the text enriched with dynamic elements. Type should be `STRING`.

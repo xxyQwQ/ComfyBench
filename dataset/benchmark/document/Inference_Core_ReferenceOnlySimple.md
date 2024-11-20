@@ -1,0 +1,8 @@
+- `Inference_Core_ReferenceOnlySimple`: This node is designed to serve as a reference implementation within the ComfyUI Inference Core framework. It provides a simplified example of how to structure and implement inference nodes, focusing on demonstrating core concepts and practices without the complexity of full-featured nodes.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for inference, serving as the primary input for the node's processing. Type should be `MODEL`.
+        - `reference` (Required): Provides a reference or context for the inference process, aiding in the generation or transformation of outputs. Type should be `LATENT`.
+        - `batch_size` (Required): Determines the number of items to be processed in a single batch, affecting the throughput and performance of the inference. Type should be `INT`.
+    - Outputs:
+        - `model`: Represents the processed model data after inference, encapsulating the results in a structured format. Type should be `MODEL`.
+        - `latent`: Contains latent representations derived from the inference process, offering insights or modifications based on the model's output. Type should be `LATENT`.

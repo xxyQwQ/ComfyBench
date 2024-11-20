@@ -1,0 +1,10 @@
+- `BNK_CLIPTextEncodeSDXLAdvanced`: This node specializes in generating advanced CLIP text embeddings for Stable Diffusion XL models, incorporating dual text inputs for local and global context, token normalization strategies, and weight interpretation methods to fine-tune the conditioning process.
+    - Inputs:
+        - `text_l` (Required): The local context text input, allowing for detailed specification of parts of the image. Type should be `STRING`.
+        - `text_g` (Required): The global context text input, providing an overarching theme or setting for the image. Type should be `STRING`.
+        - `clip` (Required): A CLIP model instance used for text and image embeddings. Type should be `CLIP`.
+        - `token_normalization` (Required): Specifies the method for normalizing token weights, affecting the emphasis of certain words or phrases. Type should be `COMBO[STRING]`.
+        - `weight_interpretation` (Required): Defines how weights are interpreted, influencing the final embedding by adjusting the significance of certain tokens. Type should be `COMBO[STRING]`.
+        - `balance` (Required): A float value determining the balance between local and global text embeddings in the final output. Type should be `FLOAT`.
+    - Outputs:
+        - `conditioning`: The output is a conditioning object containing the advanced CLIP text embeddings, tailored for Stable Diffusion XL models. Type should be `CONDITIONING`.

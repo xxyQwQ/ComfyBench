@@ -1,0 +1,18 @@
+- `SaltLayerScheduler`: The SaltLayerScheduler node is designed for scheduling parallax motion effects in audio-visual presentations, enabling dynamic camera movements to enhance the visual storytelling experience.
+    - Inputs:
+        - `frame_count` (Required): Specifies the total number of frames for the parallax motion effect, determining the duration of the animation. Type should be `INT`.
+        - `zoom_speed` (Required): Controls the speed of zooming in or out, affecting the dynamic feel of the parallax motion. Type should be `FLOAT`.
+        - `pan_speed` (Required): Sets the speed of panning, influencing the smoothness and pace of horizontal movement. Type should be `FLOAT`.
+        - `pan_directions` (Required): Defines the directions for panning, allowing for customization of the motion path. Type should be `STRING`.
+        - `direction_change_frames` (Required): Determines the frames at which the direction of panning changes, enabling complex motion patterns. Type should be `STRING`.
+        - `tremor_scale` (Required): Adjusts the scale of tremor effects, adding a subtle dynamic to the visual presentation. Type should be `FLOAT`.
+        - `tremor_octaves` (Required): Modifies the complexity of the tremor effect through octaves, enhancing the visual texture. Type should be `INT`.
+        - `tremor_persistence` (Required): Influences the persistence of tremor effects, affecting their visual impact over time. Type should be `FLOAT`.
+        - `tremor_lacunarity` (Required): Controls the gap between successive tremor effects, shaping the overall motion aesthetic. Type should be `FLOAT`.
+        - `direction_curve` (Required): Specifies the easing function for direction changes, smoothing transitions between movements. Type should be `COMBO[STRING]`.
+        - `start_x` (Required): Sets the initial X position for the motion, establishing the starting point of the animation. Type should be `FLOAT`.
+        - `start_y` (Required): Determines the initial Y position, marking the beginning of the vertical motion. Type should be `FLOAT`.
+        - `zoom_mode` (Required): Selects the zooming mode, offering various options for zoom dynamics. Type should be `COMBO[STRING]`.
+        - `layer_offsets` (Required): Defines offsets for different layers, creating depth in the parallax effect. Type should be `STRING`.
+    - Outputs:
+        - `schedule_list`: Outputs a list representing the scheduled parallax motion effects, detailing the sequence of camera movements and adjustments. Type should be `LIST`.

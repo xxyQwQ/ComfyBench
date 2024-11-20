@@ -1,0 +1,7 @@
+- `JWImageLevels`: The JWImageLevels node adjusts the intensity levels of an image within a specified range, enhancing the visual contrast or correcting the exposure. It linearly rescales the image's colors between given minimum and maximum values, clipping any out-of-range values.
+    - Inputs:
+        - `image` (Required): The input image tensor to be adjusted. This tensor undergoes a linear transformation based on the specified minimum and maximum values, affecting its overall brightness and contrast. Type should be `IMAGE`.
+        - `min` (Required): The lower bound of the intensity range. Pixels with intensities below this value will be set to the minimum (black), effectively darkening the image. Type should be `FLOAT`.
+        - `max` (Required): The upper bound of the intensity range. Pixels with intensities above this value will be set to the maximum (white), effectively brightening the image. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output image tensor with adjusted intensity levels, where the pixel values are rescaled to fit within the new specified range. Type should be `IMAGE`.

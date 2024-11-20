@@ -1,0 +1,14 @@
+- `ADE_NoisedImageInjection`: This node is designed to facilitate the injection of noised images into a generative model's sampling process. It enables the dynamic alteration of images by applying noise and other transformations based on specified parameters, thereby enhancing the diversity and creativity of the generated outputs. The node's functionality is pivotal for scenarios requiring the integration of pre-existing imagery with new generative elements, offering a blend of precision and artistic freedom in the creation process.
+    - Inputs:
+        - `image` (Required): The original image to be injected with noise and potentially other transformations. It serves as the base for the injection process, influencing the final output by providing the initial visual context. Type should be `IMAGE`.
+        - `vae` (Required): A variational autoencoder used for encoding and decoding images during the injection process. It plays a crucial role in ensuring that the injected images are compatible with the model's latent space, facilitating seamless integration. Type should be `VAE`.
+        - `mask_opt` (Optional): An optional mask that specifies areas of the image to be affected by the injection process. It allows for targeted alterations, enhancing the precision of the injection. Type should be `MASK`.
+        - `invert_mask` (Optional): A boolean flag that, when true, inverts the mask's effect, targeting the injection process to areas outside the mask. Type should be `BOOLEAN`.
+        - `resize_image` (Optional): A boolean flag indicating whether the image should be resized as part of the injection process. This can be crucial for matching the dimensions expected by the model. Type should be `BOOLEAN`.
+        - `start_percent` (Optional): Specifies the starting point of the injection process as a percentage of the total steps, allowing for timed or phased injections. Type should be `FLOAT`.
+        - `guarantee_steps` (Optional): The minimum number of steps for which the injection will be applied, ensuring a certain level of impact from the injection. Type should be `INT`.
+        - `img_inject_opts` (Optional): Options for fine-tuning the injection process, such as positioning of the injected image. Type should be `IMAGE_INJECT_OPTIONS`.
+        - `strength_multival` (Optional): A multiplier for the injection strength, allowing for adjustments in the intensity of the applied noise or transformations. Type should be `MULTIVAL`.
+        - `prev_image_inject` (Optional): The previous group of injected images, enabling sequential and cumulative injections over multiple steps. Type should be `IMAGE_INJECT`.
+    - Outputs:
+        - `image_inject`: The updated group of injected images, including the newly injected image. This output facilitates sequential image injections, allowing for cumulative alterations over multiple steps. Type should be `IMAGE_INJECT`.

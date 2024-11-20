@@ -1,0 +1,8 @@
+- `Number Multiple Of`: The `Number Multiple Of` node is designed to determine if a given number is a multiple of another specified number, and if not, it adjusts the number to the next multiple. This functionality is essential in scenarios where alignment to specific numerical intervals is required.
+    - Inputs:
+        - `number` (Required): The `number` parameter represents the value to be checked against the specified multiple. It plays a crucial role in determining whether the number is already a multiple or needs adjustment. Type should be `NUMBER`.
+        - `multiple` (Required): The `multiple` parameter specifies the base value that the `number` parameter is checked against to determine if it is a multiple. This parameter influences the calculation of the next closest multiple if necessary. Type should be `INT`.
+    - Outputs:
+        - `number`: The output is either the original number if it is a multiple of the specified `multiple` parameter, or the next closest multiple. It provides a way to ensure numbers align with specific intervals. Type should be `NUMBER`.
+        - `float`: The output is either the original number if it is a multiple of the specified `multiple` parameter, or the next closest multiple, represented as a float. Type should be `FLOAT`.
+        - `int`: The output is either the original number if it is a multiple of the specified `multiple` parameter, or the next closest multiple, represented as an integer. Type should be `INT`.

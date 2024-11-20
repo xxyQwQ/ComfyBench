@@ -1,0 +1,6 @@
+- `CR Text`: This node is designed to handle multiline text input, providing a straightforward way to work with text data within the node's ecosystem. It simplifies the process of inputting and manipulating text, offering a link to further help and guidance on its usage.
+    - Inputs:
+        - `text` (Required): The 'text' parameter allows users to input multiline text. This input is essential for the node's operation, serving as the primary data that the node processes and manipulates. Type should be `STRING`.
+    - Outputs:
+        - `text`: Returns the original text input by the user. Type should be `*`.
+        - `show_help`: Provides a URL to a help page for further information and guidance on using the node. Type should be `STRING`.

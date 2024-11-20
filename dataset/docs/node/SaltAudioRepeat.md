@@ -1,7 +1,0 @@
-- `SaltAudioRepeat`: The SaltAudioRepeat node is designed to repeat an audio clip a specified number of times. This functionality is useful for extending the duration of an audio segment without altering its original content.
-    - Parameters:
-        - `repeat_times`: The 'repeat_times' parameter specifies how many times the audio clip should be repeated. This directly influences the length of the resulting audio output. Type should be `INT`.
-    - Inputs:
-        - `audio`: The 'audio' parameter is the raw audio data to be processed. It serves as the base audio clip that will be repeated according to the 'repeat_times' parameter. Type should be `AUDIO`.
-    - Outputs:
-        - `audio`: The output is the audio data after being repeated the specified number of times, effectively extending its duration. Type should be `AUDIO`.

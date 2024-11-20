@@ -1,6 +1,0 @@
-- `ConditioningCombineMultiple+`: This node is designed to merge multiple conditioning inputs into a single conditioning output. It supports combining up to five conditioning inputs, allowing for the flexible integration of various conditioning elements into a unified representation.
-    - Parameters:
-    - Inputs:
-        - `conditioning_i`: unknown Type should be `CONDITIONING`.
-    - Outputs:
-        - `conditioning`: The combined conditioning output, integrating up to five separate conditioning inputs into a unified representation. Type should be `CONDITIONING`.

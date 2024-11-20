@@ -1,7 +1,0 @@
-- `ImageBatchJoin`: The ImageBatchJoin node is designed to concatenate two batches of images along the batch dimension, ensuring that the images in both batches have matching dimensions before joining. It provides a mechanism to combine image data from different sources or processing stages into a single batch for further processing or analysis.
-    - Parameters:
-    - Inputs:
-        - `images_a`: The first batch of images to be concatenated. It's crucial that these images have the same dimensions as those in `images_b` to ensure a successful operation. Type should be `IMAGE`.
-        - `images_b`: The second batch of images to be concatenated with the first batch. The dimensions of these images must match those in `images_a` for the concatenation to proceed without errors. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The concatenated batch of images, combining `images_a` and `images_b` along the batch dimension. Type should be `IMAGE`.

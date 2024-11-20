@@ -1,0 +1,7 @@
+- `LLMSentenceSplitterNodeCreator`: This node is designed to split a given document into smaller, manageable nodes based on sentence boundaries. It utilizes customizable chunk sizes and overlaps to ensure comprehensive coverage and continuity across the document, facilitating further processing or analysis.
+    - Inputs:
+        - `document` (Required): The primary text document to be split into smaller nodes. It serves as the foundational input for the node's operation, dictating the scope and granularity of the splitting process. Type should be `DOCUMENT`.
+        - `chunk_size` (Optional): Specifies the maximum size of each chunk or node created from the document, allowing for control over the granularity of the splitting process. Type should be `INT`.
+        - `chunk_overlap` (Optional): Determines the amount of overlap between consecutive chunks or nodes, ensuring continuity and context preservation across splits. Type should be `INT`.
+    - Outputs:
+        - `llm_nodes`: The output is a collection of smaller, sentence-based nodes derived from the original document, ready for further processing or analysis. Type should be `LLM_NODES`.

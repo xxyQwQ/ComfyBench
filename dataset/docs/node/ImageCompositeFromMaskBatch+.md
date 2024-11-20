@@ -1,8 +1,0 @@
-- `ImageCompositeFromMaskBatch+`: This node is designed to create a composite image by blending two images based on a mask. It adjusts the dimensions and scales of the input images and mask to ensure compatibility, then applies the mask to blend 'image_from' and 'image_to' into a single output image.
-    - Parameters:
-    - Inputs:
-        - `image_from`: The base image over which the 'image_to' will be blended based on the 'mask'. Type should be `IMAGE`.
-        - `image_to`: The image to be blended onto the 'image_from' image according to the 'mask'. Type should be `IMAGE`.
-        - `mask`: A binary mask determining the blending of 'image_from' and 'image_to'. The areas marked by the mask will favor 'image_to'. Type should be `MASK`.
-    - Outputs:
-        - `image`: The resulting composite image after blending 'image_from' and 'image_to' based on the 'mask'. Type should be `IMAGE`.

@@ -1,0 +1,16 @@
+- `Fans Text Concatenate`: This node is designed to concatenate multiple text inputs into a single string, optionally adding line breaks between each text segment. It allows for flexible text manipulation and aggregation, making it suitable for preparing text data for further processing or display.
+    - Inputs:
+        - `linebreak_addition` (Required): Determines whether to add a line break between each concatenated text segment. A 'true' value inserts line breaks, while 'false' concatenates texts directly. Type should be `COMBO[STRING]`.
+        - `prompt` (Optional): An initial piece of text to start the concatenation process. It serves as the base to which other texts are appended. Type should be `STRING`.
+        - `text_a` (Optional): The first text to concatenate following the prompt, if provided. Type should be `STRING`.
+        - `text_b` (Optional): The second text to concatenate following any previous texts. Type should be `STRING`.
+        - `text_c` (Optional): The third text to concatenate, continuing the sequence of text aggregation. Type should be `STRING`.
+        - `text_d` (Optional): The fourth text in the concatenation sequence. Type should be `STRING`.
+        - `text_e` (Optional): The fifth text to be concatenated, further extending the text string. Type should be `STRING`.
+        - `text_f` (Optional): The sixth text to be added to the concatenated string. Type should be `STRING`.
+        - `text_g` (Optional): The seventh text in the concatenation order. Type should be `STRING`.
+        - `text_h` (Optional): The eighth text to be concatenated, adding more content to the string. Type should be `STRING`.
+        - `text_i` (Optional): The ninth text in the sequence, further extending the concatenated string. Type should be `STRING`.
+        - `text_j` (Optional): The tenth and final text to be concatenated, completing the text aggregation process. Type should be `STRING`.
+    - Outputs:
+        - `string`: The final concatenated text string, composed of up to ten individual text inputs and optional line breaks. Type should be `STRING`.

@@ -1,0 +1,18 @@
+- `IPAdapterModelHelper __Inspire`: The IPAdapterModelHelper node is designed to facilitate the integration and management of various models within the Inspire pack, ensuring compatibility and optimal performance. It handles the dynamic loading of models, error checking, and the application of IPAdapter configurations to enhance model interoperability and functionality.
+    - Inputs:
+        - `model` (Required): The primary model to which the IPAdapter configurations will be applied. This parameter is essential for defining the base model that will be enhanced or modified by the IPAdapter. Type should be `MODEL`.
+        - `clip` (Required): Specifies the CLIP model to be used in conjunction with the primary model for enhanced performance and compatibility. Type should be `CLIP`.
+        - `preset` (Required): Defines the preset configuration for the model setup, determining which models and settings are to be loaded and applied. Type should be `COMBO[STRING]`.
+        - `lora_strength_model` (Required): Adjusts the strength of the LoRA modifications applied to the model, allowing for fine-tuning of the model's behavior. Type should be `FLOAT`.
+        - `lora_strength_clip` (Required): Adjusts the strength of the LoRA modifications applied to the CLIP model, enabling precise control over its integration with the primary model. Type should be `FLOAT`.
+        - `insightface_provider` (Required): Specifies the provider for the InsightFace model, which is used for facial recognition and enhancement tasks. Type should be `COMBO[STRING]`.
+        - `cache_mode` (Required): Determines the caching strategy for models, particularly affecting how the InsightFace model is cached and utilized. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `IPADAPTER_PIPE`: A pipeline configuration that includes the IPAdapter and other models, ready for processing. Type should be `IPADAPTER_PIPE`.
+        - `IPADAPTER`: The loaded IPAdapter model, prepared for application to the primary model. Type should be `IPADAPTER`.
+        - `CLIP_VISION`: The CLIP vision model loaded and configured for use within the pipeline. Type should be `CLIP_VISION`.
+        - `INSIGHTFACE`: The InsightFace model loaded for facial recognition and enhancement tasks. Type should be `INSIGHTFACE`.
+        - `MODEL`: The enhanced model with IPAdapter configurations applied, ready for further use in the pipeline. Type should be `MODEL`.
+        - `CLIP`: The CLIP model loaded and configured for text-image tasks within the pipeline. Type should be `CLIP`.
+        - `insightface_cache_key`: The cache key for the InsightFace model, used for caching and retrieval purposes. Type should be `STRING`.
+        - `clip_vision_cache_key`: The cache key for the CLIP vision model, facilitating efficient caching and access. Type should be `STRING`.

@@ -1,0 +1,13 @@
+- `MaskBoundingBox+`: This node is designed for processing masks to identify and extract bounding box coordinates, facilitating tasks that require spatial localization within images. It can be used for cropping, object detection, and area-specific processing, enhancing the utility of masks by providing precise location data.
+    - Inputs:
+        - `mask` (Required): The input mask for which the bounding box is to be computed, representing a specific area within an image. The node calculates the bounding box that tightly encloses this area, providing spatial localization. Type should be `MASK`.
+        - `padding` (Required): An optional parameter that specifies the amount of padding to add to the bounding box, allowing for adjustments to the size of the extracted area. Type should be `INT`.
+        - `blur` (Required): An optional parameter that applies a blur to the mask before computing the bounding box, potentially smoothing the edges and affecting the final bounding box coordinates. Type should be `INT`.
+        - `image_optional` (Optional): An optional image input that, if provided, can be used in conjunction with the mask to refine the bounding box calculation based on the image content. Type should be `IMAGE`.
+    - Outputs:
+        - `MASK`: The mask adjusted to the bounding box, potentially including padding and modifications from the blur parameter. Type should be `MASK`.
+        - `IMAGE`: An optional output image cropped to the bounding box of the mask, provided if an image input was given. Type should be `IMAGE`.
+        - `x`: The x-coordinate of the top-left corner of the bounding box. Type should be `INT`.
+        - `y`: The y-coordinate of the top-left corner of the bounding box. Type should be `INT`.
+        - `width`: The width of the bounding box. Type should be `INT`.
+        - `height`: The height of the bounding box. Type should be `INT`.

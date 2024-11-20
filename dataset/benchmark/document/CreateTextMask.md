@@ -1,0 +1,17 @@
+- `CreateTextMask`: The CreateTextMask node is designed to generate text-based masks for images. It allows for the customization of text appearance and positioning within a specified frame, enabling the creation of dynamic and visually engaging masks based on textual content.
+    - Inputs:
+        - `invert` (Required): Determines whether the text mask should be inverted. This affects the visual contrast between the text and the background in the generated mask. Type should be `BOOLEAN`.
+        - `frames` (Required): Specifies the number of frames for the animation. This parameter is essential for creating animated masks, defining the total length of the animation. Type should be `INT`.
+        - `text_x` (Required): Sets the horizontal position of the text within the frame. This parameter allows precise control over the text's location in the mask. Type should be `INT`.
+        - `text_y` (Required): Sets the vertical position of the text within the frame. This parameter allows precise control over the text's location in the mask. Type should be `INT`.
+        - `font_size` (Required): Determines the size of the font used for the text in the mask. This parameter allows for the adjustment of the text's visual impact within the mask. Type should be `INT`.
+        - `font_color` (Required): Specifies the color of the text in the mask. This parameter enables the customization of the text's visual appearance to match the desired aesthetic. Type should be `STRING`.
+        - `text` (Required): Defines the text to be displayed in the mask. This parameter allows for the input of custom text, making each mask uniquely tailored to the desired content. Type should be `STRING`.
+        - `font` (Required): Selects the font used for the text in the mask. This parameter enables customization of the text's appearance by choosing from a variety of fonts. Type should be `COMBO[STRING]`.
+        - `width` (Required): Sets the width of the frame in which the text mask will be generated. This parameter defines the horizontal bounds for the text placement. Type should be `INT`.
+        - `height` (Required): Sets the height of the frame in which the text mask will be generated. This parameter defines the vertical bounds for the text placement. Type should be `INT`.
+        - `start_rotation` (Required): Specifies the starting rotation angle for the text in the mask. This parameter is crucial for creating dynamic, rotating text effects in the mask. Type should be `INT`.
+        - `end_rotation` (Required): Specifies the ending rotation angle for the text in the mask, enabling the creation of rotating text animations between the start and end angles. Type should be `INT`.
+    - Outputs:
+        - `image`: The generated image with the text mask applied. Type should be `IMAGE`.
+        - `mask`: The mask created from the specified text. Type should be `MASK`.

@@ -1,0 +1,10 @@
+- `LoadImageFromUrl`: This node is designed to load images from URLs, supporting a variety of formats including direct links, file paths, and data URIs. It abstracts the complexities of fetching and decoding images from different sources, making it easier to integrate external images into workflows or applications.
+    - Inputs:
+        - `image` (Optional): The image data directly provided for processing, allowing for flexibility in sourcing images beyond URLs. Type should be `STRING`.
+        - `keep_alpha_channel` (Optional): Determines whether the alpha channel of the image should be preserved during processing, affecting the output image format. Type should be `BOOLEAN`.
+        - `output_mode` (Optional): Specifies the desired format of the output image, influencing how the image is processed and returned. Type should be `BOOLEAN`.
+        - `url` (Optional): The URL or path of the image to be loaded. It supports direct links, file paths, and data URIs, enabling the node to fetch and decode images from various sources. Type should be `STRING`.
+    - Outputs:
+        - `images`: The loaded images, processed according to the specified parameters such as alpha channel preservation and output mode. Type should be `IMAGE`.
+        - `masks`: The masks generated for the images, if any, based on the processing options selected. Type should be `MASK`.
+        - `has_image`: A flag indicating whether an image was successfully loaded and processed. Type should be `BOOLEAN`.

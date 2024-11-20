@@ -1,6 +1,0 @@
-- `ConditioningClamp`: The ConditioningClamp node is designed to pass through conditioning data without modification, serving as a placeholder or checkpoint within a data processing pipeline.
-    - Parameters:
-    - Inputs:
-        - `conditioning`: This parameter represents the conditioning data that is passed through the node unchanged, highlighting its role in maintaining the integrity of the data flow. Type should be `CONDITIONING`.
-    - Outputs:
-        - `conditioning`: Outputs the unaltered conditioning data, emphasizing the node's function as a transparent conduit in the pipeline. Type should be `CONDITIONING`.

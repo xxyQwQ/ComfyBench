@@ -1,7 +1,0 @@
-- `SaltScheduleMerge`: The SaltScheduleMerge node is designed to combine two schedule lists into a single list, effectively appending the second list to the end of the first. This functionality is crucial for scenarios where sequential scheduling tasks need to be merged for streamlined processing.
-    - Parameters:
-    - Inputs:
-        - `schedule_list_a`: Represents the first schedule list to be merged. It serves as the initial part of the new, combined schedule list. Type should be `LIST`.
-        - `schedule_list_b`: Represents the second schedule list to be merged. It is appended to the end of the first list, completing the combined schedule list. Type should be `LIST`.
-    - Outputs:
-        - `schedule_list`: The combined schedule list resulting from appending the second list to the first. Type should be `LIST`.

@@ -1,7 +1,0 @@
-- `Dictionary to Console`: This node is designed for debugging purposes, allowing the user to print a dictionary to the console with an optional label for easier identification. It emphasizes the utility of visually inspecting dictionary contents directly within the console, facilitating the debugging and development process.
-    - Parameters:
-        - `label`: An optional label to precede the dictionary output in the console, enhancing readability and identification. Type should be `STRING`.
-    - Inputs:
-        - `dictionary`: The dictionary to be printed to the console. It is essential for visual inspection and debugging purposes. Type should be `DICT`.
-    - Outputs:
-        - `dict`: Returns the same dictionary that was input, allowing for further use in the node chain without alteration. Type should be `DICT`.

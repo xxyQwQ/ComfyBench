@@ -1,0 +1,6 @@
+- `ColorizeDepthmap`: The ColorizeDepthmap node is designed to transform depth maps into colorized representations, enhancing visual interpretation by applying a colormap. This process facilitates easier understanding and analysis of depth information by converting grayscale depth maps into vibrant, color-coded images.
+    - Inputs:
+        - `image` (Required): The depth map to be colorized, which can be either a torch.Tensor or a numpy.ndarray. This map represents the depth information of a scene as a 2D array. Type should be `IMAGE`.
+        - `colorize_method` (Required): The name of the matplotlib colormap to use for colorizing the depth map. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The colorized depth map, enhanced with a colormap for better visual interpretation. The output is in the same data type as the input depth map. Type should be `IMAGE`.

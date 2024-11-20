@@ -1,0 +1,10 @@
+- `Random Number`: This node generates random numbers based on specified parameters, including the type of number (integer, float, or boolean), and the range within which the number should fall. It allows for the generation of random numbers with a seed to ensure reproducibility.
+    - Inputs:
+        - `number_type` (Required): Specifies the type of number to generate, which can be an integer, float, or boolean. This affects the method used for generating the random number. Type should be `COMBO[STRING]`.
+        - `minimum` (Required): The minimum value in the range from which the random number will be generated. Type should be `FLOAT`.
+        - `maximum` (Required): The maximum value in the range from which the random number will be generated. Type should be `FLOAT`.
+        - `seed` (Required): A seed value to ensure the reproducibility of the random number generation. Type should be `INT`.
+    - Outputs:
+        - `number`: The generated random number. Type should be `NUMBER`.
+        - `float`: The generated random number represented as a float. Type should be `FLOAT`.
+        - `int`: The generated random number rounded to the nearest integer. Type should be `INT`.

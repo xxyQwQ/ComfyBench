@@ -1,0 +1,7 @@
+- `SeargeFloatPair`: The SeargeFloatPair node is designed to simply return a pair of float values as provided in its input. It serves as a basic utility within a larger system, allowing for the straightforward passing and manipulation of float values.
+    - Inputs:
+        - `value1` (Required): Specifies the first float value to be returned. It is a fundamental input that directly determines the first element of the output pair. Type should be `FLOAT`.
+        - `value2` (Required): Defines the second float value to be returned. This input is crucial as it sets the second element of the output pair, complementing the first value. Type should be `FLOAT`.
+    - Outputs:
+        - `value 1`: unknown Type should be `FLOAT`.
+        - `value 2`: unknown Type should be `FLOAT`.

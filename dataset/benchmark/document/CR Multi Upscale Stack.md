@@ -1,0 +1,15 @@
+- `CR Multi Upscale Stack`: This node is designed to create a stack of upscale operations based on specified models and rescale factors. It allows for the dynamic addition of upscale models to a list, enabling a sequence of image upscale transformations to be defined and applied in a modular fashion.
+    - Inputs:
+        - `switch_1` (Required): Determines whether the first upscale operation should be included in the stack. It acts as a conditional flag for the inclusion of the first upscale model and its corresponding rescale factor. Type should be `COMBO[STRING]`.
+        - `upscale_model_1` (Required): Specifies the first upscale model to be potentially included in the stack, contingent on the state of switch_1. Type should be `COMBO[STRING]`.
+        - `rescale_factor_1` (Required): Defines the rescale factor associated with the first upscale model, determining the magnitude of the upscale transformation. Type should be `FLOAT`.
+        - `switch_2` (Required): Acts as a conditional flag for the inclusion of the second upscale model and its corresponding rescale factor in the stack. Type should be `COMBO[STRING]`.
+        - `upscale_model_2` (Required): Specifies the second upscale model to be potentially included in the stack, contingent on the state of switch_2. Type should be `COMBO[STRING]`.
+        - `rescale_factor_2` (Required): Defines the rescale factor associated with the second upscale model, determining the magnitude of the upscale transformation. Type should be `FLOAT`.
+        - `switch_3` (Required): Determines whether the third upscale operation should be included in the stack. It acts as a conditional flag for the inclusion of the third upscale model and its corresponding rescale factor. Type should be `COMBO[STRING]`.
+        - `upscale_model_3` (Required): Specifies the third upscale model to be potentially included in the stack, contingent on the state of switch_3. Type should be `COMBO[STRING]`.
+        - `rescale_factor_3` (Required): Defines the rescale factor associated with the third upscale model, determining the magnitude of the upscale transformation. Type should be `FLOAT`.
+        - `upscale_stack` (Optional): An optional initial list of upscale operations to be extended with additional models and rescale factors based on the switches. It allows for the accumulation and modular configuration of upscale transformations. Type should be `UPSCALE_STACK`.
+    - Outputs:
+        - `UPSCALE_STACK`: The compiled list of upscale operations, each represented as a tuple of an upscale model and its corresponding rescale factor. This list is dynamically constructed based on the input switches and parameters. Type should be `UPSCALE_STACK`.
+        - `show_help`: A URL providing access to additional documentation and help related to the CR Multi Upscale Stack node. Type should be `STRING`.

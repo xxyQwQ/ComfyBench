@@ -1,0 +1,26 @@
+- `KSampler Adv. (Efficient)`: This node specializes in advanced sampling techniques for generating or refining images based on given inputs. It leverages a more sophisticated approach compared to regular samplers, allowing for enhanced control over the sampling process, including noise addition and stepwise refinement, to produce high-quality outputs.
+    - Inputs:
+        - `model` (Required): The model parameter specifies the generative model to be used for sampling. It is crucial for determining the behavior and quality of the generated images. Type should be `MODEL`.
+        - `add_noise` (Required): Determines whether noise should be added to the sampling process, allowing for more variability and realism in the generated images. Type should be `COMBO[STRING]`.
+        - `noise_seed` (Required): Seed for the noise generation, ensuring control over the randomness in the added noise for reproducibility. Type should be `INT`.
+        - `steps` (Required): Specifies the number of steps to perform in the sampling process, affecting the detail and quality of the output. Type should be `INT`.
+        - `cfg` (Required): The CFG scale used to balance between fidelity to the prompt and the randomness of the generation, influencing the output's creativity. Type should be `FLOAT`.
+        - `sampler_name` (Required): The name of the sampler to use, defining the specific sampling algorithm and its characteristics. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Specifies the scheduler for controlling the sampling process, affecting how the steps are executed over time. Type should be `COMBO[STRING]`.
+        - `positive` (Required): Positive conditioning to guide the generation towards desired attributes or features. Type should be `CONDITIONING`.
+        - `negative` (Required): Negative conditioning to steer the generation away from certain attributes or features. Type should be `CONDITIONING`.
+        - `latent_image` (Required): The initial latent image to start the sampling process from, setting the basis for generation or refinement. Type should be `LATENT`.
+        - `start_at_step` (Required): The step number to start the sampling process, allowing for mid-process interventions or adjustments. Type should be `INT`.
+        - `end_at_step` (Required): The final step number in the sampling process, defining the endpoint for generation or refinement. Type should be `INT`.
+        - `return_with_leftover_noise` (Required): Indicates whether to return the sampled image with leftover noise, offering a choice between a cleaner or more raw output. Type should be `COMBO[STRING]`.
+        - `preview_method` (Required): unknown Type should be `COMBO[STRING]`.
+        - `vae_decode` (Required): unknown Type should be `COMBO[STRING]`.
+        - `optional_vae` (Optional): unknown Type should be `VAE`.
+        - `script` (Optional): unknown Type should be `SCRIPT`.
+    - Outputs:
+        - `MODEL`: The output includes the model used in the sampling process, potentially modified or updated. Type should be `MODEL`.
+        - `CONDITIONING+`: Output conditioning that positively influences the generation towards desired characteristics. Type should be `CONDITIONING`.
+        - `CONDITIONING-`: Output conditioning that negatively influences the generation, steering it away from undesired characteristics. Type should be `CONDITIONING`.
+        - `LATENT`: The latent representation of the image after the sampling process, ready for further processing or conversion to image form. Type should be `LATENT`.
+        - `VAE`: The VAE model used or affected during the sampling process, if applicable. Type should be `VAE`.
+        - `IMAGE`: The final image output after the sampling process, reflecting the combined effects of conditioning, noise, and model parameters. Type should be `IMAGE`.

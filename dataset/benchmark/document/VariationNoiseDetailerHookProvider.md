@@ -1,0 +1,6 @@
+- `VariationNoiseDetailerHookProvider`: This node provides a mechanism to introduce variation into the noise used in detail enhancement processes, leveraging a specified seed and strength to generate a modified noise pattern. It aims to enrich the textural details and variability in generated images or segments by blending original noise with a variation-induced noise.
+    - Inputs:
+        - `seed` (Required): The seed parameter is crucial for generating the variation-induced noise, ensuring reproducibility and consistency in the noise pattern across different executions. Type should be `INT`.
+        - `strength` (Required): The strength parameter determines the degree to which the variation-induced noise influences the final noise output, allowing for fine-tuned control over the textural changes introduced. Type should be `FLOAT`.
+    - Outputs:
+        - `detailer_hook`: Outputs a detailer hook configured with variation-induced noise, ready to be used in enhancing the details of generated images or segments. Type should be `DETAILER_HOOK`.

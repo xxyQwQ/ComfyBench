@@ -1,0 +1,53 @@
+{
+  "16": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "EmptyImage"
+    }
+  },
+  "18": {
+    "inputs": {
+      "text": "Hello, world!",
+      "font_name": "comic.ttf",
+      "font_size": 50,
+      "font_color": "custom",
+      "align": "center",
+      "justify": "center",
+      "margins": 0,
+      "line_spacing": 0,
+      "position_x": 0,
+      "position_y": 0,
+      "rotation_angle": 0,
+      "rotation_options": "text center",
+      "font_color_hex": "#FFFFFF",
+      "speak_and_recognation": true,
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "CR Overlay Text",
+    "_meta": {
+      "title": "🔤 CR Overlay Text"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  }
+}

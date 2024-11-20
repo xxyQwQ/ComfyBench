@@ -1,0 +1,6 @@
+- `Save Image (api)`: The Save Image node is designed to persist images to disk without including any metadata, using a unique hexdigest-based filename. It is typically used in workflows where the final output needs to be stored efficiently and metadata preservation is not required. The output from this node is often used to signal the completion of a request or task.
+    - Inputs:
+        - `images` (Required): The primary input for the node, representing the images to be saved. This parameter is crucial for the node's operation as it directly influences the output by determining which images are stored. Type should be `IMAGE`.
+        - `resource_name` (Required): An optional parameter that specifies the base name for the saved images. It allows for a customizable naming convention that can be useful in organizing and retrieving saved images. Type should be `STRING`.
+    - Outputs:
+        - `task_done`: Indicates that the image saving task has been completed successfully. Type should be `TASK_DONE`.

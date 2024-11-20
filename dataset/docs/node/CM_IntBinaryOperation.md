@@ -1,8 +1,0 @@
-- `CM_IntBinaryOperation`: The node `CM_IntBinaryOperation` performs binary operations on integer inputs, such as addition, subtraction, multiplication, and division, based on a specified operation. It abstracts the complexity of these operations into a simple interface, allowing for the dynamic execution of various mathematical operations on integers.
-    - Parameters:
-        - `op`: Specifies the binary operation to be performed on the integer inputs. This affects the node's execution by determining the mathematical operation applied. Type should be `COMBO[STRING]`.
-        - `a`: Represents the first integer input for the binary operation. It is one of the operands on which the specified operation is performed. Type should be `INT`.
-        - `b`: Represents the second integer input for the binary operation. It serves as the other operand in the operation alongside `a`. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `int`: The result of the specified binary operation performed on the integer inputs `a` and `b`. Type should be `INT`.

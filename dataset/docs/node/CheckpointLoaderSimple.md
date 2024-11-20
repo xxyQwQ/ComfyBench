@@ -1,8 +1,0 @@
-- `CheckpointLoaderSimple`: The CheckpointLoaderSimple node is designed for loading model checkpoints without the need for specifying a configuration. It simplifies the process of checkpoint loading by requiring only the checkpoint name, making it more accessible for users who may not be familiar with the configuration details.
-    - Parameters:
-        - `ckpt_name`: Specifies the name of the checkpoint to be loaded. This parameter is crucial as it determines which checkpoint file the node will attempt to load, directly affecting the node's execution and the model that is loaded. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `model`: Returns the loaded model, allowing it to be used for further processing or inference. Type should be `MODEL`.
-        - `clip`: Returns the CLIP model associated with the loaded checkpoint, if available. Type should be `CLIP`.
-        - `vae`: Returns the VAE model associated with the loaded checkpoint, if available. Type should be `VAE`.

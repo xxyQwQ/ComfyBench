@@ -1,8 +1,0 @@
-- `Image Bloom Filter`: The node applies a bloom filter effect to an image, enhancing its visual appeal by simulating the way the human eye perceives extreme brightness. It blurs the bright areas and adds them back to the original image, creating a glowing effect around bright spots.
-    - Parameters:
-        - `radius`: Defines the radius for the Gaussian blur applied during the bloom filter effect creation. It influences the spread and intensity of the bloom effect around bright areas of the image. Type should be `FLOAT`.
-        - `intensity`: A multiplier for the bloom effect's intensity. It controls how much the bloom effect contributes to the final image, allowing for fine-tuning of the glow's strength around bright spots. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The image to which the bloom filter effect will be applied. It serves as the base for creating the bloom effect by undergoing a series of transformations including blurring and brightness adjustment. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The final image after applying the bloom filter effect, showcasing enhanced brightness and a glowing effect around bright areas. Type should be `IMAGE`.

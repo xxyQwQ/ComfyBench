@@ -1,0 +1,15 @@
+- `LayerUtility_ ImageScaleRestore V2`: This node is designed to adjust the scale of images and optionally their masks to a specified size or scale, using various interpolation methods. It can handle multiple images in a batch, ensuring that each image is resized according to the given parameters, including the option to scale by the longest side for uniformity across varying image dimensions. The node emphasizes flexibility in image processing tasks, allowing for detailed control over the resizing process.
+    - Inputs:
+        - `image` (Required): The input image or images to be scaled. This parameter is crucial for defining the source images that will undergo resizing operations. Type should be `IMAGE`.
+        - `scale` (Required): The scale factor to apply to the image dimensions. It determines how much the image size should be increased or decreased. Type should be `FLOAT`.
+        - `method` (Required): Specifies the interpolation method to use for resizing the images. This affects the quality and characteristics of the output image. Type should be `COMBO[STRING]`.
+        - `scale_by` (Required): Determines the criterion for scaling the image, such as by its longest side, shortest side, width, height, or total pixel count. Type should be `COMBO[STRING]`.
+        - `scale_by_length` (Required): Specifies the target length for the chosen scaling criterion, applicable when scaling by dimensions or total pixel count. Type should be `INT`.
+        - `mask` (Optional): An optional mask or masks associated with the image(s), which will be resized in tandem with the image. Type should be `MASK`.
+        - `original_size` (Optional): An optional parameter specifying the target dimensions to resize the image to, overriding the scale factor. Type should be `BOX`.
+    - Outputs:
+        - `image`: The resized images, adjusted according to the specified scale, dimensions, or method. Type should be `IMAGE`.
+        - `mask`: The resized masks corresponding to the input images, if masks were provided. Type should be `MASK`.
+        - `original_size`: The original dimensions of the input images before resizing. Type should be `BOX`.
+        - `width`: The target width of the resized images. Type should be `INT`.
+        - `height`: The target height of the resized images. Type should be `INT`.

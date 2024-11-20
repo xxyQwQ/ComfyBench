@@ -1,6 +1,0 @@
-- `ADE_LoadCameraPoses`: The `ADE_LoadCameraPoses` node is designed to load camera control poses from a specified file, facilitating the manipulation and animation of camera positions within the Animate Diff framework. It serves as a foundational element in creating dynamic and complex camera movements for animation sequences.
-    - Parameters:
-        - `pose_filename`: Specifies the filename from which camera control poses are to be loaded. This filename should correspond to a file containing the desired camera poses, enabling the node to retrieve and utilize these poses for animation purposes. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `cameractrl_poses`: Outputs a list of camera control poses, which are structured as lists of floats representing the camera's position, orientation, and other relevant parameters in the animation context. Type should be `CAMERACTRL_POSES`.

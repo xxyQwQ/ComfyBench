@@ -1,0 +1,20 @@
+- `MakeBasicPipe __Inspire`: The MakeBasicPipe __Inspire node is designed to construct a foundational pipeline for creative content generation, integrating various components such as models, encoders, and custom processing logic. It facilitates the seamless combination of text inputs with model-driven transformations, aiming to enhance the creative output through specialized encoding and adaptation techniques.
+    - Inputs:
+        - `ckpt_name` (Required): The name of the checkpoint to load for the model, defining the starting point for content generation. Type should be `COMBO[STRING]`.
+        - `ckpt_key_opt` (Required): Optional key to specify a particular configuration or variant within the checkpoint, allowing for more tailored content generation. Type should be `STRING`.
+        - `positive_wildcard_text` (Required): Text input for positive prompts, intended to guide the content generation towards specific themes or concepts. Type should be `STRING`.
+        - `negative_wildcard_text` (Required): Text input for negative prompts, intended to steer the content generation away from certain themes or concepts. Type should be `STRING`.
+        - `Add selection to` (Required): Determines whether the selection is added to the positive or negative prompts, influencing the direction of content generation. Type should be `BOOLEAN`.
+        - `Select to add LoRA` (Required): Allows selection of a LoRA to add to the text, enhancing the content generation process with additional layers of refinement. Type should be `COMBO[STRING]`.
+        - `Select to add Wildcard` (Required): Enables the selection of a wildcard to be added to the text, introducing specific variables or elements into the content generation. Type should be `COMBO[STRING]`.
+        - `wildcard_mode` (Required): Specifies whether the wildcard text is populated dynamically or fixed, affecting how the prompts are generated and used. Type should be `BOOLEAN`.
+        - `positive_populated_text` (Required): Specifies the text input intended to have a positive influence on the content generation process, affecting the direction and nature of the generated output. Type should be `STRING`.
+        - `negative_populated_text` (Required): Specifies the text input intended to have a negative influence, guiding the content generation away from certain themes or concepts. Type should be `STRING`.
+        - `token_normalization` (Required): Indicates whether and how tokens should be normalized during processing, impacting the encoding and subsequent model interactions. Type should be `COMBO[STRING]`.
+        - `weight_interpretation` (Required): Determines how weights are interpreted in the encoding process, influencing the handling of text inputs. Type should be `COMBO[STRING]`.
+        - `stop_at_clip_layer` (Required): Specifies the layer of the CLIP model at which processing should stop, affecting the depth of analysis and modification. Type should be `INT`.
+        - `seed` (Required): A seed value for initializing random processes, ensuring reproducibility or variability in the content generation. Type should be `INT`.
+        - `vae_opt` (Optional): Optional parameter to specify a variational autoencoder option, enabling further customization of the content generation process. Type should be `VAE`.
+    - Outputs:
+        - `basic_pipe`: The constructed foundational pipeline, ready for use in generating creative content based on the specified inputs and configurations. Type should be `BASIC_PIPE`.
+        - `cache_key`: A unique key associated with the generated pipeline's configuration, facilitating caching and retrieval of the pipeline for future use. Type should be `STRING`.

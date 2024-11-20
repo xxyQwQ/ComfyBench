@@ -1,0 +1,8 @@
+- `SplitImageChannels`: The SplitImageChannels node is designed to separate the individual color channels of an image into distinct images, each channel being expanded across all channels of its respective output image, and additionally extracts the alpha channel as a separate mask. This process facilitates operations that require manipulation or analysis of specific color components within an image.
+    - Inputs:
+        - `image` (Required): The input image to be split into its constituent color channels. This image is expected to have multiple channels, including an alpha channel for transparency. Type should be `IMAGE`.
+    - Outputs:
+        - `red`: The red channel of the input image, expanded across all three color channels of the output image. Type should be `IMAGE`.
+        - `green`: The green channel of the input image, expanded across all three color channels of the output image. Type should be `IMAGE`.
+        - `blue`: The blue channel of the input image, expanded across all three color channels of the output image. Type should be `IMAGE`.
+        - `mask`: The alpha channel of the input image, representing the transparency mask. Type should be `MASK`.

@@ -1,0 +1,8 @@
+- `AV_LLMChat`: The LLMChat node facilitates conversation with language models by processing and forwarding messages, configurations, and optional seed information to an API for generating responses. It abstracts the complexities of interacting with different language model APIs, providing a unified interface for initiating chat sessions.
+    - Inputs:
+        - `messages` (Required): A list of messages that include both user and system messages, which are processed and formatted for the API call. This parameter is crucial for determining the flow and context of the conversation. Type should be `LLM_MESSAGE`.
+        - `api` (Required): The API object that specifies the language model to be used for the chat session. It plays a key role in directing the request to the appropriate language model API. Type should be `LLM_API`.
+        - `config` (Required): Configuration settings for the language model, including model selection and parameters like max tokens and temperature, which influence the generation's verbosity and creativity. Type should be `LLM_CONFIG`.
+        - `seed` (Required): An optional seed for deterministic output, enhancing reproducibility of the chat responses. Type should be `INT`.
+    - Outputs:
+        - `response`: The generated text response from the language model, encapsulating the model's reply to the input messages. Type should be `STRING`.

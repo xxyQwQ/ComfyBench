@@ -1,6 +1,0 @@
-- `ClipClamp`: The ClipClamp node is designed to pass through CLIP data without modification, serving as a placeholder or checkpoint within a data processing pipeline.
-    - Parameters:
-    - Inputs:
-        - `clip`: The 'clip' parameter is the CLIP data that this node processes. It acts as a direct pass-through, ensuring that the CLIP data remains unchanged through the node. Type should be `CLIP`.
-    - Outputs:
-        - `clip`: Returns the unmodified CLIP data, maintaining its integrity for further processing or analysis. Type should be `CLIP`.

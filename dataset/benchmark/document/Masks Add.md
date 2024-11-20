@@ -1,0 +1,6 @@
+- `Masks Add`: The node is designed to perform addition operations on mask data, effectively combining or layering two masks together. It supports handling masks with different dimensions by adjusting their shapes before performing the addition, ensuring compatibility and flexibility in mask manipulation.
+    - Inputs:
+        - `masks_a` (Required): Represents the first set of masks to be added. Its role is crucial as it serves as one of the two primary inputs for the addition operation, directly influencing the outcome. Type should be `MASK`.
+        - `masks_b` (Required): Represents the second set of masks to be added alongside `masks_a`. It plays a vital role in the addition operation, contributing to the final combined mask result. Type should be `MASK`.
+    - Outputs:
+        - `MASKS`: The result of adding two sets of masks, which could be used for further image processing or analysis tasks. Type should be `MASK`.

@@ -1,0 +1,5 @@
+- `FromListGetStrings`: This node is designed to retrieve a specific string from a list of strings based on a given index. It abstracts the process of accessing list elements, allowing for both direct and reverse indexing, thereby enhancing the flexibility and ease of manipulating lists of strings within a workflow.
+    - Inputs:
+        - `list` (Required): The list of strings from which a specific string is to be retrieved. It is essential for the operation of the node as it provides the data source. Type should be `STRING`.
+    - Outputs:
+        - `string`: The string retrieved from the specified index within the list. This output is crucial for further processing or utilization within the workflow. Type should be `STRING`.

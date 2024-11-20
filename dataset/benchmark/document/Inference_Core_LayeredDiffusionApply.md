@@ -1,0 +1,7 @@
+- `Inference_Core_LayeredDiffusionApply`: This node is designed to apply a layered diffusion process to an input model, leveraging specific configurations and conditions to modify the model's behavior for enhanced image generation or transformation. It abstracts complex diffusion and conditioning logic into a more accessible interface for users, aiming to facilitate the creation of nuanced and high-quality visual content.
+    - Inputs:
+        - `model` (Required): Represents the model to which the layered diffusion process will be applied, playing a crucial role in determining the outcome of the diffusion process by influencing the model's behavior and the quality of generated images. Type should be `MODEL`.
+        - `config` (Required): The configuration string that specifies the particular settings or parameters for the layered diffusion process, directly impacting how the model is modified and behaves during image generation. Type should be `COMBO[STRING]`.
+        - `weight` (Required): A float value that influences the intensity or degree of the applied diffusion process, affecting the final visual output by adjusting how the model's parameters are modified. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The modified model after the application of the layered diffusion process, showcasing the effects of the diffusion and conditioning on the model's ability to generate or transform images. Type should be `MODEL`.

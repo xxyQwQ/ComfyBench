@@ -1,0 +1,179 @@
+{
+    "17": {
+        "_meta": {
+            "title": "KSampler"
+        },
+        "class_type": "KSampler",
+        "inputs": {
+            "cfg": 4,
+            "denoise": 1,
+            "latent_image": [
+                "5",
+                0
+            ],
+            "model": [
+                "4",
+                0
+            ],
+            "negative": [
+                "7",
+                0
+            ],
+            "positive": [
+                "26",
+                0
+            ],
+            "sampler_name": "dpmpp_2m_sde",
+            "scheduler": "karras",
+            "seed": 797967395221167,
+            "steps": 27
+        }
+    },
+    "26": {
+        "_meta": {
+            "title": "Apply ControlNet"
+        },
+        "class_type": "ControlNetApply",
+        "inputs": {
+            "conditioning": [
+                "6",
+                0
+            ],
+            "control_net": [
+                "27",
+                0
+            ],
+            "image": [
+                "32",
+                0
+            ],
+            "strength": 0.8
+        }
+    },
+    "27": {
+        "_meta": {
+            "title": "Load ControlNet Model"
+        },
+        "class_type": "ControlNetLoader",
+        "inputs": {
+            "control_net_name": "control_v11p_sd15_scribble_fp16.safetensors"
+        }
+    },
+    "28": {
+        "_meta": {
+            "title": "Load Image"
+        },
+        "class_type": "LoadImage",
+        "inputs": {
+            "image": "simple_graffiti.png",
+            "upload": "image"
+        }
+    },
+    "31": {
+        "_meta": {
+            "title": "\ud83d\udd27 Get Image Size"
+        },
+        "class_type": "GetImageSize+",
+        "inputs": {
+            "image": [
+                "28",
+                0
+            ]
+        }
+    },
+    "32": {
+        "_meta": {
+            "title": "Invert Image"
+        },
+        "class_type": "ImageInvert",
+        "inputs": {
+            "image": [
+                "28",
+                0
+            ]
+        }
+    },
+    "4": {
+        "_meta": {
+            "title": "Load Checkpoint"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "inputs": {
+            "ckpt_name": "dreamshaper_8.safetensors"
+        }
+    },
+    "5": {
+        "_meta": {
+            "title": "Empty Latent Image"
+        },
+        "class_type": "EmptyLatentImage",
+        "inputs": {
+            "batch_size": 1,
+            "height": [
+                "31",
+                1
+            ],
+            "width": [
+                "31",
+                0
+            ]
+        }
+    },
+    "6": {
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "speak_and_recognation": true,
+            "text": "a bird, open wings,"
+        }
+    },
+    "7": {
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "speak_and_recognation": true,
+            "text": "horror,lowres, zombie,"
+        }
+    },
+    "8": {
+        "_meta": {
+            "title": "VAE Decode"
+        },
+        "class_type": "VAEDecode",
+        "inputs": {
+            "samples": [
+                "17",
+                0
+            ],
+            "vae": [
+                "4",
+                2
+            ]
+        }
+    },
+    "9": {
+        "_meta": {
+            "title": "Save Image"
+        },
+        "class_type": "SaveImage",
+        "inputs": {
+            "filename_prefix": "Comfy",
+            "images": [
+                "8",
+                0
+            ]
+        }
+    }
+}

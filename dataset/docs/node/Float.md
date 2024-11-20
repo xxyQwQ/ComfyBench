@@ -1,6 +1,0 @@
-- `Float`: The Float node is designed to process numerical inputs, specifically floating-point numbers, allowing for precise control over decimal values in logical operations or calculations.
-    - Parameters:
-        - `value`: Defines the floating-point number to be processed. This input is crucial for determining the node's operation, affecting the precision and outcome of calculations. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `FLOAT`: Outputs the processed floating-point number, maintaining the precision specified in the input. Type should be `FLOAT`.

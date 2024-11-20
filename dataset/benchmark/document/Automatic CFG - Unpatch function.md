@@ -1,0 +1,5 @@
+- `Automatic CFG - Unpatch function`: This node is designed to revert any previously applied configuration patches to a model, effectively restoring it to its original state without the specific adjustments made for automatic control flow graph (CFG) manipulation.
+    - Inputs:
+        - `model` (Required): The model to be unpatched. This input is crucial as it specifies the model from which the automatic CFG-related patches will be removed, ensuring the model is returned to its initial configuration. Type should be `MODEL`.
+    - Outputs:
+        - `model`: The unpatched model, returned after removing specific automatic CFG-related patches, restoring it to its original, unmodified state. Type should be `MODEL`.

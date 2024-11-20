@@ -1,0 +1,10 @@
+- `MaskToSEGS_for_AnimateDiff`: This node is designed to convert masks into SEGS format specifically tailored for animations with differential impact, accommodating both 2D and 3D masks. It leverages contour filling options and advanced mask processing techniques to ensure the generated SEGS are optimized for animation sequences, handling batch masks with specialized transformations when necessary.
+    - Inputs:
+        - `mask` (Required): The input mask to be converted into SEGS. This mask can be either 2D or 3D, and it is the primary input for generating SEGS tailored for animations. Type should be `MASK`.
+        - `combined` (Required): A boolean flag indicating whether the mask and the resulting SEGS should be combined, affecting the processing logic of the node. Type should be `BOOLEAN`.
+        - `crop_factor` (Required): A factor determining the extent of cropping applied to the mask before conversion, influencing the size and detail of the resulting SEGS. Type should be `FLOAT`.
+        - `bbox_fill` (Required): A boolean flag that determines whether bounding boxes should be filled, impacting the visual representation of the resulting SEGS. Type should be `BOOLEAN`.
+        - `drop_size` (Required): Specifies the minimum size of features to retain in the SEGS, filtering out smaller elements based on this threshold. Type should be `INT`.
+        - `contour_fill` (Required): A boolean flag indicating whether contours within the mask should be filled, enhancing the detail and completeness of the resulting SEGS. Type should be `BOOLEAN`.
+    - Outputs:
+        - `segs`: The output SEGS generated from the input mask, optimized for animations with differential impact. These SEGS are suitable for further processing or visualization in animation workflows. Type should be `SEGS`.

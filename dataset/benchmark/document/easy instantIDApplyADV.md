@@ -1,0 +1,23 @@
+- `easy instantIDApplyADV`: The `easy instantIDApplyADV` node is designed for advanced application of InstantID technology, integrating various models and parameters to enhance image processing capabilities. It focuses on applying sophisticated identity verification and analysis techniques to images, leveraging InstantID and InsightFace models along with control network adjustments for optimized results.
+    - Inputs:
+        - `pipe` (Required): Represents the pipeline configuration, serving as the foundational structure for the node's processing sequence. Type should be `PIPE_LINE`.
+        - `image` (Required): The image to be processed, acting as the primary input for identity verification and analysis. Type should be `IMAGE`.
+        - `instantid_file` (Required): Specifies the file path for the InstantID model, enabling the node to load and apply the corresponding identity verification model. Type should be `COMBO[STRING]`.
+        - `insightface` (Required): Designates the InsightFace model to be used for facial analysis and recognition within the image processing workflow. Type should be `COMBO[STRING]`.
+        - `control_net_name` (Required): Identifies the control network to be applied, influencing how the InstantID and InsightFace models are integrated and utilized. Type should be `COMBO[STRING]`.
+        - `cn_strength` (Required): Controls the strength of the control network's influence, adjusting the intensity of model application. Type should be `FLOAT`.
+        - `cn_soft_weights` (Required): Determines the soft weighting for the control network, fine-tuning the balance between different model influences. Type should be `FLOAT`.
+        - `weight` (Required): Sets the overall weight of the InstantID application, impacting the prominence of identity verification features in the processed image. Type should be `FLOAT`.
+        - `start_at` (Required): Defines the starting point for model application within the processing sequence, allowing for phased integration of identity verification. Type should be `FLOAT`.
+        - `end_at` (Required): Specifies the endpoint for model application, concluding the identity verification and analysis phase. Type should be `FLOAT`.
+        - `noise` (Required): Adjusts the level of noise introduced during the processing, affecting the clarity and authenticity of the identity verification. Type should be `FLOAT`.
+        - `image_kps` (Optional): Optional parameter for including key points of the image, enhancing the precision of facial analysis. Type should be `IMAGE`.
+        - `mask` (Optional): Optional parameter for applying a mask to the image, focusing the identity verification on specific areas. Type should be `MASK`.
+        - `control_net` (Optional): Optional parameter for directly specifying the control network configuration, offering advanced customization. Type should be `CONTROL_NET`.
+        - `positive` (Optional): Optional conditioning parameter to emphasize certain features or attributes in the identity verification process. Type should be `CONDITIONING`.
+        - `negative` (Optional): Optional conditioning parameter to de-emphasize or exclude certain features from the identity verification process. Type should be `CONDITIONING`.
+    - Outputs:
+        - `pipe`: Returns the updated pipeline configuration, reflecting the applied identity verification and analysis. Type should be `PIPE_LINE`.
+        - `model`: Outputs the enhanced model, incorporating the applied InstantID and InsightFace technologies. Type should be `MODEL`.
+        - `positive`: Outputs the conditioning parameters emphasizing desired features post-processing. Type should be `CONDITIONING`.
+        - `negative`: Outputs the conditioning parameters de-emphasizing undesired features post-processing. Type should be `CONDITIONING`.

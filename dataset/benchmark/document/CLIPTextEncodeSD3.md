@@ -1,0 +1,9 @@
+- `CLIPTextEncodeSD3`: The CLIPTextEncodeSD3 node is designed for advanced text conditioning in generative models, focusing on encoding text inputs using the CLIP model. It supports multiple text inputs and an option for empty padding, facilitating the creation of conditioned inputs for generative tasks.
+    - Inputs:
+        - `clip` (Required): The CLIP model instance used for tokenization and encoding of text inputs. It plays a central role in processing the text inputs into a format suitable for conditioning. Type should be `CLIP`.
+        - `clip_l` (Required): A multiline, dynamically promptable string input representing the local text to be encoded. It affects the generation by providing local context. Type should be `STRING`.
+        - `clip_g` (Required): A multiline, dynamically promptable string input representing the global text to be encoded. It provides the broader context for the generation task. Type should be `STRING`.
+        - `t5xxl` (Required): A multiline, dynamically promptable string input for additional text encoding using a T5 model, enhancing the conditioning with another layer of textual context. Type should be `STRING`.
+        - `empty_padding` (Required): Specifies the padding strategy (none or empty_prompt) for handling empty text inputs, influencing the final encoded output. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `conditioning`: The encoded text output, structured for use in conditioning generative models. It includes both the conditioning tokens and pooled output for comprehensive context. Type should be `CONDITIONING`.

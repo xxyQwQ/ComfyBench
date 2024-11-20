@@ -1,0 +1,6 @@
+- `FromListGet1Color`: The node is designed to retrieve a single color value from a list of colors based on a specified index. It abstracts the process of accessing list elements, allowing for direct retrieval of color information in a user-friendly manner.
+    - Inputs:
+        - `list` (Required): This parameter represents the list of colors from which a single color will be retrieved. The list must contain color values, and the node will access one of these based on the provided index. Type should be `COLOR`.
+        - `index` (Required): The index parameter specifies the position in the color list from which to retrieve the color. It supports both positive and negative indexing, enabling access to list elements from the beginning or end. Type should be `INT`.
+    - Outputs:
+        - `color`: The output is a single color value retrieved from the specified position in the input list of colors. Type should be `COLOR`.

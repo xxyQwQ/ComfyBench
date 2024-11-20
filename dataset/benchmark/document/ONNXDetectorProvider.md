@@ -1,0 +1,5 @@
+- `ONNXDetectorProvider`: The ONNXDetectorProvider node is designed to load and provide access to ONNX models for object detection. It serves as a bridge between the ONNX model files and the detection functionality, enabling the use of pre-trained ONNX models for detecting objects within images.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the ONNX model to be loaded. This parameter is crucial for identifying and accessing the correct model file for object detection. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `bbox_detector`: Provides an object detector initialized with the specified ONNX model. This detector is capable of identifying bounding boxes around objects within images. Type should be `BBOX_DETECTOR`.

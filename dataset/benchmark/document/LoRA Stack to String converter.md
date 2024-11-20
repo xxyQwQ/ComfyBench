@@ -1,0 +1,5 @@
+- `LoRA Stack to String converter`: The LoRA Stack to String converter node is designed to transform a list of LoRA (Low-Rank Adaptation) model configurations, each represented as a tuple, into a single, space-separated string. This conversion facilitates the efficient representation and communication of LoRA model parameters for various applications, including model configuration and debugging.
+    - Inputs:
+        - `lora_stack` (Required): Represents a list of tuples, each containing a model identifier and two numerical values, which are to be converted into a formatted string. This input is crucial for generating a compact representation of LoRA model configurations. Type should be `LORA_STACK`.
+    - Outputs:
+        - `LoRA string`: A single string that concatenates all the input tuples into a formatted, space-separated sequence, enabling easy interpretation and use of LoRA model configurations. Type should be `STRING`.

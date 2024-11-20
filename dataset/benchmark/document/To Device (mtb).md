@@ -1,0 +1,9 @@
+- `To Device (mtb)`: The `MTB_ToDevice` node is designed to transfer image or mask tensors to a specified computing device, such as CPU, GPU, or MPS (Apple Silicon), enhancing computational efficiency and flexibility in data processing pipelines.
+    - Inputs:
+        - `ignore_errors` (Required): Determines whether to proceed without throwing an error if both image and mask inputs are absent, allowing for more flexible error handling. Type should be `BOOLEAN`.
+        - `device` (Required): Specifies the computing device to which the tensors will be transferred. It dynamically includes available options like CPU, GPU, and MPS, adapting to the system's capabilities. Type should be `COMBO[STRING]`.
+        - `image` (Optional): An optional image tensor that, if provided, will be transferred to the specified device. Type should be `IMAGE`.
+        - `mask` (Optional): An optional mask tensor that, if provided, will be transferred to the specified device. Type should be `MASK`.
+    - Outputs:
+        - `images`: The image tensor after being transferred to the specified device. Type should be `IMAGE`.
+        - `masks`: The mask tensor after being transferred to the specified device. Type should be `MASK`.

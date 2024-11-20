@@ -1,6 +1,0 @@
-- `Preview from metadata [Crystools]`: This node is designed to generate a preview of image metadata, including details such as file name, resolution, date, and size. It can also handle additional metadata like prompts and workflows associated with the image, providing a comprehensive overview in a textual format. The node aims to facilitate the visualization and understanding of image metadata by presenting it in a structured and easily interpretable manner.
-    - Parameters:
-    - Inputs:
-        - `metadata_raw`: The raw metadata input that contains information about the image, including file details and any associated prompts or workflows. This metadata is crucial for generating the preview text and determining the content of the visualization. Type should be `METADATA_RAW`.
-    - Outputs:
-        - `Metadata RAW`: unknown Type should be `METADATA_RAW`.

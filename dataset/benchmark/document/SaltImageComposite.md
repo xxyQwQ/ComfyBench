@@ -1,0 +1,9 @@
+- `SaltImageComposite`: This node is designed for creating complex image compositions by blending multiple images together according to specified parameters and schedules. It enables the dynamic assembly of visual elements, allowing for the creation of rich, layered imagery that can be adjusted over time or in response to specific triggers.
+    - Inputs:
+        - `images_a` (Required): Specifies the first set of images to be blended. It plays a crucial role in determining the base layer of the composition. Type should be `IMAGE`.
+        - `images_b` (Required): Specifies the second set of images to be blended with the first set. This layer is combined with the base layer according to the blending mode and other parameters. Type should be `IMAGE`.
+        - `mode` (Required): Defines the blending mode to be used for combining the images. The choice of mode affects the visual outcome of the blend, offering various stylistic effects. Type should be `COMBO[STRING]`.
+        - `masks` (Optional): Optional masks that can be applied to the images for selective blending, allowing for more controlled and intricate compositions. Type should be `MASK`.
+        - `blend_schedule` (Optional): An optional schedule that defines how the blend ratio changes over time, enabling dynamic transitions between images. Type should be `LIST`.
+    - Outputs:
+        - `images`: The resulting images after blending, showcasing the combined visual elements from the input images. Type should be `IMAGE`.

@@ -1,9 +1,0 @@
-- `FileNamePrefix`: This node is designed to generate a prefix for filenames based on various conditions such as the current date, a custom directory, and custom text. It allows for dynamic filename customization by incorporating date formatting and custom text replacement, ensuring filenames are structured and organized according to user-defined parameters.
-    - Parameters:
-        - `date`: Indicates whether the current date should be included in the filename prefix. When set to 'true', the date is formatted and appended to the prefix, contributing to a time-stamped file organization. Type should be `COMBO[STRING]`.
-        - `date_directory`: Determines if the current date should be used to create a directory structure within the filename prefix. If 'true', a date-based directory is prepended to the prefix, aiding in chronological sorting of files. Type should be `COMBO[STRING]`.
-        - `custom_directory`: Specifies a custom directory path to be included in the filename prefix. This path is dynamically generated based on additional information provided, allowing for customized file organization within specific directories. Type should be `STRING`.
-        - `custom_text`: Custom text to be appended to the filename prefix. This text can be dynamically generated and is sanitized to remove invalid filename characters, enabling personalized file naming. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `filename_prefix`: The generated filename prefix, constructed based on the input parameters and conditions. It is sanitized and structured to ensure valid and organized filenames. Type should be `STRING`.

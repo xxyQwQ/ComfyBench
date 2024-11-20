@@ -1,0 +1,10 @@
+- `Image Batch Manager (SuperBeasts.AI)`: The Image Batch Manager node is designed to streamline the process of managing and processing batches of images within a workflow. It focuses on optimizing the handling, transformation, and preparation of large sets of images for further processing or analysis, ensuring efficient batch operations and enhancing overall workflow productivity.
+    - Inputs:
+        - `width` (Required): The 'width' parameter specifies the desired width for the output images after processing. It is essential for ensuring that all images in the batch conform to a uniform size, facilitating consistent analysis or further processing. Type should be `INT`.
+        - `height` (Required): The 'height' parameter defines the desired height for the output images after processing. Similar to 'width', it ensures uniformity in the size of images, which is critical for batch processing and subsequent analyses. Type should be `INT`.
+        - `max_images` (Required): The 'max_images' parameter limits the number of images to be processed in the batch. This is crucial for controlling the batch size and ensuring efficient processing. Type should be `INT`.
+        - `random_order` (Required): The 'random_order' parameter determines whether the images should be reordered randomly. This can be used to introduce variability in the processing sequence. Type should be `BOOLEAN`.
+        - `new_manual_order` (Optional): The 'new_manual_order' parameter allows for the specification of a new order for the processed images. It enables custom sequencing of the input images, affecting the final arrangement and composition of the output. Type should be `STRING`.
+    - Outputs:
+        - `image`: This output represents the processed batch of images, ready for further analysis or transformation. It encapsulates the results of the batch management operations, providing a streamlined dataset for subsequent processing stages. Type should be `IMAGE`.
+        - `string`: This output is a string representing the new order of the processed images, providing insight into the arrangement of the batch post-processing. Type should be `STRING`.

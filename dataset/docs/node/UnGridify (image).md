@@ -1,8 +1,0 @@
-- `UnGridify (image)`: The UnGridify (image) node is designed to deconstruct a gridded image into its constituent tiles or sub-images. It effectively reverses the process of assembling multiple smaller images into a single, larger grid image, allowing for the individual manipulation or analysis of each tile.
-    - Parameters:
-        - `columns`: The number of columns in the grid. This determines how the image is split horizontally. Type should be `INT`.
-        - `rows`: The number of rows in the grid. This determines how the image is split vertically. Type should be `INT`.
-    - Inputs:
-        - `image`: The gridded image to be deconstructed into its constituent tiles. This image is expected to have been previously constructed by arranging multiple smaller images into a grid format. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: A list of tiles extracted from the gridded image, where each tile is a smaller image that was part of the original grid. Type should be `IMAGE`.

@@ -1,0 +1,6 @@
+- `CR Select Resize Method`: This node allows users to select a method for resizing images, providing options between fitting and cropping to achieve the desired dimensions. It's designed to facilitate the customization of image processing workflows by offering a straightforward choice that influences how images are resized.
+    - Inputs:
+        - `method` (Required): Specifies the resizing method to be used, either 'Fit' or 'Crop', affecting how the image will be resized to meet the desired dimensions. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `method`: Returns the selected method for resizing the image. Type should be `*`.
+        - `show_help`: Provides a URL to the documentation or help page related to the selected resize method. Type should be `STRING`.

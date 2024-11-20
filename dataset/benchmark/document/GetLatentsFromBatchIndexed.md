@@ -1,0 +1,6 @@
+- `GetLatentsFromBatchIndexed`: This node is designed to select and return specific latents from a given batch based on provided indices. It facilitates the extraction of a subset of latents for further processing or analysis, making it a crucial component in workflows that require manipulation or inspection of individual or groups of latents within a larger batch.
+    - Inputs:
+        - `latents` (Required): Represents the batch of latents from which specific items will be selected. It is essential for determining the scope of data the node will operate on. Type should be `LATENT`.
+        - `indexes` (Required): A string of comma-separated indices indicating which latents to extract from the batch. This parameter allows for flexible selection of specific latents, enabling targeted manipulation or analysis. Type should be `STRING`.
+    - Outputs:
+        - `latent`: The output is a modified version of the input latent batch, containing only the latents at the specified indices. Type should be `LATENT`.

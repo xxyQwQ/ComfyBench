@@ -1,0 +1,6 @@
+- `MedianFilterImage`: The MedianFilterImage node applies a median filter to a batch of images, smoothing them by replacing each pixel's value with the median value of the intensities in its neighborhood. This process is particularly effective at reducing salt-and-pepper noise while preserving edges, making it a valuable tool for image preprocessing and noise reduction.
+    - Inputs:
+        - `images` (Required): The 'images' parameter represents the batch of images to be processed. It is crucial for defining the input data on which the median filtering operation will be performed, directly influencing the output's quality and effectiveness. Type should be `IMAGE`.
+        - `size` (Required): The 'size' parameter determines the size of the neighborhood used for calculating the median value for each pixel. It affects the degree of smoothing and noise reduction, with larger sizes leading to more pronounced filtering effects. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a batch of images that have been smoothed using the median filter. This process reduces noise while preserving the essential structure and edges of the images. Type should be `IMAGE`.

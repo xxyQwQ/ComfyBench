@@ -1,0 +1,12 @@
+- `MarigoldDepthEstimation_v2`: The MarigoldDepthEstimation_v2 node is designed for diffusion-based monocular depth estimation, leveraging the Marigold model to generate depth maps from single images. This node focuses on enhancing the accuracy of depth predictions through iterative processing and ensemble techniques, offering customizable parameters for fine-tuning the depth estimation process.
+    - Inputs:
+        - `marigold_model` (Required): Selects the specific Marigold model to be used for depth estimation, affecting the depth map's accuracy and appearance. Type should be `MARIGOLDMODEL`.
+        - `image` (Required): The input image for which the depth map is to be estimated, serving as the basis for the depth estimation process. Type should be `IMAGE`.
+        - `seed` (Required): Sets the seed for random number generation, ensuring reproducibility of the depth estimation. Type should be `INT`.
+        - `denoise_steps` (Required): Specifies the number of steps per depth map, allowing users to balance between accuracy and processing time. Type should be `INT`.
+        - `ensemble_size` (Required): Determines the number of depth maps to be ensembled into a single output, enhancing the depth estimation's accuracy. Type should be `INT`.
+        - `processing_resolution` (Required): Defines the resolution at which the depth estimation process is performed, impacting the detail and quality of the depth map. Type should be `INT`.
+        - `scheduler` (Required): Chooses the scheduler for the depth estimation process, influencing the final depth map's characteristics. Type should be `COMBO[STRING]`.
+        - `use_taesd_vae` (Required): Determines whether to use the TAESD VAE model for depth estimation, potentially improving the quality of the depth map. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: Produces a depth map image, representing the estimated depth of the scene from a single input image. Type should be `IMAGE`.

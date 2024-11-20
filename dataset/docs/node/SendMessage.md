@@ -1,9 +1,0 @@
-- `SendMessage`: The SendMessage node facilitates communication between agents by allowing one agent to send a message to another. This node clones the recipient and sender agents to ensure that the message delivery process does not alter the original agent instances, maintaining the integrity of the agents involved in the communication.
-    - Parameters:
-        - `message`: The message content to be sent from the sender to the recipient. Supports multiline input, allowing for more complex and detailed messages. Type should be `STRING`.
-    - Inputs:
-        - `recipient`: The recipient agent who will receive the message. Cloning this agent ensures that the original agent's state is preserved post-message delivery. Type should be `AGENT`.
-        - `sender`: The sender agent who initiates the message. This agent is also cloned to preserve its original state after sending the message. Type should be `AGENT`.
-    - Outputs:
-        - `recipient`: The cloned recipient agent, post-message reception, showcasing the state of the agent after receiving the message. Type should be `AGENT`.
-        - `sender`: The cloned sender agent, post-message sending, reflecting the agent's state after the communication process. Type should be `AGENT`.

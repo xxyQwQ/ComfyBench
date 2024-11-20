@@ -1,6 +1,0 @@
-- `Preview from image [Crystools]`: This node is designed to generate a preview of an image by saving it temporarily and extracting metadata, which includes details such as resolution, date, and size. It aims to provide a comprehensive overview of the image's properties and any additional information encoded within, facilitating a deeper understanding and easier management of image files.
-    - Parameters:
-    - Inputs:
-        - `image`: The image to be previewed. It is essential for generating the preview and extracting metadata, which is used to provide detailed information about the image. Type should be `IMAGE`.
-    - Outputs:
-        - `Metadata RAW`: The raw metadata extracted from the image, providing essential details such as resolution, date, and size. Type should be `METADATA_RAW`.

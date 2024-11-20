@@ -1,0 +1,5 @@
+- `SEGSPreviewCNet`: SEGSPreviewCNet is designed to generate previews of segmentation results, specifically focusing on the control networks associated with each segmentation. It saves these previews as images, facilitating a visual inspection of how control networks influence the segmentation process.
+    - Inputs:
+        - `segs` (Required): The 'segs' parameter represents the segmentation results to be previewed. It is crucial for generating the control network-based previews, as it contains the segmentation data along with associated control network information. Type should be `SEGS`.
+    - Outputs:
+        - `image`: unknown Type should be `IMAGE`.

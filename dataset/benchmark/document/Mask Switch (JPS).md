@@ -1,0 +1,6 @@
+- `Mask Switch (JPS)`: The Mask Switch node is designed to select and output one of several input masks based on a given selection index. It facilitates dynamic mask switching within a pipeline, allowing for flexible mask manipulation and application.
+    - Inputs:
+        - `select` (Required): Specifies the index of the mask to be selected and outputted. This selection determines which mask input (among potentially multiple provided) is passed through as the output. Type should be `INT`.
+        - `mask_i` (Optional): Represents any of the optional mask inputs (mask_1 to mask_5) that can be selected for output. The specific mask chosen is determined by the 'select' index. Type should be `MASK`.
+    - Outputs:
+        - `mask_out`: The selected mask output based on the input selection index. Type should be `MASK`.

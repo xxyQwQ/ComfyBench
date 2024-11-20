@@ -1,0 +1,6 @@
+- `ImageSelector`: The ImageSelector node is designed to filter and select specific images from a given set based on user-defined indexes. It supports selecting individual images or ranges of images, facilitating customized image processing and manipulation.
+    - Inputs:
+        - `images` (Required): The 'images' parameter represents the set of images from which selections are made. It is crucial for determining the subset of images to be processed or analyzed. Type should be `IMAGE`.
+        - `selected_indexes` (Required): The 'selected_indexes' parameter specifies the indexes of images to be selected, supporting individual indexes and ranges for flexible image selection. This parameter is case-sensitive. Type should be `STRING`.
+    - Outputs:
+        - `image`: The output is a filtered set of images, selected according to the specified indexes. Type should be `IMAGE`.

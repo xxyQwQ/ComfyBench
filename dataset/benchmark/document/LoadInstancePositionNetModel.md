@@ -1,0 +1,8 @@
+- `LoadInstancePositionNetModel`: This node is designed to load the PositionNet model, a component of the instance diffusion framework, by reading a specified model file and applying necessary configurations. It facilitates the initialization of PositionNet with predefined parameters and the option to include segmentation information, thereby preparing the model for subsequent instance-based processing tasks.
+    - Inputs:
+        - `model_filename` (Required): Specifies the filename of the PositionNet model to be loaded. This parameter is crucial for identifying and retrieving the correct model file from a predefined directory. Type should be `COMBO[STRING]`.
+        - `use_segs` (Required): Determines whether segmentation information should be utilized in the PositionNet model configuration. This boolean flag allows for flexible adaptation of the model based on the presence of segmentation data. Type should be `BOOLEAN`.
+    - Outputs:
+        - `positionnet`: The loaded PositionNet model, ready for use in instance-based processing tasks. This output encapsulates the model initialized with the specified configurations. Type should be `POSITIONNET`.
+        - `fusers`: The loaded fusers model, which is part of the instance diffusion framework, ready for integration with other components. Type should be `FUSERS`.
+        - `scaleu`: The loaded ScaleU model, another component of the instance diffusion framework, prepared for use in scaling and processing instances. Type should be `SCALEU`.

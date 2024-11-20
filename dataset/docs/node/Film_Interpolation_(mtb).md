@@ -1,8 +1,0 @@
-- `Film Interpolation (mtb)`: The Film Interpolation (mtb) node utilizes Google Research's FILM technology for frame interpolation, specifically designed to handle large motion between frames. It provides a method to interpolate additional frames between a sequence of images, enhancing the fluidity and smoothness of motion in video content.
-    - Parameters:
-        - `interpolate`: An integer specifying the number of frames to interpolate between each pair of input frames. This parameter directly affects the smoothness and duration of the resulting motion. Type should be `INT`.
-    - Inputs:
-        - `images`: A tensor of images to be interpolated. This input is crucial for determining the frames between which the interpolation will occur, directly influencing the output's visual continuity. Type should be `IMAGE`.
-        - `film_model`: An instance of the FILM model used for interpolation. This model is responsible for the actual computation of the interpolated frames, leveraging advanced techniques to manage large motions effectively. Type should be `FILM_MODEL`.
-    - Outputs:
-        - `image`: The output is a tensor of interpolated images, enriched with additional frames to create a smoother transition between the original images. Type should be `IMAGE`.

@@ -1,0 +1,8 @@
+- `VHS_SelectEveryNthMask`: The node is designed to filter a batch of masks by selecting every Nth mask from the sequence, optionally skipping a specified number of initial masks. This functionality is useful for thinning out dense sequences of masks to reduce computational load or to select masks at a regular interval for processing or analysis.
+    - Inputs:
+        - `mask` (Required): The input tensor containing a batch of masks from which the node will select every Nth mask. This parameter is crucial for defining the subset of masks to be processed. Type should be `MASK`.
+        - `select_every_nth` (Required): Specifies the interval at which masks are selected from the input batch. A higher value thins out the sequence more by selecting masks less frequently. Type should be `INT`.
+        - `skip_first_masks` (Required): Determines the number of initial masks to skip before starting to select every Nth mask. This allows for the exclusion of a certain number of masks from the beginning of the sequence. Type should be `INT`.
+    - Outputs:
+        - `MASK`: The output tensor containing the selected masks after applying the specified interval and skip criteria. Type should be `MASK`.
+        - `count`: The total number of masks selected and returned by the node. Type should be `INT`.

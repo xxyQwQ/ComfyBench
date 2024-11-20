@@ -1,0 +1,12 @@
+- `easy applyBrushNet`: The `easy applyBrushNet` node integrates the functionality of BrushNet, a specialized neural network for image inpainting and enhancement, into a pipeline. It leverages BrushNet to apply sophisticated image processing techniques, enhancing or modifying images based on given masks and inputs. This node is designed to seamlessly incorporate BrushNet's capabilities into broader workflows, facilitating advanced image manipulation tasks.
+    - Inputs:
+        - `pipe` (Required): Represents the pipeline context, including models and configurations, that BrushNet will operate within. It's essential for providing the necessary environment and parameters for BrushNet's execution. Type should be `PIPE_LINE`.
+        - `image` (Required): The target image to be processed or enhanced by BrushNet. It serves as the primary input for the image manipulation tasks. Type should be `IMAGE`.
+        - `mask` (Required): A binary mask indicating the areas of the image to be inpainted or modified. It guides BrushNet in focusing its processing on specific regions of the image. Type should be `MASK`.
+        - `brushnet` (Required): Specifies the BrushNet model to be used for the image processing task, playing a crucial role in determining the specific techniques and enhancements applied to the image. Its selection directly influences the outcome of the inpainting or enhancement process. Type should be `COMBO[STRING]`.
+        - `dtype` (Required): Defines the data type for the BrushNet model's computations, affecting the precision and potentially the performance of the image processing. Type should be `COMBO[STRING]`.
+        - `scale` (Required): A scaling factor that adjusts the intensity or effect of BrushNet's processing on the image. It allows for fine-tuning the impact of the modifications. Type should be `FLOAT`.
+        - `start_at` (Required): Specifies the starting point for the processing within the image, allowing for targeted application of BrushNet's capabilities. Type should be `INT`.
+        - `end_at` (Required): Defines the endpoint for the processing within the image, enabling precise control over the extent of BrushNet's modifications. Type should be `INT`.
+    - Outputs:
+        - `pipe`: The modified pipeline context, including updated models and configurations, after BrushNet's processing has been applied to the image. Type should be `PIPE_LINE`.

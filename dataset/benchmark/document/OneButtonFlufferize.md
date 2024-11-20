@@ -1,0 +1,8 @@
+- `OneButtonFlufferize`: The OneButtonFlufferize node enhances text prompts by adding 'fluff'—additional words or phrases—to make them more elaborate or detailed. It allows customization of the fluff amount and can reverse the fluff polarity to potentially use antonyms or negative phrases, depending on the configuration.
+    - Inputs:
+        - `prompt` (Required): The initial text prompt to be fluffed. This is the base content that will be elaborated upon. Type should be `STRING`.
+        - `amount_of_fluff` (Required): Specifies the degree of fluffiness to add to the prompt, which can be dynamic or a fixed range, influencing the verbosity of the output. Type should be `COMBO[STRING]`.
+        - `reverse_polarity` (Required): When enabled, reverses the fluff polarity to use potentially opposite or negative fluff, altering the tone of the prompt. Type should be `COMBO[BOOLEAN]`.
+        - `seed` (Optional): A seed for the random number generator to ensure reproducibility of the fluff added to the prompt. Type should be `INT`.
+    - Outputs:
+        - `fluffed_prompt`: The original prompt enhanced with additional fluff to increase its elaborateness or detail. Type should be `STRING`.

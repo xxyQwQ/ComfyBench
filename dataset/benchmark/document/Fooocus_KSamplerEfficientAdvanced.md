@@ -1,0 +1,24 @@
+- `Fooocus_KSamplerEfficientAdvanced`: This node enhances the sampling process with an added sharpness parameter, tailored for efficient advanced sampling in art creation. It leverages the underlying advanced KSampler's capabilities, integrating sharpness adjustments to refine the sampling output, aiming for higher precision and detail in generated art.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for sampling, serving as the foundation for generating art. Type should be `MODEL`.
+        - `seed` (Required): Determines the random seed for sampling, ensuring reproducibility of results. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps to be taken in the sampling process, affecting the detail and quality of the output. Type should be `INT`.
+        - `cfg` (Required): Controls the conditioning factor, influencing the guidance and coherence of the generated art. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the specific sampler algorithm to use, impacting the texture and characteristics of the generated art. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduler for controlling the sampling process, affecting the progression and variation of the output. Type should be `COMBO[STRING]`.
+        - `positive` (Required): Sets the positive conditioning to guide the sampling towards desired attributes. Type should be `CONDITIONING`.
+        - `negative` (Required): Sets the negative conditioning to steer the sampling away from undesired attributes. Type should be `CONDITIONING`.
+        - `latent_image` (Required): Provides an initial latent image to start the sampling from, offering a basis for further modifications. Type should be `LATENT`.
+        - `denoise` (Required): Adjusts the level of denoising applied to the sampling output, refining the clarity and sharpness. Type should be `FLOAT`.
+        - `preview_method` (Required): Specifies the method for previewing the sampling results, enhancing the user's ability to assess and adjust the process. Type should be `COMBO[STRING]`.
+        - `vae_decode` (Required): Determines whether to decode the latent representation using a VAE model, affecting the final image quality. Type should be `COMBO[STRING]`.
+        - `optional_vae` (Optional): Optionally specifies a VAE model to be used for decoding, providing flexibility in the choice of model. Type should be `VAE`.
+        - `script` (Optional): Allows for the execution of custom scripts during the sampling process, offering extended customization and control. Type should be `SCRIPT`.
+        - `sharpness` (Optional): The sharpness parameter allows for fine-tuning the sharpness level of the sampling output, enhancing detail and clarity in the generated art. It plays a crucial role in achieving the desired level of detail and texture in the artwork. Type should be `FLOAT`.
+    - Outputs:
+        - `MODEL`: The model used for the sampling process, encapsulating the computational framework. Type should be `MODEL`.
+        - `CONDITIONING+`: The positive conditioning applied during sampling, guiding the generation towards desired attributes. Type should be `CONDITIONING`.
+        - `CONDITIONING-`: The negative conditioning applied during sampling, steering the generation away from undesired attributes. Type should be `CONDITIONING`.
+        - `LATENT`: The final latent representation of the sampled art, encapsulating the visual content and style. Type should be `LATENT`.
+        - `VAE`: The VAE model used for decoding the latent representation, if applicable, influencing the final image quality. Type should be `VAE`.
+        - `IMAGE`: The final image output of the sampling process, representing the generated art. Type should be `IMAGE`.

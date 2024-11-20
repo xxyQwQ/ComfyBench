@@ -1,0 +1,7 @@
+- `SaltMaskNoiseAddition`: The SaltMaskNoiseAddition node is designed to introduce noise into mask regions, simulating variations and imperfections that might occur in real-world scenarios. It allows for the customization of the noise characteristics through parameters such as mean and standard deviation, enabling a wide range of noise effects.
+    - Inputs:
+        - `masks` (Required): The 'masks' input is a collection of mask regions to which noise will be added. This parameter is essential for defining the areas where the noise effect will be applied, impacting the node's execution and the visual outcome of the noise addition. Type should be `MASK`.
+        - `mean` (Optional): The 'mean' parameter specifies the average value of the noise distribution. Adjusting this value allows for controlling the overall brightness or darkness of the added noise, influencing the visual appearance of the masks. Type should be `FLOAT`.
+        - `stddev` (Optional): The 'stddev' parameter determines the standard deviation of the noise distribution. This affects the variability and intensity of the noise added to the masks, enabling fine-tuning of the noise effect to achieve desired outcomes. Type should be `FLOAT`.
+    - Outputs:
+        - `MASKS`: The output 'MASKS' consists of the original mask regions with added noise, reflecting the specified mean and standard deviation parameters. This modified set of masks can be used for further processing or visualization. Type should be `MASK`.

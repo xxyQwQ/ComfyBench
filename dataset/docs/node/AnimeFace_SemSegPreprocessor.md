@@ -1,9 +1,0 @@
-- `AnimeFace_SemSegPreprocessor`: This node is designed for preprocessing images for semantic segmentation tasks specifically tailored to anime faces. It leverages a specialized model to segment anime faces from the background, optionally removing the background based on the provided settings, and prepares the image and mask for further processing.
-    - Parameters:
-        - `remove_background_using_abg`: A flag to determine whether the background should be removed from the image during the segmentation process. This affects the output mask and segmented image. Type should be `BOOLEAN`.
-        - `resolution`: The resolution to which the input image is resized before processing. This ensures consistency in the segmentation output across different image sizes. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for anime face segmentation. This image is the primary subject for the segmentation task. Type should be `IMAGE`.
-    - Outputs:
-        - `IMAGE`: The segmented image with anime faces, optionally with the background removed based on the input flag. Type should be `IMAGE`.
-        - `ABG_CHARACTER_MASK (MASK)`: The mask indicating the segmented areas of the anime faces in the image. Useful for further image manipulation or processing. Type should be `MASK`.

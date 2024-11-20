@@ -1,0 +1,8 @@
+- `ADE_RegisterLoraHookModelOnly`: This node is designed to register a model as a LoRA (Low-Rank Adaptation) hook, focusing exclusively on the model without involving any CLIP models. It enables the modification and enhancement of a model's behavior through LoRA techniques, providing a streamlined approach for integrating LoRA hooks into models for advanced customization and performance tuning.
+    - Inputs:
+        - `model` (Required): The model to be registered with the LoRA hook. It is the primary target for the LoRA adaptation, determining the scope and impact of the applied modifications. Type should be `MODEL`.
+        - `lora_name` (Required): The name of the LoRA configuration to apply. This specifies the particular LoRA adaptation settings and parameters to be used, guiding the customization process. Type should be `COMBO[STRING]`.
+        - `strength_model` (Required): A floating-point value indicating the strength of the LoRA adaptation on the model. This parameter controls the intensity of the applied LoRA modifications, allowing for fine-tuned adjustments to the model's behavior. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The model after being registered with the LoRA hook. This output reflects the modified state of the model, showcasing the effects of the LoRA adaptation. Type should be `MODEL`.
+        - `lora_hook`: The LoRA hook that has been registered with the model. This output represents the LoRA adaptation mechanism applied, facilitating further customization and performance tuning. Type should be `LORA_HOOK`.

@@ -1,7 +1,0 @@
-- `JWFloatMin`: The JWFloatMin node calculates the minimum of two floating-point numbers, providing a simple yet essential mathematical operation for numerical data processing.
-    - Parameters:
-        - `a`: The first floating-point number to compare. It plays a crucial role in determining the minimum value when compared with the second number. Type should be `FLOAT`.
-        - `b`: The second floating-point number to compare. It is essential for determining the minimum value in conjunction with the first number. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The minimum value between the two input floating-point numbers. Type should be `FLOAT`.

@@ -1,5 +1,0 @@
-- `DebugInput`: The DebugInput node is designed for debugging purposes, allowing users to print and inspect the properties and directory listing of any input object. It serves as a versatile tool for understanding and troubleshooting the data flowing through the node.
-    - Parameters:
-    - Inputs:
-        - `input`: Accepts any type of input, facilitating the debugging process by printing the input's value and, if the input is an object, its directory listing. Type should be `*`.
-    - Outputs:

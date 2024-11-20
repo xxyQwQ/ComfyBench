@@ -1,0 +1,14 @@
+- `ttN text3BOX_3WAYconcat`: This node is designed to concatenate three input strings in various combinations, allowing for flexible string manipulation and concatenation strategies. It supports custom delimiters and can generate multiple output strings, including each input string individually, pairs of input strings concatenated together, and all three input strings concatenated.
+    - Inputs:
+        - `text1` (Required): The first text string to be concatenated. It plays a crucial role in the concatenation process, affecting the output by being part of multiple concatenation combinations. Type should be `STRING`.
+        - `text2` (Required): The second text string to be concatenated. It is essential for creating concatenated pairs with the first and third strings, as well as contributing to the overall three-string concatenation. Type should be `STRING`.
+        - `text3` (Required): The third text string to be concatenated. This string is combined with the first and second strings in various ways to produce the node's output. Type should be `STRING`.
+        - `delimiter` (Required): A string used as the delimiter in the concatenation process. It defines the separator between the concatenated strings, impacting the format and readability of the output. Type should be `STRING`.
+    - Outputs:
+        - `text1`: Returns the first input text string as is, without any concatenation. Type should be `STRING`.
+        - `text2`: Returns the second input text string as is, without any concatenation. Type should be `STRING`.
+        - `text3`: Returns the third input text string as is, without any concatenation. Type should be `STRING`.
+        - `1 & 2`: The concatenation of the first and second input text strings, separated by the specified delimiter. Type should be `STRING`.
+        - `1 & 3`: The concatenation of the first and third input text strings, separated by the specified delimiter. Type should be `STRING`.
+        - `2 & 3`: The concatenation of the second and third input text strings, separated by the specified delimiter. Type should be `STRING`.
+        - `concat`: The concatenation of all three input text strings, separated by the specified delimiter. Type should be `STRING`.

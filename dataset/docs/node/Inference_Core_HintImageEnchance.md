@@ -1,9 +1,0 @@
-- `Inference_Core_HintImageEnchance`: The `Inference_Core_HintImageEnchance` node is designed to preprocess hint images for image generation tasks, enhancing and resizing them according to specified dimensions and modes. It supports operations such as resizing to fit within given dimensions, outer and inner fitting, and applying enhancements like binary thresholding, edge detection, and inpainting based on the image's alpha channel.
-    - Parameters:
-        - `image_gen_width`: The target width for the generated image, guiding the resizing process. Type should be `INT`.
-        - `image_gen_height`: The target height for the generated image, guiding the resizing process. Type should be `INT`.
-        - `resize_mode`: The mode of resizing to be applied, determining how the hint image is adjusted to fit the target dimensions. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `hint_image`: The hint image to be processed, which can be enhanced and resized for better suitability in image generation tasks. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed hint images, enhanced and resized according to the specified parameters, ready for use in image generation. Type should be `IMAGE`.

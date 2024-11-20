@@ -1,0 +1,14 @@
+- `GameOfLife`: The GameOfLife node simulates the Conway's Game of Life, a cellular automaton, over a specified number of steps. It evolves the state of a grid based on the rules of survival, death, and birth determined by the neighboring cells.
+    - Inputs:
+        - `width` (Required): Specifies the width of the grid for the simulation, affecting the horizontal size of the cellular automaton. Type should be `INT`.
+        - `height` (Required): Specifies the height of the grid for the simulation, affecting the vertical size of the cellular automaton. Type should be `INT`.
+        - `cell_size` (Required): Determines the size of each cell in the grid, influencing the resolution of the simulation. Type should be `INT`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the grid's initial state. Type should be `INT`.
+        - `threshold` (Required): A threshold value to determine the initial state of each cell in the grid, based on random generation. Type should be `FLOAT`.
+        - `steps` (Required): The number of steps to simulate, dictating the duration of the Game of Life evolution. Type should be `INT`.
+        - `optional_start` (Optional): An optional parameter to specify the initial state of the grid, allowing for custom starting configurations. Type should be `MASK`.
+    - Outputs:
+        - `image`: The final state of the grid after the specified number of steps, represented as an image. Type should be `IMAGE`.
+        - `mask`: A binary mask indicating the cells that changed state in the last step of the simulation. Type should be `MASK`.
+        - `off`: A mask indicating cells that turned off in the last step of the simulation. Type should be `MASK`.
+        - `on`: A mask indicating cells that turned on in the last step of the simulation. Type should be `MASK`.

@@ -1,5 +1,0 @@
-- `ImpactDummyInput`: The ImpactDummyInput node is designed to generate a simple dummy output, primarily for testing or placeholder purposes within the ImpactPack/Debug category. It serves as a straightforward mechanism to introduce a constant or a placeholder value into the data flow.
-    - Parameters:
-    - Inputs:
-    - Outputs:
-        - `*`: Represents a generic output type, indicating that this node can produce a value of any type, serving as a versatile placeholder or test value. Type should be `*`.

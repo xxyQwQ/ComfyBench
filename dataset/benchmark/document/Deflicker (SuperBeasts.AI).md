@@ -1,0 +1,11 @@
+- `Deflicker (SuperBeasts.AI)`: The Deflicker node is designed to mitigate flickering in image sequences by adjusting the brightness of individual images based on the average brightness of their surrounding context. It incorporates additional image processing techniques such as noise reduction, gradient smoothing, and dithering to enhance the visual quality of the output.
+    - Inputs:
+        - `images` (Required): A sequence of images to be processed for flicker reduction. This input is crucial for determining the context and applying the necessary adjustments to each image. Type should be `IMAGE`.
+        - `context_length` (Required): Specifies the number of images around the current one to consider for calculating the average brightness, influencing the flicker correction intensity. Type should be `INT`.
+        - `brightness_threshold` (Required): The minimum difference in brightness between the current image and the context average that triggers adjustment, controlling sensitivity to flicker. Type should be `FLOAT`.
+        - `blending_strength` (Required): Determines the intensity of blending between the original and processed images, affecting the subtlety of the deflickering effect. Type should be `FLOAT`.
+        - `noise_reduction_strength` (Required): Controls the degree of noise reduction applied to each image, enhancing clarity. Type should be `FLOAT`.
+        - `gradient_smoothing_strength` (Required): Adjusts the level of gradient smoothing to reduce visual noise and improve image coherence. Type should be `INT`.
+        - `batch_size` (Required): The number of images processed at a time, affecting performance and memory usage. Type should be `INT`.
+    - Outputs:
+        - `image`: The sequence of images after applying deflickering and additional image enhancements, ready for further processing or display. Type should be `IMAGE`.

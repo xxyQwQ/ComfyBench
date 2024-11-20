@@ -1,0 +1,16 @@
+- `LayerColor_ Color of Shadow & Highlight`: This node is designed to adjust the color properties of shadows and highlights within an image. It allows for the fine-tuning of brightness, saturation, and hue for both shadows and highlights, enabling users to achieve a desired visual effect or correct color imbalances.
+    - Inputs:
+        - `image` (Required): The input image to be processed for shadow and highlight color correction. Type should be `IMAGE`.
+        - `shadow_brightness` (Required): Specifies the brightness level for shadows, affecting the overall darkness or lightness of shadow areas in the image. Type should be `FLOAT`.
+        - `shadow_saturation` (Required): Determines the saturation level for shadows, influencing the intensity of colors in shadowed regions. Type should be `FLOAT`.
+        - `shadow_hue` (Required): Adjusts the hue for shadows, allowing for the alteration of color tones in shadow areas. Type should be `INT`.
+        - `shadow_level_offset` (Required): Offsets the level of shadows, modifying the threshold at which shadows are defined. Type should be `INT`.
+        - `shadow_range` (Required): Defines the range of shadow levels, affecting the breadth of tones considered as shadows. Type should be `FLOAT`.
+        - `highlight_brightness` (Required): Defines the brightness level for highlights, impacting the luminosity of highlighted areas in the image. Type should be `FLOAT`.
+        - `highlight_saturation` (Required): Sets the saturation level for highlights, affecting the vibrancy of colors in highlighted regions. Type should be `FLOAT`.
+        - `highlight_hue` (Required): Modifies the hue for highlights, enabling changes in color tones within highlighted areas. Type should be `INT`.
+        - `highlight_level_offset` (Required): Offsets the level of highlights, modifying the threshold at which highlights are defined. Type should be `INT`.
+        - `highlight_range` (Required): Defines the range of highlight levels, affecting the breadth of tones considered as highlights. Type should be `FLOAT`.
+        - `mask` (Optional): An optional mask to specify areas of the image to apply the shadow and highlight adjustments. Type should be `MASK`.
+    - Outputs:
+        - `image`: The output image after applying shadow and highlight color corrections. Type should be `IMAGE`.

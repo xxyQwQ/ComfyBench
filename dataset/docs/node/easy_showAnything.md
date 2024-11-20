@@ -1,5 +1,0 @@
-- `easy showAnything`: The `easy showAnything` node is designed to display any type of input data as a string, making it versatile for debugging or logging purposes. It abstracts the complexity of data type handling by converting various data types into a human-readable string format.
-    - Parameters:
-    - Inputs:
-        - `anything`: This parameter accepts any type of input, allowing for a wide range of data types to be displayed as strings. It's crucial for the node's functionality to convert diverse inputs into a unified string output. Type should be `*`.
-    - Outputs:

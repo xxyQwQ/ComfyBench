@@ -1,0 +1,6 @@
+- `CR Text Length`: This node calculates the length of a given text string and provides a link to further documentation or help related to the node.
+    - Inputs:
+        - `text` (Required): The text string whose length is to be calculated. This input is essential for determining the output integer value representing the text's length. Type should be `STRING`.
+    - Outputs:
+        - `INT`: The length of the input text string, represented as an integer. Type should be `INT`.
+        - `show_help`: A URL string pointing to further documentation or help related to the CR Text Length node. Type should be `STRING`.

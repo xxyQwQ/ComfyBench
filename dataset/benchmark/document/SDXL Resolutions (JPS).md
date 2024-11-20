@@ -1,0 +1,6 @@
+- `SDXL Resolutions (JPS)`: This node is designed to calculate and return the width and height dimensions based on a predefined set of resolutions. It supports various aspect ratios and resolutions, facilitating the selection of appropriate dimensions for different image orientations and sizes.
+    - Inputs:
+        - `resolution` (Required): Specifies the desired resolution from a predefined list, influencing the output dimensions of width and height. This selection determines the aspect ratio and size of the resulting image. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `width`: The calculated width dimension based on the selected resolution. Type should be `INT`.
+        - `height`: The calculated height dimension based on the selected resolution. Type should be `INT`.

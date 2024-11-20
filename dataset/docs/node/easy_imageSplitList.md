@@ -1,6 +1,0 @@
-- `easy imageSplitList`: The node 'easy imageSplitList' is designed to split a given image into a list of smaller images, facilitating operations that require individual processing of segments or portions of the original image.
-    - Parameters:
-    - Inputs:
-        - `images`: The 'images' parameter accepts an image or a batch of images to be split. It plays a crucial role in determining how the original image(s) will be divided into smaller segments. Type should be `IMAGE`.
-    - Outputs:
-        - `images`: The output 'images' consists of a list of smaller images that have been split from the original input. This allows for individual processing or analysis of each segment. Type should be `IMAGE`.

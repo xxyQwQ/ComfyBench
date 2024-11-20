@@ -1,7 +1,0 @@
-- `CR Batch Images From List`: This node is designed to transform a list of images into a batched format, facilitating operations that require batch processing. It also provides a help link for further guidance on list-related operations.
-    - Parameters:
-    - Inputs:
-        - `image_list`: The list of images to be batched. This input is crucial for the node's operation as it directly influences the creation of the batched images output. Type should be `IMAGE`.
-    - Outputs:
-        - `image_batch`: The batched format of the input images, enabling efficient batch processing in subsequent operations. Type should be `IMAGE`.
-        - `show_help`: A URL providing additional help and guidance on list-related operations within the ComfyUI ecosystem. Type should be `STRING`.

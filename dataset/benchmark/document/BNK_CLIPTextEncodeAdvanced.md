@@ -1,0 +1,8 @@
+- `BNK_CLIPTextEncodeAdvanced`: This node specializes in generating advanced CLIP text embeddings by processing input text with options for token normalization and weight interpretation strategies. It aims to enhance text representation for conditioning in generative models.
+    - Inputs:
+        - `text` (Required): The input text to be encoded. It supports multiline input, allowing for more complex and detailed text representations. Type should be `STRING`.
+        - `clip` (Required): A CLIP model instance used for text tokenization and embedding generation. Type should be `CLIP`.
+        - `token_normalization` (Required): Specifies the method for normalizing token embeddings, offering options like none, mean, length, and length+mean to adjust the embedding process. Type should be `COMBO[STRING]`.
+        - `weight_interpretation` (Required): Defines the strategy for interpreting the weights of token embeddings, with options including comfy, A1111, compel, comfy++, and down_weight. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `conditioning`: The output is a conditioning format suitable for generative models, including the advanced CLIP text embeddings and optional pooled output. Type should be `CONDITIONING`.

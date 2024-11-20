@@ -1,0 +1,12 @@
+- `KepStringList`: The KepStringList node is designed to aggregate and process multiple string inputs into a list format, accommodating both required and optional text inputs. It effectively combines various textual elements, providing a flexible mechanism for handling and organizing string data within a list structure.
+    - Inputs:
+        - `Text1` (Required): A required string input that contributes to the formation of the string list. Type should be `STRING`.
+        - `Text2` (Required): Another required string input that is included in the string list. Type should be `STRING`.
+        - `Text3` (Optional): An optional string input that can be included in the string list if provided. Type should be `STRING`.
+        - `Text4` (Optional): An optional string input that can be included in the string list if provided. Type should be `STRING`.
+        - `Text5` (Optional): An optional string input that can be included in the string list if provided. Type should be `STRING`.
+        - `Text6` (Optional): An optional string input that can be included in the string list if provided. Type should be `STRING`.
+        - `Text7` (Optional): An optional string input that can be included in the string list if provided. Type should be `STRING`.
+    - Outputs:
+        - `Strings`: The list of strings aggregated from the input texts. Type should be `STRING`.
+        - `Num Strings`: The number of strings included in the output list, indicating the list's length. Type should be `INT`.

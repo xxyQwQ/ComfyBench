@@ -1,0 +1,5 @@
+- `CM_BreakoutVec3`: The node is designed to decompose a 3-dimensional vector into its individual components, facilitating operations that require access to the separate dimensions of a vector.
+    - Inputs:
+        - `a` (Required): This parameter represents the 3-dimensional vector to be decomposed. It allows for operations on individual vector components by breaking down the vector into its x, y, and z components. Type should be `VEC3`.
+    - Outputs:
+        - `float`: Each output represents one of the three components of the input vector, allowing for individual manipulation or analysis of the vector's dimensions. Type should be `FLOAT`.

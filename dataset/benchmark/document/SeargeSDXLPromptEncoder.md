@@ -1,0 +1,25 @@
+- `SeargeSDXLPromptEncoder`: The SeargeSDXLPromptEncoder node is designed to encode prompts for the SDXL model, facilitating the generation of text prompts that are optimized for image synthesis tasks. It supports the encoding of both base and refined prompts, enabling users to fine-tune the prompt details for more precise image generation outcomes.
+    - Inputs:
+        - `base_clip` (Required): unknown Type should be `CLIP`.
+        - `refiner_clip` (Required): unknown Type should be `CLIP`.
+        - `pos_g` (Required): unknown Type should be `STRING`.
+        - `pos_l` (Required): unknown Type should be `STRING`.
+        - `pos_r` (Required): unknown Type should be `STRING`.
+        - `neg_g` (Required): unknown Type should be `STRING`.
+        - `neg_l` (Required): unknown Type should be `STRING`.
+        - `neg_r` (Required): unknown Type should be `STRING`.
+        - `base_width` (Required): unknown Type should be `INT`.
+        - `base_height` (Required): unknown Type should be `INT`.
+        - `crop_w` (Required): unknown Type should be `INT`.
+        - `crop_h` (Required): unknown Type should be `INT`.
+        - `target_width` (Required): unknown Type should be `INT`.
+        - `target_height` (Required): unknown Type should be `INT`.
+        - `pos_ascore` (Required): unknown Type should be `FLOAT`.
+        - `neg_ascore` (Required): unknown Type should be `FLOAT`.
+        - `refiner_width` (Required): unknown Type should be `INT`.
+        - `refiner_height` (Required): unknown Type should be `INT`.
+    - Outputs:
+        - `base_positive`: unknown Type should be `CONDITIONING`.
+        - `base_negative`: unknown Type should be `CONDITIONING`.
+        - `refiner_positive`: unknown Type should be `CONDITIONING`.
+        - `refiner_negative`: unknown Type should be `CONDITIONING`.

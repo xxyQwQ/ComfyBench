@@ -1,0 +1,8 @@
+- `SaltAudioDeesser`: The SaltAudioDeesser node is designed to process audio files by applying a de-esser effect, which reduces or eliminates sibilance (harsh 's' or 'sh' sounds) from the audio. This is achieved through the use of command-line tools to dynamically adjust the intensity, amount, and frequency of the de-essing effect based on user inputs.
+    - Inputs:
+        - `audio` (Required): The raw audio data to be processed. This input is crucial as it is the target for the de-esser effect, aiming to reduce sibilance without affecting the overall quality of the audio. Type should be `AUDIO`.
+        - `intensity` (Required): Defines the intensity of the de-esser effect. Higher values result in more aggressive sibilance reduction. Type should be `FLOAT`.
+        - `amount` (Required): Specifies the amount of sibilance reduction to apply. This controls how much of the detected sibilance is reduced. Type should be `FLOAT`.
+        - `frequency_keep` (Required): The frequency above which sibilance is reduced. This helps in preserving the desired frequencies while reducing unwanted sibilance. Type should be `FLOAT`.
+    - Outputs:
+        - `audio`: The audio data after the de-esser effect has been applied, with reduced sibilance. Type should be `AUDIO`.

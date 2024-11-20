@@ -1,0 +1,8 @@
+- `LayerUtility_ BatchSelector`: The BatchSelector node is designed to selectively process and return subsets of images and masks based on specified indices. It enables dynamic selection and manipulation of image batches, facilitating customized processing flows within image editing or generation pipelines.
+    - Inputs:
+        - `select` (Required): Specifies the indices of images and masks to be selected for processing. This parameter is crucial for determining which elements of the input batches are operated on, allowing for targeted manipulation or analysis. Type should be `STRING`.
+        - `images` (Optional): An optional batch of images to be selectively processed based on the indices provided in 'select'. This parameter enables the node to work with varying sets of images, adapting to the needs of the workflow. Type should be `IMAGE`.
+        - `masks` (Optional): An optional batch of masks to be selectively processed alongside images, based on the indices provided in 'select'. This allows for parallel manipulation of images and their corresponding masks, enhancing workflow flexibility. Type should be `MASK`.
+    - Outputs:
+        - `image`: The processed batch of images, selectively compiled based on the specified indices. This output facilitates further image processing or analysis steps within the pipeline. Type should be `IMAGE`.
+        - `mask`: The processed batch of masks, selectively compiled alongside images, based on the specified indices. This output supports tasks requiring synchronized manipulation of images and masks. Type should be `MASK`.

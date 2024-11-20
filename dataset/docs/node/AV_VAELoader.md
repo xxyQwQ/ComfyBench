@@ -1,7 +1,0 @@
-- `AV_VAELoader`: The AV_VAELoader node is designed to load VAE models with an optional override feature, allowing users to specify an alternative VAE model for loading. This functionality enhances flexibility in model selection and usage within the Art Venture framework.
-    - Parameters:
-        - `vae_name`: The name of the VAE model to be loaded. This serves as the default model to load unless an override is specified. Type should be `COMBO[STRING]`.
-        - `vae_override`: Allows specifying an alternative VAE model to load. If the specified model is not found, the default or intended VAE model is loaded instead, providing a flexible approach to model selection. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `vae`: The loaded VAE model, ready for use within the system. This output enables further operations or transformations using the model. Type should be `VAE`.

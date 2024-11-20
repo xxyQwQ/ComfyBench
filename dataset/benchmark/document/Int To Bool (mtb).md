@@ -1,0 +1,5 @@
+- `Int To Bool (mtb)`: This node performs a basic conversion of an integer to a boolean value, abstracting the process of interpreting numerical inputs as binary truth values.
+    - Inputs:
+        - `int` (Required): The integer input that will be converted to a boolean. A non-zero value is considered true, while zero is considered false. Type should be `INT`.
+    - Outputs:
+        - `boolean`: The boolean result of the conversion, where non-zero integers are true and zero is false. Type should be `BOOLEAN`.

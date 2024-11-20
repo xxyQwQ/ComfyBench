@@ -1,7 +1,0 @@
-- `FromListGet1Mask`: The node is designed to retrieve a specific item from a list of masks based on the provided index. It supports random access, including the use of negative indices to access items from the end of the list.
-    - Parameters:
-        - `index`: The index of the item to retrieve from the list. Supports negative values for reverse access. Type should be `INT`.
-    - Inputs:
-        - `list`: The list of masks from which an item will be retrieved. It is essential for specifying which list the operation should be performed on. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The mask retrieved from the specified index in the list. Type should be `MASK`.

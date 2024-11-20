@@ -1,0 +1,10 @@
+- `AbsSinWave`: The AbsSinWave node generates a sine wave where the sine function's output is modified by the absolute value, creating a unique wave pattern. This transformation is applied to model wave-like behaviors with a distinctive mathematical alteration.
+    - Inputs:
+        - `phase` (Required): The 'phase' parameter controls the period of the sine wave, affecting how quickly the wave cycles through its pattern. Type should be `FLOAT`.
+        - `amplitude` (Required): The 'amplitude' parameter determines the height of the wave peaks, influencing the wave's overall intensity. Type should be `FLOAT`.
+        - `x_translation` (Required): The 'x_translation' parameter shifts the wave along the x-axis, allowing for adjustments in the wave's starting position. Type should be `FLOAT`.
+        - `max_value` (Required): The 'max_value' parameter sets the maximum value the wave can reach, influencing the wave's peak. Type should be `FLOAT`.
+        - `current_frame` (Required): The 'current_frame' parameter specifies the current point in time or frame for which the wave's value is being calculated, playing a crucial role in the wave's progression. Type should be `INT`.
+    - Outputs:
+        - `float`: The first output is the calculated wave value as a float, reflecting the wave's current state. Type should be `FLOAT`.
+        - `int`: The second output is the integer representation of the calculated wave value, providing a discrete measure of the wave's state. Type should be `INT`.

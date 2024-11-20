@@ -1,0 +1,6 @@
+- `Int to String`: The IntToString node is designed to convert integer values into their string representation, optionally formatting the output with commas for readability. This node serves as a utility for transforming numerical data into a text format suitable for display or further text-based processing.
+    - Inputs:
+        - `int_` (Required): The integer value to be converted into a string. This parameter is the primary input for the conversion process. Type should be `INT`.
+        - `use_commas` (Required): A flag indicating whether to format the output string with commas for thousands, millions, etc., enhancing readability. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `string`: The string representation of the input integer, formatted according to the 'use_commas' parameter. Type should be `STRING`.

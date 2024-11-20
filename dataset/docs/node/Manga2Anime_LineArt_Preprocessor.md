@@ -1,7 +1,0 @@
-- `Manga2Anime_LineArt_Preprocessor`: This node is designed to preprocess images by extracting line art from manga images, transforming them into a format suitable for anime-style rendering. It utilizes a specialized model to detect and highlight the line art, ensuring the output is optimized for further processing or direct use in anime-style visual projects.
-    - Parameters:
-        - `resolution`: Specifies the resolution to which the input image is scaled before line art extraction. This parameter ensures the output is optimized for the desired visual quality. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for manga line art extraction. This image is transformed to highlight the line art, making it suitable for anime-style rendering. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed image with manga line art extracted, presented in a format optimized for anime-style rendering. Type should be `IMAGE`.

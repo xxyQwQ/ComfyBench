@@ -1,0 +1,5 @@
+- `LLMRssReaderNode`: The LLMRssReaderNode is designed to fetch and parse RSS feeds from provided URLs, converting the feed data into a structured document format. This node facilitates the aggregation of content from multiple RSS sources, streamlining the process of accessing and analyzing news or blog feeds programmatically.
+    - Inputs:
+        - `url_i` (Required): The URL from which to read the RSS feed. This parameter is mandatory and initiates the RSS reading process. Up to four URLs can be provided, allowing for the aggregation of content from multiple sources. Type should be `STRING`.
+    - Outputs:
+        - `documents`: The structured document format output containing the aggregated content from the RSS feeds. Type should be `DOCUMENT`.

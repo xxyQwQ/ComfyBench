@@ -1,0 +1,202 @@
+{
+    "11": {
+        "_meta": {
+            "title": "Load VAE"
+        },
+        "class_type": "VAELoader",
+        "inputs": {
+            "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+        }
+    },
+    "12": {
+        "_meta": {
+            "title": "Load Image"
+        },
+        "class_type": "LoadImage",
+        "inputs": {
+            "image": "woman_dance.jpg",
+            "upload": "image"
+        }
+    },
+    "14": {
+        "_meta": {
+            "title": "Load ControlNet Model"
+        },
+        "class_type": "ControlNetLoader",
+        "inputs": {
+            "control_net_name": "control_v11p_sd15_openpose_fp16.safetensors"
+        }
+    },
+    "16": {
+        "_meta": {
+            "title": "Apply ControlNet"
+        },
+        "class_type": "ControlNetApply",
+        "inputs": {
+            "conditioning": [
+                "6",
+                0
+            ],
+            "control_net": [
+                "14",
+                0
+            ],
+            "image": [
+                "24",
+                0
+            ],
+            "strength": 0.8999999999999999
+        }
+    },
+    "17": {
+        "_meta": {
+            "title": "Preview Image"
+        },
+        "class_type": "PreviewImage",
+        "inputs": {
+            "images": [
+                "28",
+                0
+            ]
+        }
+    },
+    "24": {
+        "_meta": {
+            "title": "Upscale Image"
+        },
+        "class_type": "ImageScale",
+        "inputs": {
+            "crop": "disabled",
+            "height": 512,
+            "image": [
+                "28",
+                0
+            ],
+            "upscale_method": "nearest-exact",
+            "width": 512
+        }
+    },
+    "28": {
+        "_meta": {
+            "title": "DWPose Estimator"
+        },
+        "class_type": "DWPreprocessor",
+        "inputs": {
+            "bbox_detector": "yolox_l.onnx",
+            "detect_body": "enable",
+            "detect_face": "disable",
+            "detect_hand": "disable",
+            "image": [
+                "12",
+                0
+            ],
+            "pose_estimator": "dw-ll_ucoco_384_bs5.torchscript.pt",
+            "resolution": 512
+        }
+    },
+    "3": {
+        "_meta": {
+            "title": "KSampler"
+        },
+        "class_type": "KSampler",
+        "inputs": {
+            "cfg": 7,
+            "denoise": 1,
+            "latent_image": [
+                "5",
+                0
+            ],
+            "model": [
+                "4",
+                0
+            ],
+            "negative": [
+                "7",
+                0
+            ],
+            "positive": [
+                "16",
+                0
+            ],
+            "sampler_name": "dpmpp_2m",
+            "scheduler": "karras",
+            "seed": 249584040731174,
+            "steps": 20
+        }
+    },
+    "4": {
+        "_meta": {
+            "title": "Load Checkpoint"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "inputs": {
+            "ckpt_name": "dreamshaper_8.safetensors"
+        }
+    },
+    "5": {
+        "_meta": {
+            "title": "Empty Latent Image"
+        },
+        "class_type": "EmptyLatentImage",
+        "inputs": {
+            "batch_size": 1,
+            "height": 512,
+            "width": 512
+        }
+    },
+    "6": {
+        "_meta": {
+            "title": "CLIP Text Encode (Positive)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "a male, dancing in the street"
+        }
+    },
+    "7": {
+        "_meta": {
+            "title": "CLIP Text Encode (Negative)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "blurry, painting, drawing, photography, distorted, horror"
+        }
+    },
+    "8": {
+        "_meta": {
+            "title": "VAE Decode"
+        },
+        "class_type": "VAEDecode",
+        "inputs": {
+            "samples": [
+                "3",
+                0
+            ],
+            "vae": [
+                "11",
+                0
+            ]
+        }
+    },
+    "9": {
+        "_meta": {
+            "title": "Save Image"
+        },
+        "class_type": "SaveImage",
+        "inputs": {
+            "filename_prefix": "Result",
+            "images": [
+                "8",
+                0
+            ]
+        }
+    }
+}

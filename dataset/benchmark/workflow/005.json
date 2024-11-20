@@ -1,0 +1,151 @@
+{
+    "12": {
+        "_meta": {
+            "title": "unCLIPCheckpointLoader"
+        },
+        "class_type": "unCLIPCheckpointLoader",
+        "inputs": {
+            "ckpt_name": "sd21-unclip-l.ckpt"
+        }
+    },
+    "13": {
+        "_meta": {
+            "title": "CLIP Vision Encode"
+        },
+        "class_type": "CLIPVisionEncode",
+        "inputs": {
+            "clip_vision": [
+                "12",
+                3
+            ],
+            "image": [
+                "15",
+                0
+            ]
+        }
+    },
+    "14": {
+        "_meta": {
+            "title": "unCLIPConditioning"
+        },
+        "class_type": "unCLIPConditioning",
+        "inputs": {
+            "clip_vision_output": [
+                "13",
+                0
+            ],
+            "conditioning": [
+                "6",
+                0
+            ],
+            "noise_augmentation": 0.1,
+            "strength": 1
+        }
+    },
+    "15": {
+        "_meta": {
+            "title": "Load Image"
+        },
+        "class_type": "LoadImage",
+        "inputs": {
+            "image": "budapest.jpg",
+            "upload": "image"
+        }
+    },
+    "3": {
+        "_meta": {
+            "title": "KSampler"
+        },
+        "class_type": "KSampler",
+        "inputs": {
+            "cfg": 7,
+            "denoise": 1,
+            "latent_image": [
+                "5",
+                0
+            ],
+            "model": [
+                "12",
+                0
+            ],
+            "negative": [
+                "7",
+                0
+            ],
+            "positive": [
+                "14",
+                0
+            ],
+            "sampler_name": "dpmpp_3m_sde_gpu",
+            "scheduler": "sgm_uniform",
+            "seed": 52117596413767,
+            "steps": 20
+        }
+    },
+    "5": {
+        "_meta": {
+            "title": "Empty Latent Image"
+        },
+        "class_type": "EmptyLatentImage",
+        "inputs": {
+            "batch_size": 1,
+            "height": 768,
+            "width": 768
+        }
+    },
+    "6": {
+        "_meta": {
+            "title": "CLIP Text Encode (Positive)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "12",
+                1
+            ],
+            "text": "a beautiful photograph of an old European city"
+        }
+    },
+    "7": {
+        "_meta": {
+            "title": "CLIP Text Encode (Negative)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "12",
+                1
+            ],
+            "text": ""
+        }
+    },
+    "8": {
+        "_meta": {
+            "title": "VAE Decode"
+        },
+        "class_type": "VAEDecode",
+        "inputs": {
+            "samples": [
+                "3",
+                0
+            ],
+            "vae": [
+                "12",
+                2
+            ]
+        }
+    },
+    "9": {
+        "_meta": {
+            "title": "Save Image"
+        },
+        "class_type": "SaveImage",
+        "inputs": {
+            "filename_prefix": "Result",
+            "images": [
+                "8",
+                0
+            ]
+        }
+    }
+}

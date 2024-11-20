@@ -1,0 +1,7 @@
+- `ColorMatch`: The ColorMatch node is designed for transferring color schemes between images, utilizing advanced color matching techniques. It supports multiple methods for color transfer, including histogram matching and various statistical approaches, to achieve high-quality color grading, correction, and harmonization across images.
+    - Inputs:
+        - `image_ref` (Required): The reference image whose color palette is to be transferred. It plays a crucial role in determining the final appearance of the target image. Type should be `IMAGE`.
+        - `image_target` (Required): The target image that will receive the color palette from the reference image. This image is transformed to match the color scheme of the reference image. Type should be `IMAGE`.
+        - `method` (Required): Specifies the method used for color transfer. Different methods can produce varying effects, allowing for flexibility in achieving the desired color grading. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The resulting image after color transfer, with the color scheme of the reference image applied to the target image. Type should be `IMAGE`.

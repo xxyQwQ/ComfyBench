@@ -1,0 +1,11 @@
+- `CR Simple Prompt List`: This node is designed to aggregate multiple text prompts into a single list, optionally incorporating an existing list of prompts. It's particularly useful for constructing comprehensive prompt lists for animation or text generation tasks, allowing for dynamic extension based on input prompts.
+    - Inputs:
+        - `prompt_1` (Required): The first text prompt to be included in the prompt list. Its inclusion directly influences the beginning of the aggregated prompt list, setting the initial context or theme. Type should be `STRING`.
+        - `prompt_2` (Required): The second text prompt to be included in the prompt list. It adds to the diversity of the aggregated list, potentially introducing a new aspect or detail following the initial prompt. Type should be `STRING`.
+        - `prompt_3` (Required): The third text prompt to be included in the prompt list. It further diversifies the content of the list, adding depth or complexity to the combined narrative or instructions. Type should be `STRING`.
+        - `prompt_4` (Required): The fourth text prompt to be included in the prompt list. It contributes additional layers or nuances to the aggregated list, enriching the overall content. Type should be `STRING`.
+        - `prompt_5` (Required): The fifth text prompt to be included in the prompt list. It finalizes the input sequence, potentially capping the list with a conclusive or summarizing statement. Type should be `STRING`.
+        - `simple_prompt_list` (Optional): An optional list of pre-existing prompts to be included in the final aggregated list. This allows for dynamic extension of the prompt list based on existing collections, effectively enriching the final output with a broader range of expressions or instructions. Type should be `SIMPLE_PROMPT_LIST`.
+    - Outputs:
+        - `SIMPLE_PROMPT_LIST`: The aggregated list of text prompts, constructed from the input prompts and any existing prompt list provided. This list represents a comprehensive collection of instructions or themes for subsequent use. Type should be `SIMPLE_PROMPT_LIST`.
+        - `show_help`: A URL providing additional help and documentation for using the CR Simple Prompt List node. Type should be `STRING`.

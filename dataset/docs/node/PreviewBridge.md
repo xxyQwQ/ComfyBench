@@ -1,8 +1,0 @@
-- `PreviewBridge`: The PreviewBridge node serves as an intermediary for processing and caching images for preview purposes. It manages the refresh logic based on unique identifiers and cached states, loads images from cache or generates new previews as needed, and updates the cache with the new or existing image data.
-    - Parameters:
-        - `image`: A single image to be either loaded from cache or to be used in generating a new preview. This parameter plays a key role in the refresh logic and subsequent processing. Type should be `STRING`.
-    - Inputs:
-        - `images`: A collection of images to be processed or cached for preview. This parameter is central to determining whether a refresh is needed based on the cache state. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed or cached image ready for preview. This output is crucial for accessing the updated or existing previews. Type should be `IMAGE`.
-        - `mask`: The mask associated with the processed or cached image, indicating areas of interest or modification. Type should be `MASK`.

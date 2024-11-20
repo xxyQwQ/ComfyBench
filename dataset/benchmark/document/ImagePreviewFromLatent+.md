@@ -1,0 +1,11 @@
+- `ImagePreviewFromLatent+`: This node is designed to generate a preview image from a given latent representation. It leverages specific decoding techniques to transform latent vectors into visual previews, facilitating a visual understanding of the latent space.
+    - Inputs:
+        - `latent` (Required): The latent representation to be transformed into a preview image. This input is crucial for visualizing the encoded information in a human-interpretable format. Type should be `LATENT`.
+        - `vae` (Required): The variational autoencoder model used for decoding the latent representation into an image. Type should be `VAE`.
+        - `tile_size` (Required): Specifies the size of the tiles used in the decoding process, affecting the resolution of the output image. Type should be `INT`.
+        - `image` (Optional): An optional input image that can be used in conjunction with the latent representation for generating the preview. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `IMAGE`: The generated preview image, offering a visual interpretation of the latent representation. Type should be `IMAGE`.
+        - `MASK`: An optional mask that may be generated alongside the preview image, depending on the node's implementation. Type should be `MASK`.
+        - `width`: The width of the generated preview image. Type should be `INT`.
+        - `height`: The height of the generated preview image. Type should be `INT`.

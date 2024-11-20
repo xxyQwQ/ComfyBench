@@ -1,9 +1,0 @@
-- `XY Input Sampler_Scheduler`: This node is designed to process and validate combinations of samplers and schedulers for use in generative models. It ensures that the provided sampler and scheduler names are valid and compatible, potentially adjusting them based on predefined constraints to optimize the sampling process.
-    - Parameters:
-        - `target_parameter`: Specifies the target parameter for the sampling or scheduling process, indicating the specific aspect of the generative model's operation to be optimized or adjusted. Type should be `COMBO[STRING]`.
-        - `input_count`: Indicates the number of inputs to be processed, reflecting the volume of data or parameters the node will handle in optimizing the sampling or scheduling. Type should be `INT`.
-        - `sampler_i`: Specifies the index of the sampler to be used, playing a crucial role in determining the sampling strategy and its compatibility with the scheduler. Type should be `COMBO[STRING]`.
-        - `scheduler_i`: Defines the index of the scheduler to be employed alongside the sampler, adjusting the sampling parameters dynamically for efficient generation. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `X or Y`: The result of processing, which could be either an optimized parameter value (X) or a decision metric (Y), ensuring the sampler and scheduler are effectively paired. Type should be `XY`.

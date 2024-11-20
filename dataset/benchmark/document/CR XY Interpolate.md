@@ -1,0 +1,19 @@
+- `CR XY Interpolate`: The CR XY Interpolate node is designed for interpolating between two points or sets of points on an XY grid, facilitating the creation of smooth transitions or animations within a two-dimensional space. This node is particularly useful in scenarios where visual continuity or gradual changes between states are desired.
+    - Inputs:
+        - `x_columns` (Required): Specifies the number of columns in the X dimension for the grid. It defines the horizontal spread of points to be interpolated. Type should be `INT`.
+        - `x_start_value` (Required): The starting value for the X dimension, indicating the initial point or state from which interpolation begins. Type should be `FLOAT`.
+        - `x_step` (Required): The step size for the X dimension, determining the increment between each point in the grid along the X axis. Type should be `FLOAT`.
+        - `x_annotation_prepend` (Required): A prefix for annotating the X dimension, used for labeling or identifying points along the X axis. Type should be `STRING`.
+        - `y_rows` (Required): Specifies the number of rows in the Y dimension for the grid. It defines the vertical spread of points to be interpolated. Type should be `INT`.
+        - `y_start_value` (Required): The starting value for the Y dimension, indicating the initial point or state from which interpolation begins. Type should be `FLOAT`.
+        - `y_step` (Required): The step size for the Y dimension, determining the increment between each point in the grid along the Y axis. Type should be `FLOAT`.
+        - `y_annotation_prepend` (Required): A prefix for annotating the Y dimension, used for labeling or identifying points along the Y axis. Type should be `STRING`.
+        - `index` (Required): An index to specify a particular interpolation operation or sequence. It can be used to manage multiple interpolations within the same grid. Type should be `INT`.
+        - `gradient_profile` (Required): Specifies the gradient profile to be used for interpolation, affecting the transition smoothness between points. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `X`: The interpolated values along the X dimension, representing a blend of the input states based on the specified parameters. Type should be `FLOAT`.
+        - `Y`: The interpolated values along the Y dimension, representing a blend of the input states based on the specified parameters. Type should be `FLOAT`.
+        - `x_annotation`: Generated annotations for the X dimension based on the 'x_annotation_prepend' input and interpolation parameters. Type should be `STRING`.
+        - `y_annotation`: Generated annotations for the Y dimension based on the 'y_annotation_prepend' input and interpolation parameters. Type should be `STRING`.
+        - `trigger`: A trigger output that can be used to initiate further actions or processes once the interpolation is complete. Type should be `BOOLEAN`.
+        - `show_help`: Provides a link to additional documentation or help related to the node and its usage. Type should be `STRING`.

@@ -1,6 +1,0 @@
-- `PrintFloats`: The PrintFloats node is designed to convert a float or an array of floats into a string representation, ensuring a proper format without extra line breaks. It focuses on formatting numerical values for display or logging purposes, accommodating both individual floats and collections thereof.
-    - Parameters:
-        - `audio_float`: Represents the float or array of floats to be converted into a string format. This input is crucial for determining the exact numerical values that will be formatted and returned as strings. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `formatted_float`: The string representation of the input float(s), formatted to two decimal places. This output is essential for displaying or logging numerical values in a consistent and readable format. Type should be `STRING`.

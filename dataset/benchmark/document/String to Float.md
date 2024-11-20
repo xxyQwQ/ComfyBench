@@ -1,0 +1,5 @@
+- `String to Float`: This node is designed to convert string representations of floating-point numbers into their float equivalents. It ensures that inputs, even if provided as strings, are accurately transformed to float values for further numerical processing.
+    - Inputs:
+        - `inStr` (Required): Takes a string input that represents a floating-point number and converts it into a float. This allows for string-based numerical inputs to be accurately processed and utilized in calculations. Type should be `STRING`.
+    - Outputs:
+        - `float`: Outputs the converted floating-point number from the string input, facilitating its use in numerical operations and calculations. Type should be `FLOAT`.

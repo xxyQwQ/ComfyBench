@@ -1,0 +1,9 @@
+- `FreeU_V2`: The FreeU_V2 node enhances the functionality of generative models by applying dynamic scaling and filtering techniques to the model's output. It utilizes a scale dictionary to adjust the model's hidden states based on predefined scaling factors and applies a Fourier filter to the spatial components, ensuring optimized output quality. This node is particularly useful for improving the visual fidelity of generated images or patterns, making it a valuable tool for tasks requiring high-quality visual outputs.
+    - Inputs:
+        - `model` (Required): The generative model to be enhanced by the FreeU_V2 node. It is crucial for defining the base functionality that will be augmented by the node's scaling and filtering operations. Type should be `MODEL`.
+        - `b1` (Required): A scaling factor for adjusting the model's hidden states, contributing to the dynamic scaling functionality of the node. Type should be `FLOAT`.
+        - `b2` (Required): Another scaling factor for adjusting the model's hidden states, working alongside b1 to fine-tune the output quality. Type should be `FLOAT`.
+        - `s1` (Required): A scaling parameter used in the Fourier filtering process to modify the spatial components of the model's output, enhancing visual clarity. Type should be `FLOAT`.
+        - `s2` (Required): A secondary scaling parameter for the Fourier filter, used to further refine the spatial aspects of the generated output. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The enhanced generative model, with improved output quality through dynamic scaling and Fourier filtering. Type should be `MODEL`.

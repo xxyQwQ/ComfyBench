@@ -1,0 +1,5 @@
+- `CM_BoolToInt`: This node performs a type conversion from a boolean value to an integer. It abstracts the process of interpreting boolean logic in a numerical context, enabling the translation of true/false values into binary (0 or 1) form.
+    - Inputs:
+        - `a` (Required): The boolean input to be converted to an integer. This parameter is crucial as it directly influences the output by determining whether the result will be 0 (False) or 1 (True). Type should be `BOOL`.
+    - Outputs:
+        - `int`: The integer representation of the input boolean value, where True becomes 1 and False becomes 0. Type should be `INT`.

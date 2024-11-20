@@ -1,0 +1,5 @@
+- `ExtendIntList`: The ExtendIntList node is designed to concatenate multiple lists of integers into a single, extended list. This functionality is useful in scenarios where aggregation of integer data from various sources is required, enabling seamless data manipulation and analysis.
+    - Inputs:
+        - `inputs_len` (Required): Specifies the number of integer lists to be concatenated. This parameter determines how many lists will be combined into the extended list. Type should be `INT`.
+    - Outputs:
+        - `int`: The concatenated list of integers, resulting from the aggregation of all input lists. Type should be `INT`.

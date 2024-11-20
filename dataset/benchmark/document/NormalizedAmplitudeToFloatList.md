@@ -1,0 +1,5 @@
+- `NormalizedAmplitudeToFloatList`: This node is designed to interface with the AudioScheduler nodes, converting normalized amplitude values into a list of floats. It ensures that the amplitude values are within a specific range before conversion, facilitating their use in audio processing workflows.
+    - Inputs:
+        - `normalized_amp` (Required): Represents the normalized amplitude values to be converted. It is crucial for ensuring the amplitude values are within the acceptable range [0, 1] before conversion, affecting the node's execution and the accuracy of the output. Type should be `NORMALIZED_AMPLITUDE`.
+    - Outputs:
+        - `float`: The output is a list of floats derived from the normalized amplitude values, suitable for further processing in audio-related applications. Type should be `FLOAT`.

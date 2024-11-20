@@ -1,9 +1,0 @@
-- `KMeansColor`: The KMeansColor node is designed to apply the K-means clustering algorithm to an image to simplify its color palette to a specified number of colors. This process can be useful for color quantization, reducing the number of colors in an image while preserving its essential visual characteristics.
-    - Parameters:
-        - `number_of_colors`: Specifies the desired number of colors in the simplified palette. It directly influences the outcome of the color quantization process. Type should be `INT`.
-        - `max_iterations`: The maximum number of iterations allowed for the K-means algorithm to converge to a solution. It affects the algorithm's runtime and precision. Type should be `INT`.
-        - `eps`: The epsilon value for convergence criteria. A smaller value makes the algorithm more precise but may increase computation time. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The input image to be processed. It serves as the basis for color quantization, determining the final simplified color palette. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed image with its color palette simplified to the specified number of colors. Type should be `IMAGE`.

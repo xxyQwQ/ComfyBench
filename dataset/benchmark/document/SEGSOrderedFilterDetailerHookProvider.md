@@ -1,0 +1,8 @@
+- `SEGSOrderedFilterDetailerHookProvider`: The SEGSOrderedFilterDetailerHookProvider node is designed to create a detailer hook that filters and orders segmentation results based on specified criteria. It allows for the customization of the ordering and filtering process, enabling the selection and prioritization of segmentation results according to user-defined parameters.
+    - Inputs:
+        - `target` (Required): Specifies the target attribute of the segmentation results to be filtered and ordered. This could be attributes like area, width, height, or coordinates, which determine the basis for filtering and ordering. Type should be `COMBO[STRING]`.
+        - `order` (Required): Determines the order in which the segmentation results are sorted. A boolean value where True indicates descending order and False indicates ascending order. Type should be `BOOLEAN`.
+        - `take_start` (Required): Defines the starting index from which to take the filtered and ordered segmentation results, allowing for pagination or skipping initial results. Type should be `INT`.
+        - `take_count` (Required): Specifies the number of segmentation results to take after applying the filter and order, enabling control over the quantity of results returned. Type should be `INT`.
+    - Outputs:
+        - `detailer_hook`: Returns a detailer hook configured to filter and order segmentation results based on the provided criteria. Type should be `DETAILER_HOOK`.

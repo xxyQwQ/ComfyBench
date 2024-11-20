@@ -1,0 +1,9 @@
+- `CR Encode Scheduled Prompts`: This node is designed to encode scheduled prompts for animation sequences, converting them into a format suitable for further processing and animation generation. It focuses on organizing and preparing prompt data based on predefined schedules, ensuring that the animation prompts are correctly sequenced and formatted for optimal use.
+    - Inputs:
+        - `clip` (Required): The clip input represents the animation clip for which the scheduled prompts are being encoded. It is crucial for determining the context and sequence of the animation. Type should be `CLIP`.
+        - `current_prompt` (Required): The current prompt is the starting point of the animation sequence, setting the initial context for the animation. Type should be `STRING`.
+        - `next_prompt` (Required): The next prompt specifies the subsequent context in the animation sequence, allowing for a smooth transition between frames. Type should be `STRING`.
+        - `weight` (Required): The weight parameter influences the blending of prompts between frames, affecting the smoothness and transition quality of the animation. Type should be `FLOAT`.
+    - Outputs:
+        - `CONDITIONING`: The CONDITIONING output is a processed format of the input prompts, ready for animation generation. Type should be `CONDITIONING`.
+        - `show_help`: A URL providing additional help and documentation related to the node's functionality. Type should be `STRING`.

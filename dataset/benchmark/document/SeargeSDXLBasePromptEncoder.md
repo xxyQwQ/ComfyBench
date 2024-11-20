@@ -1,0 +1,16 @@
+- `SeargeSDXLBasePromptEncoder`: The SeargeSDXLBasePromptEncoder node is designed to encode base prompts for the SDXL model, focusing on converting textual descriptions into a format suitable for further processing or generation tasks. It serves as a foundational component in the pipeline, preparing the input for more specialized encoding or refinement stages.
+    - Inputs:
+        - `base_clip` (Required): Serves as the primary input for the encoding process, representing the base CLIP model used to encode the prompts. Type should be `CLIP`.
+        - `pos_g` (Required): Represents the global positive textual content to be encoded, crucial for guiding the model's generation towards desired attributes or themes. Type should be `STRING`.
+        - `pos_l` (Required): Specifies local positive textual content, complementing the global positive content to refine the encoding process. Type should be `STRING`.
+        - `neg_g` (Required): Represents the global negative textual content, used to steer the model away from undesired attributes or themes. Type should be `STRING`.
+        - `neg_l` (Required): Specifies local negative textual content, complementing the global negative content to refine the encoding process. Type should be `STRING`.
+        - `base_width` (Required): Defines the width of the base image for encoding, affecting the spatial dimensions of the encoded output. Type should be `INT`.
+        - `base_height` (Required): Defines the height of the base image for encoding, affecting the spatial dimensions of the encoded output. Type should be `INT`.
+        - `crop_w` (Required): Specifies the width of the crop area, allowing for focused encoding on a specific region of the base image. Type should be `INT`.
+        - `crop_h` (Required): Specifies the height of the crop area, allowing for focused encoding on a specific region of the base image. Type should be `INT`.
+        - `target_width` (Required): Determines the target width for the encoded output, influencing the resolution of the generation task. Type should be `INT`.
+        - `target_height` (Required): Determines the target height for the encoded output, influencing the resolution of the generation task. Type should be `INT`.
+    - Outputs:
+        - `base_positive`: The encoded positive prompt, ready for further processing or direct use in generation tasks. Type should be `CONDITIONING`.
+        - `base_negative`: The encoded negative prompt, prepared for use in guiding the model away from undesired outputs. Type should be `CONDITIONING`.

@@ -1,7 +1,0 @@
-- `LLMChatMessagesAdv`: The LLMChatMessagesAdv node is designed to prepare chat messages by encapsulating system and user prompts into a structured format. This node facilitates the creation of chat interactions by organizing input prompts into a sequence of messages, thereby enabling a more structured and coherent dialogue flow.
-    - Parameters:
-        - `system_prompt`: The system prompt represents the initial message or context provided by the system. It sets the stage for the chat interaction, guiding the user's response. Type should be `STRING`.
-        - `user_prompt`: The user prompt captures the user's input or question in response to the system prompt. It plays a crucial role in driving the conversation forward. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `llm_message`: A list of chat messages that includes both the system and user prompts, structured for further processing or interaction. Type should be `LIST`.

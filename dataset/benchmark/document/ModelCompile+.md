@@ -1,0 +1,8 @@
+- `ModelCompile+`: The ModelCompile node is designed for optimizing and compiling models for improved execution performance. It allows for dynamic adjustments and fine-tuning of the compilation process based on the model's needs and the desired optimization level, enhancing efficiency and potentially reducing overhead.
+    - Inputs:
+        - `model` (Required): The model to be compiled. This parameter is crucial as it determines the base model that will undergo the compilation process for optimization. Type should be `MODEL`.
+        - `fullgraph` (Required): A boolean flag indicating whether to compile the model using a full graph approach. This affects the depth and extent of the compilation, potentially leading to more thorough optimization. Type should be `BOOLEAN`.
+        - `dynamic` (Required): A boolean flag that enables dynamic compilation, allowing for more flexibility in how the model is optimized during the compilation process. Type should be `BOOLEAN`.
+        - `mode` (Required): Specifies the mode of compilation, which can range from default settings to modes focused on reducing overhead or maximizing autotuning for performance optimization. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `model`: The compiled and optimized model, ready for enhanced performance during execution. Type should be `MODEL`.

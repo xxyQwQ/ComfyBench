@@ -1,6 +1,0 @@
-- `ImpactSEGSToMaskBatch`: This node is designed to convert a collection of segmentation data (SEGS) into a batch of masks. It processes the input segmentation data to generate a corresponding set of masks, which are then combined into a single batch. This operation facilitates the handling and manipulation of mask data at scale, streamlining workflows that involve the analysis or transformation of segmented images.
-    - Parameters:
-    - Inputs:
-        - `segs`: The 'segs' input represents the segmentation data that will be converted into a batch of masks. This data is crucial for the node's operation as it forms the basis for the mask generation process. Type should be `SEGS`.
-    - Outputs:
-        - `mask`: The output is a batch of masks, where each mask corresponds to a segment from the input segmentation data. This batch format is useful for subsequent processing or analysis steps that require masks in a collective form. Type should be `MASK`.

@@ -1,0 +1,12 @@
+- `CR Load LoRA`: This node is designed to dynamically load and apply Learning Rate Annealing (LoRA) adjustments to models and clips based on specified parameters or defaults. It supports conditional loading based on the presence of LoRA parameters, handling of default LoRAs, and iteration through a list of LoRAs to find a match for application. The node aims to enhance model performance or behavior by adjusting learning rates in a flexible and scheduled manner.
+    - Inputs:
+        - `model` (Required): The model to which the LoRA adjustments will be applied. It's crucial for defining the base upon which the LoRA modifications will take effect. Type should be `MODEL`.
+        - `clip` (Required): The clip to which the LoRA adjustments will be applied, alongside the model. It plays a key role in the context of video or image processing tasks. Type should be `CLIP`.
+        - `switch` (Required): A switch to enable or disable the application of LoRA adjustments. This allows for conditional application based on specific criteria. Type should be `COMBO[STRING]`.
+        - `lora_name` (Required): The name of the LoRA to be loaded and applied. This parameter is key to identifying which specific LoRA adjustments to apply. Type should be `COMBO[STRING]`.
+        - `strength_model` (Required): A floating-point value indicating the strength of the LoRA adjustments to be applied to the model. It affects the intensity of the learning rate modifications. Type should be `FLOAT`.
+        - `strength_clip` (Required): A floating-point value indicating the strength of the LoRA adjustments to be applied to the clip. It affects the intensity of the learning rate modifications. Type should be `FLOAT`.
+    - Outputs:
+        - `MODEL`: The model after the LoRA adjustments have been applied. It represents the modified version of the input model. Type should be `MODEL`.
+        - `CLIP`: The clip after the LoRA adjustments have been applied. It represents the modified version of the input clip. Type should be `CLIP`.
+        - `show_help`: A URL providing additional help and documentation regarding the LoRA adjustments and their application. Type should be `STRING`.

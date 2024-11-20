@@ -1,8 +1,0 @@
-- `Boolean To Float [Dream]`: Converts a boolean input to a float output, allowing for custom float values to be assigned to true and false boolean states. This node facilitates conditional logic and value transformation in data flows, enabling dynamic adjustments based on boolean conditions.
-    - Parameters:
-        - `boolean`: Determines the branch of execution: if true, the 'on_true' value is returned; if false, the 'on_false' value is selected. This boolean input thus directly influences the node's output. Type should be `BOOLEAN`.
-        - `on_true`: Specifies the float value to return when the boolean input is true, enabling customization of the output for true conditions. Type should be `FLOAT`.
-        - `on_false`: Defines the float value to return when the boolean input is false, allowing for tailored responses to false conditions. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `result`: The float value corresponding to the input boolean condition, determined by the 'on_true' or 'on_false' parameters. Type should be `FLOAT`.

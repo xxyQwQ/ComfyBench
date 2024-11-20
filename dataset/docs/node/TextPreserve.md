@@ -1,7 +1,0 @@
-- `TextPreserve`: The TextPreserve node is designed to manipulate and transform text inputs based on specific patterns and random choices, while preserving the original text for further use. It incorporates functionalities such as search and replace, wildcard text selection, and updating workflow states with modified text values.
-    - Parameters:
-        - `text`: The original text input that will be preserved and potentially modified through various text manipulation processes. Type should be `STRING`.
-        - `result_text`: A modified version of the original text after applying search and replace operations and wildcard selections. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `text`: The final text output after all manipulations, including search and replace operations and wildcard text selections, have been applied. Type should be `STRING`.

@@ -1,0 +1,5 @@
+- `ReadCaptions`: The ReadCaptions node is designed to extract captions from a specified JSON file, focusing on parsing and aggregating caption data related to various categories within the file. This node plays a crucial role in processing and preparing textual data for further analysis or processing steps, such as clustering or generating new content based on the extracted captions.
+    - Inputs:
+        - `file_path` (Required): Specifies the path to the JSON file containing captions. This input is essential for locating and reading the file to extract captions, directly influencing the node's ability to perform its primary function. Type should be `STRING`.
+    - Outputs:
+        - `captions`: A list of captions extracted and aggregated from the specified JSON file. This output is crucial for downstream tasks that require textual data for analysis, processing, or generation. Type should be `LIST`.

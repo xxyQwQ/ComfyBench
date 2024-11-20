@@ -1,9 +1,0 @@
-- `Load Image Sequence (mtb)`: The MTB_LoadImageSequence node is designed to load a sequence of images from a specified folder, based on the current frame number. It supports loading individual frames or all frames in a batch, making it suitable for tasks that require processing image sequences, such as video editing or animation.
-    - Parameters:
-        - `path`: Specifies the folder path where the image sequence is stored. This path is used to locate and load the images. Type should be `STRING`.
-        - `current_frame`: Determines which frame to load from the sequence. A special value of -1 indicates that all frames should be loaded as a batch. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `image`: The loaded image or images. In the case of loading all frames, this will be a batch of images. Type should be `IMAGE`.
-        - `mask`: The mask associated with the loaded image or images, if available. Type should be `MASK`.
-        - `current_frame`: The current frame number that was loaded. This is relevant when loading individual frames. Type should be `INT`.

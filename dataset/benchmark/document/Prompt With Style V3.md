@@ -1,0 +1,24 @@
+- `Prompt With Style V3`: The Prompt With Style V3 node is designed to enhance text prompts with predefined styles, allowing for the dynamic integration of style elements into both positive and negative prompts. It processes input prompts by stripping existing style syntax, matching them with available styles, and then reformatting them according to the selected style, including handling of special syntax and wildcards. This node aims to provide a versatile tool for generating styled prompts that can be further customized or used directly in various text-based applications.
+    - Inputs:
+        - `positive_prompt` (Required): unknown Type should be `STRING`.
+        - `negative_prompt` (Required): unknown Type should be `STRING`.
+        - `ratio_selected` (Required): unknown Type should be `COMBO[STRING]`.
+        - `custom_size` (Required): unknown Type should be `COMBO[STRING]`.
+        - `fit_custom_size` (Required): unknown Type should be `COMBO[STRING]`.
+        - `custom_width` (Required): unknown Type should be `INT`.
+        - `custom_height` (Required): unknown Type should be `INT`.
+        - `batch_size` (Required): unknown Type should be `INT`.
+        - `seed` (Required): unknown Type should be `INT`.
+        - `target_mode` (Required): unknown Type should be `COMBO[STRING]`.
+        - `base_model` (Required): unknown Type should be `MODEL`.
+        - `clip_base` (Required): unknown Type should be `CLIP`.
+        - `clip_refiner` (Required): unknown Type should be `CLIP`.
+    - Outputs:
+        - `base_model`: unknown Type should be `MODEL`.
+        - `samples`: unknown Type should be `LATENT`.
+        - `base_pos_cond`: unknown Type should be `CONDITIONING`.
+        - `base_neg_cond`: unknown Type should be `CONDITIONING`.
+        - `refiner_pos_cond`: unknown Type should be `CONDITIONING`.
+        - `refiner_neg_cond`: unknown Type should be `CONDITIONING`.
+        - `positive_prompt`: unknown Type should be `STRING`.
+        - `negative_prompt`: unknown Type should be `STRING`.

@@ -1,0 +1,12 @@
+- `CR Value Scheduler`: The CR Value Scheduler node is designed to manage the scheduling of numerical values across different frames in an animation sequence. It allows for the dynamic adjustment of values based on a predefined schedule, enhancing the flexibility and control over the animation's parameters.
+    - Inputs:
+        - `mode` (Required): Specifies the mode of operation, which can either use a default value or follow a custom schedule for value changes. Type should be `COMBO[STRING]`.
+        - `current_frame` (Required): Indicates the current frame number in the animation sequence, used to determine the appropriate value based on the schedule. Type should be `INT`.
+        - `schedule_alias` (Required): A unique identifier for the schedule being applied, facilitating the management and reference of multiple schedules. Type should be `STRING`.
+        - `default_value` (Required): The fallback value to be used when the schedule is disabled or an appropriate scheduled value cannot be found. Type should be `FLOAT`.
+        - `schedule_format` (Required): Defines the format of the schedule, dictating how scheduled values are interpreted and applied. Type should be `COMBO[STRING]`.
+        - `schedule` (Optional): The actual schedule containing the frame-wise values to be applied throughout the animation. Type should be `SCHEDULE`.
+    - Outputs:
+        - `INT`: The scheduled value converted to an integer, applicable for parameters requiring discrete values. Type should be `INT`.
+        - `FLOAT`: The scheduled value in its original floating-point format, suitable for parameters requiring continuous values. Type should be `FLOAT`.
+        - `show_help`: A URL providing additional information and guidance on using the CR Value Scheduler. Type should be `STRING`.

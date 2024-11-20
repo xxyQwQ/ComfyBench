@@ -1,0 +1,7 @@
+- `ImpactHFTransformersClassifierProvider`: Provides a classification pipeline for images using pre-trained models from Hugging Face Transformers. It allows selecting a model from a predefined list or specifying a custom model repository ID, and supports device mode configuration for performance optimization.
+    - Inputs:
+        - `preset_repo_id` (Required): Specifies the pre-trained model to use for classification. It can be selected from a predefined list of model URLs or set to 'Manual repo id' for custom models, enabling flexibility in model choice. Type should be `COMBO[STRING]`.
+        - `manual_repo_id` (Required): The repository ID of a custom model to be used for classification when 'Manual repo id' is selected. This allows for the use of models outside the predefined list. Type should be `STRING`.
+        - `device_mode` (Required): Determines the device (CPU or GPU) on which the classification pipeline will run, optimizing for performance or resource availability. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `transformers_classifier`: The classification pipeline configured with the selected model, ready for image classification tasks. Type should be `TRANSFORMERS_CLASSIFIER`.

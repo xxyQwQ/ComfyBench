@@ -1,0 +1,11 @@
+- `ColorToMask`: The `ColorToMask` node is designed to convert specific RGB values within images into a binary mask, allowing for selective processing or analysis of those areas. It supports batch processing to handle multiple images simultaneously, offering customization through parameters like color selection, inversion, and thresholding for flexible mask generation.
+    - Inputs:
+        - `images` (Required): Specifies the images to be processed. This parameter is crucial for defining the input data on which the mask will be applied. Type should be `IMAGE`.
+        - `invert` (Required): Determines whether the mask should be inverted. Inverting the mask swaps the areas to be masked and preserved, affecting the final output. Type should be `BOOLEAN`.
+        - `red` (Required): Specifies the red component of the RGB value to be masked. This parameter is part of the color selection for mask generation. Type should be `INT`.
+        - `green` (Required): Specifies the green component of the RGB value to be masked. Along with red and blue, it defines the specific color to target for masking. Type should be `INT`.
+        - `blue` (Required): Specifies the blue component of the RGB value to be masked. It's a critical part of defining the exact color that will be converted into a mask. Type should be `INT`.
+        - `threshold` (Required): Defines the tolerance for color matching. A higher threshold allows for a broader range of similar colors to be included in the mask. Type should be `INT`.
+        - `per_batch` (Required): Controls the number of images processed in each batch. This parameter helps manage memory usage and processing speed when handling multiple images. Type should be `INT`.
+    - Outputs:
+        - `mask`: The output is a binary mask where the specified RGB color within the images has been converted to white (or black if inverted), and all other areas are the opposite color. Type should be `MASK`.

@@ -1,0 +1,5 @@
+- `GlobalSampler __Inspire`: The GlobalSampler __Inspire node is designed to integrate various advanced sampling techniques for image generation and manipulation within the Inspire Pack framework. It leverages a collection of sophisticated samplers and schedulers to offer a versatile and customizable approach to generating or modifying images, accommodating a wide range of creative and technical requirements.
+    - Inputs:
+        - `sampler_name` (Required): Specifies the sampler to be used, enabling selection from a variety of predefined sampling strategies within the Inspire Pack framework. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Determines the scheduler for controlling the sampling process, influencing the progression and quality of image generation. Type should be `COMBO[STRING]`.
+    - Outputs:

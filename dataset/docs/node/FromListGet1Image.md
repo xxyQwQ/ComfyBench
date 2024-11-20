@@ -1,7 +1,0 @@
-- `FromListGet1Image`: This node is designed to retrieve a single image from a list of images based on a specified index. It supports random access, including the use of negative indices to access elements from the end of the list, making it versatile for various image processing tasks.
-    - Parameters:
-        - `index`: The index at which the image will be retrieved from the list. Supports negative indexing for reverse access. Type should be `INT`.
-    - Inputs:
-        - `list`: The list of images from which a single image will be retrieved. This parameter is crucial for specifying the source of the images. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The single image retrieved from the specified index in the list. Type should be `IMAGE`.

@@ -1,0 +1,7 @@
+- `LLMChatEngine`: The LLMChatEngine node facilitates interactive chat sessions by initializing and managing a chat engine based on a specified language model index. It supports dynamic conversation flow by allowing the reset of the chat engine and processing user queries to generate responses.
+    - Inputs:
+        - `llm_index` (Required): The index of the language model to be used for the chat session. It determines which chat engine instance is initialized for handling queries. Type should be `LLM_INDEX`.
+        - `query` (Required): The user's query as a string. It is the input for the chat engine to process and generate a response. Type should be `STRING`.
+        - `reset_engine` (Optional): A boolean flag indicating whether to reset the chat engine before processing the current query. This allows for starting a new conversation context. Type should be `BOOLEAN`.
+    - Outputs:
+        - `string`: The generated response from the chat engine as a string, based on the user's query. Type should be `STRING`.

@@ -1,0 +1,9 @@
+- `Contours`: The Contours node is designed to identify and extract contours from an image based on specified retrieval and approximation modes. It converts the input image to grayscale, applies thresholding if necessary, and utilizes OpenCV's findContours method to detect contours, providing a foundational step for further image analysis or manipulation.
+    - Inputs:
+        - `image` (Required): The input image tensor that contours will be extracted from. It's crucial as the source for contour detection. Type should be `IMAGE`.
+        - `retrieval_mode` (Required): Specifies the contour retrieval mode, affecting how contours are organized and retrieved. It plays a key role in defining the hierarchy of the contours. Type should be `COMBO[STRING]`.
+        - `approximation_mode` (Required): Determines the method used to approximate the contours. This affects the level of detail of the extracted contours. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `cv_contours`: The detected contours as a list of points. Type should be `CV_CONTOURS`.
+        - `cv_contour`: A single contour selected from the detected contours, if applicable. Type should be `CV_CONTOUR`.
+        - `cv_contours_hierarchy`: The hierarchical information of the contours, providing details on the contour structure and relationships. Type should be `CV_CONTOURS_HIERARCHY`.

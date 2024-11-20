@@ -1,0 +1,7 @@
+- `AV_ClaudeApi`: The AV_ClaudeApi node is designed to facilitate interaction with Claude's API, enabling the creation of API instances for further operations with Claude's language models. It abstracts the complexities of API key management and endpoint configuration, providing a streamlined way to access Claude's advanced language processing capabilities.
+    - Inputs:
+        - `claude_api_key` (Required): The API key for Claude, essential for authenticating requests to the API. It's a critical component for enabling access to Claude's language models. Type should be `STRING`.
+        - `endpoint` (Required): The URL of the Claude API endpoint. This parameter allows for specifying the API's location, with a default value pointing to Anthropic's API. Type should be `STRING`.
+        - `version` (Required): The version of the Claude API to be used, allowing for control over which features and improvements are accessible. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `llm_api`: The created instance of ClaudeApi, ready for making requests to Claude's language model API. Type should be `LLM_API`.

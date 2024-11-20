@@ -1,8 +1,0 @@
-- `Add String To Many`: This node is designed to either append or prepend a given string to multiple other strings, allowing for batch processing of string manipulation tasks.
-    - Parameters:
-        - `to_add`: The string to be added to each of the input strings. Its role is central to the operation, determining the content that will be appended or prepended. Type should be `STRING`.
-        - `inputs_len`: Specifies the number of input strings to which the 'to_add' string will be appended or prepended. It influences the number of operations performed by the node. Type should be `INT`.
-        - `operation`: Determines whether the 'to_add' string should be appended or prepended to the input strings. This choice affects the final arrangement of the strings. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `string`: The resulting strings after appending or prepending the 'to_add' string to each input string. Type should be `STRING`.

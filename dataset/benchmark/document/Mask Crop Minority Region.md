@@ -1,0 +1,6 @@
+- `Mask Crop Minority Region`: This node focuses on isolating and cropping the smallest detected region within a given mask, applying optional padding to the cropped area. It leverages image processing techniques to identify minority regions in masks, enhancing the focus on less prominent features by cropping around them.
+    - Inputs:
+        - `masks` (Required): The input masks on which the minority region cropping operation is to be performed. This parameter is crucial for determining the specific area to be isolated and cropped, directly influencing the output based on the mask's content. Type should be `MASK`.
+        - `padding` (Required): An optional parameter that specifies the amount of padding to add around the cropped minority region. This affects the final size of the cropped area, allowing for adjustments in the focus area's boundary. Type should be `INT`.
+    - Outputs:
+        - `MASKS`: The output is a tensor representing the cropped minority region of the input mask, potentially with added padding. This tensor highlights the least prominent area within the original mask, focusing on details that might otherwise be overlooked. Type should be `MASK`.

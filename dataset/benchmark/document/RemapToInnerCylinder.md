@@ -1,0 +1,6 @@
+- `RemapToInnerCylinder`: The RemapToInnerCylinder node is designed to transform an image by mapping it onto an inner cylinder, adjusting the field of view and optionally swapping the x and y coordinates based on the provided parameters. This node is part of a suite of remapping functionalities that manipulate images to simulate various perspectives and distortions.
+    - Inputs:
+        - `fov` (Required): The 'fov' parameter specifies the field of view in degrees, controlling the extent of the cylindrical projection. It determines how wide the view is on the resulting cylinder, affecting the distortion level of the remapped image. Type should be `INT`.
+        - `swap_xy` (Required): The 'swap_xy' parameter indicates whether the x and y coordinates should be swapped in the remapping process. This can be used to change the orientation of the image on the cylindrical surface. Type should be `BOOLEAN`.
+    - Outputs:
+        - `remap`: The output 'remap' provides the transformed image data after applying the inner cylinder mapping. It encapsulates the result of the remapping process, reflecting the adjustments made to the field of view and the orientation of the image. Type should be `REMAP`.

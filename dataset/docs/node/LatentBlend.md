@@ -1,8 +1,0 @@
-- `LatentBlend`: The LatentBlend node is designed to blend two sets of latent samples together, based on a specified blend factor and mode. It allows for the creation of new, hybrid samples by combining features from both input sets in a controlled manner.
-    - Parameters:
-        - `blend_factor`: A float value that determines the proportion of the first set of samples in the final blend. A higher value gives more weight to the first set, while a lower value favors the second set. Type should be `FLOAT`.
-    - Inputs:
-        - `samples1`: The first set of latent samples to be blended. It serves as the base for the blending operation. Type should be `LATENT`.
-        - `samples2`: The second set of latent samples to be blended with the first set. It contributes to the new, hybrid samples created by the blend operation. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The output is a set of blended latent samples, combining features from both input sets according to the blend factor and mode. Type should be `LATENT`.

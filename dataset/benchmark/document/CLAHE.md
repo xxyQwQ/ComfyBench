@@ -1,0 +1,8 @@
+- `CLAHE`: The CLAHE node applies the Contrast Limited Adaptive Histogram Equalization algorithm to enhance the contrast of images. It adjusts image intensities to enhance the contrast, particularly useful for images with poor lighting conditions or to bring out more detail in specific areas.
+    - Inputs:
+        - `src` (Required): The source image to be processed. It is the primary input for the contrast enhancement operation. Type should be `IMAGE`.
+        - `clip_limit` (Required): Defines the threshold for contrast limiting. A higher value increases contrast but may also amplify noise. Type should be `INT`.
+        - `tile_grid_x` (Required): Specifies the number of tiles in the horizontal direction for the adaptive histogram equalization. Affects the granularity of contrast enhancement. Type should be `INT`.
+        - `tile_grid_y` (Required): Specifies the number of tiles in the vertical direction for the adaptive histogram equalization. Affects the granularity of contrast enhancement. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image after applying CLAHE, with enhanced contrast. Type should be `IMAGE`.

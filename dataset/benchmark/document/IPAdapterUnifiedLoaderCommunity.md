@@ -1,0 +1,8 @@
+- `IPAdapterUnifiedLoaderCommunity`: The IPAdapterUnifiedLoaderCommunity node is designed to facilitate the loading of community-specific models into the IPAdapter framework. It allows for the customization and extension of model capabilities by incorporating community-driven presets and configurations.
+    - Inputs:
+        - `model` (Required): Specifies the model to be loaded, serving as a key identifier within the IPAdapter framework. Type should be `MODEL`.
+        - `preset` (Required): Defines the preset configuration to be applied to the model, focusing on community-specific enhancements or modifications. Type should be `COMBO[STRING]`.
+        - `ipadapter` (Optional): Optional parameter to specify an existing IPAdapter instance for further customization or modification. Type should be `IPADAPTER`.
+    - Outputs:
+        - `model`: Returns the loaded model, ready for integration and use within the IPAdapter framework. Type should be `MODEL`.
+        - `ipadapter`: Returns an IPAdapter instance, potentially modified or customized based on the input parameters. Type should be `IPADAPTER`.

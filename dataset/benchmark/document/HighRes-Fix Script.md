@@ -1,0 +1,20 @@
+- `HighRes-Fix Script`: The HighRes-Fix Script node is designed to enhance image resolution and quality in a customizable manner. It leverages various upscaling techniques, control nets, and preprocessing steps to refine images, offering options for seed consistency, denoising, and iterative refinement. This node integrates with animation and control net scripts, adapting to specific high-resolution enhancement needs while maintaining the flexibility to work with different upscaling models and preprocessors.
+    - Inputs:
+        - `upscale_type` (Required): Specifies the method of upscaling to be used, affecting the quality and approach of the high-resolution output. Type should be `COMBO[STRING]`.
+        - `hires_ckpt_name` (Required): The checkpoint name for the high-resolution model, indicating the specific model version or configuration to use for upscaling. Type should be `COMBO[STRING]`.
+        - `latent_upscaler` (Required): Identifies the latent space upscaling method, which enhances image detail at a foundational level before pixel-level adjustments. Type should be `COMBO[STRING]`.
+        - `pixel_upscaler` (Required): Defines the pixel-level upscaling method, refining image details after latent space enhancements. Type should be `COMBO[STRING]`.
+        - `upscale_by` (Required): Determines the scaling factor for the upscaling process, directly influencing the final image size and detail. Type should be `FLOAT`.
+        - `use_same_seed` (Required): Controls whether the same seed is used throughout the upscaling process, ensuring consistency in random elements. Type should be `BOOLEAN`.
+        - `seed` (Required): The initial seed value for random processes, providing a starting point for reproducibility and variation control. Type should be `INT`.
+        - `hires_steps` (Required): Specifies the number of steps to perform in the high-resolution enhancement process, affecting the depth of refinement. Type should be `INT`.
+        - `denoise` (Required): Indicates whether denoising is applied during the upscaling process, improving image clarity by reducing noise. Type should be `FLOAT`.
+        - `iterations` (Required): The number of iterations to run the upscaling process, allowing for multiple passes of refinement. Type should be `INT`.
+        - `use_controlnet` (Required): Determines whether a control net is used for guided upscaling, influencing the direction and quality of enhancements. Type should be `BOOLEAN`.
+        - `control_net_name` (Required): The name of the control net to be used, specifying the model for guided upscaling. Type should be `COMBO[STRING]`.
+        - `strength` (Required): The strength of the control net's influence on the upscaling process, adjusting the level of guidance. Type should be `FLOAT`.
+        - `preprocessor` (Required): The preprocessor method used to prepare images for upscaling, affecting initial quality and compatibility. Type should be `COMBO[STRING]`.
+        - `preprocessor_imgs` (Required): Preprocessed images ready for upscaling, serving as the input to the enhancement process. Type should be `BOOLEAN`.
+        - `script` (Optional): An optional script containing additional parameters or configurations for the upscaling process. Type should be `SCRIPT`.
+    - Outputs:
+        - `script`: The resulting script configuration after applying the high-resolution fix, encapsulating all specified parameters and adjustments made during the process. Type should be `SCRIPT`.

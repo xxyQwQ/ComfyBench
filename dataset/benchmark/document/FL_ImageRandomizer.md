@@ -1,0 +1,8 @@
+- `FL_ImageRandomizer`: The FL_ImageRandomizer node is designed to select and process images from a specified directory, offering options for random selection or sequential access. It enhances image handling in workflows by providing a flexible way to work with image datasets, including randomization features for varied outputs.
+    - Inputs:
+        - `directory_path` (Required): Specifies the filesystem path to the directory containing images. It is essential for locating and loading the images to be processed. Type should be `STRING`.
+        - `randomize` (Required): A boolean toggle that determines whether images are selected randomly or sequentially. This affects the diversity and unpredictability of the output. Type should be `BOOLEAN`.
+        - `run_trigger` (Required): A dummy input used to trigger the node's execution, helping to circumvent caching issues. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed image, returned as a tensor, suitable for further image processing or visualization tasks. Type should be `IMAGE`.
+        - `path`: The filesystem path of the selected image, providing context or for use in subsequent operations. Type should be `PATH`.

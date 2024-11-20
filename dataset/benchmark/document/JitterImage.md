@@ -1,0 +1,6 @@
+- `JitterImage`: The `JitterImage` node applies a jitter effect to images, transforming them by applying a series of affine transformations to simulate camera or object movement. This effect can enhance the robustness of models to variations in input data or be used for data augmentation.
+    - Inputs:
+        - `images` (Required): The input images to which the jitter effect will be applied. This parameter is crucial for defining the visual content that will undergo transformation. Type should be `IMAGE`.
+        - `jitter_scale` (Required): Defines the scale of the jitter effect, adjusting the intensity of the transformations applied to the images. This parameter allows for fine-tuning the extent of the jitter effect. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output images after the jitter effect has been applied, showcasing the transformed visual content. Type should be `IMAGE`.

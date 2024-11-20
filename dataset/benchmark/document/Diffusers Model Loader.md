@@ -1,0 +1,8 @@
+- `Diffusers Model Loader`: This node is designed to load models related to the 'diffusers' library, specifically targeting the loading of diffusion models, CLIP models, and VAEs. It facilitates the integration of these models into the workflow by providing a streamlined mechanism for their retrieval and initialization based on specified model paths.
+    - Inputs:
+        - `model_path` (Required): Specifies the path to the model that needs to be loaded. This path is critical as it determines which model will be retrieved and initialized for use in the workflow. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `MODEL`: The loaded diffusion model, ready for use in generating or manipulating images. Type should be `MODEL`.
+        - `CLIP`: The loaded CLIP model, which can be used for text-image matching and manipulation tasks. Type should be `CLIP`.
+        - `VAE`: The loaded VAE model, which can be utilized for various image generation and manipulation tasks. Type should be `VAE`.
+        - `NAME_STRING`: The name of the loaded model, providing a simple identifier for reference. Type should be `STRING`.

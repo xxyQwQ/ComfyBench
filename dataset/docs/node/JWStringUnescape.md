@@ -1,6 +1,0 @@
-- `JWStringUnescape`: The JWStringUnescape node is designed to process string inputs by converting escaped characters, such as '\n', into their actual character representations, like a newline character. This functionality is essential for handling and displaying strings that contain escape sequences accurately.
-    - Parameters:
-        - `text`: The 'text' parameter is the input string that may contain escape sequences. This node processes the input by converting these sequences into their corresponding characters, enhancing the readability and usability of the string. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The output is a string where all escape sequences have been converted to their actual character representations, making the string more readable and usable. Type should be `STRING`.

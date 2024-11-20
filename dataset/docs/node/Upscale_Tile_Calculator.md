@@ -1,9 +1,0 @@
-- `Upscale Tile Calculator`: This node is designed to calculate the dimensions of a tile based on the resolution specified, providing a way to adjust image tiles to a desired resolution. It abstracts the complexity of determining optimal tile dimensions for image processing tasks, facilitating the manipulation and analysis of image data.
-    - Parameters:
-        - `tile_resolution`: The tile_resolution parameter specifies the desired resolution for the tile. It directly influences the calculation of the tile's width and height, ensuring that the output tile dimensions align with the specified resolution. Type should be `INT`.
-    - Inputs:
-        - `image`: The image parameter represents the input image for which the tile dimensions are to be calculated. It plays a crucial role in determining the final tile width and height based on the specified tile resolution. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output image, unchanged from the input. Type should be `IMAGE`.
-        - `tile_width`: The calculated width of the tile based on the specified tile resolution. Type should be `INT`.
-        - `tile_height`: The calculated height of the tile based on the specified tile resolution. Type should be `INT`.

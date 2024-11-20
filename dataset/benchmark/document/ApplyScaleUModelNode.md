@@ -1,0 +1,6 @@
+- `ApplyScaleUModelNode`: This node is designed to enhance the capabilities of a given model by applying a ScaleU patch, which adjusts the model's output based on the ScaleU technique. This technique involves modifying the model's internal processing to incorporate additional scaling adjustments, aiming to improve the model's performance or output quality.
+    - Inputs:
+        - `model` (Required): The model to which the ScaleU patch will be applied. This parameter is crucial as it determines the base model that will be enhanced with the ScaleU technique, affecting the overall execution and results of the node. Type should be `MODEL`.
+        - `scaleu` (Required): The ScaleU configuration to be applied to the model. This parameter is essential for defining the specific scaling adjustments and enhancements that will be made to the model, influencing its performance and output characteristics. Type should be `SCALEU`.
+    - Outputs:
+        - `model`: The enhanced model with the ScaleU patch applied. This output reflects the modifications made to the original model, showcasing the improvements or adjustments resulting from the application of the ScaleU technique. Type should be `MODEL`.

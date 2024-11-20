@@ -1,0 +1,13 @@
+- `LayerUtility_ ExtendCanvas`: This node is designed to extend the canvas of an image, allowing for adjustments in size and dimensions without altering the original content. It provides a way to add space around an image, which can be useful for layout, design, or preparation for further processing.
+    - Inputs:
+        - `image` (Required): The primary image to be extended. This parameter is crucial as it defines the base upon which the canvas will be extended. Type should be `IMAGE`.
+        - `invert_mask` (Required): Determines whether the mask should be inverted during the process. This can affect how the mask is applied in relation to the canvas extension. Type should be `BOOLEAN`.
+        - `top` (Required): Specifies the amount of space to add to the top of the canvas. It affects the vertical expansion of the image's canvas. Type should be `INT`.
+        - `bottom` (Required): Determines the amount of space to add to the bottom of the canvas, contributing to the vertical expansion. Type should be `INT`.
+        - `left` (Required): Indicates the amount of space to add to the left side of the canvas, affecting the horizontal expansion. Type should be `INT`.
+        - `right` (Required): Specifies the amount of space to add to the right side of the canvas, also affecting the horizontal expansion. Type should be `INT`.
+        - `color` (Required): Defines the color to fill the newly added space around the image, ensuring the extension blends seamlessly or contrasts as desired. Type should be `COLOR`.
+        - `mask` (Optional): An optional mask that can be applied to the image during the canvas extension process. It allows for more precise control over how the extension affects specific parts of the image. Type should be `MASK`.
+    - Outputs:
+        - `image`: The resulting image after the canvas has been extended. It showcases the original image with added space around it as specified by the input parameters. Type should be `IMAGE`.
+        - `mask`: The mask corresponding to the extended canvas, which can be used for further image processing or manipulation. Type should be `MASK`.

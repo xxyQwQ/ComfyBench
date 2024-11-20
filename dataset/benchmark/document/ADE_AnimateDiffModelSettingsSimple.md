@@ -1,0 +1,8 @@
+- `ADE_AnimateDiffModelSettingsSimple`: This node is designed to configure motion model settings for AnimateDiff, focusing on simplifying the process by adjusting the stretch of motion path encoding (PE) and scaling motion effects. It's tailored for scenarios requiring basic motion adjustments without the complexity of full model configuration.
+    - Inputs:
+        - `motion_pe_stretch` (Required): Specifies the stretch factor for the motion path encoding, directly influencing the motion's perceived length and intensity. Type should be `INT`.
+        - `mask_motion_scale` (Optional): Optional tensor to scale motion effects selectively across different regions of the image. Type should be `MASK`.
+        - `min_motion_scale` (Optional): Sets the minimum scale for motion effects, providing a baseline for motion intensity. Type should be `FLOAT`.
+        - `max_motion_scale` (Optional): Defines the maximum scale for motion effects, capping the intensity of motion adjustments. Type should be `FLOAT`.
+    - Outputs:
+        - `ad_settings`: Outputs the configured motion model settings, encapsulating the adjustments made to motion path encoding and motion effect scaling. Type should be `AD_SETTINGS`.

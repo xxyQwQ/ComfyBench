@@ -1,6 +1,0 @@
-- `ImpactCombineConditionings`: The node is designed to merge two or more conditioning inputs into a single conditioning output. It focuses on combining the specified conditioning elements to create a unified conditioning that can be used in subsequent operations or models.
-    - Parameters:
-    - Inputs:
-        - `conditioning1`: The primary conditioning input that serves as the base for combination. It plays a crucial role in the merging process, acting as the initial conditioning to which others are added. Type should be `CONDITIONING`.
-    - Outputs:
-        - `conditioning`: The combined conditioning output, which is a result of merging the input conditionings. This unified conditioning is ready for use in further processing or model applications. Type should be `CONDITIONING`.

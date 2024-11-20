@@ -1,0 +1,13 @@
+- `SaltInput`: The SaltInput node is designed to facilitate the creation and management of inputs for workflows within the Salt AI platform. It allows for the specification of various input types, including strings, numbers, booleans, and files, and supports additional features such as image and mask inputs, setting allowed values, and specifying whether user overrides are required. This node plays a crucial role in customizing and controlling the flow of data into Salt AI workflows, ensuring that inputs are correctly defined and processed according to the workflow's requirements.
+    - Inputs:
+        - `input_name` (Required): Specifies the name of the input. This name is used to identify the input within the workflow, making it easier to reference and manage. Type should be `STRING`.
+        - `input_desc` (Required): Provides a description for the input. This description helps to clarify the purpose and expected content of the input, aiding in the workflow's documentation and usability. Type should be `STRING`.
+        - `input_type` (Required): Defines the type of the input. This can range from basic types like strings and numbers to more complex types like images and files, allowing for versatile input handling in the workflow. Type should be `COMBO[STRING]`.
+        - `input_value` (Required): The actual value for the input. Depending on the input type, this could be text, a numerical value, an image path, etc., serving as the primary data that the workflow will process. Type should be `STRING`.
+        - `input_image` (Optional): An optional image input. When provided, this allows the workflow to directly process an image, adding a visual data processing capability. Type should be `IMAGE`.
+        - `input_mask` (Optional): An optional mask input. This is used in conjunction with image inputs to apply specific processing or transformations based on the mask. Type should be `MASK`.
+        - `input_allowed_values` (Optional): Specifies allowed values for the input. This is useful for inputs that should only accept a predefined set of values, ensuring data validity. Type should be `STRING`.
+        - `user_override_required` (Optional): Indicates whether a user override is required for the input. This can be used to enforce user interaction for certain inputs, ensuring that specific conditions are met before proceeding. Type should be `BOOLEAN`.
+        - `relative_path` (Optional): Determines whether the input value should be treated as a relative path. This is relevant for file inputs, affecting how the file path is interpreted and handled within the workflow. Type should be `BOOLEAN`.
+    - Outputs:
+        - `value`: unknown Type should be `*`.

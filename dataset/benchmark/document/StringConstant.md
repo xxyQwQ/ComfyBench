@@ -1,0 +1,5 @@
+- `StringConstant`: The StringConstant node is designed to pass through a string input without modification, serving as a constant string value within a flow.
+    - Inputs:
+        - `string` (Required): Represents the string input to be passed through. This parameter allows for the input of a single-line string, with a default value of an empty string if none is provided. Type should be `STRING`.
+    - Outputs:
+        - `string`: Outputs the same string that was input, effectively acting as a pass-through for the string value. Type should be `STRING`.

@@ -1,9 +1,0 @@
-- `ttN concat`: The ttN_concat node is designed to concatenate three input strings using a specified delimiter, allowing for flexible string manipulation and combination within a text processing workflow.
-    - Parameters:
-        - `text1`: The first text string to be concatenated. It supports multiline input and dynamic prompts, enabling complex text inputs. Type should be `STRING`.
-        - `text2`: The second text string to be concatenated, also supporting multiline input and dynamic prompts. Type should be `STRING`.
-        - `text3`: The third text string to be concatenated, further extending the node's capability to handle complex text combinations. Type should be `STRING`.
-        - `delimiter`: A string used to separate the concatenated texts. It can be a single character or a sequence of characters, excluding newline by default. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `concat`: The result of concatenating text1, text2, and text3 using the specified delimiter. Type should be `STRING`.

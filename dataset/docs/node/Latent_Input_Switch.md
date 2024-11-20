@@ -1,8 +1,0 @@
-- `Latent Input Switch`: The WAS_Latent_Input_Switch node is designed to toggle between two latent inputs based on a boolean condition, effectively allowing for conditional selection of latent representations.
-    - Parameters:
-        - `boolean`: A boolean flag that determines which latent input (latent_a or latent_b) is selected for output. This parameter is essential for controlling the flow of data based on conditional logic. Type should be `BOOLEAN`.
-    - Inputs:
-        - `latent_a`: The first latent input to consider for selection. It plays a crucial role in determining the output based on the boolean condition. Type should be `LATENT`.
-        - `latent_b`: The second latent input to consider for selection. This input provides an alternative choice for the output, contingent on the boolean condition. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The selected latent input based on the boolean condition. This output facilitates conditional logic in processing latent representations. Type should be `LATENT`.

@@ -1,0 +1,19 @@
+- `ttN hiresfixScale`: The ttN hiresfixScale node specializes in enhancing image resolution through various upscale methods, including model-based and algorithmic approaches. It provides options for rescaling images after model application, adjusting the scale by percentage or to specific dimensions while maintaining aspect ratios, and optionally outputting the result in latent space. This node is designed to improve image quality and detail, catering to both standard and custom upscale needs.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the upscale model to be used for enhancing the image resolution. It's essential for selecting the appropriate model-based upscale method. Type should be `COMBO[STRING]`.
+        - `vae` (Required): The variational autoencoder used for decoding or encoding images when required, playing a crucial role in the upscale process. Type should be `VAE`.
+        - `image` (Required): The input image to be upscaled. This parameter is the starting point of the upscale process and determines the initial quality and resolution. Type should be `IMAGE`.
+        - `rescale_after_model` (Required): Indicates whether the image should be rescaled after being processed by the upscale model, affecting the final image size and resolution. Type should be `COMBO[BOOLEAN]`.
+        - `rescale_method` (Required): Defines the method used for rescaling the image after model upscaling, influencing the final appearance and dimensions of the image. Type should be `COMBO[STRING]`.
+        - `rescale` (Required): Specifies how the image should be rescaled, offering options like by percentage, to specific width/height, or to maintain aspect ratio by adjusting the longer side. Type should be `COMBO[STRING]`.
+        - `percent` (Required): The percentage by which the image should be rescaled, relevant when the 'rescale' parameter is set to 'by percentage'. It directly impacts the final image size. Type should be `INT`.
+        - `width` (Required): The target width for the image after rescaling, applicable when the 'rescale' parameter is set to 'to Width/Height'. It determines the final width of the image. Type should be `INT`.
+        - `height` (Required): The target height for the image after rescaling, applicable when the 'rescale' parameter is set to 'to Width/Height'. It determines the final height of the image. Type should be `INT`.
+        - `longer_side` (Required): The target size for the longer side of the image when maintaining aspect ratio, affecting the final dimensions while preserving the image's original proportions. Type should be `INT`.
+        - `crop` (Required): Determines if and how the upscaled image should be cropped, offering options like disabled or center cropping. This affects the final composition of the image. Type should be `COMBO[STRING]`.
+        - `image_output` (Required): Controls how the upscaled image is outputted, with options for hiding, previewing, saving, or a combination of hiding and saving. This affects how users interact with and access the final image. Type should be `COMBO[STRING]`.
+        - `save_prefix` (Required): The prefix added to the filename when saving the upscaled image, allowing for easy identification and organization of output files. Type should be `STRING`.
+        - `output_latent` (Required): Indicates whether the result should also include the upscaled image in latent space, enabling further manipulation or analysis in this format. Type should be `COMBO[BOOLEAN]`.
+    - Outputs:
+        - `latent`: The upscaled image in latent space, available when output_latent is set to True, allowing for further manipulation or analysis. Type should be `LATENT`.
+        - `image`: The final upscaled image, showcasing the improved resolution and detail achieved through the upscale process. Type should be `IMAGE`.

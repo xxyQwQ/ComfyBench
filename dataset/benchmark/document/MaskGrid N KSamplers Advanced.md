@@ -1,0 +1,21 @@
+- `MaskGrid N KSamplers Advanced`: This node specializes in applying advanced sampling techniques to generate or modify latent images based on a grid pattern. It leverages mask-based operations to selectively apply changes to specific regions of the latent space, enabling complex image manipulations and enhancements.
+    - Inputs:
+        - `model` (Required): The model parameter specifies the generative model used for sampling operations within the specified regions of the latent space. Type should be `MODEL`.
+        - `add_noise` (Required): Determines whether noise is added to the sampling process, enhancing the diversity of the generated images. Type should be `COMBO[STRING]`.
+        - `noise_seed` (Required): The seed for noise generation, ensuring reproducibility in the sampling process. Type should be `INT`.
+        - `steps` (Required): The number of steps to perform in the sampling process, affecting the detail and quality of the generated images. Type should be `INT`.
+        - `cfg` (Required): Configuration settings for the sampling process, allowing for customization of the generation. Type should be `FLOAT`.
+        - `sampler_name` (Required): The name of the sampler algorithm used for generating the latent images. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler controls the sampling process, managing the progression of steps. Type should be `COMBO[STRING]`.
+        - `positive` (Required): Positive text prompts that guide the generation towards desired characteristics. Type should be `CONDITIONING`.
+        - `negative` (Required): Negative text prompts that steer the generation away from undesired characteristics. Type should be `CONDITIONING`.
+        - `latent_image` (Required): The latent_image parameter represents the initial state of the latent space that will undergo sampling. It is fundamental to the node's operation, serving as the canvas on which mask-based modifications are applied. Type should be `LATENT`.
+        - `start_at_step` (Required): The initial step of the sampling process, allowing for control over the starting point. Type should be `INT`.
+        - `end_at_step` (Required): The final step of the sampling process, defining the endpoint of generation. Type should be `INT`.
+        - `return_with_leftover_noise` (Required): Indicates whether to include leftover noise in the output, providing additional control over the output's characteristics. Type should be `COMBO[STRING]`.
+        - `mask` (Required): The mask parameter is crucial for defining the regions within the latent image that will be subjected to sampling operations. It plays a key role in determining which parts of the image are modified, ensuring targeted and precise adjustments. Type should be `IMAGE`.
+        - `rows` (Required): The number of rows in the grid pattern, defining the layout of the applied masks. Type should be `INT`.
+        - `columns` (Required): The number of columns in the grid pattern, further specifying the layout of the applied masks. Type should be `INT`.
+        - `mode` (Required): The mode of operation, determining how the sampling and mask application are conducted. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `latent`: The latent output consists of a modified latent image reflecting the application of advanced sampling techniques within specified grid regions. Type should be `LATENT`.

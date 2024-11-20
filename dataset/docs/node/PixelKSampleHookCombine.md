@@ -1,7 +1,0 @@
-- `PixelKSampleHookCombine`: This node is designed to combine two PixelKSampleHook instances into a single hook, enabling the sequential application of their functionalities in image processing tasks. It serves as a mechanism to extend or modify the behavior of image processing pipelines by chaining multiple hooks together.
-    - Parameters:
-    - Inputs:
-        - `hook1`: The first PixelKSampleHook instance to be combined. It acts as the initial step in the combined hook's processing sequence. Type should be `PK_HOOK`.
-        - `hook2`: The second PixelKSampleHook instance to be combined. It follows the first hook in the processing sequence, allowing for layered modifications or enhancements to the image processing task. Type should be `PK_HOOK`.
-    - Outputs:
-        - `pk_hook`: The combined PixelKSampleHook instance, capable of executing the functionalities of both input hooks in sequence during image processing tasks. Type should be `PK_HOOK`.

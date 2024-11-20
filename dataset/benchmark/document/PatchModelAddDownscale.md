@@ -1,0 +1,12 @@
+- `PatchModelAddDownscale`: The `PatchModelAddDownscale` node is designed to modify a given model by integrating downscaling and upscaling processes within its computation flow. This node specifically targets the manipulation of model's internal blocks based on specified parameters, enabling the adjustment of the model's behavior to incorporate downscaling at designated stages of processing. It aims to enhance model efficiency or alter its output characteristics by dynamically adjusting the resolution of intermediate representations.
+    - Inputs:
+        - `model` (Required): The model to be patched with downscaling and upscaling functionalities. It serves as the base for modifications applied by the node. Type should be `MODEL`.
+        - `block_number` (Required): Specifies the block number within the model where the downscaling should be applied, targeting specific stages of the model's processing flow. Type should be `INT`.
+        - `downscale_factor` (Required): The factor by which the model's intermediate representations are downscaled, affecting the resolution and potentially the computational efficiency. Type should be `FLOAT`.
+        - `start_percent` (Required): Defines the starting percentage of the sigma range for applying downscaling, determining the initial point within the model's processing where downscaling begins. Type should be `FLOAT`.
+        - `end_percent` (Required): Specifies the ending percentage of the sigma range for downscaling, marking the point within the model's processing where downscaling ceases. Type should be `FLOAT`.
+        - `downscale_after_skip` (Required): A boolean flag indicating whether the downscaling should occur after skip connections within the model, affecting the placement and impact of downscaling operations. Type should be `BOOLEAN`.
+        - `downscale_method` (Required): The method used for downscaling the model's intermediate representations, influencing the quality and characteristics of the downscaling process. Type should be `COMBO[STRING]`.
+        - `upscale_method` (Required): The method used for upscaling the model's intermediate representations back to their original resolution, affecting the quality and characteristics of the upscaling process. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `model`: The modified model with integrated downscaling and upscaling functionalities, reflecting the adjustments made to its internal processing flow. Type should be `MODEL`.

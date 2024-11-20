@@ -1,0 +1,14 @@
+- `TiledKSamplerProvider`: The TiledKSamplerProvider node is designed to facilitate the use of tiled sampling techniques within the ComfyUI framework. It dynamically integrates with the 'TiledKSampler' custom node, ensuring compatibility and extending functionality for advanced image generation tasks. This node acts as a bridge, enabling users to leverage tiled sampling strategies for improved performance and quality in image synthesis.
+    - Inputs:
+        - `seed` (Required): Determines the random seed used for generating CPU noise for sampling, ensuring reproducibility and consistency in the sampling process. Type should be `INT`.
+        - `steps` (Required): Specifies the total number of sampling steps to be executed, directly influencing the depth and detail of the sampling process. Type should be `INT`.
+        - `cfg` (Required): Sets the classifier free guidance value, adjusting the influence of conditioning on the sampling process for targeted image generation. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the specific sampler algorithm to be used, affecting the sampling behavior and output characteristics. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Specifies the scheduler for controlling the sampling process, impacting the progression and quality of image generation. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Adjusts the level of denoising applied during the sampling process, affecting the clarity and sharpness of the generated images. Type should be `FLOAT`.
+        - `tile_width` (Required): Sets the width of the tiles used in the sampling process, influencing the granularity and detail of the output. Type should be `INT`.
+        - `tile_height` (Required): Sets the height of the tiles used in the sampling process, influencing the granularity and detail of the output. Type should be `INT`.
+        - `tiling_strategy` (Required): Determines the strategy for tiling during the sampling process, affecting the overall composition and coherence of the generated images. Type should be `COMBO[STRING]`.
+        - `basic_pipe` (Required): A crucial input comprising the model and conditioning texts, which are essential for the sampling process. It determines the characteristics of the generated images by providing the necessary context and parameters for targeted image synthesis. Type should be `BASIC_PIPE`.
+    - Outputs:
+        - `ksampler`: Outputs a sampler wrapper, which can be utilized for generating regional prompts in advanced image generation tasks. Type should be `KSAMPLER`.

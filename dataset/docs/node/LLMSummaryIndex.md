@@ -1,8 +1,0 @@
-- `LLMSummaryIndex`: The LLMSummaryIndex node is designed to facilitate the summarization of documents using a language model. It leverages a summarization model to process and condense the input documents into summaries, aiming to capture the essential information in a concise format.
-    - Parameters:
-    - Inputs:
-        - `llm_model`: Specifies the language model to be used for summarization, playing a crucial role in determining the quality and style of the generated summaries. Type should be `LLM_MODEL`.
-        - `document`: Represents the input documents to be summarized. The quality of the input directly influences the effectiveness of the summarization. Type should be `DOCUMENT`.
-        - `optional_llm_context`: Additional context or parameters for the language model, allowing for customized summary outputs. Type should be `LLM_CONTEXT`.
-    - Outputs:
-        - `llm_index`: The summarized output of the documents, providing a structured and easily interpretable representation of the summaries. Type should be `LLM_INDEX`.

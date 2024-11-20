@@ -1,0 +1,6 @@
+- `SamplerEulerAncestralCFGPP`: This node provides a mechanism to generate a custom sampler based on the Euler Ancestral method with specific configurations for the CFG++ algorithm. It allows for fine-tuning the sampling process by adjusting parameters related to the noise and step size, catering to specialized needs in generating samples.
+    - Inputs:
+        - `eta` (Required): Specifies the step size for the Euler Ancestral CFG++ sampler, affecting the granularity of the sampling steps and the overall smoothness of the generated samples. Type should be `FLOAT`.
+        - `s_noise` (Required): Determines the scale of noise to be added during the sampling process, influencing the diversity and variability of the generated samples. Type should be `FLOAT`.
+    - Outputs:
+        - `sampler`: Produces a customized sampler configured for the Euler Ancestral CFG++ method, tailored for specific sampling requirements. Type should be `SAMPLER`.

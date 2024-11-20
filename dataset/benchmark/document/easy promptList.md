@@ -1,0 +1,7 @@
+- `easy promptList`: This node is designed to facilitate the generation of string lists from multiline prompts, with enhanced capabilities for processing prompts containing Chinese characters by converting them to English. It uniquely caters to workflows requiring specific starting points and row limitations in the output list, while also accommodating unique identifiers.
+    - Inputs:
+        - `prompt_i` (Required): Represents a main text input from which the list of strings will be generated. Supports multiline input and is capable of handling multiple prompts sequentially numbered (e.g., prompt_1, prompt_2, etc.). Type should be `STRING`.
+        - `optional_prompt_list` (Optional): An optional list parameter that allows for additional prompts to be included in the generation process. Type should be `LIST`.
+    - Outputs:
+        - `prompt_list`: The generated list of strings derived from the input prompts. Type should be `LIST`.
+        - `prompt_strings`: A concatenated string of all input prompts, separated by a specified delimiter. Type should be `STRING`.

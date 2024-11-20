@@ -1,0 +1,8 @@
+- `LayerFilter_ SoftLight`: The SoftLight node applies a soft lighting effect to images, enhancing their visual appeal by blending them with various lighting conditions. It utilizes advanced image processing techniques to adjust the brightness, contrast, and detail of images to simulate the effect of soft light, making it ideal for creating mood or atmosphere in visual content.
+    - Inputs:
+        - `image` (Required): The primary image to which the soft light effect will be applied. This image serves as the base for the lighting adjustments. Type should be `IMAGE`.
+        - `soft` (Required): Controls the intensity of the soft light effect, allowing for fine-tuning of the blur amount applied to the image. Type should be `FLOAT`.
+        - `threshold` (Required): Determines the threshold for highlighting, affecting how light or dark areas are enhanced or subdued in the image. Type should be `INT`.
+        - `opacity` (Required): Adjusts the opacity of the soft light effect, enabling control over how strongly the effect is applied to the image. Type should be `INT`.
+    - Outputs:
+        - `image`: The image after the soft light effect has been applied, showcasing enhanced lighting and visual appeal. Type should be `IMAGE`.

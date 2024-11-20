@@ -1,8 +1,0 @@
-- `VHS_SelectEveryNthImage`: This node is designed to filter through a batch of images, selecting every nth image according to a specified interval. It's useful for thinning out image datasets or preparing sequences of images for processing that requires reduced density.
-    - Parameters:
-        - `select_every_nth`: The interval at which images are selected from the input batch. An interval of 'n' means every nth image is kept, with the rest discarded, effectively thinning the batch. Type should be `INT`.
-    - Inputs:
-        - `images`: The collection of images to be filtered. This parameter determines the set of images from which every nth image will be selected, based on the interval defined by 'select_every_nth'. Type should be `IMAGE`.
-    - Outputs:
-        - `IMAGE`: The filtered subset of images, where only every nth image from the original batch is included. Type should be `IMAGE`.
-        - `count`: The total number of images selected and returned by the node. Type should be `INT`.

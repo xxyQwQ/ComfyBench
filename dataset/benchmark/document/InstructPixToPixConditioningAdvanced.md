@@ -1,0 +1,13 @@
+- `InstructPixToPixConditioningAdvanced`: This node is designed for advanced conditioning in Pix2Pix models, enabling the manipulation and transformation of image data through a sophisticated encoding process. It facilitates the integration of additional conditioning inputs and scales, allowing for more nuanced control over the generation process.
+    - Inputs:
+        - `positive` (Required): Specifies the positive conditioning elements, influencing the encoding process to favor certain outcomes. Type should be `CONDITIONING`.
+        - `negative` (Required): Specifies the negative conditioning elements, influencing the encoding process to avoid certain outcomes. Type should be `CONDITIONING`.
+        - `new` (Required): Represents the new input data to be encoded, providing a basis for the generation. Type should be `LATENT`.
+        - `new_scale` (Required): A scaling factor for the new input data, adjusting its influence in the encoding process. Type should be `FLOAT`.
+        - `original` (Required): Represents the original input data, serving as a reference or baseline in the encoding process. Type should be `LATENT`.
+        - `original_scale` (Required): A scaling factor for the original input data, adjusting its influence in the encoding process. Type should be `FLOAT`.
+    - Outputs:
+        - `cond1`: Outputs the modified positive conditioning elements after encoding. Type should be `CONDITIONING`.
+        - `cond2`: Outputs the modified negative conditioning elements after encoding. Type should be `CONDITIONING`.
+        - `negative`: Outputs the unaltered negative conditioning elements, maintaining their original state post-encoding. Type should be `CONDITIONING`.
+        - `latent`: Generates a new latent representation based on the encoded inputs and scales. Type should be `LATENT`.

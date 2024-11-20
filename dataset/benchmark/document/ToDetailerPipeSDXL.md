@@ -1,0 +1,20 @@
+- `ToDetailerPipeSDXL`: The ToDetailerPipeSDXL node is designed to transform and refine input data through a series of conditioning and detection processes, preparing it for detailed image generation or enhancement. It leverages multiple models and techniques, including CLIP, VAE, and bounding box detection, to achieve precise and context-aware results.
+    - Inputs:
+        - `model` (Required): Specifies the primary model used for generating or refining images, playing a central role in the overall processing pipeline. Type should be `MODEL`.
+        - `clip` (Required): Defines the CLIP model used for understanding and interpreting the content of images or text, aiding in the alignment of generated content with specified conditions. Type should be `CLIP`.
+        - `vae` (Required): Indicates the VAE (Variational Autoencoder) model employed for encoding and decoding images, facilitating the manipulation of image features in latent space. Type should be `VAE`.
+        - `positive` (Required): A set of positive conditioning factors that guide the generation or refinement process towards desired attributes or features. Type should be `CONDITIONING`.
+        - `negative` (Required): A set of negative conditioning factors used to steer the generation or refinement process away from certain attributes or features. Type should be `CONDITIONING`.
+        - `refiner_model` (Required): Specifies an additional model used for refining the generated or processed images, enhancing their quality or detail. Type should be `MODEL`.
+        - `refiner_clip` (Required): Defines an additional CLIP model used for refining the alignment of generated content with specified conditions, enhancing the relevance and accuracy of the output. Type should be `CLIP`.
+        - `refiner_positive` (Required): Additional positive conditioning factors for the refinement process, aimed at enhancing specific attributes or features in the refined output. Type should be `CONDITIONING`.
+        - `refiner_negative` (Required): Additional negative conditioning factors for the refinement process, aimed at reducing or eliminating certain attributes or features in the refined output. Type should be `CONDITIONING`.
+        - `bbox_detector` (Required): Specifies the bounding box detector model used for identifying and localizing objects within images, facilitating targeted processing or enhancement. Type should be `BBOX_DETECTOR`.
+        - `wildcard` (Required): A dynamic input that allows for the inclusion of custom text or conditions, providing flexibility in the generation or refinement process. Type should be `STRING`.
+        - `Select to add LoRA` (Required): Enables the selection of LoRA (Low-Rank Adaptation) techniques to be applied, enhancing the model's adaptability and performance on specific tasks or conditions. Type should be `COMBO[STRING]`.
+        - `Select to add Wildcard` (Required): Allows for the selection of custom conditions or modifiers to be added, offering additional customization in the processing pipeline. Type should be `COMBO[STRING]`.
+        - `sam_model_opt` (Optional): Specifies an optional SAM model used for semantic segmentation, contributing to the refinement and detail enhancement processes. Type should be `SAM_MODEL`.
+        - `segm_detector_opt` (Optional): Defines an optional segmentation detector model used for identifying specific regions or features within images, aiding in targeted processing. Type should be `SEGM_DETECTOR`.
+        - `detailer_hook` (Optional): An optional hook for integrating custom processing or refinement steps, offering further customization of the pipeline. Type should be `DETAILER_HOOK`.
+    - Outputs:
+        - `detailer_pipe`: The output is a detailer pipe, which encapsulates the refined and processed data, ready for further stages of image generation or enhancement. Type should be `DETAILER_PIPE`.

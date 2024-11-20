@@ -1,7 +1,0 @@
-- `JWFloatToInteger`: This node converts a floating-point number to an integer, offering different rounding modes such as round, floor, and ceiling to control the conversion process.
-    - Parameters:
-        - `value`: The floating-point number to be converted to an integer. The conversion behavior can be controlled through the 'mode' parameter. Type should be `FLOAT`.
-    - Inputs:
-        - `mode`: Specifies the rounding mode for the conversion: 'round' for nearest integer, 'floor' for the nearest lower integer, and 'ceiling' for the nearest higher integer. This parameter determines how the floating-point number is rounded to produce an integer result. Type should be `['round', 'floor', 'ceiling']`.
-    - Outputs:
-        - `int`: The resulting integer after converting the floating-point number according to the specified rounding mode. Type should be `INT`.

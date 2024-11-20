@@ -1,8 +1,0 @@
-- `LLMLLaVANextModelLoader`: This node is designed to load and initialize the LLAVA Next V1 model with optional quantization and flash attention features for optimized performance.
-    - Parameters:
-        - `model`: Specifies the model identifier for the LLAVA Next V1 model to be loaded. This allows for flexibility in choosing different model versions or configurations. Type should be `STRING`.
-        - `device`: Determines the computing device ('cuda' or 'cpu') on which the model will be loaded, enabling hardware-specific optimizations. Type should be `COMBO[STRING]`.
-        - `use_bitsandbytes_quantize`: Enables or disables quantization using the bitsandbytes library for the model, potentially improving performance with a slight trade-off in accuracy. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `lnv1_model`: Returns the loaded LLAVA Next V1 model, ready for evaluation or further processing. Type should be `LLAVA_NEXT_V1_MODEL`.

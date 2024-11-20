@@ -1,0 +1,12 @@
+- `SaltBatchCropDataExtractor`: The SaltBatchCropDataExtractor node is designed for extracting specific crop data from a batch based on an index. It processes a collection of crop data, identifying and extracting detailed information about a particular crop region, including its dimensions and position within the original image.
+    - Inputs:
+        - `crop_data_batch` (Required): A batch of crop data from which specific crop information is to be extracted. It plays a crucial role in determining the output by specifying which crop region's details are to be retrieved. Type should be `CROP_DATA_BATCH`.
+        - `index` (Required): The index within the crop data batch that specifies the particular crop region to extract information from. It is essential for pinpointing the exact crop data to be processed. Type should be `INT`.
+    - Outputs:
+        - `crop_data_batch`: The extracted crop data for the specified index, including the crop's size and coordinates. Type should be `CROP_DATA_BATCH`.
+        - `width`: The width of the extracted crop region. Type should be `INT`.
+        - `height`: The height of the extracted crop region. Type should be `INT`.
+        - `top`: The top coordinate of the extracted crop region. Type should be `INT`.
+        - `left`: The left coordinate of the extracted crop region. Type should be `INT`.
+        - `right`: The right coordinate of the extracted crop region. Type should be `INT`.
+        - `bottom`: The bottom coordinate of the extracted crop region. Type should be `INT`.

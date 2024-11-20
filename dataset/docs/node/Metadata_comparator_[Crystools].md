@@ -1,8 +1,0 @@
-- `Metadata comparator [Crystools]`: The CMetadataCompare node is designed to compare two sets of metadata, identifying differences and similarities between them. It abstracts the complexity of metadata comparison, providing insights into how metadata has evolved over time.
-    - Parameters:
-        - `what`: Specifies the type of comparison to perform, affecting the node's execution and the nature of the comparison results. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `metadata_raw_old`: The older set of metadata to be compared. It serves as the baseline for comparison, influencing the identification of changes. Type should be `METADATA_RAW`.
-        - `metadata_raw_new`: The newer set of metadata to be compared against the older set. It plays a crucial role in highlighting updates or modifications. Type should be `METADATA_RAW`.
-    - Outputs:
-        - `diff`: The result of the comparison, detailing the differences and similarities between the two sets of metadata. Type should be `JSON`.

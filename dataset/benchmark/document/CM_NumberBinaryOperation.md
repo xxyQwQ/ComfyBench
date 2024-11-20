@@ -1,0 +1,7 @@
+- `CM_NumberBinaryOperation`: This node performs binary operations on numbers, such as addition, subtraction, multiplication, and division, based on a specified operation. It abstracts the complexity of handling different types of number operations, providing a straightforward way to execute binary mathematical operations between two numbers.
+    - Inputs:
+        - `op` (Required): Specifies the binary operation to be performed on the two numbers. It determines the mathematical action (e.g., addition, subtraction) that will be executed. Type should be `COMBO[STRING]`.
+        - `a` (Required): The first operand in the binary operation, representing one of the numbers involved in the calculation. Type should be `NUMBER`.
+        - `b` (Required): The second operand in the binary operation, representing the other number involved in the calculation. Type should be `NUMBER`.
+    - Outputs:
+        - `number`: The result of the binary operation performed on the two input numbers. Type should be `NUMBER`.

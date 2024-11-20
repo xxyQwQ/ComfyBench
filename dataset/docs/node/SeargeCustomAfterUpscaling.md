@@ -1,6 +1,0 @@
-- `SeargeCustomAfterUpscaling`: This node is designed to process the output of an upscaling stage, specifically handling the transformation of upscaled images into a final image format. It encapsulates the functionality to decode and retrieve the final upscaled image from a given set of custom outputs.
-    - Parameters:
-    - Inputs:
-        - `custom_output`: Represents the output from a previous upscaling stage, serving as the essential input for generating the final image. It is crucial for the node's operation as it contains the data needed to extract and construct the final image. Type should be `SRG_STAGE_OUTPUT`.
-    - Outputs:
-        - `image`: The final image produced after processing the upscaled output. It signifies the completion of the upscaling process, ready for further use or display. Type should be `IMAGE`.

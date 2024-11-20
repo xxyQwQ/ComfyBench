@@ -1,0 +1,10 @@
+- `SoftT2IAdapterWeights`: This node is designed to adapt text-to-image (T2I) control weights for a softer blending or transition effect in generated images. It manipulates a set of weights to achieve a desired balance between different control aspects, enhancing the flexibility and precision of image generation processes.
+    - Inputs:
+        - `weight_i` (Required): Specifies the weight for a control aspect, influencing the blending or transition effect in the generated images. The index 'i' ranges from 0 to 3, each representing a different aspect of control. Type should be `FLOAT`.
+        - `flip_weights` (Required): When enabled, reverses the order of weights, offering an alternative approach to control the blending or transition effects. Type should be `BOOLEAN`.
+        - `uncond_multiplier` (Optional): Adjusts the unconditional aspect of the weights, providing an additional layer of control over the image generation. Type should be `FLOAT`.
+        - `cn_extras` (Optional): Includes extra control net weights for extended customization and fine-tuning capabilities in the image generation process. Type should be `CN_WEIGHTS_EXTRAS`.
+        - `autosize` (Optional): Configures automatic sizing parameters, affecting how control net weights are applied and adjusted. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `CN_WEIGHTS`: The computed control net weights after processing input parameters. Type should be `CONTROL_NET_WEIGHTS`.
+        - `TK_SHORTCUT`: A shortcut representation for timestep keyframes, facilitating easier manipulation and application in the control net process. Type should be `TIMESTEP_KEYFRAME`.

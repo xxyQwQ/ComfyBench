@@ -1,8 +1,0 @@
-- `Anything Everywhere`: This node allows for the flexible processing of various inputs, enabling users to apply operations across a wide range of data types and structures. It is designed to accommodate any input, making it highly versatile for diverse use cases.
-    - Parameters:
-        - `title_regex`: A string specifying a regular expression to match against titles. This parameter enables filtering and selection based on title patterns, enhancing the node's applicability to specific contexts. Type should be `STRING`.
-        - `input_regex`: A string specifying a regular expression to match against input data. This parameter allows for filtering and selection based on input patterns, further increasing the node's versatility. Type should be `STRING`.
-        - `group_regex`: A string specifying a regular expression to match against groups. This parameter facilitates filtering and selection based on group patterns, broadening the node's utility. Type should be `STRING`.
-    - Inputs:
-        - `anything`: Accepts any type of input, providing the flexibility to handle diverse data formats and structures. This parameter is central to the node's operation, allowing for the application of operations across a wide range of inputs. Type should be `*`.
-    - Outputs:

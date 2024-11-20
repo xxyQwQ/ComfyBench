@@ -1,0 +1,14 @@
+- `CR Halftone Grid`: The CR Halftone Grid node is designed to generate a graphical representation of a halftone grid, a technique often used in printing to simulate continuous tone imagery through the use of dots. This node allows for customization of the grid's appearance, including dot style, frequency, and background color, enabling users to create visually appealing patterns and textures for various applications.
+    - Inputs:
+        - `width` (Required): Specifies the width of the generated halftone grid image. It directly influences the size of the output image. Type should be `INT`.
+        - `height` (Required): Determines the height of the generated halftone grid image, affecting the overall dimensions of the output. Type should be `INT`.
+        - `dot_style` (Required): Defines the style of the dots in the halftone grid, allowing for creative control over the appearance of the pattern. Type should be `COMBO[STRING]`.
+        - `reverse_dot_style` (Required): When set to 'Yes', this reverses the dot style, adding an additional layer of customization to the halftone effect. Type should be `COMBO[STRING]`.
+        - `dot_frequency` (Required): Controls the frequency of dots in the halftone grid, impacting the density of the pattern. Type should be `INT`.
+        - `background_color` (Required): Sets the background color of the halftone grid. It supports predefined colors or a custom color if specified. Type should be `COMBO[STRING]`.
+        - `x_pos` (Required): The x-coordinate position for the center of the dot pattern, influencing the distribution of dots. Type should be `FLOAT`.
+        - `y_pos` (Required): The y-coordinate position for the center of the dot pattern, affecting the placement of dots in the grid. Type should be `FLOAT`.
+        - `bg_color_hex` (Optional): Specifies the hex code for a custom background color, offering precise control over the grid's background color. Type should be `STRING`.
+    - Outputs:
+        - `IMAGE`: The output image of the halftone grid. Type should be `IMAGE`.
+        - `show_help`: A URL providing additional help and documentation for the CR Halftone Grid node. Type should be `STRING`.

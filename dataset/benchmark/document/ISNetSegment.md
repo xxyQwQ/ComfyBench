@@ -1,0 +1,10 @@
+- `ISNetSegment`: ISNetSegment is designed for image segmentation using the ISNet model, providing functionality to process images through the model to generate segmented images and their corresponding masks. It supports conditional execution based on the model's availability and the option to specify device mode for computation.
+    - Inputs:
+        - `images` (Required): The input images to be segmented. This is the primary data upon which segmentation is performed, determining the visual content to be analyzed and processed. Type should be `IMAGE`.
+        - `threshold` (Required): A threshold value for segmentation, influencing the sensitivity of the segmentation process. It determines the cut-off point for what is considered part of the segment versus the background. Type should be `FLOAT`.
+        - `device_mode` (Optional): Specifies the computational device preference ('AUTO', 'Prefer GPU', 'CPU') for running the segmentation, affecting performance and resource utilization. Type should be `COMBO[STRING]`.
+        - `enabled` (Optional): A boolean flag to enable or disable the segmentation process, allowing for conditional execution based on external criteria. Type should be `BOOLEAN`.
+        - `isnet_model` (Optional): An optional ISNet model instance to be used for segmentation. If not provided, the system will attempt to load a default model. Type should be `ISNET_MODEL`.
+    - Outputs:
+        - `segmented`: The segmented images resulting from the application of the ISNet model on the input images. Type should be `IMAGE`.
+        - `mask`: The masks corresponding to the segmented images, indicating the segmented areas. Type should be `MASK`.

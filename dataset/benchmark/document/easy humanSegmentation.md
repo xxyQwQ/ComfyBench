@@ -1,0 +1,10 @@
+- `easy humanSegmentation`: This node is designed for segmenting human figures from images, utilizing a choice of pre-defined segmentation methods. It abstracts the complexity of human segmentation processes, offering an easy-to-use interface for extracting human figures with various levels of detail and precision.
+    - Inputs:
+        - `image` (Required): The input image to be segmented. This parameter is crucial as it provides the raw data for the segmentation process. Type should be `IMAGE`.
+        - `method` (Required): Specifies the segmentation method to be used. This choice affects the segmentation's accuracy and detail, allowing for customization based on the user's needs. Type should be `COMBO[STRING]`.
+        - `confidence` (Required): Determines the confidence threshold for the segmentation process, influencing the precision of the human figure extraction. Type should be `FLOAT`.
+        - `crop_multi` (Required): Adjusts the cropping multiplier to control the extent of the area around the segmented human figure that is included in the output. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The segmented image with the human figure. Type should be `IMAGE`.
+        - `mask`: A binary mask of the segmented human figure. Type should be `MASK`.
+        - `bbox`: Bounding box coordinates of the segmented human figure. Type should be `BBOX`.

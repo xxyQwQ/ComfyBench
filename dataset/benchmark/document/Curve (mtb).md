@@ -1,0 +1,5 @@
+- `Curve (mtb)`: The MTB_Curve node is designed to process FLOAT_CURVE inputs, maintaining the integrity of the curve's structure. It primarily serves to ensure that curve data, whether received as a string or in a structured format, is correctly serialized or deserialized for further processing within the system.
+    - Inputs:
+        - `curve` (Required): The 'curve' parameter represents the FLOAT_CURVE input that the node operates on. It is essential for the node's functionality, as it dictates the curve data that will be serialized or deserialized for further processing. Type should be `FLOAT_CURVE`.
+    - Outputs:
+        - `float_curve`: The output is a float_curve, which is either the original curve data or its serialized string representation, depending on the input's format. Type should be `FLOAT_CURVE`.

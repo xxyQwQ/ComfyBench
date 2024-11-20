@@ -1,0 +1,12 @@
+- `LayeredDiffusionDiffApply`: This node applies a layered diffusion process to an input, leveraging a specific configuration and weight to modify the diffusion behavior. It is designed to integrate with a model patcher, facilitating the application of diffusion techniques in a controlled and customizable manner.
+    - Inputs:
+        - `model` (Required): The model patcher instance used to apply the layered diffusion. It serves as the primary interface for modifying the model's behavior based on the specified configuration and weight. Type should be `MODEL`.
+        - `cond` (Required): The conditional input used to guide the diffusion process, providing context or constraints. Type should be `CONDITIONING`.
+        - `uncond` (Required): The unconditional input that represents the baseline or default state for the diffusion process. Type should be `CONDITIONING`.
+        - `blended_latent` (Required): A latent representation that combines elements of both conditional and unconditional inputs, used to influence the diffusion outcome. Type should be `LATENT`.
+        - `latent` (Required): The initial latent representation of the input, serving as the starting point for the diffusion process. Type should be `LATENT`.
+        - `config` (Required): A string identifier for the layered diffusion configuration to be applied. This determines the specific diffusion process and parameters to be used. Type should be `COMBO[STRING]`.
+        - `weight` (Required): A float value that adjusts the intensity of the diffusion effect. Higher values result in more pronounced diffusion effects. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The modified model after the layered diffusion process has been applied, reflecting the changes made. Type should be `MODEL`.
+        - `conditioning`: The conditioning information used during the diffusion process, which may include modified or additional context. Type should be `CONDITIONING`.

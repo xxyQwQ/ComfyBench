@@ -1,0 +1,5 @@
+- `mgpt_model_loader`: This node is responsible for loading and initializing the MotionGPT model with a specified configuration and model weights. It ensures the model is ready for generating or processing motion data by setting up the necessary environment, including downloading the model if not locally available, and preparing it for inference.
+    - Inputs:
+        - `model` (Required): Specifies the model to be loaded and initialized for motion generation or processing. This parameter determines which specific MotionGPT model configuration and weights are used, impacting the quality and type of motion data the node can generate or process. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `mgpt_model`: The loaded and initialized MotionGPT model, ready for generating or processing motion data. Type should be `MGPTMODEL`.

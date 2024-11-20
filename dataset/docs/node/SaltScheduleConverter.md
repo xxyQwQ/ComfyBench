@@ -1,8 +1,0 @@
-- `SaltScheduleConverter`: The SaltScheduleConverter node is designed to transform schedule lists into formats compatible with various modules by converting list inputs into floats, ensuring interoperability with modules that require specific numeric types.
-    - Parameters:
-    - Inputs:
-        - `schedule_list`: The schedule_list parameter is a list of values intended to be converted. It plays a crucial role in determining the output format and type, affecting the compatibility with other modules. Type should be `LIST`.
-    - Outputs:
-        - `floats`: A list of original float values from the input schedule list, maintaining the original numeric format. Type should be `FLOATS`.
-        - `float`: A duplicate of the original float list, serving as an alternative format for compatibility. Type should be `FLOAT`.
-        - `int`: A list of integers derived from rounding the original schedule list values, tailored for modules requiring integer inputs. Type should be `INT`.

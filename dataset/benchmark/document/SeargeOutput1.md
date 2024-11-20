@@ -1,0 +1,12 @@
+- `SeargeOutput1`: SeargeOutput1 is designed to demultiplex and output a variety of prompt-related parameters and media from a single input structure. It focuses on extracting and organizing textual prompts, styles, and associated images or masks for further processing or display, serving as a critical node in the pipeline for handling and refining user inputs into actionable data for generative models.
+    - Inputs:
+        - `parameters` (Required): The 'parameters' input is the central data structure from which all output parameters are derived, containing all necessary information about prompts, styles, and media for the node to process. Type should be `PARAMETERS`.
+    - Outputs:
+        - `parameters`: Returns the original input parameters for reference or further use. Type should be `PARAMETERS`.
+        - `main_prompt`: Extracts the main textual prompt for generation. Type should be `STRING`.
+        - `secondary_prompt`: Extracts a secondary textual prompt, potentially for refinement or additional context. Type should be `STRING`.
+        - `style_prompt`: Extracts a style-related textual prompt, indicating the desired artistic or thematic direction. Type should be `STRING`.
+        - `negative_prompt`: Extracts a textual prompt meant to guide the generation away from certain themes or elements. Type should be `STRING`.
+        - `negative_style`: Extracts a style-related prompt intended to negate or counterbalance certain stylistic directions. Type should be `STRING`.
+        - `image`: Outputs an image associated with the input parameters, potentially for use as a reference or starting point in generation. Type should be `IMAGE`.
+        - `mask`: Outputs a mask associated with the input parameters, potentially for use in targeted image manipulation or generation. Type should be `MASK`.

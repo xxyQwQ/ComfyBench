@@ -1,0 +1,14 @@
+- `ADE_AnimateDiffLoaderWithContext`: This node is designed to load the AnimateDiff model along with a specific context, facilitating the integration of additional information or settings that influence the animation process. It serves as a bridge between the legacy AnimateDiff model and newer, context-aware functionalities, ensuring compatibility and enhanced control over the animation generation.
+    - Inputs:
+        - `model` (Required): Specifies the AnimateDiff model to be loaded, serving as the core component for the animation process. Type should be `MODEL`.
+        - `model_name` (Required): Identifies the specific AnimateDiff model by name, allowing for precise selection within the available options. Type should be `COMBO[STRING]`.
+        - `beta_schedule` (Required): Adjusts the beta schedule for the animation, influencing the diffusion process. Type should be `COMBO[STRING]`.
+        - `context_options` (Optional): Provides context-specific options that modify how the AnimateDiff model processes animations, allowing for customized animation behaviors. Type should be `CONTEXT_OPTIONS`.
+        - `motion_lora` (Optional): Specifies the LoRA parameters for motion, enhancing the model's ability to generate dynamic animations. Type should be `MOTION_LORA`.
+        - `ad_settings` (Optional): Defines the settings for AnimateDiff, tailoring the animation process to specific requirements. Type should be `AD_SETTINGS`.
+        - `sample_settings` (Optional): Determines the sampling settings for the animation, affecting the quality and characteristics of the generated animation. Type should be `SAMPLE_SETTINGS`.
+        - `motion_scale` (Optional): Controls the scale of motion in the animation, allowing for finer adjustment of movement intensity. Type should be `FLOAT`.
+        - `apply_v2_models_properly` (Optional): Ensures that version 2 models are applied correctly, optimizing compatibility and performance. Type should be `BOOLEAN`.
+        - `ad_keyframes` (Optional): Specifies keyframes for the animation, guiding the AnimateDiff model in generating targeted animation sequences. Type should be `AD_KEYFRAMES`.
+    - Outputs:
+        - `model`: The loaded AnimateDiff model, ready for animation generation with the specified context and settings. Type should be `MODEL`.

@@ -1,0 +1,9 @@
+- `VAEEncodeTiled_TiledDiffusion`: This node is designed for encoding images into a latent space representation using a tiled VAE approach, optimizing for efficiency and flexibility in handling various image sizes through tiling.
+    - Inputs:
+        - `pixels` (Required): The input image to be encoded. This parameter is crucial for determining the content that will be transformed into a latent representation. Type should be `IMAGE`.
+        - `vae` (Required): The VAE model used for encoding. It defines the architecture and parameters of the variational autoencoder that processes the image. Type should be `VAE`.
+        - `tile_size` (Required): Specifies the size of the tiles into which the image is divided for encoding. This affects the granularity of the encoding process and can be adjusted for performance or quality. Type should be `INT`.
+        - `fast` (Required): A boolean flag that, when true, enables a faster but potentially less accurate encoding process. Type should be `BOOLEAN`.
+        - `color_fix` (Required): A boolean flag that, when true, applies a color correction step to the image before encoding. This can be useful for maintaining color consistency across tiles. Type should be `BOOLEAN`.
+    - Outputs:
+        - `latent`: The encoded latent representation of the input image. This output captures the essential features of the image in a compressed form, suitable for various downstream tasks. Type should be `LATENT`.

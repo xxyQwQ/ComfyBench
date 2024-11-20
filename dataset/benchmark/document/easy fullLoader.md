@@ -1,0 +1,33 @@
+- `easy fullLoader`: The `easy fullLoader` node is designed to streamline the process of loading and initializing various models and components required for image generation tasks. It encapsulates the complexity of handling different model types, such as Stable Diffusion, control nets, and DIT loaders, providing a unified interface for easy integration and use within the ComfyUI framework. This node significantly simplifies the setup and configuration phase, enabling users to focus on the creative aspects of image generation.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the checkpoint name for the model to be loaded. This parameter is crucial for identifying and retrieving the correct model version, affecting the quality and characteristics of the generated images. Type should be `COMBO[STRING]`.
+        - `config_name` (Required): Specifies the configuration name for further customization of the loading process, allowing for more tailored model initialization. Type should be `COMBO[STRING]`.
+        - `vae_name` (Required): Determines the VAE model to be used in conjunction with the primary model. The choice of VAE can influence the style and details of the generated images, making it an important aspect of the configuration. Type should be `COMBO[STRING]`.
+        - `clip_skip` (Required): Determines the number of layers to skip in the CLIP model, affecting the depth of text encoding. Type should be `INT`.
+        - `lora_name` (Required): Identifies the LoRA model to be applied, if any. LoRA (Low-Rank Adaptation) allows for fine-tuning and adjusting model behaviors without extensive retraining, offering a way to customize the generation process. Type should be `COMBO[STRING]`.
+        - `lora_model_strength` (Required): Controls the intensity of the LoRA model's influence on the generation process. This parameter allows users to balance between the original model's output and the modifications introduced by LoRA. Type should be `FLOAT`.
+        - `lora_clip_strength` (Required): Adjusts the strength of LoRA's effect specifically on the CLIP model's outputs. This fine-tuning capability enables more precise control over the semantic alignment between text prompts and generated images. Type should be `FLOAT`.
+        - `resolution` (Required): Sets the resolution for the generated images. Higher resolutions produce more detailed images but require more computational resources. Type should be `COMBO[STRING]`.
+        - `empty_latent_width` (Required): Specifies the width of the empty latent space to be used for image generation. This parameter is part of the setup for generating images from scratch or modifying existing ones. Type should be `INT`.
+        - `empty_latent_height` (Required): Defines the height of the empty latent space, complementing the width setting to determine the overall dimensions of the generated images. Type should be `INT`.
+        - `positive` (Required): A text prompt that guides the model towards generating images with desired attributes. Positive prompts encourage the inclusion of specific elements or themes in the output. Type should be `STRING`.
+        - `positive_token_normalization` (Required): Defines the method for normalizing positive prompt tokens, influencing the weighting of text prompts. Type should be `COMBO[STRING]`.
+        - `positive_weight_interpretation` (Required): Specifies how the weights of positive prompts are interpreted, affecting the emphasis on certain aspects of the image generation. Type should be `COMBO[STRING]`.
+        - `negative` (Required): A text prompt used to steer the model away from certain attributes or themes. Negative prompts help in excluding undesired elements from the generated images. Type should be `STRING`.
+        - `negative_token_normalization` (Required): Defines the method for normalizing negative prompt tokens, influencing the weighting of text prompts. Type should be `COMBO[STRING]`.
+        - `negative_weight_interpretation` (Required): Specifies how the weights of negative prompts are interpreted, affecting the emphasis on certain aspects of the image generation. Type should be `COMBO[STRING]`.
+        - `batch_size` (Required): Determines the number of images to be generated in a single batch. Adjusting the batch size can impact performance and resource utilization. Type should be `INT`.
+        - `model_override` (Optional): Allows for the override of the default model with a specified one, offering flexibility in model selection. Type should be `MODEL`.
+        - `clip_override` (Optional): Enables the override of the default CLIP model with a specified one, allowing for customization of text encoding. Type should be `CLIP`.
+        - `vae_override` (Optional): Permits the override of the default VAE model with a specified one, providing options for style and detail customization. Type should be `VAE`.
+        - `optional_lora_stack` (Optional): Optional parameter to specify a stack of LoRA models for enhanced customization. Type should be `LORA_STACK`.
+        - `optional_controlnet_stack` (Optional): Optional parameter to specify a stack of control net models for additional adjustments to the generation process. Type should be `CONTROL_NET_STACK`.
+        - `a1111_prompt_style` (Optional): Enables the use of a specific prompt style, offering further customization of the text-to-image translation process. Type should be `BOOLEAN`.
+    - Outputs:
+        - `pipe`: Outputs the configured pipeline necessary for generating images based on the provided settings. Type should be `PIPE_LINE`.
+        - `model`: Returns the loaded model after configuration, ready for image generation. Type should be `MODEL`.
+        - `vae`: Returns the loaded VAE model, which influences the style and details of the generated images. Type should be `VAE`.
+        - `clip`: Returns the loaded CLIP model, used for encoding text prompts into visual concepts. Type should be `CLIP`.
+        - `positive`: Outputs the positive embeddings generated from the text prompts, guiding the image generation towards desired attributes. Type should be `CONDITIONING`.
+        - `negative`: Outputs the negative embeddings generated from the text prompts, steering the image generation away from certain attributes. Type should be `CONDITIONING`.
+        - `latent`: Provides the latent space representation used for image generation, offering a foundation for creativity. Type should be `LATENT`.

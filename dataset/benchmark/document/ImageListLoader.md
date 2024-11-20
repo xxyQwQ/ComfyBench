@@ -1,0 +1,7 @@
+- `ImageListLoader`: The ImageListLoader node is designed to load a list of images from a specified source, facilitating the handling and manipulation of multiple images in a batch processing or image analysis workflow.
+    - Inputs:
+        - `folder_path` (Required): Specifies the directory path from which images will be loaded. This input is essential for locating the source of images that the node will process. Type should be `STRING`.
+        - `file_filter` (Required): Defines the file pattern to filter the images to be loaded, such as '*.png'. This allows for selective loading of images based on their file type or naming convention. Type should be `STRING`.
+        - `sort_method` (Required): Determines the sorting method for the loaded images, either 'numerical' or 'alphabetical'. This affects the order in which images are processed and is crucial for workflows requiring a specific sequence. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `Images`: Outputs the loaded images as a list, making them available for further processing or analysis. This is essential for workflows that require manipulation of multiple images simultaneously. Type should be `IMAGE`.

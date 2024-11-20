@@ -1,0 +1,7 @@
+- `LLMUnstructuredReader`: The LLMUnstructuredReader node is designed to read and process unstructured files, converting them into a format suitable for indexing and further analysis by the llama_index system. It supports a variety of file types, making it a versatile tool for ingesting raw data into structured document formats.
+    - Inputs:
+        - `path` (Required): Specifies the file path to the unstructured file that needs to be read. It is crucial for locating and accessing the file for processing. Type should be `STRING`.
+        - `split_documents` (Required): A boolean flag indicating whether the input file should be split into multiple documents based on certain criteria. This affects how the data is segmented and structured. Type should be `COMBO[BOOLEAN]`.
+        - `extra_info` (Optional): An optional string containing additional information or parameters in JSON format that can be used to customize the reading process. Type should be `STRING`.
+    - Outputs:
+        - `documents`: The processed data from the unstructured file, structured as a document or a list of documents, ready for indexing and analysis. Type should be `DOCUMENT`.

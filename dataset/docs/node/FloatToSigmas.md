@@ -1,6 +1,0 @@
-- `FloatToSigmas`: Transforms a list of float values into a tensor of sigmas, facilitating the conversion of numerical data into a format suitable for noise generation and manipulation within neural networks.
-    - Parameters:
-        - `float_list`: A list of float values to be converted into a sigmas tensor. This input is crucial for defining the specific noise levels to be applied in the neural network's processing. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `SIGMAS`: A tensor of sigmas derived from the input list of float values, used for noise generation and manipulation in neural network operations. Type should be `SIGMAS`.

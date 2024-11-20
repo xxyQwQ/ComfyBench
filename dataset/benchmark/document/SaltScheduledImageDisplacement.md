@@ -1,0 +1,8 @@
+- `SaltScheduledImageDisplacement`: This node applies a scheduled displacement to a batch of images based on provided amplitude and angle schedules. It utilizes a displacement layer to modify each image in the batch according to the specified schedules, allowing for dynamic image transformations over time.
+    - Inputs:
+        - `images` (Required): The batch of images to be displaced. This input is crucial for determining the base content that will undergo displacement. Type should be `IMAGE`.
+        - `displacement_images` (Required): Images used to determine the pattern or direction of displacement for each image in the batch. Type should be `IMAGE`.
+        - `amplitude_schedule` (Optional): A schedule dictating the amplitude of displacement over time. If not provided or too short, a default value is used. Type should be `LIST`.
+        - `angle_schedule` (Optional): A schedule dictating the angle of displacement over time. If not provided or too short, a default value is used. Type should be `LIST`.
+    - Outputs:
+        - `images`: The batch of images after applying the scheduled displacement transformations. Type should be `IMAGE`.

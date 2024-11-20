@@ -1,8 +1,0 @@
-- `ImageExpandBatch+`: The ImageExpandBatch+ node is designed to expand the batch size of images, allowing for the inclusion of additional images into an existing batch. This functionality is crucial for operations that require batch processing of images, such as batch image transformations, augmentations, or processing in machine learning models.
-    - Parameters:
-        - `size`: The 'size' parameter specifies the desired size of the expanded batch, determining how many times the input images are replicated or how additional images are included. Type should be `INT`.
-        - `method`: The 'method' parameter defines the technique used for expanding the batch, such as replication of existing images or inclusion of new images, affecting the approach to batch expansion. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The 'image' parameter represents the input image or images to be expanded into a larger batch. This parameter is crucial for defining the set of images that will undergo batch expansion. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output 'image' parameter represents the expanded batch of images, ready for further processing or analysis. Type should be `IMAGE`.

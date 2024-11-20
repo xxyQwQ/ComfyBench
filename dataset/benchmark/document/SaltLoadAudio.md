@@ -1,0 +1,12 @@
+- `SaltLoadAudio`: This node is designed to load audio files from a specified path, making them ready for further processing or analysis within the audio processing pipeline. It serves as the initial step in handling audio data, ensuring that audio files are properly loaded and available for subsequent operations such as editing, analysis, or conversion.
+    - Inputs:
+        - `file_path` (Required): Specifies the path to the audio file that needs to be loaded. This is crucial for locating and accessing the audio data for processing. Type should be `STRING`.
+        - `start_seconds` (Required): Defines the starting point of the audio file in seconds from which the audio should be loaded. This allows for partial loading of audio files, facilitating operations that require only a segment of the audio. Type should be `FLOAT`.
+        - `manual_bpm` (Required): Allows for the manual specification of beats per minute (BPM) if known, which can be used for further processing or analysis. This is optional and used primarily when automatic BPM detection is not desired or needs to be overridden. Type should be `FLOAT`.
+        - `frame_rate` (Required): Sets the frame rate for the audio processing, affecting the temporal resolution of the loaded audio. This is crucial for ensuring compatibility with subsequent processing steps that may require a specific frame rate. Type should be `INT`.
+        - `duration_seconds` (Optional): Specifies the duration in seconds for which the audio should be loaded from the start_seconds point. This allows for loading only a specific portion of the audio file, useful in scenarios where the entire file is not needed. Type should be `FLOAT`.
+    - Outputs:
+        - `audio`: The loaded audio data, ready for further processing or analysis. This output is essential for any subsequent audio manipulation or analysis tasks. Type should be `AUDIO`.
+        - `bpm`: The beats per minute (BPM) of the loaded audio, either detected automatically or set manually. This information is crucial for rhythm-based processing and analysis. Type should be `FLOAT`.
+        - `frame_rate`: The frame rate at which the audio was processed. This information is important for ensuring that subsequent processing steps operate on data with consistent temporal resolution. Type should be `INT`.
+        - `frame_count`: The total number of frames in the loaded audio segment. This count is essential for operations that involve direct manipulation of audio frames. Type should be `INT`.

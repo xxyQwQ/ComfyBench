@@ -1,0 +1,18 @@
+- `LayerFilter_ Film`: The Film node applies a cinematic film effect to images, enhancing them with a specific aesthetic that emulates the look and feel of traditional film photography. This node is designed to transform digital images by applying various film-like attributes, such as color grading, grain, and contrast adjustments, to achieve a visually appealing, filmic quality.
+    - Inputs:
+        - `image` (Required): The primary input for the Film node, representing the image to which the film effect will be applied. This parameter is crucial as it determines the base upon which all film-like transformations are performed. Type should be `IMAGE`.
+        - `center_x` (Required): Specifies the horizontal center of the effect focus, influencing how certain effects like blur and vignette are centered on the image. Type should be `FLOAT`.
+        - `center_y` (Required): Determines the vertical center of the effect focus, affecting the positioning of effects such as blur and vignette on the image. Type should be `FLOAT`.
+        - `saturation` (Required): Controls the intensity of the image's colors, allowing for either a more vivid or subdued color palette. Type should be `FLOAT`.
+        - `vignette_intensity` (Required): Adjusts the strength of the vignette effect, adding a darkened border that can focus attention towards the center of the image. Type should be `FLOAT`.
+        - `grain_power` (Required): Sets the intensity of the film grain effect, adding a textured, analog feel to the image. Type should be `FLOAT`.
+        - `grain_scale` (Required): Determines the scale of the grain effect, affecting how large or fine the grain particles appear. Type should be `FLOAT`.
+        - `grain_sat` (Required): Adjusts the saturation of the grain effect, influencing how pronounced the grain appears in color. Type should be `FLOAT`.
+        - `grain_shadows` (Required): Controls the visibility of grain in the darker areas of the image, allowing for more or less texture in shadows. Type should be `FLOAT`.
+        - `grain_highs` (Required): Adjusts the grain effect in the highlights, modifying how grain affects brighter areas of the image. Type should be `FLOAT`.
+        - `blur_strength` (Required): Sets the intensity of the blur effect, which can simulate depth of field or focus effects. Type should be `INT`.
+        - `blur_focus_spread` (Required): Controls the spread of the blur effect around the focus point, affecting the transition between focused and blurred areas. Type should be `FLOAT`.
+        - `focal_depth` (Required): Determines the depth of the focal area, influencing how much of the image appears in focus. Type should be `FLOAT`.
+        - `depth_map` (Optional): An optional parameter that provides a depth map for more advanced depth-based effects like variable blur. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The output of the Film node is an image that has been processed to emulate the appearance of film, incorporating adjustments to color, grain, and contrast to enhance its cinematic quality. Type should be `IMAGE`.

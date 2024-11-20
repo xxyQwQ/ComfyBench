@@ -1,8 +1,0 @@
-- `RemapMaskRange`: The `RemapMaskRange` node is designed to adjust the range of values within a mask to a new specified minimum and maximum, ensuring that the mask's values are scaled appropriately within this new range.
-    - Parameters:
-        - `min`: Specifies the new minimum value in the remapped range. This parameter sets the lower bound of the target range for the mask's values. Type should be `FLOAT`.
-        - `max`: Defines the new maximum value in the remapped range. This parameter establishes the upper limit of the target range for the mask's values. Type should be `FLOAT`.
-    - Inputs:
-        - `mask`: The mask whose values are to be remapped. This input is crucial for defining the source data that will undergo the range adjustment process. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The output is the mask with its values remapped to the new specified range, ensuring that all values fall within this defined interval. Type should be `MASK`.

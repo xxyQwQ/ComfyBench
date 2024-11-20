@@ -1,9 +1,0 @@
-- `StyleAlignedBatchAlign`: The StyleAlignedBatchAlign node is designed to modify a given model to incorporate style alignment techniques, specifically focusing on sharing normalization and attention mechanisms across different parts of the model. This node enables the adjustment of the model's behavior to better align with specific styles by patching the model's attention and normalization layers based on the provided parameters.
-    - Parameters:
-        - `share_norm`: Specifies how normalization layers should be shared within the model to achieve style alignment, influencing the model's internal processing for style consistency. Type should be `COMBO[STRING]`.
-        - `share_attn`: Determines the sharing strategy for attention mechanisms within the model, affecting how the model focuses on different aspects of the input for style alignment. Type should be `COMBO[STRING]`.
-        - `scale`: A scaling factor that adjusts the intensity of the style alignment effect, allowing for fine-tuning of the model's style-aligned behavior. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The model to be patched with style alignment techniques. It serves as the base model for modifications aimed at enhancing style alignment. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The modified model with enhanced style alignment capabilities, reflecting the applied patches for shared normalization and attention mechanisms. Type should be `MODEL`.

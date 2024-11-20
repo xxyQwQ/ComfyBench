@@ -1,7 +1,0 @@
-- `ImageDirIterator`: The ImageDirIterator node is designed to iterate through images in a specified directory, allowing for the retrieval of images by their index. This functionality is particularly useful for applications that require sequential or random access to a collection of images, such as in image processing pipelines or data loading for machine learning models.
-    - Parameters:
-        - `directory_path`: Specifies the path to the directory containing the images to be iterated over. This path is crucial for locating and accessing the image files. Type should be `STRING`.
-        - `image_index`: Determines the index of the image to retrieve from the sorted list of image files in the directory. The index is wrapped around using modulo to ensure it falls within the valid range of available images. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `image`: Returns a tensor representation of the image at the specified index, preprocessed and ready for further processing or model input. Type should be `IMAGE`.

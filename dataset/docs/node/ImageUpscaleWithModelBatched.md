@@ -1,8 +1,0 @@
-- `ImageUpscaleWithModelBatched`: This node is designed to upscale images using a specified model, with the added functionality of processing images in sub-batches to reduce VRAM usage. It is an enhancement over the native ComfyUI model upscaling node, offering more flexibility in handling large sets of images or images requiring significant computational resources.
-    - Parameters:
-        - `per_batch`: Specifies the number of images to process per sub-batch, allowing for control over VRAM usage during upscaling. Type should be `INT`.
-    - Inputs:
-        - `upscale_model`: The model used for upscaling images. It determines the upscaling algorithm and its quality. Type should be `UPSCALE_MODEL`.
-        - `images`: The batch of images to be upscaled. This input allows for multiple images to be processed in a single operation, optimizing throughput. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The upscaled images, returned as a batch with the same order as the input. This allows for direct comparison or further processing. Type should be `IMAGE`.

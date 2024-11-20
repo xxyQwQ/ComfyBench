@@ -1,7 +1,0 @@
-- `Mask Smooth Region`: This node applies a smoothing operation to the specified regions within the input masks, utilizing a specified sigma value to control the smoothness level. It's designed to refine mask edges, making them less jagged and more visually appealing.
-    - Parameters:
-        - `sigma`: A parameter controlling the smoothness level of the mask's edges. Higher values result in smoother edges. Type should be `FLOAT`.
-    - Inputs:
-        - `masks`: The input masks to be smoothed. This parameter is crucial for determining which areas of the image will undergo the smoothing process. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The smoothed masks, with refined edges for improved visual quality. Type should be `MASK`.

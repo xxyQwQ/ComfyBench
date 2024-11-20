@@ -1,0 +1,7 @@
+- `DF_Cosines`: The Cosines node calculates the cosine of a given angle, with the option to compute the arc cosine instead. It supports angles in both degrees and radians, allowing for flexible trigonometric calculations.
+    - Inputs:
+        - `value` (Required): The numerical value of the angle for which the cosine (or arc cosine) is to be calculated. This value determines the specific angle involved in the trigonometric operation. Type should be `FLOAT`.
+        - `type_` (Required): Specifies the unit of the input angle: radians ('RAD') or degrees ('DEG'). This affects how the angle is interpreted for the trigonometric calculation. Type should be `COMBO[STRING]`.
+        - `arcCos` (Required): A boolean flag that, when set to True, changes the operation from calculating the cosine to calculating the arc cosine of the given angle. Type should be `COMBO[BOOLEAN]`.
+    - Outputs:
+        - `float`: The result of the cosine (or arc cosine) calculation for the given angle. Type should be `FLOAT`.

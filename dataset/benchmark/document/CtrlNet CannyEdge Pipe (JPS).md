@@ -1,0 +1,10 @@
+- `CtrlNet CannyEdge Pipe (JPS)`: The CtrlNet CannyEdge Pipe node is designed to process settings for Canny Edge detection, returning various parameters such as source, strength, start, end, and threshold values. This node is part of the JPS Nodes/Pipes category, focusing on image processing and manipulation by applying the Canny Edge detection algorithm.
+    - Inputs:
+        - `cannyedge_settings` (Required): Specifies the configuration for Canny Edge detection, including source, strength, start and end positions, and low and high threshold values. This input is crucial for determining how the edge detection is performed and its sensitivity. Type should be `BASIC_PIPE`.
+    - Outputs:
+        - `cannyedge_source`: The source of the image for Canny Edge detection. Type should be `INT`.
+        - `cannyedge_strength`: The strength of the Canny Edge detection effect. Type should be `FLOAT`.
+        - `cannyedge_start`: The start position for applying the Canny Edge detection. Type should be `FLOAT`.
+        - `cannyedge_end`: The end position for applying the Canny Edge detection. Type should be `FLOAT`.
+        - `cannyedge_low`: The low threshold value for the Canny Edge detection. Type should be `INT`.
+        - `cannyedge_high`: The high threshold value for the Canny Edge detection. Type should be `INT`.

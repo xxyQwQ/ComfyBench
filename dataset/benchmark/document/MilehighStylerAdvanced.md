@@ -1,0 +1,15 @@
+- `MilehighStylerAdvanced`: The MilehighStylerAdvanced node dynamically subclasses from a base styler class to provide advanced styling options for text prompts. It leverages a comprehensive dataset of styling templates to apply specific aesthetic or thematic modifications to text inputs, enhancing their descriptive quality or altering their mood and tone.
+    - Inputs:
+        - `text_positive_g` (Required): A global positive text prompt intended for enhancement or modification through the node's styling capabilities. It serves as a foundational element for applying global styling themes. Type should be `STRING`.
+        - `text_positive_l` (Required): A local positive text prompt that complements the global prompt by allowing for more detailed or specific styling adjustments. It enables finer control over the styling process. Type should be `STRING`.
+        - `text_negative` (Required): A negative text prompt that the node uses to apply inverse styling effects, aiming to negate or diminish certain aspects of the text. This input is essential for creating contrast or focus in the styled output. Type should be `STRING`.
+        - `milehigh` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Specifies the scope of the negative styling application, whether it affects global, local, or both aspects of the text prompts. This choice influences how the negative styling is integrated. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag to enable or disable logging of the prompt styling process. Enabling logging provides insights into the selections made and the resulting styled prompts, offering transparency and aiding in the evaluation of the styling effects. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The enhanced version of the global positive text prompt after applying the node's advanced styling options. Type should be `STRING`.
+        - `text_positive_l`: The modified version of the local positive text prompt, reflecting specific styling adjustments made. Type should be `STRING`.
+        - `text_positive`: unknown Type should be `STRING`.
+        - `text_negative_g`: The modified version of the global negative text prompt, showcasing the effects of inverse styling applied on a global scale. Type should be `STRING`.
+        - `text_negative_l`: The modified version of the local negative text prompt, showcasing the effects of inverse styling applied on a local scale. Type should be `STRING`.
+        - `text_negative`: The combined styled version of the negative text prompts, reflecting the overall inverse styling effect. Type should be `STRING`.

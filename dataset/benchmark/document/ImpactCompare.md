@@ -1,0 +1,7 @@
+- `ImpactCompare`: The ImpactCompare node is designed to perform a variety of comparison operations between two input values. It supports basic comparison operations such as equality, inequality, greater than, less than, and their respective inclusive versions, as well as returning predefined true or false values. This functionality allows for dynamic decision-making processes within a workflow based on the comparison results.
+    - Inputs:
+        - `cmp` (Required): Specifies the type of comparison to perform between the two input values. It includes operations like equality, inequality, greater than, less than, and their inclusive versions, as well as options to return true or false directly. Type should be `COMBO[STRING]`.
+        - `a` (Required): The first value to be compared. It can be of any type, allowing for flexibility in comparison operations. Type should be `*`.
+        - `b` (Required): The second value to be compared against the first. It can be of any type, enhancing the node's versatility in handling different comparison scenarios. Type should be `*`.
+    - Outputs:
+        - `boolean`: The result of the comparison operation, indicating whether the specified condition between the two input values is met. Type should be `BOOLEAN`.

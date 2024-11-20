@@ -1,7 +1,0 @@
-- `SizeSelector`: The SizeSelector node provides a mechanism for selecting a specific size configuration (width and height) based on a predefined list of sizes. It abstracts the complexity of handling different resolution requirements by allowing users to select from a human-readable list of size options, which are then translated into the corresponding numerical width and height values.
-    - Parameters:
-        - `size_selected`: This parameter allows the user to select a size from a predefined list of size options. Each option corresponds to a specific resolution, and the selection determines the output width and height of the node. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `width`: The width component of the selected size configuration, expressed as an integer. Type should be `INT`.
-        - `height`: The height component of the selected size configuration, expressed as an integer. Type should be `INT`.

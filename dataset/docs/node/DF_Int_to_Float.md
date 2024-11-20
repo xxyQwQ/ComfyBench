@@ -1,6 +1,0 @@
-- `DF_Int_to_Float`: The DF_Int_to_Float node is designed to convert integer values to floating-point numbers, facilitating operations that require decimal precision.
-    - Parameters:
-        - `Value`: The 'Value' parameter represents the integer input that will be converted to a floating-point number. This conversion is essential for enabling precise calculations that integers alone cannot accommodate. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The output is a floating-point representation of the input integer, allowing for decimal precision in subsequent operations. Type should be `FLOAT`.

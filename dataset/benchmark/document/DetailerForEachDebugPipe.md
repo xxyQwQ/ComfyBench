@@ -1,0 +1,33 @@
+- `DetailerForEachDebugPipe`: The DetailerForEachDebugPipe node is designed for debugging purposes within the SEGS/pipe framework. It provides detailed insights and diagnostics for each processing step, facilitating the identification and resolution of issues in the pipeline.
+    - Inputs:
+        - `image` (Required): unknown Type should be `IMAGE`.
+        - `segs` (Required): unknown Type should be `SEGS`.
+        - `guide_size` (Required): unknown Type should be `FLOAT`.
+        - `guide_size_for` (Required): unknown Type should be `BOOLEAN`.
+        - `max_size` (Required): unknown Type should be `FLOAT`.
+        - `seed` (Required): unknown Type should be `INT`.
+        - `steps` (Required): unknown Type should be `INT`.
+        - `cfg` (Required): unknown Type should be `FLOAT`.
+        - `sampler_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): unknown Type should be `COMBO[STRING]`.
+        - `denoise` (Required): unknown Type should be `FLOAT`.
+        - `feather` (Required): unknown Type should be `INT`.
+        - `noise_mask` (Required): unknown Type should be `BOOLEAN`.
+        - `force_inpaint` (Required): unknown Type should be `BOOLEAN`.
+        - `basic_pipe` (Required): unknown Type should be `BASIC_PIPE`.
+        - `wildcard` (Required): unknown Type should be `STRING`.
+        - `refiner_ratio` (Required): unknown Type should be `FLOAT`.
+        - `cycle` (Required): unknown Type should be `INT`.
+        - `detailer_hook` (Optional): unknown Type should be `DETAILER_HOOK`.
+        - `refiner_basic_pipe_opt` (Optional): unknown Type should be `BASIC_PIPE`.
+        - `inpaint_model` (Optional): unknown Type should be `BOOLEAN`.
+        - `noise_mask_feather` (Optional): unknown Type should be `INT`.
+        - `scheduler_func_opt` (Optional): unknown Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `image`: unknown Type should be `IMAGE`.
+        - `segs`: unknown Type should be `SEGS`.
+        - `basic_pipe`: unknown Type should be `BASIC_PIPE`.
+        - `cropped`: unknown Type should be `IMAGE`.
+        - `cropped_refined`: unknown Type should be `IMAGE`.
+        - `cropped_refined_alpha`: unknown Type should be `IMAGE`.
+        - `cnet_images`: unknown Type should be `IMAGE`.

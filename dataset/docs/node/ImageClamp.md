@@ -1,6 +1,0 @@
-- `ImageClamp`: The ImageClamp node is designed to pass through image data without modification, acting as a placeholder or a checkpoint within a data processing pipeline. It ensures that image data conforms to expected formats or standards without altering the content.
-    - Parameters:
-    - Inputs:
-        - `image`: The 'image' input type represents the image data that will be passed through the node unaltered. It serves as a mechanism to ensure the data conforms to expected formats or standards within the pipeline. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is the unmodified image data, ensuring it conforms to expected formats or standards within the data processing pipeline. Type should be `IMAGE`.

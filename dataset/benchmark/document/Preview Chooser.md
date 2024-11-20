@@ -1,0 +1,12 @@
+- `Preview Chooser`: The Preview Chooser node is designed to display a set of images to the user, allowing them to visually inspect and select one or more images to proceed with in the workflow. This node integrates a user interaction step into the data processing pipeline, facilitating decision-making based on visual information.
+    - Inputs:
+        - `mode` (Required): The 'mode' parameter determines the operational mode of the node, affecting how user selections are processed and how the node behaves in different scenarios. Type should be `COMBO[STRING]`.
+        - `count` (Required): The 'count' parameter specifies the number of images to select or process, allowing for control over the quantity of output based on user input or predefined settings. Type should be `INT`.
+        - `images` (Optional): The 'images' parameter represents the collection of images to be displayed for user selection. It plays a crucial role in the node's operation by providing the visual content that users interact with to make their selections. Type should be `IMAGE`.
+        - `latents` (Optional): The 'latents' parameter refers to the latent representations associated with the images. It is used to carry forward the selected images' latent information through the workflow, enabling further processing or analysis. Type should be `LATENT`.
+        - `masks` (Optional): The 'masks' parameter provides optional mask information for the images, which can be used for advanced selection or processing scenarios where specific parts of images are of interest. Type should be `MASK`.
+    - Outputs:
+        - `images`: Returns the images selected by the user. Type should be `IMAGE`.
+        - `latents`: Returns the latent representations of the selected images. Type should be `LATENT`.
+        - `masks`: Returns the mask information for the selected images, if applicable. Type should be `MASK`.
+        - `selected`: Provides a string or identifier for the selected images, facilitating tracking and further processing. Type should be `STRING`.

@@ -1,0 +1,12 @@
+- `GLIGENTextBoxApply`: The GLIGENTextBoxApply node is designed to append text-based conditioning to a given set of conditioning inputs using a GLIGEN model. It utilizes CLIP to encode the text and integrates the encoded information into the conditioning, allowing for text-driven modifications in generative tasks.
+    - Inputs:
+        - `conditioning_to` (Required): The set of conditioning inputs to which the text-based conditioning will be appended. It serves as the foundation for text-driven modifications. Type should be `CONDITIONING`.
+        - `clip` (Required): The CLIP model used for encoding the input text into a format suitable for conditioning. It plays a crucial role in interpreting the text semantically. Type should be `CLIP`.
+        - `gligen_textbox_model` (Required): The GLIGEN model responsible for applying the text-based conditioning. It defines how the text influences the generative process. Type should be `GLIGEN`.
+        - `text` (Required): The input text to be encoded and applied as conditioning. This text drives the modifications in the generative task. Type should be `STRING`.
+        - `width` (Required): The width parameter specifies the dimension to which the text conditioning should be applied, influencing the spatial aspect of the conditioning. Type should be `INT`.
+        - `height` (Required): The height parameter specifies the dimension to which the text conditioning should be applied, influencing the spatial aspect of the conditioning. Type should be `INT`.
+        - `x` (Required): The x-coordinate for the positioning of the text-based conditioning, affecting its spatial placement. Type should be `INT`.
+        - `y` (Required): The y-coordinate for the positioning of the text-based conditioning, affecting its spatial placement. Type should be `INT`.
+    - Outputs:
+        - `conditioning`: The modified set of conditioning inputs, now including the text-based conditioning applied through the GLIGEN model. Type should be `CONDITIONING`.

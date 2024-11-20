@@ -1,0 +1,19 @@
+- `IPAAdapterFaceIDBatch`: IPAAdapterFaceIDBatch extends the capabilities of IPAdapterFaceID by introducing batch processing functionality, allowing for the efficient handling of multiple inputs simultaneously. This node is designed to enhance the adaptability and performance of image processing tasks, particularly those involving facial identification and manipulation, by leveraging batch operations.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for processing, serving as a core component of the node's operation. Type should be `MODEL`.
+        - `ipadapter` (Required): Defines the IPAdapter to be utilized, indicating the specific adapter configuration for image processing. Type should be `IPADAPTER`.
+        - `image` (Required): Represents the image input for processing, central to the node's functionality in handling visual data. Type should be `IMAGE`.
+        - `weight` (Required): Determines the weighting factor for the processing, influencing the outcome based on the specified value. Type should be `FLOAT`.
+        - `weight_faceidv2` (Required): Specifies the weighting factor for FaceID v2 processing, adjusting the influence of this specific feature on the overall processing. Type should be `FLOAT`.
+        - `weight_type` (Required): Indicates the type of weighting to be applied, affecting how weights are interpreted and utilized in processing. Type should be `COMBO[STRING]`.
+        - `combine_embeds` (Required): Defines the method for combining embeddings, which plays a crucial role in the integration and manipulation of image features. Type should be `COMBO[STRING]`.
+        - `start_at` (Required): Sets the starting point for processing, allowing for fine-tuned control over the operation's initiation. Type should be `FLOAT`.
+        - `end_at` (Required): Determines the ending point for processing, providing a mechanism to precisely define the scope of the operation. Type should be `FLOAT`.
+        - `embeds_scaling` (Required): Specifies the scaling approach for embeddings, impacting how image features are adjusted and integrated. Type should be `COMBO[STRING]`.
+        - `image_negative` (Optional): Optional. Represents a negative image input, used for contrast or as a counterpoint in processing. Type should be `IMAGE`.
+        - `attn_mask` (Optional): Optional. Defines an attention mask, enhancing the focus and specificity of processing on certain image areas. Type should be `MASK`.
+        - `clip_vision` (Optional): Optional. Specifies the use of CLIP vision features, enriching the processing with advanced visual understanding capabilities. Type should be `CLIP_VISION`.
+        - `insightface` (Optional): Optional. Indicates the use of the InsightFace model, crucial for advanced facial identification tasks. Type should be `INSIGHTFACE`.
+    - Outputs:
+        - `MODEL`: Returns the processed model, reflecting the modifications and enhancements made during the operation. Type should be `MODEL`.
+        - `face_image`: Outputs the processed face image, showcasing the results of the facial identification and manipulation tasks. Type should be `IMAGE`.

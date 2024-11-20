@@ -1,0 +1,7 @@
+- `StyleModelApply`: This node applies a style model to a given conditioning, enhancing or altering its style based on the output of a CLIP vision model. It integrates the style model's conditioning into the existing conditioning, allowing for a seamless blend of styles in the generation process.
+    - Inputs:
+        - `conditioning` (Required): The original conditioning data to which the style model's conditioning will be applied. It's crucial for defining the base context or style that will be enhanced or altered. Type should be `CONDITIONING`.
+        - `style_model` (Required): The style model used to generate new conditioning based on the CLIP vision model's output. It plays a key role in defining the new style to be applied. Type should be `STYLE_MODEL`.
+        - `clip_vision_output` (Required): The output from a CLIP vision model, which is used by the style model to generate new conditioning. It provides the visual context necessary for style application. Type should be `CLIP_VISION_OUTPUT`.
+    - Outputs:
+        - `conditioning`: The enhanced or altered conditioning, incorporating the style model's output. It represents the final, styled conditioning ready for further processing or generation. Type should be `CONDITIONING`.

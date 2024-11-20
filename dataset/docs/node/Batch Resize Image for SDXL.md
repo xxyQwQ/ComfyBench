@@ -1,8 +1,0 @@
-- `Batch Resize Image for SDXL`: This node is designed for batch processing of images, specifically resizing them according to specified upscale and crop methods. It allows for the efficient handling of multiple images within a directory, applying the same resizing parameters to each image.
-    - Parameters:
-        - `image_directory`: Specifies the directory containing the images to be processed. This parameter is crucial for locating and iterating over the images to apply the resizing operations. Type should be `STRING`.
-        - `upscale_method`: Determines the method used for upscaling the images during the resizing process. The choice of method can affect the quality and characteristics of the resized images. Type should be `COMBO[STRING]`.
-        - `crop`: Defines the cropping method to be applied to the images before resizing. This parameter allows for the adjustment of image dimensions and focus prior to upscaling. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `image`: The output is a list of images that have been resized according to the specified upscale and crop methods. Type should be `IMAGE`.

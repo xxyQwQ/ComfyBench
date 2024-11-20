@@ -1,0 +1,15 @@
+- `LayerStyle_ OuterGlow V2`: The OuterGlow V2 node is designed to enhance images by applying a sophisticated outer glow effect. This node allows for detailed customization of the glow through various parameters, enabling users to adjust aspects such as intensity, spread, and color to achieve the desired visual effect.
+    - Inputs:
+        - `background_image` (Required): The base image over which the outer glow effect will be applied. It serves as the canvas for the glow effect. Type should be `IMAGE`.
+        - `layer_image` (Required): The image layer to which the outer glow effect will be applied. This layer is the primary focus of the glow enhancement. Type should be `IMAGE`.
+        - `invert_mask` (Required): A boolean parameter that determines whether the mask applied to the layer image should be inverted, affecting the area of the glow effect. Type should be `BOOLEAN`.
+        - `blend_mode` (Required): Specifies the blending mode to be used for combining the glow effect with the layer image, influencing the overall appearance of the effect. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): Controls the opacity of the outer glow effect, allowing for fine-tuning of its visibility. Type should be `INT`.
+        - `brightness` (Required): Adjusts the brightness of the glow effect, affecting its intensity and visibility. Type should be `INT`.
+        - `glow_range` (Required): Defines the range of the glow effect, determining how far the glow extends from the layer image. Type should be `INT`.
+        - `blur` (Required): Sets the level of blur applied to the glow effect, contributing to its softness and diffusion. Type should be `INT`.
+        - `light_color` (Required): The color of the light source at the center of the glow effect, contributing to the effect's overall color scheme. Type should be `STRING`.
+        - `glow_color` (Required): The color of the outermost part of the glow effect, defining its peripheral appearance. Type should be `STRING`.
+        - `layer_mask` (Optional): An optional mask that can be applied to the layer image to control the application of the glow effect to specific areas. Type should be `MASK`.
+    - Outputs:
+        - `image`: The resulting image after the outer glow effect has been applied, showcasing the enhanced visual appeal. Type should be `IMAGE`.

@@ -1,8 +1,0 @@
-- `PromptBuilder __Inspire`: The PromptBuilder node is designed to facilitate the creation of customized prompts by allowing users to select from a variety of categories and presets, and to input their own text. This node aims to streamline the process of generating tailored prompts for various applications, enhancing creativity and efficiency in prompt generation.
-    - Parameters:
-        - `category`: The 'category' parameter allows users to select a prompt category from a predefined list, including custom placeholders. This selection influences the thematic direction of the generated prompt. Type should be `COMBO[STRING]`.
-        - `preset`: The 'preset' parameter enables users to choose a specific preset within the selected category, further refining the prompt's content and style. Type should be `COMBO[STRING]`.
-        - `text`: The 'text' parameter allows users to input custom text, providing a direct way to influence the content of the generated prompt. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: Returns the customized prompt text as a string, reflecting the user's category, preset, and text inputs. Type should be `STRING`.

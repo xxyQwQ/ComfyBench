@@ -1,0 +1,13 @@
+- `CreateFadeMask`: This node is designed to generate fade masks for images, allowing for the creation of transitions between different visual states. It provides the functionality to customize the fade effect through various parameters, enabling precise control over the appearance of the fade.
+    - Inputs:
+        - `invert` (Required): A boolean flag that, when set, inverts the fade effect, creating a reverse transition. Type should be `BOOLEAN`.
+        - `frames` (Required): Specifies the number of frames to generate for the fade mask, affecting the length of the transition. Type should be `INT`.
+        - `width` (Required): Determines the width of the fade mask, impacting the horizontal dimension of the generated images. Type should be `INT`.
+        - `height` (Required): Sets the height of the fade mask, influencing the vertical dimension of the generated images. Type should be `INT`.
+        - `interpolation` (Required): Defines the method of interpolation used for the fade effect, allowing for smooth transitions. Type should be `COMBO[STRING]`.
+        - `start_level` (Required): The initial opacity level of the fade, setting the starting point of the transition. Type should be `FLOAT`.
+        - `midpoint_level` (Required): The opacity level at the midpoint of the transition, allowing for control over the fade's progression. Type should be `FLOAT`.
+        - `end_level` (Required): The final opacity level of the fade, determining the end point of the transition. Type should be `FLOAT`.
+        - `midpoint_frame` (Required): Specifies the frame at which the midpoint opacity level is reached, controlling the timing of the transition. Type should be `INT`.
+    - Outputs:
+        - `mask`: The generated fade mask, which can be used to create transitions between different visual states in images. Type should be `MASK`.

@@ -1,8 +1,0 @@
-- `HypernetworkLoader`: The HypernetworkLoader node is designed to enhance or modify the capabilities of a given model by applying a hypernetwork. It loads a specified hypernetwork and applies it to the model, potentially altering its behavior or performance based on the strength parameter. This process allows for dynamic adjustments to the model's architecture or parameters, enabling more flexible and adaptive AI systems.
-    - Parameters:
-        - `hypernetwork_name`: The name of the hypernetwork to be loaded and applied to the model. This parameter specifies which hypernetwork is used, impacting the model's modified behavior or performance. Type should be `COMBO[STRING]`.
-        - `strength`: A scalar that adjusts the intensity of the hypernetwork's effect on the model. It allows for fine-tuning how significantly the hypernetwork alters the model's behavior or performance. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The model to which the hypernetwork will be applied. This parameter is crucial as it determines the base architecture that will be enhanced or modified by the hypernetwork. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The modified model after the hypernetwork has been applied. This output reflects the alterations made to the original model, showcasing the impact of the hypernetwork. Type should be `MODEL`.

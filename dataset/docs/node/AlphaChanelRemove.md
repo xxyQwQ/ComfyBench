@@ -1,6 +1,0 @@
-- `AlphaChanelRemove`: The AlphaChanelRemove node is designed to process images by removing their alpha channel. This operation simplifies image data for contexts where transparency is not required, effectively reducing the image's dimensionality for further processing or display.
-    - Parameters:
-    - Inputs:
-        - `images`: The 'images' input represents the collection of images from which the alpha channel will be removed. This operation is crucial for preparing images for environments that do not support or require transparency. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a modified version of the input images with the alpha channel removed, reducing each image's channels from four to three. Type should be `IMAGE`.

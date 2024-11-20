@@ -1,0 +1,7 @@
+- `Load Face Enhance Model (mtb)`: This node is designed to load and prepare a face enhancement model, specifically targeting GFPGan or RestoreFormer models, to enhance the quality of facial images. It facilitates the selection of the model and optionally integrates background upsampling for improved image results.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the face enhancement model to load, influencing the enhancement technique and the quality of the output. Type should be `COMBO[STRING]`.
+        - `upscale` (Required): Sets the upscale factor for the face enhancement process, aiming to improve the resolution of the enhanced image. Type should be `INT`.
+        - `bg_upsampler` (Optional): An optional parameter for a background upsampler model to further refine the background in the enhanced images. Type should be `UPSCALE_MODEL`.
+    - Outputs:
+        - `model`: The loaded face enhancement model, ready to be utilized for improving facial image quality. Type should be `FACEENHANCE_MODEL`.

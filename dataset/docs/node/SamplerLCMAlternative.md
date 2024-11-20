@@ -1,8 +1,0 @@
-- `SamplerLCMAlternative`: This node provides a mechanism to generate samples using an alternative LCM (Least Common Multiple) approach, allowing for customization of the sampling process through parameters such as euler steps, ancestral influence, and noise multiplier. It aims to offer a flexible sampling strategy that can be tailored to specific needs or experimental setups.
-    - Parameters:
-        - `euler_steps`: Specifies the number of Euler integration steps to be used in the sampling process, influencing the granularity and potentially the quality of the generated samples. Type should be `INT`.
-        - `ancestral`: Determines the degree of ancestral sampling to be applied, affecting the diversity and characteristics of the samples by adjusting the influence of prior steps. Type should be `FLOAT`.
-        - `noise_mult`: Adjusts the multiplier for the noise applied during sampling, allowing for control over the variance and exploration within the sample space. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `sampler`: Produces a sampler configured according to the specified parameters, ready for generating samples. Type should be `SAMPLER`.

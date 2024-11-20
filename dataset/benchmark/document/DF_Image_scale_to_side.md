@@ -1,0 +1,9 @@
+- `DF_Image_scale_to_side`: This node is designed to upscale an image to a specified side length while maintaining the aspect ratio. It allows for the selection of which side (width, height, longest, or shortest) to scale to, the method of upscaling, and whether to apply cropping, providing flexibility in image processing tasks.
+    - Inputs:
+        - `image` (Required): The input image to be upscaled. It serves as the base for the upscaling process, determining the initial dimensions and aspect ratio that will be adjusted. Type should be `IMAGE`.
+        - `side_length` (Required): Specifies the target length of the side (width or height) to which the image will be scaled. This value directly influences the final dimensions of the upscaled image. Type should be `INT`.
+        - `side` (Required): Determines which side of the image (width, height, longest, or shortest) will be scaled to the specified side length, affecting the upscaling direction and final aspect ratio. Type should be `COMBO[STRING]`.
+        - `upscale_method` (Required): The method used for upscaling the image, which affects the quality and characteristics of the output image. Type should be `COMBO[STRING]`.
+        - `crop` (Required): Indicates whether and how the upscaled image should be cropped, affecting the final composition and dimensions. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The upscaled image, adjusted to the specified side length while maintaining the original aspect ratio. Type should be `IMAGE`.

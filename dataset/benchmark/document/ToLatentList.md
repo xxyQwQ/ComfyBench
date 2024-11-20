@@ -1,0 +1,5 @@
+- `ToLatentList`: The `ToLatentList` node is designed to aggregate individual latent representations into a structured list format. This node facilitates the organization and manipulation of latent data by converting disparate latent samples into a cohesive list, making it easier to handle and process multiple latent samples collectively.
+    - Inputs:
+        - `inputs_len` (Required): The `inputs_len` parameter represents the individual latent samples to be aggregated into a list. This parameter is crucial for collecting and structuring latent data into a format that is more manageable for further processing or analysis. Type should be `INT`.
+    - Outputs:
+        - `latent`: The `latent` output represents the aggregated list of latent samples. This structured format allows for easier manipulation and analysis of multiple latent samples as a collective unit. Type should be `LATENT`.

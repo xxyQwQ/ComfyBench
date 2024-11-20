@@ -1,0 +1,6 @@
+- `ttN pipe2BASIC`: The ttN pipe2BASIC node is designed to simplify and streamline the processing pipeline by converting a complex input pipeline into a basic form. This node extracts essential components from the input pipeline, focusing on core elements such as model, clip, vae, and conditioning parameters, to facilitate further processing or analysis.
+    - Inputs:
+        - `pipe` (Required): The 'pipe' parameter represents the complex input pipeline that is to be simplified. It is essential for the operation as it contains all the data and settings that will be streamlined into a basic form. Type should be `PIPE_LINE`.
+    - Outputs:
+        - `basic_pipe`: The 'basic_pipe' output contains the simplified version of the input pipeline, focusing on essential components for further processing. Type should be `BASIC_PIPE`.
+        - `pipe`: Returns the original input pipeline, allowing for reference or further modifications. Type should be `PIPE_LINE`.

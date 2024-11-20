@@ -1,0 +1,19 @@
+- `LoraLoaderBlockWeight __Inspire`: The LoraLoaderBlockWeight node is designed to dynamically load and apply LoRA (Low-Rank Adaptation) adjustments to models based on specified parameters. It enhances model performance or alters model behavior by adjusting weights in a targeted manner, leveraging LoRA's capability to fine-tune models efficiently without extensive retraining.
+    - Inputs:
+        - `model` (Required): The model parameter represents the base model to which LoRA adjustments will be applied. It is crucial for defining the starting point for any modifications. Type should be `MODEL`.
+        - `clip` (Required): The clip parameter signifies the CLIP model that will be adjusted alongside the base model, ensuring that modifications are applied consistently across both models. Type should be `CLIP`.
+        - `category_filter` (Required): An optional filter that narrows down the application of LoRA adjustments to specific categories within the models, enhancing targeted modification. Type should be `COMBO[STRING]`.
+        - `lora_name` (Required): This parameter specifies the name of the LoRA file to be loaded and applied to the models, serving as a key identifier for the adjustments to be made. Type should be `COMBO[STRING]`.
+        - `strength_model` (Required): Determines the intensity of the LoRA adjustments applied to the base model, allowing for fine-grained control over the modification strength. Type should be `FLOAT`.
+        - `strength_clip` (Required): Controls the intensity of the LoRA adjustments applied to the CLIP model, enabling precise tuning of the modifications. Type should be `FLOAT`.
+        - `inverse` (Required): A flag indicating whether the LoRA adjustments should be applied in an inverse manner, offering an alternative approach to model modification. Type should be `BOOLEAN`.
+        - `seed` (Required): The seed parameter is used to ensure reproducibility in the adjustments made by LoRA, facilitating consistent outcomes across runs. Type should be `INT`.
+        - `A` (Required): Parameter A is part of the LoRA adjustment calculation, contributing to the customization of the weight modifications. Type should be `FLOAT`.
+        - `B` (Required): Parameter B works alongside A in the LoRA adjustment process, further refining the weight modifications applied to the models. Type should be `FLOAT`.
+        - `preset` (Required): Specifies a preset configuration for LoRA adjustments, streamlining the setup process for common modification scenarios. Type should be `COMBO[STRING]`.
+        - `block_vector` (Required): Defines a vector of block weights to be specifically targeted by the LoRA adjustments, allowing for precise control over which parts of the model are modified. Type should be `STRING`.
+        - `bypass` (Required): A boolean flag that, when true, bypasses the LoRA adjustment process entirely, effectively leaving the models unmodified. Type should be `BOOLEAN`.
+    - Outputs:
+        - `model`: The modified base model with LoRA adjustments applied, reflecting the targeted enhancements or alterations. Type should be `MODEL`.
+        - `clip`: The modified CLIP model with LoRA adjustments applied, ensuring consistent modifications across both models. Type should be `CLIP`.
+        - `populated_vector`: A vector indicating the specific blocks within the models that were targeted and modified by the LoRA adjustments. Type should be `STRING`.

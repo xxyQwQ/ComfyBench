@@ -1,0 +1,21 @@
+- `Automatic CFG - Excellent attention`: This node specializes in dynamically configuring a model's attention mechanism to enhance its performance. It applies a series of attention modifiers based on various conditions, including positive, negative, and global modifiers, to optimize the model's focus and processing capabilities. This customization allows for improved effectiveness in generating or interpreting data by adjusting the model's attention in response to specific scenarios.
+    - Inputs:
+        - `model` (Required): The model to which dynamic attention configuration modifications will be applied, serving as the foundation for optimizing attention mechanisms. Type should be `MODEL`.
+        - `Auto_CFG` (Required): A flag indicating whether automatic configuration is enabled, allowing the node to dynamically adjust attention mechanisms based on predefined conditions. Type should be `BOOLEAN`.
+        - `patch_multiplier` (Required): A multiplier that adjusts the intensity of the attention modification, influencing the strength of the applied attention patches. Type should be `FLOAT`.
+        - `patch_cond` (Required): A condition that triggers the application of attention modifiers designed to enhance the model's focus under specific scenarios. Type should be `BOOLEAN`.
+        - `patch_uncond` (Required): A condition that triggers the application of attention modifiers regardless of specific scenarios, applying a uniform enhancement across the model. Type should be `BOOLEAN`.
+        - `light_patch` (Required): A flag that determines the application of lighter, less intensive attention modifiers, offering a subtler adjustment to the model's attention mechanism. Type should be `BOOLEAN`.
+        - `mute_self_input_layer_i_cond` (Required): A condition that mutes the self-attention inputs at a specified layer under certain conditions, reducing the model's internal focus at that layer. Type should be `BOOLEAN`.
+        - `mute_cross_input_layer_i_cond` (Required): A condition that mutes the cross-attention inputs at a specified layer under certain conditions, reducing the model's external focus at that layer. Type should be `BOOLEAN`.
+        - `mute_self_input_layer_i_uncond` (Required): A condition that unconditionally mutes the self-attention inputs at a specified layer, reducing the model's internal focus at that layer regardless of external conditions. Type should be `BOOLEAN`.
+        - `mute_cross_input_layer_i_uncond` (Required): A condition that unconditionally mutes the cross-attention inputs at a specified layer, reducing the model's external focus at that layer regardless of external conditions. Type should be `BOOLEAN`.
+        - `uncond_sigma_end` (Required): The ending value of sigma for unconditional attention modification, defining the lower bound of the modification's intensity. Type should be `FLOAT`.
+        - `bypass_layer_i_instead_of_mute` (Required): A flag that, when enabled, bypasses the attention mechanism at a specified layer instead of muting it, allowing for alternative processing pathways. Type should be `BOOLEAN`.
+        - `save_as_preset` (Required): A flag indicating whether to save the configured attention modifications as a preset for future use, facilitating easy replication of the configuration. Type should be `BOOLEAN`.
+        - `preset_name` (Required): The name under which the attention modification preset will be saved, allowing for easy identification and reuse. Type should be `STRING`.
+        - `attn_mod_for_positive_operation` (Optional): Additional attention modifiers to be applied for positive operations, enhancing the model's focus on relevant aspects. Type should be `ATTNMOD`.
+        - `attn_mod_for_negative_operation` (Optional): Additional attention modifiers to be applied for negative operations, mitigating the model's focus on less relevant aspects. Type should be `ATTNMOD`.
+    - Outputs:
+        - `Model`: unknown Type should be `MODEL`.
+        - `Parameters as string`: A string representation of the parameters used for the attention modifications, providing insight into the configuration applied. Type should be `STRING`.

@@ -1,0 +1,11 @@
+- `ApplyCLIPSeg+`: This node applies CLIPSeg, a segmentation model, to an image based on a given prompt, threshold, and optional smoothing, dilation, and blurring parameters. It processes the image to segment it according to the semantics of the prompt, allowing for fine-tuned control over the segmentation output through post-processing steps.
+    - Inputs:
+        - `clip_seg` (Required): A tuple containing the CLIPSeg processor and model, used for processing the image and prompt to generate segmentation masks. Type should be `CLIP_SEG`.
+        - `image` (Required): The input image to be segmented. It is processed and segmented according to the given prompt and threshold. Type should be `IMAGE`.
+        - `prompt` (Required): The text prompt that guides the segmentation process, influencing the areas of the image to be segmented. Type should be `STRING`.
+        - `threshold` (Required): The threshold value for converting the model's output into a binary mask, determining the segmentation boundary. Type should be `FLOAT`.
+        - `smooth` (Required): An optional parameter for applying Gaussian blur to smooth the edges of the segmented areas, enhancing the visual quality. Type should be `INT`.
+        - `dilate` (Required): An optional parameter for dilating the segmented areas, allowing for adjustments to the segmentation boundary. Type should be `INT`.
+        - `blur` (Required): An optional parameter for further blurring the segmented areas, useful for creating softer edges. Type should be `INT`.
+    - Outputs:
+        - `mask`: The segmented output as a tensor, where each pixel's value indicates whether it belongs to the segment defined by the prompt. Type should be `MASK`.

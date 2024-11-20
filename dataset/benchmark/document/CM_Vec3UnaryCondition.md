@@ -1,0 +1,6 @@
+- `CM_Vec3UnaryCondition`: The CM_Vec3UnaryCondition node is designed to evaluate unary conditions on 3-dimensional vectors, providing a boolean result based on the specified operation and vector input.
+    - Inputs:
+        - `op` (Required): Specifies the unary operation to be performed on the vector. The choice of operation determines the condition being evaluated. The operations are limited to a predefined set of unary conditions applicable to 3-dimensional vectors. Type should be `COMBO[STRING]`.
+        - `a` (Required): The 3-dimensional vector on which the unary condition is evaluated. Type should be `VEC3`.
+    - Outputs:
+        - `bool`: The result of the unary condition evaluation, indicating whether the condition holds true for the given vector. Type should be `BOOL`.

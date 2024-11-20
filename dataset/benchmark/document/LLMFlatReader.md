@@ -1,0 +1,6 @@
+- `LLMFlatReader`: The LLMFlatReader node is designed to read and process 'flat' files, converting them into a format suitable for indexing and further analysis by the llama_index Document system. It leverages the foundational capabilities of the FlatReader class to facilitate the ingestion of simple text files into more structured document representations.
+    - Inputs:
+        - `path` (Required): Specifies the filesystem path to the 'flat' file that needs to be read. This path is essential for locating and accessing the file for processing. Type should be `STRING`.
+        - `extra_info` (Optional): Provides additional, optional information in a string format that can be used to influence the reading process or to pass extra parameters that might be needed for specific use cases. Type should be `STRING`.
+    - Outputs:
+        - `documents`: The processed data from the 'flat' file, structured as a document suitable for indexing and further analysis. Type should be `DOCUMENT`.

@@ -1,0 +1,9 @@
+- `ACN_SparseCtrlWeightExtras`: This node is designed to create and manage additional weight parameters for Sparse Control Networks, enabling fine-tuned control over the network's behavior by adjusting hint, non-hint, and mask multipliers.
+    - Inputs:
+        - `cn_extras` (Optional): A dictionary to store extra weight parameters, allowing for the customization and fine-tuning of the Sparse Control Network's behavior. Type should be `CN_WEIGHTS_EXTRAS`.
+        - `sparse_hint_mult` (Optional): Multiplier for sparse hints, influencing how strongly hints affect the network's output. Type should be `FLOAT`.
+        - `sparse_nonhint_mult` (Optional): Multiplier for non-hints, adjusting the influence of non-hint areas on the network's output. Type should be `FLOAT`.
+        - `sparse_mask_mult` (Optional): Multiplier for the mask, determining the impact of the mask on the network's behavior. Type should be `FLOAT`.
+        - `autosize` (Optional): An optional parameter to adjust the size of the network's components, providing flexibility in network configuration and optimization. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `cn_extras`: Updated dictionary of extra weight parameters, reflecting the adjustments made for hint, non-hint, and mask multipliers. Type should be `CN_WEIGHTS_EXTRAS`.

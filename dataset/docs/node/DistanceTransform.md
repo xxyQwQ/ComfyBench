@@ -1,8 +1,0 @@
-- `DistanceTransform`: This node applies a distance transform to a binary image, converting it into a grayscale image where each pixel's intensity is proportional to its distance from the nearest binary foreground pixel. It supports different distance types and mask sizes to tailor the transformation.
-    - Parameters:
-        - `distance_type`: Specifies the type of distance calculation to use, allowing for customization of the distance transform effect. Type should be `COMBO[STRING]`.
-        - `mask_size`: Determines the size of the mask used in the distance transform, affecting the granularity of the distance calculation. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `binary_image`: The binary image to which the distance transform will be applied. It serves as the input for calculating the distance to the nearest foreground pixel. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The resulting grayscale image where each pixel's intensity reflects its distance to the nearest foreground pixel, following the distance transform. Type should be `IMAGE`.

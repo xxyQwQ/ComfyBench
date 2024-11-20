@@ -1,0 +1,9 @@
+- `OtsuThreshold`: The OtsuThreshold node applies Otsu's thresholding method to an image to separate the foreground from the background. It optionally preprocesses the image with Gaussian blur to reduce noise and improve the thresholding result.
+    - Inputs:
+        - `image` (Required): The input image to be thresholded. Otsu's method is applied to this image to determine the optimal threshold value for separating foreground and background. Type should be `IMAGE`.
+        - `threshold_type` (Required): Specifies the type of thresholding to apply in conjunction with Otsu's method, allowing for customization of the thresholding process. Type should be `COMBO[STRING]`.
+        - `gaussian_blur_x` (Required): The kernel width for the Gaussian blur applied to the image before thresholding. A larger value reduces noise but can blur edges. Type should be `INT`.
+        - `gaussian_blur_y` (Required): The kernel height for the Gaussian blur applied to the image before thresholding. Works in conjunction with gaussian_blur_x to define the blur extent. Type should be `INT`.
+        - `gaussian_border_type` (Required): Defines the border type used in the Gaussian blur process, affecting how image edges are handled during blurring. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The output image after applying Otsu's thresholding. The image is segmented into foreground and background, with noise reduced if Gaussian blur was applied. Type should be `IMAGE`.

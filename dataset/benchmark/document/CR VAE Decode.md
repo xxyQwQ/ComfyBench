@@ -1,0 +1,9 @@
+- `CR VAE Decode`: The CR_VAEDecode node is designed to decode latent representations into images using a specified VAE model. It supports optional circular and tiled decoding modes to enhance the output image's visual characteristics.
+    - Inputs:
+        - `samples` (Required): The 'samples' parameter represents the latent representations to be decoded into images. It plays a crucial role in determining the visual content of the output images. Type should be `LATENT`.
+        - `vae` (Required): The 'vae' parameter specifies the VAE model used for decoding the latent representations into images. The choice of VAE model can significantly affect the quality and characteristics of the output images. Type should be `VAE`.
+        - `tiled` (Required): The 'tiled' parameter indicates whether tiled decoding should be used, which can help in generating larger images without running into memory constraints. Type should be `BOOLEAN`.
+        - `circular` (Required): The 'circular' parameter enables circular padding mode in convolutional layers of the VAE model, potentially enhancing the visual quality of the output images by avoiding edge artifacts. Type should be `BOOLEAN`.
+    - Outputs:
+        - `IMAGE`: The output image generated from the decoded latent representation. Type should be `IMAGE`.
+        - `show_help`: A URL providing additional help and documentation for the CR_VAEDecode node. Type should be `STRING`.

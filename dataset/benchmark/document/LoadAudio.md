@@ -1,0 +1,5 @@
+- `LoadAudio`: The LoadAudio node is designed for loading audio files from a specified directory, supporting a range of audio formats. It facilitates the process of reading audio data into a format suitable for further audio processing or analysis tasks.
+    - Inputs:
+        - `audio` (Required): Specifies the audio file to be loaded. The choice of file affects the waveform and sample rate obtained, which are crucial for any subsequent audio processing or analysis. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `audio`: Returns a dictionary containing the waveform and sample rate of the loaded audio file, ready for further processing or analysis. Type should be `AUDIO`.

@@ -1,0 +1,6 @@
+- `JWLoopImageSequence`: The JWLoopImageSequence node is designed to adjust the number of frames in an image sequence to match a specified target frame count. It either truncates the sequence to the target length or repeats the sequence (or parts of it) to reach the desired length, ensuring the output sequence has exactly the number of frames specified.
+    - Inputs:
+        - `images` (Required): The tensor representing the sequence of images to be processed. It's the primary input for adjusting the sequence length. Type should be `IMAGE`.
+        - `target_frames` (Required): An integer specifying the desired number of frames in the output image sequence. This determines whether the input sequence will be truncated or extended. Type should be `INT`.
+    - Outputs:
+        - `image`: A tensor representing the adjusted image sequence with the specified number of frames. Type should be `IMAGE`.

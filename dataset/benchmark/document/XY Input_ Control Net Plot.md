@@ -1,0 +1,18 @@
+- `XY Input_ Control Net Plot`: This node is designed to generate a series of values for plotting based on the control network's parameters over a specified range. It dynamically adjusts the input parameters such as strength, start percent, and end percent to create a dataset suitable for XY plotting, facilitating the visualization of how changes in these parameters affect the control network's output.
+    - Inputs:
+        - `control_net` (Required): Represents the control network whose parameters are being adjusted for plotting. It is central to determining the output values for the XY plot. Type should be `CONTROL_NET`.
+        - `image` (Required): The image input that, along with the control net, influences the generated values for the XY plot. Type should be `IMAGE`.
+        - `plot_type` (Required): Specifies the type of plot to generate, indicating how X and Y values are derived and related to each other. Type should be `COMBO[STRING]`.
+        - `strength` (Required): The strength parameter applied to the control net, affecting the output values for the plot. Type should be `FLOAT`.
+        - `start_percent` (Required): The starting percentage value, indicating the initial point of the range for the plot's X or Y axis. Type should be `FLOAT`.
+        - `end_percent` (Required): The ending percentage value, indicating the final point of the range for the plot's X or Y axis. Type should be `FLOAT`.
+        - `X_batch_count` (Required): Specifies the number of data points to generate for the X axis of the plot, affecting its granularity. Type should be `INT`.
+        - `X_first_value` (Required): The starting value for the X axis of the plot, marking the beginning of the range to be visualized. Type should be `FLOAT`.
+        - `X_last_value` (Required): The ending value for the X axis of the plot, marking the end of the range to be visualized. Type should be `FLOAT`.
+        - `Y_batch_count` (Required): Specifies the number of data points to generate for the Y axis of the plot, affecting its granularity. Type should be `INT`.
+        - `Y_first_value` (Required): The starting value for the Y axis of the plot, marking the beginning of the range to be visualized. Type should be `FLOAT`.
+        - `Y_last_value` (Required): The ending value for the Y axis of the plot, marking the end of the range to be visualized. Type should be `FLOAT`.
+        - `cnet_stack` (Optional): An optional stack of additional parameters that can be appended to each data point, allowing for more complex or detailed plots. Type should be `CONTROL_NET_STACK`.
+    - Outputs:
+        - `X`: Represents the X values generated for the plot, based on the specified input parameters and adjustments. Type should be `XY`.
+        - `Y`: Represents the Y values generated for the plot, based on the specified input parameters and adjustments. Type should be `XY`.

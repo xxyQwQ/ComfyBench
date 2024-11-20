@@ -1,0 +1,13 @@
+- `ttN advPlot range`: The node ttN_advPlot_range is designed to generate a range of values for plotting purposes, providing a flexible way to create customized plot labels and values based on specified parameters. It supports different modes of range generation, including step-based and numerical step intervals, and allows for the inclusion of custom labels, making it suitable for a wide array of plotting scenarios.
+    - Inputs:
+        - `node` (Required): Connects to an xyPlot node, determining the context and options for the range generation. Type should be `COMBO[STRING]`.
+        - `widget` (Required): Selects a specific widget from the connected node to apply the range generation, influencing the plot's output. Type should be `COMBO[STRING]`.
+        - `range_mode` (Required): Defines the method of range generation, such as step-based or numerical steps, affecting how values are calculated. Type should be `COMBO[STRING]`.
+        - `start` (Required): Specifies the starting value of the range, serving as the initial point from which the range generation begins. Type should be `FLOAT`.
+        - `step` (Required): Determines the increment between each value in the range, allowing for precise control over the distribution of values. Type should be `FLOAT`.
+        - `stop` (Required): Defines the ending value of the range, marking the limit up to which values are generated. Type should be `FLOAT`.
+        - `include_stop` (Required): Determines whether the stop value is included in the range, allowing for precise control over the range's boundaries. Type should be `BOOLEAN`.
+        - `num_steps` (Required): Indicates the number of steps or intervals within the specified range, enabling detailed customization of the range's granularity. Type should be `INT`.
+        - `label_type` (Required): Specifies the type of label to be used for each value in the range, offering options for different levels of detail in labeling. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `plot_text`: Generates a textual representation of the range values with labels, suitable for display or further processing. Type should be `STRING`.

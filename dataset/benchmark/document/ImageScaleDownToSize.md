@@ -1,0 +1,7 @@
+- `ImageScaleDownToSize`: The `ImageScaleDownToSize` node is designed for resizing images to a specific size, scaling them down while maintaining their aspect ratio. It offers a mode to scale based on the maximum or minimum dimension, ensuring flexibility in how the image's dimensions are reduced.
+    - Inputs:
+        - `images` (Required): The `images` parameter represents the collection of images to be scaled down. It is crucial for defining the input images that will undergo the resizing process. Type should be `IMAGE`.
+        - `size` (Required): The `size` parameter specifies the target size to which the images will be scaled down. It plays a pivotal role in determining the new dimensions of the images. Type should be `INT`.
+        - `mode` (Required): The `mode` parameter determines whether the scaling should consider the maximum or minimum dimension of the images. This choice affects how the aspect ratio is preserved during scaling. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output is a tensor of images that have been scaled down to the specified size, with their aspect ratio maintained. Type should be `IMAGE`.

@@ -1,0 +1,9 @@
+- `CLIPTextEncodeSDXL+`: This node is designed to encode text inputs using a CLIP model, specifically tailored for the Stable Diffusion XL framework. It processes text inputs to generate conditioning vectors and pooled outputs that are optimized for image generation tasks, incorporating additional parameters such as aesthetic scores and dimensions to fine-tune the generated images.
+    - Inputs:
+        - `width` (Required): Defines the width of the target image in pixels, affecting the aspect ratio and resolution of the generated image. Type should be `INT`.
+        - `height` (Required): Sets the height of the target image in pixels, impacting the aspect ratio and resolution of the generated image. Type should be `INT`.
+        - `size_cond_factor` (Required): Specifies the factor by which the dimensions of the target image are scaled, affecting the detail and scale of the generated image. Type should be `INT`.
+        - `text` (Required): The text input to be encoded, serving as the basis for generating the conditioning vector and influencing the content of the generated image. Type should be `STRING`.
+        - `clip` (Required): The CLIP model used for text tokenization and encoding, central to generating the conditioning vectors. Type should be `CLIP`.
+    - Outputs:
+        - `conditioning`: Outputs a conditioning vector and associated metadata, including the aesthetic score and image dimensions, tailored for image generation. Type should be `CONDITIONING`.

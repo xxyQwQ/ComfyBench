@@ -1,9 +1,0 @@
-- `Inference_Core_MiDaS-NormalMapPreprocessor`: This node is designed to preprocess images for normal map estimation using the MiDaS model. It adjusts images based on specified parameters to enhance the quality of normal map generation, facilitating improved depth perception in visual content.
-    - Parameters:
-        - `a`: The 'a' parameter influences the intensity of the normal map effect, allowing for fine-tuning of the depth estimation process. Type should be `FLOAT`.
-        - `bg_threshold`: The 'bg_threshold' parameter sets the sensitivity for background detection, aiding in distinguishing foreground elements from the background in the depth estimation. Type should be `FLOAT`.
-        - `resolution`: Specifies the resolution for the output normal map, affecting the level of detail in the depth estimation. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for normal map estimation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: Produces an image that represents the estimated normal map, enhancing depth perception in visual content. Type should be `IMAGE`.

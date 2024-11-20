@@ -1,0 +1,9 @@
+- `Smart Step (mtb)`: The MTB_SmartStep node is designed to manage the progression of steps within the KAdvancedSampler by calculating start and end points based on specified percentages. This utility facilitates dynamic step control, allowing for more precise and efficient sampling processes.
+    - Inputs:
+        - `step` (Required): The 'step' parameter specifies the current step count, which is used to calculate the starting and ending points of the sampling process based on percentage values. Type should be `INT`.
+        - `start_percent` (Required): The 'start_percent' parameter determines the percentage at which the sampling process should start, relative to the total number of steps. Type should be `INT`.
+        - `end_percent` (Required): The 'end_percent' parameter sets the percentage at which the sampling process should end, enabling fine-tuned control over the sampling range. Type should be `INT`.
+    - Outputs:
+        - `step`: Returns the original step count as provided. Type should be `INT`.
+        - `start`: Calculates and returns the starting point of the sampling process as an integer value. Type should be `INT`.
+        - `end`: Calculates and returns the ending point of the sampling process as an integer value. Type should be `INT`.

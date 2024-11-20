@@ -1,7 +1,0 @@
-- `SaveImageWithAlpha`: The SaveImageWithAlpha node is designed to save images with an alpha channel, allowing for transparency effects. It supports adding metadata to the saved image files, including prompts and additional PNG information, and manages file naming and storage with a focus on preserving image quality and transparency.
-    - Parameters:
-        - `filename_prefix`: A prefix for the filename, used to identify and organize the saved images. Type should be `STRING`.
-    - Inputs:
-        - `images`: The images to be saved, expected to have an alpha channel for transparency. Type should be `IMAGE`.
-        - `mask`: The mask to apply to the images, defining the transparency level of each pixel. Type should be `MASK`.
-    - Outputs:

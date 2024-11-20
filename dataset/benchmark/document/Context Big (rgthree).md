@@ -1,0 +1,49 @@
+- `Context Big (rgthree)`: The Context Big node serves as a comprehensive interface for managing context within a system, offering extensive flexibility by allowing all context fields to be used as both inputs and outputs. It ensures backward compatibility with other context nodes, facilitating seamless integration and interaction across different parts of the system.
+    - Inputs:
+        - `base_ctx` (Optional): Acts as the foundational context upon which additional context parameters can be layered, enabling the aggregation and modification of context data. Type should be `RGTHREE_CONTEXT`.
+        - `model` (Optional): Specifies the model to be used, contributing to the customization of the context based on the model's characteristics. Type should be `MODEL`.
+        - `clip` (Optional): Defines the CLIP model to be incorporated into the context, allowing for the integration of CLIP's capabilities. Type should be `CLIP`.
+        - `vae` (Optional): Indicates the VAE model to be included, facilitating the use of VAE features within the context. Type should be `VAE`.
+        - `positive` (Optional): Sets positive conditioning for the context, enhancing the context's specificity towards desired outcomes. Type should be `CONDITIONING`.
+        - `negative` (Optional): Establishes negative conditioning for the context, aiding in the exclusion of undesired elements from the outcomes. Type should be `CONDITIONING`.
+        - `latent` (Optional): Provides latent vectors to be used, enriching the context with pre-defined latent space representations. Type should be `LATENT`.
+        - `images` (Optional): Includes images in the context, allowing for the incorporation of visual data. Type should be `IMAGE`.
+        - `seed` (Optional): Determines the seed for random number generation, ensuring reproducibility of results. Type should be `INT`.
+        - `steps` (Optional): Specifies the number of steps for the operation, defining the granularity of the process. Type should be `INT`.
+        - `step_refiner` (Optional): Sets the step refiner value, fine-tuning the operational steps for enhanced control. Type should be `INT`.
+        - `cfg` (Optional): Configures the CFG scale, adjusting the influence of conditioning on the generation process. Type should be `FLOAT`.
+        - `ckpt_name` (Optional): Selects the checkpoint name from available options, customizing the context based on specific model checkpoints. Type should be `COMBO[STRING]`.
+        - `sampler` (Optional): Chooses the sampler to be used, tailoring the sampling process to specific requirements. Type should be `COMBO[STRING]`.
+        - `scheduler` (Optional): Picks the scheduler for the operation, optimizing the process flow according to the selected scheduling strategy. Type should be `COMBO[STRING]`.
+        - `clip_width` (Optional): Sets the width for CLIP processing, adjusting the dimensions for CLIP model inputs. Type should be `INT`.
+        - `clip_height` (Optional): Defines the height for CLIP processing, customizing the size for CLIP model inputs. Type should be `INT`.
+        - `text_pos_g` (Optional): Provides global positive text conditioning, enhancing the context with global positive textual cues. Type should be `STRING`.
+        - `text_pos_l` (Optional): Supplies local positive text conditioning, refining the context with local positive textual cues. Type should be `STRING`.
+        - `text_neg_g` (Optional): Gives global negative text conditioning, improving the context by excluding global negative textual elements. Type should be `STRING`.
+        - `text_neg_l` (Optional): Offers local negative text conditioning, polishing the context by avoiding local negative textual aspects. Type should be `STRING`.
+        - `mask` (Optional): Includes a mask for selective processing, enabling targeted modifications within the context. Type should be `MASK`.
+        - `control_net` (Optional): Incorporates a control network, extending the context's capabilities with additional control mechanisms. Type should be `CONTROL_NET`.
+    - Outputs:
+        - `CONTEXT`: Returns the comprehensive context, encapsulating all specified context fields. Type should be `RGTHREE_CONTEXT`.
+        - `MODEL`: Provides the model context, reflecting the specified model settings. Type should be `MODEL`.
+        - `CLIP`: Delivers the CLIP model context, indicating the integration of CLIP features. Type should be `CLIP`.
+        - `VAE`: Outputs the VAE model context, showcasing the inclusion of VAE characteristics. Type should be `VAE`.
+        - `POSITIVE`: Yields the positive conditioning context, highlighting the desired elements emphasized. Type should be `CONDITIONING`.
+        - `NEGATIVE`: Presents the negative conditioning context, detailing the elements to be excluded. Type should be `CONDITIONING`.
+        - `LATENT`: Supplies the latent vector context, illustrating the latent space representations used. Type should be `LATENT`.
+        - `IMAGE`: Offers the image context, showing the visual data incorporated. Type should be `IMAGE`.
+        - `SEED`: Returns the seed value used, ensuring the reproducibility of the context. Type should be `INT`.
+        - `STEPS`: Provides the number of steps context, defining the process granularity. Type should be `INT`.
+        - `STEP_REFINER`: Delivers the step refiner context, fine-tuning the operational steps. Type should be `INT`.
+        - `CFG`: Outputs the CFG scale context, adjusting the conditioning influence. Type should be `FLOAT`.
+        - `CKPT_NAME`: Presents the checkpoint name context, customizing based on specific model checkpoints. Type should be `COMBO[STRING]`.
+        - `SAMPLER`: Supplies the sampler context, tailoring the sampling process. Type should be `COMBO[STRING]`.
+        - `SCHEDULER`: Offers the scheduler context, optimizing the process flow. Type should be `COMBO[STRING]`.
+        - `CLIP_WIDTH`: Returns the CLIP width context, adjusting the dimensions for inputs. Type should be `INT`.
+        - `CLIP_HEIGHT`: Provides the CLIP height context, customizing the size for inputs. Type should be `INT`.
+        - `TEXT_POS_G`: Delivers the global positive text context, enhancing with global positive cues. Type should be `STRING`.
+        - `TEXT_POS_L`: Outputs the local positive text context, refining with local positive cues. Type should be `STRING`.
+        - `TEXT_NEG_G`: Presents the global negative text context, improving by excluding global negative elements. Type should be `STRING`.
+        - `TEXT_NEG_L`: Supplies the local negative text context, polishing by avoiding local negative aspects. Type should be `STRING`.
+        - `MASK`: Offers the mask context, enabling targeted modifications. Type should be `MASK`.
+        - `CONTROL_NET`: Returns the control network context, extending capabilities with additional control. Type should be `CONTROL_NET`.

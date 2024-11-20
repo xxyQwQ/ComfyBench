@@ -1,7 +1,0 @@
-- `VideoTriangleCFGGuidance`: This node applies a triangular configuration guidance patch to a video model, dynamically adjusting the conditioning scale over time to modulate the influence of conditional inputs. It's designed to enhance the generation of video content by applying a specific pattern of guidance that varies linearly within a defined period, aiming to achieve a balance between conditioned and unconditioned content.
-    - Parameters:
-        - `min_cfg`: The minimum conditioning scale factor to be used in the triangular CFG guidance. It defines the lowest point of scale adjustment, influencing the balance between conditioned and unconditioned content generation. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The video model to which the triangular CFG guidance patch will be applied. This model is cloned and modified with a new sampler CFG function. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The modified video model with the triangular CFG guidance patch applied, capable of generating video content with dynamically adjusted conditioning. Type should be `MODEL`.

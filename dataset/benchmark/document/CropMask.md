@@ -1,0 +1,9 @@
+- `CropMask`: The CropMask node is designed for cropping a specified area from a given mask. It allows users to define the region of interest by specifying coordinates and dimensions, effectively extracting a portion of the mask for further processing or analysis.
+    - Inputs:
+        - `mask` (Required): The mask input represents the mask image to be cropped. It is essential for defining the area to be extracted based on the specified coordinates and dimensions. Type should be `MASK`.
+        - `x` (Required): The x coordinate specifies the starting point on the horizontal axis from which the cropping should begin. Type should be `INT`.
+        - `y` (Required): The y coordinate determines the starting point on the vertical axis for the cropping operation. Type should be `INT`.
+        - `width` (Required): Width defines the horizontal extent of the crop area from the starting point. Type should be `INT`.
+        - `height` (Required): Height specifies the vertical extent of the crop area from the starting point. Type should be `INT`.
+    - Outputs:
+        - `mask`: The output is a cropped mask, which is a portion of the original mask defined by the specified coordinates and dimensions. Type should be `MASK`.

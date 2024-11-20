@@ -1,0 +1,7 @@
+- `ACN_ControlNet++LoaderAdvanced`: This node is designed to load multiple ControlNet++ models, facilitating advanced model management and usage within the ComfyUI framework. It supports loading various configurations of ControlNet++ models, enabling flexible and dynamic application of these models in different scenarios.
+    - Inputs:
+        - `plus_input` (Required): Specifies the PlusPlusInputGroup to be used with the ControlNet++ model, enabling advanced control and customization of the model's behavior. Type should be `PLUS_INPUT`.
+        - `name` (Required): Specifies the name of the ControlNet++ model to be loaded, allowing for dynamic selection from available models. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `control_net`: Returns the loaded ControlNet++ model, ready for application in the specified context. Type should be `CONTROL_NET`.
+        - `image`: Provides an image wrapper around the PlusPlusInputGroup, facilitating its use with the loaded ControlNet++ model. Type should be `IMAGE`.

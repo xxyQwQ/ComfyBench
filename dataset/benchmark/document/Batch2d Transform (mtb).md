@@ -1,0 +1,12 @@
+- `Batch2d Transform (mtb)`: The Batch2d Transform node is designed to apply a series of 2D transformations to batches of images, including translation, rotation, zoom, and shear adjustments. It leverages mathematical and graphical operations to modify image data for various applications such as data augmentation, animation, and visual effects.
+    - Inputs:
+        - `image` (Required): The input image tensor to be transformed. It serves as the base for applying the 2D transformations, affecting the visual outcome of the operation. Type should be `IMAGE`.
+        - `border_handling` (Required): Specifies the method for handling image borders during transformation, influencing how the image is extended or cropped. Type should be `COMBO[STRING]`.
+        - `constant_color` (Required): Defines the color used to fill any new areas of the image created as a result of the transformation, ensuring visual consistency. Type should be `COLOR`.
+        - `x` (Optional): A list of floats representing the translation values along the x-axis for each image in the batch, dictating horizontal movement. Type should be `FLOATS`.
+        - `y` (Optional): A list of floats representing the translation values along the y-axis for each image in the batch, dictating vertical movement. Type should be `FLOATS`.
+        - `zoom` (Optional): A list of floats indicating the zoom levels to be applied to each image in the batch, affecting the image scale. Type should be `FLOATS`.
+        - `angle` (Optional): A list of floats specifying the rotation angles for each image in the batch, determining the orientation change. Type should be `FLOATS`.
+        - `shear` (Optional): A list of floats representing the shear values to be applied to each image in the batch, altering the shape through skewing. Type should be `FLOATS`.
+    - Outputs:
+        - `image`: The transformed image tensor, resulting from the application of specified 2D transformations to the input images. Type should be `IMAGE`.

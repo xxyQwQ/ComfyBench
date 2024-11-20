@@ -1,8 +1,0 @@
-- `VHS_DuplicateMasks`: The `VHS_DuplicateMasks` node is designed to replicate a given mask tensor a specified number of times, effectively creating a batch of identical masks. This functionality is crucial for operations requiring multiple instances of the same mask, such as batch processing or data augmentation in video and image editing workflows.
-    - Parameters:
-        - `multiply_by`: The `multiply_by` parameter specifies the number of times the input mask should be duplicated. This allows for dynamic adjustment of the batch size based on the needs of the workflow. Type should be `INT`.
-    - Inputs:
-        - `mask`: The `mask` parameter represents the input tensor to be duplicated. It is central to the node's operation, as it defines the mask that will be replicated across the new batch. Type should be `MASK`.
-    - Outputs:
-        - `MASK`: The duplicated mask batch, consisting of multiple copies of the input mask. Type should be `MASK`.
-        - `count`: The total number of masks in the duplicated batch, providing a straightforward way to track batch size. Type should be `INT`.

@@ -1,0 +1,5 @@
+- `SaltAudio2VHS`: The SaltAudio2VHS node is designed to transform audio inputs into a format reminiscent of VHS audio quality, providing a unique auditory experience that emulates the characteristics of vintage video cassette sound.
+    - Inputs:
+        - `audio` (Required): The 'audio' input accepts audio data to be processed and converted into VHS audio format, playing a crucial role in determining the final output's quality and authenticity. Type should be `AUDIO`.
+    - Outputs:
+        - `vhs_audio`: The output 'vhs_audio' delivers the transformed audio in VHS format, offering a nostalgic audio experience with the distinct sound quality of a bygone era. Type should be `VHS_AUDIO`.

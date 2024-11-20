@@ -1,0 +1,7 @@
+- `ttN int`: The `ttN int` node is designed for integer manipulation within the tinyterra utility category, offering functionality to convert an integer input into multiple formats.
+    - Inputs:
+        - `int` (Required): Specifies the integer value to be converted. This parameter is central to the node's operation, as it determines the base value that will be transformed into different formats. Type should be `INT`.
+    - Outputs:
+        - `int`: Returns the original integer input without modification. Type should be `INT`.
+        - `float`: Converts and returns the input integer as a float. Type should be `FLOAT`.
+        - `text`: Converts and returns the input integer as a string. Type should be `STRING`.

@@ -1,8 +1,0 @@
-- `DilateErodeMask`: The DilateErodeMask node is designed to modify mask images by either dilating or eroding them, based on the specified radius and shape. This process adjusts the boundaries of objects within the mask, either expanding or contracting them to achieve the desired morphological effect.
-    - Parameters:
-        - `radius`: Determines the extent of the dilation or erosion effect. A positive radius dilates the mask, expanding object boundaries, while a negative radius erodes the mask, contracting them. Type should be `INT`.
-        - `shape`: Defines the shape of the structuring element used in the dilation or erosion process. This can be either a 'box' or a 'circle', influencing the morphological transformation's nature. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `masks`: Specifies the mask images to be processed. The modification of these masks through dilation or erosion alters the boundaries of the objects they contain, depending on the operation's parameters. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The modified mask image after applying the dilation or erosion operation, reflecting the adjusted boundaries of objects within the mask. Type should be `MASK`.

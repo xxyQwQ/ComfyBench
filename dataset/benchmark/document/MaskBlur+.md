@@ -1,0 +1,7 @@
+- `MaskBlur+`: The `MaskBlur+` node applies a Gaussian blur to a given mask, optionally adjusting the intensity of the blur and accommodating different computational devices. It's designed to smooth out the edges or details of a mask, which can be useful in various image processing tasks where softer transitions or less pronounced features are desired.
+    - Inputs:
+        - `mask` (Required): The mask to be blurred. This is the primary input on which the Gaussian blur operation is performed. Type should be `MASK`.
+        - `amount` (Required): Specifies the intensity of the blur. A higher value results in a more pronounced blurring effect. Type should be `INT`.
+        - `device` (Required): Determines the computational device ('auto', 'cpu', or 'gpu') on which the blurring operation is executed, allowing for flexibility in resource utilization. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `mask`: The blurred version of the input mask, with potentially softened features or transitions. Type should be `MASK`.

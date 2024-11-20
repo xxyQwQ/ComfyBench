@@ -1,9 +1,0 @@
-- `easy humanSegmentation`: The `easy humanSegmentation` node is designed to segment human figures from images, utilizing advanced machine learning models to accurately identify and isolate human subjects from their backgrounds. This node is essential for applications requiring precise human outlines, such as in photo editing, augmented reality, and various forms of digital content creation.
-    - Parameters:
-        - `method`: The `method` parameter specifies the segmentation technique or model to be used. This choice affects the segmentation accuracy, performance, and suitability for different types of images or requirements. Type should be `COMBO[STRING]`.
-        - `confidence`: The `confidence` parameter allows setting a threshold for the segmentation confidence level, filtering out less certain segments to ensure higher accuracy in the results. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The `image` parameter is the input image that the node will process to segment human figures. It plays a crucial role in determining the accuracy and quality of the segmentation output. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The `image` output provides the segmented image with human figures isolated from the background, ready for further processing or visualization. Type should be `IMAGE`.
-        - `mask`: The `mask` output offers a binary mask indicating the areas of the image corresponding to human figures, useful for various image editing and processing tasks. Type should be `MASK`.

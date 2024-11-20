@@ -1,5 +1,0 @@
-- `Manga2Anime_LineArt_Preprocessor_Provider_for_SEGS __Inspire`: This node provides a preprocessor specifically tailored for converting manga line art into a style suitable for SEGS (Semantic Edge Guided Synthesis) applications, focusing on adapting manga-style illustrations for use in anime-style image generation or modification.
-    - Parameters:
-    - Inputs:
-    - Outputs:
-        - `segs_preprocessor`: The output is a preprocessor configured for transforming manga line art into an anime-style format, ready for further processing or generation tasks within SEGS applications. Type should be `SEGS_PREPROCESSOR`.

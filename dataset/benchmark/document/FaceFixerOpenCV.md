@@ -1,0 +1,20 @@
+- `FaceFixerOpenCV`: FaceFixerOpenCV is designed to enhance and modify facial features within images using OpenCV. It employs face detection algorithms to identify faces in images and applies various transformations to improve or alter the appearance of these faces, such as resizing, denoising, and blending with other facial features.
+    - Inputs:
+        - `image` (Required): The image tensor where faces need to be detected and fixed. It serves as the primary input for face detection and subsequent modifications. Type should be `IMAGE`.
+        - `base_model` (Required): The base model used for generating new facial features or enhancing existing ones. Type should be `MODEL`.
+        - `vae` (Required): The variational autoencoder used for encoding and decoding facial features. Type should be `VAE`.
+        - `positive_cond_base` (Required): Base conditioning for positive attributes to enhance or generate in the face. Type should be `CONDITIONING`.
+        - `negative_cond_base` (Required): Base conditioning for negative attributes to reduce or eliminate in the face. Type should be `CONDITIONING`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of results. Type should be `INT`.
+        - `face_img_resolution` (Required): The resolution to which the face images are scaled before processing. Type should be `INT`.
+        - `padding` (Required): Padding added to the detected face region before processing to include a broader context. Type should be `INT`.
+        - `scale_factor` (Required): A parameter that influences the detection process by specifying how much the image size is reduced at each image scale. Type should be `FLOAT`.
+        - `min_neighbors` (Required): A threshold for determining which detected faces are retained. It represents the minimum number of neighbors each candidate rectangle should have to qualify as a face. Type should be `INT`.
+        - `denoise` (Required): The degree of denoising applied to the face images during processing. Type should be `FLOAT`.
+        - `classifier` (Required): Specifies the classifier model to be used for face detection. It determines the type of faces (e.g., anime, frontal, profile) the node is looking for within the image. Type should be `COMBO[STRING]`.
+        - `sampler_name` (Required): Specifies the sampling method used for generating or enhancing facial features. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler used for controlling the sampling process. Type should be `COMBO[STRING]`.
+        - `cfg` (Required): Configuration settings for the face fixing process. Type should be `FLOAT`.
+        - `steps` (Required): The number of steps in the face fixing process. Type should be `INT`.
+    - Outputs:
+        - `image`: The modified image tensor with enhanced or altered facial features. Type should be `IMAGE`.

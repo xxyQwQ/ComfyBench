@@ -1,0 +1,6 @@
+- `ImpactSchedulerAdapter`: The ImpactSchedulerAdapter node is designed to adapt and select scheduling strategies for various tasks, allowing for dynamic adjustment of scheduling based on specific conditions or preferences.
+    - Inputs:
+        - `scheduler` (Required): Specifies the primary scheduler to be used, with an option to default to a pre-defined input if no specific scheduler is provided. Type should be `COMBO[STRING]`.
+        - `extra_scheduler` (Required): Allows for the specification of an additional scheduler, offering options such as 'None', 'AYS SDXL', 'AYS SD1', 'AYS SVD', 'GITS[coeff=1.2]', to override the primary scheduler if needed. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `scheduler`: Outputs the selected scheduler, which could either be the primary scheduler or an overridden scheduler specified by the 'extra_scheduler' input. Type should be `COMBO[STRING]`.

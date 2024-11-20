@@ -1,6 +1,0 @@
-- `XY Input Refiner On_Off`: The node is designed to refine the XY plot inputs based on a specified percentage, enabling dynamic adjustment of the refinement process to optimize efficiency and accuracy in data visualization or processing tasks.
-    - Parameters:
-        - `refine_at_percent`: Specifies the percentage at which the refinement process should be initiated, allowing for precise control over when the refinement adjustments are applied to the XY plot. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `X or Y`: Outputs a tuple containing the type of refinement ('Refiner On/Off') and the corresponding XY values after applying the refinement at the specified percentage. This output aligns with the expected 'X or Y' designation, indicating either X or Y values are refined. Type should be `XY`.

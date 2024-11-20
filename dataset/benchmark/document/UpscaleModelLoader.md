@@ -1,0 +1,5 @@
+- `UpscaleModelLoader`: The UpscaleModelLoader node is designed to load and prepare upscale models for image enhancement tasks. It ensures that the loaded model is compatible with single-image processing and performs necessary adjustments to the model's state dictionary for optimal functionality.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the upscale model to load. This name is used to locate the model file within a predefined directory structure. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `upscale_model`: Returns an instance of the loaded and prepared upscale model, ready for image upscaling tasks. Type should be `UPSCALE_MODEL`.

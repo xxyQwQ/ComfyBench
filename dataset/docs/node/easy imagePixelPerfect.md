@@ -1,7 +1,0 @@
-- `easy imagePixelPerfect`: This node is designed to enhance image quality by adjusting the pixel perfection of images. It focuses on optimizing the resolution and sharpness to achieve the best possible visual clarity without altering the original image's content.
-    - Parameters:
-        - `resize_mode`: Specifies the mode of resizing to be applied to the image, such as resizing to a specific dimension or scaling down while maintaining the aspect ratio. This parameter plays a crucial role in determining how the image's pixel perfection is enhanced. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The input image to be processed for pixel perfection. This parameter is essential for the node to perform its function of optimizing the image's resolution and sharpness. Type should be `IMAGE`.
-    - Outputs:
-        - `resolution`: The optimized resolution of the image after processing, indicating the enhanced pixel perfection. Type should be `INT`.

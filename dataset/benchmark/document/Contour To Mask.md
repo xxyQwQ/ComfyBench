@@ -1,0 +1,7 @@
+- `Contour To Mask`: The Contour To Mask node transforms a given contour into a mask on the specified image, allowing for the visualization or application of contours in image processing tasks. It supports customization of the output image format.
+    - Inputs:
+        - `image` (Required): The input image on which the contour will be drawn to create a mask. It serves as the canvas for the contour transformation. Type should be `IMAGE`.
+        - `contour` (Required): The contour to be transformed into a mask on the image. This parameter defines the shape and location of the mask. Type should be `CV_CONTOUR`.
+        - `output_format` (Required): Specifies the desired output image format, allowing for flexibility in how the resulting masked image is encoded or saved. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The output is an image with the specified contour transformed into a mask, reflecting the shape and position of the contour on the original image. Type should be `IMAGE`.

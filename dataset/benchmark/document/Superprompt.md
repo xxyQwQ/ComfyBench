@@ -1,0 +1,7 @@
+- `Superprompt`: Superprompt is designed to enhance text prompts by upsampling them into more detailed descriptions using a T5 model fine-tuned on the SuperPrompt dataset. It serves as a pre-generation step to enrich prompts for text-to-image models, facilitating the creation of more detailed and accurate images.
+    - Inputs:
+        - `instruction_prompt` (Required): A guiding instruction to shape the expansion of the prompt, setting the context for how the text should be detailed. Type should be `STRING`.
+        - `prompt` (Required): The initial text prompt to be expanded into a more detailed description. Type should be `STRING`.
+        - `max_new_tokens` (Required): Specifies the maximum number of new tokens to be generated, controlling the length of the expanded description. Type should be `INT`.
+    - Outputs:
+        - `string`: The enhanced, detailed version of the original text prompt. Type should be `STRING`.

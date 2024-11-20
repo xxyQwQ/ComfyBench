@@ -1,7 +1,0 @@
-- `LatentAdd`: The LatentAdd node is designed for the addition of two latent representations. It facilitates the combination of features or characteristics encoded in these representations by performing element-wise addition.
-    - Parameters:
-    - Inputs:
-        - `samples1`: The first set of latent samples to be added. It represents one of the inputs whose features are to be combined with another set of latent samples. Type should be `LATENT`.
-        - `samples2`: The second set of latent samples to be added. It serves as the other input whose features are combined with the first set of latent samples through element-wise addition. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The result of the element-wise addition of two latent samples, representing a new set of latent samples that combines the features of both inputs. Type should be `LATENT`.

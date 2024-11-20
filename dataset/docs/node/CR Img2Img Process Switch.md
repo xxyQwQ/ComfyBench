@@ -1,9 +1,0 @@
-- `CR Img2Img Process Switch`: The CR Img2Img Process Switch node is designed to dynamically select between two different processing paths based on the input mode, specifically targeting image-to-image transformations. It facilitates the flexible integration of distinct processing pipelines within a single workflow, enhancing the adaptability of image manipulation tasks.
-    - Parameters:
-        - `Input`: Determines the processing path to be taken, choosing between 'txt2img' and 'img2img' modes. This selection influences the subsequent processing steps and their outcomes. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `txt2img`: Specifies the latent representation to be used when the 'txt2img' mode is selected, enabling text-to-image conversion processes. Type should be `LATENT`.
-        - `img2img`: Specifies the latent representation to be used when the 'img2img' mode is selected, enabling image-to-image conversion processes. Type should be `LATENT`.
-    - Outputs:
-        - `LATENT`: The latent representation resulting from the selected processing path, either from text-to-image or image-to-image conversion. Type should be `LATENT`.
-        - `show_help`: Provides a URL to the help documentation for this node, offering additional information and guidance. Type should be `STRING`.

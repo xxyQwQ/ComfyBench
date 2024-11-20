@@ -1,0 +1,8 @@
+- `LLMHTMLTagReader`: The LLMHTMLTagReader node is designed to read and interpret HTML tags from specified files, transforming them into a structured document format. It leverages BeautifulSoup to parse HTML content, focusing on specific tags and attributes to extract relevant information, while also allowing for customization through optional parameters.
+    - Inputs:
+        - `path` (Required): Specifies the file path to the HTML file to be read. This is a crucial parameter as it determines the source of the HTML content to be processed. Type should be `STRING`.
+        - `tag` (Optional): Defines the specific HTML tag to focus on during the parsing process. This allows for targeted extraction of information from the HTML file. Type should be `STRING`.
+        - `ignore_no_id` (Optional): A boolean flag that, when set, instructs the reader to ignore HTML elements without an ID attribute. This can be useful for filtering out unnecessary elements. Type should be `COMBO[BOOLEAN]`.
+        - `extra_info` (Optional): Allows for the inclusion of additional, custom information in the form of a string, which can be used to further customize the parsing behavior. Type should be `STRING`.
+    - Outputs:
+        - `documents`: The structured document format output, which represents the parsed and interpreted HTML content. Type should be `DOCUMENT`.

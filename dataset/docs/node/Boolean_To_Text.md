@@ -1,6 +1,0 @@
-- `Boolean To Text`: This node converts a boolean input into its textual representation, outputting 'True' or 'False' as a string based on the input value. It serves as a simple utility within the WAS Suite for logic operations, facilitating the interpretation or display of boolean values in a human-readable format.
-    - Parameters:
-        - `boolean`: The boolean input that will be converted to its textual representation. This parameter determines whether the output will be 'True' or 'False'. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `string`: The textual representation of the input boolean value, either 'True' or 'False'. Type should be `STRING`.

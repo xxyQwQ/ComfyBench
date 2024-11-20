@@ -1,0 +1,6 @@
+- `Latent Noise Injection`: The Latent Noise Injection node is designed to augment latent representations with stochastic noise. This process can introduce variability and potentially enhance the generative qualities of models by injecting controlled noise into the latent space.
+    - Inputs:
+        - `samples` (Required): The 'samples' parameter represents the latent representations to which noise will be added. Injecting noise into these samples can help in exploring variations in the generated outputs. Type should be `LATENT`.
+        - `noise_std` (Required): The 'noise_std' parameter controls the standard deviation of the noise to be injected, allowing for fine-tuning of the noise intensity for different effects on the latent samples. Type should be `FLOAT`.
+    - Outputs:
+        - `latent`: The output is a modified version of the input latent samples, now augmented with noise according to the specified standard deviation. Type should be `LATENT`.

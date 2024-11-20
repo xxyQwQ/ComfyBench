@@ -1,0 +1,10 @@
+- `Text Concatenate (JPS)`: The Text Concatenate node is designed to merge multiple text inputs into a single string, using a specified delimiter to separate the texts. This functionality is essential for creating concatenated strings from various inputs, allowing for flexible text manipulation and aggregation.
+    - Inputs:
+        - `delimiter` (Required): Specifies the type of delimiter to use between text inputs, such as a space or comma, influencing how the concatenated text is formatted. Type should be `COMBO[STRING]`.
+        - `text1` (Optional): The first text input to be concatenated. Type should be `STRING`.
+        - `text2` (Optional): The second text input to be concatenated, appended to the first input with the specified delimiter in between. Type should be `STRING`.
+        - `text3` (Optional): The third text input to be concatenated, appended to the previous inputs with the specified delimiter in between. Type should be `STRING`.
+        - `text4` (Optional): The fourth text input to be concatenated, appended to the previous inputs with the specified delimiter in between. Type should be `STRING`.
+        - `text5` (Optional): The fifth text input to be concatenated, appended to the previous inputs with the specified delimiter in between. Type should be `STRING`.
+    - Outputs:
+        - `text`: The resulting string after concatenating the given text inputs with the specified delimiter. Type should be `STRING`.

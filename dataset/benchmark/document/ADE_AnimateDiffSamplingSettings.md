@@ -1,0 +1,15 @@
+- `ADE_AnimateDiffSamplingSettings`: This node is designed to configure and manage the sampling settings for the AnimateDiff process, allowing for detailed customization of the animation generation process. It enables users to specify various parameters such as batch offsets, noise types, seed generation methods, and more, to finely tune the animation output according to specific requirements.
+    - Inputs:
+        - `batch_offset` (Required): Specifies the offset for the batch processing, allowing for control over the starting point of animation generation. Type should be `INT`.
+        - `noise_type` (Required): Defines the type of noise to be applied during the sampling process, influencing the visual texture and quality of the generated animation. Type should be `COMBO[STRING]`.
+        - `seed_gen` (Required): Determines the method for generating seeds used in the animation process, impacting the randomness and variation of the output. Type should be `COMBO[STRING]`.
+        - `seed_offset` (Required): Sets the offset for seed generation, providing additional control over the randomness of the animation. Type should be `INT`.
+        - `noise_layers` (Optional): Optional parameter that allows for the specification of custom noise layers, offering further customization of the animation's visual effects. Type should be `NOISE_LAYERS`.
+        - `iteration_opts` (Optional): Provides options for iteration control during the sampling process, enabling adjustments to the animation's progression and detail. Type should be `ITERATION_OPTS`.
+        - `seed_override` (Optional): Allows for a specific seed value to be used, overriding the default or generated seed for precise control over the animation outcome. Type should be `INT`.
+        - `adapt_denoise_steps` (Optional): Enables or disables the adaptation of denoise steps based on specific conditions, affecting the smoothness and quality of the animation. Type should be `BOOLEAN`.
+        - `custom_cfg` (Optional): Permits the inclusion of custom configuration settings for keyframes, enhancing the animation's narrative and visual coherence. Type should be `CUSTOM_CFG`.
+        - `sigma_schedule` (Optional): Specifies a sigma schedule to control the variance of noise throughout the animation, impacting the overall visual dynamics. Type should be `SIGMA_SCHEDULE`.
+        - `image_inject` (Optional): Allows for the injection of specific images into the animation, adding complexity and detail to the visual output. Type should be `IMAGE_INJECT`.
+    - Outputs:
+        - `settings`: Returns the configured sampling settings, encapsulating all specified parameters and adjustments for the animation process. Type should be `SAMPLE_SETTINGS`.

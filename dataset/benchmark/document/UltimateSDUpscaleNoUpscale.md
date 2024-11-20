@@ -1,0 +1,27 @@
+- `UltimateSDUpscaleNoUpscale`: This node is designed to integrate with the Ultimate SD Upscale system, processing images through the Ultimate SD Upscale pipeline with existing configurations and settings. It focuses on preparing images for upscaling, applying specific image enhancements, and conditioning without altering the original image sizes, effectively bypassing the upscaling step.
+    - Inputs:
+        - `upscaled_image` (Required): The input image to be processed, which will not be upscaled but may undergo other processing steps. Type should be `IMAGE`.
+        - `model` (Required): The model used for processing the image, influencing the outcome based on its trained parameters. Type should be `MODEL`.
+        - `positive` (Required): Positive prompts guide the image processing towards desired attributes or themes, influencing the outcome in a positive manner. Type should be `CONDITIONING`.
+        - `negative` (Required): Negative prompts serve to steer the image processing away from certain attributes or themes, thereby shaping the final image by exclusion. Type should be `CONDITIONING`.
+        - `vae` (Required): The variational autoencoder used in the processing pipeline, contributing to the image's transformation. Type should be `VAE`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the processing results. Type should be `INT`.
+        - `steps` (Required): The number of steps to be used in the processing, affecting the depth of image manipulation. Type should be `INT`.
+        - `cfg` (Required): Configuration guidance factor, influencing the strength of conditioning applied during processing. Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the sampling method to be used in the processing, affecting the image's final appearance. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Determines the scheduling algorithm for processing, impacting the progression of image manipulation. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): The degree of denoising applied during processing, affecting the clarity and detail of the final image. Type should be `FLOAT`.
+        - `mode_type` (Required): Defines the mode of operation for certain processing steps, influencing specific aspects of the image enhancement. Type should be `COMBO[STRING]`.
+        - `tile_width` (Required): The width of tiles used in processing, affecting the granularity of the processing. Type should be `INT`.
+        - `tile_height` (Required): The height of tiles used in processing, affecting the granularity of the processing. Type should be `INT`.
+        - `mask_blur` (Required): The amount of blur applied to masks during processing, affecting the smoothness of transitions. Type should be `INT`.
+        - `tile_padding` (Required): Padding added around tiles during processing, affecting the overlap and blending of processed areas. Type should be `INT`.
+        - `seam_fix_mode` (Required): The method used for fixing seams in tiled processing, affecting the uniformity of the final image. Type should be `COMBO[STRING]`.
+        - `seam_fix_denoise` (Required): The degree of denoising applied specifically for seam fixing, affecting the smoothness of seams. Type should be `FLOAT`.
+        - `seam_fix_width` (Required): The width of the area affected by seam fixing, influencing the extent of seam correction. Type should be `INT`.
+        - `seam_fix_mask_blur` (Required): The amount of blur applied to the seam fix mask, affecting the smoothness of seam corrections. Type should be `INT`.
+        - `seam_fix_padding` (Required): Padding added around the seam fix area, affecting the blending of corrected seams. Type should be `INT`.
+        - `force_uniform_tiles` (Required): A flag indicating whether to force uniform tile sizes during processing, affecting the consistency of processing across the image. Type should be `BOOLEAN`.
+        - `tiled_decode` (Required): Indicates whether decoding is performed in a tiled manner, affecting the method of image reconstruction. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: Returns the processed image, which has undergone enhancements and conditioning as per the specified inputs but retains its original size. Type should be `IMAGE`.

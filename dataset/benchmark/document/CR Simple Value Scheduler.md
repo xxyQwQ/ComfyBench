@@ -1,0 +1,8 @@
+- `CR Simple Value Scheduler`: This node is designed to manage and apply simple value-based scheduling for animations. It interprets a given schedule and the current frame to output appropriate integer and floating-point values, facilitating dynamic adjustments throughout the animation sequence.
+    - Inputs:
+        - `schedule` (Required): The schedule string defines keyframes and their corresponding values for the animation, serving as the blueprint for value transitions across frames. Type should be `STRING`.
+        - `current_frame` (Required): Specifies the current frame in the animation sequence, determining which value from the schedule should be applied. Type should be `INT`.
+    - Outputs:
+        - `INT`: The integer value corresponding to the current frame's schedule, rounded down from the floating-point representation. Type should be `INT`.
+        - `FLOAT`: The floating-point value directly derived from the schedule for the current frame. Type should be `FLOAT`.
+        - `show_help`: A URL providing additional help and documentation on using the CR Simple Value Scheduler. Type should be `STRING`.

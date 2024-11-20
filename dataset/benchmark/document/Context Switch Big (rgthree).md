@@ -1,0 +1,27 @@
+- `Context Switch Big (rgthree)`: The Context Switch Big node is designed to manage multiple context inputs, selecting the first non-empty context to output. This functionality allows for dynamic context switching within workflows, ensuring that a valid context is always passed forward.
+    - Inputs:
+        - `ctx_i` (Optional): unknown Type should be `RGTHREE_CONTEXT`.
+    - Outputs:
+        - `CONTEXT`: unknown Type should be `RGTHREE_CONTEXT`.
+        - `MODEL`: unknown Type should be `MODEL`.
+        - `CLIP`: unknown Type should be `CLIP`.
+        - `VAE`: unknown Type should be `VAE`.
+        - `POSITIVE`: unknown Type should be `CONDITIONING`.
+        - `NEGATIVE`: unknown Type should be `CONDITIONING`.
+        - `LATENT`: unknown Type should be `LATENT`.
+        - `IMAGE`: unknown Type should be `IMAGE`.
+        - `SEED`: unknown Type should be `INT`.
+        - `STEPS`: unknown Type should be `INT`.
+        - `STEP_REFINER`: unknown Type should be `INT`.
+        - `CFG`: unknown Type should be `FLOAT`.
+        - `CKPT_NAME`: unknown Type should be `COMBO[STRING]`.
+        - `SAMPLER`: unknown Type should be `COMBO[STRING]`.
+        - `SCHEDULER`: unknown Type should be `COMBO[STRING]`.
+        - `CLIP_WIDTH`: unknown Type should be `INT`.
+        - `CLIP_HEIGHT`: unknown Type should be `INT`.
+        - `TEXT_POS_G`: unknown Type should be `STRING`.
+        - `TEXT_POS_L`: unknown Type should be `STRING`.
+        - `TEXT_NEG_G`: unknown Type should be `STRING`.
+        - `TEXT_NEG_L`: unknown Type should be `STRING`.
+        - `MASK`: unknown Type should be `MASK`.
+        - `CONTROL_NET`: unknown Type should be `CONTROL_NET`.

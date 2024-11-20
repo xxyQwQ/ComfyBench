@@ -1,0 +1,7 @@
+- `LayerFilter_ MotionBlur`: The MotionBlur node applies a directional blur effect to images, simulating the appearance of movement or speed. It allows for the adjustment of the blur's angle and intensity, enabling the creation of dynamic visual effects that convey motion.
+    - Inputs:
+        - `image` (Required): The input image to which the motion blur effect will be applied. This parameter is crucial for defining the visual content that will undergo transformation. Type should be `IMAGE`.
+        - `angle` (Required): Specifies the angle of the motion blur, allowing for the simulation of movement in various directions. This parameter is key to customizing the directionality of the perceived motion. Type should be `INT`.
+        - `blur` (Required): Determines the intensity of the motion blur effect, enabling control over how pronounced the motion appears in the image. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image with the motion blur effect applied, showcasing the simulated movement. Type should be `IMAGE`.

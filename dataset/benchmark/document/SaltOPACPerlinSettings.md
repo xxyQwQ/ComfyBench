@@ -1,0 +1,36 @@
+- `SaltOPACPerlinSettings`: This node is designed for configuring Perlin noise parameters specifically for the OPAC visualization node. It allows for the dynamic adjustment of Perlin noise settings to influence visual effects based on audio or other inputs, enhancing the visual representation of data with more natural, organic variations.
+    - Inputs:
+        - `zoom_octaves` (Required): Specifies the number of octaves for zoom-related Perlin noise, affecting the level of detail in the zoom effect. Type should be `INT`.
+        - `zoom_persistence` (Required): Determines the persistence of zoom-related Perlin noise, influencing the smoothness of the zoom effect in the visualization. Type should be `FLOAT`.
+        - `zoom_lacunarity` (Required): Controls the lacunarity of zoom-related Perlin noise, affecting the granularity of the zoom effect. Type should be `FLOAT`.
+        - `zoom_repeat` (Required): Specifies the repeat interval for zoom-related Perlin noise, defining how often the noise pattern repeats. Type should be `INT`.
+        - `angle_octaves` (Required): Specifies the number of octaves for angle-related Perlin noise, affecting the level of detail in the angle effect. Type should be `INT`.
+        - `angle_persistence` (Required): Determines the persistence of angle-related Perlin noise, influencing the smoothness of the angle effect. Type should be `FLOAT`.
+        - `angle_lacunarity` (Required): Controls the lacunarity of angle-related Perlin noise, affecting the granularity of the angle effect. Type should be `FLOAT`.
+        - `angle_repeat` (Required): Specifies the repeat interval for angle-related Perlin noise, defining how often the noise pattern repeats. Type should be `INT`.
+        - `trx_octaves` (Required): Specifies the number of octaves for translation-related Perlin noise along the x-axis, affecting the level of detail in the translation effect. Type should be `INT`.
+        - `trx_persistence` (Required): Determines the persistence of translation-related Perlin noise along the x-axis, influencing the smoothness of the translation effect. Type should be `FLOAT`.
+        - `trx_lacunarity` (Required): Controls the lacunarity of translation-related Perlin noise along the x-axis, affecting the granularity of the translation effect. Type should be `FLOAT`.
+        - `trx_repeat` (Required): Specifies the repeat interval for translation-related Perlin noise along the x-axis, defining how often the noise pattern repeats. Type should be `INT`.
+        - `try_octaves` (Required): Specifies the number of octaves for translation-related Perlin noise along the y-axis, affecting the level of detail in the translation effect. Type should be `INT`.
+        - `try_persistence` (Required): Determines the persistence of translation-related Perlin noise along the y-axis, influencing the smoothness of the translation effect. Type should be `FLOAT`.
+        - `try_lacunarity` (Required): Controls the lacunarity of translation-related Perlin noise along the y-axis, affecting the granularity of the translation effect. Type should be `FLOAT`.
+        - `try_repeat` (Required): Specifies the repeat interval for translation-related Perlin noise along the y-axis, defining how often the noise pattern repeats. Type should be `INT`.
+        - `trz_octaves` (Required): Specifies the number of octaves for translation-related Perlin noise along the z-axis, affecting the level of detail in the translation effect. Type should be `INT`.
+        - `trz_persistence` (Required): Determines the persistence of translation-related Perlin noise along the z-axis, influencing the smoothness of the translation effect. Type should be `FLOAT`.
+        - `trz_lacunarity` (Required): Controls the lacunarity of translation-related Perlin noise along the z-axis, affecting the granularity of the translation effect. Type should be `FLOAT`.
+        - `trz_repeat` (Required): Specifies the repeat interval for translation-related Perlin noise along the z-axis, defining how often the noise pattern repeats. Type should be `INT`.
+        - `rotx_octaves` (Required): Specifies the number of octaves for rotation-related Perlin noise around the x-axis, affecting the level of detail in the rotation effect. Type should be `INT`.
+        - `rotx_persistence` (Required): Determines the persistence of rotation-related Perlin noise around the x-axis, influencing the smoothness of the rotation effect. Type should be `FLOAT`.
+        - `rotx_lacunarity` (Required): Controls the lacunarity of rotation-related Perlin noise around the x-axis, affecting the granularity of the rotation effect. Type should be `FLOAT`.
+        - `rotx_repeat` (Required): Specifies the repeat interval for rotation-related Perlin noise around the x-axis, defining how often the noise pattern repeats. Type should be `INT`.
+        - `roty_octaves` (Required): Specifies the number of octaves for rotation-related Perlin noise around the y-axis, affecting the level of detail in the rotation effect. Type should be `INT`.
+        - `roty_persistence` (Required): Determines the persistence of rotation-related Perlin noise around the y-axis, influencing the smoothness of the rotation effect. Type should be `FLOAT`.
+        - `roty_lacunarity` (Required): Controls the lacunarity of rotation-related Perlin noise around the y-axis, affecting the granularity of the rotation effect. Type should be `FLOAT`.
+        - `roty_repeat` (Required): Specifies the repeat interval for rotation-related Perlin noise around the y-axis, defining how often the noise pattern repeats. Type should be `INT`.
+        - `rotz_octaves` (Required): Specifies the number of octaves for rotation-related Perlin noise around the z-axis, affecting the level of detail in the rotation effect. Type should be `INT`.
+        - `rotz_persistence` (Required): Determines the persistence of rotation-related Perlin noise around the z-axis, influencing the smoothness of the rotation effect. Type should be `FLOAT`.
+        - `rotz_lacunarity` (Required): Controls the lacunarity of rotation-related Perlin noise around the z-axis, affecting the granularity of the rotation effect. Type should be `FLOAT`.
+        - `rotz_repeat` (Required): Specifies the repeat interval for rotation-related Perlin noise around the z-axis, defining how often the noise pattern repeats. Type should be `INT`.
+    - Outputs:
+        - `opac_perlin_settings`: The modified schedule list after applying Perlin noise and optional easing curves, ready for use in OPAC visualization. Type should be `DICT`.

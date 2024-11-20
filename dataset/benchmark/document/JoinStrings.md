@@ -1,0 +1,7 @@
+- `JoinStrings`: The JoinStrings node is designed to concatenate two input strings using a specified delimiter, producing a single output string. This functionality is essential for string manipulation tasks where combining pieces of text in a structured manner is required.
+    - Inputs:
+        - `string1` (Required): The first string to be joined. It serves as the starting point of the concatenated result. Type should be `STRING`.
+        - `string2` (Required): The second string to be joined. It is appended to the first string, separated by the specified delimiter. Type should be `STRING`.
+        - `delimiter` (Required): A string used to separate the two input strings in the concatenated result. It defines the boundary between the joined strings. Type should be `STRING`.
+    - Outputs:
+        - `string`: The result of concatenating string1 and string2 with the delimiter in between. Type should be `STRING`.

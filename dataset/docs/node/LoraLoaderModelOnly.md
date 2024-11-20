@@ -1,8 +1,0 @@
-- `LoraLoaderModelOnly`: This node specializes in loading a LoRA model without requiring a CLIP model, focusing on enhancing or modifying a given model based on LoRA parameters. It allows for the dynamic adjustment of the model's strength through LoRA parameters, facilitating fine-tuned control over the model's behavior.
-    - Parameters:
-        - `lora_name`: The name of the LoRA file to be loaded. This specifies which LoRA adjustments to apply to the model. Type should be `COMBO[STRING]`.
-        - `strength_model`: Determines the intensity of the LoRA adjustments applied to the model. A higher value indicates stronger modifications. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The model to which LoRA adjustments will be applied. It serves as the base for modifications. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The modified model with LoRA adjustments applied, reflecting changes in model behavior or capabilities. Type should be `MODEL`.

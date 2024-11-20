@@ -1,0 +1,21 @@
+- `Mikey Sampler Base Only Advanced`: The MikeySamplerBaseOnlyAdvanced node is designed for advanced sampling operations, focusing on providing a base-only approach to sampling tasks. It aims to offer enhanced control and flexibility in generating samples, catering to specific needs without the complexity of additional layers or processes.
+    - Inputs:
+        - `base_model` (Required): Specifies the base model used for sampling, serving as the foundation for generating new samples. Type should be `MODEL`.
+        - `positive_cond_base` (Required): Defines the positive conditioning to guide the sampling process towards desired attributes or content. Type should be `CONDITIONING`.
+        - `negative_cond_base` (Required): Specifies the negative conditioning to avoid certain attributes or content in the generated samples. Type should be `CONDITIONING`.
+        - `samples` (Required): Represents the initial set of samples or latent space from which the sampling process begins. Type should be `LATENT`.
+        - `vae` (Required): The variational autoencoder used in conjunction with the base model to refine and generate samples. Type should be `VAE`.
+        - `add_noise` (Required): Determines whether noise should be added to the sampling process, enhancing diversity or realism in the generated samples. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Controls the level of denoising applied to the samples, affecting the clarity and quality of the output. Type should be `FLOAT`.
+        - `steps` (Required): The number of steps to perform in the sampling process, affecting the detail and quality of the generated samples. Type should be `INT`.
+        - `smooth_step` (Required): Adjusts the smoothness of the sampling steps, potentially enhancing the transition or variation between samples. Type should be `INT`.
+        - `cfg_i` (Required): unknown Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the sampler algorithm used, influencing the diversity and quality of the generated samples. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Determines the scheduling algorithm for sampling, affecting the progression and variation of samples. Type should be `COMBO[STRING]`.
+        - `upscale_model` (Required): The model used for upscaling the generated samples, enhancing their resolution or detail. Type should be `COMBO[STRING]`.
+        - `seed` (Required): A seed value for the random number generator, ensuring reproducibility of the sampling process. Type should be `INT`.
+        - `upscale_by` (Required): Defines the factor by which the samples are upscaled, affecting their final size and detail. Type should be `FLOAT`.
+        - `hires_denoise` (Required): Controls the level of denoising applied to high-resolution samples, affecting their clarity and quality. Type should be `FLOAT`.
+        - `hires_steps` (Required): unknown Type should be `INT`.
+    - Outputs:
+        - `latent`: Represents the final generated samples after the sampling process, in a latent form. Type should be `LATENT`.

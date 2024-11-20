@@ -1,0 +1,5 @@
+- `IsMaskEmpty`: The IsMaskEmptyNode node is designed to determine if a given mask is entirely empty, meaning it contains no marked areas. It provides a simple yet essential functionality for mask analysis within the context of segmentation tasks, enabling the identification of masks that lack any significant content.
+    - Inputs:
+        - `mask` (Required): The 'mask' parameter represents the input mask to be analyzed. It is crucial for determining whether the mask is empty or contains any marked areas, directly influencing the node's output. Type should be `MASK`.
+    - Outputs:
+        - `boolean_number`: The output is a boolean value represented as a number (0 for false, meaning the mask is not empty, and 1 for true, indicating the mask is empty), indicating whether the input mask is entirely devoid of marked areas. Type should be `NUMBER`.

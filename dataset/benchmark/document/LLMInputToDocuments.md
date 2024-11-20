@@ -1,0 +1,10 @@
+- `LLMInputToDocuments`: This node is designed to convert various types of input data into a standardized document format, facilitating their processing and analysis in language models. It supports a wide range of input types, including dictionaries, lists, and primitive data types like strings, integers, and floats, and transforms them into a structured document format with optional metadata.
+    - Inputs:
+        - `input_data` (Required): The primary input for the node, accepting a wide variety of data types including dictionaries, lists, strings, integers, and floats. This flexibility allows for the processing of diverse data forms into a standardized document format. Type should be `*`.
+        - `extra_info` (Optional): Optional metadata in JSON string format that can be attached to the generated documents, providing additional context or information. Type should be `STRING`.
+        - `concat_input` (Optional): A boolean flag indicating whether multiple input items should be concatenated into a single document. Type should be `BOOLEAN`.
+        - `resize_images` (Optional): A boolean flag that determines whether images within the input data should be resized according to specified maximum dimensions. Type should be `BOOLEAN`.
+        - `max_image_width` (Optional): The maximum width to which images in the input data can be resized, enhancing uniformity and processing efficiency. Type should be `INT`.
+        - `max_image_height` (Optional): The maximum height to which images in the input data can be resized, ensuring consistency across processed documents. Type should be `INT`.
+    - Outputs:
+        - `documents`: The output of the node, consisting of standardized documents formatted from the input data, potentially including resized images and attached metadata. Type should be `DOCUMENT`.

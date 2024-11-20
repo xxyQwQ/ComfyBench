@@ -1,8 +1,0 @@
-- `Mask Morphology`: The Mask Morphology node specializes in altering the shape of masks through morphological operations such as dilation, erosion, opening, and closing. These operations enable the refinement or modification of mask boundaries, facilitating more precise control over mask shapes for various image processing tasks.
-    - Parameters:
-        - `distance`: The 'distance' parameter specifies the extent of the morphological operation. It affects the size of the transformation applied, influencing how much the mask expands or contracts during processing. Type should be `INT`.
-        - `op`: The 'op' parameter selects the specific morphological operation to apply to the mask. Options include 'dilate', 'erode', 'open', and 'close', each altering the mask in distinct ways to achieve desired shape modifications. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The 'image' parameter represents the mask to be processed. It is the primary input for morphological transformations, determining the initial shape and structure that will undergo modification. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a modified mask, resulting from the applied morphological operation. It reflects changes in the mask's shape and boundaries, tailored by the specified operation and parameters. Type should be `IMAGE`.

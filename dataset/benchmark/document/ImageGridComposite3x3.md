@@ -1,0 +1,13 @@
+- `ImageGridComposite3x3`: This node is designed to concatenate nine input images into a single 3x3 grid image. It's particularly useful for creating composite images or visual summaries where multiple images need to be displayed together in a structured format.
+    - Inputs:
+        - `image1` (Required): The first image to be placed in the top-left corner of the 3x3 grid. Type should be `IMAGE`.
+        - `image2` (Required): The second image to be placed in the top row, middle position of the 3x3 grid. Type should be `IMAGE`.
+        - `image3` (Required): The third image to be placed in the top row, right position of the 3x3 grid. Type should be `IMAGE`.
+        - `image4` (Required): The fourth image to be placed in the middle row, left position of the 3x3 grid. Type should be `IMAGE`.
+        - `image5` (Required): The central image of the 3x3 grid. Type should be `IMAGE`.
+        - `image6` (Required): The sixth image to be placed in the middle row, right position of the 3x3 grid. Type should be `IMAGE`.
+        - `image7` (Required): The seventh image to be placed in the bottom row, left position of the 3x3 grid. Type should be `IMAGE`.
+        - `image8` (Required): The eighth image to be placed in the bottom row, middle position of the 3x3 grid. Type should be `IMAGE`.
+        - `image9` (Required): The ninth image to be placed in the bottom row, right position of the 3x3 grid. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The output is a single image that combines the nine input images into a 3x3 grid format. Type should be `IMAGE`.

@@ -1,0 +1,5 @@
+- `easy positive`: The 'easy positive' node is designed to process and enhance positive textual inputs for generative tasks, utilizing advanced encoding techniques and conditional embeddings to optimize the generation process. It integrates seamlessly with language models and image processing pipelines, emphasizing the positive aspects of inputs to influence the output generation towards more favorable outcomes.
+    - Inputs:
+        - `positive` (Required): Represents the positive textual input that the node processes. It is crucial for defining the desired positive attributes or themes that should be emphasized in the output generation, directly influencing the nature and direction of the generative task. Type should be `STRING`.
+    - Outputs:
+        - `positive`: The enhanced version of the input text, optimized for positive influence on the generative process. This output is the result of advanced encoding and processing, ready to be used in further generative tasks. Type should be `STRING`.

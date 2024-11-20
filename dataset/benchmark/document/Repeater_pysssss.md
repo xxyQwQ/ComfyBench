@@ -1,0 +1,8 @@
+- `Repeater_pysssss`: The Repeater node is designed to duplicate a given input source a specified number of times, with the ability to output either as a single node or multiple nodes based on the mode selected. It abstracts the functionality of repeating data, facilitating the creation of multiple instances of data or nodes within a workflow.
+    - Inputs:
+        - `source` (Required): The source input represents the data to be repeated. Its role is crucial as it determines the base content that will be duplicated according to the specified repeat count. Type should be `*`.
+        - `repeats` (Required): Specifies the number of times the source input should be repeated. This parameter directly influences the output by determining the quantity of the duplicated data. Type should be `INT`.
+        - `output` (Required): Determines whether the repeated data should be output as a single node or multiple nodes, affecting the structure of the output. Type should be `COMBO[STRING]`.
+        - `node_mode` (Required): Controls whether the repeated nodes are reused or newly created, impacting the way nodes are added to the graph when serialized. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `*`: The output is a list of repeated data, which can vary in structure based on the output and node_mode parameters. Type should be `*`.

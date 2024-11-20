@@ -1,6 +1,0 @@
-- `DF_Floor`: The DF_Floor node is designed to round down the input floating-point number to its nearest lower integer. This operation is commonly known as 'flooring' a number.
-    - Parameters:
-        - `Value`: The 'Value' parameter represents the floating-point number that is to be rounded down. It is crucial for determining the output of the node, as it directly influences the floor operation. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `int`: The output is the nearest lower integer value of the input floating-point number, achieved through the floor operation. Type should be `INT`.

@@ -1,0 +1,8 @@
+- `ReferenceOnlySimple`: This node is designed to manipulate and extend model references for batch processing. It clones a given model, applies a custom attention mechanism to blend reference samples with generated latent samples, and adjusts noise masks for the output. The node's functionality is crucial for scenarios requiring the integration of reference data into the model's processing pipeline, enhancing the model's ability to handle diverse batch inputs effectively.
+    - Inputs:
+        - `model` (Required): The model to be cloned and modified. This parameter is essential as it serves as the base for the subsequent operations, including the application of a custom attention mechanism. Type should be `MODEL`.
+        - `reference` (Required): A dictionary containing reference samples. These samples are used alongside generated latent samples to create a blended output, playing a key role in the node's batch processing capabilities. Type should be `LATENT`.
+        - `batch_size` (Required): Specifies the number of samples to generate in the batch. This parameter directly influences the size of the generated latent samples and the overall batch processing. Type should be `INT`.
+    - Outputs:
+        - `model`: The cloned and modified model with a custom attention mechanism applied. Type should be `MODEL`.
+        - `latent`: A dictionary containing the blended output of reference and generated latent samples, along with adjusted noise masks. Type should be `LATENT`.

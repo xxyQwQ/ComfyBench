@@ -1,0 +1,8 @@
+- `GetMaskSizeAndCount`: This node is designed to analyze the dimensions and batch size of a given mask, returning its width, height, and count while passing the mask through unchanged. It serves as a utility for understanding and processing mask dimensions within a workflow.
+    - Inputs:
+        - `mask` (Required): The mask input is crucial for determining the dimensions and batch size of the mask. It directly influences the node's output by providing the necessary data for calculation. Type should be `MASK`.
+    - Outputs:
+        - `mask`: The original mask passed through unchanged, facilitating further processing or analysis. Type should be `MASK`.
+        - `width`: The width of the mask, providing insight into its dimensions. Type should be `INT`.
+        - `height`: The height of the mask, offering information on its size. Type should be `INT`.
+        - `count`: The batch size of the mask, indicating how many masks are processed. Type should be `INT`.

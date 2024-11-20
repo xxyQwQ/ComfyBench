@@ -1,0 +1,11 @@
+- `LayerUtility_ GradientImage V2`: This node is designed to generate gradient images with enhanced features and options compared to its predecessor. It focuses on creating customizable gradient backgrounds or layers by specifying dimensions, colors, and gradient direction, leveraging advanced image processing techniques to achieve more dynamic and visually appealing results.
+    - Inputs:
+        - `size` (Required): Specifies the predefined or custom size for the gradient image, allowing for standard or user-defined dimensions. Type should be `COMBO[STRING]`.
+        - `custom_width` (Required): Specifies the width of the gradient image when a custom size is selected, affecting the horizontal dimension of the output image. Type should be `INT`.
+        - `custom_height` (Required): Specifies the height of the gradient image when a custom size is selected, affecting the vertical dimension of the output image. Type should be `INT`.
+        - `angle` (Required): Determines the angle of the gradient, influencing the direction and spread of the color transition in the generated image. Type should be `INT`.
+        - `start_color` (Required): Defines the starting color of the gradient, marking the beginning of the color transition. Type should be `STRING`.
+        - `end_color` (Required): Defines the ending color of the gradient, marking the end of the color transition. Type should be `STRING`.
+        - `size_as` (Optional): Optionally specifies an image tensor to use its dimensions as the size for the gradient image, overriding 'size', 'custom_width', and 'custom_height' if provided. Type should be `*`.
+    - Outputs:
+        - `image`: The generated gradient image, showcasing a smooth transition between the specified start and end colors. Type should be `IMAGE`.

@@ -1,9 +1,0 @@
-- `Constant Mask`: The Constant Mask node is designed to create a uniform mask with a specified constant value across all its elements. It can generate masks of explicit dimensions or replicate the dimensions of a provided image, offering flexibility in mask creation for various image processing tasks.
-    - Parameters:
-        - `value`: Specifies the constant value to fill the mask with, allowing for control over the mask's intensity or transparency. Type should be `FLOAT`.
-        - `explicit_height`: Defines the explicit height of the generated mask, used when not replicating the size of an existing image. Type should be `INT`.
-        - `explicit_width`: Defines the explicit width of the generated mask, used when not replicating the size of an existing image. Type should be `INT`.
-    - Inputs:
-        - `copy_image_size`: An optional image parameter whose dimensions are used to determine the size of the generated mask, overriding explicit dimensions if provided. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a mask filled with the specified constant value, potentially matching the dimensions of an input image if provided. Type should be `IMAGE`.

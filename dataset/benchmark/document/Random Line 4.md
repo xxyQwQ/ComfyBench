@@ -1,0 +1,10 @@
+- `Random Line 4`: The Random Line 4 node is designed to select a random line from each of up to four provided text inputs based on a given seed, concatenate these lines with a specified delimiter, and return the concatenated string. This node enables the generation of unique and varied text outputs by randomly sampling from the provided inputs.
+    - Inputs:
+        - `text1` (Required): A multiline text input from which a random line will be selected. It contributes to the node's output by potentially being one of the sources for a random line. Type should be `STRING`.
+        - `text2` (Required): A multiline text input, serving as another potential source for a random line selection. Type should be `STRING`.
+        - `text3` (Required): Serves as a potential source for the random line selection, similar to the other text inputs. Type should be `STRING`.
+        - `text4` (Required): Another multiline text input that can contribute a random line to the node's output. Type should be `STRING`.
+        - `seed` (Required): The seed for the random number generator, ensuring reproducibility of the output across runs. Type should be `INT`.
+        - `delimiter` (Required): The delimiter used to concatenate the selected random lines from the text inputs. Type should be `STRING`.
+    - Outputs:
+        - `string`: The concatenated string formed by joining selected random lines from the provided text inputs with the specified delimiter. Type should be `STRING`.

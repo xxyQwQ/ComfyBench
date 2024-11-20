@@ -1,0 +1,7 @@
+- `SharpenFilterLatent`: The SharpenFilterLatent node applies a sharpening filter to latent representations of images, enhancing their details by adjusting the contrast of edges within the latent space. This process involves blurring the latent image and then combining it with the original to accentuate edges, controlled by a specified factor and filter size.
+    - Inputs:
+        - `latents` (Required): The latent representation of an image to be sharpened. This input is crucial for determining the base content that will undergo the sharpening process. Type should be `LATENT`.
+        - `filter_size` (Required): Specifies the size of the filter used for blurring the latent image before sharpening. A larger size leads to a more pronounced blurring effect, which can affect the sharpness intensity. Type should be `INT`.
+        - `factor` (Required): Controls the intensity of the sharpening effect applied to the latent image. A higher factor increases the contrast between edges and non-edges, making the image appear sharper. Type should be `FLOAT`.
+    - Outputs:
+        - `latent`: The sharpened latent representation of the image, with enhanced edge details and contrast. Type should be `LATENT`.

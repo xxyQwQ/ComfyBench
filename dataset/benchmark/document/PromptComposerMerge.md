@@ -1,0 +1,6 @@
+- `PromptComposerMerge`: The PromptComposerMerge node is designed to combine two text inputs into a single, concatenated output. This functionality is essential for merging distinct pieces of text to create a cohesive prompt, facilitating the generation of more complex and nuanced AI-generated content.
+    - Inputs:
+        - `text_a` (Required): The first text input to be merged. It plays a crucial role in forming the beginning part of the merged output. Type should be `STRING`.
+        - `text_b` (Required): The second text input to be merged. It is concatenated to the first input, forming the latter part of the merged output. Type should be `STRING`.
+    - Outputs:
+        - `text_out`: The concatenated result of the two input texts, providing a merged text output for further processing or use. Type should be `STRING`.

@@ -1,0 +1,14 @@
+- `InstantID Source Prepare Settings (JPS)`: This node is designed to prepare the settings for source image processing in the context of InstantID generation, focusing on aspects such as resizing, cropping, and flipping the source image to meet specific requirements for further processing steps.
+    - Inputs:
+        - `resize_to` (Required): Determines the resizing strategy for the source image, affecting how it will be scaled to fit the desired dimensions. Type should be `COMBO[STRING]`.
+        - `offset_width` (Required): Specifies the horizontal offset to apply during image processing, adjusting the image's position. Type should be `INT`.
+        - `offset_height` (Required): Specifies the vertical offset to apply during image processing, adjusting the image's position. Type should be `INT`.
+        - `crop_left` (Required): Defines the amount to crop from the left side of the image, tailoring its dimensions. Type should be `INT`.
+        - `crop_right` (Required): Defines the amount to crop from the right side of the image, tailoring its dimensions. Type should be `INT`.
+        - `crop_top` (Required): Defines the amount to crop from the top of the image, tailoring its dimensions. Type should be `INT`.
+        - `crop_bottom` (Required): Defines the amount to crop from the bottom of the image, tailoring its dimensions. Type should be `INT`.
+        - `interpolation` (Required): Specifies the interpolation method to be used for resizing the image, affecting image quality. Type should be `COMBO[STRING]`.
+        - `sharpening` (Required): Determines the level of sharpening to be applied to the image, enhancing its details. Type should be `FLOAT`.
+        - `flip` (Required): Indicates whether the image should be flipped horizontally or vertically, altering its orientation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `imageprepare_settings`: Encapsulates the configured settings for preparing the source image, including resizing, cropping, and flipping parameters. Type should be `BASIC_PIPE`.

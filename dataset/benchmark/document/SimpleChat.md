@@ -1,0 +1,13 @@
+- `SimpleChat`: SimpleChat facilitates one-on-one chat simulations between two conversable agents, allowing for the initiation of dialogues, the application of summary methods to chat histories, and the option to clear or maintain chat history for subsequent interactions. It abstracts the complexities of chat initiation and management, providing a straightforward interface for simulating realistic chat interactions.
+    - Inputs:
+        - `initiator` (Required): Represents the initiating conversable agent in the chat, setting the stage for the dialogue's commencement. Type should be `AGENT`.
+        - `recipient` (Required): Denotes the recipient conversable agent, who responds to the initiator's messages, completing the two-way communication setup. Type should be `AGENT`.
+        - `summary_method` (Required): Specifies the method used to summarize the chat history, impacting the way the conversation's essence is captured and presented. Type should be `COMBO[STRING]`.
+        - `clear_history` (Required): A boolean flag indicating whether to clear the chat history before starting a new chat session, affecting the continuity of conversations. Type should be `BOOLEAN`.
+        - `init_message` (Optional): The initial message to start the chat with, setting the tone and context for the ensuing dialogue. Type should be `STRING`.
+        - `max_turns` (Optional): Limits the number of turns the chat can take, controlling the conversation's length and flow. Type should be `INT`.
+    - Outputs:
+        - `chat_history`: The compiled history of messages exchanged during the chat, presented in a readable format. Type should be `STRING`.
+        - `summary`: A concise summary of the chat, reflecting the conversation's key points and outcomes. Type should be `STRING`.
+        - `initiator`: Returns the initiating agent after the chat, potentially with updated state or information. Type should be `AGENT`.
+        - `recipient`: Returns the recipient agent after the chat, potentially with updated state or information. Type should be `AGENT`.

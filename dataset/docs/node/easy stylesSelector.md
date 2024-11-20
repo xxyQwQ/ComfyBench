@@ -1,9 +1,0 @@
-- `easy stylesSelector`: The `easy stylesSelector` node is designed to facilitate the selection and application of various styles to prompts within the ComfyUI framework. It allows users to dynamically choose from a predefined set of styles, applying them to enhance or modify the prompt's appearance or thematic direction based on the selected options.
-    - Parameters:
-        - `styles`: Specifies the style or styles to be applied. This can include a single style or a combination of styles, influencing the overall aesthetic or thematic direction of the prompt. Type should be `COMBO[STRING]`.
-        - `positive`: The positive prompt text to which styles will be applied, enhancing its thematic or aesthetic appeal. Type should be `STRING`.
-        - `negative`: The negative prompt text to which styles can be applied, potentially altering its thematic or aesthetic direction. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `positive`: The enhanced positive prompt text after style application. Type should be `STRING`.
-        - `negative`: The modified negative prompt text following style application. Type should be `STRING`.

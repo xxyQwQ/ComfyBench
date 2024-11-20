@@ -1,7 +1,0 @@
-- `Pipe to_edit any [Crystools]`: The 'Pipe to/edit any' node is designed to facilitate the modification or updating of a sequence of any data types. It allows for the flexible editing of inputs by replacing or retaining original values, making it a versatile tool for data manipulation and flow control within pipelines.
-    - Parameters:
-    - Inputs:
-        - `CPipeAny`: Represents the original sequence of data to be potentially modified. It serves as the baseline for any edits or updates applied through the node. Type should be `CPipeAny`.
-        - `any_i`: An optional parameter that, if provided, replaces the corresponding element of the original data sequence. The index 'i' can range from 1 to 6, allowing for targeted modifications to the sequence. Type should be `*`.
-    - Outputs:
-        - `cpipeany`: unknown Type should be `CPipeAny`.

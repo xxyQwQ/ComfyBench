@@ -1,0 +1,6 @@
+- `LayerUtility_ ImageCombineAlpha`: The ImageCombineAlpha node is designed to combine RGB images with masks to produce images with an alpha channel, effectively integrating transparency information from the mask into the RGB image. This process allows for the creation of RGBA images where the transparency level is controlled by the mask, enabling more complex image compositing tasks.
+    - Inputs:
+        - `RGB_image` (Required): The RGB_image parameter represents the input RGB images that are to be combined with masks to generate RGBA images. This parameter is crucial for defining the visual content of the output images. Type should be `IMAGE`.
+        - `mask` (Required): The mask parameter represents the input masks that define the transparency levels for the corresponding RGB images. These masks are essential for integrating transparency into the RGB images to create RGBA outputs. Type should be `MASK`.
+    - Outputs:
+        - `RGBA_image`: The RGBA_image output represents the resulting images with an alpha channel added, combining the input RGB images with the transparency information from the masks. Type should be `IMAGE`.

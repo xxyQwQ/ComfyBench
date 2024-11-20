@@ -1,0 +1,18 @@
+- `KSamplerPipe __Inspire`: The KSamplerPipe //Inspire node is designed to facilitate the sampling process within the Inspire Pack framework, leveraging advanced sampling techniques to generate or manipulate latent representations of data. This node acts as a conduit for integrating various sampling strategies, enhancing the flexibility and efficiency of generating new, inspired content or variations thereof.
+    - Inputs:
+        - `basic_pipe` (Required): Represents the core components required for the sampling process, including models and configurations, crucial for generating or manipulating latent representations. Type should be `BASIC_PIPE`.
+        - `seed` (Required): A seed value to ensure reproducibility of the sampling process, allowing for consistent generation of content across different runs. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps to be taken in the sampling process, affecting the detail and quality of the generated content. Type should be `INT`.
+        - `cfg` (Required): Configuration settings for the sampling process, dictating how the sampler operates and influences the generation or manipulation of content. Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the particular sampling strategy to be used, enabling customization of the sampling process based on specific requirements or preferences. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): A scheduler to control the sampling process, providing a mechanism to adjust sampling parameters dynamically over time. Type should be `COMBO[STRING]`.
+        - `latent_image` (Required): The initial latent representation to be used as a starting point for the sampling process, which can be manipulated or enhanced through sampling. Type should be `LATENT`.
+        - `denoise` (Required): A parameter to control the level of denoising applied during the sampling process, affecting the clarity and quality of the generated content. Type should be `FLOAT`.
+        - `noise_mode` (Required): Determines how noise is applied during the sampling process, influencing the variation and uniqueness of the generated content. Type should be `COMBO[STRING]`.
+        - `batch_seed_mode` (Required): Controls how seeds are managed across batches in the sampling process, affecting the diversity and reproducibility of generated content. Type should be `COMBO[STRING]`.
+        - `variation_seed` (Required): An optional seed for introducing variations in the sampling process, allowing for the creation of diverse content from a single initial representation. Type should be `INT`.
+        - `variation_strength` (Required): Determines the strength of the variations introduced by the variation_seed, affecting the degree of difference from the original content. Type should be `FLOAT`.
+        - `scheduler_func_opt` (Optional): An optional scheduler function to further customize the sampling process, providing additional control over how sampling parameters are adjusted. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `latent`: The resulting latent representation after the sampling process, which can be used for further generation or manipulation of content. Type should be `LATENT`.
+        - `vae`: The variational autoencoder used in the sampling process, which can be utilized for additional content generation or manipulation tasks. Type should be `VAE`.

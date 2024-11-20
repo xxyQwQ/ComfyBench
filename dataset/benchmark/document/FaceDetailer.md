@@ -1,0 +1,46 @@
+- `FaceDetailer`: The FaceDetailer node is designed to enhance the details of faces in images, utilizing a combination of models and techniques to refine facial features and improve image quality. It is specifically tailored for single images and warns against its use for video detailing, suggesting an alternative node for such purposes.
+    - Inputs:
+        - `image` (Required): The input image to be detailed. This is the primary data upon which the FaceDetailer operates, aiming to enhance facial features within the image. Type should be `IMAGE`.
+        - `model` (Required): The model used for enhancing the face details. It plays a crucial role in the processing and improvement of the image's facial features. Type should be `MODEL`.
+        - `clip` (Required): A component used alongside the model to guide the enhancement process, ensuring that the modifications align with certain aesthetic or qualitative criteria. Type should be `CLIP`.
+        - `vae` (Required): A variational autoencoder used in the enhancement process to generate or modify facial features, contributing to the overall improvement of the image. Type should be `VAE`.
+        - `guide_size` (Required): Specifies the size of the guide images used in the enhancement process, affecting the detail level and the focus areas within the image. Type should be `FLOAT`.
+        - `guide_size_for` (Required): unknown Type should be `BOOLEAN`.
+        - `max_size` (Required): unknown Type should be `FLOAT`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the enhancement process. Type should be `INT`.
+        - `steps` (Required): The number of steps to perform in the enhancement process, affecting the intensity and detail of the enhancements. Type should be `INT`.
+        - `cfg` (Required): Configuration settings for the enhancement process, guiding the behavior of the model and other components. Type should be `FLOAT`.
+        - `sampler_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): unknown Type should be `COMBO[STRING]`.
+        - `positive` (Required): unknown Type should be `CONDITIONING`.
+        - `negative` (Required): unknown Type should be `CONDITIONING`.
+        - `denoise` (Required): unknown Type should be `FLOAT`.
+        - `feather` (Required): unknown Type should be `INT`.
+        - `noise_mask` (Required): unknown Type should be `BOOLEAN`.
+        - `force_inpaint` (Required): unknown Type should be `BOOLEAN`.
+        - `bbox_threshold` (Required): unknown Type should be `FLOAT`.
+        - `bbox_dilation` (Required): unknown Type should be `INT`.
+        - `bbox_crop_factor` (Required): unknown Type should be `FLOAT`.
+        - `sam_detection_hint` (Required): unknown Type should be `COMBO[STRING]`.
+        - `sam_dilation` (Required): unknown Type should be `INT`.
+        - `sam_threshold` (Required): unknown Type should be `FLOAT`.
+        - `sam_bbox_expansion` (Required): unknown Type should be `INT`.
+        - `sam_mask_hint_threshold` (Required): unknown Type should be `FLOAT`.
+        - `sam_mask_hint_use_negative` (Required): unknown Type should be `COMBO[STRING]`.
+        - `drop_size` (Required): unknown Type should be `INT`.
+        - `bbox_detector` (Required): unknown Type should be `BBOX_DETECTOR`.
+        - `wildcard` (Required): unknown Type should be `STRING`.
+        - `cycle` (Required): unknown Type should be `INT`.
+        - `sam_model_opt` (Optional): unknown Type should be `SAM_MODEL`.
+        - `segm_detector_opt` (Optional): unknown Type should be `SEGM_DETECTOR`.
+        - `detailer_hook` (Optional): unknown Type should be `DETAILER_HOOK`.
+        - `inpaint_model` (Optional): unknown Type should be `BOOLEAN`.
+        - `noise_mask_feather` (Optional): unknown Type should be `INT`.
+        - `scheduler_func_opt` (Optional): unknown Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `image`: The enhanced image with improved facial details. This is the primary output of the FaceDetailer node, showcasing the refined facial features. Type should be `IMAGE`.
+        - `cropped_refined`: A list of cropped and refined portions of the image, focusing specifically on detailed facial areas. Type should be `IMAGE`.
+        - `cropped_enhanced_alpha`: unknown Type should be `IMAGE`.
+        - `mask`: A mask generated during the enhancement process, potentially used for further refinement or processing. Type should be `MASK`.
+        - `detailer_pipe`: A tuple containing the configuration and models used in the enhancement process, facilitating reuse or analysis. Type should be `DETAILER_PIPE`.
+        - `cnet_images`: A collection of images processed through a control network, potentially used for further refinement or as part of the enhancement pipeline. Type should be `IMAGE`.

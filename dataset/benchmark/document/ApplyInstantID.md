@@ -1,0 +1,18 @@
+- `ApplyInstantID`: The ApplyInstantID node is designed to integrate InstantID technology into images, leveraging facial analysis and control networks to enhance or modify the image based on specified conditions. It utilizes a combination of model inputs and image processing techniques to apply identity-preserving transformations, ensuring the output aligns with user-defined positive and negative conditioning.
+    - Inputs:
+        - `instantid` (Required): Represents the InstantID model configuration and weights, crucial for the identity transformation process. Type should be `INSTANTID`.
+        - `insightface` (Required): Facial analysis model used to extract facial features from the image, essential for guiding the InstantID transformation. Type should be `FACEANALYSIS`.
+        - `control_net` (Required): Control network model that influences the strength and direction of the applied transformations. Type should be `CONTROL_NET`.
+        - `image` (Required): The input image to be processed and transformed by the InstantID technology. Type should be `IMAGE`.
+        - `model` (Required): The underlying model used for generating the transformations. Type should be `MODEL`.
+        - `positive` (Required): Positive conditioning phrases that guide the transformation towards desired attributes. Type should be `CONDITIONING`.
+        - `negative` (Required): Negative conditioning phrases that guide the transformation away from undesired attributes. Type should be `CONDITIONING`.
+        - `weight` (Required): Overall weight of the transformation, affecting the intensity of the applied changes. Type should be `FLOAT`.
+        - `start_at` (Required): Defines the starting point of the transformation process, allowing for gradual application. Type should be `FLOAT`.
+        - `end_at` (Required): Defines the ending point of the transformation process, ensuring the transformation is applied within a specific range. Type should be `FLOAT`.
+        - `image_kps` (Optional): Optional keypoints image for more precise facial feature alignment. Type should be `IMAGE`.
+        - `mask` (Optional): Optional mask to limit the transformation to specific areas of the image. Type should be `MASK`.
+    - Outputs:
+        - `MODEL`: The modified model after applying the InstantID transformations. Type should be `MODEL`.
+        - `positive`: Updated positive conditioning reflecting the applied transformations. Type should be `CONDITIONING`.
+        - `negative`: Updated negative conditioning reflecting the applied transformations. Type should be `CONDITIONING`.

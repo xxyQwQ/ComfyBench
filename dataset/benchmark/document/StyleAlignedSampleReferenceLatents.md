@@ -1,0 +1,13 @@
+- `StyleAlignedSampleReferenceLatents`: This node is designed to sample reference latents in a style-aligned manner, capturing the essence of a given style through the manipulation of latents. It focuses on generating a set of reference latents that are aligned with the desired style attributes, facilitating the creation of content that is stylistically coherent.
+    - Inputs:
+        - `model` (Required): The model parameter represents the neural network model that will be used for sampling. It is crucial for defining the architecture and parameters that will be utilized in the generation process. Type should be `MODEL`.
+        - `noise_seed` (Required): The noise_seed parameter is used to initialize the random noise generation, ensuring reproducibility and consistency in the sampling process. Type should be `INT`.
+        - `cfg` (Required): This parameter specifies the configuration settings for the sampling process, dictating how the model should interpret and manipulate the input latents. Type should be `FLOAT`.
+        - `positive` (Required): The positive parameter indicates the positive guidance text or attributes that should be emphasized in the generated content, steering the style alignment towards these characteristics. Type should be `CONDITIONING`.
+        - `negative` (Required): The negative parameter specifies the negative guidance text or attributes that should be minimized or avoided in the generated content, helping to refine the style alignment by excluding undesired elements. Type should be `CONDITIONING`.
+        - `sampler` (Required): The sampler parameter determines the specific sampling strategy or algorithm to be used in generating the reference latents, affecting the diversity and quality of the output. Type should be `SAMPLER`.
+        - `sigmas` (Required): The sigmas parameter controls the variance of the noise added during the sampling process, influencing the exploration of the latent space and the resulting style alignment. Type should be `SIGMAS`.
+        - `latent_image` (Required): This parameter represents the initial latent image that serves as a starting point for the sampling process, providing a basis for the generation and alignment of reference latents. Type should be `LATENT`.
+    - Outputs:
+        - `ref_latents`: The ref_latents output contains the generated reference latents that are aligned with the specified style, ready for further processing or utilization. Type should be `STEP_LATENTS`.
+        - `noised_output`: The noised_output includes the noised version of the generated latents, offering an alternative representation of the style-aligned reference latents. Type should be `LATENT`.

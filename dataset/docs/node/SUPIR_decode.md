@@ -1,9 +1,0 @@
-- `SUPIR_decode`: The SUPIR_decode node is designed to transform encoded latent representations back into images or other forms of visual data. It utilizes a specific decoding process, potentially involving a VAE (Variational Autoencoder), to reconstruct the original data from its compressed form, focusing on preserving the essential details and characteristics of the input while minimizing loss during the decoding phase.
-    - Parameters:
-        - `use_tiled_vae`: A boolean flag indicating whether the decoding process should utilize a tiled approach, potentially improving handling of larger images by processing them in segments. Type should be `BOOLEAN`.
-        - `decoder_tile_size`: Specifies the size of the tiles used in the tiled VAE approach, affecting the granularity of the decoding process and the handling of image details. Type should be `INT`.
-    - Inputs:
-        - `SUPIR_VAE`: Represents the Variational Autoencoder model used for the decoding process, crucial for transforming latent representations back into their original form. Type should be `SUPIRVAE`.
-        - `latents`: The encoded latent representations that are to be decoded back into images or similar visual data, serving as the direct input for the reconstruction process. Type should be `LATENT`.
-    - Outputs:
-        - `image`: The output image reconstructed from the encoded latent representations, showcasing the decoding capability of the node to transform compressed data back into visual form. Type should be `IMAGE`.

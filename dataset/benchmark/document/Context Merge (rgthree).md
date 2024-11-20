@@ -1,0 +1,13 @@
+- `Context Merge (rgthree)`: The Context Merge node is designed to integrate multiple context inputs into a single, unified context output. It systematically merges the provided contexts, with later contexts having the ability to override the values of earlier ones, facilitating dynamic context management and updates.
+    - Inputs:
+        - `ctx_i` (Optional): unknown Type should be `RGTHREE_CONTEXT`.
+    - Outputs:
+        - `CONTEXT`: The unified context output, merging inputs with later contexts potentially overriding earlier ones. Type should be `RGTHREE_CONTEXT`.
+        - `MODEL`: Model information included in the merged context. Type should be `MODEL`.
+        - `CLIP`: CLIP model settings included in the merged context. Type should be `CLIP`.
+        - `VAE`: VAE model settings included in the merged context. Type should be `VAE`.
+        - `POSITIVE`: Positive conditioning information included in the merged context. Type should be `CONDITIONING`.
+        - `NEGATIVE`: Negative conditioning information included in the merged context. Type should be `CONDITIONING`.
+        - `LATENT`: Latent space information included in the merged context. Type should be `LATENT`.
+        - `IMAGE`: Image data included in the merged context. Type should be `IMAGE`.
+        - `SEED`: Seed for random number generation included in the merged context. Type should be `INT`.

@@ -1,0 +1,8 @@
+- `DF_Latent_Scale_by_ratio`: This node is designed to scale latent representations of images by a specified ratio, adjusting their dimensions while maintaining the integrity of the latent space. It supports various scaling and cropping methods to fine-tune the output.
+    - Inputs:
+        - `latent` (Required): The latent representation of an image to be scaled. It is crucial for determining the base dimensions that will be modified according to the scaling ratio. Type should be `LATENT`.
+        - `modifier` (Required): A scaling factor that determines how much the latent dimensions should be increased or decreased. Type should be `FLOAT`.
+        - `scale_method` (Required): Specifies the method used for scaling the latent image, such as nearest-exact, bilinear, etc., affecting the quality and characteristics of the output. Type should be `COMBO[STRING]`.
+        - `crop` (Required): Defines the cropping method to be applied after scaling, allowing for adjustments in the latent's aspect ratio or size. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `latent`: The scaled latent representation, adjusted according to the specified modifier, scale method, and cropping preference. Type should be `LATENT`.

@@ -1,0 +1,7 @@
+- `ClassifyObject`: The ClassifyObject node is designed to classify images into categories based on a given taxonomy and a multimodal model. It leverages an image URL and a taxonomy description to generate a category name for the image, utilizing a large language model capable of understanding both text and image inputs.
+    - Inputs:
+        - `image_url` (Required): The URL of the image to be classified. It serves as a direct link to the image that the model will analyze to determine its category. Type should be `STRING`.
+        - `taxonomy` (Required): A string representing the taxonomy against which the image will be classified. This taxonomy guides the model in understanding the possible categories and their hierarchy. Type should be `STRING`.
+        - `llm` (Required): A configuration object for the large language model (LLM) used in the classification. It includes the model details and API key necessary for multimodal understanding. Type should be `LLM_MODEL`.
+    - Outputs:
+        - `category_name`: The name of the category into which the image has been classified, based on the provided taxonomy and analyzed by the multimodal model. Type should be `STRING`.

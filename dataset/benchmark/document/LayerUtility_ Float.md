@@ -1,0 +1,6 @@
+- `LayerUtility_ Float`: The Float node is designed to process floating-point numbers, allowing for the manipulation and conversion of float values within a given range. It provides functionality to input a float value, perform any necessary processing, and output the processed value along with its string representation.
+    - Inputs:
+        - `float_value` (Required): Specifies the floating-point number to be processed. This parameter is crucial for determining the node's operation and output, as it directly influences the manipulation and conversion of the float value. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: The processed floating-point number after the node's operation. Type should be `FLOAT`.
+        - `string`: The string representation of the processed floating-point number. Type should be `STRING`.

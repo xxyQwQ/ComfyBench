@@ -1,0 +1,5 @@
+- `easy imageSizeByLongerSide`: This node is designed to determine the dimensions of an image by identifying and measuring the longer side. It simplifies the process of working with image dimensions in scenarios where the size of the longer side is crucial, offering a straightforward approach to image size adjustment while preserving the aspect ratio.
+    - Inputs:
+        - `image` (Required): The image input is essential for determining its dimensions, with a specific focus on measuring the longer side to accurately adjust the image size. Type should be `IMAGE`.
+    - Outputs:
+        - `resolution`: Outputs the resolution as an integer, representing the size of the longer side of the image. Type should be `INT`.

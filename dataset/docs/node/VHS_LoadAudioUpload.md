@@ -1,8 +1,0 @@
-- `VHS_LoadAudioUpload`: The VHS_LoadAudioUpload node is designed for uploading and processing audio files within the Video Helper Suite. It allows users to upload audio files, specifying parameters such as the start time and duration for the audio to be processed. This node is essential for applications requiring audio manipulation or analysis, providing a foundation for further audio-related operations in the suite.
-    - Parameters:
-        - `audio`: Specifies the audio file selected for upload and processing. This parameter is crucial for determining the audio content that will undergo processing. Type should be `COMBO[STRING]`.
-        - `start_time`: Defines the starting point (in seconds) from which the audio file should be processed. This parameter allows for selective processing of audio content, enhancing flexibility. Type should be `FLOAT`.
-        - `duration`: Specifies the duration (in seconds) for which the audio should be processed from the start time. This allows for precise control over the segment of the audio file to be analyzed or manipulated. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `audio`: Represents the processed audio data, ready for use in subsequent operations within the suite. Type should be `VHS_AUDIO`.

@@ -1,8 +1,0 @@
-- `CircularVAEDecode`: The CircularVAEDecode node is designed to decode latent representations into images, with an added functionality to apply circular tiling effects. This node allows for the generation of seamless images by modifying the VAE model to support circular asymmetry in the tiling process.
-    - Parameters:
-        - `tiling`: Specifies the type of circular tiling to apply, enabling seamless image generation in various orientations. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `samples`: The latent representation to be decoded into an image. It is crucial for generating the final output image. Type should be `LATENT`.
-        - `vae`: The VAE model used for decoding the latent representation. It is essential for the transformation process. Type should be `VAE`.
-    - Outputs:
-        - `image`: The decoded image, potentially with circular tiling applied, based on the input latent representation and tiling settings. Type should be `IMAGE`.

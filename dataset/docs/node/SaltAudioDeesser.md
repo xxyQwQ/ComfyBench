@@ -1,9 +1,0 @@
-- `SaltAudioDeesser`: The SaltAudioDeesser node is designed to reduce sibilance in audio recordings through a de-essing process. It applies a specific audio filter to attenuate the intensity of sibilant consonants, typically found in vocal tracks, based on user-defined parameters such as intensity, amount, and frequency to keep.
-    - Parameters:
-        - `intensity`: Defines the threshold level for the de-essing effect, controlling how aggressively the sibilance is reduced. Type should be `FLOAT`.
-        - `amount`: Specifies the amount of sibilance reduction applied to the audio, affecting the intensity of the de-essing effect. Type should be `FLOAT`.
-        - `frequency_keep`: Determines the frequency range to be preserved from the de-essing process, ensuring important audio characteristics are maintained. Type should be `FLOAT`.
-    - Inputs:
-        - `audio`: The raw audio data to be processed. This input is crucial for the de-essing operation, as it is the target for sibilance reduction. Type should be `AUDIO`.
-    - Outputs:
-        - `audio`: The processed audio data with reduced sibilance, resulting from the de-essing operation. Type should be `AUDIO`.

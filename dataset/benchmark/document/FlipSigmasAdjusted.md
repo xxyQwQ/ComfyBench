@@ -1,0 +1,9 @@
+- `FlipSigmasAdjusted`: The FlipSigmasAdjusted node is designed to manipulate a sequence of sigma values for use in diffusion models. It reverses the order of the sigma values, applies an offset, and optionally divides the entire sequence by the last sigma value or another specified divisor. This process is crucial for adjusting the noise levels in a controlled manner, ensuring that the diffusion process can be fine-tuned according to specific requirements.
+    - Inputs:
+        - `sigmas` (Required): The sequence of sigma values to be adjusted. This sequence is reversed and potentially modified to meet certain conditions, such as avoiding zero values and applying offsets or divisions. Type should be `SIGMAS`.
+        - `divide_by_last_sigma` (Required): A boolean flag indicating whether the sigma values should be divided by the last sigma value in the sequence. This is used to normalize the sequence based on its final value. Type should be `BOOLEAN`.
+        - `divide_by` (Required): A scalar value by which the entire sequence of sigma values is divided. This allows for further adjustment of the noise level across the sequence. Type should be `FLOAT`.
+        - `offset_by` (Required): An integer indicating how many positions to offset the sigma values after reversing their order. This can be used to shift the noise levels applied at each step of the diffusion process. Type should be `INT`.
+    - Outputs:
+        - `SIGMAS`: The adjusted sequence of sigma values, ready for use in diffusion processes. This output is a tensor of sigma values that have been reversed, offset, and potentially normalized or divided as specified. Type should be `SIGMAS`.
+        - `sigmas_string`: A string representation of the adjusted sigma values, formatted with a specified precision and separator for easy readability. Type should be `STRING`.

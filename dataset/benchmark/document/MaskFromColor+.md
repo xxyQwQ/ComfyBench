@@ -1,0 +1,9 @@
+- `MaskFromColor+`: This node generates a mask from an image based on specified color values and a threshold. It allows for the selective isolation of parts of an image that match the given color within a certain tolerance, enabling targeted image manipulation or analysis.
+    - Inputs:
+        - `image` (Required): The input image from which the mask will be generated. It serves as the basis for identifying areas that match the specified color criteria. Type should be `IMAGE`.
+        - `red` (Required): The red component of the target color. It defines the red value that the node will use to generate the mask. Type should be `INT`.
+        - `green` (Required): The green component of the target color. It defines the green value that the node will use to generate the mask. Type should be `INT`.
+        - `blue` (Required): The blue component of the target color. It defines the blue value that the node will use to generate the mask. Type should be `INT`.
+        - `threshold` (Required): The tolerance for color matching. It specifies how closely the colors in the image must match the target color to be included in the mask. Type should be `INT`.
+    - Outputs:
+        - `mask`: The output mask indicating areas of the image that match the specified color within the given threshold. Type should be `MASK`.

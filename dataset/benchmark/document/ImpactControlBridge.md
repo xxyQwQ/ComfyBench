@@ -1,0 +1,7 @@
+- `ImpactControlBridge`: The ImpactControlBridge node serves as a dynamic control mechanism for managing the state of other nodes within a network based on specific conditions. It can activate, mute, or bypass nodes based on the operational mode, thereby altering the flow of data or processing within the system.
+    - Inputs:
+        - `value` (Required): The input value that is passed through the node unchanged if none of the conditions for activation, muting, or bypassing are met. This value can be of any type, reflecting the diverse data that may flow through the system. Type should be `*`.
+        - `mode` (Required): Determines if the node should activate other nodes. Activation is based on the presence of nodes in the 'should_be_active_nodes' list, which is a combination of nodes specified to be muted and bypassed. Type should be `BOOLEAN`.
+        - `behavior` (Required): Controls the muting of nodes. When set, nodes in the 'should_be_mute_nodes' list, which includes active and bypass nodes, are muted to prevent them from processing data. Type should be `BOOLEAN`.
+    - Outputs:
+        - `value`: The output value, which is the input value passed through unchanged unless the node's processing is interrupted by activating, muting, or bypassing other nodes. Type should be `*`.

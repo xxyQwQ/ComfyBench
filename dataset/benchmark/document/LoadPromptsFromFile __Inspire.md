@@ -1,0 +1,5 @@
+- `LoadPromptsFromFile __Inspire`: The LoadPromptsFromFile node is designed to read and parse prompt data from a specified file, extracting structured information based on predefined patterns. It aims to facilitate the generation or manipulation of text prompts by providing a structured format for positive and negative prompt components.
+    - Inputs:
+        - `prompt_file` (Required): Specifies the file from which to load prompts, serving as a key input to determine the source of prompt data for processing. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `zipped_prompt`: Returns a list of tuples, each containing the positive text, negative text, and the file name from which the prompt was loaded, representing the structured prompt data extracted from the file. Type should be `ZIPPED_PROMPT`.

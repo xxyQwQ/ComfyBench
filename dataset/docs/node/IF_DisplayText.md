@@ -1,6 +1,0 @@
-- `IF_DisplayText`: The IF_DisplayText node is designed for displaying text outputs within the ImpactFrames environment, providing a simple interface for visualizing text data.
-    - Parameters:
-        - `text`: The 'text' parameter is the primary input for the IF_DisplayText node, serving as the text content to be displayed. Its presence is crucial for the node's operation, dictating the textual output that will be visualized. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: unknown Type should be `STRING`.

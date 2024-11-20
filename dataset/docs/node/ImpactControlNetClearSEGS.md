@@ -1,6 +1,0 @@
-- `ImpactControlNetClearSEGS`: This node is designed to clear the control network information from a given set of segmentation elements (SEGS), effectively resetting their control network-related attributes to a default state. It's part of the ImpactPack/Util category, focusing on utility operations within the SEGS data structure.
-    - Parameters:
-    - Inputs:
-        - `segs`: The segmentation elements (SEGS) to be processed. This input is essential for determining which SEGS will have their control network information cleared. Type should be `SEGS`.
-    - Outputs:
-        - `segs`: The processed segmentation elements (SEGS) with their control network information cleared, ready for further processing or analysis. Type should be `SEGS`.

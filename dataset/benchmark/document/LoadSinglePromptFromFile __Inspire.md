@@ -1,0 +1,6 @@
+- `LoadSinglePromptFromFile __Inspire`: This node is designed to load a specific prompt from a file, allowing for targeted retrieval of text prompts based on an index. It facilitates the extraction of creative or instructional content from structured text files, enhancing the flexibility and specificity of content generation workflows.
+    - Inputs:
+        - `prompt_file` (Required): Specifies the file path from which to load the prompt, acting as a direct reference to the desired content source. Type should be `COMBO[STRING]`.
+        - `index` (Required): Determines the specific prompt to be loaded from the file, enabling selective retrieval of content. Type should be `INT`.
+    - Outputs:
+        - `zipped_prompt`: Returns a list of tuples, each containing the positive and negative text extracted from the specified prompt, along with the file name. This structured output, referred to as 'zipped_prompt', is ready for further processing. Type should be `ZIPPED_PROMPT`.

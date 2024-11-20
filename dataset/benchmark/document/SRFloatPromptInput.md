@@ -1,0 +1,5 @@
+- `SRFloatPromptInput`: The SRFloatPromptInput node is designed for integrating floating-point values into a structured prompt system. It specifically handles the addition of floating-point input values to a prompt's metadata, facilitating dynamic content generation based on numerical input.
+    - Inputs:
+        - `input_float` (Required): The primary floating-point value to be added to the prompt's metadata. It plays a crucial role in customizing the prompt content based on numerical input. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: The same floating-point value that was input, indicating successful integration into the prompt. Type should be `FLOAT`.

@@ -1,0 +1,6 @@
+- `Save Image Sequence (mtb)`: The Save Image Sequence node is designed to save a sequence of images to a specified directory, allowing for the inclusion of additional metadata such as prompts and custom PNG information. It facilitates the organization and storage of generated image sequences, making it easier to retrieve and utilize them for further processing or presentation.
+    - Inputs:
+        - `images` (Required): The sequence of images to be saved. This parameter is crucial as it directly influences the node's primary function of storing these images in a specified format and location. Type should be `IMAGE`.
+        - `filename_prefix` (Required): A prefix for the filename under which the images will be saved. This allows for easy identification and organization of saved images within the output directory. Type should be `STRING`.
+        - `current_frame` (Required): Indicates the starting point or current frame number for the sequence of images being saved. This helps in organizing the sequence and maintaining continuity if the sequence is being updated over time. Type should be `INT`.
+    - Outputs:

@@ -1,7 +1,0 @@
-- `SaltMaskGradientRegion`: This node applies a gradient filter to mask regions, enhancing edges and transitions within the mask to highlight areas of change. It's designed to process mask inputs and apply morphological gradient operations to emphasize the contours and transitions in the mask regions.
-    - Parameters:
-        - `kernel_size`: The kernel_size parameter specifies the size of the kernel used in the morphological gradient operation. It affects the extent of edge enhancement and transition highlighting in the mask regions. Type should be `INT`.
-    - Inputs:
-        - `masks`: The masks input represents the mask regions to which the gradient filter will be applied. This input is crucial for defining the areas of interest where edge enhancement and transition highlighting are desired. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The output masks are the result of applying the gradient filter to the input mask regions, featuring enhanced edges and transitions. Type should be `MASK`.

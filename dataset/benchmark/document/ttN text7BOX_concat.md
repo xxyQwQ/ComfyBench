@@ -1,0 +1,19 @@
+- `ttN text7BOX_concat`: This node is designed to concatenate up to seven text strings, allowing for flexible text manipulation and combination. It supports custom delimiters, including new lines, to format the concatenated result according to specific requirements.
+    - Inputs:
+        - `text1` (Required): The first text string to be concatenated. It plays a foundational role in the concatenation process, starting the combined text output. Type should be `STRING`.
+        - `text2` (Required): The second text string to be concatenated, adding to the sequence initiated by text1. Type should be `STRING`.
+        - `text3` (Required): The third text string to be concatenated, further extending the combined text output. Type should be `STRING`.
+        - `text4` (Required): The fourth text string to be concatenated, contributing to the growing list of combined texts. Type should be `STRING`.
+        - `text5` (Required): The fifth text string to be concatenated, adding more content to the concatenation. Type should be `STRING`.
+        - `text6` (Required): The sixth text string to be concatenated, continuing to build upon the concatenated text. Type should be `STRING`.
+        - `text7` (Required): The seventh and final text string to be concatenated, completing the concatenation process. Type should be `STRING`.
+        - `delimiter` (Required): The delimiter used to separate each text string in the concatenation. It can significantly affect the formatting of the output. Type should be `STRING`.
+    - Outputs:
+        - `text1`: Returns the first input text string, unchanged. Type should be `STRING`.
+        - `text2`: Returns the second input text string, unchanged. Type should be `STRING`.
+        - `text3`: Returns the third input text string, unchanged. Type should be `STRING`.
+        - `text4`: Returns the fourth input text string, unchanged. Type should be `STRING`.
+        - `text5`: Returns the fifth input text string, unchanged. Type should be `STRING`.
+        - `text6`: Returns the sixth input text string, unchanged. Type should be `STRING`.
+        - `text7`: Returns the seventh input text string, unchanged. Type should be `STRING`.
+        - `concat`: Returns the concatenated result of all seven input text strings, separated by the specified delimiter. Type should be `STRING`.

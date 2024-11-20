@@ -1,0 +1,8 @@
+- `KMeansColor`: This node applies the K-means clustering algorithm to an image to identify and extract a specified number of dominant colors. It leverages OpenCV's implementation of K-means for efficient color quantization, allowing for the simplification of the image's color palette.
+    - Inputs:
+        - `image` (Required): The input image to be processed for color quantization. It serves as the basis for identifying dominant colors through clustering. Type should be `IMAGE`.
+        - `number_of_colors` (Required): Specifies the number of dominant colors to identify in the image. It determines the granularity of the color quantization. Type should be `INT`.
+        - `max_iterations` (Required): The maximum number of iterations for the K-means algorithm to run, ensuring the process terminates. Type should be `INT`.
+        - `eps` (Required): The epsilon value for convergence criteria in K-means, dictating the algorithm's precision and stopping condition. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The processed image with its colors quantized to the specified dominant colors. Type should be `IMAGE`.

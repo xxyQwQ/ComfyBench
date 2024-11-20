@@ -1,0 +1,7 @@
+- `Palette Color Align [Dream]`: This node is designed to align the colors of a given palette with a target palette based on a specified alignment factor. It adjusts the RGB values of the original palette's colors to more closely match those of the target palette, allowing for a controlled blending or matching of color schemes.
+    - Inputs:
+        - `palette` (Required): The original color palette to be aligned. It serves as the base for color adjustments towards the target palette. Type should be `RGB_PALETTE`.
+        - `target_align` (Required): The target color palette that the original palette should align with. This palette acts as the reference for the desired color adjustments. Type should be `RGB_PALETTE`.
+        - `alignment_factor` (Required): A floating-point value that determines the degree of alignment between the original and target palettes. Higher values result in closer alignment to the target palette's colors. Type should be `FLOAT`.
+    - Outputs:
+        - `palette`: The adjusted color palette after alignment with the target palette, reflecting the applied color shifts. Type should be `RGB_PALETTE`.

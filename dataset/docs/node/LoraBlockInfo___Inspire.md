@@ -1,8 +1,0 @@
-- `LoraBlockInfo __Inspire`: The LoraBlockInfo node is designed to extract and communicate detailed information about specific LoRA (Low-Rank Adaptation) blocks within a model. It leverages the LoRA technique to adjust model parameters for enhanced performance on specific tasks, providing insights into the modifications and their impacts.
-    - Parameters:
-        - `lora_name`: This parameter specifies the name of the LoRA file containing the adaptations to be loaded and analyzed. It is essential for locating and applying the correct LoRA modifications to the model. Type should be `COMBO[STRING]`.
-        - `block_info`: A string containing detailed information about the specific blocks within the model that have been modified using LoRA. This parameter is key to extracting and presenting the relevant LoRA adaptations. Type should be `STRING`.
-    - Inputs:
-        - `model`: The model parameter represents the deep learning model to which LoRA adaptations are applied. It is crucial for identifying the specific blocks within the model that have been modified using LoRA techniques. Type should be `MODEL`.
-        - `clip`: The clip parameter is associated with the CLIP model used alongside the main model, providing a context for the LoRA adaptations in terms of text and image understanding. Type should be `CLIP`.
-    - Outputs:

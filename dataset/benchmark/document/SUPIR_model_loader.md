@@ -1,0 +1,9 @@
+- `SUPIR_model_loader`: This node is responsible for loading the SUPIR model, a key component in the SUPIR framework for image processing and enhancement. It handles the initialization and configuration of the model, ensuring it is ready for subsequent image processing tasks.
+    - Inputs:
+        - `supir_model` (Required): Specifies the path to the SUPIR model's checkpoint files, crucial for loading the model's state for image processing tasks. Type should be `COMBO[STRING]`.
+        - `sdxl_model` (Required): Specifies the path to the SDXL model's checkpoint files, which are merged with the SUPIR model to enhance its capabilities. Type should be `COMBO[STRING]`.
+        - `fp8_unet` (Required): A flag to determine whether to cast the UNet weights to a lower precision format to save VRAM, with a slight impact on quality. Type should be `BOOLEAN`.
+        - `diffusion_dtype` (Required): Specifies the data type for diffusion operations, with options to optimize for performance or compatibility. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `SUPIR_model`: The loaded and configured SUPIR model, ready for image processing tasks. Type should be `SUPIRMODEL`.
+        - `SUPIR_VAE`: The loaded VAE component of the SUPIR model, essential for certain image processing operations. Type should be `SUPIRVAE`.

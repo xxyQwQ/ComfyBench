@@ -1,0 +1,5 @@
+- `ImageFromURL`: The ImageFromURL node is designed to fetch and process an image from a given URL, converting it into a tensor format suitable for further image processing or machine learning tasks.
+    - Inputs:
+        - `url` (Required): The URL of the image to be fetched. This parameter is crucial for the node's operation as it specifies the source of the image to be processed. Type should be `STRING`.
+    - Outputs:
+        - `image`: The processed image in tensor format, ready for further processing or analysis. Type should be `IMAGE`.

@@ -1,0 +1,6 @@
+- `SaltAudioNoiseReductionSpectralSubtraction`: This node is designed to reduce noise in audio files using spectral subtraction. It aims to enhance audio clarity by removing unwanted noise, making it suitable for improving the quality of recordings or audio tracks.
+    - Inputs:
+        - `audio` (Required): The raw audio data to be processed. It serves as the primary input for noise reduction. Type should be `AUDIO`.
+        - `noise_floor` (Required): A parameter to adjust the intensity of noise reduction. Lower values mean less noise reduction, while higher values increase the noise reduction effect. Type should be `FLOAT`.
+    - Outputs:
+        - `audio`: The processed audio data with reduced noise. Type should be `AUDIO`.

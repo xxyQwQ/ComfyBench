@@ -1,0 +1,304 @@
+{
+  "4": {
+    "inputs": {
+      "ckpt_name": "majicmixRealistic_v7.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "11": {
+    "inputs": {
+      "stop_at_clip_layer": -2,
+      "clip": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
+  "12": {
+    "inputs": {
+      "lora_name": "more_details.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8,
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "13": {
+    "inputs": {
+      "text": "realistic,1girl,solo,upper body,black hair,red lips,sleeveless,looking at viewer,leaf,plant,green theme",
+      "token_normalization": "none",
+      "weight_interpretation": "A1111",
+      "speak_and_recognation": true,
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "BNK_CLIPTextEncodeAdvanced",
+    "_meta": {
+      "title": "CLIP Text Encode (Advanced)"
+    }
+  },
+  "14": {
+    "inputs": {
+      "text": "badhandv4,EasyNegative,ng_deepnegative_v1_75t,(badhandv4:1.2),(worst quality:2),(low quality:2),(normal quality:2),lowres,bad anatomy,bad hands,watermark,moles,nsfw,",
+      "token_normalization": "none",
+      "weight_interpretation": "A1111",
+      "speak_and_recognation": true,
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "BNK_CLIPTextEncodeAdvanced",
+    "_meta": {
+      "title": "CLIP Text Encode (Advanced)"
+    }
+  },
+  "17": {
+    "inputs": {
+      "width": 512,
+      "height": 768,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "18": {
+    "inputs": {
+      "samples": [
+        "62",
+        0
+      ],
+      "vae": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "19": {
+    "inputs": {
+      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "20": {
+    "inputs": {
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": 512,
+      "bbox_detector": "yolox_l.onnx",
+      "pose_estimator": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "DWPreprocessor",
+    "_meta": {
+      "title": "DWPose Estimator"
+    }
+  },
+  "23": {
+    "inputs": {
+      "image": "woman_portrait.jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "24": {
+    "inputs": {
+      "strength": 0.9,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "13",
+        0
+      ],
+      "negative": [
+        "14",
+        0
+      ],
+      "control_net": [
+        "25",
+        0
+      ],
+      "image": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "25": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_openpose_fp16.safetensors",
+      "model": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "DiffControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model (diff)"
+    }
+  },
+  "27": {
+    "inputs": {
+      "a": 6.283185307179586,
+      "bg_threshold": 0.1,
+      "resolution": 512,
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "MiDaS-DepthMapPreprocessor",
+    "_meta": {
+      "title": "MiDaS Depth Map"
+    }
+  },
+  "28": {
+    "inputs": {
+      "strength": 1,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "24",
+        0
+      ],
+      "negative": [
+        "24",
+        1
+      ],
+      "control_net": [
+        "29",
+        0
+      ],
+      "image": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "29": {
+    "inputs": {
+      "control_net_name": "control_v11f1p_sd15_depth_fp16.safetensors",
+      "model": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "DiffControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model (diff)"
+    }
+  },
+  "53": {
+    "inputs": {
+      "enabled": true,
+      "swap_model": "inswapper_128.onnx",
+      "facedetection": "YOLOv5l",
+      "face_restore_model": "codeformer-v0.1.0.pth",
+      "face_restore_visibility": 1,
+      "codeformer_weight": 0.5,
+      "detect_gender_input": "no",
+      "detect_gender_source": "no",
+      "input_faces_index": "0",
+      "source_faces_index": "0",
+      "console_log_level": 1,
+      "input_image": [
+        "18",
+        0
+      ],
+      "source_image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "ReActorFaceSwap",
+    "_meta": {
+      "title": "ReActor 🌌 Fast Face Swap"
+    }
+  },
+  "62": {
+    "inputs": {
+      "seed": 1093069514427779,
+      "steps": 30,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "12",
+        0
+      ],
+      "positive": [
+        "28",
+        0
+      ],
+      "negative": [
+        "28",
+        1
+      ],
+      "latent_image": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "63": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+- `LayerUtility_ PromptEmbellish`: The PromptEmbellish node is designed to enhance and refine text prompts for image generation tasks, specifically targeting the Stable Diffusion model. It employs a multi-step process to modify, polish, and enrich the initial prompt based on provided descriptions or image content, aiming to produce more detailed and effective prompts for generating high-quality images.
+    - Inputs:
+        - `api` (Required): The API parameter specifies the interface used for generating content, indicating the external service or model to be utilized for prompt embellishment. Type should be `COMBO[STRING]`.
+        - `token_limit` (Required): This parameter sets the maximum number of tokens (words) for the generated prompt, defining the length and detail level of the output text. Type should be `INT`.
+        - `describe` (Required): A description or keyword that must be included in the embellished prompt, guiding the content generation process to ensure relevance to the desired theme or subject. Type should be `STRING`.
+        - `image` (Optional): An optional image input that can be used as a reference for the prompt embellishment process, allowing for more context-specific text generation. Type should be `IMAGE`.
+    - Outputs:
+        - `text`: The output is an enhanced text prompt, specifically tailored for use with the Stable Diffusion model to generate images that closely match the input description or image content. Type should be `STRING`.

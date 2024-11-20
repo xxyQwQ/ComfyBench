@@ -1,0 +1,8 @@
+- `unCLIPConditioning`: This node is designed to integrate CLIP vision outputs into the conditioning process, adjusting the influence of these outputs based on specified strength and noise augmentation parameters. It enriches the conditioning with visual context, enhancing the generation process.
+    - Inputs:
+        - `conditioning` (Required): The base conditioning data to which the CLIP vision outputs are to be added, serving as the foundation for further modifications. Type should be `CONDITIONING`.
+        - `clip_vision_output` (Required): The output from a CLIP vision model, providing visual context that is integrated into the conditioning. Type should be `CLIP_VISION_OUTPUT`.
+        - `strength` (Required): Determines the intensity of the CLIP vision output's influence on the conditioning. Type should be `FLOAT`.
+        - `noise_augmentation` (Required): Specifies the level of noise augmentation to apply to the CLIP vision output before integrating it into the conditioning. Type should be `FLOAT`.
+    - Outputs:
+        - `conditioning`: The enriched conditioning data, now containing integrated CLIP vision outputs with applied strength and noise augmentation. Type should be `CONDITIONING`.

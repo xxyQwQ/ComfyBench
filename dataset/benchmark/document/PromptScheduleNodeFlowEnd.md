@@ -1,0 +1,16 @@
+- `PromptScheduleNodeFlowEnd`: This node represents the final step in a scheduling node flow, designed to evaluate and finalize the JSON structure produced by preceding nodes. It focuses on ensuring the integrity of the JSON output, making adjustments as necessary to fit the expected format for downstream processing.
+    - Inputs:
+        - `text` (Required): The JSON text to be evaluated and potentially modified for format correctness. It plays a crucial role in the node's operation by serving as the primary data that will be adjusted to meet the expected output structure. Type should be `STRING`.
+        - `clip` (Required): A clip parameter that influences the animation and scheduling process, affecting the final output based on the clip's characteristics. Type should be `CLIP`.
+        - `max_frames` (Required): Specifies the maximum number of frames to be considered in the scheduling process. It affects how the JSON text is evaluated, particularly in terms of frame-related adjustments. Type should be `INT`.
+        - `print_output` (Required): A boolean flag indicating whether the output should be printed, affecting the node's execution by potentially adding a debugging or logging step. Type should be `BOOLEAN`.
+        - `current_frame` (Required): Indicates the current frame being processed. This parameter is crucial for determining the specific adjustments needed for the JSON text based on the frame's context. Type should be `INT`.
+        - `pre_text` (Optional): Optional pre-text that can be prepended to the input text, affecting the context or framing of the animation. Type should be `STRING`.
+        - `app_text` (Optional): Optional appended text that can be added to the input text, modifying the final animation's context or narrative. Type should be `STRING`.
+        - `pw_a` (Optional): A weight parameter influencing the animation's dynamics or characteristics in a specific manner. Type should be `FLOAT`.
+        - `pw_b` (Optional): A weight parameter influencing the animation's dynamics or characteristics in a specific manner. Type should be `FLOAT`.
+        - `pw_c` (Optional): A weight parameter influencing the animation's dynamics or characteristics in a specific manner. Type should be `FLOAT`.
+        - `pw_d` (Optional): A weight parameter influencing the animation's dynamics or characteristics in a specific manner. Type should be `FLOAT`.
+    - Outputs:
+        - `POS`: Represents the positive conditioning output, which is part of the final evaluated and adjusted JSON structure, contributing to the animation's positive aspects. Type should be `CONDITIONING`.
+        - `NEG`: Represents the negative conditioning output, which is part of the final evaluated and adjusted JSON structure, contributing to the animation's negative aspects. Type should be `CONDITIONING`.

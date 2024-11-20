@@ -1,0 +1,5 @@
+- `MaskToImage`: The `MaskToImage` node is designed to convert a mask into an image format. This transformation allows for the visualization and further processing of masks as images, facilitating a bridge between mask-based operations and image-based applications.
+    - Inputs:
+        - `mask` (Required): The mask input is essential for the conversion process, serving as the source data that will be transformed into an image format. This input dictates the shape and content of the resulting image. Type should be `MASK`.
+    - Outputs:
+        - `image`: The output is an image representation of the input mask, enabling visual inspection and further image-based manipulations. Type should be `IMAGE`.

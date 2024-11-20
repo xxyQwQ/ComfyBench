@@ -1,0 +1,8 @@
+- `FrequencySeparate`: The FrequencySeparate node is designed for image processing, specifically to separate the high-frequency components from an image by either subtracting or dividing the low-frequency components. This operation is useful for tasks that require manipulation or analysis of an image's texture or fine details without affecting the overall structure.
+    - Inputs:
+        - `original` (Required): The original image from which high-frequency components are to be extracted. It plays a crucial role in determining the texture and fine details to be separated. Type should be `IMAGE`.
+        - `low_frequency` (Required): The low-frequency component of the image, used as a basis for extracting high-frequency details by comparison with the original image. Type should be `IMAGE`.
+        - `mode` (Required): Determines the method of separation (either 'subtract' or 'divide'), affecting how the high-frequency components are calculated from the original image. Type should be `COMBO[STRING]`.
+        - `eps` (Required): A small epsilon value to prevent division by zero when 'divide' mode is selected, ensuring numerical stability. Type should be `FLOAT`.
+    - Outputs:
+        - `high_frequency`: The high-frequency component of the image, representing the texture and fine details separated from the original image. Type should be `IMAGE`.

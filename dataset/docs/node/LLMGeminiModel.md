@@ -1,7 +1,0 @@
-- `LLMGeminiModel`: The LLMGeminiModel node is designed to load and manage language models from the Gemini suite, providing functionalities to initialize these models with specific configurations and API keys. It abstracts the complexities involved in setting up and utilizing Gemini's language models for various natural language processing tasks.
-    - Parameters:
-        - `model_name`: Specifies the name of the Gemini model to be loaded. This selection determines the capabilities and features of the language model that will be utilized. Type should be `COMBO[STRING]`.
-        - `api_key`: The API key required for accessing the Gemini model. It is essential for authenticating and authorizing the model usage. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `model`: A dictionary containing the loaded language model, its name, and an associated embedding model with its name. This output facilitates further processing and utilization of the model in various tasks. Type should be `LLM_MODEL`.

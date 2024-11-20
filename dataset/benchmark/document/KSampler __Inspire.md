@@ -1,0 +1,20 @@
+- `KSampler __Inspire`: The KSampler __Inspire node is designed to perform sampling operations within the Inspire framework, leveraging advanced sampling techniques to generate or modify data based on specified conditions. It abstracts complex sampling algorithms, providing a user-friendly interface for diverse sampling tasks.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for sampling, central to determining the output's characteristics. Type should be `MODEL`.
+        - `seed` (Required): Determines the randomness seed, ensuring reproducibility of results. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps to perform in the sampling process, affecting the detail and quality of the output. Type should be `INT`.
+        - `cfg` (Required): Controls the conditioning factor, influencing the direction and strength of the sampling process. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the specific sampler algorithm to use, impacting the sampling behavior and results. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduler for controlling the sampling process, further refining the output. Type should be `COMBO[STRING]`.
+        - `positive` (Required): Sets positive conditioning to guide the sampling towards desired attributes. Type should be `CONDITIONING`.
+        - `negative` (Required): Applies negative conditioning to steer the sampling away from certain attributes. Type should be `CONDITIONING`.
+        - `latent_image` (Required): Provides an initial latent image to be modified or enhanced through sampling. Type should be `LATENT`.
+        - `denoise` (Required): Adjusts the level of denoising applied during sampling, affecting the clarity and sharpness of the output. Type should be `FLOAT`.
+        - `noise_mode` (Required): Specifies the mode of noise application, influencing the texture and details of the sampled output. Type should be `COMBO[STRING]`.
+        - `batch_seed_mode` (Required): Determines the mode for generating seeds in batch operations, affecting the diversity of the output. Type should be `COMBO[STRING]`.
+        - `variation_seed` (Required): Sets the seed for introducing variations, allowing for controlled randomness in the output. Type should be `INT`.
+        - `variation_strength` (Required): Controls the strength of variations applied, impacting the degree of change from the original. Type should be `FLOAT`.
+        - `variation_method` (Optional): Defines the method used for applying variations, influencing the nature of the modifications. Type should be `COMBO[STRING]`.
+        - `scheduler_func_opt` (Optional): Optionally selects a specific scheduling function, offering further customization of the sampling process. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `latent`: The result of the sampling process, typically a modified or newly generated latent image. Type should be `LATENT`.

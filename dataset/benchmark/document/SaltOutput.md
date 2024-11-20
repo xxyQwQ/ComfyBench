@@ -1,0 +1,10 @@
+- `SaltOutput`: The SaltOutput node is designed to handle the final output processing within the SaltAI framework, focusing on formatting and logging the output data according to specified parameters. It encapsulates the functionality to dynamically generate output metadata, manage file paths, and support a variety of output types including images, audio, and zip files, ensuring the output is correctly structured and accessible.
+    - Inputs:
+        - `output_name` (Required): Specifies the name of the output, which is used to label and identify the output data. It plays a crucial role in organizing and accessing the output effectively. Type should be `STRING`.
+        - `output_desc` (Required): Provides a description for the output, offering context or additional details about the nature or content of the output data. Type should be `STRING`.
+        - `output_type` (Required): Determines the format of the output data, supporting a wide range of types including images, audio, video, and various file formats. This parameter is key to ensuring the output is correctly processed and rendered. Type should be `COMBO[STRING]`.
+        - `output_data` (Required): Contains the actual data to be outputted, which can vary widely in type depending on the output_type parameter. Type should be `*`.
+        - `video_audio` (Optional): Optional audio track for video outputs, allowing for the inclusion of sound in video files. Type should be `AUDIO`.
+        - `animation_fps` (Optional): Specifies the frames per second for animated outputs, controlling the playback speed of animations. Type should be `INT`.
+        - `animation_quality` (Optional): Defines the quality level of animations, offering options to balance between performance and visual fidelity. Type should be `COMBO[STRING]`.
+    - Outputs:

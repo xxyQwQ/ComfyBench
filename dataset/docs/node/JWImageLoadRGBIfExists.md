@@ -1,7 +1,0 @@
-- `JWImageLoadRGBIfExists`: This node is designed to load an RGB image from a specified path if it exists; otherwise, it returns a default image provided as input. It ensures that the operation is conditional based on the file's existence, facilitating flexible image handling in workflows where the presence of an image file cannot be guaranteed.
-    - Parameters:
-        - `path`: Specifies the file path of the image to be loaded. If the file does not exist, the node uses the default image provided. Type should be `STRING`.
-    - Inputs:
-        - `default`: The default image to return if the specified path does not contain an image file. This allows for a fallback option, ensuring that the node's operation can proceed even in the absence of the target file. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The loaded RGB image if the specified file exists, or the default image if it does not. This output facilitates subsequent image processing or analysis steps. Type should be `IMAGE`.

@@ -1,8 +1,0 @@
-- `Image Premultiply (mtb)`: The MTB_ImagePremultiply node is designed to premultiply an image with a mask, optionally inverting the mask. This operation is commonly used in image processing to combine an image with a transparency mask, affecting the image's transparency according to the mask's values.
-    - Parameters:
-        - `invert`: The 'invert' parameter allows for the inversion of the mask's values before applying it to the image. This inversion can alter the visual outcome by changing which parts of the image are transparent. Type should be `BOOLEAN`.
-    - Inputs:
-        - `image`: The 'image' parameter represents the image to be premultiplied with the mask. It plays a crucial role in the node's operation by serving as the primary visual content to be processed. Type should be `IMAGE`.
-        - `mask`: The 'mask' parameter is used to define the transparency mask that will be applied to the image. Its values determine the transparency of the corresponding areas in the image, significantly influencing the output. Type should be `MASK`.
-    - Outputs:
-        - `RGBA`: The output is an image that has been premultiplied with the mask, reflecting the combined visual effect of the image and mask transparency. Type should be `IMAGE`.

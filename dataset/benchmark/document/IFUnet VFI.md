@@ -1,0 +1,11 @@
+- `IFUnet VFI`: The IFUnet_VFI node specializes in video frame interpolation, leveraging deep learning models to predict and generate intermediate frames between existing frames in a video sequence. This process enhances video fluidity and can be used to increase the frame rate of videos, improve slow-motion effects, or restore missing frames in damaged video files.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the checkpoint name for the model to be used in the frame interpolation process, determining the specific pre-trained model configuration. Type should be `COMBO[STRING]`.
+        - `frames` (Required): A sequence of images representing the video frames between which the interpolation will occur, serving as the input for generating intermediate frames. Type should be `IMAGE`.
+        - `clear_cache_after_n_frames` (Required): Controls the frequency of cache clearing to manage memory usage during the interpolation process, optimizing performance. Type should be `INT`.
+        - `multiplier` (Required): Defines the factor by which the frame rate is to be increased, indicating the number of intermediate frames to be generated. Type should be `INT`.
+        - `scale_factor` (Required): Determines the scaling factor applied to the frames during the interpolation process, affecting the resolution and size of the output frames. Type should be `FLOAT`.
+        - `ensemble` (Required): A boolean flag that enables or disables the use of ensemble methods for frame interpolation, potentially improving the quality of the output. Type should be `BOOLEAN`.
+        - `optional_interpolation_states` (Optional): Optional states for managing the interpolation process, allowing for advanced control over frame selection and processing. Type should be `INTERPOLATION_STATES`.
+    - Outputs:
+        - `image`: The output image sequence after interpolation, representing the enhanced video with additional frames inserted. Type should be `IMAGE`.

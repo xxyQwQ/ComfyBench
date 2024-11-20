@@ -1,0 +1,5 @@
+- `easy removeLocalImage`: The `easy removeLocalImage` node is designed to search for and delete a specified local image file. It operates by traversing directories to find a file that matches the given name, removing it if found, and providing feedback on the operation's success or failure.
+    - Inputs:
+        - `any` (Required): This parameter is used internally for ensuring the node's compatibility with the system's requirements, without affecting the node's core functionality of searching and deleting files. Type should be `*`.
+        - `file_name` (Required): Specifies the name of the file to be searched and deleted. This parameter is crucial for identifying the target file within the local storage. Type should be `STRING`.
+    - Outputs:

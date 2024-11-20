@@ -1,0 +1,19 @@
+- `PixelTiledKSampleUpscalerProviderPipe`: This node provides a pipeline for upscaling images using a tiled K-sample upscaling method. It integrates various components such as model selection, VAE, seed, steps, configuration, sampler name, scheduler, denoising, and tiling strategy to perform image upscaling. The node is designed to work with specific upscale models and supports customization through options like upscale model optimization, post-kernel hooks, and tile convolution network options.
+    - Inputs:
+        - `scale_method` (Required): Specifies the method used for scaling the image, affecting the overall upscaling process. Type should be `COMBO[STRING]`.
+        - `seed` (Required): Determines the random seed used for generating samples, influencing the upscaling's randomness and reproducibility. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps to perform in the upscaling process, impacting the detail and quality of the output. Type should be `INT`.
+        - `cfg` (Required): Configuration parameter that influences the sampling behavior and the quality of the generated image. Type should be `FLOAT`.
+        - `sampler_name` (Required): The name of the sampler used in the upscaling process, affecting the sampling strategy and output quality. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Scheduler used to adjust the sampling process over the steps, influencing the progression of detail enhancement. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Indicates whether denoising is applied during the upscaling process, affecting the clarity and quality of the output image. Type should be `FLOAT`.
+        - `tile_width` (Required): The width of the tiles used in the tiling strategy, affecting the granularity of processing and potentially the output quality. Type should be `INT`.
+        - `tile_height` (Required): The height of the tiles used in the tiling strategy, similar to tile width, it affects the granularity of processing. Type should be `INT`.
+        - `tiling_strategy` (Required): The strategy used for tiling the image during upscaling, influencing how the image is divided and processed. Type should be `COMBO[STRING]`.
+        - `basic_pipe` (Required): A pipeline of basic components required for the upscaling process, including model, VAE, and other essential elements. Type should be `BASIC_PIPE`.
+        - `upscale_model_opt` (Optional): Optional parameter for optimizing the upscale model, allowing for customization of the upscaling process. Type should be `UPSCALE_MODEL`.
+        - `pk_hook_opt` (Optional): Optional parameter for post-kernel hooks, enabling further customization of the upscaling process. Type should be `PK_HOOK`.
+        - `tile_cnet_opt` (Optional): Optional parameter for tile convolution network options, allowing for adjustments in how tiles are processed. Type should be `CONTROL_NET`.
+        - `tile_cnet_strength` (Optional): Strength of the tile convolution network, affecting the intensity of processing on each tile. Type should be `FLOAT`.
+    - Outputs:
+        - `upscaler`: The upscaler object configured with the provided parameters, ready to perform image upscaling. Type should be `UPSCALER`.

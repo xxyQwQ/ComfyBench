@@ -1,7 +1,0 @@
-- `Text Dictionary New`: This node is designed to create a new dictionary from a given string representation of a dictionary. It focuses on converting textual representations of dictionaries into actual dictionary objects, enabling further manipulation or usage within the flow.
-    - Parameters:
-        - `key_i`: unknown Type should be `STRING`.
-        - `value_i`: unknown Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `dict`: The output is a dictionary object created from the input string representation. This allows for the dynamic creation and utilization of dictionaries within the workflow. Type should be `DICT`.

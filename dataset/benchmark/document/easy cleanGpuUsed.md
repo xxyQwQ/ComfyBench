@@ -1,0 +1,4 @@
+- `easy cleanGpuUsed`: The `cleanGpuUsed` node is designed to facilitate the release of GPU resources by clearing the GPU memory cache and unloading all models from memory. This operation is crucial for managing GPU memory efficiently, especially in environments where multiple models are loaded and unloaded dynamically.
+    - Inputs:
+        - `anything` (Required): This parameter acts as a placeholder to allow the node to be called without specific input requirements, emphasizing its utility function rather than processing specific data. Type should be `*`.
+    - Outputs:

@@ -1,0 +1,13 @@
+- `easy latentCompositeMaskedWithCond`: This node is designed for advanced image manipulation within the latent space, specifically tailored for conditional composite operations. It enables the blending of two latent representations based on a mask, with additional conditions that can modify the blending process. This functionality is crucial for creating nuanced and contextually aware modifications to generated images, allowing for precise control over the composition of visual elements.
+    - Inputs:
+        - `pipe` (Required): unknown Type should be `PIPE_LINE`.
+        - `text_combine` (Required): unknown Type should be `LIST`.
+        - `source_latent` (Required): unknown Type should be `LATENT`.
+        - `source_mask` (Required): unknown Type should be `MASK`.
+        - `destination_mask` (Required): unknown Type should be `MASK`.
+        - `text_combine_mode` (Required): unknown Type should be `COMBO[STRING]`.
+        - `replace_text` (Required): unknown Type should be `STRING`.
+    - Outputs:
+        - `pipe`: unknown Type should be `PIPE_LINE`.
+        - `latent`: unknown Type should be `LATENT`.
+        - `conditioning`: unknown Type should be `CONDITIONING`.

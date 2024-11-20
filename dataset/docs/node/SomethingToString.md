@@ -1,8 +1,0 @@
-- `SomethingToString`: Provides a flexible way to convert various input types into a string format, optionally allowing for the addition of prefixes or suffixes to customize the output.
-    - Parameters:
-        - `prefix`: An optional prefix to prepend to the stringified input. This allows for additional context or formatting to be applied to the beginning of the output. Type should be `STRING`.
-        - `suffix`: An optional suffix to append to the stringified input. This enables further customization or formatting at the end of the output. Type should be `STRING`.
-    - Inputs:
-        - `input`: The primary input for conversion to string. This parameter is central to the node's operation, as it determines the base content that will be transformed into a string format. Type should be `*`.
-    - Outputs:
-        - `string`: The result of the conversion process, potentially including any specified prefixes or suffixes, formatted as a string. Type should be `STRING`.

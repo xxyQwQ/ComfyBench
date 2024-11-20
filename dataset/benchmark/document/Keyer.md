@@ -1,0 +1,12 @@
+- `Keyer`: The Keyer node is designed for image processing, specifically to apply keying operations that selectively adjust the transparency of image areas based on color and brightness criteria. It allows for sophisticated manipulation of images, enabling the creation or modification of alpha channels to achieve effects like background removal or compositing.
+    - Inputs:
+        - `images` (Required): The images to be processed, serving as the primary input for keying operations. This parameter is crucial for defining which images undergo the keying process. Type should be `IMAGE`.
+        - `operation` (Required): Specifies the keying operation to be performed, affecting how the images' colors and brightness levels are evaluated for transparency. Type should be `COMBO[STRING]`.
+        - `low` (Required): Defines the lower threshold for the keying operation, determining the minimum value for pixels to be considered transparent. Type should be `FLOAT`.
+        - `high` (Required): Sets the upper threshold for the keying operation, establishing the maximum value for pixels to be considered transparent. Type should be `FLOAT`.
+        - `gamma` (Required): Adjusts the gamma value for the keying operation, influencing the mid-tone contrast and overall appearance of the keyed image. Type should be `FLOAT`.
+        - `premult` (Required): Determines whether the output images should be pre-multiplied with their alpha channel, affecting the blending behavior in compositing workflows. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The processed image after the keying operation, with adjusted transparency based on the specified criteria. Type should be `IMAGE`.
+        - `alpha`: The alpha channel generated or modified by the keying operation, representing the transparency levels of the processed image. Type should be `IMAGE`.
+        - `mask`: A mask derived from the keying operation, indicating areas of transparency and opacity within the image. Type should be `MASK`.

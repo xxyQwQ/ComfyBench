@@ -1,7 +1,0 @@
-- `Wildcard Processor`: The Wildcard Processor node is designed to process text inputs by searching for and replacing wildcard patterns with specified content. It utilizes a seed value to ensure reproducibility in the selection of replacements, making it suitable for generating varied yet consistent outputs based on the input prompt.
-    - Parameters:
-        - `prompt`: The 'prompt' parameter is the text input that contains wildcard patterns to be processed. It plays a crucial role in determining the output of the node by providing the base content that will undergo transformation. Type should be `STRING`.
-        - `seed`: The 'seed' parameter is used to initialize the random number generator, ensuring that the selection of replacements for wildcard patterns in the prompt is reproducible and consistent across runs. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `string`: The output is a modified version of the input prompt, where wildcard patterns have been replaced with specified content, based on the provided seed value. Type should be `STRING`.

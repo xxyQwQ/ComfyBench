@@ -1,0 +1,9 @@
+- `ADE_UseEvolvedSampling`: The ADE_UseEvolvedSampling node integrates advanced sampling techniques into the animation diffusion process, leveraging evolved model sampling configurations to enhance the quality and efficiency of generated animations. It adapts the sampling process based on model configurations and dynamic conditions, aiming to optimize the animation output with respect to visual fidelity and computational performance.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used in the animation diffusion process, affecting the overall quality and characteristics of the generated animations. Type should be `MODEL`.
+        - `beta_schedule` (Required): Determines the beta schedule to be applied during the sampling process, influencing the smoothness and quality of the animation transitions. Type should be `COMBO[STRING]`.
+        - `m_models` (Optional): Optional. Provides additional models for consideration in the animation process, potentially enhancing the diversity and richness of the output. Type should be `M_MODELS`.
+        - `context_options` (Optional): Optional. Defines context-specific options that can modify the behavior of the sampling process, tailoring it to specific requirements or preferences. Type should be `CONTEXT_OPTIONS`.
+        - `sample_settings` (Optional): Optional. Specifies settings related to the sampling process, such as resolution and temporal adjustments, directly impacting the animation's visual quality. Type should be `SAMPLE_SETTINGS`.
+    - Outputs:
+        - `model`: The enhanced model instance, equipped with evolved sampling configurations for improved animation diffusion. Type should be `MODEL`.

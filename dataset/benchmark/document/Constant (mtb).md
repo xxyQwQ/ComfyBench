@@ -1,0 +1,5 @@
+- `Constant (mtb)`: The MTB_Constant node is designed to output a constant value. It serves as a utility within a graph to provide a fixed value that can be used as input to other nodes, facilitating the creation of static or dynamic flows based on predefined constants.
+    - Inputs:
+        - `Value` (Required): Represents the constant value to be output by the node. This parameter is essential for defining the static data that will be passed through the graph, affecting subsequent operations. Type should be `*`.
+    - Outputs:
+        - `output`: The output of the MTB_Constant node, which is the constant value defined by the input parameter. This value is passed through the graph for use in subsequent nodes. Type should be `*`.

@@ -1,0 +1,11 @@
+- `MotionDataVisualizer`: The MotionDataVisualizer node is designed to transform motion data into a visual representation, allowing for the visualization of motion through various parameters such as distance, elevation, and rotation. It supports different visualization styles and outputs the visualized motion as a sequence of tensor frames.
+    - Inputs:
+        - `motion_data` (Required): The motion data to be visualized, which can include joints information or require conversion from motion format to joints. This input is crucial as it directly influences the visual output by determining the motion's structure and dynamics to be visualized. Type should be `MOTION_DATA`.
+        - `visualization` (Required): Specifies the style of visualization to be applied to the motion data, affecting the visual appearance and interpretability of the output. Type should be `COMBO[STRING]`.
+        - `distance` (Required): The distance parameter controls the camera distance from the motion in the visualization, impacting the scale and perspective of the visualized motion. Type should be `FLOAT`.
+        - `elevation` (Required): The elevation parameter adjusts the camera elevation angle for the visualization, influencing the vertical angle and overall view of the motion. Type should be `FLOAT`.
+        - `rotation` (Required): The rotation parameter sets the camera rotation angle around the motion in the visualization, affecting the orientation and angle of the visualized motion. Type should be `FLOAT`.
+        - `poselinewidth` (Required): Defines the line width for the pose representation in the visualization, impacting the clarity and visual prominence of the motion's pose. Type should be `FLOAT`.
+        - `opt_title` (Optional): An optional title for the visualization, which can enhance the context or provide additional information for the visualized motion. Type should be `STRING`.
+    - Outputs:
+        - `image`: The visualized motion output as an image. Type should be `IMAGE`.

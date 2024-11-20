@@ -1,0 +1,7 @@
+- `SaltSortJSON`: This node sorts a list of dictionaries contained within a JSON string based on a specified key and order. It is designed to organize JSON data in a more readable or structured format, facilitating easier data manipulation and analysis.
+    - Inputs:
+        - `json_input` (Required): The JSON string input that contains a list of dictionaries to be sorted. It is essential for specifying the data to be organized. Type should be `STRING`.
+        - `sort_key` (Required): The key within the dictionaries to sort the list by. This key determines the order of the sorted data. Type should be `STRING`.
+        - `reverse` (Required): A boolean flag that specifies the sorting order. When true, the list is sorted in descending order; otherwise, it's sorted in ascending order. Type should be `BOOLEAN`.
+    - Outputs:
+        - `json_output`: The sorted JSON string output, providing a structured representation of the input data after sorting. Type should be `STRING`.

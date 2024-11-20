@@ -1,6 +1,0 @@
-- `ADE_SigmaSchedule`: The ADE_SigmaSchedule node is designed to generate a sigma schedule based on a given beta schedule. It abstracts the complexity of sigma schedule creation, offering a straightforward way to obtain a sigma schedule tailored to specific model sampling types and configurations.
-    - Parameters:
-        - `beta_schedule`: Specifies the beta schedule to be used for generating the sigma schedule. This parameter is crucial as it determines the base configuration from which the sigma schedule will be derived. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `sigma_schedule`: Outputs a sigma schedule object, which is essential for defining the progression of noise levels in diffusion-based generative models. Type should be `SIGMA_SCHEDULE`.

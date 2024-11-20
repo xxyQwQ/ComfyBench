@@ -1,0 +1,25 @@
+- `SeargeSDXLImage2ImageSampler2`: This node specializes in image-to-image sampling, incorporating high-resolution fixes to enhance the quality and detail of the output images. It leverages advanced sampling techniques to transform input images into refined versions, maintaining the essence while improving visual fidelity.
+    - Inputs:
+        - `base_model` (Required): Specifies the base model used for the initial phase of image sampling, setting the foundation for subsequent refinements. Type should be `MODEL`.
+        - `base_positive` (Required): Positive conditioning for the base model, guiding the initial image transformation with desired attributes. Type should be `CONDITIONING`.
+        - `base_negative` (Required): Negative conditioning for the base model, instructing it to avoid certain attributes during the initial transformation. Type should be `CONDITIONING`.
+        - `refiner_model` (Required): The model used for refining the output of the base model, enhancing details and overall image quality. Type should be `MODEL`.
+        - `refiner_positive` (Required): Positive conditioning for the refiner model, further guiding the enhancement of image details. Type should be `CONDITIONING`.
+        - `refiner_negative` (Required): Negative conditioning for the refiner model, ensuring undesired attributes are minimized in the final output. Type should be `CONDITIONING`.
+        - `image` (Required): The original image input for the sampling process, serving as the basis for both initial transformation and subsequent refinement. Type should be `IMAGE`.
+        - `vae` (Required): The variational autoencoder used to process the image, contributing to the generation of latent representations. Type should be `VAE`.
+        - `noise_seed` (Required): A seed value for noise generation, ensuring reproducibility in the sampling process. Type should be `INT`.
+        - `steps` (Required): The number of steps to be used in the sampling process, affecting the detail and quality of the output. Type should be `INT`.
+        - `cfg` (Required): Configuration parameter influencing the sampling process, allowing for fine-tuning of the output. Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the sampling algorithm to be used, affecting the approach to image transformation. Type should be `SAMPLER_NAME`.
+        - `scheduler` (Required): Determines the scheduling algorithm for sampling, impacting the progression of image refinement. Type should be `SCHEDULER_NAME`.
+        - `base_ratio` (Required): Defines the ratio of steps allocated to the base model versus the refiner model, balancing between initial transformation and refinement. Type should be `FLOAT`.
+        - `denoise` (Required): Controls the level of denoising applied during the refinement process, affecting the clarity of the final image. Type should be `FLOAT`.
+        - `upscale_model` (Optional): Specifies the model used for upscaling the image, enhancing its resolution as part of the refinement process. Type should be `UPSCALE_MODEL`.
+        - `scaled_width` (Optional): The target width for image upscaling, defining the dimensions of the output image. Type should be `INT`.
+        - `scaled_height` (Optional): The target height for image upscaling, defining the dimensions of the output image. Type should be `INT`.
+        - `noise_offset` (Optional): Adjusts the noise level added during the sampling process, allowing for finer control over the texture and details of the output image. Type should be `INT`.
+        - `refiner_strength` (Optional): Determines the intensity of the refinement process, directly influencing the detail and quality of the final image. Type should be `FLOAT`.
+        - `softness` (Optional): Adjusts the softness of the image, affecting the smoothness and blending of details during the refinement process. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The final, refined image output, showcasing enhanced detail and quality following the sampling process. Type should be `IMAGE`.

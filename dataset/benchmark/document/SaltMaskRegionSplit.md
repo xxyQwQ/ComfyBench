@@ -1,0 +1,10 @@
+- `SaltMaskRegionSplit`: The SaltMaskRegionSplit node is designed to isolate and split different regions within a given set of masks, effectively segmenting them into distinct areas based on connectivity.
+    - Inputs:
+        - `masks` (Required): The input masks to be segmented into distinct regions. This parameter is crucial for determining the segmentation outcome, as it directly influences the isolation of different areas within the masks. Type should be `MASK`.
+    - Outputs:
+        - `region1`: Represents the first isolated region from the input masks. Type should be `MASK`.
+        - `region2`: Represents the second isolated region from the input masks. Type should be `MASK`.
+        - `region3`: Represents the third isolated region from the input masks. Type should be `MASK`.
+        - `region4`: Represents the fourth isolated region from the input masks. Type should be `MASK`.
+        - `region5`: Represents the fifth isolated region from the input masks. Type should be `MASK`.
+        - `region6`: Represents the sixth isolated region from the input masks. Type should be `MASK`.

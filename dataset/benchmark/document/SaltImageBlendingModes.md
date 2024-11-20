@@ -1,0 +1,9 @@
+- `SaltImageBlendingModes`: This node is designed for blending two sets of images together using a variety of blending modes. It allows for the adjustment of blend percentages and the application of masks to control the blending process, offering a flexible approach to creating composite images.
+    - Inputs:
+        - `images_a` (Required): The first set of images to be blended. These serve as the base layer in the blending process. Type should be `IMAGE`.
+        - `images_b` (Required): The second set of images to be blended with the first set. These images act as the overlay layer. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the blending mode to be used. Each mode applies a different algorithm for combining the images, affecting the visual outcome of the blend. Type should be `COMBO[STRING]`.
+        - `blend_percentage` (Required): Determines the intensity of the blend between the two image sets. A higher percentage results in a stronger presence of the overlay images. Type should be `FLOAT`.
+        - `masks` (Optional): Optional masks that can be applied to the images to control where the blending occurs. Useful for creating more precise or complex composite images. Type should be `MASK`.
+    - Outputs:
+        - `images`: The resulting set of blended images. Type should be `IMAGE`.

@@ -1,0 +1,14 @@
+- `ScheduledPerpNegCFGGuider __Inspire`: The ScheduledPerpNegCFGGuider node dynamically adjusts the guidance scale for negative prompts in a scheduled manner during the sampling process. It integrates negative conditioning with a configurable schedule to fine-tune the influence of negative prompts over time, aiming to optimize the generation quality by balancing the guidance scale.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for generation, serving as the foundation for the sampling process. Type should be `MODEL`.
+        - `positive` (Required): Defines positive conditioning prompts that guide the generation towards desired attributes or content. Type should be `CONDITIONING`.
+        - `negative` (Required): Specifies negative conditioning prompts to steer the generation away from undesired attributes or content. Type should be `CONDITIONING`.
+        - `empty_conditioning` (Required): Provides an option for empty conditioning, allowing for flexibility in the generation process. Type should be `CONDITIONING`.
+        - `neg_scale` (Required): Determines the scale of influence for negative prompts, allowing for fine-tuning of their impact on the generation. Type should be `FLOAT`.
+        - `sigmas` (Required): Specifies the noise levels for the diffusion process, contributing to the diversity of the generated content. Type should be `SIGMAS`.
+        - `from_cfg` (Required): Sets the initial guidance scale, marking the starting point of the scheduled adjustment. Type should be `FLOAT`.
+        - `to_cfg` (Required): Defines the final guidance scale, indicating the endpoint of the scheduled adjustment. Type should be `FLOAT`.
+        - `schedule` (Required): Determines the schedule according to which the guidance scale is adjusted over time, offering various strategies for dynamic adaptation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `guider`: Provides the configured guider with scheduled negative conditioning, ready for use in the sampling process. Type should be `GUIDER`.
+        - `sigmas`: Returns the noise levels used in the diffusion process, essential for controlling the generation's randomness. Type should be `SIGMAS`.

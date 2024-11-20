@@ -1,9 +1,0 @@
-- `CR Model Input Switch`: This node allows for dynamic selection between two model inputs based on a specified integer input. It facilitates conditional model selection within a workflow, providing a link to further help and guidance.
-    - Parameters:
-        - `Input`: Determines which model input to select for the workflow based on its value. It plays a crucial role in conditional logic, affecting the node's execution path. Type should be `INT`.
-    - Inputs:
-        - `model1`: The first model option that can be selected as input. It's one of the conditional choices available for the workflow. Type should be `MODEL`.
-        - `model2`: The second model option that can be selected as input. It offers an alternative choice for the workflow's conditional logic. Type should be `MODEL`.
-    - Outputs:
-        - `MODEL`: The selected model input based on the 'Input' parameter. It's the outcome of the node's conditional logic. Type should be `MODEL`.
-        - `show_help`: Provides a link to further documentation and help for using this node effectively. Type should be `STRING`.

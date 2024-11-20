@@ -1,0 +1,9 @@
+- `FindComplementaryColor`: This node is designed to find a complementary color within an image based on a given color dictionary and a specified power level. It can optionally use a mask to limit the search area within the image. The node aims to enhance or modify images by identifying and utilizing complementary colors, thereby supporting tasks related to color theory and image editing.
+    - Inputs:
+        - `image` (Required): The input image on which the complementary color search is performed. It serves as the primary data for analysis. Type should be `IMAGE`.
+        - `color_dict` (Required): A dictionary mapping specific colors to their identifiers, used to determine the complementary color within the image. Type should be `COLOR_DICT`.
+        - `power` (Required): Affects the intensity of the search for a complementary color, influencing how the complementary color is determined. Type should be `FLOAT`.
+        - `mask` (Optional): An optional mask that can be applied to the image to restrict the search area for the complementary color. Type should be `IMAGE`.
+    - Outputs:
+        - `color`: The RGB values of the identified complementary color. Type should be `COLOR`.
+        - `string`: The identifier of the found complementary color from the provided color dictionary. Type should be `STRING`.

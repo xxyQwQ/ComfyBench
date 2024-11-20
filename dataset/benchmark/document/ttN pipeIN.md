@@ -1,0 +1,12 @@
+- `ttN pipeIN`: The ttN pipeIN node is designed for initializing and configuring pipelines within the tinyterra ecosystem, specifically tailored for legacy applications. It focuses on setting up the initial parameters required for a pipeline, including models, conditioning, latent space, VAE, CLIP, and seed values, along with optional image inputs.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used in the pipeline, serving as the foundational component for subsequent operations. Type should be `MODEL`.
+        - `pos` (Required): Defines positive conditioning inputs to guide the model's generation towards desired attributes or features. Type should be `CONDITIONING`.
+        - `neg` (Required): Specifies negative conditioning inputs to steer the model's generation away from certain attributes or features. Type should be `CONDITIONING`.
+        - `latent` (Required): Determines the latent space dimensions to be explored during generation, affecting the diversity and novelty of outputs. Type should be `LATENT`.
+        - `vae` (Required): Specifies the VAE (Variational Autoencoder) to be used for generating or refining outputs, contributing to the quality and variability of the results. Type should be `VAE`.
+        - `clip` (Required): Defines the CLIP model to be used for semantic understanding and alignment of generated content with textual descriptions. Type should be `CLIP`.
+        - `seed` (Required): Sets the seed value for random number generation, ensuring reproducibility of results. Type should be `INT`.
+        - `image` (Optional): Optional parameter for including an image input to be used in conjunction with other inputs for generation or refinement. Type should be `IMAGE`.
+    - Outputs:
+        - `pipe`: Outputs a configured pipeline object ready for further processing or generation within the tinyterra ecosystem. Type should be `PIPE_LINE`.

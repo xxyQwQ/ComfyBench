@@ -1,0 +1,181 @@
+{
+    "1": {
+        "_meta": {
+            "title": "Load Image"
+        },
+        "class_type": "LoadImage",
+        "inputs": {
+            "image": "letter_r.jpg",
+            "upload": "image"
+        }
+    },
+    "10": {
+        "_meta": {
+            "title": "Load ControlNet Model"
+        },
+        "class_type": "ControlNetLoader",
+        "inputs": {
+            "control_net_name": "control_v11p_sd15_lineart_fp16.safetensors"
+        }
+    },
+    "11": {
+        "_meta": {
+            "title": "Apply ControlNet (Advanced)"
+        },
+        "class_type": "ControlNetApplyAdvanced",
+        "inputs": {
+            "control_net": [
+                "10",
+                0
+            ],
+            "end_percent": 1,
+            "image": [
+                "12",
+                0
+            ],
+            "negative": [
+                "3",
+                0
+            ],
+            "positive": [
+                "2",
+                0
+            ],
+            "start_percent": 0,
+            "strength": 0.5
+        }
+    },
+    "12": {
+        "_meta": {
+            "title": "AIO Aux Preprocessor"
+        },
+        "class_type": "AIO_Preprocessor",
+        "inputs": {
+            "image": [
+                "1",
+                0
+            ],
+            "preprocessor": "LineArtPreprocessor",
+            "resolution": 512
+        }
+    },
+    "2": {
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "a logo for a game app, bright color"
+        }
+    },
+    "3": {
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "watermark, blurry, distorted"
+        }
+    },
+    "4": {
+        "_meta": {
+            "title": "Load Checkpoint"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "inputs": {
+            "ckpt_name": "majicmixRealistic_v7.safetensors"
+        }
+    },
+    "5": {
+        "_meta": {
+            "title": "Load VAE"
+        },
+        "class_type": "VAELoader",
+        "inputs": {
+            "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+        }
+    },
+    "6": {
+        "_meta": {
+            "title": "VAE Encode"
+        },
+        "class_type": "VAEEncode",
+        "inputs": {
+            "pixels": [
+                "1",
+                0
+            ],
+            "vae": [
+                "5",
+                0
+            ]
+        }
+    },
+    "7": {
+        "_meta": {
+            "title": "KSampler"
+        },
+        "class_type": "KSampler",
+        "inputs": {
+            "cfg": 7,
+            "denoise": 1,
+            "latent_image": [
+                "6",
+                0
+            ],
+            "model": [
+                "4",
+                0
+            ],
+            "negative": [
+                "11",
+                1
+            ],
+            "positive": [
+                "11",
+                0
+            ],
+            "sampler_name": "dpmpp_2m",
+            "scheduler": "karras",
+            "seed": 903203409270830,
+            "steps": 25
+        }
+    },
+    "8": {
+        "_meta": {
+            "title": "VAE Decode"
+        },
+        "class_type": "VAEDecode",
+        "inputs": {
+            "samples": [
+                "7",
+                0
+            ],
+            "vae": [
+                "5",
+                0
+            ]
+        }
+    },
+    "9": {
+        "_meta": {
+            "title": "Save Image"
+        },
+        "class_type": "SaveImage",
+        "inputs": {
+            "filename_prefix": "green_apple",
+            "images": [
+                "8",
+                0
+            ]
+        }
+    }
+}

@@ -1,0 +1,6 @@
+- `Inference_Core_SAMPreprocessor`: The SAM Preprocessor node is designed for segmenting images using the SAM (Segment Anything Model) architecture. It leverages a pretrained SAM model to process images, adjusting their resolution as needed, and returns the segmented output.
+    - Inputs:
+        - `image` (Required): The input image to be segmented. This is the primary data the SAM Preprocessor operates on, determining the areas of interest within the image. Type should be `IMAGE`.
+        - `resolution` (Optional): Specifies the resolution to which the input image should be scaled before segmentation. This affects the granularity and quality of the segmentation output. Type should be `INT`.
+    - Outputs:
+        - `image`: The segmented version of the input image, highlighting different regions as determined by the SAM model. Type should be `IMAGE`.

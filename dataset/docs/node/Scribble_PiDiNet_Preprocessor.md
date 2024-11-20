@@ -1,8 +1,0 @@
-- `Scribble_PiDiNet_Preprocessor`: This node preprocesses images to extract scribble lines using the PiDiNet model, enhancing them for further processing or visualization. It focuses on generating clear, scribble-like lines from input images, making it suitable for applications requiring stylized line drawings or sketches.
-    - Parameters:
-        - `safe`: A mode that, when enabled, applies additional safety checks or constraints during the processing to ensure robustness. Type should be `COMBO[STRING]`.
-        - `resolution`: The resolution to which the input image is scaled before processing. This affects the detail level of the extracted lines. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for scribble line extraction. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed image with enhanced scribble lines, suitable for visualization or further processing. Type should be `IMAGE`.

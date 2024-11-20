@@ -1,0 +1,5 @@
+- `Number to String`: The node converts a numerical input into its string representation, facilitating operations that require the input in textual form.
+    - Inputs:
+        - `number` (Required): The numerical input to be converted into a string. This parameter is crucial for the conversion process, determining the textual output. Type should be `NUMBER`.
+    - Outputs:
+        - `string`: The string representation of the numerical input. Type should be `STRING`.

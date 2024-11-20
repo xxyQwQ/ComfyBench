@@ -1,0 +1,13 @@
+- `LLMScaleSERPSearch`: This node is designed to leverage the capabilities of the ScaleSERP module to perform search operations, parsing the results into a structured format suitable for further analysis or integration into larger workflows. It abstracts the complexities of interacting with the ScaleSERP API, providing a streamlined interface for executing searches and handling the results.
+    - Inputs:
+        - `api_key` (Required): The api_key is a required string input that represents the API key for accessing the ScaleSERP service. It is essential for authenticating and authorizing the search operation on the platform. Type should be `STRING`.
+        - `query` (Required): The query is a required string input that specifies the search terms or phrases. It is the primary determinant of the search operation's scope and relevance, directly influencing the results retrieved from the platform. Type should be `STRING`.
+        - `search_type` (Optional): The search_type input allows users to specify the type of search to perform, such as 'news', 'scholar', 'places', or 'shopping', affecting the scope and nature of the search results. Type should be `COMBO[STRING]`.
+        - `location` (Optional): The location input enables specifying the geographical location for the search, influencing the relevance of the search results to the specified area. Type should be `STRING`.
+        - `device` (Optional): The device input specifies the type of device context for the search, such as 'desktop', 'mobile', or 'tablet', affecting the format and relevance of the search results. Type should be `COMBO[STRING]`.
+        - `mobile_type` (Optional): The mobile_type input is relevant when the device is set to 'mobile', allowing further specification of the mobile device type for tailored search results. Type should be `COMBO[STRING]`.
+        - `tablet_type` (Optional): The tablet_type input is relevant when the device is set to 'tablet', allowing further specification of the tablet device type for tailored search results. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `documents`: The documents output contains the structured search results, including relevant information parsed from the ScaleSERP platform, suitable for further analysis or integration. Type should be `DOCUMENT`.
+        - `results_dict`: The results_dict output contains the raw JSON response from the ScaleSERP API, offering comprehensive access to all data retrieved during the search operation. Type should be `DICT`.
+        - `links_list`: The links_list output includes the URLs of the search results, providing direct links to the sources of information retrieved during the search operation. Type should be `LIST`.

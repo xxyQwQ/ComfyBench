@@ -1,0 +1,38 @@
+- `FaceDetailerPipe`: The FaceDetailerPipe node is designed to enhance facial details in images, leveraging advanced image processing techniques to improve the clarity and definition of facial features. This node is part of the ComfyUI Impact Pack, focusing on delivering high-quality facial detail enhancements for various applications.
+    - Inputs:
+        - `image` (Required): The image parameter represents the input image to be enhanced, serving as the primary subject for facial detailing. Type should be `IMAGE`.
+        - `detailer_pipe` (Required): unknown Type should be `DETAILER_PIPE`.
+        - `guide_size` (Required): unknown Type should be `FLOAT`.
+        - `guide_size_for` (Required): unknown Type should be `BOOLEAN`.
+        - `max_size` (Required): unknown Type should be `FLOAT`.
+        - `seed` (Required): unknown Type should be `INT`.
+        - `steps` (Required): unknown Type should be `INT`.
+        - `cfg` (Required): unknown Type should be `FLOAT`.
+        - `sampler_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): unknown Type should be `COMBO[STRING]`.
+        - `denoise` (Required): unknown Type should be `FLOAT`.
+        - `feather` (Required): unknown Type should be `INT`.
+        - `noise_mask` (Required): unknown Type should be `BOOLEAN`.
+        - `force_inpaint` (Required): unknown Type should be `BOOLEAN`.
+        - `bbox_threshold` (Required): unknown Type should be `FLOAT`.
+        - `bbox_dilation` (Required): unknown Type should be `INT`.
+        - `bbox_crop_factor` (Required): unknown Type should be `FLOAT`.
+        - `sam_detection_hint` (Required): unknown Type should be `COMBO[STRING]`.
+        - `sam_dilation` (Required): unknown Type should be `INT`.
+        - `sam_threshold` (Required): unknown Type should be `FLOAT`.
+        - `sam_bbox_expansion` (Required): unknown Type should be `INT`.
+        - `sam_mask_hint_threshold` (Required): unknown Type should be `FLOAT`.
+        - `sam_mask_hint_use_negative` (Required): unknown Type should be `COMBO[STRING]`.
+        - `drop_size` (Required): unknown Type should be `INT`.
+        - `refiner_ratio` (Required): unknown Type should be `FLOAT`.
+        - `cycle` (Required): unknown Type should be `INT`.
+        - `inpaint_model` (Optional): unknown Type should be `BOOLEAN`.
+        - `noise_mask_feather` (Optional): unknown Type should be `INT`.
+        - `scheduler_func_opt` (Optional): unknown Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `image`: unknown Type should be `IMAGE`.
+        - `cropped_refined`: unknown Type should be `IMAGE`.
+        - `cropped_enhanced_alpha`: A list of cropped versions of the enhanced image with alpha channel, providing transparency information for the detailed areas. Type should be `IMAGE`.
+        - `mask`: The generated mask that highlights the detailed areas in the image, useful for further processing or refinement. Type should be `MASK`.
+        - `detailer_pipe`: unknown Type should be `DETAILER_PIPE`.
+        - `cnet_images`: unknown Type should be `IMAGE`.

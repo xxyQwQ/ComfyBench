@@ -1,0 +1,5 @@
+- `LayerMask_ MaskInvert`: The MaskInvert node is designed to invert the values of a given mask, transforming white areas to black and vice versa. This operation is essential for tasks that require the opposite representation of mask areas, such as highlighting regions of interest in image processing or computer vision applications.
+    - Inputs:
+        - `mask` (Required): The 'mask' input is the primary data the node operates on, representing the areas to be inverted. It plays a crucial role in determining the output, as the inversion process directly transforms this mask. Type should be `MASK`.
+    - Outputs:
+        - `mask`: The output 'mask' is the result of inverting the input mask, with all originally white areas turned black and vice versa, ready for further processing or analysis. Type should be `MASK`.

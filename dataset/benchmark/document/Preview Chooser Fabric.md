@@ -1,0 +1,7 @@
+- `Preview Chooser Fabric`: This node extends the functionality of image selection by allowing users to preview and choose between images based on their latent representations. It supports advanced selection mechanisms, including the ability to differentiate between positive and negative selections within a batch of images, thereby facilitating more nuanced decision-making processes in workflows that involve image analysis and manipulation.
+    - Inputs:
+        - `images` (Required): The images parameter is crucial for providing the visual content that users will preview and select from. It directly influences the node's ability to render previews and capture user choices. Type should be `IMAGE`.
+        - `latents` (Required): The latents parameter represents the latent representations of the images provided. It is essential for the node to perform operations on the images based on their underlying characteristics, enabling more sophisticated selection criteria. Type should be `LATENT`.
+    - Outputs:
+        - `positive`: The positive output represents the selected images or latents deemed favorable by the user, enabling downstream processes to utilize these preferred choices. Type should be `LATENT`.
+        - `negative`: The negative output contrasts with the positive by representing the selections marked as unfavorable, allowing for the exclusion or alternative handling of these choices in subsequent operations. Type should be `LATENT`.

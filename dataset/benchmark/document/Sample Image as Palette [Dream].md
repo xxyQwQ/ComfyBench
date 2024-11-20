@@ -1,0 +1,7 @@
+- `Sample Image as Palette [Dream]`: This node samples colors from an image to create a palette, using a specified number of samples and a seed for randomization. It's designed to extract a diverse color palette from an image, which can then be used for various applications such as image editing, visualization, or as a basis for generating new images.
+    - Inputs:
+        - `image` (Required): The image from which to sample colors, serving as the source for palette creation. Type should be `IMAGE`.
+        - `samples` (Required): The number of color samples to extract from the image, determining the palette's richness and diversity. Type should be `INT`.
+        - `seed` (Required): A seed value for randomization, ensuring reproducibility of the palette sampling process. Type should be `INT`.
+    - Outputs:
+        - `palette`: The resulting color palette, composed of sampled colors from the input image. Type should be `RGB_PALETTE`.

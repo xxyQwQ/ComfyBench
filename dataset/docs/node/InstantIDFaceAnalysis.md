@@ -1,6 +1,0 @@
-- `InstantIDFaceAnalysis`: The InstantIDFaceAnalysis node is designed to load and prepare a face analysis model for further processing. It focuses on initializing the model with the specified provider (CPU, CUDA, ROCM) and setting it up for face detection and analysis tasks.
-    - Parameters:
-        - `provider`: Specifies the computation provider for the face analysis model, affecting where the model's computations are executed (e.g., on CPU, CUDA, or ROCM). Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `faceanalysis`: Represents the initialized and prepared face analysis model ready for performing face detection and analysis. Type should be `FACEANALYSIS`.

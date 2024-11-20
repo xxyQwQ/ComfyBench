@@ -1,0 +1,14 @@
+- `PromptComposerCustomLists`: The PromptComposerCustomLists node is designed to integrate custom list selections into a prompt composition, allowing for dynamic and customizable text generation based on user-defined lists and weights.
+    - Inputs:
+        - `lens_type` (Required): A required parameter representing a custom list for lens types, crucial for tailoring the prompt composition to specific visual perspectives. Type should be `COMBO[STRING]`.
+        - `lens_type_weight` (Required): Specifies the weight for the lens type selection, affecting the emphasis of the lens type in the final prompt composition. Type should be `FLOAT`.
+        - `photo_style` (Required): A required parameter for selecting a photo style from a custom list, essential for defining the visual style of the prompt. Type should be `COMBO[STRING]`.
+        - `photo_style_weight` (Required): Determines the weight of the photo style selection, influencing its prominence in the composed prompt. Type should be `FLOAT`.
+        - `effect` (Required): A required parameter for choosing an effect from a custom list, key to adding unique visual effects to the prompt. Type should be `COMBO[STRING]`.
+        - `effect_weight` (Required): Sets the weight for the chosen effect, modifying its impact on the overall prompt. Type should be `FLOAT`.
+        - `painting_style` (Required): A required parameter for selecting a painting style from a custom list, pivotal for incorporating artistic styles into the prompt. Type should be `COMBO[STRING]`.
+        - `painting_style_weight` (Required): Adjusts the weight of the painting style selection, affecting its influence on the final prompt. Type should be `FLOAT`.
+        - `active` (Required): A boolean parameter that activates or deactivates the inclusion of the custom list selections in the prompt composition. Type should be `BOOLEAN`.
+        - `text_in_opt` (Optional): An optional initial text input that can be included at the beginning of the prompt composition, emphasizing the flexibility in starting the prompt with user-defined text. Type should be `STRING`.
+    - Outputs:
+        - `text_out`: The output is a single string that represents the composed prompt, dynamically generated based on the input custom lists and their associated weights. Type should be `STRING`.

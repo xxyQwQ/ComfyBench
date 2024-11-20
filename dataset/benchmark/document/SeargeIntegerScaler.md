@@ -1,0 +1,7 @@
+- `SeargeIntegerScaler`: The SeargeIntegerScaler node is designed for scaling integer values by a specified factor and ensuring the result is a multiple of a given value. It abstracts the mathematical operation of scaling and rounding to meet specific numerical constraints, making it a utility for precise integer manipulation.
+    - Inputs:
+        - `value` (Required): The base integer value to be scaled. It serves as the primary input for the scaling operation. Type should be `INT`.
+        - `factor` (Required): A floating-point factor by which the base value is scaled. This allows for proportional scaling of the integer value. Type should be `FLOAT`.
+        - `multiple_of` (Required): Specifies that the resulting scaled value should be a multiple of this integer. It ensures the result adheres to specific alignment or divisibility requirements. Type should be `INT`.
+    - Outputs:
+        - `value`: The scaled integer value, adjusted to be a multiple of the specified 'multiple_of' parameter. Type should be `INT`.

@@ -1,0 +1,17 @@
+- `SaltScheduledPerlinPowerFractalNoise`: This node is designed to generate complex, visually appealing noise patterns by leveraging the Perlin noise algorithm. It intricately schedules and modifies Perlin noise parameters over time or across frames to produce dynamic, fractal-based noise textures that can be used for a variety of visual effects in audio visualization or graphical applications.
+    - Inputs:
+        - `batch_size` (Required): Specifies the number of noise patterns to generate in a single batch, allowing for efficient bulk processing of noise textures. Type should be `INT`.
+        - `width` (Required): Determines the width of the generated noise texture, defining the horizontal resolution of the output pattern. Type should be `INT`.
+        - `height` (Required): Sets the height of the generated noise texture, establishing the vertical resolution of the output pattern. Type should be `INT`.
+        - `scale_schedule` (Optional): A schedule of scale values to apply to the noise generation process, enabling dynamic control over the zoom level of the noise textures across different frames or instances. Type should be `LIST`.
+        - `octaves_schedule` (Optional): Controls the level of detail in the noise texture by specifying a schedule for the number of octaves to use, affecting the complexity and richness of the generated patterns. Type should be `LIST`.
+        - `persistence_schedule` (Optional): Adjusts the amplitude of each octave in the noise texture according to a predefined schedule, influencing the contrast between high and low-frequency details. Type should be `LIST`.
+        - `lacunarity_schedule` (Optional): Defines a schedule for the lacunarity parameter, which affects the gap between successive octaves in the noise texture, thereby influencing its overall roughness and texture. Type should be `LIST`.
+        - `exponent_schedule` (Optional): Specifies a schedule for the exponent values applied to the noise, allowing for fine-tuned adjustments to the intensity and distribution of the noise texture. Type should be `LIST`.
+        - `seed_schedule` (Optional): A sequence of seed values to initialize the noise generation process, ensuring variability and uniqueness across different noise textures. Type should be `LIST`.
+        - `clamp_min_schedule` (Optional): Sets a schedule for the minimum clamping value, defining the lower bound for the noise texture values to ensure they stay within a desired range. Type should be `LIST`.
+        - `clamp_max_schedule` (Optional): Determines a schedule for the maximum clamping value, setting the upper limit for the noise texture values to maintain control over the output intensity. Type should be `LIST`.
+        - `device` (Optional): Specifies the computing device (CPU or GPU) on which the noise generation process will be executed, affecting performance and efficiency. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `images`: The generated noise images as a tensor, ready for further processing or visualization in various applications. Type should be `IMAGE`.
+        - `batch_size`: The number of noise textures generated, corresponding to the input batch size, facilitating batch processing and management. Type should be `INT`.

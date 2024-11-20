@@ -1,0 +1,8 @@
+- `M-LSDPreprocessor`: The M-LSDPreprocessor node is designed for extracting line segments from images using the M-LSD (Multiple Line Segment Detector) model. It processes images to detect and delineate line structures, which can be crucial for various computer vision tasks that require understanding of geometric shapes and boundaries.
+    - Inputs:
+        - `image` (Required): The input image to be processed for line segment detection. Type should be `IMAGE`.
+        - `score_threshold` (Optional): Defines the threshold for line segment detection confidence. Higher values result in fewer, but more confident line detections. Type should be `FLOAT`.
+        - `dist_threshold` (Optional): Sets the distance threshold for separating line segments. Smaller values lead to finer segmentation of closely spaced lines. Type should be `FLOAT`.
+        - `resolution` (Optional): Specifies the resolution to which the input image is resized before processing. Affects the scale of detected line segments. Type should be `INT`.
+    - Outputs:
+        - `image`: Outputs an image with detected line segments superimposed or highlighted, facilitating further processing or analysis. Type should be `IMAGE`.

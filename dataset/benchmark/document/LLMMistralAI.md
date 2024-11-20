@@ -1,0 +1,6 @@
+- `LLMMistralAI`: The LLMMistralAI node is designed to interface with the MistralAI API, allowing users to load and interact with various pre-trained language models provided by MistralAI. It facilitates the integration of advanced natural language processing capabilities into applications by leveraging the power of large language models.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the MistralAI model to be loaded. This parameter is crucial for determining which specific pre-trained model is utilized for processing, affecting the node's behavior and the nature of its output. Type should be `COMBO[STRING]`.
+        - `api_key` (Required): The API key required for authenticating with the MistralAI service. This parameter is essential for enabling access to the MistralAI models, ensuring secure and authorized use of the API. Type should be `STRING`.
+    - Outputs:
+        - `model`: The output includes the loaded MistralAI model along with an embedding model, providing the necessary components for further natural language processing tasks. Type should be `LLM_MODEL`.

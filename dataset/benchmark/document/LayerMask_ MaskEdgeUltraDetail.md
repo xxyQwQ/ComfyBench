@@ -1,0 +1,14 @@
+- `LayerMask_ MaskEdgeUltraDetail`: This node specializes in enhancing the detail and precision of edges in layer masks. It applies advanced image processing techniques to refine mask edges, making them ultra-detailed and precise for improved visual quality in layered compositions.
+    - Inputs:
+        - `image` (Required): The input image to be processed. This image serves as the base for mask edge enhancement, determining the areas where detail and precision are to be improved. Type should be `IMAGE`.
+        - `mask` (Required): The mask that outlines the areas of the image to be detailed. It acts as a guide for the node to apply edge enhancement, defining the regions where ultra-detailing is necessary. Type should be `MASK`.
+        - `method` (Required): Specifies the technique used for mask edge detailing. This parameter influences the approach taken to enhance the mask edges, affecting the outcome's precision and detail. Type should be `COMBO[STRING]`.
+        - `mask_grow` (Required): Controls the expansion of the mask edges. This parameter adjusts how much the mask edges are grown to achieve the desired level of detail. Type should be `INT`.
+        - `fix_gap` (Required): Determines whether to fill gaps in the mask edges. This option helps in creating a more continuous and precise edge by bridging small gaps. Type should be `INT`.
+        - `fix_threshold` (Required): Sets the threshold for fixing gaps in the mask edges. It defines the sensitivity of gap detection and filling, impacting the smoothness of the final edge. Type should be `FLOAT`.
+        - `detail_range` (Required): Defines the range of edge detailing. This parameter sets the extent to which the mask edges are enhanced, affecting the level of detail achieved. Type should be `INT`.
+        - `black_point` (Required): Adjusts the black point for edge detailing. This setting modifies the darkest areas of the mask, influencing the contrast and depth of the edge detail. Type should be `FLOAT`.
+        - `white_point` (Required): Adjusts the white point for edge detailing. This setting modifies the lightest areas of the mask, influencing the brightness and highlight of the edge detail. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The processed image with enhanced mask edges. This output reflects the improvements in edge detail and precision, showcasing the node's effect on the original image. Type should be `IMAGE`.
+        - `mask`: The enhanced mask with ultra-detailed edges. This output demonstrates the refined precision and detail achieved through the node's processing. Type should be `MASK`.

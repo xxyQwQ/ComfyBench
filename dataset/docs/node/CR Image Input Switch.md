@@ -1,9 +1,0 @@
-- `CR Image Input Switch`: This node allows for the dynamic selection between two image inputs based on a specified integer input. It facilitates conditional image processing workflows by enabling the user to switch between different image sources.
-    - Parameters:
-        - `Input`: Determines which image input to use based on its integer value. It affects the node's execution by selecting one of the two possible image inputs for the workflow. Type should be `INT`.
-    - Inputs:
-        - `image1`: The first optional image input that can be selected. Type should be `IMAGE`.
-        - `image2`: The second optional image input that can be selected. Type should be `IMAGE`.
-    - Outputs:
-        - `IMAGE`: The selected image based on the input integer value. Type should be `IMAGE`.
-        - `show_help`: Provides a URL to the help documentation for this node. Type should be `STRING`.

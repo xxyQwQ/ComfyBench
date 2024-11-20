@@ -1,0 +1,18 @@
+- `CR Composite Text`: This node is designed for the advanced manipulation and combination of text elements within images, enabling users to create complex text overlays and compositions. It likely offers functionalities for adjusting text properties such as font, size, and alignment, as well as the ability to blend text with images in various creative ways.
+    - Inputs:
+        - `image_text` (Required): The image onto which the text will be composited. This parameter is essential for integrating the text with the visual content. Type should be `IMAGE`.
+        - `image_background` (Required): The background image over which the text and foreground image will be composited, providing a backdrop for the composition. Type should be `IMAGE`.
+        - `text` (Required): The primary text content to be composited onto an image. This parameter is crucial for defining the textual element of the composition. Type should be `STRING`.
+        - `font_name` (Required): Specifies the font style to be used for the text, impacting the visual appearance of the text element within the composition. Type should be `COMBO[STRING]`.
+        - `font_size` (Required): Determines the size of the text, allowing for precise control over how the text fits within the overall image composition. Type should be `INT`.
+        - `align` (Required): Controls the horizontal alignment of the text within the image, enabling users to position the text according to their compositional needs. Type should be `COMBO[STRING]`.
+        - `justify` (Required): Controls the vertical alignment and distribution of text lines within the image, further refining the text's placement and appearance. Type should be `COMBO[STRING]`.
+        - `margins` (Required): Defines the margins around the text, providing space between the text and the edges of the image or other compositional elements. Type should be `INT`.
+        - `line_spacing` (Required): Adjusts the spacing between lines of text, allowing for better readability and aesthetic arrangement of the text content. Type should be `INT`.
+        - `position_x` (Required): Specifies the x-coordinate for the position of the text within the image, enabling precise placement. Type should be `INT`.
+        - `position_y` (Required): Specifies the y-coordinate for the position of the text within the image, enabling precise placement. Type should be `INT`.
+        - `rotation_angle` (Required): Defines the angle at which the text will be rotated, allowing for dynamic and creative text orientations. Type should be `FLOAT`.
+        - `rotation_options` (Required): Provides additional options for text rotation, such as the point around which the text should rotate, enhancing the flexibility of text positioning. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `IMAGE`: The resulting image after the text has been composited onto it. This output showcases the integration of text and image elements. Type should be `IMAGE`.
+        - `show_help`: Optional output that provides help or guidance related to the node's functionality or output. Type should be `STRING`.

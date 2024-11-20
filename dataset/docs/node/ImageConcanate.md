@@ -1,9 +1,0 @@
-- `ImageConcanate`: The ImageConcanate node is designed to concatenate two images together in a specified direction, optionally adjusting the size of the second image to match the first. This functionality is useful for creating composite images or expanding the visual context of an existing image.
-    - Parameters:
-        - `direction`: Specifies the direction in which the second image will be concatenated to the first. Options include 'right', 'down', 'left', and 'up'. Type should be `COMBO[STRING]`.
-        - `match_image_size`: A boolean flag that determines whether the second image should be resized to match the dimensions of the first image before concatenation. Type should be `BOOLEAN`.
-    - Inputs:
-        - `image1`: The first image to which the second image will be concatenated. It serves as the base image in the concatenation process. Type should be `IMAGE`.
-        - `image2`: The second image to be concatenated to the first. This image can be resized to match the dimensions of the first image if specified. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The result of concatenating the second image to the first in the specified direction. This output is a single composite image. Type should be `IMAGE`.

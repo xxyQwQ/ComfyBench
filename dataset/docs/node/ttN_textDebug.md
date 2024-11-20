@@ -1,9 +1,0 @@
-- `ttN textDebug`: The `ttN textDebug` node is designed for debugging purposes, allowing developers to inspect and display text-based input data within the development environment. It serves as a tool for verifying the content and structure of text inputs, facilitating the identification and resolution of issues in text processing workflows.
-    - Parameters:
-        - `print_to_console`: Determines whether the text should be printed to the console, enabling a direct way to view the text output for debugging purposes. Type should be `COMBO[BOOLEAN]`.
-        - `console_title`: Specifies the title to be displayed in the console during debugging, serving as an identifier for the debug session. Type should be `STRING`.
-        - `execute`: Controls when the debug action should be executed, allowing for conditional debugging based on changes or constant monitoring. Type should be `COMBO[STRING]`.
-        - `text`: The text content to be debugged, providing the actual data that will be inspected and potentially displayed. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `text`: The text that was input for debugging, potentially modified or annotated based on the debug process. Type should be `STRING`.

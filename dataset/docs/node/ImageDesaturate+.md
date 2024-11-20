@@ -1,7 +1,0 @@
-- `ImageDesaturate+`: The ImageDesaturate+ node is designed to adjust the saturation level of an image, effectively desaturating it to varying degrees based on a specified factor. This operation can transform the image into grayscale or partially reduce its color intensity, offering a range of visual effects from full color to black and white.
-    - Parameters:
-        - `factor`: The 'factor' parameter controls the degree of desaturation applied to the image, with a range from 0 (no change) to 1 (full grayscale). This allows for fine-tuning the intensity of the desaturation effect. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The 'image' parameter represents the input image to be desaturated. It is crucial for defining the visual content that will undergo the desaturation process. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is the desaturated version of the input image, with its saturation level adjusted according to the specified factor. Type should be `IMAGE`.

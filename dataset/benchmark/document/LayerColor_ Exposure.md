@@ -1,0 +1,6 @@
+- `LayerColor_ Exposure`: The Exposure node is designed to adjust the exposure level of images, allowing for the brightening or darkening of the image based on the specified exposure value. This node applies a mathematical transformation to the pixel values to simulate the effect of changing the camera's exposure setting, enhancing or reducing the image's overall luminance.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the input image(s) to be adjusted. It is crucial for determining the base visual content that will undergo exposure correction, directly influencing the outcome of the node's processing. Type should be `IMAGE`.
+        - `exposure` (Required): The 'exposure' parameter specifies the degree to which the image's exposure is adjusted. A positive value increases brightness, while a negative value decreases it, significantly affecting the visual result of the image processing. Type should be `INT`.
+    - Outputs:
+        - `image`: The output 'image' is the result of applying the exposure correction to the input image(s), reflecting the adjustments made based on the specified exposure level. Type should be `IMAGE`.

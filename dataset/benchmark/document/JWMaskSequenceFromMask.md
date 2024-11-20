@@ -1,0 +1,6 @@
+- `JWMaskSequenceFromMask`: This node transforms a given mask into a mask sequence, allowing for batch processing of masks by replicating the input mask across a specified batch size. It's designed to facilitate operations on multiple instances of the same mask simultaneously, streamlining workflows that require uniform mask application across several items.
+    - Inputs:
+        - `mask` (Required): The input mask to be transformed into a mask sequence. It serves as the base mask that will be replicated across the batch. Type should be `MASK`.
+        - `batch_size` (Required): Specifies the number of times the input mask should be replicated in the resulting mask sequence, enabling parallel processing of the same mask across multiple items. Type should be `INT`.
+    - Outputs:
+        - `mask_sequence`: The output is a sequence of masks, each a replica of the input mask, arranged to facilitate batch processing of the same mask across multiple items. Type should be `MASK_SEQUENCE`.

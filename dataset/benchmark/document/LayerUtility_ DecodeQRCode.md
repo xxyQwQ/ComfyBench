@@ -1,0 +1,6 @@
+- `LayerUtility_ DecodeQRCode`: The DecodeQRCode node is designed to interpret QR codes from images, applying optional preprocessing to enhance readability before decoding. It aims to extract textual information encoded within QR codes, offering a means to retrieve embedded data from visual inputs.
+    - Inputs:
+        - `image` (Required): The image input represents the visual source from which QR codes are to be decoded. It plays a crucial role in the node's operation by providing the raw data necessary for QR code interpretation. Type should be `IMAGE`.
+        - `pre_blur` (Required): The pre_blur parameter allows for optional preprocessing of the image to improve QR code readability by applying a Gaussian blur. This can enhance the node's ability to accurately decode QR codes from images that may be noisy or of low quality. Type should be `INT`.
+    - Outputs:
+        - `string`: The output is a string or a list of strings representing the decoded textual information from the QR codes found within the input images. Type should be `STRING`.

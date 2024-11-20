@@ -1,0 +1,9 @@
+- `InstantID Pipe (JPS)`: The InstantID Pipe node is designed to process settings for instant identification features, encapsulating the logic to handle various parameters such as weight, strength, noise, and range, and returning these processed settings for further use in identification tasks.
+    - Inputs:
+        - `instantid_settings` (Required): Defines the settings for instant identification, including parameters like weight, strength, noise, start, and end. Each parameter plays a critical role in fine-tuning the identification process: 'weight' adjusts the emphasis on certain features, 'strength' controls the robustness of the identification, 'noise' can simulate variability in identification scenarios, and 'start' and 'end' define the operational range, ensuring precise control over the identification phase. Type should be `BASIC_PIPE`.
+    - Outputs:
+        - `ip_weight`: The weight parameter influencing the identification process. Type should be `FLOAT`.
+        - `cn_strength`: The strength parameter for control network influence. Type should be `FLOAT`.
+        - `noise`: The noise level parameter in the identification process. Type should be `FLOAT`.
+        - `start`: The start parameter defining the beginning of the identification range. Type should be `FLOAT`.
+        - `end`: The end parameter defining the end of the identification range. Type should be `FLOAT`.

@@ -1,9 +1,0 @@
-- `FFMPEG Video Encoder [Dream]`: The FFMPEG Video Encoder node is designed for encoding and compiling a sequence of images into a video file using FFMPEG. It allows for adjusting the framerate, optionally removing the source images after encoding, and handling file naming to avoid overwrites, thereby facilitating the creation of video content from individual frames.
-    - Parameters:
-        - `name`: Specifies the base name for the output video file, which can be further adjusted to avoid filename conflicts. Type should be `STRING`.
-        - `framerate_factor`: A multiplier for the sequence's framerate, allowing for speed adjustments in the resulting video. Type should be `FLOAT`.
-        - `remove_images`: Determines whether the source images should be deleted after encoding, helping in managing disk space. Type should be `BOOLEAN`.
-    - Inputs:
-        - `sequence`: Represents the sequence of images to be encoded into a video. It is crucial for defining the content and order of frames in the final video output. Type should be `ANIMATION_SEQUENCE`.
-    - Outputs:
-        - `log_entry`: Provides a log entry detailing the encoding process and outcome, including any errors encountered. Type should be `LOG_ENTRY`.

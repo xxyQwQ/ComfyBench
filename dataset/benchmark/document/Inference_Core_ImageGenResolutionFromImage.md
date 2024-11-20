@@ -1,0 +1,6 @@
+- `Inference_Core_ImageGenResolutionFromImage`: This node is designed to calculate the generation resolution directly from an input image. It extracts the width and height of the input image and returns these dimensions as the intended resolution for image generation, facilitating the adjustment of output image size based on the input image's dimensions.
+    - Inputs:
+        - `image` (Required): The input image for which the generation resolution is to be calculated. This image's dimensions are used to determine the output resolution, directly influencing the size of the generated image. Type should be `IMAGE`.
+    - Outputs:
+        - `IMAGE_GEN_WIDTH (INT)`: unknown Type should be `INT`.
+        - `IMAGE_GEN_HEIGHT (INT)`: unknown Type should be `INT`.

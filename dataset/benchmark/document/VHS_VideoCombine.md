@@ -1,0 +1,15 @@
+- `VHS_VideoCombine`: The VHS_VideoCombine node is designed for creating animated videos or GIFs by combining multiple images or latent representations. It supports various customization options such as frame rate adjustment, looping, format selection, and the inclusion of audio. This node is part of the Video Helper Suite, aimed at facilitating video processing and generation tasks.
+    - Inputs:
+        - `frame_rate` (Required): Specifies the frame rate for the video or GIF, affecting how smoothly the animation plays. Type should be `FLOAT`.
+        - `loop_count` (Required): Determines how many times the animation will loop, with support for infinite looping. Type should be `INT`.
+        - `filename_prefix` (Required): The prefix for the output file name, allowing for easy identification of generated files. Type should be `STRING`.
+        - `format` (Required): The output format of the generated video or GIF, such as 'mp4' or 'gif'. Includes additional formats supported by ffmpeg. Type should be `COMBO[STRING]`.
+        - `pingpong` (Required): When enabled, the animation will play forwards and then backwards, creating a seamless looping effect. Type should be `BOOLEAN`.
+        - `save_output` (Required): Controls whether the generated video or GIF is saved to disk. Type should be `BOOLEAN`.
+        - `images` (Optional): An optional list of images to be combined into a video or GIF. If not provided, latents may be used instead. Type should be `IMAGE`.
+        - `audio` (Optional): An optional audio file to be included in the video, enhancing the multimedia experience. Type should be `VHS_AUDIO`.
+        - `meta_batch` (Optional): Metadata associated with the batch of images or latents being processed, useful for batch operations. Type should be `VHS_BatchManager`.
+        - `vae` (Optional): The VAE model used for decoding latent representations into images, necessary when latents are provided. Type should be `VAE`.
+        - `latents` (Optional): An optional list of latent representations to be converted into images for the video or GIF. Requires a VAE model to decode. Type should be `LATENT`.
+    - Outputs:
+        - `Filenames`: The filenames of the generated videos or GIFs, indicating where the output files have been saved. Type should be `VHS_FILENAMES`.

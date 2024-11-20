@@ -1,6 +1,0 @@
-- `SavePoseKpsAsJsonFile`: This node is designed to save pose keypoints data as a JSON file. It takes pose keypoints and an optional filename prefix as inputs, appending a unique identifier to the filename before saving. This functionality is crucial for persisting pose data for further analysis or processing.
-    - Parameters:
-        - `filename_prefix`: An optional prefix for the filename under which the pose keypoints will be saved. This allows for easier identification and organization of saved files. Type should be `STRING`.
-    - Inputs:
-        - `pose_kps`: The pose keypoints to be saved. This data is essential for capturing the spatial positions of various body parts in an image or a sequence of images. Type should be `POSE_KEYPOINT`.
-    - Outputs:

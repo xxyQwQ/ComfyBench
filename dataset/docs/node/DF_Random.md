@@ -1,8 +1,0 @@
-- `DF_Random`: The `DF_Random` node generates a random floating-point number within a specified range. It utilizes a seed for reproducible randomness, allowing for consistent results across multiple executions.
-    - Parameters:
-        - `Value_A`: Specifies the lower bound of the random number range. It influences the minimum value that the random number generator can produce. Type should be `FLOAT`.
-        - `Value_B`: Defines the upper bound of the random number range. It sets the maximum value that the random number generator can output. Type should be `FLOAT`.
-        - `seed`: A seed value for the random number generator to ensure reproducibility of results. It determines the sequence of numbers generated, allowing for consistent randomness across runs. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The output is a random floating-point number within the specified range, determined by the input bounds and seed. Type should be `FLOAT`.

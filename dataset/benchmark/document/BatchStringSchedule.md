@@ -1,0 +1,14 @@
+- `BatchStringSchedule`: The `BatchStringSchedule` node processes animation prompts by splitting them into positive and negative prompts, interpolating these prompts over a series of frames, and returning them as a batch of strings. This node is designed to handle the temporal dynamics of animation prompts, facilitating the generation of text sequences that vary over time.
+    - Inputs:
+        - `text` (Required): The text input represents the base animation prompt that will be split into positive and negative prompts, serving as the foundation for the temporal interpolation process. Type should be `STRING`.
+        - `max_frames` (Required): Specifies the maximum number of frames for which the prompts will be interpolated, defining the temporal extent of the animation sequence. Type should be `INT`.
+        - `print_output` (Required): A flag indicating whether the output should be printed, affecting the node's output behavior. Type should be `BOOLEAN`.
+        - `pre_text` (Optional): Text to be prepended to each animation prompt, modifying the initial content of the prompts before they are split and interpolated. Type should be `STRING`.
+        - `app_text` (Optional): Text to be appended to each animation prompt, modifying the final content of the prompts before they are split and interpolated. Type should be `STRING`.
+        - `pw_a` (Optional): Weight parameter A for interpolation, influencing how the positive and negative prompts are blended over time. Type should be `FLOAT`.
+        - `pw_b` (Optional): Weight parameter B for interpolation, further influencing the blending of prompts over the animation sequence. Type should be `FLOAT`.
+        - `pw_c` (Optional): Weight parameter C for interpolation, adjusting the influence of certain aspects of the prompt interpolation. Type should be `FLOAT`.
+        - `pw_d` (Optional): Weight parameter D for interpolation, adjusting the influence of certain aspects of the prompt interpolation. Type should be `FLOAT`.
+    - Outputs:
+        - `POS`: The interpolated positive prompt for the current frame, as part of the batch of strings. Type should be `STRING`.
+        - `NEG`: The interpolated negative prompt for the current frame, as part of the batch of strings. Type should be `STRING`.

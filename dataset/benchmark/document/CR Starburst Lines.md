@@ -1,0 +1,17 @@
+- `CR Starburst Lines`: This node is designed to generate a starburst pattern with lines radiating from a central point. It allows customization of various aspects such as the number of lines, their length, color, and rotation, enabling the creation of visually striking graphics.
+    - Inputs:
+        - `width` (Required): Specifies the width of the canvas for the starburst pattern. Type should be `INT`.
+        - `height` (Required): Specifies the height of the canvas for the starburst pattern. Type should be `INT`.
+        - `num_lines` (Required): Specifies the number of lines in the starburst pattern. This determines how densely the lines are packed together, affecting the overall appearance of the starburst. Type should be `INT`.
+        - `line_length` (Required): Defines the length of each line in the starburst pattern. Longer lines will extend further from the center, creating a more pronounced effect. Type should be `FLOAT`.
+        - `line_width` (Required): Sets the width of the lines in the starburst pattern. Thicker lines will make the starburst more visible and pronounced. Type should be `INT`.
+        - `line_color` (Required): Determines the color of the lines in the starburst pattern. This can be a predefined color or a custom hex value, allowing for extensive customization. Type should be `COMBO[STRING]`.
+        - `background_color` (Required): Determines the background color of the canvas. This can be a predefined color or 'custom' to use a hex value specified in 'bg_color_hex'. Type should be `COMBO[STRING]`.
+        - `center_x` (Required): Specifies the x-coordinate of the center point from which the starburst lines radiate. Type should be `INT`.
+        - `center_y` (Required): Specifies the y-coordinate of the center point from which the starburst lines radiate. Type should be `INT`.
+        - `rotation` (Required): Specifies the rotation angle of the entire starburst pattern. This allows the pattern to be oriented in any direction. Type should be `FLOAT`.
+        - `line_color_hex` (Optional): Specifies the custom hex color value for the lines if 'line_color' is set to 'custom'. Type should be `STRING`.
+        - `bg_color_hex` (Optional): Specifies the custom hex color value for the background if 'background_color' is set to 'custom'. Type should be `STRING`.
+    - Outputs:
+        - `IMAGE`: The generated image featuring the starburst pattern. Type should be `IMAGE`.
+        - `show_help`: A URL to documentation or help page related to the starburst pattern generation. Type should be `STRING`.

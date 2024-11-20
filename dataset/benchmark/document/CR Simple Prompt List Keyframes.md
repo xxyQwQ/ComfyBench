@@ -1,0 +1,12 @@
+- `CR Simple Prompt List Keyframes`: This node is designed to generate a sequence of keyframes based on a list of simple prompts, intervals, and other animation parameters. It facilitates the creation of animated sequences by specifying how each prompt transitions over time, making it a crucial component for crafting dynamic visual narratives.
+    - Inputs:
+        - `simple_prompt_list` (Required): A list of simple text prompts that describe each keyframe. This list is the foundation for generating the animated sequence, dictating the content and order of the animation. Type should be `SIMPLE_PROMPT_LIST`.
+        - `keyframe_interval` (Required): Specifies the interval between each keyframe in the animation, determining the pacing and length of the animated sequence. Type should be `INT`.
+        - `loops` (Required): Defines the number of times the animation sequence should loop, allowing for repeated cycles of the keyframe list. Type should be `INT`.
+        - `transition_type` (Required): Determines the type of transition between keyframes, affecting the animation's visual flow. Type should be `COMBO[STRING]`.
+        - `transition_speed` (Required): Controls the speed of transitions between keyframes, influencing the animation's tempo. Type should be `COMBO[STRING]`.
+        - `transition_profile` (Required): Shapes the acceleration and deceleration of transitions, adding dynamism to the animation. Type should be `COMBO[STRING]`.
+        - `keyframe_format` (Required): Specifies the format for the keyframes, influencing how they are interpreted and rendered in the animation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `keyframe_list`: The generated sequence of keyframes, ready for use in creating the animated sequence. Type should be `STRING`.
+        - `show_help`: A URL to documentation or help related to this node, providing additional information and guidance. Type should be `STRING`.

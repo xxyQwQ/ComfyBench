@@ -1,0 +1,6 @@
+- `CR Binary To Bit List`: The CR_BinaryToBitList node is designed to convert a binary string into a list of individual bits. It aims to facilitate the manipulation and analysis of binary data by breaking it down into its constituent bits.
+    - Inputs:
+        - `bit_string` (Required): The 'bit_string' parameter represents the binary string to be converted into a list of bits. It is essential for specifying the binary data that the node will process. Type should be `STRING`.
+    - Outputs:
+        - `STRING`: This output is a list where each element represents an individual bit from the input binary string. Type should be `STRING`.
+        - `show_help`: A URL providing access to additional information and documentation about the CR_BinaryToBitList node. Type should be `STRING`.

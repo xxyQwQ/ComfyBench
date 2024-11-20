@@ -1,0 +1,6 @@
+- `CLIPMergeAdd`: The `CLIPMergeAdd` node is designed for combining two CLIP model instances by adding the key patches from one model to another. This process is aimed at enhancing or modifying the capabilities of the first CLIP model based on the attributes of the second, without altering specific model parameters related to position or scaling.
+    - Inputs:
+        - `clip1` (Required): The primary CLIP model instance to which patches will be added. It serves as the base model for the merging process. Type should be `CLIP`.
+        - `clip2` (Required): The secondary CLIP model instance from which key patches are extracted to be added to the first model. It contributes its attributes to enhance or modify the first model. Type should be `CLIP`.
+    - Outputs:
+        - `clip`: The resulting CLIP model after merging, which includes the added patches from the second model to the first, enhancing or modifying its capabilities. Type should be `CLIP`.

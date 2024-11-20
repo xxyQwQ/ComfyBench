@@ -1,8 +1,0 @@
-- `ImageLuminanceDetector`: The ImageLuminanceDetector node is designed to analyze and adjust the luminance of images based on gamma correction. It utilizes the Recolorizer from the controlnet_aux library to modify the image's luminance, aiming to enhance image quality or achieve specific visual effects.
-    - Parameters:
-        - `gamma_correction`: Specifies the gamma correction factor to adjust the image's luminance. A higher value brightens the image, while a lower value darkens it, affecting the overall visual output. Type should be `FLOAT`.
-        - `resolution`: The resolution to which the image is resized before applying the luminance adjustment, affecting the detail level of the output. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for luminance adjustment. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: Outputs the modified image with adjusted luminance levels, enhancing or altering the visual appearance based on the gamma correction applied. Type should be `IMAGE`.

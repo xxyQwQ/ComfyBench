@@ -1,0 +1,15 @@
+- `AddLabel`: The AddLabel node is designed to add textual labels to images, allowing for customization of text position, size, color, and font. It supports various directions for label placement, including overlaying text directly on the image or positioning it around the image's edges, enhancing the image's informational content or aesthetic appeal.
+    - Inputs:
+        - `image` (Required): The input image to which the label will be added. This is the primary canvas for the label application. Type should be `IMAGE`.
+        - `text_x` (Required): The x-coordinate for the starting point of the text on the image. It determines the horizontal position of the label. Type should be `INT`.
+        - `text_y` (Required): The y-coordinate for the starting point of the text on the image. It determines the vertical position of the label. Type should be `INT`.
+        - `height` (Required): The height of the label area in pixels. This can affect the overall size of the image if the label is not overlaid. Type should be `INT`.
+        - `font_size` (Required): The size of the font used for the label text, impacting the readability and visual impact of the label. Type should be `INT`.
+        - `font_color` (Required): The color of the font used for the label text, allowing for visual contrast or harmony with the image and label background. Type should be `STRING`.
+        - `label_color` (Required): The background color of the label area, which can be used to highlight the text or integrate with the image's color scheme. Type should be `STRING`.
+        - `font` (Required): The font used for the label text, selected from a predefined list of fonts. This choice influences the label's aesthetic and legibility. Type should be `COMBO[STRING]`.
+        - `text` (Required): The text content of the label to be added to the image. This defines what the label will say. Type should be `STRING`.
+        - `direction` (Required): The direction in which the label will be added relative to the image, including options like up, down, left, right, and overlay, affecting the label's placement and interaction with the image. Type should be `COMBO[STRING]`.
+        - `caption` (Optional): An optional caption to include with the label, providing additional context or information. Type should be `STRING`.
+    - Outputs:
+        - `image`: The image with the added label, reflecting all specified customizations. Type should be `IMAGE`.

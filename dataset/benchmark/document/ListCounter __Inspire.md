@@ -1,0 +1,6 @@
+- `ListCounter __Inspire`: The ListCounter node is designed to maintain and increment a count associated with a unique identifier, allowing for the tracking of occurrences or iterations of specific actions or items within a list. It provides a mechanism to generate a sequential count, which can be reset or continued based on the unique identifier, making it useful for operations that require counting within a dynamic or iterative context.
+    - Inputs:
+        - `signal` (Required): The signal input acts as a trigger for the counting operation, indicating when to increment the count. It is essential for initiating the count increment process. Type should be `*`.
+        - `base_value` (Required): The base_value parameter sets the starting point for the count, allowing the count to begin from a specified value other than zero. This flexibility is useful for operations that require a custom starting point for counting. Type should be `INT`.
+    - Outputs:
+        - `int`: Returns the current count after incrementation, adjusted by the base value. This output is essential for tracking the progression of counts within the specified context. Type should be `INT`.

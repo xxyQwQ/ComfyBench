@@ -1,0 +1,10 @@
+- `Bounded Image Blend with Mask`: This node specializes in blending two images within specified boundaries using a mask, allowing for precise control over the blending process. It supports feathering and blend factor adjustments to fine-tune the blending effect, making it ideal for applications requiring seamless integration of images.
+    - Inputs:
+        - `target` (Required): The target image onto which the source image will be blended. It serves as the backdrop for the blending operation. Type should be `IMAGE`.
+        - `target_mask` (Required): A mask image used to define the blending area on the target image. It determines where and how the source image will be blended onto the target. Type should be `MASK`.
+        - `target_bounds` (Required): Specifies the boundaries within the target image where the blending should occur, allowing for precise control over the location of the blend. Type should be `IMAGE_BOUNDS`.
+        - `source` (Required): The source image to be blended onto the target image. This image will be manipulated according to the blend factor and feathering settings. Type should be `IMAGE`.
+        - `blend_factor` (Required): A value that controls the intensity of the blending effect, allowing for adjustments in how prominently the source image appears on the target. Type should be `FLOAT`.
+        - `feathering` (Required): The amount of feathering applied to the edges of the blend, creating a smoother transition between the blended images. Type should be `INT`.
+    - Outputs:
+        - `image`: The result of the blending operation, featuring the source image seamlessly integrated into the target image within the specified boundaries. Type should be `IMAGE`.

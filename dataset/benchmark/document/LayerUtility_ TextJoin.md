@@ -1,0 +1,5 @@
+- `LayerUtility_ TextJoin`: The TextJoin node is designed to concatenate multiple text inputs into a single string, separated by commas. It allows for the dynamic combination of up to four text strings, facilitating the aggregation of textual data for further processing or display.
+    - Inputs:
+        - `text_i` (Required): unknown Type should be `STRING`.
+    - Outputs:
+        - `text`: The output is a single string that represents the concatenated result of the input texts, separated by commas. Type should be `STRING`.

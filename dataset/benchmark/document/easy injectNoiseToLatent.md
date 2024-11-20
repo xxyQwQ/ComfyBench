@@ -1,0 +1,13 @@
+- `easy injectNoiseToLatent`: The `injectNoiseToLatent` node is designed to modify latent representations by injecting noise, allowing for the generation of varied outputs from a given input. It supports operations such as averaging or scaling the noise before injection, normalization of the resulting noisy latent, and conditional application of noise based on a mask, facilitating nuanced control over the noise injection process.
+    - Inputs:
+        - `strength` (Required): Specifies the strength of the noise to be injected into the latent space, affecting the intensity of the modification. Type should be `FLOAT`.
+        - `normalize` (Required): Determines whether the noised latent should be normalized, impacting the distribution of the resulting latent values. Type should be `BOOLEAN`.
+        - `average` (Required): Controls whether the original and noised latents are averaged, blending the input and noise for a potentially smoother result. Type should be `BOOLEAN`.
+        - `pipe_to_noise` (Optional): An optional pipeline input that can provide noise settings and samples, offering an alternative source of noise. Type should be `PIPE_LINE`.
+        - `image_to_latent` (Optional): An optional image input that, if provided, will be converted to a latent representation for noise injection. Type should be `IMAGE`.
+        - `latent` (Optional): The primary latent input to which noise will be added. If not provided, an attempt will be made to use an alternative source. Type should be `LATENT`.
+        - `noise` (Optional): The noise to be injected into the latent. This can be provided directly or sourced from the `pipe_to_noise` input. Type should be `LATENT`.
+        - `mask` (Optional): An optional mask that can be applied to selectively inject noise into parts of the latent space, allowing for localized modifications. Type should be `MASK`.
+        - `mix_randn_amount` (Optional): Specifies the amount of random noise to mix into the noised latent, introducing additional randomness. Type should be `FLOAT`.
+    - Outputs:
+        - `latent`: The modified latent representation after noise injection, which may exhibit variations depending on the applied noise and settings. Type should be `LATENT`.

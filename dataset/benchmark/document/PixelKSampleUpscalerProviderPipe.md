@@ -1,0 +1,19 @@
+- `PixelKSampleUpscalerProviderPipe`: This node is designed to provide an upscaling service by leveraging the PixelKSample upscaling technique within a pipeline structure. It extends the capabilities of the PixelKSampleUpscalerProvider by adapting its functionality for use in a more complex, pipelined environment, allowing for seamless integration and enhanced scalability in image processing workflows.
+    - Inputs:
+        - `scale_method` (Required): Specifies the method used for upscaling, allowing selection from predefined methods such as 'nearest-exact', 'bilinear', 'lanczos', and 'area'. This choice directly influences the quality and characteristics of the upscaled image. Type should be `COMBO[STRING]`.
+        - `seed` (Required): Determines the random seed for generating consistent results across upscaling sessions, ensuring reproducibility. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps to be used in the upscaling process, affecting the detail and quality of the output image. Type should be `INT`.
+        - `cfg` (Required): Specifies the configuration for the upscaling process, influencing the balance between fidelity to the original image and the introduction of new details. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the sampler to be used in the upscaling process, influencing the initial phase of image generation. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduling strategy for sampling during the upscaling process, affecting the distribution and application of samples. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Sets the denoising level to be applied during the upscaling process, potentially improving image clarity at the expense of some detail. Type should be `FLOAT`.
+        - `use_tiled_vae` (Required): A boolean parameter that enables or disables the use of tiled VAEs, impacting the upscaling process by potentially enhancing detail at the cost of increased computational requirements. Type should be `BOOLEAN`.
+        - `basic_pipe` (Required): Integrates the node within a basic pipeline structure, facilitating its combination with other processing steps. Type should be `BASIC_PIPE`.
+        - `tile_size` (Required): Defines the size of the tiles used in tiled VAE upscaling, affecting the granularity of the upscaling process. Type should be `INT`.
+        - `upscale_model_opt` (Optional): Optional parameter for selecting a specific upscale model, providing flexibility in choosing the algorithm for upscaling. Type should be `UPSCALE_MODEL`.
+        - `pk_hook_opt` (Optional): Optional parameter for specifying post-processing hooks, which can modify the upscaling results or apply additional effects. Type should be `PK_HOOK`.
+        - `scheduler_func_opt` (Optional): Optional parameter for specifying a custom scheduling function, offering additional control over the sampling process. Type should be `SCHEDULER_FUNC`.
+        - `tile_cnet_opt` (Optional): Optional parameter for specifying a control network option, which can influence the upscaling process by adjusting the content in a targeted manner. Type should be `CONTROL_NET`.
+        - `tile_cnet_strength` (Optional): Determines the strength of the control network's effect on the upscaling process, allowing for fine-tuning of the output. Type should be `FLOAT`.
+    - Outputs:
+        - `upscaler`: Produces an upscaled version of the input image, utilizing the specified upscaling method and other parameters to enhance image resolution and detail. Type should be `UPSCALER`.

@@ -1,0 +1,12 @@
+- `AV_LoraLoader`: The AV_LoraLoader node is designed to load and apply LoRA (Low-Rank Adaptation) models to given models and CLIP instances, optionally overriding the default LoRA model with a specified one and enabling or disabling the loading process. This functionality enhances model customization and flexibility in processing, allowing for dynamic adjustments and optimizations based on specific requirements or preferences.
+    - Inputs:
+        - `model` (Required): The model parameter represents the neural network model to which the LoRA adjustments will be applied, serving as the base for modifications. Type should be `MODEL`.
+        - `clip` (Required): The clip parameter signifies the CLIP model that will be adjusted alongside the main model, allowing for synchronized enhancements in processing capabilities. Type should be `CLIP`.
+        - `lora_name` (Required): Specifies the name of the LoRA model to be loaded and applied, enabling targeted modifications to the base model and CLIP instance. Type should be `COMBO[STRING]`.
+        - `strength_model` (Required): Specifies the strength of the LoRA adjustment to be applied to the model, allowing for fine-tuned control over the adaptation process. Type should be `FLOAT`.
+        - `strength_clip` (Required): Specifies the strength of the LoRA adjustment to be applied to the CLIP model, enabling precise customization of the enhancement. Type should be `FLOAT`.
+        - `lora_override` (Optional): Allows for the specification of an alternative LoRA model to override the default, providing flexibility in model customization. Type should be `STRING`.
+        - `enabled` (Optional): A boolean flag that determines whether the LoRA loading and application process should be executed, offering control over the modification workflow. Type should be `BOOLEAN`.
+    - Outputs:
+        - `model`: Returns the modified neural network model with applied LoRA adjustments, reflecting the enhancements or customizations made. Type should be `MODEL`.
+        - `clip`: Returns the modified CLIP model with applied LoRA adjustments, showcasing the enhancements or customizations made to processing capabilities. Type should be `CLIP`.

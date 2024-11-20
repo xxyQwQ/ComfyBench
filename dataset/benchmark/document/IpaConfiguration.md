@@ -1,0 +1,13 @@
+- `IpaConfiguration`: The IpaConfiguration node is designed to configure and apply advanced image processing adjustments (IPA) settings for steerable motion in image generation, focusing on parameters like start and end points, weight, scaling, and noise characteristics to enhance the visual output.
+    - Inputs:
+        - `ipa_starts_at` (Required): Specifies the starting point of the IPA effect, influencing when the adjustments begin to take effect in the image generation process. Type should be `FLOAT`.
+        - `ipa_ends_at` (Required): Defines the ending point of the IPA effect, determining when the adjustments cease to have an impact, thus shaping the duration of the effect. Type should be `FLOAT`.
+        - `ipa_weight_type` (Required): Determines the type of weighting applied to the IPA effect, such as 'ease in-out', affecting the transition smoothness of the adjustments. Type should be `COMBO[STRING]`.
+        - `ipa_weight` (Required): Sets the overall weight of the IPA effect, controlling the intensity of the applied adjustments. Type should be `FLOAT`.
+        - `ipa_embeds_scaling` (Required): Specifies the scaling method for embeddings, like 'V only', impacting how the adjustments are applied in terms of visual representation. Type should be `COMBO[STRING]`.
+        - `ipa_noise_strength` (Required): Controls the strength of noise added to the image, influencing the texture and detail level. Type should be `FLOAT`.
+        - `use_image_for_noise` (Required): Indicates whether an image is used as the source for noise, affecting the noise pattern and realism in the output. Type should be `BOOLEAN`.
+        - `type_of_noise` (Required): Specifies the type of noise, such as 'fade', affecting the visual characteristics of the noise applied. Type should be `COMBO[STRING]`.
+        - `noise_blur` (Required): Determines the level of blur applied to the noise, influencing the softness and subtlety of the noise effect. Type should be `INT`.
+    - Outputs:
+        - `configuration`: Returns the configured advanced IPA settings, encapsulating all specified adjustments for steerable motion in image generation. Type should be `ADVANCED_IPA_SETTINGS`.

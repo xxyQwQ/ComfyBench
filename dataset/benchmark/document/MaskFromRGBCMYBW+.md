@@ -1,0 +1,15 @@
+- `MaskFromRGBCMYBW+`: The MaskFromRGBCMYBW node is designed to generate masks based on specific RGB, CMY, and BW (black and white) thresholds applied to an input image. It allows for the creation of multiple masks corresponding to the primary and secondary colors, as well as black and white, based on the defined thresholds, enabling precise control over color-based segmentation for various image processing tasks.
+    - Inputs:
+        - `image` (Required): The input image to be processed for mask generation based on RGB, CMY, and BW thresholds. Type should be `IMAGE`.
+        - `threshold_r` (Required): The threshold value for the red component, used to determine the boundaries for red, cyan, magenta, and black/white masks. Type should be `FLOAT`.
+        - `threshold_g` (Required): The threshold value for the green component, used to determine the boundaries for green, cyan, yellow, and black/white masks. Type should be `FLOAT`.
+        - `threshold_b` (Required): The threshold value for the blue component, used to determine the boundaries for blue, magenta, yellow, and black/white masks. Type should be `FLOAT`.
+    - Outputs:
+        - `red`: The mask generated for the red color based on the threshold. Type should be `MASK`.
+        - `green`: The mask generated for the green color based on the threshold. Type should be `MASK`.
+        - `blue`: The mask generated for the blue color based on the threshold. Type should be `MASK`.
+        - `cyan`: The mask generated for the cyan color based on the threshold. Type should be `MASK`.
+        - `magenta`: The mask generated for the magenta color based on the threshold. Type should be `MASK`.
+        - `yellow`: The mask generated for the yellow color based on the threshold. Type should be `MASK`.
+        - `black`: The mask generated for black based on the threshold. Type should be `MASK`.
+        - `white`: The mask generated for white based on the threshold. Type should be `MASK`.

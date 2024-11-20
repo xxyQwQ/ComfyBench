@@ -1,0 +1,18 @@
+- `RegionalSamplerAdvanced`: The RegionalSamplerAdvanced node is designed to enhance image generation processes by applying region-specific sampling techniques. It allows for more precise control over the denoising and detail enhancement in different areas of an image, potentially leading to higher quality and more detailed outputs.
+    - Inputs:
+        - `add_noise` (Required): Determines whether noise should be added to the sampling process, affecting the initial state of the latent image. Type should be `BOOLEAN`.
+        - `noise_seed` (Required): Specifies the random seed for generating noise, ensuring reproducibility in the sampling process. Type should be `INT`.
+        - `steps` (Required): Defines the total number of sampling steps to be executed, impacting the depth of the denoising process. Type should be `INT`.
+        - `start_at_step` (Required): Indicates the starting step for applying the sampling, allowing for staged or delayed sampling interventions. Type should be `INT`.
+        - `end_at_step` (Required): Marks the final step where sampling is applied, controlling the extent of the sampling process. Type should be `INT`.
+        - `overlap_factor` (Required): Adjusts the overlap between regions to smooth the transitions, enhancing the coherence of the sampled image. Type should be `INT`.
+        - `restore_latent` (Required): Controls whether to restore the noise outside the mask area to its original state, affecting the fidelity of the inpainting. Type should be `BOOLEAN`.
+        - `return_with_leftover_noise` (Required): Decides whether to return the latent image with remaining noise, influencing the final image's texture. Type should be `BOOLEAN`.
+        - `latent_image` (Required): The input latent image to be processed, serving as the base for the sampling operations. Type should be `LATENT`.
+        - `base_sampler` (Required): The sampler used outside the region specified by the regional prompts, affecting the overall image quality. Type should be `KSAMPLER_ADVANCED`.
+        - `regional_prompts` (Required): Prompts applied to each specified region, directing the sampling process in those areas. Type should be `REGIONAL_PROMPTS`.
+        - `additional_mode` (Required): Specifies the operational mode for additional denoising in specific regions, offering options to either disable the feature, increase the total denoising amount, or balance the denoising between the primary and recovery samplers. Type should be `COMBO[STRING]`.
+        - `additional_sampler` (Required): Determines the recovery sampler to be used for additional denoising in specific regions, with options for automatic selection based on the primary sampler or manual selection for more customized control. Type should be `COMBO[STRING]`.
+        - `additional_sigma_ratio` (Required): Defines the multiplier for the noise schedule in the additional denoising process, affecting how much additional denoising is applied based on the selected mode. Type should be `FLOAT`.
+    - Outputs:
+        - `latent`: The processed latent image after applying region-specific sampling and denoising techniques. Type should be `LATENT`.

@@ -1,0 +1,13 @@
+- `ADE_NoiseLayerAddWeighted`: The ADE_NoiseLayerAddWeighted node specializes in enhancing the noise layering process by applying a weighted addition of noise to an existing noise layer. It leverages a balance multiplier to fine-tune the impact of new noise on the existing noise structure, aiming to achieve a more controlled and nuanced noise integration.
+    - Inputs:
+        - `batch_offset` (Required): Specifies the offset for batch processing, affecting how noise is applied across different batches. Type should be `INT`.
+        - `noise_type` (Required): Defines the type of noise to be added, influencing the characteristics of the noise applied. Type should be `COMBO[STRING]`.
+        - `seed_gen_override` (Required): Allows for overriding the default seed generation mechanism, enabling custom noise generation patterns. Type should be `COMBO[STRING]`.
+        - `seed_offset` (Required): Determines the offset applied to the seed value, facilitating varied noise generation outcomes. Type should be `INT`.
+        - `noise_weight` (Required): Controls the weight of the new noise being added, allowing for adjustment of the noise's influence on the existing layer. Type should be `FLOAT`.
+        - `balance_multiplier` (Required): Adjusts the balance between the old and new noise, fine-tuning the overall effect of noise addition. Type should be `FLOAT`.
+        - `prev_noise_layers` (Optional): Represents the previous state of noise layers, enabling sequential layering of noise for complex effects. Type should be `NOISE_LAYERS`.
+        - `mask_optional` (Optional): An optional mask that can be applied to selectively influence the noise addition process, providing further control over the noise characteristics. Type should be `MASK`.
+        - `seed_override` (Optional): Provides an option to override the seed value used for noise generation, offering control over the randomness aspect. Type should be `INT`.
+    - Outputs:
+        - `noise_layers`: Outputs the updated noise layer group after the addition of the weighted noise layer, reflecting the new state of noise layering. Type should be `NOISE_LAYERS`.

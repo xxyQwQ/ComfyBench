@@ -1,0 +1,15 @@
+- `IPAdapterEmbedsBatch`: The IPAdapterEmbedsBatch node is designed to handle batch processing of image embeddings within the IPAdapter framework. It extends the capabilities of IPAdapterEmbeds by enabling the processing of multiple embeddings simultaneously, optimizing for efficiency and scalability in embedding operations.
+    - Inputs:
+        - `model` (Required): unknown Type should be `MODEL`.
+        - `ipadapter` (Required): unknown Type should be `IPADAPTER`.
+        - `pos_embed` (Required): unknown Type should be `EMBEDS`.
+        - `weight` (Required): unknown Type should be `FLOAT`.
+        - `weight_type` (Required): unknown Type should be `COMBO[STRING]`.
+        - `start_at` (Required): unknown Type should be `FLOAT`.
+        - `end_at` (Required): unknown Type should be `FLOAT`.
+        - `embeds_scaling` (Required): unknown Type should be `COMBO[STRING]`.
+        - `neg_embed` (Optional): unknown Type should be `EMBEDS`.
+        - `attn_mask` (Optional): unknown Type should be `MASK`.
+        - `clip_vision` (Optional): unknown Type should be `CLIP_VISION`.
+    - Outputs:
+        - `model`: Represents the output model after processing the batch of image embeddings, encapsulating the enhanced or modified embeddings. Type should be `MODEL`.

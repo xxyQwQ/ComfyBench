@@ -1,0 +1,9 @@
+- `VHS_SplitImages`: The VHS_SplitImages node is designed to divide a batch of images into two groups based on a specified index. This functionality is essential for workflows that require the separation of image data for further processing or analysis.
+    - Inputs:
+        - `images` (Required): The 'images' parameter represents the batch of images to be split. It is crucial for determining how the images are divided into two groups. Type should be `IMAGE`.
+        - `split_index` (Required): The 'split_index' parameter specifies the index at which the batch of images is split. It plays a pivotal role in defining the boundary between the two resulting groups of images. Type should be `INT`.
+    - Outputs:
+        - `IMAGE_A`: The first group of images obtained after the split. Type should be `IMAGE`.
+        - `A_count`: The count of images in the first group after the split. Type should be `INT`.
+        - `IMAGE_B`: The second group of images obtained after the split. Type should be `IMAGE`.
+        - `B_count`: The count of images in the second group after the split. Type should be `INT`.

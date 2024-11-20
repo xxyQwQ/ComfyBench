@@ -1,9 +1,0 @@
-- `LLMQueryEngine`: The LLMQueryEngine node is designed to process and execute queries using a language model, integrating vector indexing and similarity postprocessing to retrieve relevant responses. It leverages language models to understand and respond to user queries, applying advanced retrieval techniques to ensure the responses are both relevant and contextually appropriate.
-    - Parameters:
-        - `query`: The user's query input, which is processed by the engine to find relevant information or answers. Type should be `STRING`.
-    - Inputs:
-        - `llm_model`: Represents the language model and optional embedding model used for processing queries. It's crucial for executing the query as it determines the understanding and generation capabilities of the engine. Type should be `LLM_MODEL`.
-        - `llm_index`: The index used for retrieving vector embeddings, essential for identifying relevant documents or entries based on the query. Type should be `LLM_INDEX`.
-        - `llm_message`: Optional list of messages that can be included in the query context, enhancing the engine's understanding of the user's intent. Type should be `LIST`.
-    - Outputs:
-        - `results`: The processed query response, encapsulating the relevance and context of the information retrieved by the engine. Type should be `STRING`.

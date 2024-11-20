@@ -1,0 +1,9 @@
+- `ValueSchedule`: The ValueSchedule node is designed to animate values over a sequence of frames based on keyframes defined in a text input. It modulates the current frame within the maximum frame range and computes interpolated values to provide dynamic, frame-specific outputs.
+    - Inputs:
+        - `text` (Required): A multiline string containing keyframes for animation, serving as the blueprint for generating interpolated values across frames. Type should be `STRING`.
+        - `max_frames` (Required): The maximum number of frames for the animation, setting an upper limit for frame modulation and interpolation. Type should be `INT`.
+        - `current_frame` (Required): The current frame number, used to determine the specific value to be output based on the animation's progression. Type should be `INT`.
+        - `print_output` (Required): A boolean flag that, when true, prints the current frame and its corresponding value for debugging purposes. Type should be `BOOLEAN`.
+    - Outputs:
+        - `float`: The interpolated value for the current frame as a floating-point number. Type should be `FLOAT`.
+        - `int`: The interpolated value for the current frame, cast to an integer. Type should be `INT`.

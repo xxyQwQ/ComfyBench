@@ -1,0 +1,6 @@
+- `INPAINT_LoadFooocusInpaint`: This node is designed to load specific inpainting models, focusing on initializing and preparing the models for the inpainting process. It abstracts the complexities of loading model weights and configurations, ensuring that the models are ready for use in subsequent inpainting tasks.
+    - Inputs:
+        - `head` (Required): Specifies the filename of the head model to be loaded. It is crucial for initializing the inpainting head model with the correct weights for the inpainting process. Type should be `COMBO[STRING]`.
+        - `patch` (Required): Indicates the filename of the patch model to be loaded. This model is essential for applying localized adjustments or enhancements during the inpainting process. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `inpaint_patch`: Returns a tuple containing the initialized inpainting head model and the loaded patch model, ready for use in the inpainting process. Type should be `INPAINT_PATCH`.

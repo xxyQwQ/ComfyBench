@@ -1,0 +1,7 @@
+- `Inference_Core_Zoe_DepthAnythingPreprocessor`: This node preprocesses images for depth estimation by adapting them based on the specified environment (indoor or outdoor) using the Zoe Depth Anything Detector model. It aims to enhance depth estimation tasks by preprocessing images with a model specifically trained for different environments.
+    - Inputs:
+        - `image` (Required): The image to be processed for depth estimation. It serves as the primary input for the depth estimation preprocessing task. Type should be `IMAGE`.
+        - `environment` (Optional): Specifies the environment context (indoor or outdoor) for the image, which influences the choice of pretrained model for depth estimation. Type should be `COMBO[STRING]`.
+        - `resolution` (Optional): The target resolution for the output image, affecting the detail level of the depth estimation. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed image with enhanced features for depth estimation, ready for further analysis or use. Type should be `IMAGE`.

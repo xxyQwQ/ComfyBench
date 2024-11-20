@@ -1,9 +1,0 @@
-- `ImageTransformPaddingRelative`: This node applies relative padding to images based on specified scale factors for width and height, and a padding method. It dynamically calculates the amount of padding to add to each dimension of the images, allowing for flexible image transformations that maintain the aspect ratio.
-    - Parameters:
-        - `scale_width`: A scale factor for determining the width of the padding relative to the original image width. It influences the final size of the padded image. Type should be `FLOAT`.
-        - `scale_height`: A scale factor for determining the height of the padding relative to the original image height. It influences the final size of the padded image. Type should be `FLOAT`.
-        - `method`: The method used for padding (e.g., reflect, edge, constant), affecting the appearance of the padded areas. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: The collection of images to which padding will be applied. This parameter is crucial for defining the input data that will undergo the transformation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The transformed images with added padding, maintaining the original aspect ratio while adjusting the overall dimensions. Type should be `IMAGE`.

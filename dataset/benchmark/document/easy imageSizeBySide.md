@@ -1,0 +1,6 @@
+- `easy imageSizeBySide`: This node calculates the dimension of an image based on the specified side (longest or shortest), providing a simple way to obtain image resolution metrics.
+    - Inputs:
+        - `image` (Required): The image for which the dimension is to be calculated, affecting the output by determining the longest or shortest side based on the image's width and height. Type should be `IMAGE`.
+        - `side` (Required): Specifies whether to calculate the dimension based on the longest or shortest side of the image, directly influencing the result by selecting the appropriate dimension. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `resolution`: The calculated dimension (width or height) of the specified side (longest or shortest) of the image. Type should be `INT`.

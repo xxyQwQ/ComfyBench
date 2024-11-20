@@ -1,6 +1,0 @@
-- `ClearMemory`: The ClearMemory node is designed to reset or clear the memory of a specified agent, potentially targeting a specific recipient within its memory scope. This functionality is crucial for managing and refreshing the state of conversational agents, ensuring they can operate without the burden of outdated or irrelevant conversational history.
-    - Parameters:
-    - Inputs:
-        - `agent`: The 'agent' parameter represents the conversational agent whose memory is to be cleared. This is essential for resetting the agent's state or context to ensure it can handle new interactions effectively. Type should be `AGENT`.
-    - Outputs:
-        - `agent`: Returns the agent with its memory cleared or reset, ready for new interactions. This ensures the agent can operate with a fresh state, free from the constraints of its prior conversational history. Type should be `AGENT`.

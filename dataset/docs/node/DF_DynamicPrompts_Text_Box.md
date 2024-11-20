@@ -1,6 +1,0 @@
-- `DF_DynamicPrompts_Text_Box`: This node specializes in processing text input with dynamic prompts, allowing for a more interactive and flexible user input experience. It captures and returns the input text as is, supporting multiline and dynamically generated prompts.
-    - Parameters:
-        - `Text`: The 'Text' parameter accepts multiline text input with dynamic prompts, enhancing the node's ability to handle varied and contextually rich user inputs. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: Outputs the input text unchanged, encapsulating it within a tuple to maintain consistency with the node's return type expectations. Type should be `STRING`.

@@ -1,0 +1,14 @@
+- `ImageMaskSwitch`: The ImageMaskSwitch node allows for the selection and output of a specific image and its associated mask from a set of up to four image-mask pairs based on a selection input. This functionality is useful for dynamically choosing between different visual elements and their masks within a workflow.
+    - Inputs:
+        - `select` (Required): Determines which image-mask pair to output, allowing for dynamic selection from up to four options. Type should be `INT`.
+        - `images1` (Required): The first image in the selection set. Type should be `IMAGE`.
+        - `mask1_opt` (Optional): Optional mask associated with the first image. Type should be `MASK`.
+        - `images2_opt` (Optional): The second optional image in the selection set. Type should be `IMAGE`.
+        - `mask2_opt` (Optional): Optional mask associated with the second image. Type should be `MASK`.
+        - `images3_opt` (Optional): The third optional image in the selection set. Type should be `IMAGE`.
+        - `mask3_opt` (Optional): Optional mask associated with the third image. Type should be `MASK`.
+        - `images4_opt` (Optional): The fourth optional image in the selection set. Type should be `IMAGE`.
+        - `mask4_opt` (Optional): Optional mask associated with the fourth image. Type should be `MASK`.
+    - Outputs:
+        - `image`: The selected image based on the input selection. Type should be `IMAGE`.
+        - `mask`: The mask associated with the selected image, if provided. Type should be `MASK`.

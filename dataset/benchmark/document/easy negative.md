@@ -1,0 +1,5 @@
+- `easy negative`: This node specializes in processing negative textual inputs for generative models, focusing on embedding and conditioning these inputs to influence the generative process negatively. It integrates with CLIP models for encoding text into embeddings and applies various normalization and interpretation strategies to tailor the negative influence on the generated content.
+    - Inputs:
+        - `negative` (Required): The negative textual input to be processed. It is crucial for defining the aspects or features to be minimized or avoided in the generated content, affecting the overall direction and quality of the output. Type should be `STRING`.
+    - Outputs:
+        - `negative`: The processed negative text, now encoded and conditioned for use in influencing the generative model. This output is ready to be integrated into the model's generative process. Type should be `STRING`.

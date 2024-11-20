@@ -1,9 +1,0 @@
-- `Text List Concatenate`: The node is designed to concatenate multiple lists into a single list. It processes optional lists provided as inputs and merges them in a sorted order, creating a unified list that combines all elements.
-    - Parameters:
-    - Inputs:
-        - `list_a`: Represents the first optional list to be concatenated. It plays a role in the overall merging process by contributing its elements to the final merged list. Type should be `LIST`.
-        - `list_b`: Represents the second optional list to be concatenated. It contributes its elements to the final merged list, enhancing the overall content. Type should be `LIST`.
-        - `list_c`: Represents the third optional list to be concatenated. Its elements are added to the final merged list, enriching the combined output. Type should be `LIST`.
-        - `list_d`: Represents the fourth optional list to be concatenated. It adds its elements to the final merged list, completing the aggregation of content. Type should be `LIST`.
-    - Outputs:
-        - `list`: The output is a single list that contains all elements from the input lists, merged in a sorted order. Type should be `LIST`.

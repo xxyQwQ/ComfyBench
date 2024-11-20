@@ -1,6 +1,0 @@
-- `SaltCLIPSegLoader`: The SaltCLIPSegLoader node is designed to load and initialize the CLIPSeg model for image segmentation tasks. It facilitates the process of fetching the model and its processor from a specified source, caching them locally for efficient reuse.
-    - Parameters:
-        - `model`: Specifies the model identifier for the CLIPSeg model to be loaded. This allows for flexibility in choosing different CLIPSeg model versions or configurations. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `clipseg_model`: Returns a tuple containing the CLIPSeg processor and the CLIPSeg model, ready for image segmentation tasks. Type should be `CLIPSEG_MODEL`.

@@ -1,7 +1,0 @@
-- `DF_Subtract`: The DF_Subtract node is designed to perform subtraction between two input values, returning the difference as its output. This node abstracts the mathematical operation of subtraction, allowing for the dynamic computation of differences between numerical values within a data flow.
-    - Parameters:
-        - `Value_A`: Value_A represents the minuend in the subtraction operation. It is the initial value from which Value_B will be subtracted, playing a crucial role in determining the outcome of the node's computation. Type should be `FLOAT`.
-        - `Value_B`: Value_B serves as the subtrahend in the subtraction operation. Its value is subtracted from Value_A, directly influencing the resulting difference output by the node. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The output is the numerical difference resulting from subtracting Value_B from Value_A, encapsulating the subtraction operation's result. Type should be `FLOAT`.

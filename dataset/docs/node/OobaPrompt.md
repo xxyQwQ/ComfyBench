@@ -1,9 +1,0 @@
-- `OobaPrompt`: The OobaPrompt node is designed to facilitate the generation of text prompts by processing and transforming input text according to specific syntax rules. It leverages an API to dynamically generate content based on the input prompt, seed, and mode, allowing for customized text generation that can incorporate external data or predefined styles.
-    - Parameters:
-        - `input_prompt`: The 'input_prompt' parameter is the initial text input that the node processes. It serves as the foundation for text generation, where specific syntax within the prompt can trigger dynamic content generation or style application, significantly influencing the output. Type should be `STRING`.
-        - `mode`: The 'mode' parameter specifies the context or type of the input prompt, such as 'prompt', 'style', 'descriptor', 'character', or 'custom'. This allows for tailored processing and generation of content based on the mode selected. Type should be `COMBO[STRING]`.
-        - `custom_history`: The 'custom_history' parameter allows for the inclusion of a custom history file in JSON format, which can be used to influence the generation process by providing additional context or data. Type should be `STRING`.
-        - `seed`: The 'seed' parameter is used to introduce a deterministic element to the random choices made during text processing. This ensures that given the same seed and input, the node will produce the same output, allowing for reproducibility in text generation. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `text`: The output is a transformed version of the input prompt, where wildcard syntax and custom LLM syntax have been processed and replaced with dynamically generated content. Type should be `STRING`.

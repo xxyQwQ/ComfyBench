@@ -1,0 +1,10 @@
+- `LayerUtility_ HLFrequencyDetailRestore`: The HLFrequencyDetailRestore node is designed to enhance image details by restoring high and low frequency components. It allows for the manipulation of image textures and details through frequency-based adjustments, providing a means to fine-tune the visual quality of images in a layer-wise manner.
+    - Inputs:
+        - `image` (Required): The primary image to which frequency detail restoration will be applied. It serves as the base layer for the operation. Type should be `IMAGE`.
+        - `detail_image` (Required): An image containing the details to be restored into the primary image. This image is used to extract high-frequency components. Type should be `IMAGE`.
+        - `keep_high_freq` (Required): Determines the intensity of high-frequency details to be preserved in the detail image. Type should be `INT`.
+        - `erase_low_freq` (Required): Specifies the level of low-frequency details to be erased from the primary image before merging with high-frequency details. Type should be `INT`.
+        - `mask_blur` (Required): Applies a blur to the mask, if provided, to smooth the edges of the applied details. Type should be `INT`.
+        - `mask` (Optional): An optional mask to specify areas of the image where detail restoration should be applied. Type should be `MASK`.
+    - Outputs:
+        - `image`: The resulting image after applying high and low frequency detail restoration. Type should be `IMAGE`.

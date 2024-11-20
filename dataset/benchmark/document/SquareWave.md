@@ -1,0 +1,10 @@
+- `SquareWave`: The SquareWave node generates a square wave pattern based on specified parameters such as phase, amplitude, and translations. It's designed to create distinct, square-shaped oscillations for various applications in signal processing and waveform generation.
+    - Inputs:
+        - `phase` (Required): Defines the period of the square wave. A higher value results in a longer period between wave peaks. Type should be `FLOAT`.
+        - `amplitude` (Required): Determines the height of the square wave peaks. A larger amplitude results in taller peaks. Type should be `FLOAT`.
+        - `x_translation` (Required): Shifts the wave along the X-axis. This can be used to adjust the starting point of the wave. Type should be `FLOAT`.
+        - `y_translation` (Required): Shifts the wave along the Y-axis, adjusting the baseline level of the wave. Type should be `FLOAT`.
+        - `current_frame` (Required): Specifies the current frame or point in time for which the wave value is being calculated. This allows for dynamic wave generation over time. Type should be `INT`.
+    - Outputs:
+        - `float`: The primary output of the wave calculation, representing the wave's value at the current frame. Type should be `FLOAT`.
+        - `int`: An integer representation of the wave's value at the current frame. Type should be `INT`.

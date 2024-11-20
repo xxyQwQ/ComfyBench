@@ -1,0 +1,17 @@
+- `SDXL Power Prompt - Simple _ Negative (rgthree)`: This node provides a simplified version of the SDXL Power Prompt specifically designed for negative conditioning scenarios. It streamlines the process by not loading Loras, making it more efficient for cases where negative prompts are required.
+    - Inputs:
+        - `prompt_g` (Required): The global prompt used for generating or conditioning the output. It plays a crucial role in guiding the overall direction and theme of the generation. Type should be `STRING`.
+        - `prompt_l` (Required): The local prompt that specifies more detailed or localized conditions for the generation. It complements the global prompt by adding specificity to certain areas or aspects. Type should be `STRING`.
+        - `opt_clip` (Optional): Optional CLIP model settings to adjust the conditioning based on visual concepts. Type should be `CLIP`.
+        - `opt_clip_width` (Optional): Specifies the width of the CLIP model's input. It's crucial for defining the dimensions of the visual concepts to be considered. Type should be `INT`.
+        - `opt_clip_height` (Optional): Specifies the height of the CLIP model's input. It's essential for determining the dimensions of the visual concepts to be analyzed. Type should be `INT`.
+        - `insert_embedding` (Optional): Allows the insertion of pre-defined embeddings into the prompt, enhancing the conditioning with additional context or information. Type should be `COMBO[STRING]`.
+        - `insert_saved` (Optional): Enables the inclusion of saved prompts, providing a way to reuse previously successful or preferred prompt configurations. Type should be `COMBO[STRING]`.
+        - `target_width` (Optional): Defines the target width for the output, allowing for specific dimension requirements to be set. Type should be `INT`.
+        - `target_height` (Optional): Defines the target height for the output, enabling precise dimension specifications for the generated content. Type should be `INT`.
+        - `crop_width` (Optional): Determines the width of the crop area, which can be used to focus the generation on a specific part of the visual concept. Type should be `INT`.
+        - `crop_height` (Optional): Specifies the height of the crop area, allowing for targeted focus within the visual concept for the generation. Type should be `INT`.
+    - Outputs:
+        - `CONDITIONING`: The conditioning output that combines global and local prompts with optional parameters to guide the generation process. Type should be `CONDITIONING`.
+        - `TEXT_G`: The global prompt used for the generation, returned as part of the output for reference. Type should be `STRING`.
+        - `TEXT_L`: The local prompt used for the generation, returned as part of the output for reference. Type should be `STRING`.

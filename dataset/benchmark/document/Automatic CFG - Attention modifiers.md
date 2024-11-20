@@ -1,0 +1,13 @@
+- `Automatic CFG - Attention modifiers`: This node encompasses a suite of functionalities aimed at modifying and enhancing the attention mechanisms within generative models. It provides a variety of methods to adjust attention parameters dynamically, apply custom attention patches, and manipulate attention layers for improved model performance and customization. The node's capabilities allow for experimental and targeted modifications to the model's attention mechanisms, facilitating advanced configuration and optimization of generative processes.
+    - Inputs:
+        - `sigma_start` (Required): Defines the starting value of sigma for the attention modification process, determining the initial scope of modifications. Type should be `FLOAT`.
+        - `sigma_end` (Required): Sets the ending value of sigma for the attention modification process, marking the limit of the attention adjustments. Type should be `FLOAT`.
+        - `self_attn_mod_eval` (Required): Contains the evaluation code for self-attention modifications, allowing for dynamic and custom adjustments to the model's attention mechanism. Type should be `STRING`.
+        - `unet_block_id_input` (Required): Identifies the input UNet block IDs where the attention modifications will be applied, specifying the target areas within the model. Type should be `STRING`.
+        - `unet_block_id_middle` (Required): Specifies the middle UNet block IDs for applying attention modifications, targeting intermediate layers of the model. Type should be `STRING`.
+        - `unet_block_id_output` (Required): Indicates the output UNet block IDs for attention modifications, focusing on the final layers of the model. Type should be `STRING`.
+        - `unet_attn` (Required): Determines the type of attention (self, cross, or both) to be modified, guiding the application of attention adjustments. Type should be `COMBO[STRING]`.
+        - `join_parameters` (Optional): Optional parameter for joining attention modifier parameters from different sources, enhancing the flexibility of attention modifications. Type should be `ATTNMOD`.
+    - Outputs:
+        - `Attention modifier`: The modified attention parameters or configurations resulting from the application of attention modifiers. This output is crucial for understanding the impact of modifications on the model's attention mechanisms. Type should be `ATTNMOD`.
+        - `Parameters as string`: A string representation of the attention modification parameters, providing a clear and concise summary of the adjustments made. Type should be `STRING`.

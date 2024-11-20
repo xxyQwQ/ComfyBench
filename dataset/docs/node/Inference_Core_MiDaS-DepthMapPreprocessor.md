@@ -1,9 +1,0 @@
-- `Inference_Core_MiDaS-DepthMapPreprocessor`: The MiDaS Depth Map Preprocessor node is designed to transform input images into depth maps using the MiDaS model. This process enhances the perception of depth in images, facilitating various applications in 3D modeling, augmented reality, and beyond by providing a detailed depth estimation.
-    - Parameters:
-        - `a`: The 'a' parameter influences the calculation of normals in the depth map, affecting the perception of depth and texture in the output. Type should be `FLOAT`.
-        - `bg_threshold`: The 'bg_threshold' parameter sets the threshold for background separation in the depth map, enhancing the focus on foreground elements by filtering out background noise. Type should be `FLOAT`.
-        - `resolution`: The 'resolution' parameter specifies the resolution for the output depth map, affecting the level of detail and size of the generated depth map. Type should be `INT`.
-    - Inputs:
-        - `image`: The 'image' parameter is the input image for depth map generation, serving as the primary data for depth estimation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a depth map image, providing a pixel-wise depth estimation of the input image. Type should be `IMAGE`.

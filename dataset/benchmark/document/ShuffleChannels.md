@@ -1,0 +1,9 @@
+- `ShuffleChannels`: The `ShuffleChannels` node is designed to manipulate the color channels of an image. It allows for the reassignment of color channels, including red, green, blue, and optionally alpha, to different color values or to a constant value. This functionality can be used to create various visual effects or to correct color channel misalignments in images.
+    - Inputs:
+        - `image` (Required): The input image to be processed. This image will have its color channels shuffled according to the specified mappings. Type should be `IMAGE`.
+        - `red` (Required): Specifies the mapping for the red channel in the output image. It can be mapped to another color channel or set to a constant value. Type should be `COMBO[STRING]`.
+        - `green` (Required): Specifies the mapping for the green channel in the output image. It can be mapped to another color channel or set to a constant value. Type should be `COMBO[STRING]`.
+        - `blue` (Required): Specifies the mapping for the blue channel in the output image. It can be mapped to another color channel or set to a constant value. Type should be `COMBO[STRING]`.
+        - `alpha` (Required): Optionally specifies the mapping for the alpha (transparency) channel in the output image. It can be mapped to another channel, set to a constant value, or left unchanged. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The output image after the color channels have been shuffled according to the specified mappings. Type should be `IMAGE`.

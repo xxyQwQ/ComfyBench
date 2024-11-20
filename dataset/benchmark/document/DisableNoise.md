@@ -1,0 +1,4 @@
+- `DisableNoise`: The DisableNoise node is designed to provide a mechanism for disabling noise generation within a sampling process. It serves as a utility to override default noise behaviors, facilitating scenarios where noise introduction is undesirable for the generation or manipulation of images or data.
+    - Inputs:
+    - Outputs:
+        - `noise`: Represents a noise object that effectively generates no noise, ensuring that the output remains unaltered by noise addition. Type should be `NOISE`.

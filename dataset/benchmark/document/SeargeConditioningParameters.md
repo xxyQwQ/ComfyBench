@@ -1,0 +1,14 @@
+- `SeargeConditioningParameters`: The SeargeConditioningParameters node is designed to manage and configure the conditioning parameters for image generation processes. It focuses on adjusting various scales and scores that influence the conditioning of positive and negative prompts, as well as refining and targeting specific aspects of the generated images. This node plays a crucial role in fine-tuning the aesthetic and thematic direction of the output.
+    - Inputs:
+        - `base_conditioning_scale` (Required): Specifies the scale for base conditioning, affecting the foundational aspects of image generation. Type should be `FLOAT`.
+        - `refiner_conditioning_scale` (Required): Determines the scale for refiner conditioning, influencing the refinement process of the generated images. Type should be `FLOAT`.
+        - `target_conditioning_scale` (Required): Sets the scale for target conditioning, targeting specific attributes or qualities in the image generation. Type should be `FLOAT`.
+        - `positive_conditioning_scale` (Required): Adjusts the scale for positive conditioning, enhancing desired features or themes in the generated images. Type should be `FLOAT`.
+        - `negative_conditioning_scale` (Required): Modifies the scale for negative conditioning, reducing or avoiding undesired aspects in the images. Type should be `FLOAT`.
+        - `positive_aesthetic_score` (Required): Defines the aesthetic score for positive prompts, influencing the visual appeal of the generated images. Type should be `FLOAT`.
+        - `negative_aesthetic_score` (Required): Sets the aesthetic score for negative prompts, impacting the avoidance of certain visual elements. Type should be `FLOAT`.
+        - `precondition_mode` (Required): Specifies the mode of preconditioning, determining how preconditions are applied to the image generation process. Type should be `COMBO[STRING]`.
+        - `precondition_strength` (Required): Determines the strength of the preconditioning, affecting the intensity of applied preconditions. Type should be `FLOAT`.
+        - `data` (Optional): unknown Type should be `SRG_DATA_STREAM`.
+    - Outputs:
+        - `data`: unknown Type should be `SRG_DATA_STREAM`.

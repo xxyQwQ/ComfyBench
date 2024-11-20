@@ -1,0 +1,10 @@
+- `Model Patch Seamless (mtb)`: This node is designed to seamlessly patch models within the MTB framework, enhancing their functionality or performance without altering their core structure. It focuses on integrating modifications in a way that is transparent to the user, ensuring that the original model's capabilities are extended or optimized while maintaining its original workflow and outputs.
+    - Inputs:
+        - `model` (Required): The model to be patched, aiming to enhance its functionality or performance seamlessly within the MTB framework. Type should be `MODEL`.
+        - `startStep` (Required): Defines the starting step for the patching process, allowing for targeted modifications within the model's operation. Type should be `INT`.
+        - `stopStep` (Required): Specifies the stopping step for the patching process, enabling precise control over the extent of model modifications. Type should be `INT`.
+        - `tilingX` (Required): A boolean flag indicating whether tiling should be applied along the X-axis, affecting the model's processing of images. Type should be `BOOLEAN`.
+        - `tilingY` (Required): A boolean flag indicating whether tiling should be applied along the Y-axis, impacting the model's image processing capabilities. Type should be `BOOLEAN`.
+    - Outputs:
+        - `Original Model (passthrough)`: The original model passed through without modifications, serving as a baseline for comparison. Type should be `MODEL`.
+        - `Patched Model`: The modified version of the original model, enhanced with seamless patching to improve functionality or performance. Type should be `MODEL`.

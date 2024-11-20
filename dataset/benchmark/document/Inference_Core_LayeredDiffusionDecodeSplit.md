@@ -1,0 +1,9 @@
+- `Inference_Core_LayeredDiffusionDecodeSplit`: This node specializes in decoding images through a layered diffusion process, specifically tailored for handling split image data. It leverages a modified diffusion decode method to process images in segments, optimizing for scenarios where images are divided into frames or layers for enhanced inference performance.
+    - Inputs:
+        - `samples` (Required): A collection of sample data that the node will process. This data is crucial for the decoding operation, as it directly influences the segmentation, processing, and final quality of the decoded images. Type should be `LATENT`.
+        - `images` (Required): The tensor of images to be decoded. This input is central to the node's functionality, as it directly manipulates these images based on the provided samples and frames. Type should be `IMAGE`.
+        - `frames` (Required): Specifies the number of frames or segments into which the images are divided. This parameter is key to determining how the images are processed and decoded. Type should be `INT`.
+        - `sd_version` (Required): The version of the Stable Diffusion model to use for decoding. This affects the decoding behavior and the quality of the output images. Type should be `COMBO[STRING]`.
+        - `sub_batch_size` (Required): The size of sub-batches for processing, allowing for optimized resource utilization during the decoding process. Type should be `INT`.
+    - Outputs:
+        - `image`: The decoded images, processed through the layered diffusion method. This output is crucial for understanding the effectiveness and quality of the decoding process. Type should be `IMAGE`.

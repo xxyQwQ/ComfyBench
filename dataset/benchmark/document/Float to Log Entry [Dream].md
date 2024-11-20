@@ -1,0 +1,6 @@
+- `Float to Log Entry [Dream]`: The Float to Log Entry node is designed to convert floating-point numbers into log entries, facilitating the tracking and logging of numerical data within a system. It encapsulates the process of transforming a float value into a structured log format, making it easier to document and review numerical changes or states.
+    - Inputs:
+        - `value` (Required): Represents the floating-point number to be logged. Its inclusion is crucial for defining the numerical data that will be transformed into a log entry. Type should be `FLOAT`.
+        - `label` (Required): An optional label to prepend to the logged value, providing context or categorization for the numerical data being logged. Type should be `STRING`.
+    - Outputs:
+        - `log_entry`: The output is a structured log entry that encapsulates the provided floating-point value, optionally prefixed with a label, in a format suitable for logging and tracking. Type should be `LOG_ENTRY`.

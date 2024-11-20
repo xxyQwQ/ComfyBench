@@ -1,6 +1,0 @@
-- `JWStringToInteger`: This node converts a string representation of an integer into its numerical form. It is designed to parse strings containing integer values and transform them into actual integer data types, facilitating numerical operations on values that were originally in text format.
-    - Parameters:
-        - `text`: The 'text' parameter takes a string input that represents an integer. This parameter is crucial for the node's operation as it determines the integer value that will be produced by the node's execution. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `int`: The output is an integer representation of the input string. This allows for further numerical operations to be performed on the previously textual integer value. Type should be `INT`.

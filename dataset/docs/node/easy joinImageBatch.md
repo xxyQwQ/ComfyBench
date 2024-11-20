@@ -1,7 +1,0 @@
-- `easy joinImageBatch`: The `easy joinImageBatch` node is designed to transform a batch of images into a single, larger image. This process involves combining multiple images into one cohesive visual output, effectively creating a composite image from a collection of individual images.
-    - Parameters:
-    - Inputs:
-        - `images`: The collection of images to be combined into a single composite image. This parameter is crucial for determining the content and layout of the final composite output. Type should be `IMAGE`.
-        - `mode`: Specifies the method or mode used to combine the images into a single batch. This parameter influences the arrangement and blending of individual images within the composite output. Type should be `['horizontal', 'vertical']`.
-    - Outputs:
-        - `image`: Represents the output of the node, which is a single, composite image created from the input batch of images. Type should be `IMAGE`.

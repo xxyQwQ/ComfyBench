@@ -1,0 +1,16 @@
+- `SAIWhisperTranscribe`: This node is designed to transcribe audio and video files using the Whisper model. It processes media files to extract audio, then transcribes the audio into text, providing detailed transcription data including timestamps and potentially images, depending on the media type and transcription settings.
+    - Inputs:
+        - `whisper_model` (Required): The Whisper model, processor, and device configuration used for transcription. This affects the accuracy and quality of the transcription. Type should be `WHISPER_MODEL`.
+        - `file_path` (Required): The path to the media file to be transcribed. Supports both audio and video files, validating against supported formats. Type should be `STRING`.
+        - `frame_rate` (Optional): Optional. Specifies the frame rate for audio extraction from video files, affecting the temporal resolution of the transcription. Type should be `FLOAT`.
+        - `chunk_type` (Optional): Specifies whether the transcription should be segmented by sentences or words, affecting the granularity of the output timestamps. Type should be `COMBO[STRING]`.
+        - `max_new_tokens` (Optional): Optional. Limits the number of new tokens generated during transcription, impacting the length and detail of the output. Type should be `INT`.
+    - Outputs:
+        - `transcription_text`: The complete transcription text without timestamps or segmentation. Type should be `STRING`.
+        - `transcription_timestamp_dict`: A structured representation of the transcription with detailed information, including timestamps. Type should be `DICT`.
+        - `transcription_frame_dict`: Timestamped frames of the transcription, providing temporal context to the text. Type should be `DICT`.
+        - `prompt_schedule`: A schedule of prompts used during transcription, if applicable. Type should be `STRING`.
+        - `images`: A collection of images extracted from the video, if the media type is video. Type should be `IMAGE`.
+        - `transcription_count`: The total number of transcription segments produced. Type should be `INT`.
+        - `frame_rate`: The frame rate derived from the audio extraction process. Type should be `INT`.
+        - `frame_count`: The total number of frames in the video, if the media type is video. Type should be `INT`.

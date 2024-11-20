@@ -1,0 +1,10 @@
+- `NaiveAutoKMeansColor`: This node is designed to automatically determine the optimal number of colors for K-means clustering on an image, and then apply the K-means algorithm to segment the image into these colors. It simplifies the process of color quantization by abstracting away the need for manual specification of the number of clusters, making it easier to use for tasks such as image simplification or color analysis.
+    - Inputs:
+        - `image` (Required): The input image on which K-means clustering will be performed. This is the primary data the node operates on to determine the optimal number of colors. Type should be `IMAGE`.
+        - `max_k` (Required): The maximum number of colors (clusters) to consider for determining the optimal number through the algorithm. It sets an upper limit on the number of clusters to evaluate. Type should be `INT`.
+        - `rc_threshold` (Required): A threshold for the relative compactness of clusters, used to help determine the optimal number of clusters by comparing the compactness of a cluster to the first computed compactness. Type should be `FLOAT`.
+        - `max_iterations` (Required): The maximum number of iterations the K-means algorithm will execute, providing a stopping criterion for convergence. Type should be `INT`.
+        - `eps` (Required): The epsilon value for convergence criteria, specifying the minimum amount of change required for an iteration to be considered as making progress. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output image after applying K-means clustering with the determined optimal number of colors, segmented into these colors. Type should be `IMAGE`.
+        - `int`: The optimal number of colors (clusters) determined by the algorithm for the input image. Type should be `INT`.

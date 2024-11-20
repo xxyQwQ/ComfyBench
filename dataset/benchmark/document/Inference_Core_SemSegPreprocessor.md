@@ -1,0 +1,6 @@
+- `Inference_Core_SemSegPreprocessor`: The Inference_Core_SemSegPreprocessor node is designed to preprocess images for semantic segmentation tasks within a Detectron2 framework. It integrates custom modifications and configurations to adapt to specific segmentation needs, such as anime face segmentation, and ensures images are correctly formatted and enhanced for optimal segmentation performance.
+    - Inputs:
+        - `image` (Required): The image parameter is the primary input for the semantic segmentation preprocessing, representing the image to be processed. It is essential for the node to perform the necessary adjustments and enhancements to prepare the image for segmentation. Type should be `IMAGE`.
+        - `resolution` (Optional): The resolution parameter specifies the desired resolution for the image preprocessing. It plays a crucial role in adjusting the image size to meet the requirements of the segmentation model, impacting the quality and accuracy of the segmentation results. Type should be `INT`.
+    - Outputs:
+        - `image`: The image output represents the preprocessed image, ready for semantic segmentation analysis. This output is the result of various preprocessing steps applied to enhance and format the image for optimal segmentation performance. Type should be `IMAGE`.

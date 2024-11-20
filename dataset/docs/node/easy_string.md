@@ -1,6 +1,0 @@
-- `easy string`: The 'easy string' node is designed to simplify the process of generating and manipulating strings within a computational context. It abstracts complex string operations, offering a user-friendly interface for tasks such as formatting, concatenation, and potentially parsing. This node aims to reduce the technical overhead associated with string manipulation, making it accessible to users with varying levels of programming expertise.
-    - Parameters:
-        - `value`: The 'value' input is crucial for the node's operation as it represents the primary text or data that the node processes or manipulates. Its role is central to the functionality of the node, determining the nature of the string manipulation tasks performed, such as formatting or concatenation. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The 'string' output is the result of the node's processing or manipulation of the input text. It holds significant importance as it represents the final, processed form of the input data, ready for further use or display in the intended context. Type should be `STRING`.

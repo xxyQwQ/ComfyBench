@@ -1,0 +1,7 @@
+- `easy XYInputs_ Denoise`: This node is designed to facilitate the exploration and visualization of denoising effects in generative models. It allows users to adjust denoising parameters over a batch of data, providing a graphical representation of the impact of different denoising levels on the generated outputs.
+    - Inputs:
+        - `batch_count` (Required): Specifies the number of batches to process, allowing for the examination of denoising effects across multiple sets of data. Type should be `INT`.
+        - `first_denoise` (Required): Sets the initial denoising level, marking the starting point for the exploration of denoising effects. Type should be `FLOAT`.
+        - `last_denoise` (Required): Defines the final denoising level, enabling users to observe how increasing or decreasing denoising intensity affects the output. Type should be `FLOAT`.
+    - Outputs:
+        - `X or Y`: Provides a graphical representation of the denoising process, illustrating the effects of different denoising levels on the data. Type should be `X_Y`.

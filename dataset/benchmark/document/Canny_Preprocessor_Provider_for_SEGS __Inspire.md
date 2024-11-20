@@ -1,0 +1,6 @@
+- `Canny_Preprocessor_Provider_for_SEGS __Inspire`: This node provides a Canny edge detection preprocessor for SEGS (Semantic Edge Guided Synthesis), aimed at enhancing image edges for better segmentation and synthesis outcomes.
+    - Inputs:
+        - `low_threshold` (Required): Specifies the lower bound for the hysteresis thresholding step in the Canny edge detection algorithm, influencing the detection of weaker edges. Type should be `FLOAT`.
+        - `high_threshold` (Required): Defines the upper bound for the hysteresis thresholding step, determining the detection of the most pronounced edges. Type should be `FLOAT`.
+    - Outputs:
+        - `segs_preprocessor`: Outputs a preprocessor object configured for Canny edge detection, ready to be used in SEGS workflows. Type should be `SEGS_PREPROCESSOR`.

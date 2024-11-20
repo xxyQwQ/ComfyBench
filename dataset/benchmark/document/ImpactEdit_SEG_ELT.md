@@ -1,0 +1,12 @@
+- `ImpactEdit_SEG_ELT`: The ImpactEdit_SEG_ELT node is designed for editing and manipulating segmentation elements (SEG_ELT) within the ImpactPack framework. It focuses on modifying the properties of segmentation elements to achieve desired alterations, such as adjusting their bounding boxes or applying transformations, thereby enabling more precise control over the segmentation output.
+    - Inputs:
+        - `seg_elt` (Required): The 'seg_elt' parameter represents the segmentation element (SEG_ELT) to be edited. It is crucial for specifying the target segmentation element whose properties are to be modified. Type should be `SEG_ELT`.
+        - `cropped_image_opt` (Optional): Optional parameter for providing an alternative cropped image for the segmentation element. Type should be `IMAGE`.
+        - `cropped_mask_opt` (Optional): Optional parameter for providing an alternative cropped mask for the segmentation element. Type should be `MASK`.
+        - `crop_region_opt` (Optional): Optional parameter for providing an alternative crop region for the segmentation element. Type should be `SEG_ELT_crop_region`.
+        - `bbox_opt` (Optional): Optional parameter for providing an alternative bounding box for the segmentation element. Type should be `SEG_ELT_bbox`.
+        - `control_net_wrapper_opt` (Optional): Optional parameter for providing an alternative control net wrapper for the segmentation element. Type should be `SEG_ELT_control_net_wrapper`.
+        - `confidence_opt` (Optional): Optional parameter for specifying the confidence level of the segmentation element. It affects the processing and interpretation of the segmentation element. Type should be `FLOAT`.
+        - `label_opt` (Optional): Optional parameter for specifying the label of the segmentation element. It affects the processing and categorization of the segmentation element. Type should be `STRING`.
+    - Outputs:
+        - `seg_elt`: Returns the modified segmentation element (SEG_ELT) after applying the specified edits, such as scaling the bounding box. Type should be `SEG_ELT`.

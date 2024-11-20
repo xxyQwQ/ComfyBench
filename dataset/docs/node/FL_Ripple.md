@@ -1,9 +1,0 @@
-- `FL_Ripple`: The FL_Ripple node applies a ripple effect to a collection of images, transforming each image by simulating a ripple pattern. This effect is achieved through mathematical manipulation of the image pixels, based on specified parameters such as amplitude, frequency, and phase, to create visually dynamic results.
-    - Parameters:
-        - `amplitude`: Defines the height of the ripple waves. A higher amplitude results in more pronounced ripples. Type should be `FLOAT`.
-        - `frequency`: Determines the number of ripples in the image. Higher frequencies result in more ripples within a given space. Type should be `FLOAT`.
-        - `phase`: Adjusts the starting point of the ripple effect, allowing for phase shifts in the wave pattern. Type should be `FLOAT`.
-    - Inputs:
-        - `images`: A collection of images to which the ripple effect will be applied. This parameter is essential for determining the input images that will undergo the transformation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is an image with the ripple effect applied, represented as a tensor. Type should be `IMAGE`.

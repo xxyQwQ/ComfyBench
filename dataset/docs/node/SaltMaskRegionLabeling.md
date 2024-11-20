@@ -1,7 +1,0 @@
-- `SaltMaskRegionLabeling`: This node is designed to label distinct regions within a mask, converting them into visually distinct areas based on connectivity, and outputting these labeled regions as a tensor. It utilizes thresholding and connected component analysis to segment and label different regions, enhancing the interpretability of mask regions by assigning unique colors to each.
-    - Parameters:
-        - `threshold`: A list of threshold values to apply binary thresholding on the masks, which is crucial for separating the regions to be labeled. If a single value is provided, it is applied to all masks. Type should be `INT`.
-    - Inputs:
-        - `masks`: The input masks to be labeled, where each mask is processed to identify and label connected regions based on the specified threshold(s). Type should be `MASK`.
-    - Outputs:
-        - `images`: The output tensor containing the labeled regions, where each region is assigned a unique color to distinguish it from others. This correction addresses the feedback by correctly identifying the output as a tensor of labeled images, not just 'regions_tensor'. Type should be `IMAGE`.

@@ -1,0 +1,6 @@
+- `LLMJinaScrape`: The LLMJinaScrape node is designed to fetch and process web content from a specified URL using the Jina AI service. It handles HTTP requests, manages potential errors, and formats the response into a structured document, facilitating the integration of web data into further processing pipelines.
+    - Inputs:
+        - `url` (Required): The URL to be scraped. This parameter is crucial for defining the target web page from which the content is to be fetched, directly influencing the node's output. Type should be `STRING`.
+    - Outputs:
+        - `result`: The raw text content retrieved from the specified URL, serving as a direct representation of the web page's content. Type should be `STRING`.
+        - `documents`: A structured document containing the scraped web content along with additional metadata, such as the source and Jina AI URLs, enhancing data context and utility. Type should be `DOCUMENT`.

@@ -1,7 +1,0 @@
-- `LoadInstanceFusersNode`: This node is designed to load and prepare instance fusers models from a specified directory, adjusting their scale according to the provided parameter. It facilitates the dynamic integration of fusers models into the instance diffusion process, enabling enhanced control over the fusion of instance-specific features.
-    - Parameters:
-        - `model_filename`: Specifies the filename of the model to be loaded. This parameter is crucial for identifying and retrieving the correct fuser model from the designated directory. Type should be `COMBO[STRING]`.
-        - `fusers_scale`: Determines the scale factor to be applied to the fusers, affecting their influence on the instance fusion process. This allows for fine-tuning the impact of fusers on the generated instances. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `fusers`: Provides a list of loaded and scaled fuser models, ready for integration into the instance diffusion process. Type should be `FUSERS`.

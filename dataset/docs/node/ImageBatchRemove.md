@@ -1,7 +1,0 @@
-- `ImageBatchRemove`: The ImageBatchRemove node is designed for selectively removing an image from a batch based on its index. This functionality is crucial for operations where specific images need to be excluded from further processing, thereby enabling dynamic manipulation of image collections.
-    - Parameters:
-        - `index`: The 'index' parameter determines the position of the image to be removed from the batch. It plays a critical role in identifying the specific image to exclude, ensuring precise manipulation of the image collection. Type should be `INT`.
-    - Inputs:
-        - `images`: The 'images' parameter represents the batch of images from which one will be removed. It is essential for specifying the group of images subject to modification. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: Returns a new batch of images with the specified image removed, facilitating the dynamic adjustment of image collections. Type should be `IMAGE`.

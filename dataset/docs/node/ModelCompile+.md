@@ -1,9 +1,0 @@
-- `ModelCompile+`: The ModelCompile node is designed to optimize and compile PyTorch models for improved execution performance. It allows for dynamic compilation with options for full graph compilation and various optimization modes, aiming to enhance model efficiency and runtime.
-    - Parameters:
-        - `fullgraph`: A boolean flag indicating whether to compile the entire computational graph of the model. Enabling this can potentially improve performance by optimizing the model's execution as a whole. Type should be `BOOLEAN`.
-        - `dynamic`: A boolean flag that enables dynamic compilation of the model. This allows for more flexible optimizations based on the model's runtime behavior. Type should be `BOOLEAN`.
-        - `mode`: Specifies the compilation mode, which can range from default settings to modes focused on reducing overhead or maximizing autotuning, with or without CUDA graphs. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `model`: The PyTorch model to be compiled. This parameter is crucial as it determines the model that will undergo optimization and compilation for enhanced performance. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The optimized and compiled PyTorch model, ready for improved execution. Type should be `MODEL`.

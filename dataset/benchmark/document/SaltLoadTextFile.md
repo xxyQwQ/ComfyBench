@@ -1,0 +1,6 @@
+- `SaltLoadTextFile`: This node is designed to load the contents of a text file into the system. It focuses on reading and importing text data from a specified file path, making it accessible for further processing or analysis within the application.
+    - Inputs:
+        - `file_path` (Required): Specifies the file path of the text file to be loaded. This path is essential for locating and accessing the file for reading. Type should be `STRING`.
+    - Outputs:
+        - `file_content`: The content of the loaded text file. This output makes the text data available for use within the application. Type should be `STRING`.
+        - `file_log`: Provides a log message related to the file loading process, including information on mime type determination or errors encountered. Type should be `STRING`.

@@ -1,7 +1,0 @@
-- `JWImageLoadRGBA`: The JWImageLoadRGBA node is designed for loading images in RGBA format. It separates the image into its color components and the alpha channel, effectively creating a mask based on the alpha channel.
-    - Parameters:
-        - `path`: Specifies the file path to the image that needs to be loaded. It is crucial for locating and loading the image in RGBA format. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `image`: Represents the color components of the loaded image, excluding the alpha channel. Type should be `IMAGE`.
-        - `mask`: Represents the inverted alpha channel of the image, serving as a mask. Type should be `MASK`.

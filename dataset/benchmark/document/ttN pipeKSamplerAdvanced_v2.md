@@ -1,0 +1,46 @@
+- `ttN pipeKSamplerAdvanced_v2`: This node is designed for advanced sampling in image generation pipelines, incorporating various enhancements and options for customization. It leverages a combination of models, embeddings, and sampling techniques to refine and generate high-quality images based on specified parameters, offering extensive control over the image generation process.
+    - Inputs:
+        - `pipe` (Required): Represents the current state of the image generation pipeline, including models, embeddings, and other relevant settings, serving as the foundation for the sampling process. Type should be `PIPE_LINE`.
+        - `lora_name` (Required): Specifies the name of the LoRA model to be used for adjusting model weights dynamically, enhancing the generation process. Type should be `COMBO[STRING]`.
+        - `lora_strength` (Required): Determines the strength of the LoRA adjustment to the model, allowing for fine-tuning of the generated images. Type should be `FLOAT`.
+        - `upscale_method` (Required): Specifies the method to be used for upscaling the generated images, enhancing their resolution. Type should be `COMBO[STRING]`.
+        - `upscale_model_name` (Required): Identifies the specific model to be used for upscaling, affecting the quality of the upscaled images. Type should be `COMBO[STRING]`.
+        - `factor` (Required): Determines the factor by which the images are upscaled, directly influencing the final image size. Type should be `FLOAT`.
+        - `rescale` (Required): Controls whether the generated images are rescaled, affecting their dimensions and aspect ratio. Type should be `COMBO[STRING]`.
+        - `percent` (Required): Specifies the percentage by which the images are rescaled, offering precise control over the output size. Type should be `INT`.
+        - `width` (Required): Sets the target width for rescaled images, defining their horizontal dimension. Type should be `INT`.
+        - `height` (Required): Sets the target height for rescaled images, defining their vertical dimension. Type should be `INT`.
+        - `longer_side` (Required): Specifies the length of the longer side for rescaled images, ensuring a balanced aspect ratio. Type should be `INT`.
+        - `crop` (Required): Determines whether and how the generated images are cropped, affecting their composition and focus. Type should be `COMBO[STRING]`.
+        - `add_noise` (Required): Controls whether noise is added to the generation process, affecting the texture and details of the generated images. Type should be `COMBO[STRING]`.
+        - `noise` (Required): Specifies the amount and type of noise to be added, if any, during the image generation process. Type should be `FLOAT`.
+        - `steps` (Required): Specifies the number of steps to be taken in the sampling process, impacting the detail and quality of the generated images. Type should be `INT`.
+        - `start_at_step` (Required): Specifies the starting step for the generation process, allowing for mid-process intervention or customization. Type should be `INT`.
+        - `end_at_step` (Required): Defines the ending step for the generation process, determining the point at which the process concludes. Type should be `INT`.
+        - `cfg` (Required): Configuration setting that influences the sampling behavior, offering additional customization of the image generation. Type should be `FLOAT`.
+        - `sampler_name` (Required): Identifies the specific sampling algorithm to be used, affecting the style and characteristics of the generated images. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Determines the scheduling algorithm for the sampling process, influencing the progression and variation of image generation. Type should be `COMBO[STRING]`.
+        - `return_with_leftover_noise` (Required): Controls whether leftover noise is included in the final output, affecting the texture and detail of the generated images. Type should be `COMBO[STRING]`.
+        - `image_output` (Required): Specifies the mode of output for the generated images, including options for hiding or saving the images. Type should be `COMBO[STRING]`.
+        - `save_prefix` (Required): Defines a prefix for saved image files, organizing the output in a structured manner. Type should be `STRING`.
+        - `file_type` (Required): Specifies the file type for saved images, allowing for flexibility in the output format. Type should be `COMBO[STRING]`.
+        - `embed_workflow` (Required): Indicates whether the embedding workflow is included in the generation process, affecting the input and refinement of images. Type should be `BOOLEAN`.
+        - `noise_seed` (Optional): Sets a specific seed for noise generation, ensuring reproducibility of the added noise effects. Type should be `INT`.
+        - `optional_model` (Optional): Allows for the specification of an alternative model to be used in the generation process, offering flexibility in the approach. Type should be `MODEL`.
+        - `optional_positive` (Optional): Specifies optional positive embeddings to be used, enhancing the generation towards desired attributes. Type should be `CONDITIONING`.
+        - `optional_negative` (Optional): Specifies optional negative embeddings to be used, steering the generation away from certain attributes. Type should be `CONDITIONING`.
+        - `optional_latent` (Optional): Allows for the inclusion of specific latent vectors, directly influencing the starting point of the generation process. Type should be `LATENT`.
+        - `optional_vae` (Optional): Specifies an optional VAE model to be used for decoding or refining the generated images. Type should be `VAE`.
+        - `optional_clip` (Optional): Specifies an optional CLIP model to be used for guiding the generation process towards textual descriptions. Type should be `CLIP`.
+        - `input_image_override` (Optional): Allows for an existing image to be used as the starting point for the generation process, overriding the default behavior. Type should be `IMAGE`.
+        - `adv_xyPlot` (Optional): Enables advanced plotting options for visualizing the generation process, offering insights into the sampling dynamics. Type should be `ADV_XYPLOT`.
+    - Outputs:
+        - `pipe`: unknown Type should be `PIPE_LINE`.
+        - `model`: unknown Type should be `MODEL`.
+        - `positive`: unknown Type should be `CONDITIONING`.
+        - `negative`: unknown Type should be `CONDITIONING`.
+        - `latent`: unknown Type should be `LATENT`.
+        - `vae`: unknown Type should be `VAE`.
+        - `clip`: unknown Type should be `CLIP`.
+        - `image`: unknown Type should be `IMAGE`.
+        - `seed`: unknown Type should be `INT`.

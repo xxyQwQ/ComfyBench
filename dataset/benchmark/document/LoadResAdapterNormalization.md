@@ -1,0 +1,6 @@
+- `LoadResAdapterNormalization`: This node is designed to enhance the adaptability and performance of a given model by loading and applying normalization weights from a ResAdapter. It aims to improve model accuracy and efficiency by integrating external normalization parameters, thereby optimizing the model's response to various inputs.
+    - Inputs:
+        - `model` (Required): The model to which the ResAdapter normalization weights will be applied. It is crucial for enhancing the model's adaptability and performance by integrating external normalization parameters. Type should be `MODEL`.
+        - `resadapter_path` (Required): The file path to the ResAdapter normalization weights. This path is used to locate and load the normalization parameters that are essential for optimizing the model's performance. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `model`: A clone of the original model with the ResAdapter normalization weights applied. This enhanced model is expected to exhibit improved accuracy and efficiency. Type should be `MODEL`.

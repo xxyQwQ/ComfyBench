@@ -1,8 +1,0 @@
-- `Frame Counter (Simple) [Dream]`: This node generates a frame counter based on the specified frame index, total number of frames, and frames per second. It is designed to facilitate animation processes by tracking and managing frame progression.
-    - Parameters:
-        - `frame_index`: Specifies the current frame index. It is crucial for determining the starting point of the frame counter. Type should be `INT`.
-        - `total_frames`: Defines the total number of frames in the animation sequence. It sets the upper limit for the frame counter. Type should be `INT`.
-        - `frames_per_second`: Determines the frame rate by specifying the number of frames to be played per second. This affects the timing and speed of the animation. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `frame_counter`: Outputs a FrameCounter object initialized with the current frame, total frames, and frames per second, facilitating further animation control. Type should be `FRAME_COUNTER`.

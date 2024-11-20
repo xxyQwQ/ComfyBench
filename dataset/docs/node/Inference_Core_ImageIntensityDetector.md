@@ -1,8 +1,0 @@
-- `Inference_Core_ImageIntensityDetector`: The ImageIntensityDetector node is designed for preprocessing images by adjusting their intensity levels. It utilizes gamma correction to modify the intensity, aiming to enhance image quality or achieve specific visual effects.
-    - Parameters:
-        - `gamma_correction`: Specifies the gamma correction factor to adjust the intensity levels of the image. It plays a crucial role in the preprocessing step by influencing the brightness and contrast of the output image. Type should be `FLOAT`.
-        - `resolution`: Defines the resolution for the output image. This parameter determines the dimensions to which the image will be adjusted during processing. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed. It is the primary subject for intensity adjustment through gamma correction. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is an image that has undergone intensity adjustment based on the specified gamma correction. This processed image is suitable for further analysis or visualization. Type should be `IMAGE`.

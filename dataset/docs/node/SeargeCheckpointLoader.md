@@ -1,8 +1,0 @@
-- `SeargeCheckpointLoader`: The SeargeCheckpointLoader node is designed for loading specific checkpoints from a predefined repository. It abstracts the complexity of checkpoint loading mechanisms, providing a simplified interface for retrieving model, CLIP, and VAE components based on checkpoint names.
-    - Parameters:
-    - Inputs:
-        - `ckpt_name`: Specifies the name of the checkpoint to load. This parameter is crucial for identifying and retrieving the correct checkpoint data, impacting the model, CLIP, and VAE components that are loaded. Type should be `CHECKPOINT_NAME`.
-    - Outputs:
-        - `model`: The loaded model component from the specified checkpoint. Type should be `MODEL`.
-        - `clip`: The loaded CLIP component from the specified checkpoint. Type should be `CLIP`.
-        - `vae`: The loaded VAE component from the specified checkpoint. Type should be `VAE`.

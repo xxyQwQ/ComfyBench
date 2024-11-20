@@ -1,8 +1,0 @@
-- `Text Contains`: The `WAS_Text_Contains` node checks if a given substring is present within a specified text string, offering an option to ignore case sensitivity.
-    - Parameters:
-        - `text`: The primary text string in which the search for the substring will be conducted. Type should be `STRING`.
-        - `sub_text`: The substring to search for within the primary text string. Type should be `STRING`.
-        - `case_insensitive`: A boolean flag indicating whether the search should ignore case sensitivity. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `boolean`: A boolean indicating whether the substring was found within the primary text string. Type should be `BOOLEAN`.

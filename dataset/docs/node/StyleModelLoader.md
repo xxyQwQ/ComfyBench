@@ -1,6 +1,0 @@
-- `StyleModelLoader`: The StyleModelLoader node is designed to load a style model from a specified path. It focuses on retrieving and initializing style models that can be used to apply specific artistic styles to images, thereby enabling the customization of visual outputs based on the loaded style model.
-    - Parameters:
-        - `style_model_name`: Specifies the name of the style model to be loaded. This name is used to locate the model file within a predefined directory structure, allowing for the dynamic loading of different style models based on user input or application needs. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `style_model`: Returns the loaded style model, ready for use in applying styles to images. This enables the dynamic customization of visual outputs by applying different artistic styles. Type should be `STYLE_MODEL`.

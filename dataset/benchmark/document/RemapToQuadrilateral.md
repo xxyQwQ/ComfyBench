@@ -1,0 +1,6 @@
+- `RemapToQuadrilateral`: This node is designed to transform images by remapping them to fit within quadrilateral shapes, utilizing various methods including homography and edge pair interpolation. It abstracts complex geometric transformations, making it easier to apply perspective adjustments or corrections based on specified quadrilateral regions within images.
+    - Inputs:
+        - `dst_mask_with_i_points` (Required): Specifies the destination mask with i points defining the quadrilateral to which the image will be remapped. This mask is crucial for determining the target shape and area for the remapping process. Type should be `MASK`.
+        - `mode` (Required): Defines the method to be used for the remapping process, such as homography or length-wise interpolation, allowing for flexibility in how the image is transformed to fit the quadrilateral. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `remap`: The result of the remapping process, which includes the transformed image fitted within the specified quadrilateral shape. Type should be `REMAP`.

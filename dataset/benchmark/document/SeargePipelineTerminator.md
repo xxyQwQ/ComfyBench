@@ -1,0 +1,4 @@
+- `SeargePipelineTerminator`: This node is designed to terminate an ongoing pipeline within the ComfyUI SDXL environment, effectively halting any further processing or data manipulation within that pipeline.
+    - Inputs:
+        - `data` (Optional): An optional data stream that may contain pipeline-specific information or states to be terminated. It's used to access and terminate the specific pipeline instance. Type should be `SRG_DATA_STREAM`.
+    - Outputs:

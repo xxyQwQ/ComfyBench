@@ -1,8 +1,0 @@
-- `ImageBatchCopy`: The ImageBatchCopy node is designed to duplicate a specific image within a batch of images a specified number of times. It focuses on manipulating image batches to adjust their composition by repeating selected images, thereby enhancing or diversifying the dataset for further processing or analysis.
-    - Parameters:
-        - `index`: Indicates the position of the image within the batch to be copied. This parameter is essential for selecting the specific image to duplicate. Type should be `INT`.
-        - `quantity`: Defines the number of times the selected image should be copied within the batch. This parameter directly influences the size of the output batch by increasing the number of images. Type should be `INT`.
-    - Inputs:
-        - `images`: Specifies the batch of images to be processed. This parameter is crucial for determining the source images from which one will be copied. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: Returns a new batch of images where the specified image has been copied a certain number of times, altering the batch's composition. Type should be `IMAGE`.

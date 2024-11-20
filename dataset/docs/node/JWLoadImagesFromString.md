@@ -1,7 +1,0 @@
-- `JWLoadImagesFromString`: This node is designed to load images directly from a string input, facilitating the conversion of textual image data into usable image formats for further processing or visualization.
-    - Parameters:
-        - `paths`: Accepts a list of file paths as strings, indicating the locations of images to be loaded. This input is crucial for identifying and accessing the images specified by the user. Type should be `STRING`.
-    - Inputs:
-        - `ignore_missing_images`: A boolean flag that determines how to handle missing images specified in the 'paths'. If set to True, missing images will be ignored without causing errors; otherwise, an error will be raised for any missing image. Type should be `['false', 'true']`.
-    - Outputs:
-        - `image`: Produces an output image or a batch of images loaded from the specified file paths. This output is essential for further image processing or visualization tasks. Type should be `IMAGE`.

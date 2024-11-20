@@ -1,0 +1,6 @@
+- `ADE_MultivalDynamic`: The ADE_MultivalDynamic node is designed to dynamically handle multiple values within the AnimateDiff framework, enabling the flexible manipulation and application of various parameters across different aspects of the animation and diffusion process.
+    - Inputs:
+        - `float_val` (Required): This parameter accepts a single float or a list of floats, representing the dynamic values to be manipulated within the AnimateDiff framework. It is crucial for defining the intensity or magnitude of effects applied in the animation process. Type should be `FLOAT`.
+        - `mask_optional` (Optional): An optional mask input that allows for targeted application of effects, enabling precise control over which areas of the animation are affected by the specified dynamic values. Type should be `MASK`.
+    - Outputs:
+        - `multival`: This output is a dynamic representation of multiple values, tailored to influence various aspects of the animation and diffusion process within the AnimateDiff framework. Type should be `MULTIVAL`.

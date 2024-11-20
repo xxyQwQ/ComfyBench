@@ -1,0 +1,6 @@
+- `Debug Number to Console`: This node is designed for debugging purposes, allowing the user to print a specified number along with an optional label to the console. It serves as a simple yet effective tool for monitoring and debugging numerical values during the execution of a workflow.
+    - Inputs:
+        - `number` (Required): The numerical value to be printed to the console. It is the primary data of interest for debugging. Type should be `NUMBER`.
+        - `label` (Required): An optional label to accompany the number in the console output, providing context or identification for the debugged value. Type should be `STRING`.
+    - Outputs:
+        - `number`: The same numerical value that was input, passed through for further use or inspection in the workflow. Type should be `NUMBER`.

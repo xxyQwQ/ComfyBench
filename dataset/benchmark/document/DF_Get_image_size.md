@@ -1,0 +1,6 @@
+- `DF_Get_image_size`: This node is designed to calculate and return the dimensions of an image, specifically its width and height. It abstracts the complexity of handling image data structures to provide a straightforward way to obtain image size information.
+    - Inputs:
+        - `image` (Required): The 'image' parameter is crucial as it represents the image data from which the size will be determined. This parameter directly influences the node's ability to calculate and return the correct dimensions of the image. Type should be `IMAGE`.
+    - Outputs:
+        - `WIDTH`: Represents the width of the image in pixels. Type should be `INT`.
+        - `HEIGHT`: Represents the height of the image in pixels. Type should be `INT`.

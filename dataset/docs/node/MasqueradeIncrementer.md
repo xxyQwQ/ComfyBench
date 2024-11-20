@@ -1,7 +1,0 @@
-- `MasqueradeIncrementer`: The MasqueradeIncrementer node is designed to perform a simple arithmetic operation on a given seed value, incrementing it within a specified maximum value. This node abstracts the concept of modular arithmetic, providing a straightforward way to cycle through a range of numbers starting from a seed value.
-    - Parameters:
-        - `seed`: The 'seed' parameter serves as the starting point for the increment operation. It determines the initial value from which the incrementing begins, playing a crucial role in the node's execution and the resulting output. Type should be `INT`.
-        - `max_value`: The 'max_value' parameter sets the upper limit for the increment operation. It defines the range within which the seed value can be incremented, ensuring that the result cycles within a specified boundary. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `int`: The output is an integer representing the incremented value of the seed, modulo the specified maximum value. Type should be `INT`.

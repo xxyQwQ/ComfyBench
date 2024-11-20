@@ -1,7 +1,0 @@
-- `MiDaS_DepthMap_Preprocessor_Provider_for_SEGS __Inspire`: This node provides a pre-processing capability specifically designed for SEGS applications, utilizing the MiDaS model to prepare depth maps. It adjusts depth map properties based on input parameters to optimize them for subsequent SEGS processing.
-    - Parameters:
-        - `a`: Defines the scale factor for depth map adjustment, influencing the depth perception of the processed image. Type should be `FLOAT`.
-        - `bg_threshold`: Sets the threshold for background separation in the depth map, aiding in distinguishing foreground elements from the background. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `segs_preprocessor`: Outputs a pre-processed depth map optimized for SEGS applications, ready for further processing. Type should be `SEGS_PREPROCESSOR`.

@@ -1,0 +1,19 @@
+- `IPAdapterMS`: The IPAdapterMS node is designed for advanced image processing and manipulation, integrating multiple image adaptation techniques. It allows for the customization and combination of embeddings, weights, and image attributes to achieve specific visual outcomes.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for image processing, central to the node's operation. Type should be `MODEL`.
+        - `ipadapter` (Required): Defines the IPAdapter to be applied, determining the specific adaptation or transformation technique. Type should be `IPADAPTER`.
+        - `image` (Required): The input image to be processed or transformed by the node. Type should be `IMAGE`.
+        - `weight` (Required): A float value that adjusts the overall impact of the IPAdapter on the image. Type should be `FLOAT`.
+        - `weight_faceidv2` (Required): Adjusts the influence of FaceID v2 features in the image adaptation process. Type should be `FLOAT`.
+        - `weight_type` (Required): Determines the method of weight application, affecting the adaptation's intensity and areas. Type should be `COMBO[STRING]`.
+        - `combine_embeds` (Required): Specifies how multiple embeddings should be combined, influencing the final image output. Type should be `COMBO[STRING]`.
+        - `start_at` (Required): A float value indicating the starting point of the adaptation effect within the image. Type should be `FLOAT`.
+        - `end_at` (Required): A float value indicating the end point of the adaptation effect within the image. Type should be `FLOAT`.
+        - `embeds_scaling` (Required): Defines how embeddings are scaled, affecting the adaptation's emphasis on certain image features. Type should be `COMBO[STRING]`.
+        - `layer_weights` (Required): A string specifying custom weights for different layers, allowing for fine-tuned image adaptation. Type should be `STRING`.
+        - `image_negative` (Optional): An optional negative image input for contrastive adaptation. Type should be `IMAGE`.
+        - `attn_mask` (Optional): An optional attention mask to focus or exclude specific areas of the image during adaptation. Type should be `MASK`.
+        - `clip_vision` (Optional): Optional CLIP vision model input to enhance image adaptation with visual context. Type should be `CLIP_VISION`.
+        - `insightface` (Optional): Optional InsightFace model input for advanced facial feature adaptation. Type should be `INSIGHTFACE`.
+    - Outputs:
+        - `model`: The adapted model after processing. Type should be `MODEL`.

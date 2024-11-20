@@ -1,0 +1,24 @@
+- `BatchPromptScheduleEncodeSDXL`: This node is designed to process and encode batch prompts for Stable Diffusion XL models, allowing for the scheduling of G and L clips separately before tokenization. It integrates a weighted addition process to generate a batch of conditionings tailored for animation or dynamic content creation.
+    - Inputs:
+        - `width` (Required): Specifies the width of the output image or frame, impacting the aspect ratio and detail level of the generated content. Type should be `INT`.
+        - `height` (Required): Determines the height of the output image or frame, affecting the aspect ratio and overall composition of the generated content. Type should be `INT`.
+        - `crop_w` (Required): Defines the width of the cropping area, used to focus on or exclude specific parts of the generated content. Type should be `INT`.
+        - `crop_h` (Required): Specifies the height of the cropping area, enabling precise control over the content's framing and focus areas. Type should be `INT`.
+        - `target_width` (Required): The desired width for resizing the output, allowing for adjustments to the content's dimensions without altering its aspect ratio. Type should be `INT`.
+        - `target_height` (Required): The target height for resizing the output, facilitating dimension adjustments while maintaining the original aspect ratio. Type should be `INT`.
+        - `text_g` (Required): Represents the global text prompts that guide the overall theme and content generation, serving as a foundational element for the animation or dynamic content. Type should be `STRING`.
+        - `clip` (Required): Refers to the clip model used for conditioning the prompts, playing a critical role in the interpretation and processing of the text inputs. Type should be `CLIP`.
+        - `text_l` (Required): Denotes the local text prompts that provide detailed guidance for specific parts of the content, complementing the global prompts to refine the output. Type should be `STRING`.
+        - `max_frames` (Required): Indicates the maximum number of frames to be generated, defining the length and scope of the animation or dynamic content. Type should be `INT`.
+        - `print_output` (Required): A flag to enable or disable the printing of output for debugging or transparency purposes during the content generation process. Type should be `BOOLEAN`.
+        - `pre_text_G` (Optional): Prepended text for global prompts, used to add context or modify the tone of the global text inputs before processing. Type should be `STRING`.
+        - `app_text_G` (Optional): Appended text for global prompts, allowing for additional details or thematic elements to be included after the main global text. Type should be `STRING`.
+        - `pre_text_L` (Optional): Prepended text for local prompts, used to introduce or alter the context of the local text inputs, enhancing specificity and focus. Type should be `STRING`.
+        - `app_text_L` (Optional): Appended text for local prompts, providing a means to extend or refine the local text inputs with further details or thematic elements. Type should be `STRING`.
+        - `pw_a` (Optional): Weight parameter A, part of a set of weights used to adjust the influence of different components in the prompt processing and conditioning. Type should be `FLOAT`.
+        - `pw_b` (Optional): Weight parameter B, contributing to the fine-tuning of prompt influence and conditioning in the generation process. Type should be `FLOAT`.
+        - `pw_c` (Optional): Weight parameter C, involved in balancing the effects of various prompt components on the content output. Type should be `FLOAT`.
+        - `pw_d` (Optional): Weight parameter D, used to adjust the relative impact of prompt elements, aiding in the customization of the generation process. Type should be `FLOAT`.
+    - Outputs:
+        - `POS`: The enhanced positive conditioning output, reflecting the emphasized aspects of the original prompt after processing. Type should be `CONDITIONING`.
+        - `NEG`: The adjusted negative conditioning output, indicating the de-emphasized elements of the original prompt following processing. Type should be `CONDITIONING`.

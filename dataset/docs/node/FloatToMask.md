@@ -1,8 +1,0 @@
-- `FloatToMask`: This node is designed to generate masks based on input floating-point values, where each value determines the intensity or transparency of the mask. It is tailored for creating a batch of masks with specified dimensions, making it suitable for applications that require dynamic mask generation based on varying intensity levels.
-    - Parameters:
-        - `input_values`: Represents the floating-point values used to generate the masks. Each value in this list determines the intensity of the corresponding mask in the batch, affecting its transparency or color depth. Type should be `FLOAT`.
-        - `width`: Specifies the width of the generated masks. This dimension determines how wide each mask in the batch will be, directly impacting the mask's size and shape. Type should be `INT`.
-        - `height`: Specifies the height of the generated masks. This dimension determines the height of each mask in the batch, affecting the overall size and shape of the masks. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `mask`: The output consists of a batch of masks generated based on the input floating-point values, with each mask having the specified width and height dimensions. These masks can be used for various applications that require custom mask generation. Type should be `MASK`.

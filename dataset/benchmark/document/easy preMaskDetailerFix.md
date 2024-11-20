@@ -1,0 +1,25 @@
+- `easy preMaskDetailerFix`: The `easy preMaskDetailerFix` node is designed to refine the details of a pre-masked image within a pipeline, leveraging various parameters to adjust the guide size, mask mode, and other aspects of the image processing to achieve optimal results.
+    - Inputs:
+        - `pipe` (Required): Specifies the pipeline configuration to be used for the detail refinement process. Type should be `PIPE_LINE`.
+        - `mask` (Required): The mask to be applied for detail refinement, focusing on specific areas of the image. Type should be `MASK`.
+        - `guide_size` (Required): Determines the size of the guide used in the refinement process, affecting the granularity of detail. Type should be `FLOAT`.
+        - `guide_size_for` (Required): A boolean flag that toggles the guide size application between bounding box and crop region modes. Type should be `BOOLEAN`.
+        - `max_size` (Required): Sets the maximum size limit for the processed image, ensuring it stays within a manageable resolution. Type should be `FLOAT`.
+        - `mask_mode` (Required): Controls whether the refinement is applied only to masked areas or the entire image. Type should be `BOOLEAN`.
+        - `seed` (Required): The seed value for random number generation, ensuring reproducibility of the process. Type should be `INT`.
+        - `steps` (Required): Specifies the number of steps to be taken in the refinement process, impacting the depth of detail enhancement. Type should be `INT`.
+        - `cfg` (Required): Configures the strength of the conditioning factor, influencing the intensity of detail refinement. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the sampler to be used during the refinement process, affecting the texture and quality of the output. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduler for controlling the progression of refinement steps, optimizing the process flow. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Adjusts the level of denoising applied to the image, balancing detail preservation against noise reduction. Type should be `FLOAT`.
+        - `feather` (Required): Determines the feathering applied to the mask edges, smoothing transitions for a more natural look. Type should be `INT`.
+        - `crop_factor` (Required): Adjusts the crop factor for the image, affecting the zoom level during the refinement process. Type should be `FLOAT`.
+        - `drop_size` (Required): Specifies the drop size for the refinement, influencing the scale of detail adjustments. Type should be `INT`.
+        - `refiner_ratio` (Required): Sets the ratio of refinement applied, adjusting the intensity of detail enhancement. Type should be `FLOAT`.
+        - `batch_size` (Required): Determines the batch size for processing, affecting the throughput and speed of refinement. Type should be `INT`.
+        - `cycle` (Required): Specifies the number of cycles the refinement process is repeated, enhancing the depth of detail. Type should be `INT`.
+        - `optional_image` (Optional): An optional image input for additional context or reference in the refinement process. Type should be `IMAGE`.
+        - `inpaint_model` (Optional): A boolean flag indicating whether an inpainting model is used for masked areas, affecting the detail recovery. Type should be `BOOLEAN`.
+        - `noise_mask_feather` (Optional): Specifies the feathering level for the noise mask, smoothing the transition between masked and unmasked areas. Type should be `INT`.
+    - Outputs:
+        - `pipe`: Outputs the modified pipeline configuration after the detail refinement process. Type should be `PIPE_LINE`.

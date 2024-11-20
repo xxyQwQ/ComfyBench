@@ -1,7 +1,0 @@
-- `Make Interpolation State List`: This node is designed to generate a list of interpolation states based on provided frame indices and a skip list flag. It abstracts the process of preparing the necessary state information required for frame interpolation tasks, facilitating the setup for subsequent video frame interpolation operations.
-    - Parameters:
-        - `frame_indices`: Specifies the indices of frames to be included in the interpolation process. This string of comma-separated numbers is crucial for determining which frames are considered for interpolation. Type should be `STRING`.
-        - `is_skip_list`: A boolean flag indicating whether certain frames should be skipped in the interpolation process. This affects the selection of frames for interpolation, enabling more control over the output. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `interpolation_states`: The output is a list of states that represent the configuration for frame interpolation, including which frames to interpolate and whether to skip certain frames. Type should be `INTERPOLATION_STATES`.

@@ -1,6 +1,0 @@
-- `ReroutePrimitivepysssss`: The ReroutePrimitive node is designed to pass through any given input without modification, acting as a universal connector in data flow architectures. It abstracts away the complexity of data types, allowing for flexible rerouting of data streams.
-    - Parameters:
-    - Inputs:
-        - `value`: The 'value' parameter serves as the universal input that the node will pass through unchanged. It is central to the node's functionality, enabling it to act as a versatile connector in various data processing scenarios. Type should be `*`.
-    - Outputs:
-        - `*`: The output is a tuple containing the unchanged input value, facilitating seamless data rerouting. Type should be `*`.

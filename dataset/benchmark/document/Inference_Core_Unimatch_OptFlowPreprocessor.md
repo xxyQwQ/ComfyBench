@@ -1,0 +1,9 @@
+- `Inference_Core_Unimatch_OptFlowPreprocessor`: This node is designed for preprocessing optical flow data, specifically for enhancing and refining flow estimations through techniques such as upscaling, masking, and applying attention mechanisms. It leverages the Unimatch algorithm to process and improve the quality of optical flow predictions, making it suitable for tasks that require precise motion analysis between video frames.
+    - Inputs:
+        - `image` (Required): The sequence of images for which optical flow needs to be estimated. This input is crucial for the node's operation as it directly influences the accuracy and quality of the flow predictions. Type should be `IMAGE`.
+        - `ckpt_name` (Required): The name of the checkpoint file for the Unimatch model. This determines the specific pre-trained model version used for flow estimation. Type should be `COMBO[STRING]`.
+        - `backward_flow` (Required): A boolean flag indicating whether to estimate the backward optical flow. This affects the directionality of the flow estimation. Type should be `BOOLEAN`.
+        - `bidirectional_flow` (Required): A boolean flag indicating whether to estimate bidirectional optical flow, enhancing motion analysis by considering both forward and backward flows. Type should be `BOOLEAN`.
+    - Outputs:
+        - `OPTICAL_FLOW`: The enhanced optical flow predictions, processed through the Unimatch algorithm to provide refined motion estimations between video frames. Type should be `OPTICAL_FLOW`.
+        - `PREVIEW_IMAGE`: A visualization of the optical flow predictions, offering a visual representation of the motion between frames for easier interpretation and analysis. Type should be `IMAGE`.

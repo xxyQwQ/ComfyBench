@@ -1,8 +1,0 @@
-- `SamplerDPMPP_3M_SDE`: This node provides a method to obtain a sampler specifically designed for DPM-Solver++(3M) SDE models, allowing for the generation of samples based on specified noise levels and device preferences.
-    - Parameters:
-        - `eta`: Defines the scale of the noise to be applied during the sampling process, influencing the diversity and quality of generated samples. Type should be `FLOAT`.
-        - `s_noise`: Specifies the noise scale used in the sampling process, affecting the variance of the generated samples. Type should be `FLOAT`.
-        - `noise_device`: Determines whether the sampling computations are performed on a CPU or GPU, impacting performance and efficiency. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `sampler`: Produces a sampler configured for DPM-Solver++(3M) SDE models, ready to generate samples based on the provided noise parameters. Type should be `SAMPLER`.

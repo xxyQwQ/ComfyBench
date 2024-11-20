@@ -1,0 +1,10 @@
+- `PorterDuffImageComposite`: The PorterDuffImageComposite node is designed to perform image compositing using the Porter-Duff compositing operators. It allows for the combination of source and destination images according to various blending modes, enabling the creation of complex visual effects by manipulating image transparency and overlaying images in creative ways.
+    - Inputs:
+        - `source` (Required): The source image tensor to be composited over the destination image. It plays a crucial role in determining the final visual outcome based on the selected compositing mode. Type should be `IMAGE`.
+        - `source_alpha` (Required): The alpha channel of the source image, which specifies the transparency of each pixel in the source image. It affects how the source image blends with the destination image. Type should be `MASK`.
+        - `destination` (Required): The destination image tensor that serves as the backdrop over which the source image is composited. It contributes to the final composited image based on the blending mode. Type should be `IMAGE`.
+        - `destination_alpha` (Required): The alpha channel of the destination image, defining the transparency of the destination image's pixels. It influences the blending of the source and destination images. Type should be `MASK`.
+        - `mode` (Required): The Porter-Duff compositing mode to apply, which determines how the source and destination images are blended together. Each mode creates different visual effects. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The composited image resulting from the application of the specified Porter-Duff mode. Type should be `IMAGE`.
+        - `mask`: The alpha channel of the composited image, indicating the transparency of each pixel. Type should be `MASK`.

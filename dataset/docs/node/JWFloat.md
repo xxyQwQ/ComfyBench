@@ -1,6 +1,0 @@
-- `JWFloat`: This node is designed to handle floating-point operations, providing a platform for performing calculations or manipulations involving float values. It focuses on enabling precise numerical computations and transformations within a given workflow.
-    - Parameters:
-        - `value`: Represents the floating-point value to be processed or manipulated by the node. Its role is crucial for the execution of float-specific operations, directly influencing the outcome of the node's functionality. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The output is a floating-point value, which is the result of the node's operation on the input float. This output is essential for further numerical computations or analyses within the workflow. Type should be `FLOAT`.

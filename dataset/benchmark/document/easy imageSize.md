@@ -1,0 +1,6 @@
+- `easy imageSize`: The `easy imageSize` node is designed to calculate the dimensions of an image, returning the width and height as integers. This node simplifies the process of obtaining image size metrics, making it accessible for various image processing and analysis tasks.
+    - Inputs:
+        - `image` (Required): The `image` parameter is the input image for which the dimensions are to be calculated. It plays a crucial role in the node's operation by providing the necessary data to determine the image's width and height. Type should be `IMAGE`.
+    - Outputs:
+        - `width_int`: The width of the input image in pixels, returned as an integer. Type should be `INT`.
+        - `height_int`: The height of the input image in pixels, returned as an integer. Type should be `INT`.

@@ -1,8 +1,0 @@
-- `AlphaChanelAddByMask`: This node is designed to add an alpha channel to a batch of images based on a specified mask and method. It enables the manipulation of image transparency by integrating a mask into the image data, allowing for dynamic adjustments of image opacity.
-    - Parameters:
-        - `method`: Specifies the method of applying the mask to the images, such as default or invert, affecting how the transparency is applied across the images. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: The batch of images to which the alpha channel will be added. This parameter is crucial for defining the base images that will undergo transparency manipulation. Type should be `IMAGE`.
-        - `mask`: The mask that dictates the transparency levels to be applied to the images. It plays a key role in determining the areas of the image that will be transparent or opaque. Type should be `MASK`.
-    - Outputs:
-        - `image`: The modified batch of images with the alpha channel added according to the specified mask and method. This output allows for the visualization of the transparency effects applied to the original images. Type should be `IMAGE`.

@@ -1,7 +1,0 @@
-- `LatentSelector`: The LatentSelector node is designed to filter and select specific latent images from a given set based on user-defined indexes. It allows for the customization of the latent image dataset by enabling the selection of particular images, facilitating targeted manipulation or analysis of these images.
-    - Parameters:
-        - `selected_indexes`: A string specifying the indexes of the latent images to be selected. Supports individual indexes and ranges, allowing for flexible selection within the dataset. Type should be `STRING`.
-    - Inputs:
-        - `latent_image`: The latent images to be filtered, provided as a mapping from string identifiers to tensors. This input is crucial for determining which images are available for selection and manipulation. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The filtered set of latent images, returned as a subset of the input images based on the specified indexes. Type should be `LATENT`.

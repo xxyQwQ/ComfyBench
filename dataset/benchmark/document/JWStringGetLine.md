@@ -1,0 +1,6 @@
+- `JWStringGetLine`: This node extracts a specific line from a given string based on the line index provided. It is designed to facilitate text processing by allowing users to easily retrieve individual lines from larger text blocks.
+    - Inputs:
+        - `source` (Required): The source string from which a line will be extracted. It serves as the text input for line retrieval. Type should be `STRING`.
+        - `line_index` (Required): The index of the line to be retrieved from the source string. This determines which line of the text is extracted. Type should be `INT`.
+    - Outputs:
+        - `string`: The extracted line from the source string at the specified index. Type should be `STRING`.

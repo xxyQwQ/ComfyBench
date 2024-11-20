@@ -1,0 +1,8 @@
+- `AdainFilterLatent`: The AdainFilterLatent node applies an adaptive instance normalization (AdaIN) technique to latent representations, using a reference latent to adjust the style of the input latent. It supports adjusting the intensity of the effect through a factor and allows for varying the filter size to control the granularity of the style transfer.
+    - Inputs:
+        - `latents` (Required): The input latent representations to be stylized. This is the primary data that will undergo style adjustment based on the reference latent. Type should be `LATENT`.
+        - `reference` (Required): The reference latent representation used to derive style characteristics that will be applied to the input latents. Type should be `LATENT`.
+        - `filter_size` (Required): Determines the size of the filter used in the style transfer process, affecting the granularity of the applied style. Type should be `INT`.
+        - `factor` (Required): Controls the intensity of the style transfer effect, allowing for blending between the original and stylized representations. Type should be `FLOAT`.
+    - Outputs:
+        - `latent`: The stylized latent representations after applying the adaptive instance normalization process. Type should be `LATENT`.

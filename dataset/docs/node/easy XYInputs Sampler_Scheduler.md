@@ -1,9 +1,0 @@
-- `easy XYInputs Sampler_Scheduler`: This node is designed to facilitate the visualization and comparison of different sampler and scheduler combinations within a given computational framework. It abstracts the complexity of selecting and configuring samplers and schedulers, presenting the user with a simplified interface for generating and visualizing the effects of these choices on the model's performance or output.
-    - Parameters:
-        - `target_parameter`: Determines whether the focus is on samplers or schedulers for visualization and comparison. This choice directs the node's processing and output generation, highlighting the impact of either samplers or schedulers on model performance. Type should be `COMBO[STRING]`.
-        - `input_count`: Specifies the number of samplers or schedulers to be considered in the visualization. This allows for a comprehensive comparison across a range of configurations, facilitating a deeper understanding of their effects. Type should be `INT`.
-        - `sampler_i`: Defines a specific sampler to be included in the comparison. The index 'i' varies, allowing for multiple samplers to be specified and compared simultaneously. Type should be `COMBO[STRING]`.
-        - `scheduler_i`: Specifies a particular scheduler to be included in the comparison. Similar to 'sampler_i', the index 'i' allows for the inclusion of multiple schedulers, enabling a detailed comparative analysis. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `X or Y`: Outputs the result of the comparison between the selected samplers or schedulers, depending on the 'target_parameter'. This facilitates an understanding of how each choice affects the model's performance. Type should be `X_Y`.

@@ -1,0 +1,5 @@
+- `easy imageBatchToImageList`: The node is designed to convert a batch of images into a list of individual images, facilitating operations that require handling images on a per-image basis rather than in batch form.
+    - Inputs:
+        - `image` (Required): The input image batch to be split into individual images. This parameter is crucial for the node's operation as it directly influences the output list of images. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The output is a list of individual images that were originally part of the input image batch. Type should be `IMAGE`.

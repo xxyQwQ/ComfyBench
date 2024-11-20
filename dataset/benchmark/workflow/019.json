@@ -1,0 +1,149 @@
+{
+    "11": {
+        "_meta": {
+            "title": "FaceDetailer"
+        },
+        "class_type": "FaceDetailer",
+        "inputs": {
+            "bbox_crop_factor": 3,
+            "bbox_detector": [
+                "18",
+                0
+            ],
+            "bbox_dilation": 10,
+            "bbox_threshold": 0.5,
+            "cfg": 4,
+            "clip": [
+                "4",
+                1
+            ],
+            "cycle": 1,
+            "denoise": 0.5,
+            "drop_size": 10,
+            "feather": 5,
+            "force_inpaint": true,
+            "guide_size": 384,
+            "guide_size_for": true,
+            "image": [
+                "26",
+                0
+            ],
+            "inpaint_model": false,
+            "max_size": 1024,
+            "model": [
+                "4",
+                0
+            ],
+            "negative": [
+                "7",
+                0
+            ],
+            "noise_mask": true,
+            "noise_mask_feather": 0,
+            "positive": [
+                "6",
+                0
+            ],
+            "sam_bbox_expansion": 0,
+            "sam_detection_hint": "center-1",
+            "sam_dilation": 0,
+            "sam_mask_hint_threshold": 0.7,
+            "sam_mask_hint_use_negative": "False",
+            "sam_model_opt": [
+                "19",
+                0
+            ],
+            "sam_threshold": 0.93,
+            "sampler_name": "euler_ancestral",
+            "scheduler": "normal",
+            "seed": 266448747412199,
+            "segm_detector_opt": [
+                "18",
+                1
+            ],
+            "steps": 20,
+            "vae": [
+                "4",
+                2
+            ],
+            "wildcard": ""
+        }
+    },
+    "17": {
+        "_meta": {
+            "title": "Save Image"
+        },
+        "class_type": "SaveImage",
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "11",
+                0
+            ]
+        }
+    },
+    "18": {
+        "_meta": {
+            "title": "UltralyticsDetectorProvider"
+        },
+        "class_type": "UltralyticsDetectorProvider",
+        "inputs": {
+            "model_name": "bbox/face_yolov8m.pt"
+        }
+    },
+    "19": {
+        "_meta": {
+            "title": "SAMLoader (Impact)"
+        },
+        "class_type": "SAMLoader",
+        "inputs": {
+            "device_mode": "AUTO",
+            "model_name": "sam_vit_b_01ec64.pth"
+        }
+    },
+    "26": {
+        "_meta": {
+            "title": "\u8981\u6362\u8138\u7684\u56fe\u7247\u653e\u8fd9\u91cc"
+        },
+        "class_type": "LoadImage",
+        "inputs": {
+            "image": "woman_portrait.jpg",
+            "upload": "image"
+        }
+    },
+    "4": {
+        "_meta": {
+            "title": "\u5927\u6a21\u578b"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "inputs": {
+            "ckpt_name": "majicmixRealistic_v7.safetensors"
+        }
+    },
+    "6": {
+        "_meta": {
+            "title": "\u6b63\u9762\u63d0\u793a\u8bcd"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "1girl, "
+        }
+    },
+    "7": {
+        "_meta": {
+            "title": "\u8d1f\u9762\u63d0\u793a\u8bcd"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "lowres,zombie,horror,nsfw, "
+        }
+    }
+}

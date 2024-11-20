@@ -1,0 +1,13 @@
+- `CR Feathered Border`: The CR Feathered Border node is designed to add a customizable feathered border around images. It allows for the adjustment of border thickness, color, and the degree of feathering to create visually appealing edges.
+    - Inputs:
+        - `image` (Required): A single image to which the feathered border will be applied. This parameter is crucial for defining the visual content that will be enhanced with the border. Type should be `IMAGE`.
+        - `top_thickness` (Required): Specifies the thickness of the top border. This parameter allows for the customization of the border's appearance by adjusting its size. Type should be `INT`.
+        - `bottom_thickness` (Required): Specifies the thickness of the bottom border, enabling customization of the border's vertical dimensions. Type should be `INT`.
+        - `left_thickness` (Required): Determines the thickness of the left side of the border, allowing for horizontal dimension customization. Type should be `INT`.
+        - `right_thickness` (Required): Defines the thickness of the right side of the border, contributing to the customization of the border's horizontal dimensions. Type should be `INT`.
+        - `border_color` (Required): The color of the border. This parameter is essential for defining the aesthetic appeal of the border. Type should be `COMBO[STRING]`.
+        - `feather_amount` (Required): The degree of feathering applied to the border edges, affecting the softness and visual effect of the border. Type should be `INT`.
+        - `border_color_hex` (Optional): An optional hexadecimal value for the border color, providing an alternative way to specify custom colors. Type should be `STRING`.
+    - Outputs:
+        - `image`: The resulting image with the applied feathered border, showcasing the enhanced visual appeal. Type should be `IMAGE`.
+        - `show_help`: A URL providing additional information and guidance on using the CR Feathered Border node. Type should be `STRING`.

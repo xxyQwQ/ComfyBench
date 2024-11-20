@@ -1,0 +1,9 @@
+- `Vae Decode (mtb)`: This node is designed to decode latent representations into images using a VAE model, with options for seamless decoding or tiled decoding to handle larger images efficiently.
+    - Inputs:
+        - `samples` (Required): The latent representations to be decoded into images. These samples are the input that the VAE model decodes, directly influencing the output images. Type should be `LATENT`.
+        - `vae` (Required): The VAE model used for decoding the latent representations into images. It is central to the node's functionality, determining the decoding process and the quality of the output images. Type should be `VAE`.
+        - `seamless_model` (Required): A flag indicating whether to use seamless mode for decoding, which adjusts the padding mode of convolutional layers for seamless image generation. Type should be `BOOLEAN`.
+        - `use_tiling_decoder` (Required): A flag that determines whether to use a tiling decoder for image generation, enabling efficient handling of larger images by processing them in tiles. Type should be `BOOLEAN`.
+        - `tile_size` (Required): The size of the tiles used in tiling decoder mode, affecting the granularity of the decoding process and the handling of larger images. Type should be `INT`.
+    - Outputs:
+        - `image`: The decoded image or images from the latent representations, produced by the VAE model. Type should be `IMAGE`.

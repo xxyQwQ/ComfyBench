@@ -1,0 +1,5 @@
+- `SeargePromptText`: The SeargePromptText node is designed for capturing and processing textual input for prompts in a deprecated Searge prompting system. It primarily serves to receive a user-defined text prompt, maintaining simplicity and directness in its approach.
+    - Inputs:
+        - `prompt` (Required): The 'prompt' parameter is the primary text input from the user, serving as the basis for further processing or generation tasks within the node. It allows multiline input, enabling more detailed and complex prompts. Type should be `STRING`.
+    - Outputs:
+        - `prompt`: This output is the unaltered text received from the input, directly passed through for use in subsequent processing or generation stages. Type should be `STRING`.

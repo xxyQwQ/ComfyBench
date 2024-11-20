@@ -1,0 +1,8 @@
+- `FrequencyCombine`: The FrequencyCombine node is designed to blend high and low-frequency image components using specified mathematical operations. It enables the enhancement or modification of images by combining frequency elements in unique ways, offering a method to manipulate image textures and details.
+    - Inputs:
+        - `high_frequency` (Required): The high-frequency component of an image, representing details such as edges and textures. It plays a crucial role in defining the sharpness and detail of the combined output. Type should be `IMAGE`.
+        - `low_frequency` (Required): The low-frequency component of an image, encapsulating broad features and color gradients. It forms the base upon which high-frequency details are added or modified. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the mathematical operation ('subtract' or 'divide') to combine high and low-frequency components, affecting the texture and detail enhancement of the output image. Type should be `COMBO[STRING]`.
+        - `eps` (Required): A small epsilon value used in the 'divide' mode to prevent division by zero, ensuring numerical stability. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The resulting image after combining high and low-frequency components, showcasing enhanced or altered textures and details. Type should be `IMAGE`.

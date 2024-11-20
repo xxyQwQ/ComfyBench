@@ -1,0 +1,8 @@
+- `LayerUtility_ XY to Percent`: This node converts the X and Y coordinates of a layer image relative to a background image into percentage values, facilitating the positioning of the layer image on the background image in a scalable manner.
+    - Inputs:
+        - `background_image` (Required): The background image against which the layer image's position is calculated. It serves as the reference frame for determining the percentage-based position. Type should be `IMAGE`.
+        - `layer_image` (Required): The layer image whose position is to be calculated relative to the background image. This image's dimensions are used in the calculation of its center's position in percentage terms. Type should be `IMAGE`.
+        - `x` (Required): The X coordinate of the layer image's position, which is used along with the background image's dimensions to calculate the horizontal position in percentage. Type should be `INT`.
+        - `y` (Required): The Y coordinate of the layer image's position, which is used along with the background image's dimensions to calculate the vertical position in percentage. Type should be `INT`.
+    - Outputs:
+        - `x_percent`: The calculated horizontal position of the layer image's center as a percentage of the background image's width. Type should be `FLOAT`.

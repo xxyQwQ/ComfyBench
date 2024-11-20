@@ -1,0 +1,5 @@
+- `CLIPSave`: The CLIPSave node is designed for persisting CLIP model states or outputs along with optional metadata to a specified file. It encapsulates the functionality to serialize and save the model's state, facilitating the sharing or storage of model configurations and their associated data.
+    - Inputs:
+        - `clip` (Required): The CLIP model instance to be saved. This parameter is crucial as it represents the model whose state or output is being persisted. Type should be `CLIP`.
+        - `filename_prefix` (Required): A prefix for the filename under which the CLIP model and its data will be saved. This allows for organized storage and easy retrieval of saved models. Type should be `STRING`.
+    - Outputs:

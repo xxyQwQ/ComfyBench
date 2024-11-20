@@ -1,0 +1,6 @@
+- `ControlNetLoaderAdvanced`: This node is designed to load advanced control networks, enabling the customization and enhancement of generative models through specified control net configurations. It supports loading control nets by name and optionally applying timestep keyframe adjustments for fine-tuned control.
+    - Inputs:
+        - `control_net_name` (Required): Specifies the name of the control net to load, serving as a key identifier for retrieving the appropriate control net configuration. Type should be `COMBO[STRING]`.
+        - `tk_optional` (Optional): An optional parameter for specifying timestep keyframe adjustments, enhancing the control net's application with temporal fine-tuning. Type should be `TIMESTEP_KEYFRAME`.
+    - Outputs:
+        - `control_net`: Returns the loaded control net, ready for application in generative model customization. Type should be `CONTROL_NET`.

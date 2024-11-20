@@ -1,0 +1,7 @@
+- `SDTurboScheduler`: The SDTurboScheduler node is designed to calculate a specific sequence of sigma values for diffusion models, based on the provided model, number of steps, and denoise level. It focuses on optimizing the sampling process by dynamically adjusting the timesteps according to the denoise parameter, enhancing the efficiency and quality of generated samples.
+    - Inputs:
+        - `model` (Required): The model parameter specifies the diffusion model for which the sigma values are to be calculated. It is crucial for determining the appropriate sigma values based on the model's characteristics. Type should be `MODEL`.
+        - `steps` (Required): The steps parameter indicates the number of timesteps for which sigma values are to be calculated. It plays a key role in defining the granularity and precision of the sampling process. Type should be `INT`.
+        - `denoise` (Required): The denoise parameter adjusts the starting point of the sigma calculation, allowing for finer control over the noise level in the generated samples. It directly influences the quality and characteristics of the output. Type should be `FLOAT`.
+    - Outputs:
+        - `sigmas`: This output represents the calculated sequence of sigma values for the specified diffusion model, steps, and denoise level. It is essential for guiding the sampling process in diffusion models. Type should be `SIGMAS`.

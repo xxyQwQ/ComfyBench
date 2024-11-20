@@ -1,0 +1,11 @@
+- `LayerColor_ Levels`: The 'LayerColor: Levels' node is designed for advanced color correction of images. It allows users to adjust the intensity levels of specific color channels, including black point, white point, and midtones (gray point), as well as to set the output range for these adjustments. This functionality is crucial for enhancing image contrast or correcting the color balance in images to achieve a desired aesthetic or to correct photographic errors.
+    - Inputs:
+        - `image` (Required): The input image to be processed. This is the primary data on which color correction levels will be applied. Type should be `IMAGE`.
+        - `channel` (Required): Specifies the color channel(s) (RGB, red, green, blue) to be adjusted. This allows for targeted color correction on specific channels, enhancing flexibility in image editing. Type should be `COMBO[STRING]`.
+        - `black_point` (Required): Sets the black point threshold for the selected channel(s). Adjusting this value can alter the darkest parts of the image, affecting overall contrast and detail in shadows. Type should be `INT`.
+        - `white_point` (Required): Defines the white point threshold for the selected channel(s). Modifying this value impacts the brightest parts of the image, influencing highlights and overall image brightness. Type should be `INT`.
+        - `gray_point` (Required): Adjusts the midtone (gray point) level for the selected channel(s). This is crucial for fine-tuning the balance between shadows and highlights, affecting the image's overall tonal range. Type should be `FLOAT`.
+        - `output_black_point` (Required): Sets the output range's black point, allowing for further refinement of the image's contrast and depth. Type should be `INT`.
+        - `output_white_point` (Required): Determines the output range's white point, enabling adjustments to the image's brightness and contrast levels. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image after applying the specified color correction levels. This image reflects the adjustments made to the intensity levels of the selected color channels. Type should be `IMAGE`.

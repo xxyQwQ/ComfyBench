@@ -1,0 +1,11 @@
+- `WildcardPromptFromString`: This node is designed to generate and process text prompts with wildcards, enabling dynamic content creation by replacing specified wildcard patterns with appropriate values. It facilitates the customization and variation of text inputs for further processing or output generation, emphasizing flexibility and adaptability in text manipulation.
+    - Inputs:
+        - `string` (Required): The primary text input that may contain wildcards or placeholders for dynamic content generation. Type should be `STRING`.
+        - `delimiter` (Required): Specifies the delimiter used to identify or separate wildcards within the text, enabling precise pattern recognition and processing. Type should be `STRING`.
+        - `prefix_all` (Required): A prefix applied to all wildcards before processing, aiding in their identification and manipulation within the text. Type should be `STRING`.
+        - `postfix_all` (Required): A postfix applied to all wildcards after processing, ensuring that replaced content is correctly formatted or distinguished. Type should be `STRING`.
+        - `restrict_to_tags` (Required): Limits wildcard processing to only those tags specified, allowing for targeted content generation and customization. Type should be `STRING`.
+        - `exclude_tags` (Required): Excludes specific tags from wildcard processing, providing control over which content remains static. Type should be `STRING`.
+    - Outputs:
+        - `wildcard`: The processed text with wildcards replaced by their corresponding values, ready for use in various applications. Type should be `STRING`.
+        - `segs_labels`: Labels or segments generated during the wildcard processing, offering insights into the structure and content of the processed text. Type should be `STRING`.

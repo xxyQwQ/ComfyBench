@@ -1,0 +1,8 @@
+- `SmplifyMotionData`: The SmplifyMotionData node is designed to convert motion data into a format compatible with the SMPL model, utilizing an iterative process to refine the representation of human motion. This conversion facilitates the use of motion data in applications requiring 3D human models, such as animation and simulation.
+    - Inputs:
+        - `motion_data` (Required): The input motion data to be converted. This data is essential for generating a 3D representation of human motion using the SMPL model. Type should be `MOTION_DATA`.
+        - `num_smplify_iters` (Required): Specifies the number of iterations for the SMPLify algorithm, affecting the accuracy and detail of the motion conversion. Type should be `INT`.
+        - `smplify_step_size` (Required): Determines the step size for the SMPLify algorithm, influencing the convergence rate and precision of the motion representation. Type should be `FLOAT`.
+        - `smpl_model` (Required): The specific SMPL model to be used for motion conversion, dictating the gender and body proportions of the generated 3D human model. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `smpl`: The output includes the path to the SMPL model used, the SMPL model parameters representing the pose of the 3D human model across frames, and metadata related to the conversion process. Type should be `SMPL`.

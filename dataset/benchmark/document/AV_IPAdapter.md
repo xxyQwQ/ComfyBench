@@ -1,0 +1,19 @@
+- `AV_IPAdapter`: The AV_IPAdapter node is designed to integrate and apply image processing adapters to models, enhancing their capabilities with additional image processing techniques. It allows for the dynamic application of IP adapters and clip vision models to modify and improve the input model's performance on image data, based on specified weights, noise levels, and optional configurations.
+    - Inputs:
+        - `ip_adapter_name` (Required): Specifies the name of the IP adapter to be used. It is crucial for determining which IP adapter model to load and apply. Type should be `COMBO[STRING]`.
+        - `clip_name` (Required): Defines the name of the clip vision model to be used alongside the IP adapter. This parameter is essential for selecting the appropriate clip vision model to complement the IP adapter's functionality. Type should be `COMBO[STRING]`.
+        - `model` (Required): The model to which the IP adapter and clip vision modifications will be applied. This parameter is central to the node's operation, serving as the base for enhancements. Type should be `MODEL`.
+        - `image` (Required): The image data to be processed by the IP adapter and clip vision models. This input is key to the adaptation and enhancement process. Type should be `IMAGE`.
+        - `weight` (Required): Affects the intensity of the IP adapter's application on the image/model. It allows for fine-tuning the strength of the modifications. Type should be `FLOAT`.
+        - `noise` (Required): Introduces a level of noise to the adaptation process, offering a means to adjust the effect of the IP adapter on the image/model. Type should be `FLOAT`.
+        - `ip_adapter_opt` (Optional): Optional configurations for the IP adapter, providing flexibility in customizing its application. Type should be `IPADAPTER`.
+        - `clip_vision_opt` (Optional): Optional configurations for the clip vision model, enabling further customization of the clip vision's application. Type should be `CLIP_VISION`.
+        - `attn_mask` (Optional): unknown Type should be `MASK`.
+        - `start_at` (Optional): unknown Type should be `FLOAT`.
+        - `end_at` (Optional): unknown Type should be `FLOAT`.
+        - `weight_type` (Optional): unknown Type should be `COMBO[STRING]`.
+        - `enabled` (Optional): Controls whether the IP adapter and clip vision modifications are applied, allowing for conditional processing. Type should be `BOOLEAN`.
+    - Outputs:
+        - `model`: The enhanced model after applying the IP adapter and clip vision modifications. Type should be `MODEL`.
+        - `pipeline`: A dictionary detailing the applied IP adapter and clip vision models, offering insight into the modifications made. Type should be `IPADAPTER`.
+        - `clip_vision`: The specific clip vision model applied during the process, providing context for the enhancements. Type should be `CLIP_VISION`.

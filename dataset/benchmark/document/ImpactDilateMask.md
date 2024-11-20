@@ -1,0 +1,6 @@
+- `ImpactDilateMask`: The ImpactDilateMask node is designed to modify the spatial dimensions of a given mask by applying dilation or erosion. This process adjusts the mask's boundaries, either expanding or contracting them based on the specified dilation factor, thereby impacting the mask's coverage area.
+    - Inputs:
+        - `mask` (Required): The 'mask' parameter represents the input mask to be dilated or eroded. It is crucial for defining the area to be modified. Type should be `MASK`.
+        - `dilation` (Required): The 'dilation' parameter specifies the degree of dilation or erosion to apply to the mask. Positive values cause dilation (expansion), while negative values lead to erosion (contraction). Type should be `INT`.
+    - Outputs:
+        - `mask`: The output is a modified mask with adjusted boundaries, either dilated or eroded based on the input parameters. Type should be `MASK`.

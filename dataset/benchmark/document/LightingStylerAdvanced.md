@@ -1,0 +1,15 @@
+- `LightingStylerAdvanced`: The SDXLPromptStyler node is designed to dynamically apply stylistic modifications to text prompts, utilizing a variety of predefined styles to enhance or alter the textual content. It supports advanced styling options, allowing for detailed customization of both positive and negative prompts based on user-defined criteria. This node aims to facilitate the creation of highly customized text prompts that can be used to guide generative models more effectively.
+    - Inputs:
+        - `text_positive_g` (Required): The global positive text prompt to be styled. This input serves as the base content for global stylistic enhancements. Type should be `STRING`.
+        - `text_positive_l` (Required): The local positive text prompt to be styled. This input is used for local or specific stylistic enhancements within the text. Type should be `STRING`.
+        - `text_negative` (Required): The negative text prompt that specifies elements to be excluded or negated in the styling process. This input is crucial for refining the output by indicating undesired content. Type should be `STRING`.
+        - `lighting` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Specifies the scope of the negative prompt's application, whether it affects global, local, or both aspects of the text styling. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): Indicates whether to log the input prompts and the styled outputs for debugging or analytical purposes, aiding in the evaluation of the styling effects. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The styled global positive text prompt, reflecting the applied global stylistic modifications. Type should be `STRING`.
+        - `text_positive_l`: The styled local positive text prompt, showing the effects of local stylistic enhancements. Type should be `STRING`.
+        - `text_positive`: The combined styled positive text prompt, integrating both global and local stylistic modifications. Type should be `STRING`.
+        - `text_negative_g`: unknown Type should be `STRING`.
+        - `text_negative_l`: unknown Type should be `STRING`.
+        - `text_negative`: The combined styled negative text prompt, integrating modifications based on the negative prompt inputs. Type should be `STRING`.

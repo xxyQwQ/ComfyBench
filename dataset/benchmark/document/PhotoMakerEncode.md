@@ -1,0 +1,8 @@
+- `PhotoMakerEncode`: The PhotoMakerEncode node is designed to integrate visual information from images with textual embeddings, enhancing the latter with visual context. This process involves projecting image pixel values into an embedding space, merging these with existing text prompt embeddings, and applying a fusion module to effectively blend the visual and textual information.
+    - Inputs:
+        - `photomaker` (Required): Specifies the photomaker model to be used for encoding the visual information from images into a format that can be integrated with text embeddings. Type should be `PHOTOMAKER`.
+        - `image` (Required): The image input whose visual information is to be encoded and integrated with text embeddings. Type should be `IMAGE`.
+        - `clip` (Required): The CLIP model used for text tokenization and encoding, facilitating the integration of visual information with textual context. Type should be `CLIP`.
+        - `text` (Required): The text input that provides the context or description for the image, which will be enhanced with visual information. Type should be `STRING`.
+    - Outputs:
+        - `conditioning`: The output after integrating visual information from the image with the text embeddings, resulting in a conditioning vector that combines both textual and visual cues. Type should be `CONDITIONING`.

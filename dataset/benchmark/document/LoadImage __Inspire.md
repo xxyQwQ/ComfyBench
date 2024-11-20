@@ -1,0 +1,7 @@
+- `LoadImage __Inspire`: The LoadImage node in the Inspire pack is designed to load and preprocess images for further use in image processing workflows. It handles image loading from a specified directory, applying necessary transformations such as decoding, orientation correction, and normalization, and optionally generating a mask for images with transparency.
+    - Inputs:
+        - `image` (Required): Specifies the image file to be loaded. This input is crucial for determining which image is processed and loaded into the workflow. Type should be `COMBO[STRING]`.
+        - `image_data` (Required): Provides the image data in a base64-encoded string format. This data is decoded and processed to produce the image and its mask if applicable, serving as an alternative input method for image loading. Type should be `STRING`.
+    - Outputs:
+        - `image`: The processed image, ready for use in subsequent image processing tasks. It is returned as a normalized tensor, reflecting the applied preprocessing steps. Type should be `IMAGE`.
+        - `mask`: An optional output providing a mask for the image, useful for images with transparency. It indicates areas of interest or exclusion in further processing steps. Type should be `MASK`.

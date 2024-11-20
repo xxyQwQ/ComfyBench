@@ -1,0 +1,12 @@
+- `ModelMergeSDXL`: ModelMergeSDXL is designed for advanced model merging operations, specifically tailored for handling large-scale models. It enables the precise blending of two models by adjusting the influence of each model's components across various blocks, including input, middle, and output blocks, as well as time embedding and label embedding features.
+    - Inputs:
+        - `model1` (Required): The first model to be merged. It serves as the base model for the merging operation. Type should be `MODEL`.
+        - `model2` (Required): The second model to be merged. Its components are selectively blended into the first model based on specified ratios. Type should be `MODEL`.
+        - `time_embed.` (Required): Adjusts the blending ratio for the time embedding components of the models. Type should be `FLOAT`.
+        - `label_emb.` (Required): Adjusts the blending ratio for the label embedding components of the models. Type should be `FLOAT`.
+        - `input_blocks.i` (Required): Adjusts the blending ratio for the ith input block of the models. The index i ranges from 0 to 8. Type should be `FLOAT`.
+        - `middle_block.i` (Required): Adjusts the blending ratio for the ith middle block of the models. The index i ranges from 0 to 2. Type should be `FLOAT`.
+        - `output_blocks.i` (Required): Adjusts the blending ratio for the ith output block of the models. The index i ranges from 0 to 8. Type should be `FLOAT`.
+        - `out.` (Required): Adjusts the blending ratio for the output components of the models. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The result of merging two models, incorporating the specified blending ratios across various components. Type should be `MODEL`.

@@ -1,0 +1,16 @@
+- `CreateShapeImageOnPath`: This node is designed to generate images or a batch of images with specific shapes drawn on them. It allows for the creation of images with shapes such as circles, squares, and triangles at specified locations, sizes, and colors. The functionality extends to adjusting the shape's appearance through parameters like blur radius and intensity, enabling the creation of both sharp and soft-edged shapes on a customizable background.
+    - Inputs:
+        - `shape` (Required): Specifies the shape to be drawn on the image. It can be a circle, square, or triangle, affecting the visual representation in the generated image. Type should be `COMBO[STRING]`.
+        - `coordinates` (Required): Defines the center location for the shape on the image. It is crucial for positioning the shape accurately within the frame. Type should be `STRING`.
+        - `frame_width` (Required): Sets the width of the frame for the image, determining the overall size of the generated image. Type should be `INT`.
+        - `frame_height` (Required): Sets the height of the frame for the image, determining the overall size of the generated image. Type should be `INT`.
+        - `shape_width` (Required): Determines the width of the shape to be drawn, allowing for size customization of the shape. Type should be `INT`.
+        - `shape_height` (Required): Determines the height of the shape to be drawn, allowing for size customization of the shape. Type should be `INT`.
+        - `shape_color` (Required): Defines the color of the shape, enabling visual customization. Type should be `STRING`.
+        - `bg_color` (Required): Sets the background color of the image, allowing for further customization of the image's appearance. Type should be `STRING`.
+        - `blur_radius` (Required): Applies a Gaussian blur to the shape, enabling the creation of soft edges. The radius affects the degree of blurriness. Type should be `FLOAT`.
+        - `intensity` (Required): Adjusts the intensity of the shape's color, affecting its visual prominence on the image. Type should be `FLOAT`.
+        - `size_multiplier` (Optional): Modifies the size of the shape based on the multiplier, allowing for dynamic size adjustments in a batch of images. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The generated image with the specified shape drawn on it. Type should be `IMAGE`.
+        - `mask`: A mask of the shape drawn on the image, useful for image processing and analysis. Type should be `MASK`.

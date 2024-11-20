@@ -1,0 +1,7 @@
+- `LayerUtility_ If `: This node provides conditional logic execution within a workflow, allowing for branching paths based on specified conditions. It evaluates a given condition and directs the flow accordingly, enabling dynamic decision-making in processing pipelines.
+    - Inputs:
+        - `if_condition` (Required): Determines the branch of execution based on its truth value. A true condition leads to the execution of the 'when_TRUE' path, while a false condition leads to the 'when_FALSE' path. Type should be `*`.
+        - `when_TRUE` (Required): The path or operation to execute if the 'if_condition' evaluates to true. This allows for dynamic control over the workflow based on conditions. Type should be `*`.
+        - `when_FALSE` (Required): The path or operation to execute if the 'if_condition' evaluates to false. This provides an alternative execution path, ensuring flexibility in handling various scenarios. Type should be `*`.
+    - Outputs:
+        - `?`: The result of the executed path, which could be from either the 'when_TRUE' or 'when_FALSE' branch, depending on the evaluation of the 'if_condition'. This output type name is represented by a placeholder '?', indicating the flexibility in the output based on conditional logic. Type should be `*`.

@@ -1,0 +1,6 @@
+- `GITSSchedulerFuncProvider`: Provides a functionality to dynamically generate a noise schedule for image generation processes using the GITSScheduler. This node is designed to adjust the noise schedule based on given coefficients and denoise parameters, offering a flexible approach to controlling the diffusion process.
+    - Inputs:
+        - `coeff` (Required): Specifies the coefficient factor for the GITSScheduler, influencing the overall noise schedule generation by adjusting the intensity of the applied noise. Type should be `FLOAT`.
+        - `denoise` (Required): Determines the amount of denoising to apply in the noise schedule, affecting the clarity and detail of the generated images. Type should be `FLOAT`.
+    - Outputs:
+        - `scheduler_func`: Returns a function capable of generating a dynamic noise schedule for use in image generation processes, tailored by the specified coefficients and denoise parameters. Type should be `SCHEDULER_FUNC`.

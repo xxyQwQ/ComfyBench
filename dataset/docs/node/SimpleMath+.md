@@ -1,9 +1,0 @@
-- `SimpleMath+`: SimpleMath is a node designed to evaluate mathematical expressions dynamically. It supports basic arithmetic operations, conditional logic, and custom functions, allowing for flexible mathematical computations.
-    - Parameters:
-        - `value`: The mathematical expression to be evaluated. Supports basic arithmetic, variables, and custom functions. Type should be `STRING`.
-    - Inputs:
-        - `a`: A variable that can be used within the mathematical expression. Type should be `INT,FLOAT`.
-        - `b`: Another variable that can be used within the mathematical expression. Type should be `INT,FLOAT`.
-    - Outputs:
-        - `int`: The rounded result of the evaluated mathematical expression. Type should be `INT`.
-        - `float`: The exact result of the evaluated mathematical expression, before rounding. Type should be `FLOAT`.

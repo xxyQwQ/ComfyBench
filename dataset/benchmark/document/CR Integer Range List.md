@@ -1,0 +1,10 @@
+- `CR Integer Range List`: The CR_IntegerRangeList node generates a list of integers within a specified range, potentially repeating and reversing the sequence based on the provided parameters. It's designed to create complex sequences of numbers for various applications, such as scheduling or iterative processes.
+    - Inputs:
+        - `start` (Required): Defines the starting point of the integer range. It sets the initial value from which the range generation begins. Type should be `INT`.
+        - `end` (Required): Specifies the endpoint of the integer range. It determines the value at which the range generation stops, not including this value itself. Type should be `INT`.
+        - `step` (Required): Determines the increment between each integer in the range. It controls the difference between successive numbers in the sequence. Type should be `INT`.
+        - `loops` (Required): Specifies the number of times the entire range sequence is repeated. It allows for the generation of longer sequences by repeating the basic range pattern. Type should be `INT`.
+        - `ping_pong` (Required): A boolean parameter that, when true, reverses the direction of the range on every other iteration. It adds a back-and-forth pattern to the sequence. Type should be `BOOLEAN`.
+    - Outputs:
+        - `INT`: A list of integers generated based on the specified range, step, loops, and ping-pong parameters. Type should be `INT`.
+        - `show_help`: Provides a URL to the documentation or help page related to the CR_IntegerRangeList node. Type should be `STRING`.

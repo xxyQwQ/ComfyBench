@@ -1,0 +1,6 @@
+- `Empty Latent Ratio Select SDXL`: This node is designed to generate a tensor representing an empty latent space based on a selected ratio from predefined options. It facilitates the creation of a latent space with specific dimensions that adhere to a user-selected aspect ratio, enabling the generation of content with desired proportions.
+    - Inputs:
+        - `ratio_selected` (Required): Specifies the aspect ratio for the latent space to be generated. It determines the dimensions of the resulting latent space, ensuring that the generated content aligns with the selected proportions. Type should be `COMBO[STRING]`.
+        - `batch_size` (Required): Determines the number of latent spaces to generate in a single batch. It allows for the efficient creation of multiple latent spaces with the same dimensions in one operation. Type should be `INT`.
+    - Outputs:
+        - `latent`: The generated tensor representing the empty latent space. It is structured to match the dimensions dictated by the selected aspect ratio and batch size. Type should be `LATENT`.

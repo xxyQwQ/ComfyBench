@@ -1,0 +1,38 @@
+- `ttN pipeKSamplerAdvanced`: This node is designed for advanced sampling in generative models, incorporating various techniques such as LoRA adjustments, noise control, and optional model components to refine and generate high-quality samples. It supports complex workflows including image upscaling, embedding workflows, and handling of optional inputs for enhanced flexibility and customization in sample generation.
+    - Inputs:
+        - `pipe` (Required): unknown Type should be `PIPE_LINE`.
+        - `lora_name` (Required): Specifies the name of the LoRA model to be used for adjustments, enhancing the control over the sampling process. Type should be `COMBO[STRING]`.
+        - `lora_model_strength` (Required): Determines the strength of the LoRA model adjustments, allowing for fine-tuning of the model's behavior during sampling. Type should be `FLOAT`.
+        - `lora_clip_strength` (Required): Specifies the strength of the LoRA clip adjustments, impacting the final visual quality of the samples. Type should be `FLOAT`.
+        - `upscale_method` (Required): Specifies the method used for upscaling the generated samples, affecting the resolution and clarity. Type should be `COMBO[STRING]`.
+        - `factor` (Required): The factor by which the image is upscaled, directly influencing the output image size. Type should be `FLOAT`.
+        - `crop` (Required): Determines if and how the output images are cropped, affecting the final composition and aspect ratio. Type should be `COMBO[STRING]`.
+        - `sampler_state` (Required): Represents the state of the sampler, including configurations and parameters for the sampling process. Type should be `COMBO[STRING]`.
+        - `add_noise` (Required): Controls whether noise is added to the sampling process, with options to enable or disable noise, affecting the texture and details of the generated samples. Type should be `COMBO[STRING]`.
+        - `steps` (Required): Defines the number of steps to perform in the sampling process, directly impacting the quality and characteristics of the generated samples. Type should be `INT`.
+        - `cfg` (Required): Configuration setting for the sampling process, providing a means to customize various aspects of sample generation. Type should be `FLOAT`.
+        - `sampler_name` (Required): Identifies the specific sampler to be used, allowing for selection among multiple sampling strategies. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Specifies the scheduler for controlling the sampling process, aiding in the management of sampling steps and their execution. Type should be `COMBO[STRING]`.
+        - `start_at_step` (Required): unknown Type should be `INT`.
+        - `end_at_step` (Required): unknown Type should be `INT`.
+        - `return_with_leftover_noise` (Required): Controls whether the final output includes leftover noise, affecting the visual texture of the samples. Type should be `COMBO[STRING]`.
+        - `image_output` (Required): Determines how the output images are handled, including options for hiding or saving the generated samples. Type should be `COMBO[STRING]`.
+        - `save_prefix` (Required): Prefix for saving the generated samples, facilitating organization and retrieval of output files. Type should be `STRING`.
+        - `noise_seed` (Optional): The seed used for generating noise, ensuring reproducibility and consistency in the noise added to the samples. Type should be `INT`.
+        - `optional_model` (Optional): Specifies an optional model to be used in the sampling process, allowing for customization and experimentation. Type should be `MODEL`.
+        - `optional_positive` (Optional): Optional positive conditioning to guide the sampling towards desired attributes. Type should be `CONDITIONING`.
+        - `optional_negative` (Optional): Optional negative conditioning to steer the sampling away from undesired attributes. Type should be `CONDITIONING`.
+        - `optional_latent` (Optional): Specifies an optional latent input for the sampling process, providing a starting point or influence. Type should be `LATENT`.
+        - `optional_vae` (Optional): Specifies an optional VAE model to be used, affecting the encoding and decoding of samples. Type should be `VAE`.
+        - `optional_clip` (Optional): Specifies an optional CLIP model for additional guidance or conditioning in the sampling process. Type should be `CLIP`.
+        - `xyPlot` (Optional): Optional XY plot data for visualization or analysis purposes during the sampling process. Type should be `XYPLOT`.
+    - Outputs:
+        - `pipe`: The pipeline configuration used for the sampling process. Type should be `PIPE_LINE`.
+        - `model`: The model used in the sampling process. Type should be `MODEL`.
+        - `positive`: Positive conditioning data used to guide the sampling process. Type should be `CONDITIONING`.
+        - `negative`: Negative conditioning data used to steer the sampling away from undesired attributes. Type should be `CONDITIONING`.
+        - `latent`: The latent representation of the sample. Type should be `LATENT`.
+        - `vae`: The VAE model used in the sampling process, if applicable. Type should be `VAE`.
+        - `clip`: The CLIP model used for additional guidance or conditioning, if applicable. Type should be `CLIP`.
+        - `image`: The final image output from the sampling process. Type should be `IMAGE`.
+        - `seed`: The seed value used for reproducibility in the sampling process. Type should be `INT`.

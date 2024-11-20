@@ -1,0 +1,14 @@
+- `Auto Pan Equilateral (mtb)`: This node is designed to generate a 360-degree panning video from an equilateral image by transforming the image based on specified field of view (FOV) parameters, elevation, and frame count to create a seamless panoramic experience.
+    - Inputs:
+        - `equilateral_image` (Required): The equilateral image to be transformed into a 360-degree panning video. It serves as the base for generating the panoramic frames. Type should be `IMAGE`.
+        - `fovX` (Required): Specifies the horizontal field of view for the panoramic transformation. It influences the breadth of view in each frame of the video. Type should be `FLOAT`.
+        - `fovY` (Required): Specifies the vertical field of view for the panoramic transformation. It affects the height of the view in each frame of the video. Type should be `FLOAT`.
+        - `elevation` (Required): Determines the elevation angle at which the panoramic frames are generated, affecting the vertical angle of the camera. Type should be `FLOAT`.
+        - `frame_count` (Required): The total number of frames to generate for the 360-degree panning video, determining the video's length. Type should be `INT`.
+        - `width` (Required): The width of each frame in the generated video, affecting the resolution. Type should be `INT`.
+        - `height` (Required): The height of each frame in the generated video, influencing the resolution. Type should be `INT`.
+        - `floats_fovX` (Optional): An optional list of FOVX values to specify a varying horizontal field of view across frames, allowing for dynamic panning effects. Type should be `FLOATS`.
+        - `floats_fovY` (Optional): An optional list of FOVY values to specify a varying vertical field of view across frames, enabling dynamic panning effects. Type should be `FLOATS`.
+        - `floats_elevation` (Optional): An optional list of elevation values to specify varying camera angles across frames, enhancing the panoramic effect. Type should be `FLOATS`.
+    - Outputs:
+        - `image`: The resulting image after applying the 360-degree panning transformation, represented as a sequence of frames. Type should be `IMAGE`.

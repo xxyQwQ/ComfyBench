@@ -1,0 +1,6 @@
+- `Model Switch (JPS)`: The Model Switch node is designed to dynamically select between multiple model inputs based on a specified selection criterion. It facilitates the flexible integration and switching of different models within a workflow, allowing for varied model outputs to be generated based on the selection.
+    - Inputs:
+        - `select` (Required): Determines which model to select for output. The selection is based on an integer value, directing the switch to output the corresponding model. Type should be `INT`.
+        - `model_i` (Optional): Represents a generic model input option. Depending on the 'select' parameter's value, one of the available model inputs (model_1 to model_5) is selected for output. This abstraction simplifies the input specification by treating all model inputs uniformly. Type should be `MODEL`.
+    - Outputs:
+        - `model_out`: The selected model output based on the 'select' parameter. This output facilitates the dynamic integration of different models within a workflow. Type should be `MODEL`.

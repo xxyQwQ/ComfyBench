@@ -1,0 +1,7 @@
+- `UnJitterImage`: The UnJitterImage node is designed to reverse or mitigate the effects of jittering on images. It utilizes a predefined matrix to adjust the positioning of pixels in an image, aiming to restore the original or a more stable visual representation.
+    - Inputs:
+        - `images` (Required): The input images to be processed for jitter correction. This parameter is crucial for determining the target images on which the un-jittering operation will be applied. Type should be `IMAGE`.
+        - `jitter_scale` (Required): Defines the scale of jitter correction to be applied. This parameter adjusts the intensity of the un-jittering effect, allowing for fine-tuning of the correction process. Type should be `FLOAT`.
+        - `oflow_align` (Required): A boolean flag indicating whether optical flow alignment should be used as part of the un-jittering process. This can enhance the correction by aligning frames based on detected motion, offering a more dynamic approach to jitter correction. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output image after the un-jittering process has been applied. This image is expected to have reduced or eliminated effects of jitter, presenting a more stable and visually coherent result. Type should be `IMAGE`.

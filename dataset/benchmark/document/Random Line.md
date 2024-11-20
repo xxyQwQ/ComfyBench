@@ -1,0 +1,6 @@
+- `Random Line`: The Random Line node is designed to select a random line from a given text input based on a specified seed. This functionality allows for the introduction of randomness and variability in text processing tasks, ensuring that outputs can vary even with the same input under different seeds.
+    - Inputs:
+        - `text` (Required): The 'text' parameter is the input text from which a random line will be selected. It supports multiline input, allowing for a broader range of text to be processed. Type should be `STRING`.
+        - `seed` (Required): The 'seed' parameter determines the randomness of the line selection, ensuring reproducibility of results when the same seed is used. Type should be `INT`.
+    - Outputs:
+        - `string`: Returns a randomly selected line from the input text, ensuring variability in the output based on the provided seed. Type should be `STRING`.

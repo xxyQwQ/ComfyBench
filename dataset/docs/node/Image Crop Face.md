@@ -1,9 +1,0 @@
-- `Image Crop Face`: This node specializes in detecting and cropping faces within images, optionally applying a padding around the detected face area for better framing. It leverages facial detection algorithms to identify the most prominent face in an image and extracts it, adjusting the crop size based on specified padding parameters.
-    - Parameters:
-        - `crop_padding_factor`: Specifies the amount of padding to add around the detected face area before cropping. This helps in ensuring that the face is well-framed within the cropped image, enhancing the visual appeal. Type should be `FLOAT`.
-        - `cascade_xml`: An optional parameter specifying the name of the cascade classifier to be used for face detection. This allows for flexibility in choosing different detection algorithms based on the application's requirements. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The input image where a face needs to be detected and cropped. This parameter is crucial as it provides the visual data from which the node will identify and extract the face. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The cropped image containing the detected face, potentially with added padding for better framing. This output is the primary result of the node's face detection and cropping operation. Type should be `IMAGE`.
-        - `crop_data`: Provides data related to the cropping operation, including the dimensions and location of the cropped area. Type should be `CROP_DATA`.

@@ -1,0 +1,11 @@
+- `Rect Grab Cut`: The RectGrabCut node is designed for image segmentation using the GrabCut algorithm with a predefined rectangular area. It aims to separate the foreground from the background within the specified rectangle, enhancing image processing tasks by allowing for more precise object isolation.
+    - Inputs:
+        - `image` (Required): The input image to be segmented. It plays a crucial role in determining the effectiveness of the foreground-background separation. Type should be `IMAGE`.
+        - `x1` (Required): The x-coordinate of the top left corner of the rectangle. Type should be `INT`.
+        - `y1` (Required): The y-coordinate of the top left corner of the rectangle. Type should be `INT`.
+        - `x2` (Required): The x-coordinate of the bottom right corner of the rectangle. Type should be `INT`.
+        - `y2` (Required): The y-coordinate of the bottom right corner of the rectangle. Type should be `INT`.
+        - `iterations` (Required): Specifies the number of iterations the GrabCut algorithm should run, affecting the accuracy and detail of the segmentation. Type should be `INT`.
+        - `output_format` (Required): Defines the format of the output image, influencing how the segmented image is presented and utilized in subsequent processes. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The segmented image with the foreground isolated from the background, ready for further processing or analysis. Type should be `IMAGE`.

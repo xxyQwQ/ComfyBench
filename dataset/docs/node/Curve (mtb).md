@@ -1,6 +1,0 @@
-- `Curve (mtb)`: The Curve (mtb) node is designed to handle FLOAT_CURVE data, allowing for the manipulation and processing of curve data structures within a given workflow. It focuses on maintaining the integrity of the curve data while enabling transformations or analyses that may be required.
-    - Parameters:
-    - Inputs:
-        - `curve`: The 'curve' parameter is essential for the node's operation as it represents the FLOAT_CURVE data to be processed. This parameter's manipulation directly influences the node's output, making it crucial for curve data handling. Type should be `FLOAT_CURVE`.
-    - Outputs:
-        - `float_curve`: Outputs the processed or unaltered FLOAT_CURVE data, depending on the node's implementation and the input provided. Type should be `FLOAT_CURVE`.

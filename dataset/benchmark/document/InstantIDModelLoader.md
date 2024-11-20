@@ -1,0 +1,5 @@
+- `InstantIDModelLoader`: The InstantIDModelLoader node is designed to load and initialize the InstantID model from a specified file path. It prepares the model for further processing or analysis by loading its checkpoint and configuring it based on the file type, ensuring compatibility and readiness for InstantID operations.
+    - Inputs:
+        - `instantid_file` (Required): Specifies the file path to the InstantID model to be loaded. This parameter is crucial for locating and loading the model's checkpoint for initialization and further use. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `instantid`: Returns the loaded and initialized InstantID model, ready for further processing or analysis within the InstantID framework. Type should be `INSTANTID`.

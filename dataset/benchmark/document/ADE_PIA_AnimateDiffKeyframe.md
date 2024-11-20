@@ -1,0 +1,11 @@
+- `ADE_PIA_AnimateDiffKeyframe`: This node is designed for creating and managing keyframes within the AnimateDiff-PIA framework, specifically tailored for PIA (Pose Interpolation Animation) inputs. It facilitates the dynamic adjustment of animation parameters over time, enabling users to define specific animation behaviors at different points in the animation sequence.
+    - Inputs:
+        - `start_percent` (Required): Specifies the starting point of the keyframe as a percentage of the total animation duration, allowing for precise timing control within the animation sequence. Type should be `FLOAT`.
+        - `prev_ad_keyframes` (Optional): An optional list of previous ADKeyframes to be considered in the animation sequence, enabling the chaining and layering of animation effects. Type should be `AD_KEYFRAMES`.
+        - `scale_multival` (Optional): A multiplier for scaling effects, applicable to the keyframe. It can be a single value or vary over time if provided as a tensor. This input directly influences the visual scale of animated elements, affecting the node's execution by adjusting the size of elements within the keyframe. Type should be `MULTIVAL`.
+        - `effect_multival` (Optional): A multiplier for effect intensities, applicable to the keyframe. It can be a single value or vary over time if provided as a tensor. This input modifies the intensity of specified effects in the animation, impacting the node's execution by altering how pronounced these effects are within the keyframe. Type should be `MULTIVAL`.
+        - `pia_input` (Optional): Specifies the PIA input settings for the keyframe, allowing for detailed control over the animation's pose interpolation aspects. Type should be `PIA_INPUT`.
+        - `inherit_missing` (Optional): Determines whether missing values for scale, effect, and camera control effects should be inherited from previous keyframes, ensuring continuity in the animation. Type should be `BOOLEAN`.
+        - `guarantee_steps` (Optional): The minimum number of steps to guarantee for the keyframe, ensuring that certain animation effects are applied for at least a specified duration. Type should be `INT`.
+    - Outputs:
+        - `ad_keyframes`: Outputs a sequence of ADKeyframes, incorporating the newly created or modified keyframe into the animation sequence. Type should be `AD_KEYFRAMES`.

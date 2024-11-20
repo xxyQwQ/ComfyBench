@@ -1,0 +1,6 @@
+- `CM_FloatUnaryCondition`: This node performs unary operations on floating-point numbers based on a specified condition. It evaluates a single float input against a predefined condition, such as checking if the number is zero, positive, negative, or NaN, among others.
+    - Inputs:
+        - `op` (Required): Specifies the unary operation to be performed on the float input. The operation is chosen from a predefined list of conditions like 'IsZero', 'IsPositive', etc., which determine the nature of the evaluation. Type should be `COMBO[STRING]`.
+        - `a` (Required): The floating-point number to be evaluated against the specified unary condition. Type should be `FLOAT`.
+    - Outputs:
+        - `bool`: The result of the unary condition evaluation, indicating whether the condition holds true for the input float. Type should be `BOOL`.

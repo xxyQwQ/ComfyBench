@@ -1,0 +1,5 @@
+- `RoundMask`: The RoundMask node specializes in converting masks or batches of masks into binary masks by rounding their values. This operation is essential for tasks that require clear, binary distinctions within masks, such as separating foreground from background in image processing applications.
+    - Inputs:
+        - `mask` (Required): The mask input is the primary data that the RoundMask node processes. It rounds the values of this mask to produce a binary mask, which is crucial for applications needing distinct segmentation. Type should be `MASK`.
+    - Outputs:
+        - `mask`: The output is a binary mask or a batch of binary masks, where each pixel value is rounded to the nearest integer, effectively converting the mask into a binary format. Type should be `MASK`.

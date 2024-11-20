@@ -1,7 +1,0 @@
-- `SaltAudioStereoSplitter`: The SaltAudioStereoSplitter node is designed to process stereo audio files by splitting them into their left and right channels as separate mono audio files. This functionality is essential for audio editing and processing tasks that require individual manipulation of each stereo channel.
-    - Parameters:
-    - Inputs:
-        - `audio`: The 'audio' parameter takes a stereo audio file as input, which is essential for the splitting process. The node expects this audio to be in a two-channel stereo format to successfully separate it into mono channels. Type should be `AUDIO`.
-    - Outputs:
-        - `left_channel_mono`: The output representing the left channel of the original stereo audio file, processed and returned as a mono audio file. Type should be `AUDIO`.
-        - `right_channel_mono`: The output representing the right channel of the original stereo audio file, processed and returned as a mono audio file. Type should be `AUDIO`.

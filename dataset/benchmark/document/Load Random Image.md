@@ -1,0 +1,8 @@
+- `Load Random Image`: This node is designed to load a random image from a specified directory, optionally including subdirectories. It aims to facilitate the random selection and loading of images for various applications, such as data augmentation, testing, or providing variability in input data for machine learning models.
+    - Inputs:
+        - `directory` (Required): Specifies the directory from which to load a random image. The node can optionally search through subdirectories if instructed, enhancing its flexibility in handling file structures. Type should be `STRING`.
+        - `subdirectories` (Required): Determines whether the node should include subdirectories in its search for an image file, allowing for a more comprehensive search across a nested directory structure. Type should be `COMBO[STRING]`.
+        - `seed` (Required): A seed value for the random number generator, ensuring reproducibility of the random image selection when the same seed is used. Type should be `INT`.
+    - Outputs:
+        - `image`: The randomly selected image, loaded as a tensor, suitable for further processing or analysis in machine learning workflows. Type should be `IMAGE`.
+        - `file name`: unknown Type should be `STRING`.

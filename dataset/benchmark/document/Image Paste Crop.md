@@ -1,0 +1,9 @@
+- `Image Paste Crop`: This node specializes in blending a cropped image onto another image, applying optional sharpening and gradient blending based on specified parameters. It allows for precise control over the cropping, blending, and sharpening processes to achieve a seamlessly integrated final image.
+    - Inputs:
+        - `image` (Required): The base image onto which the cropped image will be pasted. It serves as the background for the operation. Type should be `IMAGE`.
+        - `crop_image` (Required): The image to be cropped and pasted onto the base image. This image is manipulated according to the crop data and other parameters before being integrated. Type should be `IMAGE`.
+        - `crop_data` (Required): Specifies the dimensions and coordinates for cropping the 'crop_image'. It includes the crop size and the bounding box coordinates. Type should be `CROP_DATA`.
+        - `crop_blending` (Required): Determines the intensity of the gradient blending at the edges of the cropped image, affecting how seamlessly it integrates with the base image. Type should be `FLOAT`.
+        - `crop_sharpening` (Required): Specifies the level of sharpening to apply to the cropped image, enhancing its details before pasting. Type should be `INT`.
+    - Outputs:
+        - `image`: The resulting image after the cropped image has been pasted and blended onto the base image. Type should be `IMAGE`.

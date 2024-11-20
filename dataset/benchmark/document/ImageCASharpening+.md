@@ -1,0 +1,6 @@
+- `ImageCASharpening+`: The ImageCASharpening+ node applies contrast adaptive sharpening to images, enhancing their clarity and detail without significantly altering the overall composition. This process adjusts the sharpness of an image based on its local contrast, making it particularly effective for images that may appear soft or slightly out of focus.
+    - Inputs:
+        - `image` (Required): The input image to be sharpened. This is the primary data upon which the contrast adaptive sharpening algorithm operates. Type should be `IMAGE`.
+        - `amount` (Required): A floating-point value that determines the intensity of the sharpening effect. Higher values result in more pronounced sharpening, allowing for fine-tuning based on the specific needs of the image or application. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output image after applying contrast adaptive sharpening. This image will have enhanced sharpness and detail, particularly in areas of varying contrast. Type should be `IMAGE`.

@@ -1,0 +1,7 @@
+- `ImpactIfNone`: The ImpactIfNone node is designed to evaluate whether a given input is None and conditionally execute logic based on that evaluation. It abstracts the process of null-checking, allowing for streamlined decision-making in data flows where the presence or absence of data dictates subsequent actions.
+    - Inputs:
+        - `signal` (Optional): The 'signal' parameter is an optional input that the node can process alongside 'any_input' to determine the flow of logic based on the presence of data. Type should be `*`.
+        - `any_input` (Optional): The 'any_input' parameter is evaluated to check if it is None. Its presence or absence influences the node's decision-making process and the output generated. Type should be `*`.
+    - Outputs:
+        - `signal_opt`: The 'signal_opt' output returns the 'signal' input if 'any_input' is not None, facilitating conditional logic flows. Type should be `*`.
+        - `bool`: The 'bool' output indicates whether 'any_input' was None (False) or not (True), providing a boolean flag for further decision-making. Type should be `BOOLEAN`.

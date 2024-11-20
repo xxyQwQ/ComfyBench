@@ -1,0 +1,9 @@
+- `MaskComposite`: This node specializes in combining two mask inputs through a variety of operations such as addition, subtraction, and logical operations, to produce a new, modified mask. It abstractly handles the manipulation of mask data to achieve complex masking effects, serving as a crucial component in mask-based image editing and processing workflows.
+    - Inputs:
+        - `destination` (Required): The primary mask that will be modified based on the operation with the source mask. It plays a central role in the composite operation, acting as the base for modifications. Type should be `MASK`.
+        - `source` (Required): The secondary mask that will be used in conjunction with the destination mask to perform the specified operation, influencing the final output mask. Type should be `MASK`.
+        - `x` (Required): The horizontal offset at which the source mask will be applied to the destination mask, affecting the positioning of the composite result. Type should be `INT`.
+        - `y` (Required): The vertical offset at which the source mask will be applied to the destination mask, affecting the positioning of the composite result. Type should be `INT`.
+        - `operation` (Required): Specifies the type of operation to apply between the destination and source masks, such as 'add', 'subtract', or logical operations, determining the nature of the composite effect. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `mask`: The resulting mask after applying the specified operation between the destination and source masks, representing the composite outcome. Type should be `MASK`.

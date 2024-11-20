@@ -1,0 +1,21 @@
+- `IF_ImagePrompt`: The IF_ImagePrompt node transforms visual inputs into textual prompts, leveraging user profiles and image characteristics to generate tailored text descriptions. It supports customization through various parameters, including style and embellishment options, to enhance the generated prompts.
+    - Inputs:
+        - `image` (Required): The image input can be a torch.Tensor, a PIL.Image, or a file path to an image. It serves as the primary visual content for generating the text prompt. Type should be `IMAGE`.
+        - `image_prompt` (Required): A textual description or directive provided by the user to guide the generation of the text prompt, influencing its thematic direction. Type should be `STRING`.
+        - `base_ip` (Required): The IP address of the server where the model engine is hosted, required for sending the image processing request. Type should be `STRING`.
+        - `port` (Required): The port number on the server for accessing the model engine, used in conjunction with the base IP address. Type should be `STRING`.
+        - `engine` (Required): The name of the engine (e.g., ollama, openai, anthropic) used for generating the text prompt, determining the underlying AI model. Type should be `COMBO[STRING]`.
+        - `selected_model` (Required): The specific model selected for generating the text prompt, chosen from the available models on the specified engine. Type should be `[]`.
+        - `profile` (Required): A user profile identifier used to select specific settings or preferences for text generation, affecting the style and content of the generated prompts. Type should be `COMBO[STRING]`.
+        - `embellish_prompt` (Required): An optional parameter for adding embellishment to the generated text, enhancing its descriptive quality. Type should be `COMBO[STRING]`.
+        - `style_prompt` (Required): A parameter for specifying the style of the generated text, affecting its tone and presentation. Type should be `COMBO[STRING]`.
+        - `neg_prompt` (Required): A parameter for providing a negative or contrasting prompt, used to generate alternative text descriptions. Type should be `COMBO[STRING]`.
+        - `temperature` (Required): Controls the creativity of the generated text. A higher temperature results in more varied text. Type should be `FLOAT`.
+        - `max_tokens` (Optional): The maximum number of tokens to generate for the text prompt, limiting its length. Type should be `INT`.
+        - `seed` (Optional): A seed value for the random number generator, ensuring reproducibility of the generated text. Type should be `INT`.
+        - `random` (Optional): A boolean parameter that, when true, uses a random seed for text generation, adding variability to the output. Type should be `BOOLEAN`.
+        - `keep_alive` (Optional): A boolean parameter indicating whether to keep the model loaded between requests, affecting resource utilization. Type should be `BOOLEAN`.
+    - Outputs:
+        - `Question`: A system-generated message or question based on the image prompt and user profile. Type should be `STRING`.
+        - `Response`: The main text description generated from the visual input, incorporating any specified style or embellishment. Type should be `STRING`.
+        - `Negative`: A negative or alternative text prompt, possibly used for contrast or to provide different perspectives. Type should be `STRING`.

@@ -1,0 +1,18 @@
+- `CR Model Merge Stack`: This node is designed to facilitate the merging of multiple models into a single, cohesive model stack. It allows for the integration of various models by applying specified merging methods, normalization of ratios, and weighting factors to achieve a balanced and effective combination of model features.
+    - Inputs:
+        - `switch_1` (Required): Activates or deactivates the inclusion of the first model in the merging process. Type should be `COMBO[STRING]`.
+        - `ckpt_name1` (Required): The name of the checkpoint file for the first model. This is used to identify and load the specific model to be merged. Type should be `COMBO[STRING]`.
+        - `model_ratio1` (Required): Specifies the contribution ratio of the first model in the merged output. This affects how prominently the model's features are represented. Type should be `FLOAT`.
+        - `clip_ratio1` (Required): Determines the contribution ratio of the CLIP model associated with the first model in the merged output. Type should be `FLOAT`.
+        - `switch_2` (Required): Activates or deactivates the inclusion of the second model in the merging process. Type should be `COMBO[STRING]`.
+        - `ckpt_name2` (Required): The name of the checkpoint file for the second model. This is used to identify and load the specific model to be merged. Type should be `COMBO[STRING]`.
+        - `model_ratio2` (Required): Specifies the contribution ratio of the second model in the merged output. This affects how prominently the model's features are represented. Type should be `FLOAT`.
+        - `clip_ratio2` (Required): Determines the contribution ratio of the CLIP model associated with the second model in the merged output. Type should be `FLOAT`.
+        - `switch_3` (Required): Activates or deactivates the inclusion of the third model in the merging process. Type should be `COMBO[STRING]`.
+        - `ckpt_name3` (Required): The name of the checkpoint file for the third model. This is used to identify and load the specific model to be merged. Type should be `COMBO[STRING]`.
+        - `model_ratio3` (Required): Specifies the contribution ratio of the third model in the merged output. This affects how prominently the model's features are represented. Type should be `FLOAT`.
+        - `clip_ratio3` (Required): Determines the contribution ratio of the CLIP model associated with the third model in the merged output. Type should be `FLOAT`.
+        - `model_stack` (Optional): An optional stack of models that can be included in the merge process. This allows for the integration of additional models beyond the primary three specified. Type should be `MODEL_STACK`.
+    - Outputs:
+        - `MODEL_STACK`: The resulting merged model stack, which combines the features of the input models according to the specified merge method, normalization, and weighting. Type should be `MODEL_STACK`.
+        - `show_help`: A URL providing additional help and documentation on how to use the node effectively. Type should be `STRING`.

@@ -1,0 +1,6 @@
+- `JWIntegerDiv`: The JWIntegerDiv node performs division between two integer inputs, producing a floating-point result. This node abstracts the mathematical division operation, allowing for the integration of division functionality within data processing pipelines.
+    - Inputs:
+        - `a` (Required): The dividend in the division operation. It represents the integer value to be divided. Type should be `INT`.
+        - `b` (Required): The divisor in the division operation. It represents the integer value by which the dividend is divided. Type should be `INT`.
+    - Outputs:
+        - `float`: The output is the result of the division operation, represented as a floating-point number. Type should be `FLOAT`.

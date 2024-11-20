@@ -1,0 +1,7 @@
+- `LayerFilter_ WaterColor`: The WaterColor node applies a watercolor effect to images, transforming their appearance with customizable line density and opacity levels to simulate the look of watercolor paintings.
+    - Inputs:
+        - `image` (Required): The input image to which the watercolor effect will be applied. This parameter is crucial for defining the base image that will undergo the transformation. Type should be `IMAGE`.
+        - `line_density` (Required): Controls the density of the lines in the watercolor effect, affecting the overall texture and detail of the resulting image. Type should be `INT`.
+        - `opacity` (Required): Determines the opacity of the watercolor effect, allowing for fine-tuning of the visual impact on the original image. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image with the watercolor effect applied, showcasing the transformation from the original input. Type should be `IMAGE`.

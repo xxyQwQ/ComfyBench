@@ -1,0 +1,6 @@
+- `ACN_ControlNet++LoaderSingle`: This node is designed to load a single instance of the ControlNet++ model, facilitating the integration of advanced control mechanisms into the generation process. It abstracts the complexities of model loading, ensuring seamless access to ControlNet++ functionalities for enhanced content creation.
+    - Inputs:
+        - `name` (Required): Specifies the name of the ControlNet++ model to be loaded, serving as a key identifier for selecting the appropriate model instance. Type should be `COMBO[STRING]`.
+        - `control_type` (Required): Determines the type of control mechanism to be applied using the ControlNet++ model, influencing how the model will be utilized in the generation process. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `control_net`: The loaded ControlNet++ model instance, ready for integration and use in content generation workflows. Type should be `CONTROL_NET`.

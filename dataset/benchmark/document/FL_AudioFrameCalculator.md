@@ -1,0 +1,11 @@
+- `FL_AudioFrameCalculator`: The FL_AudioFrameCalculator node is designed to process audio files by calculating the number of frames within specified bars of the audio, based on the beats per minute (BPM), frame rate, and other parameters. It utilizes audio processing libraries to extract and manipulate audio data, providing insights into the audio's structure and timing for further processing or analysis.
+    - Inputs:
+        - `audio_file_path` (Required): Specifies the absolute path to the audio file to be processed. It is crucial for locating and loading the audio data for analysis. Type should be `STRING`.
+        - `start_bar` (Required): Determines the starting bar from which the audio analysis begins, allowing for targeted processing within the audio file. Type should be `INT`.
+        - `bar_count` (Required): Defines the number of bars to analyze, enabling the calculation of frames over a specific section of the audio. Type should be `INT`.
+        - `fps` (Required): Frames per second setting, which influences the calculation of the total number of frames within the specified audio segment. Type should be `INT`.
+    - Outputs:
+        - `AUDIO`: The processed audio segment, suitable for further audio manipulation or analysis. Type should be `AUDIO`.
+        - `Frame Count`: The total number of frames calculated within the specified audio segment. Type should be `INT`.
+        - `BPM`: The beats per minute of the audio, determined during processing. Type should be `INT`.
+        - `FPS`: The frames per second parameter, as specified in the input, returned for reference. Type should be `INT`.

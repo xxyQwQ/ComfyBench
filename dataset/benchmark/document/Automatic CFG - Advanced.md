@@ -1,0 +1,58 @@
+- `Automatic CFG - Advanced`: This node represents an advanced configuration mechanism for dynamically adjusting the computational graph of models, particularly focusing on enhancing or modifying attention mechanisms within neural networks. It provides a sophisticated interface for applying custom modifications to the attention layers, enabling fine-tuned control over model behavior and performance.
+    - Inputs:
+        - `model` (Required): The model to be modified, providing the base for the computational graph adjustments. Type should be `MODEL`.
+        - `automatic_cfg` (Required): Specifies the mode of automatic configuration to apply, allowing for predefined or custom adjustments to the model's computational graph. Type should be `COMBO[STRING]`.
+        - `skip_uncond` (Required): A flag to skip unconditional generation steps, optimizing the model's performance for specific tasks. Type should be `BOOLEAN`.
+        - `fake_uncond_start` (Required): unknown Type should be `BOOLEAN`.
+        - `uncond_sigma_start` (Required): The starting value of sigma for unconditional generation, defining the initial state of noise reduction. Type should be `FLOAT`.
+        - `uncond_sigma_end` (Required): The ending value of sigma for unconditional generation, determining the final state of noise reduction. Type should be `FLOAT`.
+        - `lerp_uncond` (Required): unknown Type should be `BOOLEAN`.
+        - `lerp_uncond_strength` (Required): unknown Type should be `FLOAT`.
+        - `lerp_uncond_sigma_start` (Required): unknown Type should be `FLOAT`.
+        - `lerp_uncond_sigma_end` (Required): unknown Type should be `FLOAT`.
+        - `subtract_latent_mean` (Required): unknown Type should be `BOOLEAN`.
+        - `subtract_latent_mean_sigma_start` (Required): unknown Type should be `FLOAT`.
+        - `subtract_latent_mean_sigma_end` (Required): unknown Type should be `FLOAT`.
+        - `latent_intensity_rescale` (Required): unknown Type should be `BOOLEAN`.
+        - `latent_intensity_rescale_method` (Required): unknown Type should be `COMBO[STRING]`.
+        - `latent_intensity_rescale_cfg` (Required): unknown Type should be `FLOAT`.
+        - `latent_intensity_rescale_sigma_start` (Required): unknown Type should be `FLOAT`.
+        - `latent_intensity_rescale_sigma_end` (Required): unknown Type should be `FLOAT`.
+        - `cond_exp` (Required): unknown Type should be `BOOLEAN`.
+        - `cond_exp_normalize` (Required): unknown Type should be `BOOLEAN`.
+        - `cond_exp_sigma_start` (Required): unknown Type should be `FLOAT`.
+        - `cond_exp_sigma_end` (Required): unknown Type should be `FLOAT`.
+        - `cond_exp_method` (Required): unknown Type should be `COMBO[STRING]`.
+        - `cond_exp_value` (Required): unknown Type should be `FLOAT`.
+        - `uncond_exp` (Required): unknown Type should be `BOOLEAN`.
+        - `uncond_exp_normalize` (Required): unknown Type should be `BOOLEAN`.
+        - `uncond_exp_sigma_start` (Required): unknown Type should be `FLOAT`.
+        - `uncond_exp_sigma_end` (Required): unknown Type should be `FLOAT`.
+        - `uncond_exp_method` (Required): unknown Type should be `COMBO[STRING]`.
+        - `uncond_exp_value` (Required): unknown Type should be `FLOAT`.
+        - `fake_uncond_exp` (Required): unknown Type should be `BOOLEAN`.
+        - `fake_uncond_exp_normalize` (Required): unknown Type should be `BOOLEAN`.
+        - `fake_uncond_exp_method` (Required): unknown Type should be `COMBO[STRING]`.
+        - `fake_uncond_exp_value` (Required): unknown Type should be `FLOAT`.
+        - `fake_uncond_multiplier` (Required): unknown Type should be `INT`.
+        - `fake_uncond_sigma_start` (Required): unknown Type should be `FLOAT`.
+        - `fake_uncond_sigma_end` (Required): unknown Type should be `FLOAT`.
+        - `auto_cfg_topk` (Required): unknown Type should be `FLOAT`.
+        - `auto_cfg_ref` (Required): unknown Type should be `FLOAT`.
+        - `attention_modifiers_global_enabled` (Required): unknown Type should be `BOOLEAN`.
+        - `disable_cond` (Required): unknown Type should be `BOOLEAN`.
+        - `disable_cond_sigma_start` (Required): unknown Type should be `FLOAT`.
+        - `disable_cond_sigma_end` (Required): unknown Type should be `FLOAT`.
+        - `save_as_preset` (Required): unknown Type should be `BOOLEAN`.
+        - `preset_name` (Required): unknown Type should be `STRING`.
+        - `eval_string_cond` (Optional): unknown Type should be `STRING`.
+        - `eval_string_uncond` (Optional): unknown Type should be `STRING`.
+        - `eval_string_fake` (Optional): unknown Type should be `STRING`.
+        - `args_filter` (Optional): unknown Type should be `STRING`.
+        - `attention_modifiers_positive` (Optional): unknown Type should be `ATTNMOD`.
+        - `attention_modifiers_negative` (Optional): unknown Type should be `ATTNMOD`.
+        - `attention_modifiers_fake_negative` (Optional): unknown Type should be `ATTNMOD`.
+        - `attention_modifiers_global` (Optional): unknown Type should be `ATTNMOD`.
+    - Outputs:
+        - `model`: The modified model with applied configurations, reflecting changes in the computational graph and attention mechanisms. Type should be `MODEL`.
+        - `string`: A string representation of the parameters used in the configuration, providing insight into the modifications applied. Type should be `STRING`.

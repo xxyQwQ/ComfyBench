@@ -1,0 +1,7 @@
+- `LayerUtility_ GetImageSize`: This node is designed to determine the dimensions of an image, returning its width, height, and original size in a structured format. It abstracts the complexity of image processing to provide straightforward metrics that can be used for further image manipulation or analysis.
+    - Inputs:
+        - `image` (Required): The 'image' parameter is the input image tensor for which the size is to be determined. It plays a crucial role in the node's operation by being the source from which the dimensions are extracted. Type should be `IMAGE`.
+    - Outputs:
+        - `width`: The width of the input image as determined by the node. Type should be `INT`.
+        - `height`: The height of the input image as determined by the node. Type should be `INT`.
+        - `original_size`: A tuple containing the original width and height of the input image, providing a compact representation of its dimensions. Type should be `BOX`.

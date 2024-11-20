@@ -1,0 +1,6 @@
+- `KepStringListFromNewline`: This node is designed to convert a multiline string into a list of strings, each representing a line from the original string. It also calculates the number of strings generated.
+    - Inputs:
+        - `Text` (Required): The 'Text' parameter takes a multiline string as input, which is then split into individual strings based on newline characters. This parameter is essential for determining the content and structure of the output list. Type should be `STRING`.
+    - Outputs:
+        - `Strings`: A list of strings, each representing a line from the input multiline string. Type should be `STRING`.
+        - `Num Strings`: The number of strings generated from splitting the input multiline string. Type should be `INT`.

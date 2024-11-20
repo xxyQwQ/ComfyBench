@@ -1,0 +1,6 @@
+- `LLMChatMessageConcat`: The node is designed to concatenate two lists of chat messages, effectively merging conversations or message sequences into a single, continuous stream.
+    - Inputs:
+        - `message_a` (Required): Represents the first list of chat messages to be concatenated. It is crucial for combining multiple message sequences into a unified list. Type should be `LIST`.
+        - `message_b` (Required): Represents the second list of chat messages to be concatenated with the first. This parameter is essential for merging conversations or extending message sequences. Type should be `LIST`.
+    - Outputs:
+        - `llm_message`: The concatenated list of chat messages, providing a unified sequence of conversations or message exchanges. Type should be `LIST`.

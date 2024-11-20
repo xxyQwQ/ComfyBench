@@ -1,0 +1,28 @@
+- `easy ipadapterApplyADV`: This node specializes in applying advanced IPAdapter configurations to models, enhancing their capabilities with custom style, composition, and embedding adjustments. It leverages a sophisticated set of parameters to fine-tune the integration of IPAdapter into the model's processing pipeline, offering a high degree of customization for generating or modifying images.
+    - Inputs:
+        - `model` (Required): The model to which the IPAdapter will be applied, serving as the foundation for the advanced customization and enhancements. Type should be `MODEL`.
+        - `image` (Required): The image to be processed, serving as the input for the IPAdapter's style and composition adjustments. Type should be `IMAGE`.
+        - `preset` (Required): Defines the preset configuration for the IPAdapter, guiding its application strategy. Type should be `COMBO[STRING]`.
+        - `lora_strength` (Required): Adjusts the strength of the LoRA adjustments within the IPAdapter, affecting the depth of customization. Type should be `FLOAT`.
+        - `provider` (Required): Specifies the provider for the model or service, influencing the selection of processing resources. Type should be `COMBO[STRING]`.
+        - `weight` (Required): The overall weight influencing the application of the IPAdapter, affecting the output's visual characteristics. Type should be `FLOAT`.
+        - `weight_faceidv2` (Required): Specific weight for FaceID v2 adjustments, tailoring the facial recognition enhancements. Type should be `FLOAT`.
+        - `weight_type` (Required): Determines the type of weighting applied, affecting the balance between different adjustment types. Type should be `COMBO[STRING]`.
+        - `combine_embeds` (Required): Determines whether embeddings should be combined, impacting the integration of multiple embeddings into the model. Type should be `COMBO[STRING]`.
+        - `start_at` (Required): Specifies the starting point within the model's layers for applying the IPAdapter, allowing for targeted enhancements. Type should be `FLOAT`.
+        - `end_at` (Required): Defines the end point within the model's layers for the application of the IPAdapter, enabling precise control over the extent of modifications. Type should be `FLOAT`.
+        - `embeds_scaling` (Required): Controls the scaling of embeddings, adjusting the impact of embeddings on the model's output. Type should be `COMBO[STRING]`.
+        - `cache_mode` (Required): Controls the caching strategy for the IPAdapter, optimizing performance and resource usage. Type should be `COMBO[STRING]`.
+        - `use_tiled` (Required): Indicates whether to apply the IPAdapter in a tiled manner, affecting the processing of large images. Type should be `BOOLEAN`.
+        - `use_batch` (Required): Specifies whether to process images in batches, improving efficiency for multiple inputs. Type should be `BOOLEAN`.
+        - `sharpening` (Required): Adjusts the sharpness of the output images, enhancing detail and clarity. Type should be `FLOAT`.
+        - `image_negative` (Optional): unknown Type should be `IMAGE`.
+        - `attn_mask` (Optional): An optional attention mask to focus the IPAdapter's adjustments on specific areas, enhancing the relevance of modifications. Type should be `MASK`.
+        - `clip_vision` (Optional): unknown Type should be `CLIP_VISION`.
+        - `optional_ipadapter` (Optional): An optional IPAdapter parameter for additional customization and flexibility in the application process. Type should be `IPADAPTER`.
+        - `layer_weights` (Optional): Specifies the weights for different layers within the model, allowing for fine-tuned adjustments. Type should be `STRING`.
+    - Outputs:
+        - `model`: The enhanced model with the advanced IPAdapter configurations applied, reflecting the customized adjustments. Type should be `MODEL`.
+        - `images`: The images generated or modified by the IPAdapter, showcasing the applied adjustments. Type should be `IMAGE`.
+        - `masks`: The masks applied during the IPAdapter process, indicating areas of focus or exclusion. Type should be `MASK`.
+        - `ipadapter`: The IPAdapter instance after application, encapsulating the advanced configurations and customizations. Type should be `IPADAPTER`.

@@ -1,0 +1,8 @@
+- `Automatic CFG - Warp Drive`: This node engages an advanced configuration for dynamic control flow graph (CFG) modification in a 'Warp Drive' mode, aimed at maximizing the speed and efficiency of model adjustments. It suggests settings for different levels of risk and performance, emphasizing speed and experimental adjustments for clearer subject prompts or general use.
+    - Inputs:
+        - `model` (Required): The model to be patched with advanced dynamic CFG settings for enhanced performance and speed. Type should be `MODEL`.
+        - `uncond_sigma_start` (Required): Specifies the starting value of unconditional sigma for the dynamic CFG adjustments, influencing the model's behavior at the beginning of the patching process. Type should be `FLOAT`.
+        - `uncond_sigma_end` (Required): Defines the ending value of unconditional sigma for the dynamic CFG adjustments, affecting the model's behavior at the conclusion of the patching process. Type should be `FLOAT`.
+        - `fake_uncond_sigma_end` (Required): Determines the fake ending value of unconditional sigma used in the dynamic CFG adjustments, part of the advanced settings to tweak the model's performance. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The patched model with advanced dynamic CFG settings applied, optimized for speed and efficiency. Type should be `MODEL`.

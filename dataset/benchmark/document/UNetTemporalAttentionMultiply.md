@@ -1,0 +1,9 @@
+- `UNetTemporalAttentionMultiply`: This node specializes in applying temporal attention modifications to U-Net models, enhancing their ability to focus on relevant temporal features within the data. It leverages attention mechanisms to dynamically adjust the model's focus, aiming to improve performance on tasks that benefit from understanding temporal relationships.
+    - Inputs:
+        - `model` (Required): The U-Net model to which temporal attention modifications will be applied. This parameter is crucial as it determines the base model that will undergo the attention-based transformation, directly influencing the outcome. Type should be `MODEL`.
+        - `self_structural` (Required): Adjusts the model's attention towards structural aspects within the same temporal context, enhancing its ability to discern structural features. Type should be `FLOAT`.
+        - `self_temporal` (Required): Modifies the model's attention to focus more on temporal features within the same structural context, aiming to improve temporal feature recognition. Type should be `FLOAT`.
+        - `cross_structural` (Required): Enhances the model's ability to identify structural features across different temporal contexts, improving cross-temporal structural analysis. Type should be `FLOAT`.
+        - `cross_temporal` (Required): Aims to improve the model's focus on temporal features across different structural contexts, enhancing its temporal analysis capabilities. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The modified U-Net model with enhanced temporal attention capabilities, aimed at improving its performance on tasks requiring an understanding of temporal relationships. Type should be `MODEL`.

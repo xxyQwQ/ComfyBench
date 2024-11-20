@@ -1,0 +1,8 @@
+- `AV_AwsBedrockMistralApi`: This node is designed to facilitate the creation of an API connection to AWS Bedrock Mistral, leveraging AWS credentials to authenticate and configure the API for use in language model applications.
+    - Inputs:
+        - `aws_access_key_id` (Required): The AWS access key ID is essential for authenticating the user's AWS account, enabling secure access to AWS services. Type should be `STRING`.
+        - `aws_secret_access_key` (Required): The AWS secret access key works alongside the access key ID to authenticate and secure the user's AWS account access. Type should be `STRING`.
+        - `aws_session_token` (Required): The AWS session token provides temporary access credentials for using AWS services, enhancing security for short-term access. Type should be `STRING`.
+        - `region` (Required): Specifies the AWS region for the API connection, determining the geographical location of the resources accessed. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `llm_api`: Represents the configured API connection to AWS Bedrock Mistral, ready for use in language model applications. Type should be `LLM_API`.

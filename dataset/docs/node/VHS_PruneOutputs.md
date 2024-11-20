@@ -1,6 +1,0 @@
-- `VHS_PruneOutputs`: The `VHS_PruneOutputs` node is designed to selectively delete files based on specified criteria, aiming to streamline the output directory by removing intermediate or unnecessary files. This functionality is crucial for managing disk space and organizing project outputs more efficiently.
-    - Parameters:
-        - `options`: Defines the criteria for pruning files, such as deleting only intermediate files, both intermediate and utility files, or all specified files. This option directly influences which files are pruned, tailoring the cleanup process to the user's needs. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `filenames`: Specifies the filenames to consider for pruning. The selection criteria applied to these filenames determine which files are deleted, impacting the node's execution and the cleanup of the output directory. Type should be `VHS_FILENAMES`.
-    - Outputs:

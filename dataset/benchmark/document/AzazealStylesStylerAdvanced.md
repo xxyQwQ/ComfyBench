@@ -1,0 +1,15 @@
+- `AzazealStylesStylerAdvanced`: The AzazealStylesStylerAdvanced node is designed to apply advanced styling to text prompts based on a selection of styles from the Azazeal styles menu. It enhances text inputs with stylistic modifications, aiming to tailor the output to specific aesthetic or thematic preferences.
+    - Inputs:
+        - `text_positive_g` (Required): The global positive text prompt to be styled. It serves as the base content for applying global stylistic transformations. Type should be `STRING`.
+        - `text_positive_l` (Required): The local positive text prompt to be styled. It is used for applying local stylistic adjustments, complementing the global styling. Type should be `STRING`.
+        - `text_negative` (Required): The negative text prompt to be styled. This input is modified to reflect the selected styles in a manner that negates or contrasts with the positive prompts. Type should be `STRING`.
+        - `Azazeal Styles` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Specifies the scope of negative styling application, allowing for targeted adjustments to either global, local, or both types of prompts. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag that, when enabled, logs the input and output prompts along with the selected styles for debugging or review purposes. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The styled global positive text prompt, reflecting the applied Azazeal styles. Type should be `STRING`.
+        - `text_positive_l`: The styled local positive text prompt, showcasing the local stylistic enhancements. Type should be `STRING`.
+        - `text_positive`: A composite styled positive text prompt, integrating both global and local stylistic modifications. Type should be `STRING`.
+        - `text_negative_g`: The styled global negative text prompt, altered to contrast with the styled positive prompts. Type should be `STRING`.
+        - `text_negative_l`: The styled local negative text prompt, providing a nuanced contrast to the positive styling. Type should be `STRING`.
+        - `text_negative`: A comprehensive styled negative text prompt, incorporating both global and local stylistic contrasts. Type should be `STRING`.

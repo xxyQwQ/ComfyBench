@@ -1,0 +1,5 @@
+- `Float-🔬`: The Float node is designed to process numerical floating-point values, allowing for precision adjustments and mathematical operations within a logic-based framework.
+    - Inputs:
+        - `value` (Required): Represents the floating-point number to be processed or manipulated. Its importance lies in being the primary data that the node operates on, affecting the outcome of the node's execution. Type should be `FLOAT`.
+    - Outputs:
+        - `FLOAT`: Outputs the processed or manipulated floating-point number, reflecting the result of the node's operations. Type should be `FLOAT`.

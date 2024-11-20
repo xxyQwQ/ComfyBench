@@ -1,7 +1,0 @@
-- `GetImageSize+`: This node is designed to determine the dimensions of an image, specifically its width and height. It abstracts the process of accessing and interpreting the image's shape to provide a straightforward way to obtain its size.
-    - Parameters:
-    - Inputs:
-        - `image`: The image for which the size is to be determined. This parameter is essential for the node to execute its function of calculating the image's dimensions. Type should be `IMAGE`.
-    - Outputs:
-        - `width`: The width of the input image, measured in pixels. Type should be `INT`.
-        - `height`: The height of the input image, measured in pixels. Type should be `INT`.

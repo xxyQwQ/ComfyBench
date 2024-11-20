@@ -1,7 +1,0 @@
-- `IPAdapterPromptScheduleFromWeightsStrategy`: This node generates a schedule for prompts based on a given weights strategy, adjusting the prompts to fit the specified frame count and adding starting or ending frames if required. It aims to tailor the prompt distribution over a sequence of frames, ensuring alignment with the animation or image generation process.
-    - Parameters:
-        - `prompt`: The initial prompt or series of prompts, separated by new lines, to be scheduled according to the weights strategy. It allows for dynamic adjustment of the prompt content over the frames. Type should be `STRING`.
-    - Inputs:
-        - `weights_strategy`: Defines the strategy for distributing weights across frames, including the total number of frames, and whether to add starting or ending frames. It's crucial for determining how the prompts are scheduled and distributed. Type should be `WEIGHTS_STRATEGY`.
-    - Outputs:
-        - `prompt_schedule`: The generated schedule of prompts, formatted as a string, detailing the prompt assignments for each frame based on the weights strategy. Type should be `STRING`.

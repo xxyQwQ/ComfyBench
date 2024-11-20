@@ -1,0 +1,7 @@
+- `SaltAudioTrim`: The SaltAudioTrim node is designed for trimming audio files to a specified start and end time, allowing for precise control over the segment of the audio that is of interest.
+    - Inputs:
+        - `audio` (Required): The 'audio' parameter is the raw audio data that will be trimmed. It is essential for determining the segment of the audio file to be processed. Type should be `AUDIO`.
+        - `start_time_seconds` (Required): The 'start_time_seconds' parameter specifies the starting point of the audio segment to trim, measured in seconds from the beginning of the audio file. It plays a crucial role in defining the portion of the audio to retain. Type should be `FLOAT`.
+        - `end_time_seconds` (Required): The 'end_time_seconds' parameter defines the ending point of the audio segment to trim, measured in seconds. It is critical for delineating the end of the segment to be kept. Type should be `FLOAT`.
+    - Outputs:
+        - `audio`: The output 'audio' is the trimmed segment of the original audio file, processed according to the specified start and end times. Type should be `AUDIO`.

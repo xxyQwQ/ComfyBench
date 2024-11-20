@@ -1,7 +1,0 @@
-- `CR Float To String`: This node is designed to convert floating-point numbers into their string representation, facilitating the transition between numerical data types and text for further processing or display purposes.
-    - Parameters:
-        - `float_`: The floating-point number to be converted into a string. This input is essential for defining the numerical value that will undergo the conversion process. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `STRING`: The string representation of the input floating-point number. Type should be `STRING`.
-        - `show_help`: A URL providing additional information and guidance on using the CR Float To String node. Type should be `STRING`.

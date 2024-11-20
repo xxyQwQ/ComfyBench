@@ -1,6 +1,0 @@
-- `FizzFrameConcatenate`: The FizzFrameConcatenate node is designed to concatenate frame-related information, specifically focusing on combining text and frame data to construct a comprehensive frame narrative. It operates by merging positive and negative textual content with frame identifiers, facilitating the creation of a structured and detailed frame representation.
-    - Parameters:
-    - Inputs:
-        - `frame`: The frame input serves as the central data structure around which the concatenation process revolves, containing all necessary information for constructing the narrative. Type should be `FIZZFRAME`.
-    - Outputs:
-        - `string`: A concatenated string of frame identifiers and their associated texts, structured to represent a comprehensive narrative across multiple frames. Type should be `STRING`.

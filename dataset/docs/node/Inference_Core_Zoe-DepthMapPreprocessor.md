@@ -1,7 +1,0 @@
-- `Inference_Core_Zoe-DepthMapPreprocessor`: The Zoe Depth Map Preprocessor node is designed to process images to estimate depth maps using the ZoeDepth model. It leverages pretrained models to generate depth estimations, enhancing the understanding of spatial relationships in images for various applications.
-    - Parameters:
-        - `resolution`: The resolution parameter specifies the desired output resolution of the depth map. It allows for adjusting the detail level of the depth estimation. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image for which the depth map is to be estimated. This image is processed by the ZoeDepth model to generate a depth estimation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a depth map of the input image, providing a pixel-wise depth estimation. Type should be `IMAGE`.

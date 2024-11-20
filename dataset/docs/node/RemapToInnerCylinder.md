@@ -1,7 +1,0 @@
-- `RemapToInnerCylinder`: This node applies a cylindrical remapping to an image, simulating the effect of viewing the image as if it were wrapped around an inner cylinder. It adjusts the image based on the field of view and can optionally swap the x and y axes for different perspectives.
-    - Parameters:
-        - `fov`: The field of view in degrees, which determines the curvature of the cylindrical projection. It affects how the image is stretched or compressed to fit the cylinder. Type should be `INT`.
-        - `swap_xy`: A boolean flag that, when set to true, swaps the x and y axes of the image, altering the orientation of the cylindrical projection. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `remap`: The result of the cylindrical remapping, providing the transformed image as if viewed on the surface of an inner cylinder. Type should be `REMAP`.

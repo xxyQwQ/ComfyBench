@@ -1,0 +1,7 @@
+- `CheckpointSave`: The CheckpointSave node is designed for saving the state of various model components, including models, CLIP, and VAE, into a checkpoint file. This functionality is crucial for preserving the training progress or configuration of models for later use or sharing.
+    - Inputs:
+        - `model` (Required): The model parameter represents the primary model whose state is to be saved. It is essential for capturing the current state of the model for future restoration or analysis. Type should be `MODEL`.
+        - `clip` (Required): The clip parameter is intended for the CLIP model associated with the primary model, allowing its state to be saved alongside the main model. Type should be `CLIP`.
+        - `vae` (Required): The vae parameter is for the Variational Autoencoder (VAE) model, enabling its state to be saved for future use or analysis alongside the main model and CLIP. Type should be `VAE`.
+        - `filename_prefix` (Required): This parameter specifies the prefix for the filename under which the checkpoint will be saved, providing a means to organize and identify saved checkpoints. Type should be `STRING`.
+    - Outputs:

@@ -1,0 +1,13 @@
+- `CR Random Shape Pattern`: This node generates a pattern of random shapes, allowing for the creation of visually diverse and customizable graphical patterns. It leverages randomness in shape selection, size, aspect ratio, and color to produce unique designs.
+    - Inputs:
+        - `width` (Required): Defines the width of the canvas on which the shapes are drawn. Type should be `INT`.
+        - `height` (Required): Defines the height of the canvas on which the shapes are drawn. Type should be `INT`.
+        - `num_rows` (Required): Specifies the number of rows in the pattern, affecting the vertical distribution of shapes. Type should be `INT`.
+        - `num_cols` (Required): Specifies the number of columns in the pattern, affecting the horizontal distribution of shapes. Type should be `INT`.
+        - `color1` (Required): The primary color used in the pattern, providing a base for visual variety. Type should be `COMBO[STRING]`.
+        - `color2` (Required): The secondary color used in the pattern, adding to the visual diversity. Type should be `COMBO[STRING]`.
+        - `color1_hex` (Optional): Hexadecimal representation of the primary color, offering an alternative color specification. Type should be `STRING`.
+        - `color2_hex` (Optional): Hexadecimal representation of the secondary color, offering an alternative color specification. Type should be `STRING`.
+    - Outputs:
+        - `IMAGE`: The generated image containing the random shape pattern. Type should be `IMAGE`.
+        - `show_help`: A URL to the help documentation for this node. Type should be `STRING`.

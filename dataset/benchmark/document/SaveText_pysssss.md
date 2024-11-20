@@ -1,0 +1,9 @@
+- `SaveText_pysssss`: The SaveText node is designed for writing text to a file, with options to append to an existing file or create a new one. It abstracts file handling operations, allowing users to easily save text data without dealing with low-level file system details.
+    - Inputs:
+        - `root_dir` (Required): Specifies the directory where the file will be saved. It's crucial for determining the file's path and ensuring the text is saved in the correct location. Type should be `COMBO[STRING]`.
+        - `file` (Required): The name of the file where the text will be saved. This parameter works in conjunction with 'root_dir' to define the full path of the target file. Type should be `STRING`.
+        - `append` (Required): Controls whether the text should be appended to an existing file or if a new file should be created. It supports options like 'append' and 'new only'. Type should be `COMBO[STRING]`.
+        - `insert` (Required): Determines if a newline should be inserted before appending text when the 'append' option is used. Type should be `BOOLEAN`.
+        - `text` (Required): The text content to be saved into the file. This is the primary data being written. Type should be `STRING`.
+    - Outputs:
+        - `string`: The output is the text that was successfully written to the file. Type should be `STRING`.

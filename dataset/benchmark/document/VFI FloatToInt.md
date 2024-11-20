@@ -1,0 +1,5 @@
+- `VFI FloatToInt`: The VFI FloatToInt node is designed to convert floating-point numbers to integers. This conversion process is essential in scenarios where integer values are required for further processing or when interfacing with systems that only accept integers. The node can handle both single floating-point values and collections of values, offering flexibility in its application.
+    - Inputs:
+        - `float` (Required): The floating-point number or collection of floating-point numbers to be converted to integer(s). This input is crucial for the conversion process, determining the output based on the value(s) provided. Type should be `FLOAT`.
+    - Outputs:
+        - `int`: The converted integer or list of integers from the provided floating-point number(s). This output is significant for processes that require integer values. Type should be `INT`.

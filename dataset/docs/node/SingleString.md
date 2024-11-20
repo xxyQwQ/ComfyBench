@@ -1,6 +1,0 @@
-- `SingleString`: The SingleString node is designed to pass through a single string input without modification, serving as a straightforward conduit for string data within a pipeline.
-    - Parameters:
-        - `string`: Represents the string input to be passed through. It is essential for the node's operation as it directly influences the output by being returned unchanged. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The output is the unaltered input string, demonstrating the node's function as a simple pass-through mechanism. Type should be `STRING`.

@@ -1,8 +1,0 @@
-- `Sampler Scheduler Settings (JPS)`: This node is designed to facilitate the selection and configuration of samplers and schedulers within a generative pipeline, allowing users to specify and retrieve the settings for various sampling strategies and their corresponding scheduling algorithms.
-    - Parameters:
-        - `sampler_name`: Specifies the name of the sampler to be used, playing a crucial role in determining the sampling strategy for the generative process. Type should be `COMBO[STRING]`.
-        - `scheduler`: Determines the scheduling algorithm to be applied, directly affecting the execution and efficiency of the sampling process. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `sampler_name`: Returns the name of the selected sampler. Type should be `COMBO[STRING]`.
-        - `scheduler`: Returns the selected scheduling algorithm. Type should be `COMBO[STRING]`.

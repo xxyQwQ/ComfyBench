@@ -1,7 +1,0 @@
-- `BatchAverageImage`: The BatchAverageImage node applies statistical averaging operations, such as mean or median, across a batch of images. This process is used to create a single representative image from a collection, either by calculating the mean or median pixel values across all images in the batch.
-    - Parameters:
-        - `operation`: Specifies the type of averaging operation to apply on the batch of images, such as 'mean' or 'median'. This choice directly influences the resulting output image. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: The collection of images to be processed. This parameter is crucial for determining the input data over which the averaging operation will be performed. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output image after applying the specified averaging operation across the input batch of images. It represents a statistical summary of the input batch. Type should be `IMAGE`.

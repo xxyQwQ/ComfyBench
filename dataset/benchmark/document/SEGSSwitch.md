@@ -1,0 +1,9 @@
+- `SEGSSwitch`: The SEGSSwitch node dynamically selects between multiple segmentation (SEGS) inputs based on a specified index. It facilitates conditional processing paths within a pipeline, allowing for the flexible use of different segmentation data.
+    - Inputs:
+        - `select` (Required): Specifies the index of the segmentation input to select. This index determines which segmentation data is used for processing, enabling dynamic choice based on conditions or preferences. Type should be `INT`.
+        - `sel_mode` (Required): unknown Type should be `BOOLEAN`.
+        - `input1` (Optional): unknown Type should be `*`.
+    - Outputs:
+        - `selected_value`: unknown Type should be `*`.
+        - `selected_label`: unknown Type should be `STRING`.
+        - `selected_index`: unknown Type should be `INT`.

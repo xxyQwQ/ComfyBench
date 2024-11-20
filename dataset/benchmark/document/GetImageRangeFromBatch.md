@@ -1,0 +1,9 @@
+- `GetImageRangeFromBatch`: This node is designed to extract a specific range of images from a given batch based on a starting index and the number of frames desired. It can optionally handle masks associated with the images, ensuring that both images and their corresponding masks are selected in tandem.
+    - Inputs:
+        - `images` (Required): The collection of images from which a range will be selected. This parameter is crucial for defining the subset of images to be extracted. Type should be `IMAGE`.
+        - `start_index` (Required): Specifies the starting index from which images will be selected in the batch. A special value of -1 indicates selection from the end. Type should be `INT`.
+        - `num_frames` (Required): Determines the number of images to select from the starting index, defining the size of the output batch. Type should be `INT`.
+        - `masks` (Optional): An optional collection of masks corresponding to the input images. If provided, masks for the selected image range are also returned. Type should be `MASK`.
+    - Outputs:
+        - `image`: The selected range of images from the input batch. Type should be `IMAGE`.
+        - `mask`: The masks corresponding to the selected range of images, if masks were provided. Type should be `MASK`.

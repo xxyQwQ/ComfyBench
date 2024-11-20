@@ -1,0 +1,10 @@
+- `TextConcat`: The TextConcat node is designed to merge multiple text inputs into a single string, offering the flexibility to specify a delimiter for the concatenation. This functionality is particularly useful for combining pieces of text in a customizable manner.
+    - Inputs:
+        - `delimiter` (Required): Specifies the character or string used to separate the concatenated texts. Its presence allows for customizable spacing or formatting between the merged text inputs. Type should be `STRING`.
+        - `text1` (Optional): Represents the first optional text input to be concatenated. If provided, it contributes to the final merged string. Type should be `STRING`.
+        - `text2` (Optional): Represents the second optional text input to be concatenated. If provided, it contributes to the final merged string. Type should be `STRING`.
+        - `text3` (Optional): Represents the third optional text input to be concatenated. If provided, it contributes to the final merged string. Type should be `STRING`.
+        - `text4` (Optional): Represents the fourth optional text input to be concatenated. If provided, it contributes to the final merged string. Type should be `STRING`.
+        - `text5` (Optional): Represents the fifth optional text input to be concatenated. If provided, it contributes to the final merged string. Type should be `STRING`.
+    - Outputs:
+        - `string`: The output is a single string that results from the concatenation of the provided text inputs, separated by the specified delimiter. Type should be `STRING`.

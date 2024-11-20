@@ -1,8 +1,0 @@
-- `CustomControlNetWeights`: This node is designed for loading and applying custom control net weights to influence the behavior of an advanced control network. It allows for fine-tuning the control network's response by adjusting individual weight parameters and optionally flipping the weights to achieve desired effects.
-    - Parameters:
-        - `weight_i`: unknown Type should be `FLOAT`.
-        - `flip_weights`: Determines whether the control weights should be inverted, offering an alternative approach to modifying the control network's behavior. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `CN_WEIGHTS`: The adjusted control net weights, ready for application within the control network. Type should be `CONTROL_NET_WEIGHTS`.
-        - `TK_SHORTCUT`: A keyframe group representing the timestep adjustments made through the control weights. Type should be `TIMESTEP_KEYFRAME`.

@@ -1,0 +1,12 @@
+- `SeargeInput6`: SeargeInput6 is designed to handle high-resolution fix parameters, providing a specialized interface for adjusting and applying high-definition enhancements to generated content.
+    - Inputs:
+        - `hires_fix` (Required): Specifies whether high-resolution fixes are enabled or disabled, allowing for toggling of high-definition enhancements. Type should be `COMBO[STRING]`.
+        - `hrf_steps` (Required): Determines the number of steps for the high-resolution fix process, affecting the detail and quality of enhancements. Type should be `INT`.
+        - `hrf_denoise` (Required): Sets the denoise level for high-resolution fixes, impacting the clarity and noise reduction in the enhanced output. Type should be `FLOAT`.
+        - `hrf_upscale_factor` (Required): Defines the upscale factor, controlling the degree of size increase for high-resolution enhancements. Type should be `FLOAT`.
+        - `hrf_intensity` (Required): Adjusts the intensity of the refiner, influencing the strength of high-resolution enhancements. Type should be `COMBO[STRING]`.
+        - `hrf_seed_offset` (Required): Specifies the seed offset for noise generation, affecting the randomness and variation in the high-resolution enhancements. Type should be `COMBO[STRING]`.
+        - `hrf_smoothness` (Required): Controls the smoothness level of the high-resolution fix, impacting the softness or sharpness of the enhanced output. Type should be `FLOAT`.
+        - `inputs` (Optional): Optional additional parameters that can be included for more granular control over the high-resolution fix process. Type should be `PARAMETER_INPUTS`.
+    - Outputs:
+        - `inputs`: Returns a dictionary of parameters, including high-resolution fix settings, ready for further processing or application. Type should be `PARAMETER_INPUTS`.

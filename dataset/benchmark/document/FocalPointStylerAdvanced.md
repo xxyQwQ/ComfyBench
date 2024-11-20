@@ -1,0 +1,15 @@
+- `FocalPointStylerAdvanced`: The SDXLPromptStyler node is designed to apply advanced styling options to text prompts, utilizing a dynamic subclassing mechanism from a base node. It incorporates user-selected styles from a predefined menu, leveraging a dataset of styling templates to modify and enhance text prompts. This node aims to refine the generation of images or text outputs by applying specific stylistic adjustments, based on both global and local text prompt modifications.
+    - Inputs:
+        - `text_positive_g` (Required): The global positive text prompt to be styled, serving as one of the primary inputs for styling adjustments. Its modification influences the thematic direction and visual characteristics of the generated output on a global scale. Type should be `STRING`.
+        - `text_positive_l` (Required): The local positive text prompt to be styled, serving as another primary input for styling adjustments. Its modification influences the thematic direction and visual characteristics of the generated output on a local scale. Type should be `STRING`.
+        - `text_negative` (Required): The negative text prompt to be styled, used to specify undesired elements or themes in the output. Altering this prompt helps in fine-tuning the generation process by excluding specific characteristics. Type should be `STRING`.
+        - `focal point` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Specifies the scope of the negative prompt styling, allowing selection between global only, local only, or both. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag indicating whether to log the input and output prompts for debugging or analysis purposes. Enabling this option provides insights into the styling process and its effects on the prompts. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The modified global positive text prompt, reflecting the applied stylistic adjustments. Type should be `STRING`.
+        - `text_positive_l`: The modified local positive text prompt, reflecting the applied stylistic adjustments. Type should be `STRING`.
+        - `text_positive`: The combined modified positive text prompt, integrating both global and local adjustments. Type should be `STRING`.
+        - `text_negative_g`: The modified global negative text prompt, adjusted to more effectively exclude undesired elements or themes from the generated output. Type should be `STRING`.
+        - `text_negative_l`: The modified local negative text prompt, adjusted to more effectively exclude undesired elements or themes from the generated output. Type should be `STRING`.
+        - `text_negative`: The combined modified negative text prompt, integrating both global and local adjustments. Type should be `STRING`.

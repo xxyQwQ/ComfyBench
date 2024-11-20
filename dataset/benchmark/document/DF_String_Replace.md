@@ -1,0 +1,8 @@
+- `DF_String_Replace`: The `DF_String_Replace` node is designed to modify strings by replacing specified patterns with a new string. It supports both strict replacements and regular expression-based substitutions, allowing for flexible text manipulation within a given text input.
+    - Inputs:
+        - `Text` (Required): The original text in which replacements will be made. It serves as the base for modifications. Type should be `STRING`.
+        - `Pattern` (Required): The pattern to be replaced in the text. This can be a literal string (in strict mode) or a regular expression pattern. Type should be `STRING`.
+        - `Replace_With` (Required): The string that will replace occurrences of the pattern in the text. Type should be `STRING`.
+        - `Mode` (Required): Determines whether the replacement will be done using strict matching or regular expressions, offering flexibility in how patterns are identified and replaced. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `TEXT`: The modified text after the specified patterns have been replaced. Type should be `STRING`.

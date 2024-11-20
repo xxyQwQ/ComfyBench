@@ -1,0 +1,10 @@
+- `ImageGrabPIL`: The ImageGrabPIL node is designed for processing and transforming images into a standardized format suitable for further analysis or processing. It focuses on converting images to a consistent size, color mode, and numerical representation, ensuring they are ready for tasks such as machine learning model input or image manipulation operations.
+    - Inputs:
+        - `x` (Required): The 'x' input specifies the starting x-coordinate for the region of the image to be captured. It is essential for defining the area of interest within the larger image context. Type should be `INT`.
+        - `y` (Required): The 'y' input specifies the starting y-coordinate for the region of the image to be captured. It plays a critical role in pinpointing the area of interest on the vertical axis within the image. Type should be `INT`.
+        - `width` (Required): The 'width' parameter determines the width of the region to be captured from the source image. It is crucial for specifying the size of the area of interest horizontally. Type should be `INT`.
+        - `height` (Required): The 'height' parameter determines the height of the region to be captured from the source image. It is vital for defining the vertical size of the area of interest. Type should be `INT`.
+        - `num_frames` (Required): The 'num_frames' parameter indicates the number of frames to capture in a sequence. It is essential for tasks requiring multiple, consecutive captures from the source image, such as creating animations or analyzing changes over time. Type should be `INT`.
+        - `delay` (Required): The 'delay' parameter specifies the time delay between capturing consecutive frames. It is crucial for controlling the timing in sequences where multiple frames are captured, allowing for precise timing adjustments. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The 'image' output is the captured or processed portion of the input image, ready for further processing or analysis. Type should be `IMAGE`.

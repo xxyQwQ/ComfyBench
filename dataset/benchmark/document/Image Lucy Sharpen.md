@@ -1,0 +1,7 @@
+- `Image Lucy Sharpen`: The node applies a Lucy-Richardson deconvolution algorithm to sharpen images. It iteratively enhances the contrast of edges by deblurring the image through a series of convolutions with a specified kernel, improving the visual clarity and detail of the image.
+    - Inputs:
+        - `images` (Required): The input images to be sharpened. This parameter is crucial as it determines the base images that will undergo the sharpening process. Type should be `IMAGE`.
+        - `iterations` (Required): Specifies the number of times the sharpening process is applied. Higher values result in a more pronounced sharpening effect. Type should be `INT`.
+        - `kernel_size` (Required): Determines the size of the convolution kernel used for sharpening. A larger kernel size can lead to a smoother sharpening effect. Type should be `INT`.
+    - Outputs:
+        - `image`: The output sharpened images, with enhanced edges and details. Type should be `IMAGE`.

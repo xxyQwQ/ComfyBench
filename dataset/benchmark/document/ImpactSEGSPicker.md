@@ -1,0 +1,7 @@
+- `ImpactSEGSPicker`: The ImpactSEGSPicker node is designed for selecting specific segments from a collection based on user-defined criteria. It facilitates the generation of candidate images from the selected segments, enhancing the flexibility in processing and visualizing segment data.
+    - Inputs:
+        - `picks` (Required): A comma-separated list of indices specifying which segments to pick from the collection. This parameter allows users to selectively process and output only the segments of interest. Type should be `STRING`.
+        - `segs` (Required): The collection of segments from which specific items are to be selected. This parameter is central to the node's operation, serving as the input data that will be filtered according to the 'picks' parameter. Type should be `SEGS`.
+        - `fallback_image_opt` (Optional): An optional image used to adjust the scale of segments to match its dimensions. This parameter is useful for ensuring consistency in segment sizes when necessary. Type should be `IMAGE`.
+    - Outputs:
+        - `segs`: The modified collection of segments after applying the selection and scaling operations, ready for further processing or visualization. Type should be `SEGS`.

@@ -1,6 +1,0 @@
-- `Batch Float Assemble (mtb)`: The MTB_BatchFloatAssemble node is designed to aggregate multiple batches of floating-point numbers into a unified batch, optionally reversing the order of the batches before combining them. This functionality is crucial for scenarios where the sequential order of data points impacts the processing or analysis outcomes.
-    - Parameters:
-        - `reverse`: Determines whether the input batches of floats should be reversed before being assembled into a single batch. This option allows for flexibility in handling the order of data, which can be critical for certain analyses or processing tasks. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `floats`: The output is a single batch of floats, assembled from the input batches. This consolidated batch can be used for further processing or analysis, providing a streamlined dataset. Type should be `FLOATS`.

@@ -1,0 +1,5 @@
+- `RetrieveBackendData __Inspire`: This node is designed to retrieve data from a backend cache based on a specified key. It abstracts the complexity of accessing cached data, providing a straightforward way to retrieve previously stored information.
+    - Inputs:
+        - `key` (Required): The 'key' parameter is essential for identifying the specific piece of data to be retrieved from the cache. It serves as a unique identifier, enabling the node to locate and return the corresponding data. Type should be `STRING`.
+    - Outputs:
+        - `data`: The 'data' output parameter represents the piece of information retrieved from the cache. It can be a single item or a list of items, depending on the nature of the stored data. Type should be `*`.

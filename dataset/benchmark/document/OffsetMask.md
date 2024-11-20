@@ -1,0 +1,12 @@
+- `OffsetMask`: The OffsetMask node is designed to manipulate and transform masks by applying specified offsets, rotations, and potentially duplicating the mask to create a batch with varied transformations. This node allows for dynamic adjustments to mask positioning and orientation, enabling more complex mask-based operations and effects within image processing workflows.
+    - Inputs:
+        - `mask` (Required): The input mask or batch of masks to be transformed. It serves as the base for applying offsets, rotations, and duplications, directly influencing the output mask's appearance and arrangement. Type should be `MASK`.
+        - `x` (Required): Specifies the horizontal offset to apply to the mask. A positive value shifts the mask right, while a negative value shifts it left, affecting the mask's horizontal position. Type should be `INT`.
+        - `y` (Required): Specifies the vertical offset to apply to the mask. A positive value shifts the mask down, while a negative value shifts it up, affecting the mask's vertical position. Type should be `INT`.
+        - `angle` (Required): The rotation angle in degrees to apply to the mask. This transformation rotates the mask around its center, altering its orientation. Type should be `INT`.
+        - `duplication_factor` (Required): The number of times the input mask is duplicated to form a batch. This parameter allows for the creation of multiple transformed copies of the mask. Type should be `INT`.
+        - `roll` (Required): Determines whether edge wrapping (rolling) is applied during the offset. When true, the mask's edges wrap around, creating a continuous effect. Type should be `BOOLEAN`.
+        - `incremental` (Required): When set to true, applies the horizontal and vertical offsets incrementally across the mask batch, creating a progressive transformation effect. Type should be `BOOLEAN`.
+        - `padding_mode` (Required): Defines the padding mode used when applying offsets and rotations, affecting how the mask's edges are handled during transformation. Options include 'empty', 'border', and 'reflection'. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `mask`: The transformed mask or batch of masks after applying the specified offsets, rotations, and duplications. It reflects the cumulative effect of all transformations. Type should be `MASK`.

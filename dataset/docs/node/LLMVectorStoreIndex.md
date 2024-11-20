@@ -1,8 +1,0 @@
-- `LLMVectorStoreIndex`: The LLMVectorStoreIndex node is designed to create an index from a collection of documents using a language model to generate embeddings. This process involves tokenizing the documents, optionally applying metadata, and leveraging the language model's embedding capabilities to facilitate efficient retrieval and similarity searches among the documents.
-    - Parameters:
-    - Inputs:
-        - `llm_model`: Specifies the language model to be used for generating embeddings, playing a crucial role in the indexing process by determining the semantic representation of the documents. Type should be `LLM_MODEL`.
-        - `document`: The collection of documents to be indexed. Each document is processed to extract text and optional metadata for embedding. Type should be `DOCUMENT`.
-        - `optional_llm_context`: An optional context provided to the language model, allowing for customization of the embedding process based on specific requirements or contexts. Type should be `LLM_CONTEXT`.
-    - Outputs:
-        - `llm_index`: The output is an index created from the documents, structured for efficient retrieval and similarity searches. Type should be `LLM_INDEX`.

@@ -1,0 +1,5 @@
+- `ControlNetPreprocessorSelector`: The ControlNetPreprocessorSelector node is designed to select a specific preprocessor for use in ControlNet operations, allowing for dynamic adaptation of preprocessing strategies based on user input.
+    - Inputs:
+        - `preprocessor` (Required): Specifies the preprocessor to be selected for the operation, enabling dynamic adaptation to various preprocessing needs. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `preprocessor`: Returns the selected preprocessor, facilitating its application in subsequent ControlNet operations. Type should be `COMBO[STRING]`.

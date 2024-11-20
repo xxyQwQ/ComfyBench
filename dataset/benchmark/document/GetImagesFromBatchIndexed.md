@@ -1,0 +1,6 @@
+- `GetImagesFromBatchIndexed`: This node is designed to select and return specific images from a given batch based on the provided indices. It allows for the dynamic extraction of a subset of images from a larger collection, facilitating operations that require targeted manipulation or analysis of image batches.
+    - Inputs:
+        - `images` (Required): Represents the batch of images from which specific items will be selected. It is crucial for determining the scope of images available for extraction. Type should be `IMAGE`.
+        - `indexes` (Required): A string of comma-separated indices indicating which images to extract from the batch. This parameter directly influences which images are selected and returned. Type should be `STRING`.
+    - Outputs:
+        - `image`: The output is a subset of images selected from the input batch based on the specified indices. Type should be `IMAGE`.

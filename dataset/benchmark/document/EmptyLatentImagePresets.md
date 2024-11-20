@@ -1,0 +1,9 @@
+- `EmptyLatentImagePresets`: This node is designed to generate presets for creating empty latent images with specific dimensions, offering options for inversion and batch processing. It abstracts the complexity of generating latent images by providing predefined dimension options and handling the inversion logic internally, making it easier to produce latent images tailored to specific requirements.
+    - Inputs:
+        - `dimensions` (Required): Specifies the dimensions of the latent image to be generated. The selection of dimensions directly influences the size of the output latent image, with several predefined options available. Type should be `COMBO[STRING]`.
+        - `invert` (Required): Determines whether the dimensions of the latent image should be inverted. This option allows for flexibility in the orientation of the generated latent image. Type should be `BOOLEAN`.
+        - `batch_size` (Required): Defines the number of latent images to generate in a single batch. This allows for efficient generation of multiple latent images at once. Type should be `INT`.
+    - Outputs:
+        - `Latent`: The generated latent image(s) based on the specified dimensions and inversion setting. Type should be `LATENT`.
+        - `Width`: The width of the generated latent image. Type should be `INT`.
+        - `Height`: The height of the generated latent image. Type should be `INT`.

@@ -1,8 +1,0 @@
-- `CR Diamond Panel`: The CR_DiamondPanel node is designed to create and manipulate diamond-shaped panels within a graphical layout. It focuses on generating unique diamond patterns and layouts, offering a specialized tool for enhancing visual designs with geometric shapes.
-    - Parameters:
-        - `pattern`: The 'pattern' input defines the specific diamond pattern to be applied to the base image, dictating the arrangement and appearance of the diamond shapes within the layout. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The 'image' input specifies the base image on which the diamond panel pattern will be applied, serving as the foundation for the pattern generation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The 'image' output provides the final image with the diamond panel pattern applied, showcasing the visual result of the node's processing. Type should be `IMAGE`.
-        - `show_help`: The 'show_help' output offers guidance and additional information about using the CR_DiamondPanel node, facilitating user understanding and application. Type should be `STRING`.

@@ -1,0 +1,9 @@
+- `Metric3D-DepthMapPreprocessor`: This node preprocesses images for depth map estimation using a 3D metric model. It leverages a configurable backbone architecture and camera intrinsic parameters to enhance the depth estimation process, aiming to provide a detailed depth map for each input image.
+    - Inputs:
+        - `image` (Required): The input image to be processed for depth map estimation. The quality and characteristics of the image can significantly impact the accuracy and detail of the resulting depth map, making it a crucial factor in the node's execution. Type should be `IMAGE`.
+        - `backbone` (Optional): Specifies the backbone model architecture used for depth estimation. The choice of backbone can significantly influence the accuracy and performance of the depth map generation. Type should be `COMBO[STRING]`.
+        - `fx` (Optional): Represents the focal length of the camera along the x-axis. It is a critical parameter for accurately mapping 2D images to 3D space, affecting the scale and perspective of the depth map. Type should be `INT`.
+        - `fy` (Optional): Represents the focal length of the camera along the y-axis, essential for correct depth perception and 3D reconstruction from 2D images. Type should be `INT`.
+        - `resolution` (Optional): The desired resolution for the output depth map, affecting the level of detail and size of the output image. Higher resolutions can provide more detailed depth maps but may require more computational resources. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a depth map image, providing a pixel-wise depth estimation for the input image. Type should be `IMAGE`.

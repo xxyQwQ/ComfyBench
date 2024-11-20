@@ -1,9 +1,0 @@
-- `CR Pipe Switch`: The CR Pipe Switch node is designed to dynamically select between two pipeline paths based on a specified input. It facilitates conditional execution within a pipeline, allowing for more flexible and customizable data processing flows.
-    - Parameters:
-        - `Input`: Determines which pipeline path to select for execution. A value of 1 selects the first pipeline, while any other value selects the second pipeline. Type should be `INT`.
-    - Inputs:
-        - `pipe1`: The first pipeline path to be potentially executed. It is selected if the 'Input' parameter is set to 1. Type should be `PIPE_LINE`.
-        - `pipe2`: The second pipeline path to be potentially executed. It is selected if the 'Input' parameter is not set to 1. Type should be `PIPE_LINE`.
-    - Outputs:
-        - `PIPE_LINE`: The selected pipeline path based on the 'Input' parameter. Type should be `PIPE_LINE`.
-        - `show_help`: A URL providing additional information and documentation about the CR Pipe Switch node. Type should be `STRING`.

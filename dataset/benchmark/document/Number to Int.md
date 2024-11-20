@@ -1,0 +1,5 @@
+- `Number to Int`: The node 'Number_To_Int' is designed to convert a given number into its integer representation. It abstracts the process of type conversion, ensuring that any input number, regardless of its original format, is transformed into an integer.
+    - Inputs:
+        - `number` (Required): The 'number' parameter accepts any numerical value, serving as the input that will be converted into an integer. This parameter is crucial for the node's operation as it directly influences the output by determining the integer value to be produced. Type should be `NUMBER`.
+    - Outputs:
+        - `int`: The output is the integer representation of the input number. This conversion is significant for operations or contexts where an integer value is required, ensuring compatibility and correctness. Type should be `INT`.

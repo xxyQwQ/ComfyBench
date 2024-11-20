@@ -1,0 +1,5 @@
+- `easy boolean`: This node provides a simplified interface for toggling boolean settings within a larger system, streamlining the process of enabling or disabling features or behaviors based on user input or predefined conditions.
+    - Inputs:
+        - `value` (Required): unknown Type should be `BOOLEAN`.
+    - Outputs:
+        - `boolean`: Outputs a boolean value indicating the result of the condition check, which determines if the specified feature or behavior should be enabled or disabled. Type should be `BOOLEAN`.

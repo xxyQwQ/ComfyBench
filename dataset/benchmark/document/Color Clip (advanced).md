@@ -1,0 +1,10 @@
+- `Color Clip (advanced)`: The Color Clip (advanced) node is designed for advanced color manipulation within images, allowing for precise color clipping and replacement based on a set of advanced parameters. It extends basic color clipping capabilities by offering additional control over the color adjustment process, enabling users to specify alternative colors and adjust the leeway for color matching.
+    - Inputs:
+        - `image` (Required): The input image to be processed for color clipping and manipulation. Type should be `IMAGE`.
+        - `target` (Required): Specifies the target operation for the primary color within the image, such as converting to black, white, or doing nothing. Type should be `COMBO[STRING]`.
+        - `complement` (Required): Defines the operation for colors in the image that do not match the primary color, including converting them or leaving them unchanged. Type should be `COMBO[STRING]`.
+        - `color` (Required): The primary color to be clipped or replaced in the image. Type should be `COLOR`.
+        - `color_a` (Optional): An optional color parameter that provides an alternative color option for the clipping process. Type should be `COLOR`.
+        - `color_b` (Optional): A second optional color parameter that offers another alternative color choice for the clipping process. Type should be `COLOR`.
+    - Outputs:
+        - `image`: The image after applying the advanced color clipping and manipulation operations. Type should be `IMAGE`.

@@ -1,0 +1,7 @@
+- `VHS_DuplicateLatents`: The `VHS_DuplicateLatents` node is designed to replicate a batch of latent representations a specified number of times. This functionality is crucial for operations that require augmenting the amount of data without altering its inherent properties, such as in data augmentation processes or when preparing data for batch processing in machine learning models.
+    - Inputs:
+        - `latents` (Required): The `latents` parameter represents the input latent representations to be duplicated. It is essential for specifying the data that will undergo replication. Type should be `LATENT`.
+        - `multiply_by` (Required): The `multiply_by` parameter determines the number of times the input latents are replicated. It plays a critical role in scaling the dataset according to the desired augmentation factor. Type should be `INT`.
+    - Outputs:
+        - `LATENT`: The output latent representations, duplicated according to the `multiply_by` parameter. Type should be `LATENT`.
+        - `count`: The total count of latent representations after duplication, providing a straightforward way to understand the scale of the output data. Type should be `INT`.

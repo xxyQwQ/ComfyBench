@@ -1,6 +1,0 @@
-- `IPAdapterCombineParams`: The IPAdapterCombineParams node is designed to merge multiple sets of parameters for image processing adapters, facilitating the combination of various image attributes and effects into a single, cohesive set. This node simplifies the process of integrating multiple image processing parameters, ensuring a harmonized approach to image adaptation and enhancement.
-    - Parameters:
-    - Inputs:
-        - `params_i`: Represents a set of parameters to be combined. Each 'params_i' (where i ranges from 1 to 5) serves as an individual set of image processing attributes, contributing to the merge and enhancing the overall effect. Type should be `IPADAPTER_PARAMS`.
-    - Outputs:
-        - `ipadapter_params`: The combined set of image processing parameters, resulting from the integration of up to five individual sets. This consolidated output facilitates enhanced and harmonized image adaptation. Type should be `IPADAPTER_PARAMS`.

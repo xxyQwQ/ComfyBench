@@ -1,0 +1,9 @@
+- `ImageColorMatch+`: This node is designed to adjust the colors of an image to match those of a reference image, utilizing color space conversions and histogram matching techniques to achieve a visually harmonious result. It leverages advanced image processing algorithms to ensure that the output image closely mirrors the color distribution and tone of the target, making it ideal for applications requiring color consistency across different images.
+    - Inputs:
+        - `image` (Required): The input image to be color-matched. This image will undergo color space conversion and histogram matching to align its color profile with that of the reference image. Type should be `IMAGE`.
+        - `reference` (Required): The reference image whose color profile is to be matched. This image serves as the target for the color matching process, guiding the adjustments made to the input image. Type should be `IMAGE`.
+        - `color_space` (Required): The color space to be used for the color matching process. This determines how the colors are interpreted and adjusted during the matching operation. Type should be `COMBO[STRING]`.
+        - `factor` (Required): A factor that blends the matched image with the original input image to control the intensity of the color matching. Type should be `FLOAT`.
+        - `device` (Required): Specifies the device (CPU, GPU, or auto) on which the color matching operation is performed. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The output image after color matching. This image has been adjusted to closely match the color profile of the reference image, ensuring color consistency. Type should be `IMAGE`.

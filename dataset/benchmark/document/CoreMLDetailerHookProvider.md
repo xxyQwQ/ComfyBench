@@ -1,0 +1,5 @@
+- `CoreMLDetailerHookProvider`: This node provides a mechanism to create and manage CoreML detailer hooks, which are specialized hooks designed to adjust and refine the details of generated images based on the specified mode. It encapsulates the complexity of configuring and applying these hooks, offering a streamlined interface for enhancing image quality.
+    - Inputs:
+        - `mode` (Required): Specifies the resolution mode for the CoreML detailer hook, determining the dimensions of the output image. This choice directly influences the detail level and aspect ratio of the generated image. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `detailer_hook`: Returns a CoreML detailer hook configured according to the specified mode, ready to be applied for image detail enhancement. Type should be `DETAILER_HOOK`.

@@ -1,0 +1,7 @@
+- `Image Input Switch`: The Image Input Switch node is designed to selectively output one of two input images based on a boolean condition. This functionality allows for dynamic image processing flows where the path of execution can change based on conditional logic.
+    - Inputs:
+        - `image_a` (Required): The first image input option for the switch. This image is selected if the boolean condition is true. Type should be `IMAGE`.
+        - `image_b` (Required): The second image input option for the switch. This image is selected if the boolean condition is false. Type should be `IMAGE`.
+        - `boolean` (Required): A boolean input that determines which of the two images (image_a or image_b) is output by the node. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output image, which is either image_a or image_b depending on the boolean condition. Type should be `IMAGE`.

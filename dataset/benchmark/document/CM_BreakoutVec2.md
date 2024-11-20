@@ -1,0 +1,5 @@
+- `CM_BreakoutVec2`: The CM_BreakoutVec2 node is designed for decomposing a 2-dimensional vector into its individual components, facilitating operations that require access to the separate x and y values.
+    - Inputs:
+        - `a` (Required): The 'a' parameter represents the 2-dimensional vector to be decomposed. It allows for operations on vectors by breaking them down into their individual x and y components. Type should be `VEC2`.
+    - Outputs:
+        - `float`: The output consists of two float values, representing the x and y components of the input vector, respectively. Type should be `FLOAT`.

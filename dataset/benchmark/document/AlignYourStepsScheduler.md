@@ -1,0 +1,7 @@
+- `AlignYourStepsScheduler`: This node is designed to adjust the noise levels (sigmas) for each step in a generative model's sampling process, based on the model type, desired number of steps, and denoising factor. It allows for fine-tuning the diffusion process to achieve more precise control over the generation quality and detail.
+    - Inputs:
+        - `model_type` (Required): Specifies the type of generative model being used, allowing the scheduler to adjust noise levels appropriately. It supports a predefined set of model types. Type should be `COMBO[STRING]`.
+        - `steps` (Required): Determines the total number of steps for the diffusion process, influencing the granularity of noise adjustment. Type should be `INT`.
+        - `denoise` (Required): A factor that adjusts the effective number of steps by scaling down the noise, enabling finer control over the diffusion process. Type should be `FLOAT`.
+    - Outputs:
+        - `sigmas`: A sequence of noise levels (sigmas) tailored for each step of the diffusion process, enabling controlled image generation. Type should be `SIGMAS`.

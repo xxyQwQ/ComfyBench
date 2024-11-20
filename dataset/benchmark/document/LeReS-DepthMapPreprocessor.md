@@ -1,0 +1,9 @@
+- `LeReS-DepthMapPreprocessor`: The LeReS Depth Map Preprocessor node is designed for enhancing depth map estimations from images. It utilizes the LeReS model to preprocess images, offering options to remove nearest objects and background, and an optional boost mode for improved depth estimation.
+    - Inputs:
+        - `image` (Required): The input image for which the depth map will be estimated and enhanced. Type should be `IMAGE`.
+        - `rm_nearest` (Optional): Specifies the threshold for removing the nearest objects from the depth map, enhancing focus on more distant elements. Type should be `FLOAT`.
+        - `rm_background` (Optional): Defines the threshold for background removal in the depth map, aiding in the isolation of primary subjects. Type should be `FLOAT`.
+        - `boost` (Optional): Enables an enhanced depth estimation mode, known as 'boost', for potentially improved depth map quality. Type should be `COMBO[STRING]`.
+        - `resolution` (Optional): Specifies the resolution at which the depth map estimation should be performed. Higher resolutions may improve detail but require more computational resources. Type should be `INT`.
+    - Outputs:
+        - `image`: Produces an enhanced depth map image, with options for nearest object and background removal, and an enhanced mode for improved depth estimation. Type should be `IMAGE`.

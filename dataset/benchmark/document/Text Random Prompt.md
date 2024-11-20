@@ -1,0 +1,5 @@
+- `Text Random Prompt`: This node generates a random prompt based on a given search seed by querying the Lexica.art API. It abstracts the complexity of fetching and selecting random art-related prompts, providing a streamlined way to inspire creative outputs.
+    - Inputs:
+        - `search_seed` (Required): The search seed is a string that guides the generation of the random prompt. It influences the thematic direction of the resulting prompt, making the node's output somewhat predictable and tailored. Type should be `STRING`.
+    - Outputs:
+        - `string`: The output is a text prompt derived from randomly selected art-related images fetched from the Lexica.art API. It serves as a creative seed for further artistic or textual generation. Type should be `STRING`.

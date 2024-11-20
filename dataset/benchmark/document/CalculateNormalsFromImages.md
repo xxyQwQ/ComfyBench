@@ -1,0 +1,9 @@
+- `CalculateNormalsFromImages`: The CalculateNormalsFromImages node is designed to compute normal maps from a set of images representing different directional exposures. It processes batches of images to generate corresponding normal maps and optionally applies masks to refine the output, facilitating advanced image processing tasks such as lighting simulation or 3D reconstruction.
+    - Inputs:
+        - `images` (Required): A batch of images, expected to be in sets of four representing left, right, bottom, and top directional exposures. These images are used to calculate the normal maps. Type should be `IMAGE`.
+        - `sigma` (Required): A float value used to adjust the sharpness of the generated normal map. Higher values result in sharper details. Type should be `FLOAT`.
+        - `center_input_range` (Required): A boolean flag indicating whether the input images should be normalized to a 0.5 center point before processing. Type should be `BOOLEAN`.
+        - `mask` (Optional): An optional mask to apply to the images, used to isolate or highlight specific areas for normal map calculation. Type should be `MASK`.
+    - Outputs:
+        - `normal`: The generated normal map, representing the surface normals derived from the input images. Type should be `IMAGE`.
+        - `divided`: An intermediate representation of the processed images, used internally for normalization and calculation. Type should be `IMAGE`.

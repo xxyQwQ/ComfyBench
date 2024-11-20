@@ -1,0 +1,30 @@
+- `SaltOPAC`: The SaltOPAC node is designed for orchestrating complex scheduling tasks within audio-visual projects, specifically focusing on applying Perlin noise configurations to enhance the dynamic visual effects. It integrates various scheduling parameters such as zoom, angle, and translations along different axes, to create intricate motion and transformation effects in synchronization with audio or other triggers.
+    - Inputs:
+        - `use_wiggle` (Required): Determines whether wiggle effects, based on Perlin noise, are applied to the visual elements, adding a dynamic, naturalistic motion. Type should be `BOOLEAN`.
+        - `frame_count` (Required): Specifies the number of frames for which the scheduling and effects are calculated, defining the duration of the visual sequence. Type should be `INT`.
+        - `zoom_range` (Required): Defines the range of zoom values to be applied across frames, influencing the scale of visual elements over time. Type should be `STRING`.
+        - `zoom_tremor_scale` (Required): Adjusts the intensity of the zoom tremor effect, allowing for finer control over the zoom dynamics. Type should be `FLOAT`.
+        - `angle_range` (Required): Sets the range of angles for rotational effects, adding to the complexity of motion. Type should be `STRING`.
+        - `angle_tremor_scale` (Required): Controls the scale of angle tremors, affecting the subtlety or intensity of rotational movements. Type should be `FLOAT`.
+        - `trx_range` (Required): Determines the horizontal translation range, enabling lateral movement across frames. Type should be `STRING`.
+        - `trx_tremor_scale` (Required): Modifies the scale of horizontal translation tremors, impacting the smoothness or jitteriness of movement. Type should be `FLOAT`.
+        - `try_range` (Required): Specifies the vertical translation range, allowing for vertical movement adjustments. Type should be `STRING`.
+        - `try_tremor_scale` (Required): Adjusts the intensity of vertical translation tremors, affecting the vertical motion dynamics. Type should be `FLOAT`.
+        - `trz_range` (Required): Defines the depth translation range, influencing the perception of depth in the visual sequence. Type should be `STRING`.
+        - `trz_tremor_scale` (Required): Controls the scale of depth translation tremors, enhancing the depth dynamics. Type should be `FLOAT`.
+        - `rotx_range` (Required): Sets the range for rotation around the x-axis, contributing to the 3D rotation effects. Type should be `STRING`.
+        - `rotx_tremor_scale` (Required): Adjusts the intensity of x-axis rotation tremors, affecting the complexity of 3D rotational movements. Type should be `FLOAT`.
+        - `roty_range` (Required): Determines the range for rotation around the y-axis, adding another layer of 3D rotation. Type should be `STRING`.
+        - `roty_tremor_scale` (Required): Modifies the scale of y-axis rotation tremors, impacting the 3D rotational dynamics. Type should be `FLOAT`.
+        - `rotz_range` (Required): Specifies the range for rotation around the z-axis, completing the set of 3D rotational dynamics. Type should be `STRING`.
+        - `rotz_tremor_scale` (Required): Controls the intensity of z-axis rotation tremors, enhancing the 3D rotation effects. Type should be `FLOAT`.
+        - `opac_perlin_settings` (Optional): This parameter allows for the customization of Perlin noise settings, which are crucial for generating naturalistic variations in the visual effects. By adjusting these settings, users can significantly influence the visual dynamics of the project. Type should be `DICT`.
+    - Outputs:
+        - `zoom_schdule_list`: unknown Type should be `LIST`.
+        - `angle_schdule_list`: unknown Type should be `LIST`.
+        - `translation_x_schdule_list`: unknown Type should be `LIST`.
+        - `translation_y_schdule_list`: unknown Type should be `LIST`.
+        - `translation_z_schdule_list`: unknown Type should be `LIST`.
+        - `rotation_3d_x_schdule_list`: unknown Type should be `LIST`.
+        - `rotation_3d_y_schdule_list`: unknown Type should be `LIST`.
+        - `rotation_3d_z_schdule_list`: unknown Type should be `LIST`.

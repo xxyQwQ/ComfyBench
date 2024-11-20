@@ -1,0 +1,9 @@
+- `M2M VFI`: The M2M VFI node is designed for video frame interpolation, utilizing deep learning models to predict intermediate frames between two consecutive frames in a video sequence. This process enhances video fluidity and can be used to increase the frame rate of videos.
+    - Inputs:
+        - `ckpt_name` (Required): A checkpoint name specifying the model to be used for frame interpolation. It determines the specific pre-trained model weights to load, directly influencing the interpolation quality and performance. Type should be `COMBO[STRING]`.
+        - `frames` (Required): A tensor containing the sequence of frames for which intermediate frames are to be generated. It is the primary input from which the model predicts the missing frames, affecting the overall video smoothness. Type should be `IMAGE`.
+        - `clear_cache_after_n_frames` (Required): Indicates after how many frames the cache should be cleared to prevent memory overflow. This parameter helps manage GPU memory usage efficiently during the interpolation process. Type should be `INT`.
+        - `multiplier` (Required): Defines the number of intermediate frames to be generated between each pair of original frames, directly affecting the output video's frame rate. Type should be `INT`.
+        - `optional_interpolation_states` (Optional): An optional parameter that allows for the control of frame skipping and other interpolation behaviors, providing flexibility in the frame generation process. Type should be `INTERPOLATION_STATES`.
+    - Outputs:
+        - `image`: The output tensor containing the interpolated frames, which increases the frame rate and enhances the smoothness of the input video sequence. Type should be `IMAGE`.

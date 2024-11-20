@@ -1,0 +1,6 @@
+- `JWIntegerMax`: The JWIntegerMax node is designed to compute the maximum value between two integers. It abstracts the process of comparing two integer values and returning the larger one, simplifying operations that require finding the maximum of two numbers.
+    - Inputs:
+        - `a` (Required): The first integer value to be compared. It plays a crucial role in determining the maximum value when compared with the second integer. Type should be `INT`.
+        - `b` (Required): The second integer value to be compared with the first. This value is essential in the comparison process to identify the maximum of the two integers. Type should be `INT`.
+    - Outputs:
+        - `int`: The output is the maximum value obtained from comparing the two input integers. It represents the larger of the two numbers provided as input. Type should be `INT`.

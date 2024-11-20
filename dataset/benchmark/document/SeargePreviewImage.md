@@ -1,0 +1,6 @@
+- `SeargePreviewImage`: The SeargePreviewImage node is designed to provide a preview of images by optionally saving them to a temporary directory. It allows for the conditional processing and display of images based on the enabled state and the presence of images to preview, incorporating additional image metadata if provided.
+    - Inputs:
+        - `enabled` (Required): Determines whether the image preview functionality is active. When false, the node will not process or display any images. Type should be `BOOLEAN`.
+        - `images` (Optional): The images to be previewed. This parameter is optional and allows for the display of images if they are provided and the preview is enabled. Type should be `IMAGE`.
+    - Outputs:
+        - `images`: The images that have been processed for preview, potentially saved with additional metadata. Type should be `IMAGE`.

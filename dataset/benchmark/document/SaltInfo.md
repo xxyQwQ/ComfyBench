@@ -1,0 +1,7 @@
+- `SaltInfo`: The SaltInfo node is designed to log and return basic information about a workflow, including its title and description. It serves as a means to encapsulate and convey workflow metadata, facilitating easier identification and understanding of the workflow's purpose.
+    - Inputs:
+        - `workflow_title` (Required): The title of the workflow, serving as a concise identifier and summary of the workflow's objective. Type should be `STRING`.
+        - `workflow_description` (Required): A detailed description of the workflow, outlining its purpose, functionality, and any other relevant information. Type should be `STRING`.
+    - Outputs:
+        - `title`: The title of the workflow, as provided in the input. Type should be `STRING`.
+        - `description`: The detailed description of the workflow, as provided in the input. Type should be `STRING`.

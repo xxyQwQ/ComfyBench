@@ -1,6 +1,0 @@
-- `GligenClamp`: The GligenClamp node is designed to pass through GLIGEN data without modification, acting as a placeholder or a checkpoint within a data processing pipeline. It ensures the integrity of GLIGEN data as it moves through different stages of processing, serving as a control mechanism.
-    - Parameters:
-    - Inputs:
-        - `gligen`: The 'gligen' parameter represents the GLIGEN data to be clamped. This node acts as a pass-through, ensuring the GLIGEN data remains unchanged throughout the process. Type should be `GLIGEN`.
-    - Outputs:
-        - `gligen`: Returns the unmodified GLIGEN data, ensuring its integrity is maintained through the processing pipeline. Type should be `GLIGEN`.

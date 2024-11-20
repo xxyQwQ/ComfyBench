@@ -1,0 +1,8 @@
+- `AV_CheckpointSave`: The AV_CheckpointSave node extends the functionality of a base checkpoint saving mechanism to include the option of specifying the data type for saving model states, particularly catering to precision requirements in model merging scenarios within the Art Venture project.
+    - Inputs:
+        - `model` (Required): The model to be saved. This is a core component of the checkpoint, encapsulating the model's state. Type should be `MODEL`.
+        - `clip` (Required): The CLIP model associated with the checkpoint. This parameter is crucial for ensuring that the saved state includes necessary components for model functionality. Type should be `CLIP`.
+        - `vae` (Required): The VAE model to be included in the checkpoint. This is essential for capturing the full scope of the model's capabilities, especially in generative tasks. Type should be `VAE`.
+        - `filename_prefix` (Required): The prefix for the saved filename. This allows for organized storage and easy retrieval of saved models. Type should be `STRING`.
+        - `dtype` (Optional): Specifies the data type for the model state to be saved in, allowing for a choice between 'float16' and 'float32'. This option enables control over the precision and size of the saved model, impacting both storage efficiency and computational demand. Type should be `COMBO[STRING]`.
+    - Outputs:

@@ -1,0 +1,5 @@
+- `Text Dictionary To Text`: This node is designed to convert a dictionary into a text representation, facilitating the visualization or further processing of dictionary data in a textual format.
+    - Inputs:
+        - `dictionary` (Required): The dictionary to be converted into text. This parameter is crucial as it provides the data structure that will be transformed into a textual representation. Type should be `DICT`.
+    - Outputs:
+        - `string`: The textual representation of the input dictionary, enabling easy reading or processing of the dictionary's contents. Type should be `STRING`.

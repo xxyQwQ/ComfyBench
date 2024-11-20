@@ -1,9 +1,0 @@
-- `VAEEncodeForInpaint (WAS)`: This node is designed for encoding images for inpainting tasks using a Variational Autoencoder (VAE). It processes images, masks, and mask offsets to generate latent representations that are suitable for inpainting, adjusting the input mask based on the specified offset to prepare the image for encoding.
-    - Parameters:
-        - `mask_offset`: An integer specifying how much to modify the mask by. This affects the area of the image to be inpainted by either expanding or contracting the masked region. Type should be `INT`.
-    - Inputs:
-        - `pixels`: The input image to be encoded for inpainting. It plays a crucial role in determining the output latent representation. Type should be `IMAGE`.
-        - `vae`: The Variational Autoencoder (VAE) model used for encoding the input image into a latent representation. Type should be `VAE`.
-        - `mask`: A mask indicating the regions of the image to be inpainted. It is used to modify the input image before encoding. Type should be `MASK`.
-    - Outputs:
-        - `latent`: The latent representation of the input image, suitable for use in inpainting tasks. Type should be `LATENT`.

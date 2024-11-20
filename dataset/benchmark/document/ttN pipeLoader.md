@@ -1,0 +1,37 @@
+- `ttN pipeLoader`: The ttN pipeLoader node is designed for loading and initializing data pipelines in the context of the tinyterraNodes framework. It plays a crucial role in setting up the necessary environment and parameters for data processing and transformation tasks, facilitating seamless integration and execution of subsequent nodes in the pipeline.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the checkpoint name for loading model weights, crucial for initializing the model with pre-trained parameters. Type should be `COMBO[STRING]`.
+        - `config_name` (Required): Defines the configuration name for setting up the model, affecting its behavior and parameters. Type should be `COMBO[STRING]`.
+        - `vae_name` (Required): Identifies the VAE model name for loading, essential for specific data encoding and decoding tasks. Type should be `COMBO[STRING]`.
+        - `clip_skip` (Required): Determines the number of CLIP layers to skip, affecting the depth of semantic analysis. Type should be `INT`.
+        - `lora1_name` (Required): Specifies the first LoRA model to be applied, influencing model adaptation and performance. Type should be `COMBO[STRING]`.
+        - `lora1_model_strength` (Required): Sets the strength of the first LoRA model's adaptation, affecting the model's output. Type should be `FLOAT`.
+        - `lora1_clip_strength` (Required): Determines the CLIP strength for the first LoRA model, influencing semantic alignment. Type should be `FLOAT`.
+        - `lora2_name` (Required): Specifies the second LoRA model to be applied, influencing model adaptation and performance. Type should be `COMBO[STRING]`.
+        - `lora2_model_strength` (Required): Sets the strength of the second LoRA model's adaptation, affecting the model's output. Type should be `FLOAT`.
+        - `lora2_clip_strength` (Required): Determines the CLIP strength for the second LoRA model, influencing semantic alignment. Type should be `FLOAT`.
+        - `lora3_name` (Required): Specifies the third LoRA model to be applied, influencing model adaptation and performance. Type should be `COMBO[STRING]`.
+        - `lora3_model_strength` (Required): Sets the strength of the third LoRA model's adaptation, affecting the model's output. Type should be `FLOAT`.
+        - `lora3_clip_strength` (Required): Determines the CLIP strength for the third LoRA model, influencing semantic alignment. Type should be `FLOAT`.
+        - `positive` (Required): Defines the positive conditioning for the pipeline, influencing the direction of data processing. Type should be `STRING`.
+        - `positive_token_normalization` (Required): Adjusts the normalization of positive tokens, affecting the conditioning's impact on the model. Type should be `COMBO[STRING]`.
+        - `positive_weight_interpretation` (Required): Defines how the weights of positive tokens are interpreted, influencing the model's focus. Type should be `COMBO[STRING]`.
+        - `negative` (Required): Specifies the negative conditioning for the pipeline, used to guide the data processing away from certain outcomes. Type should be `STRING`.
+        - `negative_token_normalization` (Required): Adjusts the normalization of negative tokens, affecting the conditioning's impact on the model. Type should be `COMBO[STRING]`.
+        - `negative_weight_interpretation` (Required): Defines how the weights of negative tokens are interpreted, influencing the model's focus. Type should be `COMBO[STRING]`.
+        - `empty_latent_width` (Required): Sets the width of the empty latent space, crucial for defining the initial state of data transformation. Type should be `INT`.
+        - `empty_latent_height` (Required): Sets the height of the empty latent space, crucial for defining the initial state of data transformation. Type should be `INT`.
+        - `batch_size` (Required): Specifies the batch size for processing, affecting the throughput and efficiency of the pipeline. Type should be `INT`.
+        - `seed` (Required): Sets the seed for random number generation, ensuring reproducibility of the pipeline's operations. Type should be `INT`.
+        - `model_override` (Optional): Allows for overriding the default model, enabling custom model usage within the pipeline. Type should be `MODEL`.
+        - `clip_override` (Optional): Allows for overriding the default CLIP model, enabling custom semantic analysis. Type should be `CLIP`.
+        - `optional_lora_stack` (Optional): Enables the use of an optional LoRA stack, allowing for enhanced model adaptation. Type should be `LORA_STACK`.
+    - Outputs:
+        - `pipe`: Represents the initialized pipeline, ready for data processing and transformation tasks. Type should be `PIPE_LINE`.
+        - `model`: Outputs the model used within the pipeline after initialization. Type should be `MODEL`.
+        - `positive`: Outputs the positive conditioning applied within the pipeline. Type should be `CONDITIONING`.
+        - `negative`: Outputs the negative conditioning applied within the pipeline. Type should be `CONDITIONING`.
+        - `latent`: Outputs the latent space configuration utilized within the pipeline. Type should be `LATENT`.
+        - `vae`: Outputs the VAE model integrated into the pipeline. Type should be `VAE`.
+        - `clip`: Outputs the CLIP model integrated into the pipeline. Type should be `CLIP`.
+        - `seed`: Outputs the seed value used for random number generation within the pipeline. Type should be `INT`.

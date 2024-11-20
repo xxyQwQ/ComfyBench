@@ -1,9 +1,0 @@
-- `PlaySoundpysssss`: The PlaySound node is designed to play audio files with customizable settings such as volume and playback mode. It abstracts the complexity of audio playback, offering a simple interface for triggering sound effects or notifications within a workflow.
-    - Parameters:
-        - `mode`: Determines the playback condition, either always playing the sound or only when the queue is empty, thus providing control over the sound's occurrence. Type should be `COMBO[STRING]`.
-        - `volume`: Controls the audio volume on a scale from 0 to 1, enabling fine-tuned adjustments to the sound level. Type should be `FLOAT`.
-        - `file`: Specifies the audio file to be played, with a default option provided, allowing for customization of the sound effect. Type should be `STRING`.
-    - Inputs:
-        - `any`: Acts as a wildcard input, allowing for flexible integration with various data types or structures without enforcing a specific format. Type should be `*`.
-    - Outputs:
-        - `*`: unknown Type should be `*`.

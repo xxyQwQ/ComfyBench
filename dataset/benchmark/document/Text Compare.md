@@ -1,0 +1,12 @@
+- `Text Compare`: The Text Compare node is designed to compare two text strings, evaluating their similarity or difference based on a specified mode and tolerance level. It abstractly measures how closely the texts match or diverge, providing a boolean result, a numerical score, and a comparison text as outputs.
+    - Inputs:
+        - `text_a` (Required): The first text string to be compared. Its content is crucial for the comparison process, influencing the outcome of the similarity or difference evaluation. Type should be `STRING`.
+        - `text_b` (Required): The second text string to be compared against the first. The comparison results are directly affected by its content, playing a key role in determining the similarity or difference. Type should be `STRING`.
+        - `mode` (Required): Specifies the mode of comparison: 'similarity' to evaluate how similar the texts are, or 'difference' to assess how they diverge. This choice dictates the nature of the comparison. Type should be `COMBO[STRING]`.
+        - `tolerance` (Required): A threshold value that defines the level of tolerance for differences between the texts. It influences the sensitivity of the comparison, affecting the similarity or difference score. Type should be `FLOAT`.
+    - Outputs:
+        - `TEXT_A_PASS`: The text string from 'text_a' that is evaluated in the comparison process. Type should be `STRING`.
+        - `TEXT_B_PASS`: The text string from 'text_b' that is evaluated in the comparison process. Type should be `STRING`.
+        - `BOOLEAN`: A boolean value indicating whether the texts are considered similar or different according to the specified mode and tolerance. Type should be `BOOLEAN`.
+        - `SCORE_NUMBER`: A numerical score representing the degree of similarity or difference between the two text strings. Type should be `NUMBER`.
+        - `COMPARISON_TEXT`: A text output providing detailed comparison results or insights. Type should be `STRING`.

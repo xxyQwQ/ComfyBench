@@ -1,0 +1,6 @@
+- `LayerFilter_ Sharp & Soft`: The 'Sharp & Soft' node applies varying degrees of sharpness or softness to images, allowing for detailed enhancement or smoothing effects based on the selected mode. It dynamically adjusts filter parameters to achieve the desired level of image clarity or softness, enhancing visual quality or creating a more subtle, softened appearance.
+    - Inputs:
+        - `images` (Required): The input images to be processed. This parameter is crucial as it directly influences the outcome by serving as the base for the sharpness or softness enhancement. Type should be `IMAGE`.
+        - `enhance` (Required): Specifies the degree of sharpness or softness to apply to the images, ranging from 'very sharp' to 'very soft'. This choice determines the intensity of the effect and directly impacts the visual characteristics of the output images. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The processed images, enhanced with the specified level of sharpness or softness. This output reflects the visual modifications applied to the input images, showcasing the effect of the chosen enhancement mode. Type should be `IMAGE`.

@@ -1,6 +1,0 @@
-- `FakeScribblePreprocessor_Provider_for_SEGS __Inspire`: This node provides a preprocessing step for SEGS (semantic segmentation models) by applying a fake scribble effect. It's designed to prepare images for further processing by enhancing or modifying their features to better suit the requirements of SEGS models.
-    - Parameters:
-        - `safe`: Determines whether the preprocessing should be performed in a 'safe' mode, affecting the execution and results by potentially altering the processing intensity or methods used. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `segs_preprocessor`: Outputs a preprocessed object ready for use with SEGS models, specifically tailored with a fake scribble effect. Type should be `SEGS_PREPROCESSOR`.

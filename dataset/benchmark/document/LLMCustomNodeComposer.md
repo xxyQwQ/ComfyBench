@@ -1,0 +1,9 @@
+- `LLMCustomNodeComposer`: This node is designed to draft simple ComfyUI nodes by generating the necessary code structure based on provided specifications. It abstracts the complexities of node creation, allowing users to focus on defining the functionality and inputs of their custom nodes.
+    - Inputs:
+        - `llm_model` (Required): Specifies the language model to be used for generating the code structure. It is crucial for interpreting the input specifications and composing the appropriate code. Type should be `LLM_MODEL`.
+        - `class_prefix` (Required): Defines the prefix for the class name of the generated node, allowing for customization and easy identification. Type should be `STRING`.
+        - `node_explanation` (Required): A brief description or explanation of the node's intended functionality, providing context for the code generation. Type should be `STRING`.
+        - `example_documents` (Optional): An optional list of example documents that can be used as references or templates in the node drafting process. Type should be `DOCUMENT`.
+        - `example_code` (Optional): Optional example code that can serve as a guideline or inspiration for the generated node's functionality. Type should be `STRING`.
+    - Outputs:
+        - `response`: The output is the generated code for the ComfyUI node, encapsulating the structure and logic as specified by the input parameters. Type should be `STRING`.

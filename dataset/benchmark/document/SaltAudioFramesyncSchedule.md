@@ -1,0 +1,13 @@
+- `SaltAudioFramesyncSchedule`: This node is designed to synchronize audio with frame-based visual content, ensuring that audio events align precisely with specific frames in a video or animation sequence. It calculates and schedules audio keyframes based on various parameters such as amplitude control and frame rate, facilitating the creation of dynamic and responsive audiovisual experiences.
+    - Inputs:
+        - `audio` (Required): The raw audio data to be processed. It is crucial for determining the synchronization points and dynamics of the audio in relation to the visual content. Type should be `AUDIO`.
+        - `amp_control` (Required): A parameter that influences the amplitude adjustments of the audio, affecting the overall loudness and dynamics of the synchronized output. Type should be `FLOAT`.
+        - `amp_offset` (Required): An offset value for the amplitude control, allowing for fine-tuning of the audio's loudness in relation to the visual content. Type should be `FLOAT`.
+        - `frame_rate` (Required): The frame rate of the visual content, essential for aligning audio events with the corresponding video frames. Type should be `INT`.
+        - `start_frame` (Required): The starting frame from which the audio synchronization begins, enabling selective synchronization over specific segments. Type should be `INT`.
+        - `end_frame` (Required): The ending frame at which the audio synchronization ends, allowing for precise control over the duration of the audiovisual alignment. Type should be `INT`.
+        - `curves_mode` (Required): Specifies the mode of curve interpolation for easing the transitions between audio keyframes, enhancing the fluidity and naturalness of the audiovisual experience. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `average_sum`: A list of calculated loudness values for each frame, representing the synchronized audio dynamics over time. Type should be `LIST`.
+        - `frame_count`: The total number of frames processed for synchronization, indicating the scope of the audiovisual alignment. Type should be `INT`.
+        - `frame_rate`: The frame rate used for the synchronization, reaffirming the temporal resolution of the audiovisual content. Type should be `INT`.

@@ -1,0 +1,5 @@
+- `ImageRGBA2RGB`: The ImageRGBA2RGB node is designed to convert images from RGBA (Red, Green, Blue, Alpha) format to RGB format. This conversion process involves removing the alpha channel from the image, effectively transforming images with transparency information into standard RGB images without transparency.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the input image in RGBA format that needs to be converted to RGB. This parameter is crucial for the node's operation as it directly influences the conversion process and the resulting RGB image. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The 'image' output parameter represents the converted image in RGB format, after the alpha channel from the original RGBA image has been removed. Type should be `IMAGE`.

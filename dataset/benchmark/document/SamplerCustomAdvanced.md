@@ -1,0 +1,10 @@
+- `SamplerCustomAdvanced`: The SamplerCustomAdvanced node is designed to provide advanced customization options for sampling processes within a generative model framework. It allows for the implementation of sophisticated sampling strategies that can be tailored to specific requirements or experimental setups, enhancing the flexibility and effectiveness of generative modeling tasks.
+    - Inputs:
+        - `noise` (Required): This input represents the noise data used to perturb the sampling process, providing a means to introduce variability and explore the generative model's space more thoroughly. Type should be `NOISE`.
+        - `guider` (Required): The guider input specifies the guiding mechanism for the sampling process, such as directing the generation towards desired outcomes or away from undesired ones. Type should be `GUIDER`.
+        - `sampler` (Required): This input defines the specific sampling algorithm or strategy to be used, allowing for customization of the sampling process. Type should be `SAMPLER`.
+        - `sigmas` (Required): Sigmas represent the noise levels applied at different steps of the sampling process, enabling fine-tuned control over the introduction of variability. Type should be `SIGMAS`.
+        - `latent_image` (Required): The latent image input provides the initial state or context for the sampling process, serving as the basis for generation. Type should be `LATENT`.
+    - Outputs:
+        - `output`: This output type provides the result of the sampling process, reflecting the generated data after applying the specified sampling strategy. Type should be `LATENT`.
+        - `denoised_output`: The denoised output delivers the generated data with reduced noise, showcasing the effectiveness of the sampling strategy in achieving clearer, more refined results. Type should be `LATENT`.

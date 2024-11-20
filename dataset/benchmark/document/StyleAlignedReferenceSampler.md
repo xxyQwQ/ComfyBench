@@ -1,0 +1,18 @@
+- `StyleAlignedReferenceSampler`: The StyleAlignedReferenceSampler node is designed to sample reference styles in a manner that aligns with specific style guidelines or constraints. It focuses on generating style references that adhere to predefined stylistic parameters, ensuring consistency and coherence in the style of the generated content.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for sampling, ensuring that the generated styles align with the desired aesthetic or thematic guidelines. Type should be `MODEL`.
+        - `share_norm` (Required): Determines how normalization layers are shared across the model, influencing the consistency of style application. Type should be `COMBO[STRING]`.
+        - `share_attn` (Required): Controls how attention layers are shared, affecting the focus and coherence of the generated styles. Type should be `COMBO[STRING]`.
+        - `scale` (Required): Adjusts the scale of the applied style, allowing for finer control over the intensity of style effects. Type should be `FLOAT`.
+        - `batch_size` (Required): Specifies the number of samples to be processed in parallel, affecting the efficiency of the sampling process. Type should be `INT`.
+        - `noise_seed` (Required): Determines the seed for noise generation, allowing for reproducibility and consistency in the style sampling process. Type should be `INT`.
+        - `cfg` (Required): Controls the conditioning factor, adjusting the influence of the conditioning on the style sampling. Type should be `FLOAT`.
+        - `positive` (Required): Defines positive conditioning to guide the style sampling towards desired attributes. Type should be `CONDITIONING`.
+        - `negative` (Required): Specifies negative conditioning to avoid certain attributes in the style sampling. Type should be `CONDITIONING`.
+        - `ref_positive` (Required): Provides additional positive conditioning specifically for reference style generation, enhancing the alignment with desired attributes. Type should be `CONDITIONING`.
+        - `sampler` (Required): Selects the sampling strategy to be used, affecting the diversity and quality of the generated styles. Type should be `SAMPLER`.
+        - `sigmas` (Required): Sets the noise levels for the sampling process, influencing the exploration of the style space. Type should be `SIGMAS`.
+        - `ref_latents` (Required): Inputs pre-existing latents to be used as a reference in the style sampling process, enabling more precise style alignment. Type should be `STEP_LATENTS`.
+    - Outputs:
+        - `output`: Outputs the sampled latents according to the specified style guidelines. Type should be `LATENT`.
+        - `denoised_output`: Provides a denoised version of the sampled latents, potentially enhancing the clarity and quality of the generated styles. Type should be `LATENT`.

@@ -1,7 +1,0 @@
-- `Image History Loader`: The Image History Loader node is designed to retrieve and load historical image data from a specified database. It focuses on accessing and processing previously stored images, ensuring that users can easily retrieve and utilize historical image data for various purposes, such as analysis, comparison, or restoration.
-    - Parameters:
-        - `image`: The 'image' parameter specifies the name or identifier of the image to be retrieved from the history database. It plays a crucial role in locating and loading the specific historical image data for further processing or analysis. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `image`: This output is a tensor representation of the loaded image, providing the image data for further processing. Type should be `IMAGE`.
-        - `filename_text`: This output is the basename of the image file, providing the image name for reference or display purposes. Type should be `STRING`.

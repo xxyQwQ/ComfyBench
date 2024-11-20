@@ -1,0 +1,7 @@
+- `SaltValidateJSON`: The SaltValidateJSON node is designed to validate JSON input against a specified JSON schema. It checks if the given JSON data adheres to the structure and data types defined in the schema, providing a boolean validity status and an error message if applicable.
+    - Inputs:
+        - `json_input` (Required): The JSON string to be validated. It is essential for determining if the input JSON matches the specified schema. Type should be `STRING`.
+        - `json_schema` (Required): The JSON schema string against which the input JSON will be validated. This schema defines the expected structure, constraints, and types of the input JSON. Type should be `STRING`.
+    - Outputs:
+        - `is_valid`: A boolean indicating whether the input JSON is valid according to the specified schema. Type should be `BOOLEAN`.
+        - `error_message`: A string containing the error message if the validation fails, otherwise an empty string. Type should be `STRING`.

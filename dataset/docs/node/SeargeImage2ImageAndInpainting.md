@@ -1,9 +1,0 @@
-- `SeargeImage2ImageAndInpainting`: This node is designed for image-to-image translation and inpainting tasks, allowing for the modification and enhancement of images by applying inpainting techniques and adjusting denoise levels.
-    - Parameters:
-        - `denoise`: Specifies the level of denoising to apply to the image, influencing the clarity and noise reduction in the output. Type should be `FLOAT`.
-        - `inpaint_mask_blur`: Determines the blur intensity of the inpainting mask, affecting the smoothness of the inpainting boundaries. Type should be `INT`.
-        - `inpaint_mask_mode`: Defines the mode of inpainting mask application, dictating how the mask is used to guide the inpainting process. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `data`: Optional data stream for additional processing or information, providing flexibility in handling image data. Type should be `SRG_DATA_STREAM`.
-    - Outputs:
-        - `data`: The modified image data stream, incorporating the applied inpainting and denoise adjustments. Type should be `SRG_DATA_STREAM`.

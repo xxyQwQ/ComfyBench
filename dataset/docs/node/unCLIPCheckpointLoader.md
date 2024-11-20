@@ -1,9 +1,0 @@
-- `unCLIPCheckpointLoader`: The unCLIPCheckpointLoader node is designed for loading checkpoints specifically tailored for unCLIP models. It facilitates the retrieval and initialization of models, CLIP vision modules, and VAEs from a specified checkpoint, streamlining the setup process for further operations or analyses.
-    - Parameters:
-        - `ckpt_name`: The 'ckpt_name' parameter specifies the name of the checkpoint to be loaded. It is crucial for identifying and retrieving the correct checkpoint file from a predefined directory of checkpoints, thereby determining the models and configurations to be initialized. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `model`: Represents the primary model loaded from the checkpoint. Type should be `MODEL`.
-        - `clip`: Represents the CLIP module loaded from the checkpoint, if available. Type should be `CLIP`.
-        - `vae`: Represents the VAE module loaded from the checkpoint, if available. Type should be `VAE`.
-        - `clip_vision`: Represents the CLIP vision module loaded from the checkpoint, if available. Type should be `CLIP_VISION`.

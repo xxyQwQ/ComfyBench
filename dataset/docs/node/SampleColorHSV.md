@@ -1,8 +1,0 @@
-- `SampleColorHSV`: This node is designed to sample pixels from an RGB image and convert these samples into the HSV color space. It aims to facilitate the analysis and manipulation of color information within images by providing a representative subset of the image's color distribution in HSV format.
-    - Parameters:
-        - `sample_size`: Determines the number of pixels to sample from the RGB image. A larger sample size provides a more representative subset of the image's color distribution. Type should be `INT`.
-        - `sampling_seed`: A seed value for the random number generator used in sampling pixels. This ensures reproducibility of the sampled subset across different runs. Type should be `INT`.
-    - Inputs:
-        - `rgb_image`: The RGB image from which pixels will be sampled. This image is the primary input for generating a subset of color information in HSV format. Type should be `IMAGE`.
-    - Outputs:
-        - `hsv_samples`: The output is a collection of sampled pixels converted from RGB to HSV color space, providing a basis for further color analysis or manipulation. Type should be `HSV_SAMPLES`.

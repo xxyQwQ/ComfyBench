@@ -1,0 +1,8 @@
+- `ADE_StandardUniformViewOptions`: This node is designed to create and configure view options for generating animations with uniform distribution. It allows for the customization of view length, stride, and overlap, along with the method of fusing context, to tailor the animation generation process.
+    - Inputs:
+        - `view_length` (Required): Specifies the length of the view, affecting the granularity and extent of the animation frames generated. Type should be `INT`.
+        - `view_stride` (Required): Determines the stride between views, influencing the smoothness and speed of the animation. Type should be `INT`.
+        - `view_overlap` (Required): Sets the overlap between views, which can help in creating smoother transitions between animation frames. Type should be `INT`.
+        - `fuse_method` (Optional): Defines the method used to fuse multiple contexts together, impacting the continuity and coherence of the animation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `view_opts`: Produces the configured view options, ready to be utilized in the animation generation process. Type should be `VIEW_OPTS`.

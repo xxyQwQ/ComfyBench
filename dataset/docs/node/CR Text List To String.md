@@ -1,7 +1,0 @@
-- `CR Text List To String`: This node is designed to convert a list of text items into a single string representation, potentially for display or further processing. It emphasizes the transformation of a collection of textual elements into a unified text format, facilitating operations that require a singular text entity.
-    - Parameters:
-        - `text_list`: The 'text_list' parameter represents the list of text items to be concatenated into a single string. It plays a crucial role in determining the content and structure of the resulting string. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `STRING`: The 'STRING' output is the concatenated result of the input text list, transformed into a single string for ease of use or display. Type should be `STRING`.
-        - `show_help`: Provides a URL to the documentation or help page related to this node's functionality. Type should be `STRING`.

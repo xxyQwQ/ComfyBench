@@ -1,0 +1,10 @@
+- `OffsetMaskByNormalizedAmplitude`: This node applies transformations to a mask based on the normalized amplitude of an audio signal. It adjusts the mask's orientation and position, leveraging the amplitude to dictate the degree of rotation and shift, thereby enabling dynamic visual effects synchronized with audio intensity.
+    - Inputs:
+        - `normalized_amp` (Required): An array of normalized amplitude values from an audio signal, used to determine the extent of transformation. Type should be `NORMALIZED_AMPLITUDE`.
+        - `mask` (Required): The mask to be transformed, representing a visual element whose modifications are driven by audio amplitude. Type should be `MASK`.
+        - `x` (Required): The horizontal shift factor, influencing the mask's lateral movement in response to amplitude changes. Type should be `INT`.
+        - `y` (Required): The vertical shift factor, affecting the mask's vertical displacement as dictated by the amplitude. Type should be `INT`.
+        - `rotate` (Required): A boolean indicating whether the mask should be rotated based on the normalized amplitude. Type should be `BOOLEAN`.
+        - `angle_multiplier` (Required): A multiplier for the rotation angle, scaling the effect of the normalized amplitude on the mask's rotation. Type should be `FLOAT`.
+    - Outputs:
+        - `mask`: The transformed mask after applying rotation and shift adjustments based on the audio's normalized amplitude. Type should be `MASK`.

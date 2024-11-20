@@ -1,6 +1,0 @@
-- `Int`: The Int node is designed to process integer values, allowing for the manipulation or evaluation of these values within a logical or computational context.
-    - Parameters:
-        - `value`: Defines the integer value to be processed or manipulated by the node. It serves as the primary input for operations or evaluations performed by the node. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `INT`: Outputs the processed or evaluated integer value, reflecting any operations or manipulations performed by the node. Type should be `INT`.

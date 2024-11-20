@@ -1,0 +1,15 @@
+- `Batch Shape (mtb)`: Generates a batch of 2D shapes with optional shading, offering a creative tool for experimental design and visualization. This node allows for the customization of shape, size, color, and shading within generated images, making it ideal for creating diverse datasets or unique visual content.
+    - Inputs:
+        - `count` (Required): Specifies the number of shapes to generate in the batch, affecting the overall output volume. Type should be `INT`.
+        - `shape` (Required): Determines the type of shape to generate, such as Box, Circle, Diamond, or Tube, providing a variety of geometric forms for creation. Type should be `COMBO[STRING]`.
+        - `image_width` (Required): Sets the width of the generated image, defining the canvas size. Type should be `INT`.
+        - `image_height` (Required): Sets the height of the generated image, defining the canvas size. Type should be `INT`.
+        - `shape_size` (Required): Controls the size of the generated shapes, allowing for customization of the visual scale. Type should be `INT`.
+        - `color` (Required): Specifies the color of the shapes, offering aesthetic customization. Type should be `COLOR`.
+        - `bg_color` (Required): Determines the background color of the image, enabling contrast and visibility adjustments. Type should be `COLOR`.
+        - `shade_color` (Required): Sets the color used for shading, adding depth and dimension to the shapes. Type should be `COLOR`.
+        - `thickness` (Required): Defines the line thickness of the shapes, impacting visual prominence. Type should be `INT`.
+        - `shadex` (Required): Adjusts the horizontal shading offset, influencing the shading direction. Type should be `FLOAT`.
+        - `shadey` (Required): Adjusts the vertical shading offset, influencing the shading direction. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: Produces an image or a batch of images containing the specified 2D shapes with optional shading effects. Type should be `IMAGE`.

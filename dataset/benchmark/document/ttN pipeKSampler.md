@@ -1,0 +1,35 @@
+- `ttN pipeKSampler`: The ttN_pipeKSampler node is designed for sampling and processing images within a pipeline, incorporating various enhancements and adjustments such as noise addition or reduction, upscaling, and applying LoRA adjustments. It integrates with other components to manage image generation, modification, and output based on specified configurations, aiming to produce high-quality images tailored to user inputs and preferences.
+    - Inputs:
+        - `pipe` (Required): Represents the current state of the pipeline, including models, embeddings, and other relevant settings, serving as the foundation for the sampling process. Type should be `PIPE_LINE`.
+        - `lora_name` (Required): Specifies the LoRA model to be applied for adjustments, enhancing the sampling process with model-specific enhancements. Type should be `COMBO[STRING]`.
+        - `lora_model_strength` (Required): Determines the intensity of the LoRA model adjustments, affecting the final image quality and characteristics. Type should be `FLOAT`.
+        - `lora_clip_strength` (Required): Specifies the intensity of LoRA adjustments on the CLIP model, influencing the relevance of text-image alignment. Type should be `FLOAT`.
+        - `upscale_method` (Required): Defines the method used for upscaling the images, enhancing the resolution and clarity. Type should be `COMBO[STRING]`.
+        - `factor` (Required): The factor by which the image is upscaled, determining the increase in resolution. Type should be `FLOAT`.
+        - `crop` (Required): Describes the method used for cropping the images, affecting the final composition and focus. Type should be `COMBO[STRING]`.
+        - `sampler_state` (Required): Indicates the state of the sampler, whether to sample new images or hold the current state. Type should be `COMBO[STRING]`.
+        - `steps` (Required): unknown Type should be `INT`.
+        - `cfg` (Required): unknown Type should be `FLOAT`.
+        - `sampler_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): unknown Type should be `COMBO[STRING]`.
+        - `denoise` (Required): The level of denoising applied to the images, affecting the smoothness and clarity. Type should be `FLOAT`.
+        - `image_output` (Required): unknown Type should be `COMBO[STRING]`.
+        - `save_prefix` (Required): unknown Type should be `STRING`.
+        - `seed` (Optional): Seed value for random number generation, ensuring reproducibility and consistency in the sampling process. Type should be `INT`.
+        - `optional_model` (Optional): An optional model parameter for further customization of the sampling process. Type should be `MODEL`.
+        - `optional_positive` (Optional): Optional positive conditioning to guide the image generation towards desired attributes. Type should be `CONDITIONING`.
+        - `optional_negative` (Optional): Optional negative conditioning to steer the image generation away from certain attributes. Type should be `CONDITIONING`.
+        - `optional_latent` (Optional): Optional latent image input for initializing or influencing the sampling process. Type should be `LATENT`.
+        - `optional_vae` (Optional): An optional VAE model parameter for decoding or encoding latent images. Type should be `VAE`.
+        - `optional_clip` (Optional): An optional CLIP model parameter for text-image alignment enhancements. Type should be `CLIP`.
+        - `xyPlot` (Optional): Optional XY plot data for guiding the sampling process with specific patterns or distributions. Type should be `XYPLOT`.
+    - Outputs:
+        - `pipe`: Outputs the updated pipeline state, including models, embeddings, and settings after processing. Type should be `PIPE_LINE`.
+        - `model`: The model used in the sampling process, potentially adjusted by LoRA or other modifications. Type should be `MODEL`.
+        - `positive`: Positive conditioning applied during the sampling process, guiding towards desired attributes. Type should be `CONDITIONING`.
+        - `negative`: Negative conditioning applied during the sampling process, steering away from certain attributes. Type should be `CONDITIONING`.
+        - `latent`: The latent representation of the sampled image, suitable for further processing or analysis. Type should be `LATENT`.
+        - `vae`: The VAE model used for decoding the latent image, if applicable. Type should be `VAE`.
+        - `clip`: The CLIP model used for text-image alignment enhancements, if applicable. Type should be `CLIP`.
+        - `image`: The final output image after sampling and processing. Type should be `IMAGE`.
+        - `seed`: The seed value used during the sampling process, ensuring reproducibility. Type should be `INT`.

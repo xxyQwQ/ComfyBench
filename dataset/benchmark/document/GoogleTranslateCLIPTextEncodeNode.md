@@ -1,0 +1,10 @@
+- `GoogleTranslateCLIPTextEncodeNode`: This node leverages the Google Translate API to translate text from one language to another and then encodes the translated text using the CLIP model for further processing or analysis. It supports automatic language detection, manual translation control, and integrates CLIP's powerful text and image understanding capabilities to produce conditioning vectors and pooled outputs for downstream tasks.
+    - Inputs:
+        - `from_translate` (Required): Specifies the source language for translation or 'auto' for automatic language detection. It plays a crucial role in guiding the translation process. Type should be `COMBO[STRING]`.
+        - `to_translate` (Required): Defines the target language for the translation, with 'en' (English) as the default. This parameter determines the language into which the text will be translated. Type should be `COMBO[STRING]`.
+        - `manual_translate` (Required): A boolean flag that, when set to True, bypasses the translation process and uses the original text for CLIP encoding. This allows for optional use of the translation feature. Type should be `COMBO[BOOLEAN]`.
+        - `text` (Required): The text to be translated and/or encoded. This is the primary input for the translation and encoding process. Type should be `STRING`.
+        - `clip` (Required): A CLIP model instance used for encoding the translated text into vectors. This enables the integration of text understanding and image recognition capabilities. Type should be `CLIP`.
+    - Outputs:
+        - `conditioning`: A vector representation of the translated text, suitable for conditioning models or further analysis. Type should be `CONDITIONING`.
+        - `string`: The translated text, providing the outcome of the translation process. Type should be `STRING`.

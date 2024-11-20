@@ -1,0 +1,6 @@
+- `RemoveBackendDataNumberKey __Inspire`: This node is designed to remove specific data entries from a backend cache based on a numerical key. It supports the functionality to selectively clear cached data, enhancing data management and optimization within the backend infrastructure.
+    - Inputs:
+        - `key` (Required): Specifies the numerical key associated with the data to be removed from the cache. This key is used to identify and delete the corresponding cache entry, if it exists. Type should be `INT`.
+        - `signal_opt` (Optional): An optional signal that can be passed through and returned by the node, allowing for additional control flow or data passing without affecting the cache operation. Type should be `*`.
+    - Outputs:
+        - `signal`: Returns the optional signal passed to the node, facilitating the chaining of operations or the passing of control data through the node workflow. Type should be `*`.

@@ -1,0 +1,8 @@
+- `LLMImageTabularChartReader`: The LLMImageTabularChartReader node specializes in interpreting image-based charts as tabular data, converting visual information into a structured document format. This process enables the extraction and analysis of data from images that represent charts, facilitating their integration into data processing workflows.
+    - Inputs:
+        - `path` (Required): Specifies the file path to the image chart that needs to be read. It is essential for locating and accessing the image for data extraction. Type should be `STRING`.
+        - `max_output_tokens` (Optional): Determines the maximum number of tokens to be generated for the output, affecting the level of detail and length of the extracted data. Type should be `INT`.
+        - `prompt` (Optional): Provides an optional text prompt to guide the interpretation of the image chart, potentially influencing the focus or context of the extracted data. Type should be `STRING`.
+        - `extra_info` (Optional): Allows for the inclusion of additional information in a string format, which can be used to pass extra parameters or context for the data extraction process. Type should be `STRING`.
+    - Outputs:
+        - `documents`: Returns the extracted tabular data from the image chart in a structured document format, enabling further analysis or processing. Type should be `DOCUMENT`.

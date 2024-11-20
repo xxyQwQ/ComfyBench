@@ -1,0 +1,8 @@
+- `easy imageScaleDown`: The node 'easy imageScaleDown' is designed to reduce the resolution of an image according to specified downscaling options. It focuses on adjusting the image size while maintaining essential details through various downscaling methods, such as bicubic interpolation. This node is particularly useful in scenarios where image size reduction is required without significant loss of visual quality, optimizing images for various applications like faster web loading or efficient storage.
+    - Inputs:
+        - `images` (Required): The 'images' parameter represents the input images to be downscaled. It is crucial for determining the starting point of the downscaling process. Type should be `IMAGE`.
+        - `width` (Required): The 'width' parameter specifies the target width for the downscaled image. It directly influences the dimensions of the output image. Type should be `INT`.
+        - `height` (Required): The 'height' parameter specifies the target height for the downscaled image. It directly influences the dimensions of the output image. Type should be `INT`.
+        - `crop` (Required): The 'crop' parameter determines how the image will be cropped during the downscaling process, affecting the final appearance and dimensions of the output image. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The output is the downscaled version of the input images, optimized in size while aiming to preserve as much of the original detail as possible. Type should be `IMAGE`.

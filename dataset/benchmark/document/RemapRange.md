@@ -1,0 +1,10 @@
+- `RemapRange`: The RemapRange node is designed to adjust a given value from one range to another, optionally clamping the output within the target range. This functionality is essential for normalizing data or adapting values to fit within specific bounds, making it a versatile tool for data preprocessing and transformation.
+    - Inputs:
+        - `value` (Required): Specifies the value to be remapped. Its role is crucial as it determines the base value that will undergo transformation according to the specified input and output ranges. Type should be `FLOAT`.
+        - `input_min` (Required): Defines the lower bound of the original range. It sets the starting point from which the value will be scaled. Type should be `FLOAT`.
+        - `input_max` (Required): Sets the upper limit of the original range. This parameter, in conjunction with input_min, establishes the range within which the value currently resides. Type should be `FLOAT`.
+        - `output_min` (Required): Determines the lower boundary of the target range. It marks the minimum value to which the original value can be scaled. Type should be `FLOAT`.
+        - `output_max` (Required): Specifies the upper boundary of the target range. This parameter defines the maximum potential value after remapping. Type should be `FLOAT`.
+        - `clamp` (Required): A boolean flag that, when true, clamps the remapped value within the output range, ensuring it does not exceed the specified bounds. Type should be `BOOLEAN`.
+    - Outputs:
+        - `float`: The result of the remapping process. It represents the original value adjusted to fit within the new specified range. Type should be `FLOAT`.

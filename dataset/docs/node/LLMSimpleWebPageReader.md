@@ -1,7 +1,0 @@
-- `LLMSimpleWebPageReader`: The LLMSimpleWebPageReader node is designed to fetch and process web page content from specified URLs, converting HTML content to text if desired. It allows for the extraction of web page data by providing up to four URLs, making it a versatile tool for web content retrieval and preprocessing.
-    - Parameters:
-        - `url_i`: unknown Type should be `STRING`.
-        - `html_to_text`: A boolean flag indicating whether to convert HTML content to plain text, facilitating easier processing and analysis of the web page data. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `documents`: The processed web page content, returned as documents. This output provides the extracted data from the specified URLs, potentially converted to text. Type should be `DOCUMENT`.

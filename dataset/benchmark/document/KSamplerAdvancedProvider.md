@@ -1,0 +1,11 @@
+- `KSamplerAdvancedProvider`: The KSamplerAdvancedProvider node is designed to offer advanced sampling capabilities within a generative modeling framework. It likely extends or enhances the functionality of basic sampling by providing more sophisticated methods or options for sampling, tailored to specific needs or higher complexity scenarios.
+    - Inputs:
+        - `cfg` (Required): Specifies the classifier free guidance value, which influences the direction and strength of the generative model's output, guiding it towards desired characteristics. Type should be `FLOAT`.
+        - `sampler_name` (Required): Determines the specific sampling algorithm to be used, allowing for customization of the sampling process based on the model's requirements or desired outcomes. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Defines the noise schedule for the sampling process, impacting how noise is added or removed during generation to control the quality and characteristics of the output. Type should be `COMBO[STRING]`.
+        - `sigma_factor` (Required): A multiplier for the noise schedule, adjusting the level of noise applied in the sampling process, thereby fine-tuning the output's fidelity or diversity. Type should be `FLOAT`.
+        - `basic_pipe` (Required): Represents the basic pipeline input for sampling, serving as the foundational data or model configuration upon which the sampling process operates. Type should be `BASIC_PIPE`.
+        - `sampler_opt` (Optional): [OPTIONAL] Allows for the use of an externally defined sampler instead of the node's internal sampler, offering flexibility in the sampling approach. Type should be `SAMPLER`.
+        - `scheduler_func_opt` (Optional): [OPTIONAL] Specifies a custom function for generating the noise schedule, providing an alternative to the predefined scheduler options for more tailored sampling dynamics. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `ksampler_advanced`: Produces an advanced sampler configuration, capable of being utilized in complex generative tasks that require nuanced control over the sampling process. Type should be `KSAMPLER_ADVANCED`.

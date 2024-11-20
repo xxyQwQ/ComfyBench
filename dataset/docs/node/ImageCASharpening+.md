@@ -1,7 +1,0 @@
-- `ImageCASharpening+`: The ImageCASharpening+ node applies contrast adaptive sharpening to images, enhancing their clarity and detail by adjusting local contrast. This process is particularly useful for improving the visual quality of images by making them appear more crisp and defined without significantly altering their overall appearance.
-    - Parameters:
-        - `amount`: The 'amount' parameter controls the intensity of the contrast adaptive sharpening applied to the image. It plays a key role in determining the strength of the effect, allowing for fine-tuning of the image's sharpness and detail enhancement. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The 'image' parameter represents the input image to be processed. It is crucial for defining the visual content on which the contrast adaptive sharpening will be applied, directly influencing the outcome of the node's operation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output 'image' parameter is the result of applying contrast adaptive sharpening to the input image. It showcases enhanced clarity and detail, reflecting the adjustments made to the local contrast. Type should be `IMAGE`.

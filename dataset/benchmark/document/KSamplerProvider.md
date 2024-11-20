@@ -1,0 +1,12 @@
+- `KSamplerProvider`: The KSamplerProvider node is designed to offer a flexible and efficient way to provide sampling functionality within a generative model framework. It abstracts the complexity of sampling algorithms, allowing for easy integration and customization of sampling strategies for various applications.
+    - Inputs:
+        - `seed` (Required): Random seed to use for generating CPU noise for sampling, influencing the randomness of the sampling process. Type should be `INT`.
+        - `steps` (Required): Specifies the total number of sampling steps to be executed, affecting the granularity of the sampling process. Type should be `INT`.
+        - `cfg` (Required): Classifier free guidance value, used to control the influence of the conditioning on the sampling process. Type should be `FLOAT`.
+        - `sampler_name` (Required): Identifies the specific sampler to be used, allowing for the selection of different sampling algorithms. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Defines the noise schedule to be applied during the sampling process, impacting the progression of noise reduction. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Determines the amount of noise to remove at the start of the sampling process, affecting the initial state of the input latent. Type should be `FLOAT`.
+        - `basic_pipe` (Required): Serves as the primary input for the sampling process, encapsulating essential components like the model and conditioning parameters. Type should be `BASIC_PIPE`.
+        - `scheduler_func_opt` (Optional): An optional parameter that allows specifying a custom noise schedule generation function, offering further customization of the sampling process. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `ksampler`: The resulting sampler object, configured and ready for use in generating regional prompts or other sampling-based tasks. Type should be `KSAMPLER`.

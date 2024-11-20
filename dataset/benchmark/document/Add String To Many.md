@@ -1,0 +1,7 @@
+- `Add String To Many`: This node is designed to either append or prepend a given string to a list of other strings, allowing for batch processing of string manipulation tasks. It supports a dynamic number of input strings and offers flexibility in how the string is added, catering to various use cases where string concatenation or modification is required.
+    - Inputs:
+        - `to_add` (Required): Specifies the string to be appended or prepended to each input string, acting as the primary modifier in the concatenation process. Type should be `STRING`.
+        - `inputs_len` (Required): Determines the number of input strings to which the operation will be applied, allowing for dynamic adjustment based on user needs. Type should be `INT`.
+        - `operation` (Required): Controls whether the specified string is appended or prepended to the input strings, offering versatility in string manipulation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `string`: The modified strings after the specified string has been either appended or prepended, reflecting the result of the batch string manipulation. Type should be `STRING`.

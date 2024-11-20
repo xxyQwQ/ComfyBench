@@ -1,0 +1,7 @@
+- `Big Float Switch [Dream]`: The Big Float Switch node is designed to select a floating-point value from a set of inputs based on a specified condition. It facilitates dynamic decision-making in data flows by allowing the selection of values based on runtime conditions, enhancing flexibility and adaptability in processing numerical data.
+    - Inputs:
+        - `select` (Required): Specifies the index of the input to be selected initially. The node will attempt to select this input, but may choose another based on the 'on_missing' strategy and the presence of valid data. Type should be `INT`.
+        - `on_missing` (Required): Determines the node's behavior when the initially selected input does not meet the validation criteria. It can either move to the previous or next input until a valid one is found, ensuring a fallback mechanism is in place. Type should be `COMBO[STRING]`.
+        - `input_i` (Optional): Represents one of the multiple floating-point inputs that can be selected by the node. Each 'input_i' stands for a potential value to be chosen based on the selection criteria, where 'i' can range from 0 to n, indicating the flexibility in the number of inputs. Type should be `FLOAT`.
+    - Outputs:
+        - `selected`: The floating-point value selected by the node based on the specified conditions and inputs. Type should be `FLOAT`.

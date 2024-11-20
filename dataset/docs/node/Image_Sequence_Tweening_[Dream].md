@@ -1,7 +1,0 @@
-- `Image Sequence Tweening [Dream]`: The node is designed to enhance animation sequences by interpolating additional frames between existing ones, effectively increasing the smoothness and fluidity of the animation. It utilizes a multiplier to determine the number of frames to be added between each original frame, allowing for customizable levels of tweening.
-    - Parameters:
-        - `multiplier`: Determines the number of interpolated frames to be added between each original frame in the sequence, allowing for control over the smoothness of the resulting animation. Type should be `INT`.
-    - Inputs:
-        - `sequence`: The animation sequence to be processed. It is the primary input that defines the frames to be tweened. Type should be `ANIMATION_SEQUENCE`.
-    - Outputs:
-        - `sequence`: The enhanced animation sequence with additional tweened frames inserted between the original frames. Type should be `ANIMATION_SEQUENCE`.

@@ -1,9 +1,0 @@
-- `Mask Batch`: The Mask Batch node is designed to aggregate individual mask tensors into a single batched tensor. This node is essential for operations that require batch processing of masks, such as applying transformations or models to multiple masks simultaneously. It ensures that all input masks are combined into a unified batch format, adding a channel dimension for compatibility with subsequent processing steps.
-    - Parameters:
-    - Inputs:
-        - `masks_a`: Represents one of the individual mask tensors to be batched together. It is a crucial component for the node's operation, contributing to the aggregated batched tensor for further processing. Type should be `MASK`.
-        - `masks_b`: Represents another individual mask tensor to be included in the batch. It is essential for compiling multiple masks into a single batch for processing. Type should be `MASK`.
-        - `masks_c`: An optional mask tensor that can be included in the batch. It adds flexibility to the batching process by allowing for additional masks. Type should be `MASK`.
-        - `masks_d`: Another optional mask tensor that can be included in the batch, further enhancing the node's capability to process multiple masks simultaneously. Type should be `MASK`.
-    - Outputs:
-        - `masks`: The output represents the aggregated batch of mask tensors, now in a format that is compatible with further processing steps. Type should be `MASK`.

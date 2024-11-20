@@ -1,0 +1,20 @@
+- `easy ipadapterApply`: This node facilitates the application of IPAdapter models to enhance or modify images within a given pipeline, leveraging predefined presets and optional parameters to tailor the adaptation process to specific needs.
+    - Inputs:
+        - `model` (Required): The base model to which the IPAdapter will be applied, serving as the foundation for image enhancement or modification. Type should be `MODEL`.
+        - `image` (Required): The image to be processed or modified by the IPAdapter, acting as the primary subject of adaptation. Type should be `IMAGE`.
+        - `preset` (Required): A predefined configuration set that dictates how the IPAdapter modifies or enhances the image, allowing for standardized or custom adaptation processes. Type should be `COMBO[STRING]`.
+        - `lora_strength` (Required): Determines the intensity of the LoRA (Low-Rank Adaptation) applied during the adaptation process, enabling fine-tuning of the model's responsiveness to the IPAdapter's modifications. Type should be `FLOAT`.
+        - `provider` (Required): Specifies the computation provider for the IPAdapter, such as CPU or GPU, influencing the execution environment. Type should be `COMBO[STRING]`.
+        - `weight` (Required): A factor that influences the overall impact of the IPAdapter on the image, allowing for control over the adaptation intensity. Type should be `FLOAT`.
+        - `weight_faceidv2` (Required): Specifically adjusts the influence of the FaceID v2 feature within the IPAdapter, offering finer control over facial adaptations. Type should be `FLOAT`.
+        - `start_at` (Required): Defines the starting point of the adaptation effect, enabling phased or gradual application of the IPAdapter's modifications. Type should be `FLOAT`.
+        - `end_at` (Required): Sets the endpoint for the adaptation effect, allowing for precise control over the extent of modifications applied. Type should be `FLOAT`.
+        - `cache_mode` (Required): Determines the caching strategy for model components, affecting performance and resource utilization. Type should be `COMBO[STRING]`.
+        - `use_tiled` (Required): Indicates whether the adaptation should be applied in a tiled manner, potentially improving performance for large images. Type should be `BOOLEAN`.
+        - `attn_mask` (Optional): An optional mask that can be applied to focus the IPAdapter's effect on specific areas of the image. Type should be `MASK`.
+        - `optional_ipadapter` (Optional): Allows for the inclusion of an additional, optional IPAdapter to be used in conjunction with the primary one. Type should be `IPADAPTER`.
+    - Outputs:
+        - `model`: The enhanced or modified model after applying the IPAdapter, reflecting the adaptations made. Type should be `MODEL`.
+        - `images`: The resulting images after the adaptation process, showcasing the applied modifications or enhancements. Type should be `IMAGE`.
+        - `masks`: Optional masks generated during the adaptation process, which may be used for further image processing or analysis. Type should be `MASK`.
+        - `ipadapter`: The IPAdapter instance used in the adaptation process, encapsulating the specific modifications or enhancements applied. Type should be `IPADAPTER`.

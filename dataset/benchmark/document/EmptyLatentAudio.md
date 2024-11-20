@@ -1,0 +1,5 @@
+- `EmptyLatentAudio`: The EmptyLatentAudio node is designed to generate a blank audio latent space representation. It creates a tensor of zeros that serves as a placeholder or starting point for further audio processing or generation tasks.
+    - Inputs:
+        - `seconds` (Required): Specifies the duration in seconds for which the blank audio latent space is to be generated. This duration determines the size of the resulting tensor. Type should be `FLOAT`.
+    - Outputs:
+        - `latent`: Outputs a tensor representing a blank audio latent space, which can be used as a starting point for audio generation or processing. Type should be `LATENT`.

@@ -1,0 +1,6 @@
+- `ADE_LoadAnimateDiffModel`: This node is designed to load the AnimateDiff model, facilitating the integration and application of motion models for animation purposes within the AnimateDiff framework. It serves as a foundational component in the animation pipeline, enabling users to leverage advanced animation techniques.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the motion model to be loaded. This is a critical input as it determines which motion model will be utilized for animation within the AnimateDiff framework. Type should be `COMBO[STRING]`.
+        - `ad_settings` (Optional): Optional parameter that allows for the inclusion of specific animation settings, providing additional customization and control over the animation process. Type should be `AD_SETTINGS`.
+    - Outputs:
+        - `MOTION_MODEL`: Outputs the loaded motion model, ready for further processing and application within the animation pipeline. Type should be `MOTION_MODEL_ADE`.

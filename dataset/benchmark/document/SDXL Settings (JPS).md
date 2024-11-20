@@ -1,0 +1,13 @@
+- `SDXL Settings (JPS)`: The SDXL Settings (JPS) node is designed to configure and provide essential settings for image generation processes, including resolution factors, sampler and scheduler types, and other parameters critical for controlling the output quality and characteristics of generated images.
+    - Inputs:
+        - `resolution` (Required): Specifies the resolution setting for the image generation, influencing the dimensions of the output image. Type should be `COMBO[STRING]`.
+        - `res_factor` (Required): Determines the resolution factor, affecting the detail level and quality of the generated image. Type should be `INT`.
+        - `sampler_name` (Required): Selects the sampler to be used, impacting the sampling method for the image generation process. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduler type, influencing the scheduling strategy for the image generation steps. Type should be `COMBO[STRING]`.
+        - `steps` (Required): Defines the total number of steps in the image generation process, affecting the refinement of the output image. Type should be `INT`.
+        - `cfg` (Required): Sets the configuration value, which adjusts the generation process's behavior and output characteristics. Type should be `FLOAT`.
+        - `cfg_rescale` (Required): Specifies the rescale value for the configuration, modifying how the configuration influences the generation process. Type should be `FLOAT`.
+        - `clip_skip` (Required): Indicates the number of clips to skip, affecting the processing of the image generation. Type should be `INT`.
+        - `filename` (Required): The filename for the generated image, determining the output file's name. Type should be `STRING`.
+    - Outputs:
+        - `sdxl_settings`: Encapsulates a comprehensive set of settings used for the SDXL image generation process, including resolution, sampler, scheduler, and other configurations. Type should be `BASIC_PIPE`.

@@ -1,0 +1,9 @@
+- `ImpactSwitch`: The ImpactSwitch node is designed to dynamically select between multiple inputs based on a specified condition or index. It serves as a control mechanism within a workflow, allowing for the conditional routing of data streams based on runtime decisions.
+    - Inputs:
+        - `select` (Required): Specifies the index of the input to be selected for output. This parameter determines which input path the node will follow, affecting the flow of data through the node. Type should be `INT`.
+        - `sel_mode` (Required): Determines the mode of selection, either based on prompt input or execution context. This parameter influences how the selection index is interpreted and applied. Type should be `BOOLEAN`.
+        - `input1` (Optional): The first input option for the switch. This parameter represents one of the potential data paths that can be selected based on the 'select' index. Type should be `*`.
+    - Outputs:
+        - `selected_value`: The data from the selected input path. This output changes based on the 'select' parameter, allowing for dynamic data routing. Type should be `*`.
+        - `selected_label`: The label associated with the selected input, providing context or identification for the chosen path. Type should be `STRING`.
+        - `selected_index`: The index of the selected input, indicating which path was chosen based on the 'select' parameter. Type should be `INT`.

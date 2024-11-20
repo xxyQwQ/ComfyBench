@@ -1,0 +1,26 @@
+- `SEGSDetailer`: The SEGSDetailer node is designed to enhance and refine segmentation details within images, focusing on improving the quality and precision of segmentation results. It employs advanced processing techniques to adjust and optimize segmentation data, ensuring higher fidelity and utility for subsequent analysis or applications.
+    - Inputs:
+        - `image` (Required): The input image to be detailed or refined. It serves as the foundation for the segmentation detailing process, directly influencing the enhancements applied to the segmentation results. Type should be `IMAGE`.
+        - `segs` (Required): The segmentation data to be enhanced or refined. This input is crucial for the node's operation as it represents the target of the detailing process, affecting the quality and precision of the output. Type should be `SEGS`.
+        - `guide_size` (Required): Specifies the target size for guiding the detailing process. It plays a significant role in determining the scale and detail level of the output segmentation. Type should be `FLOAT`.
+        - `guide_size_for` (Required): Determines the context or specific elements within the image for which the guide size is applicable, influencing the focus and precision of the detailing process. Type should be `BOOLEAN`.
+        - `max_size` (Required): Defines the maximum size limit for the detailing process. It ensures that the output segmentation does not exceed this size, affecting the balance between detail and computational efficiency. Type should be `FLOAT`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the detailing process. It influences the variability and consistency of the output. Type should be `INT`.
+        - `steps` (Required): The number of steps to execute in the detailing process, affecting the depth of refinement and the quality of the output segmentation. Type should be `INT`.
+        - `cfg` (Required): Configuration settings for the detailing process, guiding the algorithm's behavior and affecting the outcome's quality. Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the sampling method to be used in the detailing process, influencing the texture and quality of the detailed segments. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler algorithm used to manage the detailing process, affecting the efficiency and outcome of the segmentation refinement. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Indicates whether denoising techniques are applied during the detailing process, improving the clarity and quality of the output segmentation. Type should be `FLOAT`.
+        - `noise_mask` (Required): A mask applied to specify areas for noise reduction, focusing the denoising effect and enhancing the detailing precision. Type should be `BOOLEAN`.
+        - `force_inpaint` (Required): Forces the use of inpainting in areas lacking detail, improving the completeness and quality of the segmentation. Type should be `BOOLEAN`.
+        - `basic_pipe` (Required): The basic processing pipeline configurations used for the detailing process, setting the foundation for the enhancement techniques applied. Type should be `BASIC_PIPE`.
+        - `refiner_ratio` (Required): The ratio of refinement applied to the segmentation, adjusting the intensity of detailing and affecting the final output's precision. Type should be `FLOAT`.
+        - `batch_size` (Required): The size of the batch processed in a single detailing operation, affecting the throughput and efficiency of the node. Type should be `INT`.
+        - `cycle` (Required): The number of cycles the detailing process is repeated, influencing the depth of refinement and the quality of the output segmentation. Type should be `INT`.
+        - `refiner_basic_pipe_opt` (Optional): Optional configurations for the refinement pipeline, allowing for customization of the detailing process to achieve specific outcomes. Type should be `BASIC_PIPE`.
+        - `inpaint_model` (Optional): Indicates whether an inpainting model is used during the detailing process, enabling the filling of missing or incomplete segments for a more complete output. Type should be `BOOLEAN`.
+        - `noise_mask_feather` (Optional): The feathering applied to the noise mask, smoothing the transition between treated and untreated areas, and enhancing the visual quality of the detailed segmentation. Type should be `INT`.
+        - `scheduler_func_opt` (Optional): Optional configurations for the scheduler function, allowing for further customization of the detailing process to optimize performance and results. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `segs`: Outputs the enhanced or refined segmentation data, reflecting the improvements made by the node. Type should be `SEGS`.
+        - `cnet_images`: Provides a list of images processed through the control net, useful for visualizing the effects of the detailing process on the segmentation. Type should be `IMAGE`.

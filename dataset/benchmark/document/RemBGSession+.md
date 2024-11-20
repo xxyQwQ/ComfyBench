@@ -1,0 +1,6 @@
+- `RemBGSession+`: The RemBGSession node is designed for background removal from images, utilizing various models to cater to different purposes such as general image segmentation, human segmentation, and cloth parsing. It supports execution on multiple hardware providers, allowing for flexible deployment.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for background removal, offering a range of options for different segmentation tasks. Type should be `COMBO[STRING]`.
+        - `providers` (Required): Determines the hardware provider for executing the model, supporting a variety of platforms including CPU, CUDA, and more. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `rembg_session`: Produces a session configured for background removal, ready to process images according to the specified model and provider. Type should be `REMBG_SESSION`.

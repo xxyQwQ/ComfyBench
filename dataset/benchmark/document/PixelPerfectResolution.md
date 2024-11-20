@@ -1,0 +1,8 @@
+- `PixelPerfectResolution`: The PixelPerfectResolution node is designed to calculate the optimal resolution for resizing an image to achieve pixel-perfect clarity. It considers the original and target dimensions of the image, along with the specified resizing mode, to compute the most suitable resolution that maintains the image's visual integrity.
+    - Inputs:
+        - `original_image` (Required): The original image to be resized. It's crucial for determining the base dimensions before applying the resizing operation. Type should be `IMAGE`.
+        - `image_gen_width` (Required): The target width for the image generation. It influences the scaling factor and the final resolution calculation. Type should be `INT`.
+        - `image_gen_height` (Required): The target height for the image generation. Similar to image_gen_width, it affects the scaling factor and the final resolution outcome. Type should be `INT`.
+        - `resize_mode` (Required): Specifies the mode of resizing (e.g., OUTER_FIT, INNER_FIT) which directly impacts how the final resolution is computed. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `RESOLUTION (INT)`: The computed optimal resolution for resizing the image, ensuring pixel-perfect clarity. Type should be `INT`.

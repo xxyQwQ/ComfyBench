@@ -1,6 +1,0 @@
-- `Number to Text`: The 'Number to Text' node is designed to convert numerical inputs into their textual representation, facilitating the integration of numerical data into text-based workflows or interfaces.
-    - Parameters:
-    - Inputs:
-        - `number`: The 'number' input accepts a numerical value that will be converted into its textual representation. This conversion allows for the seamless incorporation of numerical data into text-based formats. Type should be `NUMBER`.
-    - Outputs:
-        - `string`: The output is the textual representation of the input number, enabling its use in text-based applications or for display purposes. Type should be `STRING`.

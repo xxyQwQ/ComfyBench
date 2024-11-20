@@ -1,0 +1,6 @@
+- `LayerUtility_ Integer`: The Integer node is designed to process and manipulate integer values. It allows for the conversion of an integer input into both its integer and string representations, facilitating operations that require numerical manipulation or the integration of integer values into text-based formats.
+    - Inputs:
+        - `int_value` (Required): Specifies the integer value to be processed. This parameter enables the node to perform operations on the provided integer, converting it to both its integer and string representations. Type should be `INT`.
+    - Outputs:
+        - `int`: The integer representation of the input value. Type should be `INT`.
+        - `string`: The string representation of the input integer value. Type should be `STRING`.

@@ -1,7 +1,0 @@
-- `ADE_CombineLoraHooks`: This node is designed to aggregate multiple LoRA Hook Groups into a single, unified LoRA Hook Group. It facilitates the combination of various LoRA hooks, allowing for more complex and nuanced model conditioning by integrating different modifications or enhancements provided by each individual hook.
-    - Parameters:
-    - Inputs:
-        - `lora_hook_A`: Represents the first LoRA Hook Group to be combined. It plays a crucial role in the aggregation process, contributing its modifications or enhancements to the resulting unified LoRA Hook Group. Type should be `LORA_HOOK`.
-        - `lora_hook_B`: Represents the second LoRA Hook Group to be combined. It contributes its unique modifications or enhancements to the unified LoRA Hook Group, enriching the overall conditioning effect. Type should be `LORA_HOOK`.
-    - Outputs:
-        - `lora_hook`: The output is a unified LoRA Hook Group that combines the modifications or enhancements of the input LoRA Hook Groups. This aggregated hook facilitates more complex model conditioning. Type should be `LORA_HOOK`.

@@ -1,7 +1,0 @@
-- `ADE_TimestepsConditioning`: The node focuses on adjusting the timing for applying specific conditions within the animation or diffusion process, allowing for precise control over when certain effects or modifications are introduced based on the progression of the animation. This enables a more dynamic and nuanced application of conditions, enhancing the overall quality and flexibility of the generated content.
-    - Parameters:
-        - `start_percent`: Specifies the starting point (as a percentage of the total animation length) for applying the given conditions, allowing for precise timing control. Type should be `FLOAT`.
-        - `end_percent`: Defines the ending point (as a percentage of the total animation length) for the application of conditions, enabling the tailoring of effects to specific phases of the animation. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `timesteps_cond`: The timing adjustments for conditions, encapsulated as a specific type that represents the scheduling of conditions throughout the animation or diffusion process. Type should be `TIMESTEPS_COND`.

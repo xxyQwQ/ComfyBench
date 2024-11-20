@@ -1,0 +1,16 @@
+- `KSamplerVariationsStochastic+`: This node specializes in generating stochastic variations of latent images using a specific sampling technique. It leverages randomness and a defined stochastic process to introduce variations, aiming to enhance the diversity of generated images while maintaining their core characteristics.
+    - Inputs:
+        - `model` (Required): The model parameter specifies the generative model used for sampling. It plays a crucial role in determining the quality and characteristics of the generated variations. Type should be `MODEL`.
+        - `latent_image` (Required): The latent_image parameter represents the initial latent representation of an image. It serves as the starting point for generating variations, influencing the final outcome. Type should be `LATENT`.
+        - `noise_seed` (Required): The noise_seed parameter controls the randomness of the variation noise. It ensures reproducibility of the variations by initializing the random noise generator. Type should be `INT`.
+        - `steps` (Required): The steps parameter defines the number of sampling steps. It affects the degree of variation and the quality of the generated images. Type should be `INT`.
+        - `cfg` (Required): The cfg parameter adjusts the conditioning factor, influencing the strength of the applied variations. Type should be `FLOAT`.
+        - `sampler` (Required): The sampler parameter selects the specific sampling algorithm used for generating variations. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler parameter determines the scheduling algorithm for the sampling process, affecting the progression of variations. Type should be `COMBO[STRING]`.
+        - `positive` (Required): The positive parameter provides positive conditioning to guide the variation generation towards desired attributes. Type should be `CONDITIONING`.
+        - `negative` (Required): The negative parameter provides negative conditioning to steer the variation generation away from undesired attributes. Type should be `CONDITIONING`.
+        - `variation_seed` (Required): The variation_seed parameter specifically controls the randomness of the variation process, distinct from the initial noise seed. Type should be `INT:seed`.
+        - `variation_strength` (Required): The variation_strength parameter adjusts the intensity of the applied variations, affecting the distinctiveness of the generated images. Type should be `FLOAT`.
+        - `cfg_scale` (Required): The cfg_scale parameter scales the conditioning factor for the variation process, modifying the impact of conditioning on the variations. Type should be `FLOAT`.
+    - Outputs:
+        - `latent`: This output represents the latent image after applying stochastic variations, reflecting the enhanced diversity and creativity of the sampling process. Type should be `LATENT`.

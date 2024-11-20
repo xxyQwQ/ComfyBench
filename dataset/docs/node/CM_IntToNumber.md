@@ -1,6 +1,0 @@
-- `CM_IntToNumber`: This node is designed for converting integer values to a more general number format, facilitating operations across different numeric types within mathematical computations.
-    - Parameters:
-        - `a`: The integer value to be converted into a general number format. This conversion enables seamless integration and operation with other numeric types. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `number`: The converted general number format value, allowing for versatile mathematical operations. Type should be `NUMBER`.

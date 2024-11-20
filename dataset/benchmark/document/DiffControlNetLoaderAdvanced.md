@@ -1,0 +1,8 @@
+- `DiffControlNetLoaderAdvanced`: The DiffControlNetLoaderAdvanced node is designed for loading advanced control net models with the capability to handle different models and optional timestep keyframe groups. It extends the functionality of control net loading by incorporating model-specific adjustments and optional parameters for enhanced control net application.
+    - Inputs:
+        - `model` (Required): Specifies the model for which the control net is being loaded, enabling model-specific control net adjustments. Type should be `MODEL`.
+        - `control_net_name` (Required): The name of the control net to be loaded, used to locate and load the specific control net file. Type should be `COMBO[STRING]`.
+        - `tk_optional` (Optional): An optional timestep keyframe group to be applied to the control net, providing additional control over the animation or transformation process. Type should be `TIMESTEP_KEYFRAME`.
+        - `autosize` (Optional): An optional parameter that allows for automatic resizing of the control net with a specified padding, enhancing flexibility in control net application. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `control_net`: The loaded advanced control net, ready for application within the system. Type should be `CONTROL_NET`.

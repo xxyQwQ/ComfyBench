@@ -1,0 +1,8 @@
+- `LayerUtility_ SwitchCase`: The SwitchCase node provides a mechanism to execute different branches of logic based on the value of a given condition. It compares a switch condition against multiple cases and executes the branch where the condition matches, allowing for more dynamic and conditional data flow within a node network.
+    - Inputs:
+        - `switch_condition` (Required): The condition value to be compared against the defined cases. It determines which branch of logic will be executed based on its match with the case values. Type should be `STRING`.
+        - `case_i` (Required): A case value to compare against the switch condition. If matched, the corresponding input for this case is selected for output. The index 'i' can range to accommodate multiple cases. Type should be `STRING`.
+        - `input_default` (Required): The default input to use if none of the case values match the switch condition. Type should be `*`.
+        - `input_i` (Optional): The input associated with a case. It is selected for output if the switch condition matches the corresponding case value. The index 'i' can range to accommodate multiple inputs. Type should be `*`.
+    - Outputs:
+        - `?`: unknown Type should be `*`.

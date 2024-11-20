@@ -1,0 +1,9 @@
+- `ADE_AdjustWeightIndivMult`: This node is designed to adjust the weights of individual components in a model multiplicatively, based on specified multipliers for each component. It allows for fine-tuning of model behavior by scaling the influence of different parts of the model, such as attention mechanisms and other parameters, to achieve desired outcomes.
+    - Inputs:
+        - `pe_MULT` (Required): Specifies the multiplier for positional encoding weights, influencing how much the positional encodings are scaled during the adjustment process. Type should be `FLOAT`.
+        - `attn_MULT` (Required): Determines the multiplier for the overall attention weights, affecting the scaling of attention mechanisms within the model. Type should be `FLOAT`.
+        - `other_MULT` (Required): Specifies a general multiplier for other model weights not explicitly covered by other parameters, allowing for broad adjustment. Type should be `FLOAT`.
+        - `print_adjustment` (Required): A flag indicating whether the adjustments made by this node should be printed for verification or debugging purposes. Type should be `BOOLEAN`.
+        - `prev_weight_adjust` (Optional): An optional parameter allowing for the input of previous weight adjustments, enabling cumulative adjustments over multiple iterations. Type should be `WEIGHT_ADJUST`.
+    - Outputs:
+        - `weight_adjust`: Returns the updated weight adjustments, incorporating the multiplicative changes specified by the input parameters. Type should be `WEIGHT_ADJUST`.

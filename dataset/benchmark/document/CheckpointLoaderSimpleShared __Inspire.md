@@ -1,0 +1,10 @@
+- `CheckpointLoaderSimpleShared __Inspire`: The CheckpointLoaderSimpleShared node is designed to manage the loading and caching of model checkpoints in a shared manner. It allows for efficient reuse of loaded checkpoints by checking if a checkpoint is already cached before loading it from disk, supporting both read-only and override modes to accommodate different usage scenarios.
+    - Inputs:
+        - `ckpt_name` (Required): The name of the checkpoint to load. This parameter is crucial for identifying which checkpoint file to retrieve and load. Type should be `COMBO[STRING]`.
+        - `key_opt` (Required): An optional key that can be used to uniquely identify the checkpoint in the cache. This allows for more flexible caching strategies, such as caching the same checkpoint under different keys. Type should be `STRING`.
+        - `mode` (Optional): Specifies the caching mode, such as 'Read Only' or 'Override Cache', which determines how the checkpoint should be handled in relation to the cache. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `model`: The loaded model from the checkpoint. Type should be `MODEL`.
+        - `clip`: The CLIP model associated with the checkpoint, if available. Type should be `CLIP`.
+        - `vae`: The VAE model associated with the checkpoint, if available. Type should be `VAE`.
+        - `cache key`: The key under which the checkpoint is cached. This is useful for reference in subsequent operations. Type should be `STRING`.

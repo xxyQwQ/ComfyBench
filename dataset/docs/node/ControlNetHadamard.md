@@ -1,9 +1,0 @@
-- `ControlNetHadamard`: This node applies a control network to a set of images and conditions, adjusting the conditions based on the control network's output and a specified strength. It's designed for dynamic image conditioning, allowing for the modification of image attributes or styles according to the control network's logic.
-    - Parameters:
-        - `strength`: Determines the intensity of the control network's effect on the conditions, allowing for fine-tuned adjustments. Type should be `FLOAT`.
-    - Inputs:
-        - `conds`: The conditions to be applied to each image, which are modified by the control network to achieve the desired effect. Type should be `CONDITIONING`.
-        - `control_net`: The control network used to modify the conditions based on the images and the specified strength. Type should be `CONTROL_NET`.
-        - `image`: The images to which the conditions are applied, serving as the basis for the control network's modifications. Type should be `IMAGE`.
-    - Outputs:
-        - `conditioning`: The modified conditions after being processed by the control network, reflecting the applied changes. Type should be `CONDITIONING`.

@@ -1,0 +1,6 @@
+- `easy imageChooser`: The `easy imageChooser` node enables users to select preferred images from a given set through an interactive interface. This node simplifies the process of image selection, making it an essential tool for workflows that require user engagement and decision-making in choosing specific images for further processing or analysis.
+    - Inputs:
+        - `mode` (Required): Specifies the selection mode, allowing users to define how the image selection process should be conducted. This parameter determines the behavior of the chooser, affecting the user's interaction and the selection criteria. Type should be `COMBO[STRING]`.
+        - `images` (Optional): A collection of images presented to the user for selection. This input is essential for providing the set of options from which the user can make their choice, directly influencing the selection process. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: Returns the selected image or images, reflecting the user's choices. This output is vital for further processing or analysis of the chosen images. Type should be `IMAGE`.

@@ -1,0 +1,18 @@
+- `RegionalPromptColorMask __Inspire`: This node specializes in generating regional prompts based on color masks within the Inspire pack. It leverages color masks to apply specific prompts to designated regions of an image, enabling targeted image manipulation or generation.
+    - Inputs:
+        - `basic_pipe` (Required): A tuple containing the basic components required for processing, including the model, clip, vae, and positive and negative prompts. It forms the foundation for the prompt generation process. Type should be `BASIC_PIPE`.
+        - `color_mask` (Required): The color mask image used to define regions for prompt application. It determines the areas of the image that the prompts will specifically target. Type should be `IMAGE`.
+        - `mask_color` (Required): A string specifying the color in the mask that identifies the target region. This color defines which parts of the image the prompts will be applied to. Type should be `STRING`.
+        - `cfg` (Required): A floating-point value representing the configuration setting for the generation process, influencing the level of creativity or adherence to the prompt. Type should be `FLOAT`.
+        - `sampler_name` (Required): The name of the sampler used in the generation process, affecting how the model explores the prompt space. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Specifies the scheduler used for controlling the generation process, impacting how the prompt is interpreted over time. Type should be `COMBO[STRING]`.
+        - `wildcard_prompt` (Required): A string representing a dynamic or variable part of the prompt that can be filled in with different values for each generation, adding variability to the output. Type should be `STRING`.
+        - `controlnet_in_pipe` (Required): A boolean indicating whether to keep or override the control net settings in the pipeline, affecting how the model's internal controls are applied. Type should be `BOOLEAN`.
+        - `sigma_factor` (Required): A floating-point value that adjusts the sigma parameter in the generation process, influencing the diversity of the output. Type should be `FLOAT`.
+        - `variation_seed` (Optional): An integer seed for controlling variation in the generation process, ensuring reproducibility of results. Type should be `INT`.
+        - `variation_strength` (Optional): A floating-point value that determines the strength of the variation applied, affecting the degree of deviation from the base prompt. Type should be `FLOAT`.
+        - `variation_method` (Optional): Specifies the method used for applying variation, such as 'linear' or 'slerp', influencing how changes are interpolated. Type should be `COMBO[STRING]`.
+        - `scheduler_func_opt` (Optional): Optional scheduler function options that provide additional control over the scheduling process, allowing for finer adjustments. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `regional_prompts`: The processed prompt information, tailored for the specified region within the image, ready for further processing or generation tasks. Type should be `REGIONAL_PROMPTS`.
+        - `mask`: The output mask derived from the input color mask, indicating the targeted region for the prompt application. Type should be `MASK`.

@@ -1,0 +1,5 @@
+- `ToStringList`: The ToStringList node is designed to aggregate multiple string inputs into a single list, facilitating operations that require collective handling of strings. It abstracts the complexity of handling individual strings, enabling efficient batch processing and manipulation.
+    - Inputs:
+        - `inputs_len` (Required): Specifies the number of string inputs to be aggregated into the list. This parameter allows for dynamic adjustment of the list size based on the number of inputs provided. Type should be `INT`.
+    - Outputs:
+        - `string`: Outputs a list composed of the aggregated string inputs. This list enables further processing or manipulation as a collective entity. Type should be `STRING`.

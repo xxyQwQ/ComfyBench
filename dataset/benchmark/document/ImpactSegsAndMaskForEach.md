@@ -1,0 +1,6 @@
+- `ImpactSegsAndMaskForEach`: This node applies a bitwise AND operation between each segmentation (seg) and its corresponding mask, effectively filtering the segments based on the mask. It's designed for batch processing, where each segment in a collection is paired with a mask to produce a modified set of segments that only include the areas covered by the masks.
+    - Inputs:
+        - `segs` (Required): The collection of segments to be processed. Each segment represents a portion of an image that has been identified for further operations, such as filtering or modification. Type should be `SEGS`.
+        - `masks` (Required): A collection of masks to be applied to the corresponding segments. Each mask defines the areas within a segment to retain, effectively filtering out the rest. Type should be `MASK`.
+    - Outputs:
+        - `segs`: The modified collection of segments after applying the bitwise AND operation with the corresponding masks. This output retains only the areas of each segment that overlap with the mask. Type should be `SEGS`.

@@ -1,0 +1,7 @@
+- `Inference_Core_BinaryPreprocessor`: The Binary Preprocessor node is designed for image preprocessing within the ControlNet Preprocessors/Line Extractors category, specifically focusing on converting images to binary format based on a threshold value. This node applies a binary thresholding technique to extract significant lines or edges from images, facilitating further processing or analysis.
+    - Inputs:
+        - `image` (Required): The input image to be processed. It serves as the primary data for the binary thresholding operation, aiming to extract significant lines or edges. Type should be `IMAGE`.
+        - `bin_threshold` (Optional): Specifies the threshold value for the binary conversion of images. It determines the cutoff point for classifying pixel values as either black or white, playing a crucial role in the extraction of lines or edges from the image. Type should be `INT`.
+        - `resolution` (Optional): The resolution to which the input image is resized before applying the binary thresholding. This parameter can influence the detail level of the extracted lines or edges. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed image in binary format, where significant lines or edges are highlighted by converting the image based on the specified binary threshold. Type should be `IMAGE`.

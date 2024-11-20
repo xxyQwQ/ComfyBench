@@ -1,0 +1,6 @@
+- `DiffControlNetLoader`: The DiffControlNetLoader node is designed for loading differential control networks, which are specialized models that can modify the behavior of another model based on control net specifications. This node allows for the dynamic adjustment of model behaviors by applying differential control nets, facilitating the creation of customized model outputs.
+    - Inputs:
+        - `model` (Required): The model parameter specifies the base model to which the differential control net will be applied. This allows for the customization of the model's behavior based on the control net's specifications. Type should be `MODEL`.
+        - `control_net_name` (Required): The control_net_name parameter identifies the specific differential control net to be loaded and applied to the base model. This enables the selection of the appropriate control net for the desired model behavior modification. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `control_net`: The output is a differential control net that has been loaded and is ready to be applied to a base model for behavior modification. Type should be `CONTROL_NET`.

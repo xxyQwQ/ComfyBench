@@ -1,0 +1,5 @@
+- `TilePreprocessor_Provider_for_SEGS __Inspire`: This node provides a preprocessing service for SEGS (Semantic Edge Guided Synthesis) by applying a tile preprocessing technique. It is designed to enhance the input data for better performance in SEGS applications by adjusting the resolution through pyramid upscaling.
+    - Inputs:
+        - `pyrUp_iters` (Required): Specifies the number of iterations for pyramid upscaling, affecting the final resolution of the processed image. A higher number of iterations results in a finer resolution, which can improve the quality of SEGS outputs. Type should be `INT`.
+    - Outputs:
+        - `segs_preprocessor`: Returns a preprocessed object ready for SEGS processing, encapsulating the adjustments made during the tile preprocessing phase. Type should be `SEGS_PREPROCESSOR`.

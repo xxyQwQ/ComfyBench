@@ -1,0 +1,7 @@
+- `JWStringReplace`: This node performs a string replacement operation, substituting all occurrences of a specified substring within a source string with another substring. It's designed to modify text data by replacing specific text patterns with alternative text, facilitating text preprocessing or data normalization tasks.
+    - Inputs:
+        - `source` (Required): The original string where replacements will be made. It serves as the base text for the operation. Type should be `STRING`.
+        - `to_replace` (Required): The substring within the source string that needs to be replaced. It identifies the specific pattern or text to be substituted. Type should be `STRING`.
+        - `replace_with` (Required): The substring that will replace occurrences of the 'to_replace' substring in the source string. It specifies the new text to be inserted. Type should be `STRING`.
+    - Outputs:
+        - `string`: The modified string after all occurrences of the 'to_replace' substring have been replaced with the 'replace_with' substring. Type should be `STRING`.

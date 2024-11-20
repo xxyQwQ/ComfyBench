@@ -1,7 +1,0 @@
-- `ImagePosterize+`: The ImagePosterize node applies a posterization effect to images, reducing the color depth of the image to a specified threshold. This process simplifies the image's color palette, creating a graphic effect by limiting the number of colors displayed.
-    - Parameters:
-        - `threshold`: Defines the threshold for the posterization effect, controlling the extent to which the image's color depth is reduced. It plays a key role in determining the final appearance of the posterized image. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The input image to be posterized. This parameter is crucial as it directly influences the visual outcome of the posterization effect. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output image after applying the posterization effect, featuring reduced color depth as per the specified threshold. Type should be `IMAGE`.

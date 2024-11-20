@@ -1,0 +1,19 @@
+- `CreateInstanceDiffusionTracking`: This node is designed for creating tracking data to be utilized with InstanceDiffusion, a process that involves generating and managing instance-specific diffusion prompts and tracking information. It facilitates the structured organization of diffusion prompts based on class identifiers and names, enabling targeted image generation and manipulation.
+    - Inputs:
+        - `coordinates` (Required): Specifies the coordinates for tracking, essential for defining the spatial location and boundaries of the instance to be tracked. Type should be `STRING`.
+        - `width` (Required): Defines the width of the tracking area, setting the horizontal scale for instance tracking. Type should be `INT`.
+        - `height` (Required): Sets the height of the tracking area, determining the vertical scale for instance tracking. Type should be `INT`.
+        - `bbox_width` (Required): Specifies the width of the bounding box for the instance, crucial for delineating the instance's horizontal boundaries. Type should be `INT`.
+        - `bbox_height` (Required): Defines the height of the bounding box for the instance, essential for outlining the instance's vertical boundaries. Type should be `INT`.
+        - `class_name` (Required): The name of the class for the instance being tracked, used for categorization and identification in the diffusion process. Type should be `STRING`.
+        - `class_id` (Required): A unique identifier for the class of the instance, facilitating differentiation and specific targeting in the diffusion process. Type should be `INT`.
+        - `prompt` (Required): The diffusion prompt associated with the instance, guiding the generation process with specific textual cues. Type should be `STRING`.
+        - `size_multiplier` (Optional): A multiplier for adjusting the size of the tracking area, allowing for flexible scaling based on specific needs. Type should be `FLOAT`.
+        - `fit_in_frame` (Optional): A boolean indicating whether the instance should be adjusted to fit within the frame, ensuring visibility and proper placement. Type should be `BOOLEAN`.
+    - Outputs:
+        - `tracking`: The generated tracking data, structured for use with InstanceDiffusion, containing detailed instance-specific information. Type should be `TRACKING`.
+        - `prompt`: A composite prompt string, derived from the class-specific prompts provided, for use in the diffusion process. Type should be `STRING`.
+        - `width`: The width of the tracking area, as defined by the input parameters. Type should be `INT`.
+        - `height`: The height of the tracking area, as determined by the input parameters. Type should be `INT`.
+        - `bbox_width`: The width of the bounding box for the instance, as specified in the inputs. Type should be `INT`.
+        - `bbox_height`: The height of the bounding box for the instance, as outlined in the inputs. Type should be `INT`.

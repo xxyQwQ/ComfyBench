@@ -1,0 +1,9 @@
+- `RemapBarrelDistortion`: This node is designed to apply barrel distortion to images, a common technique for correcting or introducing distortion based on lens characteristics. It can undistort images from camera and lens combinations or create specific types of distortion such as barrel, pincushion, or mustache distortion.
+    - Inputs:
+        - `a` (Required): Coefficient 'a' influences the primary distortion effect on the image, playing a crucial role in the barrel distortion calculation. Type should be `FLOAT`.
+        - `b` (Required): Coefficient 'b' serves as a secondary factor in the distortion effect, modifying the curvature introduced by the primary coefficient. Type should be `FLOAT`.
+        - `c` (Required): Coefficient 'c' acts as a tertiary modifier for the distortion effect, fine-tuning the overall shape of the distortion. Type should be `FLOAT`.
+        - `use_inverse_variant` (Required): This boolean flag determines whether an alternative formula is used for computing the distortion, allowing for different distortion effects. Type should be `BOOLEAN`.
+        - `d` (Optional): An optional coefficient that can further adjust the distortion effect when provided. Type should be `FLOAT`.
+    - Outputs:
+        - `remap`: The output is the result of applying the specified barrel distortion to the input image, which may include corrections or intentional distortions based on the provided coefficients. Type should be `REMAP`.

@@ -1,0 +1,15 @@
+- `Automatic CFG - Custom attentions`: This node is designed to concatenate attention modifier parameters from two sources, creating a unified set of parameters for further processing. It serves as a utility within the context of configuring or enhancing model attention mechanisms, particularly in scenarios requiring the combination of distinct attention modification strategies.
+    - Inputs:
+        - `model` (Required): unknown Type should be `MODEL`.
+        - `Auto_CFG` (Required): unknown Type should be `BOOLEAN`.
+        - `cond_mode` (Required): unknown Type should be `COMBO[STRING]`.
+        - `uncond_mode` (Required): unknown Type should be `COMBO[STRING]`.
+        - `cond_diff_multiplier` (Required): unknown Type should be `FLOAT`.
+        - `uncond_diff_multiplier` (Required): unknown Type should be `FLOAT`.
+        - `uncond_sigma_end` (Required): unknown Type should be `FLOAT`.
+        - `save_as_preset` (Required): unknown Type should be `BOOLEAN`.
+        - `preset_name` (Required): unknown Type should be `STRING`.
+        - `attn_mod_for_positive_operation` (Optional): unknown Type should be `ATTNMOD`.
+        - `attn_mod_for_negative_operation` (Optional): unknown Type should be `ATTNMOD`.
+    - Outputs:
+        - `Model`: unknown Type should be `MODEL`.

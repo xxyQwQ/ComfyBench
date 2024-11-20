@@ -1,0 +1,8 @@
+- `easy applyFooocusInpaint`: The `applyFooocusInpaint` node is designed to integrate inpainting capabilities into a model's pipeline by applying specific inpainting heads and patches. This process involves loading and applying pre-trained components to modify the model in a way that it can perform inpainting tasks, which is the process of filling in missing or corrupted parts of images.
+    - Inputs:
+        - `model` (Required): The model parameter represents the base model to which inpainting capabilities will be added. It is crucial for defining the starting point of the inpainting process. Type should be `MODEL`.
+        - `latent` (Required): The latent parameter contains the encoded representation of the image to be inpainted, serving as a critical input for the inpainting process. Type should be `LATENT`.
+        - `head` (Required): The head parameter specifies the inpainting head to be used, determining the specific method and characteristics of the inpainting process. Type should be `COMBO[STRING]`.
+        - `patch` (Required): The patch parameter indicates the specific inpainting patch to apply, further customizing the inpainting behavior. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `model`: The modified model with inpainting capabilities integrated, ready for performing inpainting tasks. Type should be `MODEL`.

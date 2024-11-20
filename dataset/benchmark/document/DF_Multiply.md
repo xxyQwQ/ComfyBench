@@ -1,0 +1,6 @@
+- `DF_Multiply`: The `DF_Multiply` node performs multiplication of two floating-point numbers, providing a straightforward way to calculate the product of two values within a mathematical or computational workflow.
+    - Inputs:
+        - `Value_A` (Required): `Value_A` represents the first floating-point number to be multiplied. It plays a crucial role in determining the overall result of the multiplication operation. Type should be `FLOAT`.
+        - `Value_B` (Required): `Value_B` is the second floating-point number involved in the multiplication. Its value directly influences the product outcome, making it an essential component of the operation. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: The output is a floating-point number representing the product of the two input values, `Value_A` and `Value_B`. It encapsulates the result of the multiplication operation. Type should be `FLOAT`.

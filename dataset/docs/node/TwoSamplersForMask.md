@@ -1,9 +1,0 @@
-- `TwoSamplersForMask`: This node applies two distinct sampling processes to a latent image using a mask. Initially, it applies an inverse mask to the latent image with one sampler, then applies the original mask with another sampler, effectively blending two different sampling effects based on the mask's pattern.
-    - Parameters:
-    - Inputs:
-        - `latent_image`: The latent representation of an image to be processed. It serves as the base for applying the sampling effects. Type should be `LATENT`.
-        - `base_sampler`: A sampler that applies its effect to the areas of the latent image not covered by the mask. Type should be `KSAMPLER`.
-        - `mask_sampler`: A sampler that applies its effect specifically to the areas of the latent image covered by the mask. Type should be `KSAMPLER`.
-        - `mask`: A binary mask determining the areas of the latent image to be affected by the mask_sampler. Type should be `MASK`.
-    - Outputs:
-        - `latent`: The modified latent image after applying the two sampling processes. Type should be `LATENT`.

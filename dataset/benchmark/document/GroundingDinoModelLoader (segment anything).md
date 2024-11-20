@@ -1,0 +1,5 @@
+- `GroundingDinoModelLoader (segment anything)`: This node is designed to load a specific GroundingDINO model based on the provided model name. It facilitates the utilization of GroundingDINO models for segmentation tasks by preparing the model for inference.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the GroundingDINO model to be loaded. This parameter is crucial as it determines which model will be prepared for the segmentation task. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `grounding_dino_model`: The loaded GroundingDINO model, ready for performing segmentation tasks. Type should be `GROUNDING_DINO_MODEL`.

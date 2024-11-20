@@ -1,0 +1,10 @@
+- `TriangleWave`: The TriangleWave node generates a triangular wave pattern based on the provided parameters. It manipulates the wave's phase, amplitude, and translations along the x and y axes, as well as the current frame to produce a unique wave output.
+    - Inputs:
+        - `phase` (Required): The 'phase' parameter determines the period of the triangular wave, affecting how frequently the wave pattern repeats over a given interval. Type should be `FLOAT`.
+        - `amplitude` (Required): The 'amplitude' parameter specifies the height of the triangular wave, influencing the peak values the wave can reach. Type should be `FLOAT`.
+        - `x_translation` (Required): The 'x_translation' parameter shifts the wave along the x-axis, allowing for horizontal adjustment of the wave's position. Type should be `FLOAT`.
+        - `y_translation` (Required): The 'y_translation' parameter shifts the wave along the y-axis, providing vertical adjustment to the base level of the wave. Type should be `FLOAT`.
+        - `current_frame` (Required): The 'current_frame' parameter indicates the specific point in time for which the wave's value is being calculated, playing a crucial role in the wave's progression. Type should be `INT`.
+    - Outputs:
+        - `float`: The first element of the output tuple, representing the calculated wave value as a float. Type should be `FLOAT`.
+        - `int`: The second element of the output tuple, which is the integer representation of the calculated wave value. Type should be `INT`.

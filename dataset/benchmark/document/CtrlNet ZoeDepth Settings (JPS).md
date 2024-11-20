@@ -1,0 +1,8 @@
+- `CtrlNet ZoeDepth Settings (JPS)`: This node is designed to configure depth settings for a control network, specifically focusing on the ZoeDepth aspect. It allows users to select the depth source, adjust depth strength, and define the start and end points of depth application, providing a customizable depth effect for images.
+    - Inputs:
+        - `zoe_from` (Required): Specifies the source of depth information, allowing selection from predefined options such as Source Image, Support Image, or Support Direct. This choice determines the origin of depth data for processing. Type should be `COMBO[STRING]`.
+        - `zoe_strength` (Required): Controls the intensity of the depth effect, with a range allowing for subtle to pronounced depth enhancements. Type should be `FLOAT`.
+        - `zoe_start` (Required): Defines the starting point of depth application, enabling fine-tuning of where the depth effect begins in the image. Type should be `FLOAT`.
+        - `zoe_end` (Required): Sets the endpoint for depth application, allowing users to specify where the depth effect concludes within the image. Type should be `FLOAT`.
+    - Outputs:
+        - `zoedepth_settings`: Outputs the configured settings for ZoeDepth as a tuple, ready for use in subsequent processing stages. Type should be `BASIC_PIPE`.

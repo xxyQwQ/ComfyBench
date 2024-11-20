@@ -1,0 +1,6 @@
+- `SAIStringRegexSearchMatch`: This node performs a search operation within a given text using a specified regular expression pattern, returning all matches found. It's designed to facilitate complex text analysis and extraction tasks by leveraging the power of regex patterns.
+    - Inputs:
+        - `text_input` (Required): The text in which to search for matches. This input allows for multiline text, enabling searches across complex documents or blocks of text. Type should be `STRING`.
+        - `regex_pattern` (Required): The regular expression pattern used to identify matches within the text input. This pattern defines the criteria for what constitutes a match, allowing for precise and flexible text analysis. Type should be `STRING`.
+    - Outputs:
+        - `matches`: A list of all text segments within the input text that match the specified regular expression pattern. Type should be `LIST`.

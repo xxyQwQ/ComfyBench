@@ -1,0 +1,8 @@
+- `PrepImageForClipVision`: The node PrepImageForClipVision is designed to prepare images for processing by CLIP vision models, adapting them to the specific input requirements of these models for enhanced image understanding and analysis.
+    - Inputs:
+        - `image` (Required): The initial image to be processed, serving as the raw input for feature extraction and encoding. Type should be `IMAGE`.
+        - `interpolation` (Required): The method used for resizing the image, affecting the quality and the way pixels are interpolated. Type should be `COMBO[STRING]`.
+        - `crop_position` (Required): Specifies the position from which the image is cropped, influencing the focus area of the processed image. Type should be `COMBO[STRING]`.
+        - `sharpening` (Required): Determines the level of sharpness applied to the image, enhancing edge definition and detail visibility. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The processed image, optimized for compatibility with CLIP vision models, ready for further analysis or encoding. Type should be `IMAGE`.

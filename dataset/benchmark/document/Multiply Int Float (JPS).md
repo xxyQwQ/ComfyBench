@@ -1,0 +1,7 @@
+- `Multiply Int Float (JPS)`: The `Math_Multiply_INT_FLOAT` node is designed to perform multiplication between an integer and a floating-point number, producing both integer and floating-point results. This node facilitates mathematical operations within a flow, allowing for the combination of different numerical types to achieve precise calculations.
+    - Inputs:
+        - `int_a` (Required): Represents the integer value to be multiplied. Its role is crucial as it determines the scale of the multiplication operation. Type should be `INT`.
+        - `float_b` (Required): Represents the floating-point number to be multiplied with the integer. It allows for fractional scaling in the multiplication process. Type should be `FLOAT`.
+    - Outputs:
+        - `int_multiply`: The integer result of multiplying the input integer and floating-point number. Type should be `INT`.
+        - `float_multiply`: The floating-point result of the multiplication, providing a precise outcome. Type should be `FLOAT`.

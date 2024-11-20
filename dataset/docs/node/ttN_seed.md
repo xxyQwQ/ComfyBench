@@ -1,6 +1,0 @@
-- `ttN seed`: The `ttN_SEED` node is designed to manage and utilize seed values for operations, ensuring consistent and reproducible results across different runs. It serves as a foundational element in processes that require deterministic outcomes.
-    - Parameters:
-        - `seed`: The `seed` parameter is used to set a specific starting point for number generation, enabling deterministic behavior in operations. It plays a crucial role in ensuring reproducibility of results. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `seed`: This output represents the seed value used in the operation, allowing for traceability and reproducibility of the process. Type should be `INT`.

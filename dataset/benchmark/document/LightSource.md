@@ -1,0 +1,12 @@
+- `LightSource`: The LightSource node generates gradient images simulating various lighting effects based on specified parameters. It allows for the creation of dynamic lighting conditions in images, enhancing visual depth and realism.
+    - Inputs:
+        - `light_position` (Required): Specifies the position of the simulated light source within the image, affecting the direction and spread of the light gradient. Type should be `COMBO[STRING]`.
+        - `multiplier` (Required): Adjusts the intensity and spread of the light gradient, enabling finer control over the lighting effect. Type should be `FLOAT`.
+        - `start_color` (Required): Defines the starting color of the light gradient, allowing for customization of the light's appearance. Type should be `STRING`.
+        - `end_color` (Required): Sets the ending color of the light gradient, facilitating the creation of varied lighting effects. Type should be `STRING`.
+        - `width` (Required): Determines the width of the generated gradient image, impacting the overall size of the light effect. Type should be `INT`.
+        - `height` (Required): Specifies the height of the generated gradient image, influencing the scale of the light effect. Type should be `INT`.
+        - `batch_size` (Optional): Controls the number of gradient images generated in a batch, supporting batch processing of light effects. Type should be `INT`.
+        - `prev_image` (Optional): Optionally includes a previous image to be combined with the generated light gradient, enhancing composite image creation. Type should be `IMAGE`.
+    - Outputs:
+        - `IMAGE`: Outputs a gradient image simulating the specified light source effect, ready for further processing or visualization. Type should be `IMAGE`.

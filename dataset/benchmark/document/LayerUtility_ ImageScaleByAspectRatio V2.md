@@ -1,0 +1,18 @@
+- `LayerUtility_ ImageScaleByAspectRatio V2`: This node is designed to adjust the scale of images based on their aspect ratio, offering various scaling options to fit specific dimensions or pixel counts. It provides flexibility in resizing images while maintaining their aspect ratio, catering to different requirements such as scaling to a particular side's length, width, height, or even total pixel count.
+    - Inputs:
+        - `aspect_ratio` (Required): Defines the aspect ratio for scaling the image. It can be an original, custom, or predefined ratio like '1:1', '3:2', etc., which determines the proportional relationship between the image's width and height. Type should be `COMBO[STRING]`.
+        - `proportional_width` (Required): Specifies the width part of the custom aspect ratio, used in conjunction with proportional_height to define a custom aspect ratio. Type should be `INT`.
+        - `proportional_height` (Required): Specifies the height part of the custom aspect ratio, used in conjunction with proportional_width to define a custom aspect ratio. Type should be `INT`.
+        - `fit` (Required): Determines how the image should be fitted into the target dimensions, with options like 'letterbox', 'crop', or 'fill'. Type should be `COMBO[STRING]`.
+        - `method` (Required): Specifies the resizing method to be used, such as 'lanczos', 'bicubic', 'hamming', etc., affecting the quality of the scaled image. Type should be `COMBO[STRING]`.
+        - `round_to_multiple` (Required): Rounds the dimensions of the scaled image to the nearest multiple of a specified number, enhancing compatibility with certain processing or display requirements. Type should be `COMBO[STRING]`.
+        - `scale_to_side` (Required): Specifies the side to which the image should be scaled. It can be the longest or shortest side, width, height, or total pixel count, influencing the final dimensions of the scaled image. Type should be `COMBO[STRING]`.
+        - `scale_to_length` (Required): Determines the target length for the specified side to scale to, directly affecting the image's final dimensions. Type should be `INT`.
+        - `image` (Optional): The input image to be scaled. This parameter is optional and allows for the scaling of an image based on the specified aspect ratio and other parameters. Type should be `IMAGE`.
+        - `mask` (Optional): An optional mask that can be scaled alongside the image, maintaining the same transformations and aspect ratio adjustments. Type should be `MASK`.
+    - Outputs:
+        - `image`: The scaled image, adjusted according to the specified aspect ratio and scaling parameters. Type should be `IMAGE`.
+        - `mask`: The scaled mask, adjusted in accordance with the image's scaling and aspect ratio modifications. Type should be `MASK`.
+        - `original_size`: The original dimensions of the input image before scaling. Type should be `BOX`.
+        - `width`: The width of the scaled image, reflecting the result of the applied scaling parameters. Type should be `INT`.
+        - `height`: The height of the scaled image, reflecting the result of the applied scaling parameters. Type should be `INT`.

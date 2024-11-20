@@ -1,0 +1,5 @@
+- `Render_OpenPose_From_SMPL_Mesh_Multiple_Subjects`: This node is designed to render OpenPose keypoints from multiple SMPL mesh subjects, facilitating the visualization of human poses and movements in a standardized format. It emphasizes the conversion of 3D mesh data into 2D pose representations, enabling a more intuitive understanding of complex human interactions captured by the SMPL model.
+    - Inputs:
+        - `smpl_multi_subjects` (Required): Represents multiple SMPL model subjects, serving as the input for generating OpenPose visualizations. This parameter is crucial for processing and rendering the poses of multiple individuals simultaneously. Type should be `SMPL_MULTIPLE_SUBJECTS`.
+    - Outputs:
+        - `image`: The output is an image representation of OpenPose keypoints, providing a visual summary of human poses derived from the input SMPL meshes. Type should be `IMAGE`.

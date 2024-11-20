@@ -1,6 +1,0 @@
-- `ImageFilterEdgeEnhance`: The node applies an edge enhancement filter to images, accentuating the edges to make the image details more pronounced.
-    - Parameters:
-    - Inputs:
-        - `images`: The images to be processed with the edge enhancement filter. This input is crucial for defining the visual content that will undergo the enhancement process. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed images with enhanced edges, providing a visually sharper appearance. Type should be `IMAGE`.

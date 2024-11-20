@@ -1,0 +1,4 @@
+- `CreateRequestMetadata`: The CreateRequestMetadata node is designed for managing metadata related to request processing within a system. It facilitates the creation, update, and retrieval of request metadata, including the addition of resources to a request's metadata file. This node plays a crucial role in tracking the state and outputs of requests, ensuring that each request's information is accurately recorded and maintained throughout its lifecycle.
+    - Inputs:
+        - `request_id` (Required): The unique identifier for a request. It is crucial for distinguishing between different requests and for tracking the specific metadata associated with each request. Type should be `STRING`.
+    - Outputs:

@@ -1,0 +1,6 @@
+- `SearchAndReplace`: The SearchAndReplace node is designed to modify input text by searching for specific patterns and replacing them with new content, potentially utilizing additional information from JSON inputs to guide the replacement process. This node is part of a utility collection aimed at text manipulation, allowing for dynamic and context-sensitive alterations of text based on predefined rules or mappings.
+    - Inputs:
+        - `text` (Required): The primary text input where search and replacement operations will be performed. It serves as the main content to be manipulated. Type should be `STRING`.
+        - `seed` (Required): A numerical input used to influence the randomness of certain operations within the node, ensuring reproducibility of results. Type should be `INT`.
+    - Outputs:
+        - `string`: The modified text after search and replace operations have been applied. Type should be `STRING`.

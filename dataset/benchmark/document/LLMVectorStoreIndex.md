@@ -1,0 +1,7 @@
+- `LLMVectorStoreIndex`: This node is designed to create and manage a vector store index for language models, facilitating efficient storage, retrieval, and manipulation of vectorized representations of text data. It abstracts the complexities involved in handling large-scale vector data, optimizing for performance and scalability.
+    - Inputs:
+        - `llm_model` (Required): Specifies the language model to be used for generating vector representations. It is crucial for determining the embedding model that will vectorize the text data. Type should be `LLM_MODEL`.
+        - `document` (Required): The text document or a collection of documents to be indexed. This input is essential for generating the vector representations that will be stored in the index. Type should be `DOCUMENT`.
+        - `optional_llm_context` (Optional): An optional context parameter that can be used to provide additional information or settings to the language model during the indexing process. Type should be `LLM_CONTEXT`.
+    - Outputs:
+        - `llm_index`: The generated vector store index, which can be used for subsequent retrieval and manipulation of the vectorized text data. Type should be `LLM_INDEX`.

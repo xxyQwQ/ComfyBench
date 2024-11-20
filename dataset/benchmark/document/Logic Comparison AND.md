@@ -1,0 +1,6 @@
+- `Logic Comparison AND`: The Logic Comparison AND node performs a logical AND operation on two boolean inputs, returning the result of this operation as a boolean output. This node is part of the WAS Suite/Logic category and is designed to facilitate logical operations within workflows, enabling conditional logic and decision-making based on boolean values.
+    - Inputs:
+        - `boolean_a` (Required): The first boolean input for the AND operation. Its value significantly influences the outcome, as the operation requires both inputs to be true for a true result. Type should be `BOOLEAN`.
+        - `boolean_b` (Required): The second boolean input for the AND operation. Together with boolean_a, it determines the result of the AND operation, which is true only if both inputs are true. Type should be `BOOLEAN`.
+    - Outputs:
+        - `boolean`: The boolean result of the logical AND operation between boolean_a and boolean_b. Type should be `BOOLEAN`.

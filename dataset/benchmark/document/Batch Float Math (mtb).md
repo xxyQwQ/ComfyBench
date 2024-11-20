@@ -1,0 +1,6 @@
+- `Batch Float Math (mtb)`: Provides mathematical operations on batches of floating-point numbers, enabling complex computations and manipulations of data sets in a batch processing manner.
+    - Inputs:
+        - `reverse` (Required): Determines the order in which the batches of floats are processed. When set to true, the batches are processed in reverse order, affecting the outcome of the operation. Type should be `BOOLEAN`.
+        - `operation` (Required): Specifies the mathematical operation to be applied to the batches of floats, such as addition, subtraction, multiplication, division, power, or absolute value. This choice directly influences the result of the computation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `floats`: The result of applying the specified mathematical operation on the input batch of floats. Type should be `FLOATS`.

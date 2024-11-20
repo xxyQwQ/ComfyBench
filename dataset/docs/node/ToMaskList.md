@@ -1,6 +1,0 @@
-- `ToMaskList`: The ToMaskList node is designed to convert a collection of inputs into a list of masks. This node plays a crucial role in organizing and preparing mask data for further processing or manipulation within a pipeline, ensuring that data is in the correct format for subsequent nodes that require mask inputs.
-    - Parameters:
-        - `inputs_len`: The 'inputs_len' parameter represents the collection of inputs that are to be converted into a list of masks. This parameter is essential for the node's operation as it directly influences the composition of the output mask list, determining the data that will be available for further processing. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `mask`: The output is a list of masks, structured to facilitate further operations that involve mask data within the pipeline. Type should be `MASK`.

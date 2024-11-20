@@ -1,0 +1,10 @@
+- `Triangle Curve [Dream]`: The Triangle Curve node generates a triangular waveform based on the current frame's time, allowing for the creation of animations with linear ascending and descending values within a specified periodicity and phase. This node is ideal for creating cyclic animations with a clear, predictable pattern.
+    - Inputs:
+        - `frame_counter` (Required): Represents the current frame in the animation, used to calculate the current time in seconds for waveform generation. Type should be `FRAME_COUNTER`.
+        - `max_value` (Required): The maximum value the triangle wave can reach, defining the peak of the waveform. Type should be `FLOAT`.
+        - `min_value` (Required): The minimum value the triangle wave can reach, defining the trough of the waveform. Type should be `FLOAT`.
+        - `periodicity_seconds` (Required): The duration in seconds for one complete cycle of the triangle wave, determining its frequency. Type should be `FLOAT`.
+        - `phase` (Required): Adjusts the starting point of the wave within its cycle, allowing for phase shifts in the waveform. Type should be `FLOAT`.
+    - Outputs:
+        - `FLOAT`: The calculated float value of the triangle wave at the current frame's time. Type should be `FLOAT`.
+        - `INT`: The integer representation of the calculated triangle wave value, rounded to the nearest whole number. Type should be `INT`.

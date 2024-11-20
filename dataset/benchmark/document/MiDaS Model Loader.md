@@ -1,0 +1,5 @@
+- `MiDaS Model Loader`: The MiDaS Model Loader node is designed to load and prepare the MiDaS model for depth estimation tasks. It handles the installation of necessary dependencies, model selection based on input, and the application of appropriate transformations for input images.
+    - Inputs:
+        - `midas_model` (Required): Specifies the version of the MiDaS model to be loaded. The choice of model affects the depth estimation accuracy and performance. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `midas_model`: Returns the loaded MiDaS model and the transformation function required for preparing input images for depth estimation. Type should be `MIDAS_MODEL`.

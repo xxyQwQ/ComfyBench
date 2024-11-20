@@ -1,9 +1,0 @@
-- `StableCascade_StageC_VAEEncode`: This node is designed to encode images into a compressed latent representation using a VAE model, with an adjustable level of compression. It facilitates the transformation of visual data into a more compact form, enabling efficient processing and manipulation in latent space.
-    - Parameters:
-        - `compression`: The level of compression applied to the image before encoding. It affects the resolution of the output latent representation. Type should be `INT`.
-    - Inputs:
-        - `image`: The image to be encoded into latent space. It serves as the visual input that the node compresses into a latent representation. Type should be `IMAGE`.
-        - `vae`: The VAE model used for encoding the image. It determines the method and quality of the compression into latent space. Type should be `VAE`.
-    - Outputs:
-        - `stage_c`: The compressed latent representation of the image, specifically for stage C of the cascade process. Type should be `LATENT`.
-        - `stage_b`: A placeholder latent representation for stage B, initialized to zeros. Type should be `LATENT`.

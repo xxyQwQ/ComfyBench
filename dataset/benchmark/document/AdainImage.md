@@ -1,0 +1,7 @@
+- `AdainImage`: The AdainImage node applies the Adaptive Instance Normalization (AdaIN) technique to a batch of images, using a reference image to adjust the style of the input images. This process involves normalizing the input images based on the statistical properties (mean and standard deviation) of the reference image, allowing for style transfer at a given intensity level.
+    - Inputs:
+        - `images` (Required): The input images to be stylized. These are the primary subjects for the style transfer process. Type should be `IMAGE`.
+        - `reference` (Required): The reference image used to derive style characteristics (mean and standard deviation) for the style transfer. Type should be `IMAGE`.
+        - `factor` (Required): A factor controlling the intensity of the style transfer, allowing for blending between the original and stylized images. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The stylized images, after applying the Adaptive Instance Normalization technique. Type should be `IMAGE`.

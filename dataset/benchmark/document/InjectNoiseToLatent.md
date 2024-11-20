@@ -1,0 +1,12 @@
+- `InjectNoiseToLatent`: The InjectNoiseToLatent node is designed to modify the latent representations by injecting noise into them. This process can include averaging the original and noise latents, scaling the noise by a strength factor, normalizing the resulting latent, applying a mask to selectively inject noise, and optionally mixing in random noise. The node aims to enhance or alter the characteristics of the latent space for various generative tasks, such as image synthesis or manipulation.
+    - Inputs:
+        - `latents` (Required): The original latent representations to which noise will be added. This input is crucial for defining the base structure that the noise will modify. Type should be `LATENT`.
+        - `strength` (Required): A factor that scales the noise before it is added to the latents, allowing for control over the intensity of the noise injection. Type should be `FLOAT`.
+        - `noise` (Required): The noise tensor to be injected into the latents, providing the variability or perturbation. Type should be `LATENT`.
+        - `normalize` (Required): A boolean flag indicating whether the noised latent should be normalized, affecting the distribution of the final output. Type should be `BOOLEAN`.
+        - `average` (Required): Determines if the noise should be averaged with the original latents, offering a method to blend rather than solely add noise. Type should be `BOOLEAN`.
+        - `mask` (Optional): An optional mask to apply selective noise injection, allowing for targeted alterations in the latent space. Type should be `MASK`.
+        - `mix_randn_amount` (Optional): The amount of random noise to mix into the noised latent, introducing additional randomness. Type should be `FLOAT`.
+        - `seed` (Optional): An optional seed for generating random noise, ensuring reproducibility when desired. Type should be `INT`.
+    - Outputs:
+        - `latent`: The modified latent representations after noise injection, reflecting the applied changes. Type should be `LATENT`.

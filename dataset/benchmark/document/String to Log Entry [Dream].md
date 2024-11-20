@@ -1,0 +1,6 @@
+- `String to Log Entry [Dream]`: The 'String to Log Entry' node is designed to convert a given text string into a log entry, optionally prefixed with a label. This functionality is essential for logging and tracking purposes within a system, allowing for the structured recording of textual data.
+    - Inputs:
+        - `text` (Required): The 'text' parameter is the primary content to be logged. It serves as the core information that will be recorded in the log entry. Type should be `STRING`.
+        - `label` (Optional): The 'label' parameter is an optional prefix for the text content. When provided, it categorizes or provides context to the log entry, enhancing its informational value. Type should be `STRING`.
+    - Outputs:
+        - `log_entry`: The output 'log_entry' is a structured representation of the input text, potentially prefixed with a label, formatted as a log entry for recording or tracking purposes. Type should be `LOG_ENTRY`.

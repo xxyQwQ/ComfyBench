@@ -1,0 +1,14 @@
+- `Image Shadows and Highlights`: This node is designed to adjust the shadows and highlights within an image, enhancing its visual quality by modifying the intensity of its darker and lighter areas. It leverages advanced image processing techniques to isolate and manipulate these regions, offering a refined control over the image's contrast and overall appearance.
+    - Inputs:
+        - `image` (Required): The input image to be processed. This image will undergo adjustments to its shadows and highlights based on the specified thresholds and factors, significantly altering its visual dynamics. Type should be `IMAGE`.
+        - `shadow_threshold` (Required): Defines the intensity threshold below which pixels are considered shadows. Adjusting this value allows for more precise control over which areas of the image are darkened. Type should be `FLOAT`.
+        - `shadow_factor` (Required): Determines the degree to which the shadows in the image are darkened or lightened. A higher factor increases the intensity of the shadows. Type should be `FLOAT`.
+        - `shadow_smoothing` (Required): Applies a smoothing effect to the shadow regions, reducing harsh edges and creating a more natural transition. Type should be `FLOAT`.
+        - `highlight_threshold` (Required): Defines the intensity threshold above which pixels are considered highlights. Adjusting this value allows for more precise control over which areas of the image are brightened. Type should be `FLOAT`.
+        - `highlight_factor` (Required): Determines the degree to which the highlights in the image are brightened or dimmed. A higher factor increases the intensity of the highlights. Type should be `FLOAT`.
+        - `highlight_smoothing` (Required): Applies a smoothing effect to the highlight regions, reducing harsh edges and creating a more natural transition. Type should be `FLOAT`.
+        - `simplify_isolation` (Required): Controls the simplification of the isolation process for shadows and highlights, potentially improving performance at the cost of precision. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The processed image with adjusted shadows and highlights, reflecting the specified modifications to enhance visual quality. Type should be `IMAGE`.
+        - `shadow_map`: A tensor representing the isolated shadows within the original image, adjusted according to the specified parameters. Type should be `IMAGE`.
+        - `highlight_map`: A tensor representing the isolated highlights within the original image, adjusted according to the specified parameters. Type should be `IMAGE`.

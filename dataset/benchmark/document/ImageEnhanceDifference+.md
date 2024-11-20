@@ -1,0 +1,7 @@
+- `ImageEnhanceDifference+`: This node is designed to enhance and highlight the differences between two images by applying a power transformation. It is useful for visualizing changes or discrepancies between two images in a more pronounced manner.
+    - Inputs:
+        - `image1` (Required): The first image to compare. It serves as the baseline for the comparison. Type should be `IMAGE`.
+        - `image2` (Required): The second image to compare against the first. This image is adjusted to match the dimensions of the first image if necessary. Type should be `IMAGE`.
+        - `exponent` (Required): A factor that controls the intensity of the enhancement. Higher values increase the contrast of the differences. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The enhanced difference image, highlighting discrepancies between the input images. Type should be `IMAGE`.

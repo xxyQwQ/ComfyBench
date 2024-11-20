@@ -1,0 +1,11 @@
+- `Image Padding`: The Image Padding node is designed to modify the spatial dimensions of an image by adding padding around its edges. This process can include creating feathered edges for a smoother transition between the image and the padding, as well as applying additional transformations to ensure the padded image maintains its visual integrity. The node can handle various padding configurations and is capable of generating a mask to highlight the padded areas.
+    - Inputs:
+        - `image` (Required): The original image to which padding will be applied. This is the primary input over which all padding and feathering operations are performed. Type should be `IMAGE`.
+        - `feathering` (Required): Determines the radius of the feathering effect applied at the edges of the padding, creating a smooth transition between the image and the padding. Type should be `INT`.
+        - `feather_second_pass` (Required): A boolean flag indicating whether a second pass of padding adjustments should be applied, potentially refining the padding process for better visual results. Type should be `COMBO[STRING]`.
+        - `left_padding` (Required): Specifies the width of the padding to be added to the left side of the image. This parameter directly influences the horizontal dimension of the resulting image. Type should be `INT`.
+        - `right_padding` (Required): Specifies the width of the padding to be added to the right side of the image. This parameter directly influences the horizontal dimension of the resulting image. Type should be `INT`.
+        - `top_padding` (Required): Specifies the height of the padding to be added to the top of the image. This parameter directly influences the vertical dimension of the resulting image. Type should be `INT`.
+        - `bottom_padding` (Required): Specifies the height of the padding to be added to the bottom of the image. This parameter directly influences the vertical dimension of the resulting image. Type should be `INT`.
+    - Outputs:
+        - `image`: The resulting image after padding has been applied, potentially including a feathered edge for smoother transitions. Type should be `IMAGE`.

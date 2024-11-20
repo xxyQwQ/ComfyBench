@@ -1,0 +1,7 @@
+- `ImageFromBatch`: The ImageFromBatch node is designed to extract a specific segment of images from a larger batch based on a given index and length. This functionality is crucial for operations that require processing or analyzing subsets of images within a batch, enabling targeted manipulation or inspection of images.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the batch of images from which a subset will be extracted. It is crucial for specifying the source batch. Type should be `IMAGE`.
+        - `batch_index` (Required): The 'batch_index' parameter specifies the starting index within the batch from which the extraction begins, allowing for precise selection of the subset. Type should be `INT`.
+        - `length` (Required): The 'length' parameter determines the number of images to extract from the specified starting index, enabling control over the size of the resulting subset. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a subset of images extracted from the original batch, based on the specified 'batch_index' and 'length'. Type should be `IMAGE`.

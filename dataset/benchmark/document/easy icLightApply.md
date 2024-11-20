@@ -1,0 +1,12 @@
+- `easy icLightApply`: This node applies the ICLight model to enhance or modify the lighting of an image based on the specified mode. It leverages advanced image processing techniques to adjust the lighting conditions of the input image, making it suitable for various applications such as image editing, enhancement, and realistic rendering.
+    - Inputs:
+        - `mode` (Required): Specifies the lighting mode to apply to the image, offering options like left light, right light, top light, etc., to simulate different lighting conditions. Type should be `COMBO[STRING]`.
+        - `model` (Required): The model to be used for the lighting adjustment process. Type should be `MODEL`.
+        - `image` (Required): The input image to which the lighting effects will be applied. Type should be `IMAGE`.
+        - `vae` (Required): A variational autoencoder used for encoding the image before applying the lighting effects. Type should be `VAE`.
+        - `lighting` (Required): Defines the specific lighting effect to be applied. Type should be `COMBO[STRING]`.
+        - `source` (Required): Specifies the source mode for generating the lighting image. Type should be `COMBO[STRING]`.
+        - `remove_bg` (Required): Indicates whether the background of the image should be removed before applying the lighting effects. Type should be `BOOLEAN`.
+    - Outputs:
+        - `model`: The model used after applying the lighting effects. Type should be `MODEL`.
+        - `lighting_image`: The output image with the applied lighting effects. Type should be `IMAGE`.

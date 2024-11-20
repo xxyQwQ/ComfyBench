@@ -1,0 +1,7 @@
+- `SystemNotification_pysssss`: The SystemNotification node is designed to facilitate the creation and management of system notifications, allowing for customizable messages and modes of operation. It abstracts the complexity of handling system alerts, providing a straightforward way to notify users based on specific conditions or system states.
+    - Inputs:
+        - `message` (Required): Specifies the default message to be displayed in the notification. This parameter allows for customization of the notification content, tailoring it to specific needs or contexts. Type should be `STRING`.
+        - `any` (Required): Acts as a wildcard input, enabling flexible and dynamic handling of notifications without strict parameter constraints. Type should be `*`.
+        - `mode` (Required): Determines the conditions under which the notification is triggered, offering options for always displaying or conditionally based on the system's state. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `*`: unknown Type should be `*`.

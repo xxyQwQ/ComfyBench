@@ -1,9 +1,0 @@
-- `CR Text List`: This node is designed to transform a multiline text input into a list of strings, each representing a line of text, starting from a specified index and up to a maximum number of rows. It also provides a link to further help or documentation related to its functionality.
-    - Parameters:
-        - `multiline_text`: The multiline text to be split into a list. This input allows for the dynamic creation of lists based on textual content, enabling flexible list manipulation and processing. Type should be `STRING`.
-        - `start_index`: Specifies the starting index from which to begin extracting lines from the multiline text. This allows for selective list creation, enhancing the node's versatility in handling text data. Type should be `INT`.
-        - `max_rows`: Defines the maximum number of rows to include in the output list, allowing for control over the list's size and content. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `STRING`: The output is a list of strings derived from the input multiline text, segmented according to the specified start index and maximum rows. Type should be `STRING`.
-        - `show_help`: Provides a URL to further help or documentation, aiding users in understanding and utilizing the node's functionality. Type should be `STRING`.

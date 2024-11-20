@@ -1,0 +1,5 @@
+- `JWImageBatchCount`: This node calculates the total number of images in a given batch, providing a simple way to determine the size of an image batch.
+    - Inputs:
+        - `images` (Required): The tensor containing a batch of images. It is crucial for determining the total count of images within the batch. Type should be `IMAGE`.
+    - Outputs:
+        - `int`: The total number of images present in the input batch. Type should be `INT`.

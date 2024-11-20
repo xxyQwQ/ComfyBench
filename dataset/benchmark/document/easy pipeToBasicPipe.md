@@ -1,0 +1,5 @@
+- `easy pipeToBasicPipe`: The `pipeToBasicPipe` node is designed to transform a complex pipeline configuration into a simplified basic pipeline structure. It extracts essential components from the input pipeline, such as model, clip, vae, and conditioning information, and repackages them into a more streamlined format suitable for further processing or analysis.
+    - Inputs:
+        - `pipe` (Required): The `pipe` parameter represents the complex pipeline configuration that is to be simplified. It is essential for determining the components to be extracted and included in the basic pipeline. Type should be `PIPE_LINE`.
+    - Outputs:
+        - `basic_pipe`: The output is a simplified version of the input pipeline, containing only the essential components such as model, clip, vae, and conditioning information. Type should be `BASIC_PIPE`.

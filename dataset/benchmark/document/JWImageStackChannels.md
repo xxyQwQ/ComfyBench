@@ -1,0 +1,6 @@
+- `JWImageStackChannels`: This node is designed to stack two image tensors along their channel dimension, effectively combining them into a single tensor that retains the information from both input images.
+    - Inputs:
+        - `image_a` (Required): The first image tensor to be stacked. It plays a crucial role in the stacking operation as it is combined with the second image tensor to form a single output tensor. Type should be `IMAGE`.
+        - `image_b` (Required): The second image tensor to be stacked alongside the first. Its combination with the first image tensor results in a new tensor that encapsulates the data from both images. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The output is a single image tensor that results from stacking the two input image tensors along their channel dimension. Type should be `IMAGE`.

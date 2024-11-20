@@ -1,7 +1,0 @@
-- `VAE Switch (JPS)`: The VAE Switch node is designed to select and output one of several provided Variational Autoencoder (VAE) models based on an integer selection input. It facilitates dynamic switching between different VAE models within a pipeline, allowing for flexible model selection during runtime.
-    - Parameters:
-        - `select`: Determines which VAE model to output, with each integer value corresponding to a specific VAE model input. Type should be `INT`.
-    - Inputs:
-        - `vae_i`: Represents a generic VAE model input that can be selected for output. The index 'i' can range from 1 to 5, allowing for dynamic selection among multiple VAE models. Type should be `VAE`.
-    - Outputs:
-        - `vae_out`: The selected VAE model based on the 'select' input. Type should be `VAE`.

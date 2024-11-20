@@ -1,0 +1,5 @@
+- `IPAdapterCombineParams`: This node is designed to combine multiple sets of parameters for IP adapters, allowing for the flexible integration of various input parameters into a single, unified set. It supports the aggregation of images, attention masks, weights, weight types, and start and end points from up to five different parameter sets, facilitating complex parameter management and customization in image processing tasks.
+    - Inputs:
+        - `params_i` (Required): A set of parameters to be combined. This generalized parameter name represents any of the up to five sets of parameters (params_1 to params_5) that can be provided. Each set contributes to the overall aggregation, enriching the combined parameters with its values. The index 'i' ranges from 1 to 5, indicating the position of the parameter set in the combination process. Type should be `IPADAPTER_PARAMS`.
+    - Outputs:
+        - `ipadapter_params`: The resulting combined set of parameters, encompassing aggregated values from up to five input parameter sets. This unified parameter set is ready for use in further image processing tasks. Type should be `IPADAPTER_PARAMS`.

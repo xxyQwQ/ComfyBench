@@ -1,9 +1,0 @@
-- `Latent Batch`: This node is designed to merge two sets of latent representations into a single batch, potentially resizing one set to match the dimensions of the other before concatenation. It plays a crucial role in operations that require combining or comparing different sets of latent data.
-    - Parameters:
-    - Inputs:
-        - `latent_a`: The first set of latent samples to be batched. It is crucial as it sets the base dimensions for the output batch if resizing is needed. Type should be `LATENT`.
-        - `latent_b`: The second set of latent samples to be batched. This set may be resized to match the dimensions of the first set before concatenation. Type should be `LATENT`.
-        - `latent_c`: An optional third set of latent samples that can be included in the batch. Similar to the other inputs, it may be resized to ensure consistency in dimensions. Type should be `LATENT`.
-        - `latent_d`: An optional fourth set of latent samples for inclusion in the batch. It may also be resized for dimensional consistency with the other sets. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The combined set of latent samples from all input sets, potentially with some sets resized to match others' dimensions. Type should be `LATENT`.

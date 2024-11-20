@@ -1,7 +1,0 @@
-- `LLMMboxReader`: The LLMMboxReader node specializes in reading email files and converting them into a structured document format, leveraging the capabilities of the llama_index Document model. It is designed to facilitate the processing and analysis of email data by transforming mbox files into a more accessible and analyzable form.
-    - Parameters:
-        - `path`: Specifies the filesystem path to the mbox file to be read. This path is essential for locating and accessing the file for processing. Type should be `STRING`.
-        - `extra_info`: Provides additional, optional information in a string format that can be used to influence the reading process or handle specific requirements for processing the mbox file. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `documents`: Returns the processed email data from the mbox file as a structured document, ready for further analysis or manipulation. Type should be `DOCUMENT`.

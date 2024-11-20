@@ -1,0 +1,7 @@
+- `Big Int Switch [Dream]`: The Big Int Switch node is designed to selectively output an integer value based on a specified selection criterion. It facilitates dynamic decision-making within data flows by allowing the selection of an integer from a predefined set based on input conditions.
+    - Inputs:
+        - `select` (Required): Specifies the index of the integer to be selected. It plays a crucial role in determining which integer value is output by the node, based on the selection logic implemented. Type should be `INT`.
+        - `on_missing` (Required): Defines the behavior of the node when the selected integer is missing. This parameter ensures that the node can gracefully handle cases where the desired integer is not available, by specifying an alternative selection strategy. Type should be `COMBO[STRING]`.
+        - `input_i` (Optional): Represents one of the potential integer values that can be selected. This parameter is part of a series (input_0 to input_9) that collectively define the set of integers from which the node can choose, based on the selection criteria. Type should be `INT`.
+    - Outputs:
+        - `selected`: The integer value that has been selected based on the input criteria. This output reflects the decision made by the node in selecting one integer from the available options. Type should be `INT`.

@@ -1,0 +1,6 @@
+- `Save Image If True`: This node conditionally saves an image to disk based on a specified condition. It leverages a separate saving mechanism to store the image with optional metadata and a filename prefix if the condition is met.
+    - Inputs:
+        - `image` (Required): The image to potentially save. It is central to the node's operation as it determines what content is subject to conditional saving. Type should be `IMAGE`.
+        - `save_condition` (Required): A binary condition that dictates whether the image should be saved (1) or not (0). This condition is crucial for the node's selective saving functionality. Type should be `INT`.
+        - `filename_prefix` (Required): An optional prefix for the saved filename, allowing for organized storage and easy retrieval of saved images. Type should be `STRING`.
+    - Outputs:

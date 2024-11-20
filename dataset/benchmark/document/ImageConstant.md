@@ -1,0 +1,10 @@
+- `ImageConstant`: The ImageConstant node is designed to generate images of a constant color. It allows for the specification of the color in RGB format, along with the image dimensions and batch size, enabling the creation of multiple images with the same color specifications in a single operation.
+    - Inputs:
+        - `width` (Required): Specifies the width of the generated images. It influences the horizontal dimension of the output images. Type should be `INT`.
+        - `height` (Required): Determines the height of the generated images, affecting their vertical dimension. Type should be `INT`.
+        - `batch_size` (Required): Indicates the number of images to generate in one batch, allowing for multiple images to be created at once. Type should be `INT`.
+        - `red` (Required): Sets the red component of the constant color for the generated images. Type should be `FLOAT`.
+        - `green` (Required): Defines the green component of the constant color for the generated images. Type should be `FLOAT`.
+        - `blue` (Required): Specifies the blue component of the constant color for the generated images. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output is an image or a batch of images with the specified constant color in RGB format. Type should be `IMAGE`.

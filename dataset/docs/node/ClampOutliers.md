@@ -1,7 +1,0 @@
-- `ClampOutliers`: The ClampOutliers node is designed to adjust the values of latent representations by clamping outliers based on a specified standard deviation threshold. This process aims to normalize the data, reducing the impact of extreme values on the overall distribution.
-    - Parameters:
-        - `std_dev`: The 'std_dev' parameter specifies the threshold for clamping based on standard deviations from the mean. It controls the extent to which outliers are adjusted, impacting the normalization of the data. Type should be `FLOAT`.
-    - Inputs:
-        - `latents`: The 'latents' parameter represents the latent representations to be adjusted. It is crucial for determining which data points are considered outliers and subsequently clamped. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: Returns the adjusted latent representations with outliers clamped according to the specified standard deviation threshold. Type should be `LATENT`.

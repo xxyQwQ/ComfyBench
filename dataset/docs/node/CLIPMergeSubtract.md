@@ -1,8 +1,0 @@
-- `CLIPMergeSubtract`: The CLIPMergeSubtract node is designed for advanced model merging operations, specifically to subtract one CLIP model from another, adjusted by a multiplier. This node enables the customization of CLIP models by selectively subtracting features or weights from one model based on another, facilitating the creation of new, modified CLIP models.
-    - Parameters:
-        - `multiplier`: A multiplier that adjusts the scale of subtraction, allowing for fine-tuning of the extent to which features from the second model are subtracted from the first. Type should be `FLOAT`.
-    - Inputs:
-        - `clip1`: The first CLIP model to be used in the subtraction operation. It serves as the base model from which features will be subtracted. Type should be `CLIP`.
-        - `clip2`: The second CLIP model whose features will be subtracted from the first model. This model provides the features or weights to be subtracted. Type should be `CLIP`.
-    - Outputs:
-        - `clip`: The resulting CLIP model after subtracting features from the first model based on the second model, adjusted by the multiplier. Type should be `CLIP`.

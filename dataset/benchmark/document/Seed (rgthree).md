@@ -1,0 +1,5 @@
+- `Seed (rgthree)`: The Seed node is designed to manage and generate random seeds for operations, ensuring reproducibility and uniqueness in processes that require randomization. It can return a predefined seed, generate a new random seed, or modify the seed based on specific conditions, while also handling metadata updates related to seed information.
+    - Inputs:
+        - `seed` (Required): The 'seed' parameter is crucial for determining the starting point of randomness. It can either use a predefined seed or trigger the generation of a new random seed, affecting the node's output and ensuring reproducibility of results. Type should be `INT`.
+    - Outputs:
+        - `SEED`: Outputs the seed used or generated during the node's execution, which is essential for ensuring the reproducibility of the randomness in processes. Type should be `INT`.

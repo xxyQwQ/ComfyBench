@@ -1,0 +1,5 @@
+- `ImpactLogger`: The ImpactLogger node is designed for logging and debugging purposes within the ImpactPack framework. It captures and prints data, text, and additional information related to the execution of nodes, facilitating the monitoring and troubleshooting of workflows.
+    - Inputs:
+        - `data` (Required): The primary data input for logging. This can be of any type and is central to what the logger will output, showcasing the node's flexibility in handling various data forms. Type should be `*`.
+        - `text` (Required): A text input that allows for multiline strings, providing context or additional information to be logged alongside the data. Type should be `STRING`.
+    - Outputs:

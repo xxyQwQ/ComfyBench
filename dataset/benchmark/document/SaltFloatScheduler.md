@@ -1,0 +1,14 @@
+- `SaltFloatScheduler`: The SaltFloatScheduler node is designed for creating and managing float schedules, which are sequences of floating-point numbers that can be used to control various parameters over time. This node likely offers functionality to define, adjust, and iterate over these float schedules, providing a flexible tool for temporal parameter manipulation in audio-visual projects.
+    - Inputs:
+        - `repeat_sequence_times` (Required): Specifies the number of times the sequence should be repeated, affecting the overall length and repetition pattern of the float schedule. Type should be `INT`.
+        - `curves_mode` (Required): Determines the mode of curve application for the float schedule, influencing how the values interpolate or transition between points in the schedule. Type should be `COMBO[STRING]`.
+        - `use_perlin_tremors` (Required): Indicates whether Perlin noise-based tremors should be applied to the float schedule, adding a layer of complexity and variability to the schedule's progression. Type should be `BOOLEAN`.
+        - `tremor_scale` (Required): Sets the scale of the Perlin tremors, affecting the granularity and frequency of the noise applied to the float schedule. Type should be `FLOAT`.
+        - `tremor_octaves` (Required): Defines the number of octaves for the Perlin tremors, influencing the detail and layering of the noise effect on the float schedule. Type should be `INT`.
+        - `tremor_persistence` (Required): Controls the persistence of the Perlin tremors, determining the amplitude's decay rate across octaves in the float schedule. Type should be `FLOAT`.
+        - `tremor_lacunarity` (Required): Specifies the lacunarity of the Perlin tremors, affecting the frequency growth per octave in the float schedule. Type should be `FLOAT`.
+        - `sequence` (Required): The sequence of values to be scheduled, serving as the base for the float schedule before any modifications or enhancements. Type should be `STRING`.
+        - `max_sequence_length` (Optional): Limits the maximum length of the float schedule, ensuring that the sequence does not exceed a specified number of elements. Type should be `INT`.
+    - Outputs:
+        - `schedule_list`: The resulting float schedule after applying the specified parameters and modifications, ready for use in controlling parameters over time. Type should be `LIST`.
+        - `schedule_length`: The length of the generated float schedule, providing information on the total number of elements in the schedule. Type should be `INT`.

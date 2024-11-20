@@ -1,9 +1,0 @@
-- `VAEDecodeTiled_TiledDiffusion`: This node specializes in decoding latent representations into images using a tiled approach, enhancing the efficiency and quality of the decoding process, especially for large images. It leverages a variable tile size to optimize the decoding process, accommodating different computational constraints and image dimensions.
-    - Parameters:
-        - `tile_size`: Specifies the size of the tiles used in the decoding process. Adjusting this parameter can optimize decoding performance and output quality. Type should be `INT`.
-        - `fast`: A boolean flag that, when enabled, accelerates the decoding process by potentially compromising on the output quality. Type should be `BOOLEAN`.
-    - Inputs:
-        - `samples`: The latent representation to be decoded into an image. This input is crucial for determining the content and quality of the output image. Type should be `LATENT`.
-        - `vae`: The variational autoencoder model used for the decoding process. This model is essential for transforming the latent representation back into pixel data. Type should be `VAE`.
-    - Outputs:
-        - `image`: The decoded image, reconstructed from the latent representation using the specified VAE model and tile size. Type should be `IMAGE`.

@@ -1,0 +1,6 @@
+- `ConcatConditioningsWithMultiplier __Inspire`: This node is designed to concatenate multiple conditioning inputs, each potentially modified by a corresponding multiplier, into a single conditioning output. It primarily serves to enhance or modify the conditioning context for generative models by adjusting the strength of individual conditionings before combining them.
+    - Inputs:
+        - `conditioning1` (Required): The primary conditioning input to which additional conditionings will be concatenated. This conditioning serves as the base for subsequent modifications and concatenations. Type should be `CONDITIONING`.
+        - `multiplier1` (Optional): A multiplier to adjust the strength of the primary conditioning input. This allows for fine-tuning the influence of the primary conditioning on the overall output. Type should be `FLOAT`.
+    - Outputs:
+        - `conditioning`: The resulting conditioning after concatenating and adjusting the strength of multiple conditionings. It represents a modified or enhanced context for generative models. Type should be `CONDITIONING`.

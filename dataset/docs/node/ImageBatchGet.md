@@ -1,7 +1,0 @@
-- `ImageBatchGet`: The `ImageBatchGet` node is designed for extracting a specific image from a batch of images based on a given index. It simplifies the process of handling image batches by allowing selective retrieval of images, which can be particularly useful in scenarios where only a subset of the batch is needed for further processing or analysis.
-    - Parameters:
-        - `index`: The `index` parameter specifies the position of the image to be extracted from the batch. It is essential for pinpointing the exact image within the batch that is required for further operations. Type should be `INT`.
-    - Inputs:
-        - `images`: The `images` parameter represents the batch of images from which a specific image is to be retrieved. It plays a crucial role in determining the source of the image extraction. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: This output is the extracted image from the specified index within the batch. It enables focused manipulation or analysis of individual images from a larger collection. Type should be `IMAGE`.

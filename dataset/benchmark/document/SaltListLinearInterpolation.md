@@ -1,0 +1,7 @@
+- `SaltListLinearInterpolation`: The SaltListLinearInterpolation node is designed to perform linear interpolation between two lists of schedule values based on a specified interpolation factor. This node is essential for creating smooth transitions between different states or values in a schedule, allowing for the generation of intermediate states that blend elements from both input lists according to the interpolation factor.
+    - Inputs:
+        - `schedule_list_a` (Required): The first list of schedule values to interpolate from. It serves as the starting point for the interpolation process. Type should be `LIST`.
+        - `schedule_list_b` (Required): The second list of schedule values to interpolate towards. It acts as the target endpoint for the interpolation process. Type should be `LIST`.
+        - `interpolation_factor` (Required): A floating-point value between 0.0 and 1.0 that determines the weight of the interpolation, influencing how much of each input list is reflected in the output. Type should be `FLOAT`.
+    - Outputs:
+        - `schedule_list`: The resulting list of interpolated schedule values, blending elements from both input lists according to the specified interpolation factor. Type should be `LIST`.

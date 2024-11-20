@@ -1,0 +1,8 @@
+- `FL_Glitch`: The FL_Glitch node applies a digital glitch effect to images, optionally incorporating color offsets and controlled by a seed for reproducibility. It processes a batch of images, applying a glitch effect that distorts the visual content in a stylistic manner, and provides progress updates during processing.
+    - Inputs:
+        - `images` (Required): The 'images' parameter is a collection of images to which the glitch effect will be applied. It is essential for defining the input data that will undergo the glitch transformation process. Type should be `IMAGE`.
+        - `glitch_amount` (Optional): The 'glitch_amount' parameter controls the intensity of the glitch effect applied to the images. It plays a crucial role in determining the extent of visual distortion. Type should be `FLOAT`.
+        - `color_offset` (Optional): The 'color_offset' parameter enables or disables color offsetting in the glitch effect, adding an additional layer of visual manipulation. Type should be `COMBO[STRING]`.
+        - `seed` (Optional): The 'seed' parameter ensures the reproducibility of the glitch effects applied to the images, allowing for consistent results across different runs. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a tensor of images that have been processed to include a digital glitch effect, potentially with color offsets, depending on the input parameters. Type should be `IMAGE`.

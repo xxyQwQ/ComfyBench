@@ -1,0 +1,13 @@
+- `FacialPartColoringFromPoseKps`: This node is designed to colorize specific facial parts in pose keypoints data, allowing for visual differentiation and analysis of facial features based on pose estimation. It utilizes facial keypoints to draw or fill specified parts with colors, supporting customization of part colors and rendering modes.
+    - Inputs:
+        - `pose_kps` (Required): The pose keypoints data, which includes positions of various facial and body keypoints for one or more individuals. This data is essential for determining the facial parts to be colorized. Type should be `POSE_KEYPOINT`.
+        - `mode` (Required): Specifies the rendering mode for the facial parts, either as points or filled polygons, affecting the visual representation of the colorized keypoints. Type should be `COMBO[STRING]`.
+        - `skin` (Required): Specifies the color for the skin facial part. Type should be `STRING`.
+        - `left_eye` (Required): Specifies the color for the left eye facial part. Type should be `STRING`.
+        - `right_eye` (Required): Specifies the color for the right eye facial part. Type should be `STRING`.
+        - `nose` (Required): Specifies the color for the nose facial part. Type should be `STRING`.
+        - `upper_lip` (Required): Specifies the color for the upper lip facial part. Type should be `STRING`.
+        - `inner_mouth` (Required): Specifies the color for the inner mouth facial part. Type should be `STRING`.
+        - `lower_lip` (Required): Specifies the color for the lower lip facial part. Type should be `STRING`.
+    - Outputs:
+        - `image`: The processed image(s) with facial parts colorized according to the provided specifications. Type should be `IMAGE`.

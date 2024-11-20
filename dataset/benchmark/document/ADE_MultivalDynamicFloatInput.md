@@ -1,0 +1,6 @@
+- `ADE_MultivalDynamicFloatInput`: This node specializes in dynamically generating multivalued outputs based on floating-point inputs, optionally incorporating a mask. It is designed to facilitate the creation of nuanced, variable outputs in animation and differential processing contexts, where the precise control and modulation of values can significantly impact the resulting animations or transformations.
+    - Inputs:
+        - `float_val` (Required): A primary floating-point value or a list of such values, serving as the core input for generating multivalued outputs. This parameter allows for fine-grained control over the output generation process, enabling customization and variability. Type should be `FLOAT`.
+        - `mask_optional` (Optional): An optional mask input that can be used to modulate or restrict the application of the float_val across different areas, providing an additional layer of control and customization. It should be a tensor of a specific shape and data type, typically related to image processing masks. Type should be `MASK`.
+    - Outputs:
+        - `multival`: The output is a dynamically generated multivalued entity, tailored according to the provided floating-point values and optional mask, suitable for varied applications in animation and differential processing. Type should be `MULTIVAL`.

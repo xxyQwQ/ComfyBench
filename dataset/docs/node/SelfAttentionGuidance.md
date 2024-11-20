@@ -1,8 +1,0 @@
-- `SelfAttentionGuidance`: The SelfAttentionGuidance node is designed to modify the attention mechanism within a given model to enhance its focus on specific aspects of the input data. It achieves this by guiding the self-attention process, potentially leading to improved model performance and interpretability.
-    - Parameters:
-        - `scale`: unknown Type should be `FLOAT`.
-        - `blur_sigma`: unknown Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The model parameter represents the neural network model that will be modified by the SelfAttentionGuidance node. It is crucial for defining the structure and behavior of the attention mechanism to be guided. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The modified model with an adjusted self-attention mechanism, reflecting the guidance applied through the SelfAttentionGuidance node. Type should be `MODEL`.

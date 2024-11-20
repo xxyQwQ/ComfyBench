@@ -1,7 +1,0 @@
-- `SaltMaskAdd`: The SaltMaskAdd node is designed to perform element-wise addition of two mask tensors, applying a clamp operation to ensure the resulting values fall within a specified range. This node is essential for combining mask regions to create composite masks or to enhance certain features within the mask by adding another mask's values.
-    - Parameters:
-    - Inputs:
-        - `masks_a`: The first set of mask tensors to be added. These masks are one of the primary inputs for the addition operation, contributing to the resultant composite mask. Type should be `MASK`.
-        - `masks_b`: The second set of mask tensors to be added. These masks are combined with the first set to produce the final composite mask, influencing the outcome of the addition operation. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The output of the node, representing the composite mask created by adding the input masks together, with values clamped to ensure they remain within a valid range. Type should be `MASK`.

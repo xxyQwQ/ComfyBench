@@ -1,6 +1,0 @@
-- `FloatConstant`: The FloatConstant node provides a mechanism to define a constant floating-point value within a node-based processing environment. It allows for the specification of a float value with a wide range of possible values, enabling precise control over constants used in computations or data flows.
-    - Parameters:
-        - `value`: Specifies the floating-point value to be used as a constant. This parameter allows for a wide range of values, enabling the node to serve various computational needs with precision. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `value`: Outputs the same floating-point value as defined by the input, serving as a constant throughout the node's usage. Type should be `FLOAT`.

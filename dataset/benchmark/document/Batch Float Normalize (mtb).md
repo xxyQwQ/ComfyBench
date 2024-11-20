@@ -1,0 +1,5 @@
+- `Batch Float Normalize (mtb)`: This node normalizes a list of float values, adjusting them to a common scale without distorting differences in the range of values. It's designed to standardize the data, making it easier to compare and process.
+    - Inputs:
+        - `floats` (Required): A list of float values to be normalized. This input is crucial for the normalization process, as it directly influences the output by scaling the input values to a range between 0 and 1. Type should be `FLOATS`.
+    - Outputs:
+        - `normalized_floats`: The output is a list of normalized float values, scaled to a range between 0 and 1, maintaining the proportional differences of the original list. Type should be `FLOATS`.

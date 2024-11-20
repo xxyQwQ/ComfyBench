@@ -1,0 +1,16 @@
+- `MiDaS Mask Image`: The node 'MiDaS Mask Image' utilizes the MiDaS model to separate the background and foreground of an image by approximating its depth. This process involves converting the input image into a format suitable for the model, applying the MiDaS model to estimate depth, and then using this depth information to create a mask that distinguishes between the foreground and background elements of the image.
+    - Inputs:
+        - `image` (Required): The input image tensor that the MiDaS model will process to approximate depth and generate a mask separating the background from the foreground. Type should be `IMAGE`.
+        - `use_cpu` (Required): A flag indicating whether to use the CPU instead of a GPU for running the MiDaS model, which may be necessary based on the available hardware. Type should be `COMBO[STRING]`.
+        - `midas_model` (Required): Specifies the version of the MiDaS model to use for depth approximation, affecting the precision and performance of the mask generation. Type should be `COMBO[STRING]`.
+        - `remove` (Required): Determines whether the foreground or background should be removed based on the depth estimation. Type should be `COMBO[STRING]`.
+        - `threshold` (Required): A flag indicating whether to apply thresholding to the depth mask to further refine the separation between foreground and background. Type should be `COMBO[STRING]`.
+        - `threshold_low` (Required): The lower bound for thresholding the depth mask, enhancing the mask's focus on relevant depth regions. Type should be `FLOAT`.
+        - `threshold_mid` (Required): The mid-point for thresholding the depth mask, used in conjunction with the low and high values to adjust the mask's sensitivity. Type should be `FLOAT`.
+        - `threshold_high` (Required): The upper bound for thresholding the depth mask, limiting the mask's sensitivity to distant depth regions. Type should be `FLOAT`.
+        - `smoothing` (Required): The amount of Gaussian blur to apply to the depth mask for smoothing edges and transitions. Type should be `FLOAT`.
+        - `background_red` (Required): The red component of the background color, used when removing the background or foreground based on depth. Type should be `INT`.
+        - `background_green` (Required): The green component of the background color, used in conjunction with red and blue to define the background color. Type should be `INT`.
+        - `background_blue` (Required): The blue component of the background color, completing the RGB specification for the background color. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image with either the foreground or background removed, based on the depth estimation and specified parameters. Type should be `IMAGE`.

@@ -1,0 +1,9 @@
+- `ConversableAgentCreatorAdvanced`: This node facilitates the advanced creation of conversable agents, allowing for the customization of agent attributes such as name, system message, and optional parameters like LLM model, default auto-reply, and a description. It's designed to enable the creation of sophisticated conversational AI agents that can interact with users, process document QA tasks, and provide automated responses.
+    - Inputs:
+        - `name` (Required): The name of the conversable agent being created. It serves as a unique identifier and a way to reference the agent in interactions. Type should be `STRING`.
+        - `system_message` (Required): A system message that defines the agent's initial instructions or guidelines, setting the context for its operation. Type should be `STRING`.
+        - `llm_model` (Optional): An optional parameter specifying the language learning model to be used by the agent, enhancing its conversational capabilities. Type should be `LLM_MODEL`.
+        - `default_auto_reply` (Optional): The default message the agent will use when it cannot generate a response based on the LLM model or code execution. Type should be `STRING`.
+        - `description` (Optional): A brief description of the agent, which can be used for identification or informational purposes by other agents. Type should be `STRING`.
+    - Outputs:
+        - `agent`: The conversable agent created by this node, ready for interaction and capable of processing document QA tasks. Type should be `AGENT`.

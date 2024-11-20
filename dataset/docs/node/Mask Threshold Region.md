@@ -1,8 +1,0 @@
-- `Mask Threshold Region`: This node applies a thresholding operation to a given mask or set of masks, effectively segmenting the image into regions based on specified black and white threshold values. It aims to isolate and highlight areas within the masks that fall within the defined threshold range, enhancing the distinction between different regions.
-    - Parameters:
-        - `black_threshold`: The lower bound for the thresholding operation. Pixels with values below this threshold are set to black, contributing to the segmentation of the mask. Type should be `INT`.
-        - `white_threshold`: The upper bound for the thresholding operation. Pixels with values above this threshold are set to white, further refining the segmentation of the mask. Type should be `INT`.
-    - Inputs:
-        - `masks`: The masks to be thresholded. This parameter is crucial for determining which areas of the image are to be isolated based on the threshold values, directly influencing the node's output. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The result of the thresholding operation, a tensor representing the segmented regions within the original masks. Type should be `MASK`.

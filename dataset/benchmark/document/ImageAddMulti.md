@@ -1,0 +1,7 @@
+- `ImageAddMulti`: This node blends multiple images together using various blending modes such as add, subtract, multiply, and difference. It allows for dynamic input count adjustment, enabling the combination of a flexible number of images into a single output image.
+    - Inputs:
+        - `inputcount` (Required): Specifies the number of images to blend together. It determines how many image inputs the node will process. Type should be `INT`.
+        - `image_i` (Required): Represents an image to be blended. The index 'i' is dynamic, starting from 1 and increasing based on the 'inputcount'. This allows for a flexible number of images to be processed and blended together. Type should be `IMAGE`.
+        - `blending` (Required): Defines the blending mode to be used for combining the images. Supported modes are add, subtract, multiply, and difference. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `images`: The resulting image after blending the input images according to the specified blending mode. Type should be `IMAGE`.

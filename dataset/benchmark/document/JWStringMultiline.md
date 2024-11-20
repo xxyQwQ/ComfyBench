@@ -1,0 +1,5 @@
+- `JWStringMultiline`: This node is designed to handle and return multiline strings, allowing for the preservation of line breaks and formatting within the text. It abstracts the complexity of managing multiline strings, making it easier to work with text that spans multiple lines.
+    - Inputs:
+        - `text` (Required): The text input parameter allows users to input a multiline string. This parameter is crucial for preserving the formatting and line breaks of the input text, ensuring that the output accurately reflects the original structure of the text. Type should be `STRING`.
+    - Outputs:
+        - `string`: The output is a multiline string that preserves the formatting and line breaks of the input text, making it suitable for applications that require maintaining the original text structure. Type should be `STRING`.

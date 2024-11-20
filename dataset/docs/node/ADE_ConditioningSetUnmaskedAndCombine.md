@@ -1,8 +1,0 @@
-- `ADE_ConditioningSetUnmaskedAndCombine`: This node specializes in the advanced manipulation of conditioning data for generative models, specifically focusing on unmasking and combining different sets of conditioning inputs. It enables the enhancement or modification of generative processes by applying sophisticated conditioning transformations.
-    - Parameters:
-    - Inputs:
-        - `cond`: The primary conditioning input that serves as the base for transformations. It plays a crucial role in determining the initial state or context for the generative process. Type should be `CONDITIONING`.
-        - `cond_DEFAULT`: An additional conditioning input intended to be combined with the primary conditioning input. This input typically represents default or supplementary information that modifies or enhances the base conditioning. Type should be `CONDITIONING`.
-        - `opt_lora_hook`: An optional parameter that allows for the application of Lora hooks to the conditioning inputs, providing a mechanism for further customization and control over the conditioning process. Type should be `LORA_HOOK`.
-    - Outputs:
-        - `conditioning`: The result of combining and unmasking the provided conditioning inputs, representing a modified or enhanced conditioning state for use in generative models. Type should be `CONDITIONING`.

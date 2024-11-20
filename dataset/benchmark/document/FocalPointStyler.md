@@ -1,0 +1,9 @@
+- `FocalPointStyler`: The FocalPointStyler node dynamically customizes text prompts based on a selection of stylistic elements, allowing for the enhancement or alteration of focal points within the generated content. It leverages a collection of predefined templates to apply stylistic modifications, aiming to refine the focus and thematic emphasis of the input text.
+    - Inputs:
+        - `text_positive` (Required): The positive aspect of the text to be styled, serving as the primary content for stylistic enhancement. It plays a crucial role in determining the overall thematic direction and focus of the output. Type should be `STRING`.
+        - `text_negative` (Required): The negative aspect of the text to be styled, which is used to counterbalance or provide contrast to the positive text. This input helps in fine-tuning the thematic focus and depth of the styled output. Type should be `STRING`.
+        - `focal point` (Required): unknown Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): unknown Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive`: The enhanced version of the positive text, styled according to the selected stylistic elements. It reflects the applied modifications, showcasing the node's ability to refine and focus the thematic content. Type should be `STRING`.
+        - `text_negative`: The enhanced version of the negative text, styled to complement the positive text's thematic focus. It demonstrates the node's capability to balance and enrich the overall content through stylistic alterations. Type should be `STRING`.

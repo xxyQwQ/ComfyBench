@@ -1,8 +1,0 @@
-- `ttN int`: The node is designed to handle integer values, providing functionality to convert an integer input into multiple formats, including its original integer form, a floating-point representation, and a string representation. This conversion process facilitates the use of integer values across different contexts where specific data types are required.
-    - Parameters:
-        - `int`: Accepts an integer value as input, which is then converted into multiple formats. This parameter is central to the node's operation, enabling the conversion of numeric data to suit various application needs. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `int`: Returns the original integer input, preserving its value in the integer format. Type should be `INT`.
-        - `float`: Provides a floating-point representation of the input integer, allowing for applications that require floating-point numbers. Type should be `FLOAT`.
-        - `text`: Converts the input integer into a string representation, facilitating its use in contexts that require textual data. Type should be `STRING`.

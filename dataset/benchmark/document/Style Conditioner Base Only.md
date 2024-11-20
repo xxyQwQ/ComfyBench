@@ -1,0 +1,13 @@
+- `Style Conditioner Base Only`: This node is designed to conditionally apply styling to a base input without the additional refinement layer, focusing on modifying the base attributes according to a specified style and strength. It abstracts the complexity of style application, ensuring that the base input is enhanced or altered in a manner consistent with the desired aesthetic or thematic direction.
+    - Inputs:
+        - `style` (Required): Specifies the style to be applied. This affects the overall aesthetic or thematic direction of the base input. Type should be `COMBO[STRING]`.
+        - `strength` (Required): Determines the intensity of the style application, influencing how significantly the base input is altered. Type should be `FLOAT`.
+        - `positive_cond_base` (Required): The base positive conditioning to which the style will be applied, serving as the initial state before styling. Type should be `CONDITIONING`.
+        - `negative_cond_base` (Required): The base negative conditioning to which the style will be applied, complementing the positive conditioning in defining the initial styling state. Type should be `CONDITIONING`.
+        - `base_clip` (Required): The CLIP model used for encoding the style prompts, integral to the process of applying the specified style. Type should be `CLIP`.
+        - `use_seed` (Required): Indicates whether a seed should be used to deterministically select a style from a predefined set, ensuring reproducibility. Type should be `COMBO[STRING]`.
+        - `seed` (Required): The seed value used for deterministic style selection when 'use_seed' is true, affecting the style choice. Type should be `INT`.
+    - Outputs:
+        - `base_pos_cond`: The modified positive base conditioning after the style has been applied, reflecting the desired aesthetic changes. Type should be `CONDITIONING`.
+        - `base_neg_cond`: The modified negative base conditioning after the style has been applied, complementing the positive conditioning in the styled output. Type should be `CONDITIONING`.
+        - `style_str`: The style that was applied, providing a reference to the aesthetic or thematic direction chosen. Type should be `STRING`.

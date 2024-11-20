@@ -1,0 +1,5 @@
+- `Any To String (mtb)`: This node is designed to convert various types of inputs into their string representations, aiming to provide a versatile solution for handling and displaying different data types as strings.
+    - Inputs:
+        - `input` (Required): Accepts a wide range of input types, including strings, tensors, images, numpy arrays, and dictionaries, converting them into a string format that describes their characteristics. Type should be `*`.
+    - Outputs:
+        - `string`: Outputs a string representation of the input, detailing its type and key characteristics. Type should be `STRING`.

@@ -1,0 +1,5 @@
+- `DownloadAndLoadCLIPSeg`: This node is designed to download and load a specific CLIPSeg model using the huggingface_hub library, making it available for image segmentation tasks within the ComfyUI framework. It abstracts the complexities of downloading, caching, and initializing the model, providing a streamlined way to integrate advanced segmentation capabilities into ComfyUI applications.
+    - Inputs:
+        - `model` (Required): Specifies the model to be downloaded and loaded for image segmentation. It supports specific CLIPSeg models available on huggingface_hub, with a default option provided for convenience. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `clipseg_model`: Returns a dictionary containing the loaded CLIPSeg model and its processor, ready for performing image segmentation tasks. Type should be `CLIPSEGMODEL`.

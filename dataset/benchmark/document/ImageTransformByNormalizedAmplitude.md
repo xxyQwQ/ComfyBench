@@ -1,0 +1,10 @@
+- `ImageTransformByNormalizedAmplitude`: This node applies a transformation to images based on normalized amplitude values, adjusting aspects such as zoom scale dynamically. It's designed to modify images in a batch by scaling their size according to audio-driven amplitude data, enabling creative visual-audio synchronization.
+    - Inputs:
+        - `normalized_amp` (Required): An array of normalized amplitude values, each corresponding to an image in the batch, used to determine the scale of transformation. Type should be `NORMALIZED_AMPLITUDE`.
+        - `zoom_scale` (Required): A scaling factor that determines how much the image is zoomed based on the amplitude value. Type should be `FLOAT`.
+        - `x_offset` (Required): The horizontal offset applied to the image after scaling, allowing for positional adjustments. Type should be `INT`.
+        - `y_offset` (Required): The vertical offset applied to the image after scaling, allowing for positional adjustments. Type should be `INT`.
+        - `cumulative` (Required): A boolean indicating whether the zoom effect should accumulate over the images in the batch. Type should be `BOOLEAN`.
+        - `image` (Required): The batch of images to be transformed, where each image's transformation is influenced by its corresponding amplitude value. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The transformed images, each adjusted according to its corresponding normalized amplitude value, zoom scale, and positional offsets. Type should be `IMAGE`.

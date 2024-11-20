@@ -1,0 +1,11 @@
+- `RemapWarpPolar`: The RemapWarpPolar node is designed to transform images by applying a warp polar transformation. This process involves converting images from a rectangular to a polar coordinate system, optionally applying logarithmic scaling, and performing inverse transformations. It supports adjustments to the transformation center, radius, and cropping of the result, making it versatile for various image processing tasks.
+    - Inputs:
+        - `max_radius` (Required): Specifies the maximum radius for the warp polar transformation, affecting the extent of the transformation applied to the image. Type should be `COMBO[STRING]`.
+        - `radius_adjust` (Required): Adjusts the effective radius of the transformation, allowing for fine-tuning of the warp effect. Type should be `FLOAT`.
+        - `center_x_adjust` (Required): Adjusts the x-coordinate of the transformation center, enabling horizontal shifting of the warp effect's focal point. Type should be `FLOAT`.
+        - `center_y_adjust` (Required): Adjusts the y-coordinate of the transformation center, enabling vertical shifting of the warp effect's focal point. Type should be `FLOAT`.
+        - `log` (Required): Determines whether logarithmic scaling is applied, changing the nature of the warp from linear to logarithmic. Type should be `BOOLEAN`.
+        - `inverse` (Required): Controls whether the inverse warp polar transformation is applied, allowing for the reversal of the warp effect. Type should be `BOOLEAN`.
+        - `crop` (Required): Enables cropping of the transformed image to remove areas outside the specified radius, focusing on the central area. Type should be `BOOLEAN`.
+    - Outputs:
+        - `remap`: The result of the warp polar transformation, including any adjustments and cropping applied to the original image. Type should be `REMAP`.

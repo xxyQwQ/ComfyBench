@@ -1,0 +1,8 @@
+- `CR Text Input Switch`: This node allows for the dynamic selection between two text inputs based on a specified integer input. It facilitates conditional text output in workflows, enhancing flexibility and decision-making capabilities.
+    - Inputs:
+        - `Input` (Required): Determines which text input ('text1' or 'text2') to output based on its value (1 or 2). Type should be `INT`.
+        - `text1` (Optional): The first text option that can be outputted if 'Input' is 1. Type should be `STRING`.
+        - `text2` (Optional): The second text option that can be outputted if 'Input' is 2. Type should be `STRING`.
+    - Outputs:
+        - `STRING`: The text output selected based on the 'Input' value. Type should be `STRING`.
+        - `show_help`: A URL providing additional help and documentation for the node. Type should be `STRING`.

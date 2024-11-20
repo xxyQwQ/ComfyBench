@@ -1,9 +1,0 @@
-- `INPAINT_MaskedBlur`: The `MaskedBlur` node applies a blurring effect to an image specifically within areas defined by a mask, optionally adjusting the blur intensity and falloff to create a smooth transition between blurred and unblurred regions. This functionality is particularly useful in inpainting tasks where blending the edited areas seamlessly with the original image enhances the visual outcome.
-    - Parameters:
-        - `blur`: The `blur` parameter determines the intensity of the blur effect, with higher values resulting in a more pronounced blurring. Type should be `INT`.
-        - `falloff`: The `falloff` parameter adjusts the transition between blurred and unblurred areas, enabling a smoother or more abrupt change depending on the value. Type should be `INT`.
-    - Inputs:
-        - `image`: The `image` parameter represents the image to be processed, serving as the primary canvas for the blurring effect. Type should be `IMAGE`.
-        - `mask`: The `mask` parameter specifies the areas within the image to be blurred, effectively controlling the spatial application of the blur effect. Type should be `MASK`.
-    - Outputs:
-        - `image`: Returns the modified image with the specified areas blurred according to the mask and blur settings. Type should be `IMAGE`.

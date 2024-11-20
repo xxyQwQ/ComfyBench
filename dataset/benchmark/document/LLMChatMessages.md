@@ -1,0 +1,6 @@
+- `LLMChatMessages`: The LLMChatMessagesAdv node is designed to prepare and structure chat messages for interaction between a system and a user. It encapsulates the process of converting raw text inputs into a formatted list of chat messages, facilitating a structured dialogue flow.
+    - Inputs:
+        - `prompt` (Required): unknown Type should be `STRING`.
+        - `role` (Required): unknown Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `llm_message`: A list of structured chat messages, representing the dialogue between the system and the user. This output facilitates further processing or interaction within a chat-based application. Type should be `LIST`.

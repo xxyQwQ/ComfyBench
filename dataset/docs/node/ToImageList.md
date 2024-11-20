@@ -1,6 +1,0 @@
-- `ToImageList`: The ToImageList node is designed to convert a collection of images into a standardized list format. This functionality is essential for processing multiple images in a uniform manner, enabling easier manipulation, analysis, and application of image-based operations across the entire collection.
-    - Parameters:
-        - `inputs_len`: The 'inputs_len' parameter represents the collection of images to be converted into a list. This input is crucial for the node's operation as it determines the set of images that will undergo the conversion process. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `image`: The 'image' output is a list of images that have been converted from the input collection. This standardized format facilitates further processing and manipulation of the images. Type should be `IMAGE`.

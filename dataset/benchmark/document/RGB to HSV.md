@@ -1,0 +1,5 @@
+- `RGB to HSV`: The node converts RGB color values to HSV color space, facilitating color transformations and analysis by separating color hue, saturation, and value. This conversion is essential for tasks that require color space manipulation or analysis, such as image processing and computer vision applications.
+    - Inputs:
+        - `rgb_color` (Required): The RGB color input that needs to be converted to HSV. This parameter is crucial for the conversion process, as it represents the color in RGB format that will be transformed into its HSV equivalent. Type should be `COLOR`.
+    - Outputs:
+        - `hsv_color`: The output HSV color, represented as a tuple of hue, saturation, and value. This conversion is useful for applications that rely on the HSV color space for more intuitive handling of colors. Type should be `HSV_COLOR`.

@@ -1,7 +1,0 @@
-- `ConvertImg`: The ConvertImg node is designed for explicit image format conversion, facilitating the use of specific image formats required by certain custom nodes without resorting to workarounds.
-    - Parameters:
-        - `to`: The 'to' parameter specifies the target image format for the conversion, influencing the output image's format and potentially its usability in subsequent processing steps. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The 'image' parameter represents the input image to be converted. Its format is crucial for the conversion process, impacting the node's execution and the resulting image format. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is an image that has been converted to the specified format, ready for further processing or use within the application. Type should be `IMAGE`.

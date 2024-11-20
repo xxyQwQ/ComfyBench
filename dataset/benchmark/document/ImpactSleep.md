@@ -1,0 +1,6 @@
+- `ImpactSleep`: The ImpactSleep node introduces a delay in the execution flow by pausing for a specified number of seconds. This can be useful for timing operations or creating a pause in a sequence of actions.
+    - Inputs:
+        - `signal` (Required): The signal input acts as a pass-through, allowing the node to be integrated into a flow without affecting the data being transmitted. Type should be `*`.
+        - `seconds` (Required): Specifies the duration of the sleep period in seconds. This determines how long the execution will pause before continuing. Type should be `FLOAT`.
+    - Outputs:
+        - `signal_opt`: Outputs the same signal that was input, effectively acting as a pass-through after the specified sleep duration. Type should be `*`.

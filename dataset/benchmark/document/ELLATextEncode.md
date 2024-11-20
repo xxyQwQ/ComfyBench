@@ -1,0 +1,7 @@
+- `ELLATextEncode`: The ELLATextEncode node is designed for encoding text inputs using the ELLA model, incorporating an additional layer of processing through a T5 text embedder. This node aims to generate conditioned embeddings suitable for further processing or generation tasks, leveraging the capabilities of both ELLA and T5 models to enhance the text encoding process.
+    - Inputs:
+        - `text` (Required): The 'text' input is the primary textual data for encoding. It plays a crucial role in determining the output embeddings by serving as the direct input for the T5 text embedder, which is then processed by the ELLA model. Type should be `STRING`.
+        - `sigma` (Required): The 'sigma' parameter specifies the timesteps for the ELLA model, affecting the temporal aspect of the encoding process. It influences how the ELLA model interprets the conditioning over time, thereby impacting the final embeddings. Type should be `FLOAT`.
+        - `ella` (Required): The 'ella' input provides the necessary ELLA model components, including the ELLA model itself and the T5 text embedder, for the text encoding process. It is essential for enabling the node to perform its encoding function. Type should be `ELLA`.
+    - Outputs:
+        - `conditioning`: The output is a conditioned embedding, tailored for further generative tasks. It includes the embeddings from the ELLA model, enriched with additional information such as pooled output, designed to enhance downstream processing. Type should be `CONDITIONING`.

@@ -1,9 +1,0 @@
-- `CheckpointLoader (dirty)`: The CheckpointLoader (dirty) node is designed for loading model checkpoints in a flexible manner, accommodating potentially mismatched or incomplete filenames by utilizing utility functions to find the best match. It supports loading various components of a model, such as configurations and weights, to facilitate the restoration or continuation of model training and inference processes.
-    - Parameters:
-        - `config_name`: The 'config_name' parameter specifies the name of the configuration file for the model. It plays a crucial role in determining the model's architecture and parameters for loading, with the node employing utility functions to handle mismatches or missing extensions in the filename. Type should be `STRING`.
-        - `ckpt_name`: The 'ckpt_name' parameter indicates the name of the checkpoint file containing the model's weights. This parameter is essential for identifying and loading the correct model state, with utility functions aiding in resolving filename discrepancies. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `model`: Represents the loaded model with its architecture and weights restored, ready for further training or inference. Type should be `MODEL`.
-        - `clip`: Denotes the CLIP component of the loaded model, if applicable and requested. Type should be `CLIP`.
-        - `vae`: Indicates the VAE component of the loaded model, if applicable and requested. Type should be `VAE`.

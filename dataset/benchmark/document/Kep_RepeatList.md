@@ -1,0 +1,6 @@
+- `Kep_RepeatList`: The Kep_RepeatList node is designed to replicate a given list a specified number of times, effectively extending the list by repeating its elements. This node is part of the 'List Stuff' category, emphasizing its utility in manipulating list structures within a data processing pipeline.
+    - Inputs:
+        - `In` (Required): The input list to be repeated. It serves as the base list whose elements will be replicated according to the specified count. Type should be `*`.
+        - `Count` (Required): Specifies the number of times the input list should be repeated. This parameter determines the final length of the output list by multiplying the original list's length. Type should be `INT`.
+    - Outputs:
+        - `Extended`: The output list resulting from repeating the input list elements a specified number of times. It represents the extended version of the original list. Type should be `*`.

@@ -1,9 +1,0 @@
-- `ImageSharpen`: The ImageSharpen node enhances the clarity of an image by applying a sharpening filter. This process accentuates the edges and details within the image, making it appear more defined and crisp.
-    - Parameters:
-        - `sharpen_radius`: Defines the radius of the sharpening effect. A larger radius increases the area of influence around edges, enhancing the sharpening effect. Type should be `INT`.
-        - `sigma`: Determines the spread of the Gaussian kernel used in the sharpening process. A higher sigma value results in a smoother, less localized sharpening effect. Type should be `FLOAT`.
-        - `alpha`: Controls the intensity of the sharpening. Higher alpha values result in a more pronounced sharpening effect. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The input image to be sharpened. This tensor represents the image data that will undergo the sharpening process. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The sharpened image. This output is the result of applying the sharpening filter to the input image, enhancing its edges and details. Type should be `IMAGE`.

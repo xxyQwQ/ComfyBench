@@ -1,12 +1,27 @@
+# proxy settings
 proxy:
-  http_proxy: "http://127.0.0.1:7890"
-  https_proxy: "http://127.0.0.1:7890"
+  http_proxy: null
+  https_proxy: null
 
-openai:
-  base_url: null
-  api_key: "input your api key"
-  embedding_model: "text-embedding-3-large"
-  completion_model: "chatgpt-4o-latest"
-
+# comfyui settings
 comfyui:
-  server_address: "127.0.0.1:8188"
+  comfyui_address: "127.0.0.1:8188"
+  execution_timeout: 300
+
+# embedding api for retrieval
+embedding:
+  base_url: null
+  api_key: null
+  model_name: "text-embedding-3-large"
+
+# completion api for agent
+completion:
+  base_url: null
+  api_key: null
+  model_name: "gpt-4o-2024-08-06"
+
+# vision api for evaluation
+vision:
+  base_url: null
+  api_key: null
+  model_name: "gpt-4o-2024-08-06"

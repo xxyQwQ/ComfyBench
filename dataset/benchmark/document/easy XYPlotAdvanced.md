@@ -1,0 +1,10 @@
+- `easy XYPlotAdvanced`: The `easy XYPlotAdvanced` node is designed for advanced plotting capabilities within a pipeline, allowing for the customization of plots based on various conditions and parameters. It integrates complex plotting logic with conditional processing to enhance visualization and analysis of data.
+    - Inputs:
+        - `pipe` (Required): Represents the pipeline configuration to which the advanced XY plotting logic will be applied, serving as the foundation for plot customization and enhancement. Type should be `PIPE_LINE`.
+        - `grid_spacing` (Required): Specifies the spacing between grid points in the plot, allowing for fine-tuned control over the plot's visual density and layout. Type should be `INT`.
+        - `output_individuals` (Required): A boolean parameter that determines whether individual plot elements should be output separately, enabling detailed analysis of each component. Type should be `COMBO[STRING]`.
+        - `flip_xy` (Required): A boolean parameter that, when true, swaps the x and y axes of the plot, offering flexibility in how data is presented and analyzed. Type should be `COMBO[STRING]`.
+        - `X` (Optional): Optional parameter representing the x-axis data and its configuration, allowing for dynamic adjustment of the plot's horizontal axis. Type should be `X_Y`.
+        - `Y` (Optional): Optional parameter representing the y-axis data and its configuration, allowing for dynamic adjustment of the plot's vertical axis. Type should be `X_Y`.
+    - Outputs:
+        - `pipe`: Returns the modified pipeline configuration, now including the advanced XY plot settings, facilitating further processing or visualization. Type should be `PIPE_LINE`.

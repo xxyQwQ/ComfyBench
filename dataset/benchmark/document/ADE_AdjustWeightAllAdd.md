@@ -1,0 +1,7 @@
+- `ADE_AdjustWeightAllAdd`: The ADE_AdjustWeightAllAdd node is designed to adjust the weights of various components in an animation diffusion model by adding specified values. This adjustment process is crucial for fine-tuning the animation generation process, allowing for more precise control over the animation's appearance and behavior.
+    - Inputs:
+        - `all_ADD` (Required): Specifies the value to be added to all weight components, enabling a uniform adjustment across the model. This parameter allows for a broad modification of the model's behavior. Type should be `FLOAT`.
+        - `print_adjustment` (Required): A boolean flag that, when set to true, enables the printing of the adjustment details for debugging or informational purposes. Type should be `BOOLEAN`.
+        - `prev_weight_adjust` (Optional): An optional parameter that allows for the chaining of weight adjustments by providing a previous AdjustGroup object. This facilitates cumulative adjustments over multiple steps. Type should be `WEIGHT_ADJUST`.
+    - Outputs:
+        - `weight_adjust`: Returns an updated AdjustGroup object that encapsulates the new weight adjustments, reflecting the changes made to the model's weights. Type should be `WEIGHT_ADJUST`.

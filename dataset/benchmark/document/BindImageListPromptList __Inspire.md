@@ -1,0 +1,11 @@
+- `BindImageListPromptList __Inspire`: The BindImageListPromptList node is designed to integrate image lists with corresponding prompt lists, facilitating the creation of enriched visual-textual datasets. This node aims to streamline the process of binding images with their respective prompts, enabling more efficient and organized handling of visual and textual data for creative or analytical purposes.
+    - Inputs:
+        - `images` (Required): The 'images' parameter accepts a list of images to be bound with prompts, serving as the visual component of the dataset. Type should be `IMAGE`.
+        - `zipped_prompts` (Required): The 'zipped_prompts' parameter takes a list of prompts (zipped format) to be associated with the images, acting as the textual component of the dataset. Type should be `ZIPPED_PROMPT`.
+        - `default_positive` (Required): The 'default_positive' parameter specifies a default positive prompt to be used when the number of prompts is less than the number of images. Type should be `STRING`.
+        - `default_negative` (Required): The 'default_negative' parameter specifies a default negative prompt to be used in similar circumstances as the default positive, ensuring coverage for all images. Type should be `STRING`.
+    - Outputs:
+        - `image`: Returns the original list of images, maintaining the visual data integrity. Type should be `IMAGE`.
+        - `positive`: Returns a list of positive prompts, each corresponding to an image, enriching the dataset with positive textual annotations. Type should be `STRING`.
+        - `negative`: Returns a list of negative prompts, complementing the positive prompts by providing contrasting textual annotations for each image. Type should be `STRING`.
+        - `prompt_label`: Returns a list of labels for the prompts, offering additional context or categorization for the bound image-prompt pairs. Type should be `STRING`.

@@ -1,6 +1,0 @@
-- `ReverseImageBatch`: Reverses the order of images in a batch, providing a simple yet effective method for manipulating image sequences.
-    - Parameters:
-    - Inputs:
-        - `images`: The batch of images to be reversed. This input is crucial for determining the order in which images will appear in the output. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The batch of images after being reversed in order. This output is essential for applications requiring a specific sequence of images. Type should be `IMAGE`.

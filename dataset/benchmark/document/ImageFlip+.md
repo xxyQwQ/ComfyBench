@@ -1,0 +1,6 @@
+- `ImageFlip+`: The ImageFlip node provides functionality for flipping images along specified axes. It supports flipping images horizontally, vertically, or both, allowing for versatile image manipulation and orientation adjustments.
+    - Inputs:
+        - `image` (Required): The image to be flipped. This parameter is crucial for defining the visual content that will undergo the flipping transformation. Type should be `IMAGE`.
+        - `axis` (Required): Specifies the axis or axes along which the image will be flipped. Accepting values 'x', 'y', or 'xy', it determines the direction of the flip, affecting the final appearance of the image. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The flipped image. This output represents the visual result of applying the specified flip transformation to the input image. Type should be `IMAGE`.

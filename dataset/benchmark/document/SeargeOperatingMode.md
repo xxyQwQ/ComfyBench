@@ -1,0 +1,8 @@
+- `SeargeOperatingMode`: The SeargeOperatingMode node is designed to configure and manage the operating modes within the ComfyUI environment, specifically tailored for the SDXL suite. It allows for the dynamic adjustment of workflow and prompting modes, as well as batch processing sizes, thereby facilitating a flexible and customizable user interaction experience.
+    - Inputs:
+        - `workflow_mode` (Required): Specifies the workflow mode, determining the overall process flow and operations available within the UI, such as text-to-image or image-to-image conversions. Type should be `COMBO[STRING]`.
+        - `prompting_mode` (Required): Defines the prompting mode, influencing how users are prompted for input and how that input is processed and utilized within the system. Type should be `COMBO[STRING]`.
+        - `batch_size` (Required): Determines the number of items to be processed in a single batch, allowing for efficient bulk processing of tasks. Type should be `INT`.
+        - `data` (Optional): Optional data stream for additional configurations or parameters that may be required by the operating mode. Type should be `SRG_DATA_STREAM`.
+    - Outputs:
+        - `data`: The configured data stream, enriched with the selected operating mode settings. Type should be `SRG_DATA_STREAM`.

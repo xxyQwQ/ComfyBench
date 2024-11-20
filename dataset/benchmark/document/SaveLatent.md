@@ -1,0 +1,5 @@
+- `SaveLatent`: The SaveLatent node is designed for saving latent representations to a specified storage. It abstracts the process of persisting latent vectors or tensors, facilitating their reuse in future computations or analyses.
+    - Inputs:
+        - `samples` (Required): The 'samples' parameter represents the latent representations to be saved. It is crucial for specifying the data that will be persisted for future use. Type should be `LATENT`.
+        - `filename_prefix` (Required): The 'filename_prefix' parameter allows for the specification of a prefix for the filename under which the latent representations will be saved. This aids in organizing and retrieving saved latents effectively. Type should be `STRING`.
+    - Outputs:

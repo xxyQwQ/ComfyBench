@@ -1,0 +1,14 @@
+- `SamplerDPMAdaptative`: This node is designed to adaptively select and configure a sampler for deep probabilistic modeling, optimizing the sampling process based on dynamic input parameters and conditions. It focuses on enhancing the efficiency and accuracy of sampling in complex models by adjusting its parameters in real-time.
+    - Inputs:
+        - `order` (Required): Specifies the order of the differential equation solver used in the sampling process, affecting the precision and computational requirements of the sampler. Type should be `INT`.
+        - `rtol` (Required): Defines the relative tolerance for the solver, controlling the error tolerance in the numerical integration for the sampling process. Type should be `FLOAT`.
+        - `atol` (Required): Sets the absolute tolerance for the solver, determining the error tolerance in the numerical integration, independent of the solution's scale. Type should be `FLOAT`.
+        - `h_init` (Required): Initial step size for the solver, influencing the starting point for the adaptive step size control. Type should be `FLOAT`.
+        - `pcoeff` (Required): Coefficient related to proportional control in the adaptive algorithm, adjusting the response based on the current error. Type should be `FLOAT`.
+        - `icoeff` (Required): Integral coefficient for the adaptive algorithm, modifying the response based on the accumulated error over time. Type should be `FLOAT`.
+        - `dcoeff` (Required): Derivative coefficient in the adaptive algorithm, affecting the response to the rate of error change. Type should be `FLOAT`.
+        - `accept_safety` (Required): Safety factor for accepting step sizes in the adaptive algorithm, ensuring stability and accuracy of the sampling process. Type should be `FLOAT`.
+        - `eta` (Required): Controls the level of noise in the sampling process, influencing the exploration of the model's probability distribution. Type should be `FLOAT`.
+        - `s_noise` (Required): Specifies the scale of noise to be added during sampling, affecting the diversity of generated samples. Type should be `FLOAT`.
+    - Outputs:
+        - `sampler`: The configured sampler object, ready for use in sampling tasks within deep probabilistic models. Type should be `SAMPLER`.

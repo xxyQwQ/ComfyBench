@@ -1,6 +1,0 @@
-- `Integer place counter`: This node is designed to calculate the number of places in an integer, effectively determining its length. It abstracts the process of converting an integer to a string to count its characters, providing a straightforward way to assess the magnitude of an integer.
-    - Parameters:
-        - `int_input`: Specifies the integer whose places are to be counted. This input is crucial for determining the length of the integer, which directly influences the node's output. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `INT_PLACES`: Represents the number of places in the input integer. This output is significant as it quantifies the length of the integer, offering insight into its magnitude. Type should be `INT`.

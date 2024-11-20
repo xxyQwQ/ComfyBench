@@ -1,0 +1,6 @@
+- `VHS_LoadAudio`: The VHS_LoadAudio node is designed for loading audio files within the Video Helper Suite, allowing users to input audio files from specified paths and optionally seek to a certain point within the audio file. This functionality is crucial for tasks that involve audio processing or synchronization with video content, providing a foundational tool for audio manipulation in multimedia projects.
+    - Inputs:
+        - `audio_file` (Required): Specifies the path to the audio file to be loaded. The node supports a variety of audio formats, including wav, mp3, ogg, m4a, and flac, making it versatile for different audio processing needs. Type should be `STRING`.
+        - `seek_seconds` (Optional): Defines the number of seconds to seek into the audio file before starting to load, allowing for precise control over the portion of the audio that is processed. This is useful for skipping unwanted content at the beginning of an audio file or for focusing on a specific segment. Type should be `FLOAT`.
+    - Outputs:
+        - `audio`: Returns a handle to the loaded audio, enabling further processing or analysis. This output is essential for integrating audio content into multimedia applications or workflows. Type should be `VHS_AUDIO`.

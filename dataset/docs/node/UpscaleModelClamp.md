@@ -1,6 +1,0 @@
-- `UpscaleModelClamp`: The UpscaleModelClamp node is designed to pass through upscale models without modification, serving as a placeholder or checkpoint within a processing pipeline that involves model manipulation.
-    - Parameters:
-    - Inputs:
-        - `upscale_model`: The upscale model to be passed through the node. It acts as a direct input for potential further processing or utilization within the pipeline. Type should be `UPSCALE_MODEL`.
-    - Outputs:
-        - `upscale_model`: The unaltered upscale model that was input into the node, facilitating seamless integration into subsequent stages of the pipeline. Type should be `UPSCALE_MODEL`.

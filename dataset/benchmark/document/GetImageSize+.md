@@ -1,0 +1,7 @@
+- `GetImageSize+`: The GetImageSize node is designed to extract the dimensions of an image, providing essential information such as width, height, and the number of channels or depth. This node is fundamental in image processing tasks where understanding the size and scale of images is crucial for further manipulations or analyses.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the input image from which the size information is to be extracted. It is crucial for determining the dimensions and depth of the image, which are essential for various image processing applications. Type should be `IMAGE`.
+    - Outputs:
+        - `width`: Represents the width of the input image. Type should be `INT`.
+        - `height`: Represents the height of the input image. Type should be `INT`.
+        - `count`: Represents the number of channels or depth of the input image. Type should be `INT`.

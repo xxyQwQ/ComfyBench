@@ -1,7 +1,0 @@
-- `Image Edge Detection Filter`: This node applies edge detection filters to images, offering different modes such as normal edge detection and Laplacian edge detection. It transforms images by highlighting their edges, enhancing the visual distinction of shapes and boundaries within the image.
-    - Parameters:
-        - `mode`: Specifies the edge detection mode to use, either 'normal' or 'laplacian'. This choice affects how edges are detected and highlighted in the image. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The input image to apply edge detection on. It is crucial for identifying and enhancing the edges within the image. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output image with edges detected and enhanced, represented as a tensor. This image visually emphasizes the edges and boundaries within the original image. Type should be `IMAGE`.

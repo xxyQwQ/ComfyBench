@@ -1,0 +1,83 @@
+- `PortraitMaster`: The PortraitMaster node is designed to dynamically generate detailed and customizable prompts for portrait creation, utilizing a wide range of parameters to fine-tune both the desired and undesired aspects of the final portrait. It allows for the manipulation of facial features, hair styles, expressions, and photorealism settings to craft comprehensive positive and negative prompts that guide the AI in generating more precise and realistic portraits.
+    - Inputs:
+        - `shot` (Required): unknown Type should be `COMBO[STRING]`.
+        - `shot_weight` (Required): unknown Type should be `FLOAT`.
+        - `gender` (Required): unknown Type should be `COMBO[STRING]`.
+        - `androgynous` (Required): unknown Type should be `FLOAT`.
+        - `age` (Required): unknown Type should be `INT`.
+        - `nationality_i` (Required): unknown Type should be `COMBO[STRING]`.
+        - `nationality_mix` (Required): unknown Type should be `FLOAT`.
+        - `body_type` (Required): unknown Type should be `COMBO[STRING]`.
+        - `body_type_weight` (Required): unknown Type should be `FLOAT`.
+        - `model_pose` (Required): unknown Type should be `COMBO[STRING]`.
+        - `clothes` (Required): unknown Type should be `COMBO[STRING]`.
+        - `eyes_color` (Required): unknown Type should be `COMBO[STRING]`.
+        - `eyes_shape` (Required): unknown Type should be `COMBO[STRING]`.
+        - `lips_color` (Required): unknown Type should be `COMBO[STRING]`.
+        - `lips_shape` (Required): unknown Type should be `COMBO[STRING]`.
+        - `facial_expression` (Required): unknown Type should be `COMBO[STRING]`.
+        - `facial_expression_weight` (Required): unknown Type should be `FLOAT`.
+        - `face_shape` (Required): unknown Type should be `COMBO[STRING]`.
+        - `face_shape_weight` (Required): unknown Type should be `FLOAT`.
+        - `facial_asymmetry` (Required): unknown Type should be `FLOAT`.
+        - `hair_style` (Required): unknown Type should be `COMBO[STRING]`.
+        - `hair_color` (Required): unknown Type should be `COMBO[STRING]`.
+        - `hair_length` (Required): unknown Type should be `COMBO[STRING]`.
+        - `disheveled` (Required): unknown Type should be `FLOAT`.
+        - `makeup` (Required): unknown Type should be `COMBO[STRING]`.
+        - `beard` (Required): unknown Type should be `COMBO[STRING]`.
+        - `natural_skin` (Required): unknown Type should be `FLOAT`.
+        - `bare_face` (Required): unknown Type should be `FLOAT`.
+        - `washed_face` (Required): unknown Type should be `FLOAT`.
+        - `dried_face` (Required): unknown Type should be `FLOAT`.
+        - `skin_details` (Required): unknown Type should be `FLOAT`.
+        - `skin_pores` (Required): unknown Type should be `FLOAT`.
+        - `dimples` (Required): unknown Type should be `FLOAT`.
+        - `wrinkles` (Required): unknown Type should be `FLOAT`.
+        - `freckles` (Required): unknown Type should be `FLOAT`.
+        - `moles` (Required): unknown Type should be `FLOAT`.
+        - `skin_imperfections` (Required): unknown Type should be `FLOAT`.
+        - `skin_acne` (Required): unknown Type should be `FLOAT`.
+        - `tanned_skin` (Required): unknown Type should be `FLOAT`.
+        - `eyes_details` (Required): unknown Type should be `FLOAT`.
+        - `iris_details` (Required): unknown Type should be `FLOAT`.
+        - `circular_iris` (Required): unknown Type should be `FLOAT`.
+        - `circular_pupil` (Required): unknown Type should be `FLOAT`.
+        - `light_type` (Required): unknown Type should be `COMBO[STRING]`.
+        - `light_direction` (Required): unknown Type should be `COMBO[STRING]`.
+        - `light_weight` (Required): unknown Type should be `FLOAT`.
+        - `photorealism_improvement` (Required): unknown Type should be `COMBO[STRING]`.
+        - `prompt_start` (Required): unknown Type should be `STRING`.
+        - `prompt_additional` (Required): unknown Type should be `STRING`.
+        - `prompt_end` (Required): Specifies the final part of the prompt, allowing for additional customization and refinement of the generated portrait's description. Type should be `STRING`.
+        - `negative_prompt` (Required): Defines attributes or elements to be excluded from the portrait, refining the output by eliminating specific undesired characteristics. Type should be `STRING`.
+        - `style_i` (Required): unknown Type should be `COMBO[STRING]`.
+        - `style_i_weight` (Required): unknown Type should be `FLOAT`.
+        - `random_shot` (Required): unknown Type should be `BOOLEAN`.
+        - `random_gender` (Required): unknown Type should be `BOOLEAN`.
+        - `random_age` (Required): unknown Type should be `BOOLEAN`.
+        - `random_androgynous` (Required): unknown Type should be `BOOLEAN`.
+        - `random_nationality` (Required): unknown Type should be `BOOLEAN`.
+        - `random_body_type` (Required): unknown Type should be `BOOLEAN`.
+        - `random_model_pose` (Required): unknown Type should be `BOOLEAN`.
+        - `random_clothes` (Required): unknown Type should be `BOOLEAN`.
+        - `random_eyes_color` (Required): unknown Type should be `BOOLEAN`.
+        - `random_eyes_shape` (Required): unknown Type should be `BOOLEAN`.
+        - `random_lips_color` (Required): unknown Type should be `BOOLEAN`.
+        - `random_lips_shape` (Required): unknown Type should be `BOOLEAN`.
+        - `random_facial_expression` (Required): unknown Type should be `BOOLEAN`.
+        - `random_face_shape` (Required): unknown Type should be `BOOLEAN`.
+        - `random_hairstyle` (Required): unknown Type should be `BOOLEAN`.
+        - `random_hair_color` (Required): unknown Type should be `BOOLEAN`.
+        - `random_hair_length` (Required): unknown Type should be `BOOLEAN`.
+        - `random_disheveled` (Required): unknown Type should be `BOOLEAN`.
+        - `random_makeup` (Required): unknown Type should be `BOOLEAN`.
+        - `random_freckles` (Required): unknown Type should be `BOOLEAN`.
+        - `random_moles` (Required): unknown Type should be `BOOLEAN`.
+        - `random_skin_imperfections` (Required): unknown Type should be `BOOLEAN`.
+        - `random_beard` (Required): unknown Type should be `BOOLEAN`.
+        - `random_style_i` (Required): unknown Type should be `BOOLEAN`.
+        - `seed` (Optional): unknown Type should be `INT`.
+    - Outputs:
+        - `positive`: The generated positive prompt, detailing desired characteristics and enhancements for the portrait. Type should be `STRING`.
+        - `negative`: The generated negative prompt, specifying undesired characteristics and elements to be excluded from the portrait. Type should be `STRING`.

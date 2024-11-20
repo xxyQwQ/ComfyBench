@@ -1,0 +1,11 @@
+- `DeepTranslatorTextNode`: The DeepTranslatorTextNode is designed for advanced text translation tasks, leveraging deep learning models to enhance translation accuracy and support for multiple languages. It extends the capabilities of a standard translation node by incorporating deep learning techniques to improve the quality of translations, especially in complex or nuanced text scenarios.
+    - Inputs:
+        - `from_translate` (Required): Specifies the source language from which the text will be translated, crucial for determining the translation context and accuracy. Type should be `COMBO[STRING]`.
+        - `to_translate` (Required): Specifies the target language to which the text will be translated, essential for ensuring the translation meets the desired linguistic and cultural nuances. Type should be `COMBO[STRING]`.
+        - `add_proxies` (Required): Indicates whether proxies should be added to the translation request, affecting the node's ability to bypass geo-restrictions or network limitations. Type should be `[[True, False]]`.
+        - `proxies` (Required): Provides proxy details for the translation request, enabling the node to operate in environments with restricted internet access. Type should be `STRING`.
+        - `auth_data` (Required): Contains authentication data required by certain translation services, ensuring secure access to premium translation features. Type should be `STRING`.
+        - `service` (Required): Specifies the translation service to be used, impacting the translation's quality, speed, and language support. Type should be `COMBO[STRING]`.
+        - `text` (Required): The text input to be translated, highlighting the node's core functionality in processing and translating textual content. Type should be `STRING`.
+    - Outputs:
+        - `text`: The translated text, demonstrating the node's ability to accurately convey the original message in a different language. Type should be `STRING`.

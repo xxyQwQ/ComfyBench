@@ -1,0 +1,8 @@
+- `MaskOrImageToWeight`: The MaskOrImageToWeight node is designed to calculate the mean value of either masks or images provided as input, but not both simultaneously. It supports converting these mean values into different output types, including lists, pandas series, or tensors, based on the specified output type. This functionality allows for flexible data handling and integration into broader data processing or machine learning workflows.
+    - Inputs:
+        - `output_type` (Required): Specifies the desired format for the output data, which can be a list, pandas series, or tensor. This choice determines how the mean values calculated from the input masks or images are structured for subsequent use. Type should be `COMBO[STRING]`.
+        - `images` (Optional): An optional input consisting of images from which mean values are calculated if masks are not provided. This parameter allows the node to work with either image or mask data, but not both simultaneously. Type should be `IMAGE`.
+        - `masks` (Optional): An optional input consisting of masks from which mean values are calculated if images are not provided. This parameter enables the node to process either mask or image inputs, ensuring flexibility in data handling. Type should be `MASK`.
+    - Outputs:
+        - `float`: The processed mean values of the input masks or images, formatted according to the specified output type. This output facilitates further data manipulation or analysis in subsequent steps of a pipeline. Type should be `FLOAT`.
+        - `string`: A list of the mean values calculated from the input, represented as strings. This provides an alternative view of the data for logging or display purposes. Type should be `STRING`.

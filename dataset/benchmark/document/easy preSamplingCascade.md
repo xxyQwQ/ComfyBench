@@ -1,0 +1,15 @@
+- `easy preSamplingCascade`: The node 'easy preSamplingCascade' is designed to perform a pre-sampling process specifically tailored for cascade models. It integrates advanced sampling techniques to prepare the model for generating outputs, optimizing the sampling process by adjusting parameters and conditions based on the cascade model's requirements.
+    - Inputs:
+        - `pipe` (Required): Provides the pipeline configuration for the pre-sampling process, serving as the foundation for further adjustments and sampling. Type should be `PIPE_LINE`.
+        - `encode_vae_name` (Required): Specifies the VAE model used for encoding in the pre-sampling process, allowing for customization of the encoding step. Type should be `COMBO[STRING]`.
+        - `decode_vae_name` (Required): Determines the VAE model used for decoding, enabling tailored decoding strategies in the pre-sampling process. Type should be `COMBO[STRING]`.
+        - `steps` (Required): Specifies the number of steps for the pre-sampling process, influencing the granularity and quality of the generated output. Type should be `INT`.
+        - `cfg` (Required): Controls the conditioning factor, adjusting the influence of the conditioning on the sampling process. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the specific sampler to be used, from a predefined list of samplers suitable for cascade models. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduling algorithm for the sampling process, affecting the progression of steps. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Adjusts the denoising level applied during the pre-sampling process, affecting the clarity and detail of the output. Type should be `FLOAT`.
+        - `seed` (Required): Sets the initial seed for the sampling process, ensuring reproducibility of the results. Type should be `INT`.
+        - `image_to_latent_c` (Optional): Optional input for providing an image to be converted to a latent representation, facilitating specific image-based adjustments. Type should be `IMAGE`.
+        - `latent_c` (Optional): Optional input for providing a latent representation directly, bypassing the need for initial image encoding. Type should be `LATENT`.
+    - Outputs:
+        - `pipe`: Outputs the configured pipeline, ready for further processing or generation tasks. Type should be `PIPE_LINE`.

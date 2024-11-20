@@ -1,0 +1,9 @@
+- `SaltMaskEdgeDetection`: This node applies edge detection algorithms to mask regions, enhancing the edges within the masks using methods like Canny or Sobel. It's designed to highlight the contours and boundaries of objects within the mask regions, making them more distinct for further processing or analysis.
+    - Inputs:
+        - `masks` (Required): The input masks on which edge detection will be performed. These masks are processed to highlight their edges, significantly impacting the node's output by delineating object boundaries more clearly. Type should be `MASK`.
+        - `method` (Required): Specifies the edge detection method to use ('canny' or 'sobel'). The choice of method affects the edge enhancement technique applied to the masks, influencing the clarity and style of the resulting edges. Type should be `COMBO[STRING]`.
+        - `low_threshold` (Required): The lower bound for the edge detection algorithm's thresholding. It helps in filtering out noise and less prominent edges, focusing on more significant boundaries. Type should be `INT`.
+        - `high_threshold` (Required): The upper bound for the edge detection algorithm's thresholding. It defines the intensity above which edges are considered significant, ensuring that only the most prominent edges are enhanced. Type should be `INT`.
+        - `sobel_ksize` (Required): The kernel size for the Sobel operator, applicable only when the Sobel method is used. It affects the smoothness and precision of the edge detection. Type should be `INT`.
+    - Outputs:
+        - `MASKS`: The output tensor containing the enhanced edges of the input masks. This tensor represents the detected edges, making the boundaries within the masks more pronounced and ready for further analysis. Type should be `MASK`.

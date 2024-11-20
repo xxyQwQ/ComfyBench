@@ -1,0 +1,8 @@
+- `ImageTile+`: The ImageTile node is designed for slicing an image into smaller, overlapping or non-overlapping tiles based on specified rows and columns. This functionality is essential for processing large images in manageable segments or for extracting specific regions of interest with controlled overlap for detailed analysis or further manipulation.
+    - Inputs:
+        - `image` (Required): The input image to be tiled. This parameter is crucial as it defines the source image from which tiles will be generated. Type should be `IMAGE`.
+        - `rows` (Required): Specifies the number of rows to divide the image into. This affects the vertical segmentation of the image, influencing the height of each tile. Type should be `INT`.
+        - `cols` (Required): Determines the number of columns to divide the image into. This parameter influences the horizontal segmentation, affecting the width of each tile. Type should be `INT`.
+        - `overlap` (Required): Defines the percentage of overlap between adjacent tiles. This parameter allows for a seamless transition between tiles, especially useful in certain analysis or reconstruction tasks. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output consists of a tensor containing the generated image tiles, ready for further processing or analysis. Type should be `IMAGE`.

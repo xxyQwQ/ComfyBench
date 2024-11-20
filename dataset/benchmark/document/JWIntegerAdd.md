@@ -1,0 +1,6 @@
+- `JWIntegerAdd`: The JWIntegerAdd node performs the addition of two integer values, providing a simple arithmetic operation within the node network.
+    - Inputs:
+        - `a` (Required): The first integer value to be added. It plays a crucial role in determining the outcome of the addition operation. Type should be `INT`.
+        - `b` (Required): The second integer value to be added. It contributes equally to the result of the addition operation alongside the first integer. Type should be `INT`.
+    - Outputs:
+        - `int`: The result of adding the two input integers. This output represents the sum of the inputs. Type should be `INT`.

@@ -1,0 +1,8 @@
+- `ImpactConditionalBranchSelMode`: This node provides a conditional branching mechanism with a selection mode, allowing for dynamic control flow based on boolean conditions and selection preferences. It enables conditional execution paths in a workflow, enhancing decision-making capabilities.
+    - Inputs:
+        - `cond` (Required): A boolean condition that determines the branch of execution. It is pivotal in deciding which value (true or false branch) to return based on its truthiness. Type should be `BOOLEAN`.
+        - `sel_mode` (Required): A boolean parameter that influences the selection mode, determining whether the selection is made on prompt or on execution. This adds an additional layer of control over the conditional branching behavior. Type should be `BOOLEAN`.
+        - `tt_value` (Optional): The value to return if the condition is true. This parameter is optional and allows for flexibility in defining the true branch outcome. Type should be `*`.
+        - `ff_value` (Optional): The value to return if the condition is false. This parameter is optional, providing flexibility in defining the false branch outcome. Type should be `*`.
+    - Outputs:
+        - `*`: The output is either the tt_value or ff_value based on the evaluation of the condition and the selection mode. Type should be `*`.

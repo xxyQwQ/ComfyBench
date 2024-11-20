@@ -1,0 +1,15 @@
+- `LayerUtility_ CropByMask`: This node is designed to crop images based on a specified mask, adjusting the crop area dynamically to fit the mask's shape. It provides functionality to visually preview the crop area on the original image, allowing for precise adjustments based on the mask's boundaries.
+    - Inputs:
+        - `image` (Required): The image to be cropped, serving as the primary input for the cropping operation. Type should be `IMAGE`.
+        - `mask_for_crop` (Required): The mask based on which the image will be cropped. It determines the area of the image that will be retained after cropping. Type should be `MASK`.
+        - `invert_mask` (Required): A boolean flag to invert the mask before cropping, allowing for flexibility in selecting the area to be cropped. Type should be `BOOLEAN`.
+        - `detect` (Required): The method used to determine the cropping area based on the mask. Options include 'min_bounding_rect', 'max_inscribed_rect', and 'mask_area'. Type should be `COMBO[STRING]`.
+        - `top_reserve` (Required): The amount of padding to add to the top edge of the crop area, allowing for adjustments beyond the mask's boundaries. Type should be `INT`.
+        - `bottom_reserve` (Required): The amount of padding to add to the bottom edge of the crop area, enabling adjustments beyond the mask's boundaries. Type should be `INT`.
+        - `left_reserve` (Required): The amount of padding to add to the left edge of the crop area, facilitating adjustments beyond the mask's boundaries. Type should be `INT`.
+        - `right_reserve` (Required): The amount of padding to add to the right edge of the crop area, allowing for adjustments beyond the mask's boundaries. Type should be `INT`.
+    - Outputs:
+        - `croped_image`: unknown Type should be `IMAGE`.
+        - `croped_mask`: unknown Type should be `MASK`.
+        - `crop_box`: The coordinates of the crop box used in the cropping operation, providing details on the area selected for cropping. Type should be `BOX`.
+        - `box_preview`: A preview image showing the crop box overlaid on the original image, aiding in visualizing the crop area. Type should be `IMAGE`.

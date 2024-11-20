@@ -1,6 +1,0 @@
-- `Logic NOT`: The node performs a logical NOT operation on a given boolean input, effectively inverting its value. It's a fundamental component in logical operations, allowing for the negation of boolean conditions.
-    - Parameters:
-        - `boolean`: The boolean input to be negated. This parameter determines the boolean value that will be inverted by the logical NOT operation. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `boolean`: The inverted boolean value of the input. If the input is True, the output will be False, and vice versa. Type should be `BOOLEAN`.

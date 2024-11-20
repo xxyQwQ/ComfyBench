@@ -1,8 +1,0 @@
-- `ScaledSoftControlNetWeights`: This node specializes in adjusting the control net weights based on a base multiplier and a flip option. It dynamically scales the weights to fine-tune the control net's influence on the generation process, offering a mechanism to either enhance or diminish the control net's effect based on the base multiplier. The flip option provides an additional layer of control by potentially inverting the weights' impact, allowing for versatile adjustments to the generation's direction.
-    - Parameters:
-        - `base_multiplier`: The base multiplier is a scaling factor that adjusts the overall strength of the control net weights. It plays a crucial role in fine-tuning the generation process by scaling the weights up or down. Type should be `FLOAT`.
-        - `flip_weights`: This boolean parameter determines whether the control net weights should be inverted. Flipping the weights can significantly alter the generation's direction, offering a unique way to manipulate the output. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `CN_WEIGHTS`: Represents the adjusted control net weights after applying the base multiplier and potentially flipping them. These weights directly influence the generation process. Type should be `CONTROL_NET_WEIGHTS`.
-        - `TK_SHORTCUT`: A timestep keyframe that encapsulates the adjusted control net weights, facilitating their integration into the generation pipeline. Type should be `TIMESTEP_KEYFRAME`.

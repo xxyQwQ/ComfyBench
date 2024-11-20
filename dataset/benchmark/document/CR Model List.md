@@ -1,0 +1,16 @@
+- `CR Model List`: The CR Model List node is designed to manage and organize models within a list structure, facilitating the selection and application of different models in a dynamic and flexible manner. It supports operations such as adding, removing, or selecting models from the list, enabling users to efficiently handle multiple models for various tasks or experiments.
+    - Inputs:
+        - `ckpt_name1` (Required): Specifies the first checkpoint name for model selection. It plays a crucial role in defining the initial model to be included in the model list. Type should be `COMBO[STRING]`.
+        - `alias1` (Required): Provides an alias for the first checkpoint, allowing for easier identification and management within the model list. Type should be `STRING`.
+        - `ckpt_name2` (Required): Specifies the second checkpoint name for model selection, further expanding the model list. Type should be `COMBO[STRING]`.
+        - `alias2` (Required): Provides an alias for the second checkpoint, facilitating better organization and retrieval of models. Type should be `STRING`.
+        - `ckpt_name3` (Required): Specifies the third checkpoint name for model selection, adding to the diversity of the model list. Type should be `COMBO[STRING]`.
+        - `alias3` (Required): Provides an alias for the third checkpoint, enhancing the manageability of the model list. Type should be `STRING`.
+        - `ckpt_name4` (Required): Specifies the fourth checkpoint name for model selection, contributing to the comprehensive nature of the model list. Type should be `COMBO[STRING]`.
+        - `alias4` (Required): Provides an alias for the fourth checkpoint, aiding in the systematic organization of models. Type should be `STRING`.
+        - `ckpt_name5` (Required): Specifies the fifth checkpoint name for model selection, completing the set of primary models for the list. Type should be `COMBO[STRING]`.
+        - `alias5` (Required): Provides an alias for the fifth checkpoint, ensuring a well-structured and accessible model list. Type should be `STRING`.
+        - `model_list` (Optional): This optional parameter allows users to input a pre-existing list of models to be managed within the node. It is crucial for integrating additional models into the node's functionality, directly affecting its operation. Type should be `MODEL_LIST`.
+    - Outputs:
+        - `MODEL_LIST`: Outputs the list of models that are currently managed within the node, allowing for further manipulation or selection. Type should be `MODEL_LIST`.
+        - `show_text`: Provides textual information or feedback related to the operations performed on the model list, enhancing user interaction and understanding. Type should be `STRING`.

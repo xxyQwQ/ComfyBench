@@ -1,0 +1,8 @@
+- `AV_LLMCompletion`: The AV_LLMCompletion node facilitates generating text completions using a language model. It processes a given text prompt through a specified API and configuration, optionally incorporating a seed for deterministic outputs.
+    - Inputs:
+        - `prompt` (Required): The text prompt to be completed by the language model. It is a crucial input as it guides the generation process. Type should be `STRING`.
+        - `api` (Required): The API used to interact with the language model, determining the specific model and its capabilities. Type should be `LLM_API`.
+        - `config` (Required): Configuration settings for the language model, including parameters like model type and generation settings. Type should be `LLM_CONFIG`.
+        - `seed` (Required): An optional seed value for generating deterministic outputs, ensuring reproducibility of results. Type should be `INT`.
+    - Outputs:
+        - `response`: The generated text completion from the language model. Type should be `STRING`.

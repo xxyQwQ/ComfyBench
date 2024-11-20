@@ -1,0 +1,7 @@
+- `LayerMask_ MaskGrain`: The MaskGrain node applies a grain effect to a given mask, optionally inverting the mask and adjusting the grain intensity for a more textured appearance. It's designed to enhance or modify the visual texture of layer masks in image processing workflows, providing a tool for creative and detailed mask manipulation.
+    - Inputs:
+        - `mask` (Required): The 'mask' parameter represents the input mask to which the grain effect will be applied. It is crucial for defining the area of the image that will be affected by the grain texture. Type should be `MASK`.
+        - `grain` (Required): The 'grain' parameter determines the intensity of the grain effect applied to the mask. A higher value results in a more pronounced grain texture, allowing for customizable visual effects. Type should be `INT`.
+        - `invert_mask` (Required): The 'invert_mask' parameter allows for the inversion of the input mask before applying the grain effect, enabling flexibility in how the grain texture is applied to the image. Type should be `BOOLEAN`.
+    - Outputs:
+        - `mask`: The output is a modified mask with the grain effect applied, potentially inverted based on the input parameters. It's suitable for further image processing or as a final textured mask in creative projects. Type should be `MASK`.

@@ -1,0 +1,5 @@
+- `Load 64 Encoded Image`: This node is designed to decode and process a base64-encoded image, converting it into a tensor representation suitable for further image processing tasks. It emphasizes the transformation of encoded image data into a standardized format that can be seamlessly integrated into image analysis and manipulation workflows.
+    - Inputs:
+        - `image_code` (Required): The base64-encoded string of the image to be loaded. This parameter is crucial for decoding the image and converting it into a tensor format for subsequent operations. Type should be `STRING`.
+    - Outputs:
+        - `image`: The decoded and processed image, represented as a tensor. This output is ready for use in various image processing and analysis tasks. Type should be `IMAGE`.

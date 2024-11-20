@@ -1,0 +1,23 @@
+- `LLMParquetDatasetSearcher`: The LLMParquetDatasetSearcher node is designed to efficiently search and filter data within Parquet files based on specified search terms, exclusion criteria, and length constraints. It leverages parallel processing to enhance search performance and incorporates relevancy scoring to prioritize results, making it a powerful tool for extracting and analyzing specific segments of large datasets.
+    - Inputs:
+        - `file_type` (Required): Specifies the type of file to be searched. This parameter determines the appropriate reader to use for the file, supporting formats such as parquet, text, json, yaml, csv, and excel. Type should be `COMBO[STRING]`.
+        - `path_or_url` (Required): The path to the file or URL to be searched. It is the starting point for the search operation, allowing the node to access and process the specified file. Type should be `STRING`.
+        - `search_term` (Optional): Defines the search terms used to filter the dataset. These terms are crucial for identifying relevant data segments within the file. Type should be `STRING`.
+        - `exclude_terms` (Optional): Terms to be excluded from the search results, refining the search by removing irrelevant or undesired data segments. Type should be `STRING`.
+        - `columns` (Optional): Specifies the columns to be included in the search. By default, all columns are included ('*'), but this can be customized to target specific columns. Type should be `STRING`.
+        - `case_sensitive` (Optional): Determines whether the search should be case sensitive, affecting how search terms are matched against the dataset. Type should be `BOOLEAN`.
+        - `max_results` (Optional): The maximum number of search results to return, allowing control over the volume of data retrieved. Type should be `INT`.
+        - `term_relevancy_threshold` (Optional): The threshold for term relevancy scoring, used to prioritize results based on their relevance to the search terms. Type should be `FLOAT`.
+        - `use_relevancy` (Optional): Indicates whether relevancy scoring should be used to prioritize search results, enhancing the search's focus on the most relevant segments. Type should be `BOOLEAN`.
+        - `min_length` (Optional): The minimum length of the data segments to be included in the search results, enabling the exclusion of too-short segments. Type should be `INT`.
+        - `max_length` (Optional): The maximum length of the data segments to be considered in the search results, preventing overly long segments from being included. Type should be `INT`.
+        - `max_dynamic_retries` (Optional): The maximum number of retries with dynamic search terms if no results are found, enhancing the chance of retrieving relevant data. Type should be `INT`.
+        - `clean_content` (Optional): Specifies whether the content should be cleaned, removing unnecessary or irrelevant information from the search results. Type should be `BOOLEAN`.
+        - `excel_sheet_position` (Optional): For Excel files, specifies the sheet to be searched by its position, allowing targeted searches within multi-sheet documents. Type should be `INT`.
+        - `recache` (Optional): Indicates whether the file should be recached, potentially updating the cached version with the latest content. Type should be `BOOLEAN`.
+        - `condense_documents` (Optional): Determines whether documents should be condensed, potentially merging similar documents to reduce redundancy. Type should be `BOOLEAN`.
+        - `seed` (Optional): A seed value for random operations, ensuring reproducibility of the search results under the same conditions. Type should be `INT`.
+    - Outputs:
+        - `results`: The primary search results, containing data segments that match the search criteria. Type should be `STRING`.
+        - `results_list`: A list of search results, potentially including additional metadata or context about the matches. Type should be `LIST`.
+        - `documents`: A collection of documents derived from the search results, formatted for further processing or analysis. Type should be `DOCUMENT`.

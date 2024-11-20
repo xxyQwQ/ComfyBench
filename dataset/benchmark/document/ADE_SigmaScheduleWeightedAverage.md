@@ -1,0 +1,7 @@
+- `ADE_SigmaScheduleWeightedAverage`: This node is designed to create a new sigma schedule by calculating a weighted average of two provided sigma schedules. It allows for the blending of characteristics from both schedules into a single, new schedule based on a specified weighting factor.
+    - Inputs:
+        - `schedule_A` (Required): The first sigma schedule to be blended. It serves as one of the bases for the weighted average calculation. Type should be `SIGMA_SCHEDULE`.
+        - `schedule_B` (Required): The second sigma schedule to be blended with the first. It contributes to the weighted average calculation, complementing the first schedule. Type should be `SIGMA_SCHEDULE`.
+        - `weight_A` (Required): The weighting factor for the first sigma schedule. This determines the proportion of the first schedule's characteristics in the final blended schedule. Type should be `FLOAT`.
+    - Outputs:
+        - `sigma_schedule`: The resulting sigma schedule after blending the two input schedules based on the specified weighting factor. Type should be `SIGMA_SCHEDULE`.

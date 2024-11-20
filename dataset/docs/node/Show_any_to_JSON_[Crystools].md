@@ -1,6 +1,0 @@
-- `Show any to JSON [Crystools]`: This node is designed to convert any given value into a JSON string, if possible, and display it. It primarily focuses on handling lists containing dictionaries or other lists, aiming to serialize them into a readable JSON format for debugging or inspection purposes.
-    - Parameters:
-    - Inputs:
-        - `any_value`: The 'any_value' parameter accepts any data type, including lists, dictionaries, or primitive types. It is used to attempt serialization into JSON format, aiding in the visualization or debugging of data structures. Type should be `*`.
-    - Outputs:
-        - `string`: Returns the serialized JSON string or an error message if serialization fails. Type should be `STRING`.

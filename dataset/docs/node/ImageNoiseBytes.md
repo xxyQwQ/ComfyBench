@@ -1,9 +1,0 @@
-- `ImageNoiseBytes`: The ImageNoiseBytes node applies a specific type of noise transformation to images. It manipulates the pixel values across one or more channels based on the provided parameters, enhancing the images with a noise effect that can be adjusted for monochromatic or color variations and optionally inverted.
-    - Parameters:
-        - `monochromatic`: Determines whether the noise effect should be applied in a monochromatic fashion across all channels or individually per channel, affecting the visual outcome of the noise effect. Type should be `COMBO[STRING]`.
-        - `invert`: Specifies if the noise effect should be inverted, altering the visual contrast of the noise effect in the images. Type should be `COMBO[STRING]`.
-        - `channels`: Defines the specific channels of the images that the noise effect will be applied to, allowing for targeted noise application on selected color channels. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: The input images to which the noise effect will be applied. This parameter is crucial for defining the base on which the noise transformation will be performed. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The transformed images with the applied noise effect, showcasing the visual alteration resulting from the noise parameters. Type should be `IMAGE`.

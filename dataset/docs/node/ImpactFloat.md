@@ -1,6 +1,0 @@
-- `ImpactFloat`: The ImpactFloat node is designed to process floating-point values, allowing for the manipulation and use of float data within a workflow. It serves as a fundamental building block in operations that require precise numerical computations.
-    - Parameters:
-        - `value`: Specifies the floating-point value to be processed. This parameter is central to the node's operation, as it determines the exact float value that will be manipulated or utilized. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: Outputs the processed floating-point value. This is the result of any computations or manipulations performed on the input float value. Type should be `FLOAT`.

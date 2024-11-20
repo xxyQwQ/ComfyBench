@@ -1,0 +1,6 @@
+- `UniFormer-SemSegPreprocessor`: The UniFormer-SemSegPreprocessor node is designed for semantic segmentation tasks within the ControlNet Preprocessors/Semantic Segmentation category. It utilizes the UniformerSegmentor model to process images, aiming to understand and segment them into different semantic regions based on learned representations.
+    - Inputs:
+        - `image` (Required): The input image to be semantically segmented. This parameter is crucial as it is the primary data the model operates on to perform segmentation. Type should be `IMAGE`.
+        - `resolution` (Optional): Specifies the resolution to which the input image is resized before processing. This affects the detail level of the segmentation output. Type should be `INT`.
+    - Outputs:
+        - `image`: The output of the semantic segmentation process, which is an image segmented into different semantic regions. Type should be `IMAGE`.

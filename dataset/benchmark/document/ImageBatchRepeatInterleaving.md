@@ -1,0 +1,6 @@
+- `ImageBatchRepeatInterleaving`: The ImageBatchRepeatInterleaving node is designed to expand a batch of images by repeating each image in the batch a specified number of times. This operation effectively increases the batch size by duplicating images, which can be useful for data augmentation or ensuring uniform batch processing sizes.
+    - Inputs:
+        - `images` (Required): The 'images' parameter represents the batch of images to be repeated. It is crucial for defining the input data that will undergo the repetition process. Type should be `IMAGE`.
+        - `repeats` (Required): The 'repeats' parameter specifies the number of times each image in the batch should be repeated. It directly influences the resulting batch size by determining the duplication factor for each image. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a new batch of images where each original image has been repeated according to the 'repeats' parameter, effectively enlarging the batch size. Type should be `IMAGE`.

@@ -1,0 +1,6 @@
+- `ImageUpscaleWithModel`: This node is designed to upscale images using a specified upscale model. It dynamically manages memory requirements based on the model and image size, performs the upscaling in a tiled manner to handle large images efficiently, and ensures the output image is clamped within a valid range.
+    - Inputs:
+        - `upscale_model` (Required): The upscale model to be used for upscaling the image. It determines the upscaling algorithm and its parameters. Type should be `UPSCALE_MODEL`.
+        - `image` (Required): The input image to be upscaled. The image is processed and upscaled according to the specified upscale model. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The upscaled image, with pixel values clamped to the range [0, 1]. Type should be `IMAGE`.

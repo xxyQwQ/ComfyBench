@@ -1,7 +1,0 @@
-- `SaltAudioPitchShift`: This node applies a pitch shift to an audio input by a specified number of semitones, allowing for audio manipulation that can adjust the perceived pitch of the sound without altering the playback speed.
-    - Parameters:
-        - `semitones`: The number of semitones to shift the pitch of the audio input. Positive values raise the pitch, while negative values lower it. Type should be `FLOAT`.
-    - Inputs:
-        - `audio`: The audio input to be pitch-shifted. It is the primary content that undergoes the pitch shift process. Type should be `AUDIO`.
-    - Outputs:
-        - `audio`: The output audio after applying the pitch shift, with its pitch adjusted by the specified number of semitones. Type should be `AUDIO`.

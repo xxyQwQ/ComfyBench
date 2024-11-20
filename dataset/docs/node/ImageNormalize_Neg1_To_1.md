@@ -1,6 +1,0 @@
-- `ImageNormalize_Neg1_To_1`: This node normalizes images to a range between -1 and 1, adjusting pixel values to fit within this scale. It's designed to standardize image data, making it suitable for further processing or model input where normalized data is required.
-    - Parameters:
-    - Inputs:
-        - `images`: The images to be normalized. This normalization process adjusts the pixel values to ensure they fall within the -1 to 1 range, which is crucial for maintaining consistency in image processing tasks. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The normalized images, with pixel values adjusted to fall within the -1 to 1 range. This standardization is essential for models that expect input data to be normalized. Type should be `IMAGE`.

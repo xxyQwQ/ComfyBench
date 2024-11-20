@@ -1,0 +1,13 @@
+- `SeargeOutput3`: SeargeOutput3 is designed to demultiplex and extract advanced parameters from a given input, facilitating the customization and fine-tuning of generative models or processes.
+    - Inputs:
+        - `parameters` (Required): Represents the advanced parameters for generative processes, playing a crucial role in customizing and fine-tuning the output. Type should be `PARAMETERS`.
+    - Outputs:
+        - `parameters`: Returns the original set of advanced parameters provided as input. Type should be `PARAMETERS`.
+        - `denoise`: Specifies the denoise level for the generative process, influencing the clarity and detail of the generated output. Type should be `FLOAT`.
+        - `base_ratio`: Determines the base model's contribution ratio in the generative process, balancing between base and refiner models. Type should be `FLOAT`.
+        - `refiner_strength`: Adjusts the strength of the refiner model, affecting the refinement level of the generated output. Type should be `FLOAT`.
+        - `noise_offset`: Controls the offset of noise applied during the generation, impacting the variation and uniqueness of the output. Type should be `INT`.
+        - `precondition_steps`: Defines the number of preconditioning steps to prepare the model before generation, optimizing the output quality. Type should be `INT`.
+        - `batch_size`: Sets the batch size for the generation process, affecting the processing speed and resource utilization. Type should be `INT`.
+        - `upscale_resolution_factor`: Specifies the factor by which the output resolution is upscaled, enhancing the detail and quality of the final image. Type should be `FLOAT`.
+        - `save_upscaled_image`: Indicates whether the upscaled image should be saved, providing an option to retain higher resolution outputs. Type should be `ENABLE_STATE`.

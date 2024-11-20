@@ -1,0 +1,5 @@
+- `SeargeConditionMixing`: This node is designed to integrate condition mixing functionality into the UI, allowing for the dynamic creation and manipulation of UI elements based on specified conditions. It primarily serves to enrich the user interface by enabling the customization of UI components through condition-based logic.
+    - Inputs:
+        - `data` (Optional): An optional data stream that can be provided to the node. If supplied, it is used to further customize the UI elements based on the existing conditions within the data stream. Type should be `SRG_DATA_STREAM`.
+    - Outputs:
+        - `data`: Returns a data stream that includes the condition mixing settings, enhancing the UI's dynamic response to user interactions or predefined conditions. Type should be `SRG_DATA_STREAM`.

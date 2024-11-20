@@ -1,7 +1,0 @@
-- `ADE_MultivalDynamic`: The ADE_MultivalDynamic node dynamically adjusts values within a specified range, applying these adjustments based on a mask and a scaling method. It is designed to modify parameters or attributes in a flexible manner, allowing for precise control over the variation of these values across different areas or aspects of a process.
-    - Parameters:
-        - `float_val`: Specifies the value or range of values for dynamic adjustment. This parameter can accept both single float values and lists of floats, allowing for varied adjustments across different parts of the mask. Type should be `FLOAT`.
-    - Inputs:
-        - `mask_optional`: An optional tensor representing the mask that guides where and how the dynamic adjustments are applied. When provided, it determines the distribution and intensity of the adjustments across the target. Type should be `MASK`.
-    - Outputs:
-        - `multival`: The result of dynamic adjustments applied to the input values, potentially across multiple values or areas, depending on the mask and scaling method used. Type should be `MULTIVAL`.

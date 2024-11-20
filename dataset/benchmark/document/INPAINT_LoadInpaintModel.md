@@ -1,0 +1,5 @@
+- `INPAINT_LoadInpaintModel`: This node is designed to load an inpainting model based on the provided model name. It supports loading models stored in specific formats and prepares them for inpainting tasks by evaluating and configuring them accordingly.
+    - Inputs:
+        - `model_name` (Required): The name of the model to be loaded for inpainting. This parameter is crucial for identifying and retrieving the correct model file from a predefined directory structure. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `inpaint_model`: The loaded and configured inpainting model ready for use in inpainting tasks. Type should be `INPAINT_MODEL`.

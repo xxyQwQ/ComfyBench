@@ -1,0 +1,9 @@
+- `DF_Search_In_Text`: The `DF_Search_In_Text` node is designed to search for a specified pattern within a given text. It supports both strict and regular expression (RegEx) modes for pattern matching, and can optionally consider case sensitivity. This node provides a way to determine if the pattern exists in the text and to count the number of occurrences, offering flexibility for text analysis and processing tasks.
+    - Inputs:
+        - `Text` (Required): The text in which to search for the specified pattern. It serves as the primary input for the search operation. Type should be `STRING`.
+        - `Pattern` (Required): The pattern to search for within the text. This can be a literal string in strict mode or a regular expression in RegEx mode. Type should be `STRING`.
+        - `ConsiderRegister` (Required): A boolean indicating whether to consider case sensitivity in the search. When false, the search is case-insensitive. Type should be `BOOLEAN`.
+        - `Mode` (Required): Specifies the mode of pattern matching: 'Strict' for literal string matching or 'RegEx' for regular expression matching. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `BOOLEAN`: Indicates whether the specified pattern was found in the text. Type should be `BOOLEAN`.
+        - `OCCURRENCES`: The number of times the specified pattern was found in the text. Type should be `INT`.

@@ -1,0 +1,9 @@
+- `CheckpointPerturbWeights`: This node is designed to modify the weights of a model checkpoint in a controlled manner, allowing for the introduction of perturbations or adjustments to the model's parameters. Its purpose is to facilitate experiments with model behavior under slightly altered conditions, potentially improving performance or robustness through fine-tuning.
+    - Inputs:
+        - `model` (Required): Specifies the model whose weights are to be perturbed, serving as the foundation for the perturbation process. Type should be `MODEL`.
+        - `joint_blocks` (Required): Determines the magnitude of perturbation applied to the weights of joint blocks within the model, influencing the extent of modification. Type should be `FLOAT`.
+        - `final_layer` (Required): Controls the perturbation level for the model's final layer weights, directly affecting the output characteristics. Type should be `FLOAT`.
+        - `rest_of_the_blocks` (Required): Sets the perturbation intensity for the weights of all other blocks in the model, excluding the final and joint blocks. Type should be `FLOAT`.
+        - `seed` (Required): Provides a seed value for random number generation, ensuring reproducibility of the perturbation effects. Type should be `INT`.
+    - Outputs:
+        - `model`: Returns the model with its weights perturbed according to the specified parameters, ready for further use or analysis. Type should be `MODEL`.

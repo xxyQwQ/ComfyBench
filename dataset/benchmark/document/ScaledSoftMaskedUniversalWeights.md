@@ -1,0 +1,11 @@
+- `ScaledSoftMaskedUniversalWeights`: The ScaledSoftMaskedUniversalWeights node is designed to dynamically adjust the influence of control weights within a neural network based on a set of input parameters. It allows for the customization of weight scaling and flipping, enabling fine-tuned control over the network's behavior in response to conditional inputs or specific task requirements.
+    - Inputs:
+        - `mask` (Required): Specifies the tensor mask that determines the spatial application of base multipliers across the control weights, enabling differentiated scaling. Type should be `MASK`.
+        - `min_base_multiplier` (Required): Sets the minimum scaling factor for the control weights, defining the lower bound of weight influence. Type should be `FLOAT`.
+        - `max_base_multiplier` (Required): Sets the maximum scaling factor for the control weights, defining the upper bound of weight influence. Type should be `FLOAT`.
+        - `uncond_multiplier` (Optional): Specifies an unconditional scaling factor applied to the control weights, offering an additional layer of adjustment independent of other conditions. Type should be `FLOAT`.
+        - `cn_extras` (Optional): A dictionary of extra parameters for further customization of the control weights, providing a mechanism for incorporating additional, specific adjustments. Type should be `CN_WEIGHTS_EXTRAS`.
+        - `autosize` (Optional): Configures automatic sizing for the control weights, including padding adjustments, to ensure optimal fit within the network's architecture. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `CN_WEIGHTS`: The control net weights adjusted according to the input parameters, ready for use in the network. Type should be `CONTROL_NET_WEIGHTS`.
+        - `TK_SHORTCUT`: A timestep keyframe shortcut that encapsulates the adjusted control weights for temporal application within the network. Type should be `TIMESTEP_KEYFRAME`.

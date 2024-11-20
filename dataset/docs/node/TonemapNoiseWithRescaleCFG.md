@@ -1,8 +1,0 @@
-- `TonemapNoiseWithRescaleCFG`: This node applies a tonemapping and noise rescaling technique to a given model's configuration, enhancing its ability to generate images by adjusting the contrast and scale of generated features. It utilizes a combination of tonemapping and rescaling operations to modify the model's output, aiming to improve visual quality and detail in the generated images.
-    - Parameters:
-        - `tonemap_multiplier`: A multiplier that adjusts the intensity of the tonemapping effect. This parameter allows for fine-tuning of the contrast enhancement applied to the generated images. Type should be `FLOAT`.
-        - `rescale_multiplier`: A multiplier that adjusts the intensity of the rescaling effect. This parameter allows for fine-tuning of the scale adjustment applied to the generated images, affecting their overall visual quality. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The model to which the tonemapping and noise rescaling configuration will be applied. This parameter is crucial as it defines the base model that will be enhanced with the specified techniques. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The enhanced model with applied tonemapping and noise rescaling configuration. This output represents the model after the adjustments have been made, ready for generating improved images. Type should be `MODEL`.

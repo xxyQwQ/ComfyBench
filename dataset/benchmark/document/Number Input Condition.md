@@ -1,0 +1,10 @@
+- `Number Input Condition`: This node performs a variety of comparison operations between two numbers, such as checking if one is greater than, less than, equal to, or not equal to the other, among others. It can return either the result of the comparison as a boolean value or one of the input numbers based on the comparison result.
+    - Inputs:
+        - `number_a` (Required): The first number to be compared. It plays a central role in the comparison operations, serving as the basis for determining the outcome of the comparison. Type should be `NUMBER`.
+        - `number_b` (Required): The second number to be compared. It is used in conjunction with 'number_a' to perform the comparison operation. Type should be `NUMBER`.
+        - `return_boolean` (Required): Determines whether the node returns a boolean result of the comparison or one of the input numbers based on the comparison result. Type should be `COMBO[STRING]`.
+        - `comparison` (Required): Specifies the type of comparison to be performed between 'number_a' and 'number_b'. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `number`: The outcome of the comparison operation, which can be either a boolean value or one of the input numbers, depending on the 'return_boolean' parameter. Type should be `NUMBER`.
+        - `float`: The floating-point representation of the comparison result. Type should be `FLOAT`.
+        - `int`: The integer representation of the comparison result. Type should be `INT`.

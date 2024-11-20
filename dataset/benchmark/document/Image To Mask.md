@@ -1,0 +1,6 @@
+- `Image To Mask`: The Image To Mask node is designed to convert images into masks based on specified criteria. It supports different methods of conversion, allowing for flexibility in how the mask is generated from the image.
+    - Inputs:
+        - `image` (Required): The input image to be converted into a mask. This parameter is crucial as it provides the source material from which the mask will be generated. Type should be `IMAGE`.
+        - `method` (Required): Specifies the method of conversion to be used for generating the mask from the image. This affects how the mask is derived, offering options such as intensity-based or alpha channel-based conversions. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `mask`: The output is a mask derived from the input image according to the specified conversion method. Type should be `MASK`.

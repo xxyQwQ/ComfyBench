@@ -1,0 +1,7 @@
+- `Automatic CFG`: The Automatic CFG node is designed to dynamically modify the configuration of models to optimize their performance for specific tasks. It leverages advanced techniques to adjust model parameters and settings based on the input conditions, aiming to enhance model accuracy, speed, or other performance metrics.
+    - Inputs:
+        - `model` (Required): The 'model' parameter represents the model to be modified. It is crucial for the node's operation as it serves as the base upon which modifications are applied to achieve the desired configuration. Type should be `MODEL`.
+        - `hard_mode` (Required): The 'hard_mode' parameter dictates the strictness of the configuration adjustments. When set to True, it applies more rigorous modifications to the model, potentially leading to higher performance at the cost of flexibility. Type should be `BOOLEAN`.
+        - `boost` (Required): The 'boost' parameter enables or disables performance enhancements. When True, it activates additional modifications that can further improve the model's performance. Type should be `BOOLEAN`.
+    - Outputs:
+        - `model`: The modified model with optimized configuration settings. This output reflects the adjustments made based on the input parameters and the desired performance enhancements. Type should be `MODEL`.

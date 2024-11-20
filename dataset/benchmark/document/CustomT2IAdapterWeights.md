@@ -1,0 +1,10 @@
+- `CustomT2IAdapterWeights`: This node is designed to adapt and load custom weights for text-to-image (T2I) generation within the Advanced ControlNet framework. It allows for precise control over the influence of various weights on the image generation process, accommodating adjustments and enhancements to the control mechanism.
+    - Inputs:
+        - `weight_i` (Required): Specifies a weight in the sequence, setting the foundational influence for the T2I generation process. The index 'i' ranges from 00 to 03, each adjusting the influence on the generation process. Type should be `FLOAT`.
+        - `flip_weights` (Required): A boolean flag to reverse the order of weights, accommodating recent changes in ComfyUI. Type should be `BOOLEAN`.
+        - `uncond_multiplier` (Optional): A multiplier for unconditional weights, offering additional control over the generation process. Type should be `FLOAT`.
+        - `cn_extras` (Optional): A dictionary for extra control net weights, allowing for extended customization. Type should be `CN_WEIGHTS_EXTRAS`.
+        - `autosize` (Optional): Specifies the padding size for automatic sizing, enhancing layout adaptability. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `CN_WEIGHTS`: The customized control net weights adapted for T2I generation. Type should be `CONTROL_NET_WEIGHTS`.
+        - `TK_SHORTCUT`: A timestep keyframe shortcut, encapsulating the control weights for efficient processing. Type should be `TIMESTEP_KEYFRAME`.

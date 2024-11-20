@@ -1,0 +1,7 @@
+- `JWImageResizeToSquare`: This node resizes an input image to a specified square size, using a chosen interpolation method to adjust the image's dimensions while maintaining its aspect ratio.
+    - Inputs:
+        - `image` (Required): The input image to be resized. It is crucial for defining the visual content that will undergo resizing. Type should be `IMAGE`.
+        - `size` (Required): Specifies the target size for both the width and height of the image, ensuring the output image is square. Type should be `INT`.
+        - `interpolation_mode` (Required): Determines the method used for resizing the image, affecting the quality and characteristics of the resized image. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The resized image, now transformed to the specified square dimensions. Type should be `IMAGE`.

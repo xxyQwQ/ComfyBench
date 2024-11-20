@@ -1,0 +1,7 @@
+- `CacheBackendData __Inspire`: The CacheBackendData node is designed to cache arbitrary data along with a unique key and a descriptive tag in a backend storage system. This functionality supports efficient data retrieval and management by allowing users to store and access data based on unique identifiers and descriptive tags.
+    - Inputs:
+        - `key` (Required): The 'key' parameter serves as a unique identifier for the data being cached. It is crucial for retrieving the cached data at a later time. Type should be `STRING`.
+        - `tag` (Required): The 'tag' parameter provides a short description for the cached data, aiding in its identification and retrieval. Type should be `STRING`.
+        - `data` (Required): The 'data' parameter is the actual data to be cached. It can be of any type, making this node versatile in its application. Type should be `*`.
+    - Outputs:
+        - `data opt`: Returns the data that was cached, allowing for immediate verification or further processing. Type should be `*`.

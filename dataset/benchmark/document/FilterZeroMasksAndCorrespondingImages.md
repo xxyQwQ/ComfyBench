@@ -1,0 +1,9 @@
+- `FilterZeroMasksAndCorrespondingImages`: This node is designed to filter out all zero-value masks from a batch of masks and, optionally, filter out corresponding images based on the presence of non-zero masks. It aims to streamline the preprocessing of image and mask data by ensuring that only relevant, non-empty masks and their associated images are passed forward for further processing.
+    - Inputs:
+        - `masks` (Required): A list of masks to be filtered, removing those that are entirely zero-valued. This parameter is essential for identifying relevant data for further processing. Type should be `MASK`.
+        - `original_images` (Optional): An optional list of images corresponding to the masks. If provided, images associated with non-zero masks are retained, aligning image data with filtered mask data. Type should be `IMAGE`.
+    - Outputs:
+        - `non_zero_masks_out`: The filtered list of non-zero masks. Type should be `MASK`.
+        - `non_zero_mask_images_out`: The list of images corresponding to the non-zero masks, if original images were provided. Type should be `IMAGE`.
+        - `zero_mask_images_out`: The list of images corresponding to the zero masks, if original images were provided. Type should be `IMAGE`.
+        - `zero_mask_images_out_indexes`: The indexes of images corresponding to the zero masks, useful for tracking which images were filtered out. Type should be `INDEXES`.

@@ -1,8 +1,0 @@
-- `ACN_ReferenceControlNet`: The ACN_ReferenceControlNet node is designed to load and apply a Reference ControlNet configuration for advanced control in generative models. It allows for the customization of reference types, style fidelity, and reference weight to fine-tune the influence of the control net on the generative process.
-    - Parameters:
-        - `reference_type`: Specifies the type of reference to be used, affecting how the control net interprets and applies style and content guidance. Type should be `COMBO[STRING]`.
-        - `style_fidelity`: Determines the fidelity of the style to be applied by the control net, influencing the balance between style and content in the generated output. Type should be `FLOAT`.
-        - `ref_weight`: Controls the weight of the reference in the control net's decision-making process, adjusting the overall impact of the reference on the output. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `control_net`: The configured Reference ControlNet, ready to be applied to the generative model for influencing its output. Type should be `CONTROL_NET`.

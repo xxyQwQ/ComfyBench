@@ -1,8 +1,0 @@
-- `ExtractKeyframes+`: The ExtractKeyframes node is designed to identify and extract key frames from a sequence of images based on the variation in content between consecutive frames. It utilizes a threshold to determine significant changes, thereby isolating frames that represent substantial shifts in the visual narrative.
-    - Parameters:
-        - `threshold`: A value that determines the sensitivity of variation detection between frames. A higher threshold results in fewer key frames being identified, focusing on more significant changes. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The sequence of images from which key frames are to be extracted. It serves as the primary input for analyzing variations between frames. Type should be `IMAGE`.
-    - Outputs:
-        - `KEYFRAMES`: The extracted key frames that represent significant changes in the sequence. Type should be `IMAGE`.
-        - `indexes`: The indices of the extracted key frames within the original sequence, provided as a comma-separated string. Type should be `STRING`.

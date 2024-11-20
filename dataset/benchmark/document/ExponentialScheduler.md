@@ -1,0 +1,7 @@
+- `ExponentialScheduler`: The ExponentialScheduler node is designed to generate a sequence of sigma values following an exponential schedule for diffusion processes. It calculates these values based on the number of steps and the specified minimum and maximum sigma values, providing a foundational mechanism for controlling the noise level across the diffusion steps.
+    - Inputs:
+        - `steps` (Required): Specifies the total number of steps for the diffusion process, directly influencing the length of the generated sigma sequence. Type should be `INT`.
+        - `sigma_max` (Required): Defines the maximum sigma value, setting the upper limit of noise to be introduced at the beginning of the diffusion process. Type should be `FLOAT`.
+        - `sigma_min` (Required): Determines the minimum sigma value, establishing the lower noise limit towards the end of the diffusion process. Type should be `FLOAT`.
+    - Outputs:
+        - `sigmas`: A sequence of sigma values calculated based on an exponential schedule, used to control the noise level in each step of the diffusion process. Type should be `SIGMAS`.

@@ -1,0 +1,17 @@
+- `CR Aspect Ratio Social Media`: This node is designed to adjust the dimensions of images to fit specific aspect ratios tailored for social media platforms. It provides functionality to modify width and height based on predefined social media sizes, allowing for dimension swapping, scaling, and batch processing of images.
+    - Inputs:
+        - `width` (Required): Specifies the initial width of the image. It's a crucial parameter as it serves as a base for calculating the new dimensions according to the selected aspect ratio. Type should be `INT`.
+        - `height` (Required): Specifies the initial height of the image. Along with width, it forms the basis for the new dimensions calculation according to the selected aspect ratio. Type should be `INT`.
+        - `aspect_ratio` (Required): Determines the target aspect ratio for the image, based on common social media platform requirements. Type should be `COMBO[STRING]`.
+        - `swap_dimensions` (Required): Allows for the swapping of width and height dimensions to accommodate different orientation needs. Type should be `COMBO[STRING]`.
+        - `upscale_factor` (Required): Defines the factor by which the image should be upscaled after adjusting to the target aspect ratio. Type should be `FLOAT`.
+        - `prescale_factor` (Required): Defines the factor by which the image should be prescaled before adjusting to the target aspect ratio. Type should be `FLOAT`.
+        - `batch_size` (Required): Specifies the number of images to process in a batch, facilitating batch processing. Type should be `INT`.
+    - Outputs:
+        - `width`: The adjusted width of the image after applying the aspect ratio and scaling factors. Type should be `INT`.
+        - `height`: The adjusted height of the image after applying the aspect ratio and scaling factors. Type should be `INT`.
+        - `upscale_factor`: The factor by which the image has been upscaled. Type should be `FLOAT`.
+        - `prescale_factor`: The factor by which the image has been prescaled. Type should be `FLOAT`.
+        - `batch_size`: The number of images processed in the batch. Type should be `INT`.
+        - `empty_latent`: A tensor placeholder for further processing, representing the batch of images after resizing and scaling. Type should be `LATENT`.
+        - `show_help`: A URL providing additional help and documentation related to aspect ratio adjustments for social media. Type should be `STRING`.

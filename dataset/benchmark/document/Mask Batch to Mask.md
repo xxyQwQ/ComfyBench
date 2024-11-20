@@ -1,0 +1,6 @@
+- `Mask Batch to Mask`: This node is designed to extract a single mask from a batch of masks based on a specified batch number. It facilitates the selection and isolation of a specific mask from a collection, enabling focused operations on a singular mask element within a broader batch context.
+    - Inputs:
+        - `masks` (Required): The collection of masks from which a single mask is to be extracted. It plays a crucial role in determining the specific mask to isolate based on the batch number. Type should be `MASK`.
+        - `batch_number` (Required): Specifies the index of the mask to be extracted from the batch. It determines which mask is isolated and returned as the output. Type should be `INT`.
+    - Outputs:
+        - `mask`: The single mask extracted from the specified batch position. It represents the isolated mask element for further processing or analysis. Type should be `MASK`.

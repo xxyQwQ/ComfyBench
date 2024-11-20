@@ -1,0 +1,4 @@
+- `Anything Everywhere`: This node is designed to process and forward any type of input to a specified message handler, making it highly versatile for various data types and structures. It can handle multiple optional inputs simultaneously, allowing for flexible data processing and communication within the system.
+    - Inputs:
+        - `anything` (Optional): Represents any optional input that the node can process. This flexibility allows the node to handle a wide variety of data types and structures, making it adaptable to different use cases. Type should be `*`.
+    - Outputs:

@@ -1,0 +1,10 @@
+- `DetailTransfer`: The DetailTransfer node is designed to enhance the visual quality of images by transferring intricate details from one image to another. It focuses on improving the texture and depth of the target image, ensuring that the final output retains a high level of detail and realism.
+    - Inputs:
+        - `target` (Required): The target image that will receive the detail enhancements, serving as the primary canvas for the detail transfer. Type should be `IMAGE`.
+        - `source` (Required): The source image from which details are extracted to be transferred to the target image, playing a key role in defining the transferred textures and details. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the blending mode used to combine the source and target images, influencing the final appearance of the detail transfer. Type should be `COMBO[STRING]`.
+        - `blur_sigma` (Required): Determines the amount of blur applied to the detail transfer, affecting the smoothness and subtlety of the detail integration. Type should be `FLOAT`.
+        - `blend_factor` (Required): Controls the intensity of the detail transfer, allowing for fine-tuning of how prominently the transferred details appear on the target image. Type should be `FLOAT`.
+        - `mask` (Optional): An optional mask that can specify areas of the target image to be affected or excluded from the detail transfer, offering additional control over the outcome. Type should be `MASK`.
+    - Outputs:
+        - `image`: The enhanced image with transferred details, showcasing improved texture and depth for a more realistic and detailed appearance. Type should be `IMAGE`.

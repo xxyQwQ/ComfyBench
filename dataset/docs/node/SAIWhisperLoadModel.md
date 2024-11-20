@@ -1,7 +1,0 @@
-- `SAIWhisperLoadModel`: The SAIWhisperLoadModel node is designed to load a specified Whisper model into memory, making it ready for speech-to-text operations. It supports a range of Whisper model versions and allows for device specification to optimize performance.
-    - Parameters:
-        - `model`: Specifies the Whisper model version to load. Supports multiple versions including large, base, medium, small, and tiny variants, as well as a distil version for efficient processing. Type should be `COMBO[STRING]`.
-        - `device`: Determines the computational device ('cuda' or 'cpu') the loaded model will utilize, allowing for flexibility based on available hardware. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `model`: The loaded Whisper model along with its processor and the device it's loaded onto, ready for speech-to-text processing. Type should be `WHISPER_MODEL`.

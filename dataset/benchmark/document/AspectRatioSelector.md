@@ -1,0 +1,7 @@
+- `AspectRatioSelector`: The AspectRatioSelector node is designed to select and adjust the aspect ratio of images based on predefined options. It simplifies the process of resizing images to fit specific dimensions, ensuring that the output matches the desired aspect ratio.
+    - Inputs:
+        - `aspect_ratio` (Required): Specifies the desired aspect ratio for the image, chosen from a predefined list of common ratios. This selection determines the dimensions to which the image will be resized, impacting the final appearance and layout of the image. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `ratio`: Returns the selected aspect ratio as a string, indicating the proportion between width and height of the image. Type should be `STRING`.
+        - `width`: The calculated width of the image after resizing to the selected aspect ratio. Type should be `INT`.
+        - `height`: The calculated height of the image after resizing to the selected aspect ratio. Type should be `INT`.

@@ -1,0 +1,7 @@
+- `FloatToMask`: The `FloatToMask` node is designed to convert floating-point representations into mask formats, facilitating operations that require binary or discrete mask inputs. This node plays a crucial role in image processing and manipulation tasks where precise delineation of areas based on specific criteria is essential.
+    - Inputs:
+        - `input_values` (Required): Represents the floating-point values to be converted into a mask. These values are typically thresholds or indicators that determine the mask's shape and boundaries. Type should be `FLOAT`.
+        - `width` (Required): Specifies the width of the output mask. This parameter determines the horizontal dimension of the mask generated from the input values. Type should be `INT`.
+        - `height` (Required): Specifies the height of the output mask. This parameter determines the vertical dimension of the mask generated from the input values. Type should be `INT`.
+    - Outputs:
+        - `mask`: The output binary mask generated from the input floating-point values. This mask can be used for various image processing applications that require discrete delineation. Type should be `MASK`.

@@ -1,0 +1,8 @@
+- `ImageConcanate`: The ImageConcatenate node is designed for combining two images into a single image along a specified direction. It supports matching the sizes of the input images and adjusting them to have the same batch size if necessary, allowing for flexible image concatenation operations.
+    - Inputs:
+        - `image1` (Required): The first image tensor to be concatenated. It plays a crucial role in determining the final image's layout and size, especially when matching image sizes or batch sizes. Type should be `IMAGE`.
+        - `image2` (Required): The second image tensor to be concatenated with the first one. Its size and batch size can be adjusted to match the first image, ensuring seamless concatenation. Type should be `IMAGE`.
+        - `direction` (Required): Specifies the direction ('right', 'left', 'up', 'down') in which the second image should be concatenated to the first one, influencing the final image's orientation. Type should be `COMBO[STRING]`.
+        - `match_image_size` (Required): A boolean flag indicating whether the sizes of the two images should be matched before concatenation, affecting the resizing operation if true. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The resulting tensor after concatenating the two input images along the specified direction. Type should be `IMAGE`.

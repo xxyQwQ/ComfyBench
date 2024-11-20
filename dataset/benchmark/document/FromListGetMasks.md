@@ -1,0 +1,5 @@
+- `FromListGetMasks`: The `FromListGetMasks` node is designed to retrieve a specific mask from a list of masks based on a given index. It enables random access to the list elements, allowing for both forward and reverse indexing, thereby facilitating flexible manipulation and selection of masks within a list.
+    - Inputs:
+        - `list` (Required): The list of masks from which a specific mask is to be retrieved. This parameter is crucial for specifying the source list. Type should be `MASK`.
+    - Outputs:
+        - `mask`: The mask retrieved from the specified index in the list. This output is essential for further processing or manipulation of the selected mask. Type should be `MASK`.

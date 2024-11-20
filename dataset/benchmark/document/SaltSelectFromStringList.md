@@ -1,0 +1,6 @@
+- `SaltSelectFromStringList`: The `SaltSelectFromStringList` node enables the selection of an element from a list of strings based on a specified index. It abstracts the process of indexing into lists, providing a straightforward way to retrieve specific elements, and includes handling for out-of-range indices.
+    - Inputs:
+        - `list_input` (Required): Represents the list of strings from which an element will be selected. It is crucial for determining the scope of selection. Type should be `LIST`.
+        - `index` (Required): Specifies the position in the list from which to select the element. It determines the exact element to be retrieved from the list. Type should be `INT`.
+    - Outputs:
+        - `selection`: The selected string from the input list, based on the provided index. Type should be `STRING`.

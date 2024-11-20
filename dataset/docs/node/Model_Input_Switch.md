@@ -1,8 +1,0 @@
-- `Model Input Switch`: The WAS_Model_Input_Switch node is designed to dynamically select between two model inputs based on a boolean condition. This functionality allows for flexible control flow within a pipeline, enabling the conditional execution of model-based operations.
-    - Parameters:
-        - `boolean`: A boolean flag that determines which model input (model_a or model_b) to pass through as the output. This parameter is essential for controlling the switch behavior. Type should be `BOOLEAN`.
-    - Inputs:
-        - `model_a`: Represents the first model input option. This parameter plays a crucial role in determining the output based on the boolean condition. Type should be `MODEL`.
-        - `model_b`: Represents the second model input option. It serves as an alternative to the first model input, with its selection dependent on the boolean condition. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The selected model input based on the boolean condition. This output facilitates conditional model selection within a workflow. Type should be `MODEL`.

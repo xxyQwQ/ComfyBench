@@ -1,0 +1,15 @@
+- `FocusStylerAdvanced`: SDXLPromptStylerAdvanced enhances text prompts through advanced styling techniques, allowing for intricate customization of both positive and negative prompts. It introduces a nuanced layer of styling by incorporating global and local contexts, enabling users to fine-tune their text prompts with greater specificity.
+    - Inputs:
+        - `text_positive_g` (Required): Serves as the global context for the positive text prompt, providing a broad thematic foundation for styling. Type should be `STRING`.
+        - `text_positive_l` (Required): Represents the local context for the positive text prompt, allowing for detailed customization within the global theme. Type should be `STRING`.
+        - `text_negative` (Required): The negative text prompt to be styled, which can be tailored to contrast or complement the positive prompts. Type should be `STRING`.
+        - `focus` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Determines how the negative styling is applied, specifying whether adjustments affect the global, local, or both aspects of the negative prompt. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): When true, logs the details of the styling process, offering insights into the selections made and their effects. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The styled global positive text prompt, reflecting the applied styling options. Type should be `STRING`.
+        - `text_positive_l`: The styled local positive text prompt, showcasing the effects of granular adjustments. Type should be `STRING`.
+        - `text_positive`: A composite of the global and local positive prompts, styled and merged according to the specified options. Type should be `STRING`.
+        - `text_negative_g`: The styled global negative text prompt, adjusted based on the negative_prompt_to parameter. Type should be `STRING`.
+        - `text_negative_l`: The styled local negative text prompt, tailored according to the negative_prompt_to parameter. Type should be `STRING`.
+        - `text_negative`: The overall styled negative prompt, incorporating both global and local adjustments. Type should be `STRING`.

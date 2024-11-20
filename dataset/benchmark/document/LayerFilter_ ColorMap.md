@@ -1,0 +1,7 @@
+- `LayerFilter_ ColorMap`: The ColorMap node applies a specified color map to an image, optionally adjusting its opacity, to transform the visual appearance of the image. This node supports a variety of color maps, allowing for a wide range of aesthetic effects.
+    - Inputs:
+        - `image` (Required): The input image to which the color map will be applied. This is the primary data the node operates on, determining the visual output. Type should be `IMAGE`.
+        - `color_map` (Required): Specifies the color map to apply to the input image. The choice of color map affects the aesthetic and thematic presentation of the image. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): Determines the opacity level of the color map applied to the image, allowing for fine-tuning of the visual effect. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image after the color map and opacity adjustments have been applied, showcasing the transformed visual appearance. Type should be `IMAGE`.

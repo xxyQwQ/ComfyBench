@@ -1,0 +1,5 @@
+- `Image to Seed`: This node transforms a collection of images into a corresponding set of numerical seeds. It serves as a bridge between visual content and numerical representations, enabling further processing or analysis based on these derived seeds.
+    - Inputs:
+        - `images` (Required): The collection of images to be transformed into seeds. This input is crucial for generating a numerical representation that encapsulates the essence of the visual content. Type should be `IMAGE`.
+    - Outputs:
+        - `int`: A list of integers, each representing a seed derived from the corresponding input image. These seeds serve as numerical representations of the images, facilitating further computational tasks. Type should be `INT`.

@@ -1,0 +1,13 @@
+- `TextCombinations3`: This node is designed to generate a variety of text combinations based on predefined text inputs and operations. It allows for the dynamic creation of text outputs by applying specified operations to the input texts, potentially incorporating randomness through a seed value.
+    - Inputs:
+        - `text1` (Required): The first text input for combination. It serves as a foundational element for generating text outputs. Type should be `STRING`.
+        - `text2` (Required): The second text input for combination. It complements text1 in generating diverse text outputs. Type should be `STRING`.
+        - `text3` (Required): The third text input for combination. It adds an additional layer of complexity and variation to the text outputs. Type should be `STRING`.
+        - `operation` (Required): Specifies the operation to be applied to the input texts, determining how they are combined into the final output. Type should be `COMBO[STRING]`.
+        - `delimiter` (Required): The delimiter used to separate text components in the final output. Type should be `STRING`.
+        - `use_seed` (Required): Determines whether a seed value is used to introduce randomness into the operation selection process. Type should be `COMBO[STRING]`.
+        - `seed` (Required): The seed value used for randomizing the operation selection, if enabled. Type should be `INT`.
+    - Outputs:
+        - `output1`: The first generated text output based on the specified operation and inputs. Type should be `STRING`.
+        - `output2`: The second generated text output, providing an additional variant based on the operation and inputs. Type should be `STRING`.
+        - `output3`: The third generated text output, further expanding the range of possible combinations. Type should be `STRING`.

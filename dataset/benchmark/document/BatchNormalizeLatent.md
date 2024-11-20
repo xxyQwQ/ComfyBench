@@ -1,0 +1,6 @@
+- `BatchNormalizeLatent`: This node applies batch normalization to latent representations, adjusting each latent sample's distribution towards a standard distribution, thereby stabilizing and potentially improving the generative process.
+    - Inputs:
+        - `latents` (Required): The latent representations to be normalized. This input is crucial for the normalization process as it directly modifies the distribution of these latents. Type should be `LATENT`.
+        - `factor` (Required): A scaling factor that interpolates between the original and normalized latent representations, allowing for controlled adjustment of the normalization effect. Type should be `FLOAT`.
+    - Outputs:
+        - `latent`: The normalized latent representations, adjusted according to the specified factor to potentially enhance generative model performance. Type should be `LATENT`.

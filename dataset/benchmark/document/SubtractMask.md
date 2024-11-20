@@ -1,0 +1,6 @@
+- `SubtractMask`: The SubtractMask node is designed for performing pixel-wise subtraction between two mask images, resulting in a new mask that highlights the differences. This operation is fundamental in image processing tasks where the goal is to isolate changes or differences between two images.
+    - Inputs:
+        - `mask1` (Required): The first mask image to be subtracted from. It plays a crucial role in determining the base or reference for the subtraction operation. Type should be `MASK`.
+        - `mask2` (Required): The second mask image to be subtracted. This mask is subtracted from the first one to highlight differences. Type should be `MASK`.
+    - Outputs:
+        - `mask`: The resulting mask after subtracting mask2 from mask1, highlighting the differences between the two. Type should be `MASK`.

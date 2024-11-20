@@ -1,0 +1,72 @@
+{
+    "001": {
+        "name": "sitting_dog",
+        "instruction": "Generate an image of a dog sitting on a grass field. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "002": {
+        "name": "flowing_river",
+        "instruction": "Generate a 2-second video of a river flowing through a valley with mountains in the background. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "003": {
+        "name": "president_trump_video",
+        "instruction": "You are given an image `president_trump.jpg`, which is a photo of President Trump. Create a 2-second video of President Trump speaking based on the image. The result should be a high-quality video.",
+        "resource": "president_trump.jpg",
+        "modality": "i2v",
+        "category": "vanilla"
+    },
+    "004": {
+        "name": "table_fork_replacement",
+        "instruction": "You are given an image `dish_table.png` of a table filled with dishes. Replace the fork on the table with a spoon. The result should be a high-quality image without visible artifacts.",
+        "resource": "dish_table.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "005": {
+        "name": "street_car_removal",
+        "instruction": "You are given an image `street_car.png` of a red car parked on the street. Remove the car from the street. The result should be a high-quality image without visible artifacts.",
+        "resource": "street_car.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "006": {
+        "name": "bedroom_style_cloning",
+        "instruction": "You are given an image `warm_bedroom.jpg`, which is a photo of a bedroom with warm lighting. Follow the style of the bedroom to generate a living room. The result should be an image of a living room with a similar decoration style.",
+        "resource": "warm_bedroom.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "007": {
+        "name": "girl_pose_cloning",
+        "instruction": "You are given an image `play_guitar.jpg` of a girl playing the guitar. Generate an image of an old man playing the guitar in a forest with the same pose as the girl. The result should be a realistic image of an old man playing the guitar.",
+        "resource": "play_guitar.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "008": {
+        "name": "budapest_image_extension",
+        "instruction": "You are given an image `budapest_city.jpg`, which is a photo of the city of Budapest. Extend the image by 128 pixels on both the left and right sides. The result should be a larger image of the city of Budapest.",
+        "resource": "budapest_city.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "009": {
+        "name": "people_image_upscaling",
+        "instruction": "You are given an image `many_people.png`, which is a low-resolution photo of a crowd of people. Upscale the image by 4x. The result should be a high-resolution image of the crowd of people.",
+        "resource": "many_people.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "010": {
+        "name": "taylor_video_interpolation",
+        "instruction": "You are given a video `taylor_swift.mp4`, which is a video of Taylor Swift speaking on stage. Interpolate the video to increase the frame rate by 3x. The result should be a smoother video of Taylor Swift speaking.",
+        "resource": "taylor_swift.mp4",
+        "modality": "v2v",
+        "category": "vanilla"
+    }
+}

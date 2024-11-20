@@ -1,9 +1,0 @@
-- `UnTonemap`: The UnTonemap node is designed to reverse the effects of tonemapping on images, converting them back from a tonemapped representation to their original linear or sRGB color space. This process is essential for restoring the original dynamic range and color fidelity of images that have undergone tonemapping.
-    - Parameters:
-        - `input_mode`: Specifies the color space of the input images, either 'sRGB' or 'linear', which determines the initial conversion step before untonemapping. Type should be `COMBO[STRING]`.
-        - `output_mode`: Defines the desired color space of the output images, either 'linear' or 'sRGB', affecting the final conversion step after untonemapping. Type should be `COMBO[STRING]`.
-        - `tonemap_scale`: A scaling factor applied during the untonemapping process to adjust the intensity of the effect. Type should be `FLOAT`.
-    - Inputs:
-        - `images`: The images to be untonemapped. This input is crucial for defining the set of images that will undergo the reverse tonemapping process. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The untonemapped images, returned in the specified output color space, either 'linear' or 'sRGB'. Type should be `IMAGE`.

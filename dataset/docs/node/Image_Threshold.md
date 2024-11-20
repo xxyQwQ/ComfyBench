@@ -1,7 +1,0 @@
-- `Image Threshold`: The Image Threshold node is designed to process images by applying a thresholding technique, converting them into binary images based on a specified threshold value. This operation is fundamental in image processing tasks where distinguishing between foreground and background is necessary.
-    - Parameters:
-        - `threshold`: The 'threshold' parameter determines the cutoff value for converting the grayscale image into a binary image. It directly influences the outcome of the thresholding process by specifying the intensity level at which pixels are classified as either foreground or background. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The 'image' parameter represents the input image to be thresholded. It plays a crucial role in the thresholding process as the source on which the threshold will be applied. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a binary image where pixels are either set to the maximum value (representing the foreground) or zero (representing the background), based on the applied threshold. Type should be `IMAGE`.

@@ -1,0 +1,9 @@
+- `LatentKeyframeGroup`: The LatentKeyframeGroup class manages a collection of keyframes, allowing for the addition, retrieval, and cloning of keyframe objects based on their batch index. It supports sorting keyframes by their batch index, ensuring an organized sequence for operations that depend on the temporal order of keyframes.
+    - Inputs:
+        - `index_strengths` (Required): A multiline string input specifying the indices and strengths for keyframes to be loaded or manipulated, enabling dynamic keyframe management based on user-defined criteria. Type should be `STRING`.
+        - `prev_latent_kf` (Optional): An optional input representing a previous LatentKeyframeGroup object, allowing for the continuation or modification of an existing sequence of keyframes. Type should be `LATENT_KEYFRAME`.
+        - `latent_optional` (Optional): An optional latent input for operations that may require additional latent information not provided by the default keyframe parameters. Type should be `LATENT`.
+        - `print_keyframes` (Optional): A boolean flag to enable or disable printing of keyframe information, useful for debugging or informational purposes. Type should be `BOOLEAN`.
+        - `autosize` (Optional): An optional parameter to automatically adjust the size of the keyframe group, with a specified padding for flexibility in keyframe management. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `LATENT_KF`: The output is a LatentKeyframeGroup object, representing the updated collection of keyframes after the operation. Type should be `LATENT_KEYFRAME`.

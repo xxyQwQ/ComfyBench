@@ -1,0 +1,8 @@
+- `JWMaskResize`: The JWMaskResize node is designed for resizing masks to specified dimensions, offering various interpolation modes to best suit the resizing needs.
+    - Inputs:
+        - `mask` (Required): The input mask to be resized. This parameter is crucial as it determines the content that will be resized. Type should be `MASK`.
+        - `height` (Required): The desired height for the resized mask. This parameter directly influences the dimensions of the output mask. Type should be `INT`.
+        - `width` (Required): The desired width for the resized mask. This parameter directly influences the dimensions of the output mask. Type should be `INT`.
+        - `interpolation_mode` (Required): Specifies the method of interpolation to be used during resizing, allowing for flexibility in how the resizing is performed. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `mask`: The resized mask, adjusted to the specified dimensions and using the chosen interpolation method. Type should be `MASK`.

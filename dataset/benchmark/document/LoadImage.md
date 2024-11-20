@@ -1,0 +1,6 @@
+- `LoadImage`: The LoadImage node is designed for loading and processing images from specified paths. It handles various image formats, applies necessary transformations like EXIF orientation correction, and converts images to a consistent format and tensor representation for further processing in machine learning pipelines.
+    - Inputs:
+        - `image` (Required): The 'image' parameter specifies the image file to be loaded and processed from a predefined list of available files. It is crucial for determining the input for the node's operations, affecting the subsequent image manipulation and conversion steps. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: A tensor representing the loaded and processed image, ready for use in further processing or model inference. Type should be `IMAGE`.
+        - `mask`: A tensor representing the mask associated with the input image, if applicable, indicating areas of interest or regions to ignore. Type should be `MASK`.

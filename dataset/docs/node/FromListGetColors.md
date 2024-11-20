@@ -1,6 +1,0 @@
-- `FromListGetColors`: This node is designed to extract color information from a list, facilitating the retrieval of color data for further processing or analysis.
-    - Parameters:
-    - Inputs:
-        - `list`: The list from which color information is to be extracted. This parameter is crucial for specifying the source of color data the node will process. Type should be `COLOR`.
-    - Outputs:
-        - `color`: A list of extracted color data from the input list. This output is significant for downstream tasks that require color information. Type should be `COLOR`.

@@ -1,0 +1,9 @@
+- `CR Color Tint`: The CR_ColorTint node applies a color tint to an image, allowing for the adjustment of the image's color tone based on a specified strength and color mode. It supports a variety of predefined color modes as well as custom color inputs, enabling a wide range of visual effects.
+    - Inputs:
+        - `image` (Required): The input image to which the color tint will be applied. This parameter is crucial as it serves as the base for the tinting process. Type should be `IMAGE`.
+        - `strength` (Required): Determines the intensity of the color tint applied to the image. A higher value results in a more pronounced color effect. Type should be `FLOAT`.
+        - `mode` (Required): Specifies the color mode for the tint. This can be a predefined color mode such as 'sepia', 'red', or 'blue', or a custom color defined by 'tint_color_hex'. Type should be `COMBO[STRING]`.
+        - `tint_color_hex` (Optional): The hexadecimal color code for the tint when 'mode' is set to 'custom'. This allows for precise control over the tint color. Type should be `STRING`.
+    - Outputs:
+        - `IMAGE`: The image after the color tint has been applied, reflecting the specified strength and color mode. Type should be `IMAGE`.
+        - `show_help`: A URL to the documentation or help page for the CR_ColorTint node. Type should be `STRING`.

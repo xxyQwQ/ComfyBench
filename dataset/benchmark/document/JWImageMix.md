@@ -1,0 +1,8 @@
+- `JWImageMix`: The JWImageMix node is designed for blending two images together using specified blend modes and a blend factor. It supports operations like mixing and multiplying images, allowing for flexible image manipulation and combination.
+    - Inputs:
+        - `blend_type` (Required): Specifies the blend mode to use for combining the images. It determines how the images are mathematically combined, affecting the visual outcome of the blend. Type should be `['mix', 'multiply']`.
+        - `factor` (Required): Determines the weight of the second image in the blend. A higher factor gives more prominence to the second image, while a lower factor favors the first image. Type should be `FLOAT`.
+        - `image_a` (Required): The first image to be blended. Acts as the base layer in the blending operation. Type should be `IMAGE`.
+        - `image_b` (Required): The second image to be blended with the first. Its contribution is controlled by the blend factor. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The result of blending the two input images according to the specified blend type and factor. Type should be `IMAGE`.

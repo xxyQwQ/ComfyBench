@@ -1,0 +1,5 @@
+- `ShowText_pysssss`: The ShowText node is designed to display text within a workflow, allowing for dynamic updates to UI elements based on input text. It can also modify widget values within the workflow if provided with specific metadata, enhancing interactive capabilities.
+    - Inputs:
+        - `text` (Required): The primary text to be displayed or processed. This input is essential for the node's operation, serving as the main content for display or further action. Type should be `STRING`.
+    - Outputs:
+        - `string`: unknown Type should be `STRING`.

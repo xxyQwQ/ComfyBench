@@ -1,0 +1,7 @@
+- `Inference_Core_ImageLuminanceDetector`: This node is designed to adjust the luminance of an image based on ControlNet preprocessing techniques. It utilizes gamma correction to modify the image's luminance, aiming to enhance image quality or adjust it for further processing steps.
+    - Inputs:
+        - `image` (Required): The input image to be processed for luminance adjustment. Type should be `IMAGE`.
+        - `gamma_correction` (Optional): Specifies the gamma correction factor to adjust the image's luminance. A higher value brightens the image, while a lower value darkens it, affecting the overall image processing outcome. Type should be `FLOAT`.
+        - `resolution` (Optional): Specifies the resolution for the output image, affecting the level of detail and size of the processed image. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is an image with adjusted luminance, processed through gamma correction to either increase or decrease its brightness. Type should be `IMAGE`.

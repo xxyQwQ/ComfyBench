@@ -1,0 +1,9 @@
+- `ImpactControlNetApplySEGS`: This node applies a control network to segmentation elements (SEGS), modifying them based on the control network's parameters and potentially an additional control image. It's designed to adjust or enhance specific aspects of the segmentation elements, such as their appearance or structure, by leveraging the control network's capabilities.
+    - Inputs:
+        - `segs` (Required): The segmentation elements to be modified. This is the primary input that the control network will be applied to. Type should be `SEGS`.
+        - `control_net` (Required): The control network to be applied to each segmentation element. It defines the modifications or adjustments to be made. Type should be `CONTROL_NET`.
+        - `strength` (Required): A scalar value that determines the intensity of the control network's effect on the segmentation elements. Type should be `FLOAT`.
+        - `segs_preprocessor` (Optional): An optional preprocessor for the segmentation elements before applying the control network. Type should be `SEGS_PREPROCESSOR`.
+        - `control_image` (Optional): An optional image that can provide additional context or guidance for the control network's application. Type should be `IMAGE`.
+    - Outputs:
+        - `segs`: The modified segmentation elements after the control network has been applied. Type should be `SEGS`.

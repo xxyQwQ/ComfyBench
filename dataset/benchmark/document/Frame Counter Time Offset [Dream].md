@@ -1,0 +1,6 @@
+- `Frame Counter Time Offset [Dream]`: This node applies a time-based offset to a frame counter, effectively adjusting the current frame based on a specified duration in seconds. It's designed to facilitate animation timing adjustments by converting time into an equivalent frame count increment, using the frame rate for accurate synchronization.
+    - Inputs:
+        - `frame_counter` (Required): The frame counter to be adjusted. It serves as the basis for applying the time offset, determining the new frame position. Type should be `FRAME_COUNTER`.
+        - `offset_seconds` (Required): The duration in seconds to offset the frame counter. This value is multiplied by the frame rate to calculate the equivalent frame count to adjust. Type should be `FLOAT`.
+    - Outputs:
+        - `frame_counter`: The adjusted frame counter, incremented by the calculated frame count equivalent of the specified time offset. Type should be `FRAME_COUNTER`.

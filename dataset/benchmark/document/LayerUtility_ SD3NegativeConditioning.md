@@ -1,0 +1,6 @@
+- `LayerUtility_ SD3NegativeConditioning`: This node applies negative conditioning to the input conditioning data for SD3 models, aiming to modify and control the generation process by zeroing out specific parts of the conditioning and adjusting the range of effect. It's designed to enhance or suppress certain aspects of the generated content based on the negative conditioning applied.
+    - Inputs:
+        - `conditioning` (Required): The input conditioning data to be modified. It's crucial for defining the aspects of the generated content that need enhancement or suppression. Type should be `CONDITIONING`.
+        - `zero_out_start` (Required): Defines the starting point (as a percentage of the total length) from which the negative conditioning effect begins, allowing for precise control over the area of impact. Type should be `FLOAT`.
+    - Outputs:
+        - `conditioning`: The modified conditioning data after applying negative conditioning, ready to be used in the generation process. Type should be `CONDITIONING`.

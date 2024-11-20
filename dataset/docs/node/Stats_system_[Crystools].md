@@ -1,6 +1,0 @@
-- `Stats system [Crystools]`: This node is designed to gather and log system statistics, providing insights into the current state of the system's hardware resources such as CPU usage, RAM utilization, and more. It serves as a diagnostic tool to monitor and debug system performance.
-    - Parameters:
-    - Inputs:
-        - `latent`: The 'latent' input acts as a pass-through parameter, allowing the node to return it unchanged alongside the system statistics. This feature is useful for integrating system monitoring without disrupting data flow in a pipeline. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The 'latent' output parameter returns the original 'latent' input, allowing the node to be seamlessly integrated into a data processing pipeline without altering the flow of data. Type should be `LATENT`.

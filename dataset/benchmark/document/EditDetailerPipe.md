@@ -1,0 +1,17 @@
+- `EditDetailerPipe`: The EditDetailerPipe node is designed to enhance and detail the editing process by allowing the integration of various editing components such as LoRA, Wildcards, and models for refining the output. It serves as a foundational element in constructing detailed and customized editing pipelines.
+    - Inputs:
+        - `detailer_pipe` (Required): Represents the core pipeline for detailing, serving as the primary input around which additional detailing components are integrated. Type should be `DETAILER_PIPE`.
+        - `wildcard` (Required): Allows for the inclusion of dynamic, multiline text inputs, known as wildcards, to add flexibility and customization to the editing process. Type should be `STRING`.
+        - `Select to add LoRA` (Required): Enables the selection of LoRA (Locally Optimized Receptive Attention) components to be added to the text, enhancing its detail and specificity. Type should be `COMBO[STRING]`.
+        - `Select to add Wildcard` (Required): Facilitates the selection of predefined wildcards to be incorporated into the text, adding layers of customization. Type should be `COMBO[STRING]`.
+        - `model` (Optional): Specifies the model to be used in the detailing process, allowing for customization and refinement of outputs. Type should be `MODEL`.
+        - `clip` (Optional): Defines the CLIP model to be integrated into the detailing process for enhanced content understanding and generation. Type should be `CLIP`.
+        - `vae` (Optional): Specifies the VAE model to be used, enabling advanced image processing capabilities in the detailing process. Type should be `VAE`.
+        - `positive` (Optional): Defines positive conditioning factors to guide the detailing process towards desired outcomes. Type should be `CONDITIONING`.
+        - `negative` (Optional): Specifies negative conditioning factors to avoid certain outcomes in the detailing process. Type should be `CONDITIONING`.
+        - `bbox_detector` (Optional): Integrates a bounding box detector for object localization in images, enhancing the detailing capabilities. Type should be `BBOX_DETECTOR`.
+        - `sam_model` (Optional): Specifies the SAM model to be used, enabling advanced semantic understanding and manipulation. Type should be `SAM_MODEL`.
+        - `segm_detector` (Optional): Integrates a segmentation detector for detailed image segmentation, enhancing the editing capabilities. Type should be `SEGM_DETECTOR`.
+        - `detailer_hook` (Optional): Allows for the integration of custom hooks into the detailing process, enabling further customization. Type should be `DETAILER_HOOK`.
+    - Outputs:
+        - `detailer_pipe`: Outputs the enhanced detailer pipe, incorporating all specified modifications and integrations. Type should be `DETAILER_PIPE`.

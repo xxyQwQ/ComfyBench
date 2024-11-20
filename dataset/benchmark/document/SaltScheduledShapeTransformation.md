@@ -1,0 +1,19 @@
+- `SaltScheduledShapeTransformation`: This node is designed for applying scheduled transformations to shapes over a sequence of frames. It enables dynamic adjustments of shape properties such as size, position, and rotation according to predefined schedules, facilitating complex animations and visual effects.
+    - Inputs:
+        - `max_frames` (Required): Specifies the total number of frames for the shape transformation sequence, dictating the duration of the animation. Type should be `INT`.
+        - `image_width` (Required): Defines the width of the output image frame. Type should be `INT`.
+        - `image_height` (Required): Defines the height of the output image frame. Type should be `INT`.
+        - `initial_width` (Required): Sets the initial width of the shape before transformation begins. Type should be `INT`.
+        - `initial_height` (Required): Sets the initial height of the shape before transformation begins. Type should be `INT`.
+        - `initial_x_coord` (Required): Determines the initial x-coordinate position of the shape. Type should be `INT`.
+        - `initial_y_coord` (Required): Determines the initial y-coordinate position of the shape. Type should be `INT`.
+        - `initial_rotation` (Required): Sets the initial rotation angle of the shape, in degrees. Type should be `FLOAT`.
+        - `shape_mode` (Required): Specifies the mode of the shape to be transformed, affecting how the shape is interpreted and manipulated. Type should be `COMBO[STRING]`.
+        - `shape` (Optional): Optional. Provides the shape object to be transformed if not using a predefined shape mode. Type should be `MASK`.
+        - `width_schedule` (Optional): A schedule list defining the width transformation of the shape across the specified frames. Type should be `LIST`.
+        - `height_schedule` (Optional): A schedule list defining the height transformation of the shape across the specified frames. Type should be `LIST`.
+        - `x_schedule` (Optional): A schedule list defining the x-coordinate position transformation of the shape across the specified frames. Type should be `LIST`.
+        - `y_schedule` (Optional): A schedule list defining the y-coordinate position transformation of the shape across the specified frames. Type should be `LIST`.
+        - `rotation_schedule` (Optional): A schedule list defining the rotation angle transformation of the shape across the specified frames. Type should be `LIST`.
+    - Outputs:
+        - `images`: The output images resulting from the applied scheduled shape transformations, showcasing the dynamic changes in shape properties over the sequence of frames. Type should be `IMAGE`.

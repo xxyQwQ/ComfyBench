@@ -1,0 +1,8 @@
+- `SeamlessClone (simple)`: This node provides a simplified interface for performing seamless cloning operations on images, automatically determining the center of the source mask for the cloning process. It leverages the capabilities of a more complex seamless cloning node to offer an easier-to-use option for integrating one image into another with visually coherent results.
+    - Inputs:
+        - `dst` (Required): The destination image onto which the source image will be cloned. Type should be `IMAGE`.
+        - `src` (Required): The source image to be cloned onto the destination image. Type should be `IMAGE`.
+        - `src_mask` (Required): A mask image indicating the region of the source image to be cloned. Type should be `IMAGE`.
+        - `flag` (Required): Specifies the cloning mode to be used, which can affect the blending behavior. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The result of the seamless cloning operation, with the source image integrated into the destination image. Type should be `IMAGE`.

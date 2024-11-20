@@ -1,0 +1,15 @@
+- `CameraStylerAdvanced`: The CameraStylerAdvanced node is designed to apply advanced styling effects to camera images, leveraging deep learning models to enhance or alter the visual characteristics of the input images. This node focuses on providing a wide range of stylistic modifications, from basic adjustments to complex transformations, to achieve desired aesthetic outcomes.
+    - Inputs:
+        - `text_positive_g` (Required): unknown Type should be `STRING`.
+        - `text_positive_l` (Required): unknown Type should be `STRING`.
+        - `text_negative` (Required): unknown Type should be `STRING`.
+        - `camera` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): unknown Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): unknown Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: unknown Type should be `STRING`.
+        - `text_positive_l`: unknown Type should be `STRING`.
+        - `text_positive`: unknown Type should be `STRING`.
+        - `text_negative_g`: unknown Type should be `STRING`.
+        - `text_negative_l`: unknown Type should be `STRING`.
+        - `text_negative`: unknown Type should be `STRING`.

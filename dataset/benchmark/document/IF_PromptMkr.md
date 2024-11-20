@@ -1,0 +1,20 @@
+- `IF_PromptMkr`: The IF_PromptMkr node is designed to transform an initial text prompt into a more detailed or stylistically altered prompt, leveraging various AI models and customizations. It enriches the input prompt with embellishments, styles, or negations based on user-selected options, aiming to generate more impactful or contextually appropriate prompts for further processing or creative generation.
+    - Inputs:
+        - `input_prompt` (Required): The primary text prompt to be transformed. It serves as the base content for generating enriched or stylistically altered prompts. Type should be `STRING`.
+        - `base_ip` (Required): The IP address of the server where the AI model is hosted, used for sending requests to generate the enriched prompt. Type should be `STRING`.
+        - `port` (Required): The port number on the server for accessing the AI model, used in conjunction with the base IP address. Type should be `STRING`.
+        - `engine` (Required): Specifies the AI model engine to use for prompt generation, allowing selection from options like 'ollama', 'openai', or 'anthropic'. Type should be `COMBO[STRING]`.
+        - `selected_model` (Required): The specific AI model selected for generating the prompt, determined dynamically based on the engine, base IP, and port. Type should be `[]`.
+        - `profile` (Required): The profile setting that influences the generation style or approach, selected from a predefined list of profiles. Type should be `COMBO[STRING]`.
+        - `embellish_prompt` (Required): A selection of embellishments to apply to the input prompt, enhancing its detail or thematic elements. Type should be `COMBO[STRING]`.
+        - `style_prompt` (Required): A selection of styles to apply to the input prompt, altering its presentation or tone. Type should be `COMBO[STRING]`.
+        - `neg_prompt` (Required): A selection of negations to apply to the input prompt, introducing contrast or oppositional elements. Type should be `COMBO[STRING]`.
+        - `temperature` (Required): Controls the creativity or randomness of the generated prompt, with a range from 0.0 (less random) to 1.0 (more random). Type should be `FLOAT`.
+        - `max_tokens` (Optional): The maximum number of tokens to generate for the enriched prompt, setting an upper limit on its length. Type should be `INT`.
+        - `seed` (Optional): A seed value for the random number generator, ensuring reproducibility of the generated prompt when set. Type should be `INT`.
+        - `random` (Optional): A boolean flag that, when true, uses the seed value for generating the prompt, otherwise uses the temperature setting. Type should be `BOOLEAN`.
+        - `keep_alive` (Optional): A boolean flag that, when true, keeps the AI model loaded between requests, potentially improving performance. Type should be `BOOLEAN`.
+    - Outputs:
+        - `Question`: The original input prompt, returned unchanged. Type should be `STRING`.
+        - `Response`: The enriched or stylistically altered prompt generated based on the input and selected options. Type should be `STRING`.
+        - `Negative`: The negated version of the input prompt, incorporating contrast or oppositional elements. Type should be `STRING`.

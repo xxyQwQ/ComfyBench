@@ -1,0 +1,5 @@
+- `DifferentialDiffusion`: The DifferentialDiffusion node applies a custom denoising mask function to a given model, enhancing its ability to perform differential diffusion processes. This node modifies the model's behavior by integrating a forward function that dynamically adjusts the denoising threshold based on the model's internal timestep calculations, facilitating more nuanced control over the diffusion process.
+    - Inputs:
+        - `model` (Required): The model to which the differential diffusion process will be applied. This parameter is crucial as it determines the base model that will be enhanced with a custom denoising mask function, directly influencing the diffusion behavior and outcomes. Type should be `MODEL`.
+    - Outputs:
+        - `model`: The enhanced model with a custom denoising mask function applied, capable of performing differential diffusion processes with adjusted denoising thresholds. Type should be `MODEL`.

@@ -1,0 +1,23 @@
+- `easy preDetailerFix`: The `easy preDetailerFix` node is designed to prepare images for detailed refinement, adjusting various aspects of the image before it undergoes a more intensive detail enhancement process. This preparation step is crucial for achieving optimal results in subsequent detail enhancement stages, ensuring that images are properly conditioned for the application of advanced detailing techniques.
+    - Inputs:
+        - `pipe` (Required): Represents the current state of the image processing pipeline, including models, settings, and intermediate results. It is essential for maintaining continuity and context throughout the detailing process. Type should be `PIPE_LINE`.
+        - `guide_size` (Required): Specifies the size of the guide image used in the detailing process, affecting the level of detail that can be achieved. Type should be `FLOAT`.
+        - `guide_size_for` (Required): Indicates whether the guide size is for bounding box or crop region, providing flexibility in the detailing approach. Type should be `BOOLEAN`.
+        - `max_size` (Required): Sets the maximum size limit for the images being processed, ensuring that the detailing operations are performed within resource constraints. Type should be `FLOAT`.
+        - `seed` (Required): Provides a seed value for any random operations within the detailing process, ensuring reproducibility of results. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps to be taken in the detailing process, directly impacting the intensity and duration of the detailing. Type should be `INT`.
+        - `cfg` (Required): Configures the detailing process parameters, allowing for customization of the enhancement techniques applied. Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the sampling method to be used in the detailing process, affecting the quality and characteristics of the detail enhancement. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Selects the scheduling algorithm for the detailing process, optimizing the sequence and timing of operations for efficiency. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Enables or disables denoising in the detailing process, affecting the clarity and quality of the final image. Type should be `FLOAT`.
+        - `feather` (Required): Adjusts the feathering of edges in the detailing process, smoothing transitions for a more natural appearance. Type should be `INT`.
+        - `noise_mask` (Required): Specifies whether a noise mask is applied, adding texture and realism to the enhanced details. Type should be `BOOLEAN`.
+        - `force_inpaint` (Required): Forces the use of inpainting in areas where detail enhancement is difficult, ensuring consistent quality across the image. Type should be `BOOLEAN`.
+        - `drop_size` (Required): Determines the size of drops to be used in the detailing process, affecting the texture and detail of the output. Type should be `INT`.
+        - `wildcard` (Required): Allows for the inclusion of wildcard patterns for advanced detailing customization. Type should be `STRING`.
+        - `cycle` (Required): Specifies the number of cycles the detailing process will run, affecting the depth of detail enhancement. Type should be `INT`.
+        - `bbox_segm_pipe` (Optional): Provides the bounding box and segmentation pipeline settings for detail enhancement. Type should be `PIPE_LINE`.
+        - `sam_pipe` (Optional): Specifies the settings for the SAM pipeline used in detail enhancement. Type should be `PIPE_LINE`.
+        - `optional_image` (Optional): Allows for the inclusion of an optional image to be used in the detailing process. Type should be `IMAGE`.
+    - Outputs:
+        - `pipe`: Outputs the updated image processing pipeline, including any modifications or enhancements made during the detailing process. Type should be `PIPE_LINE`.

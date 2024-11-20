@@ -1,0 +1,5 @@
+- `ImpactControlNetClearSEGS`: This node is designed to clear control networks from segmentation data, effectively resetting any modifications or enhancements previously applied. It operates by iterating over each segment in the provided segmentation data, creating a new segment with the original properties but without the control network information.
+    - Inputs:
+        - `segs` (Required): The segmentation data to be processed. This input is essential for the node's operation as it defines the segments whose control networks will be cleared. Type should be `SEGS`.
+    - Outputs:
+        - `segs`: The modified segmentation data with control networks cleared from each segment. This output is crucial for subsequent processing steps that require segmentation data without control network modifications. Type should be `SEGS`.

@@ -1,0 +1,6 @@
+- `ModelSamplerTonemapNoiseTest`: This node applies a tonemapping technique to modify the noise prediction in a model's sampling process, aiming to enhance image generation by adjusting the noise's intensity and distribution. It utilizes the Reinhard tonemapping method to scale the noise prediction vector magnitude, thereby influencing the final image output based on a specified multiplier.
+    - Inputs:
+        - `model` (Required): The model to which the tonemapping noise adjustment will be applied. This parameter is crucial for defining the base model that will undergo the noise modification process. Type should be `MODEL`.
+        - `multiplier` (Required): A scalar value that influences the intensity of the tonemapping effect on the noise prediction, directly affecting the visual characteristics of the generated images. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The modified model with the tonemapping noise adjustment applied, ready for further image generation tasks. Type should be `MODEL`.

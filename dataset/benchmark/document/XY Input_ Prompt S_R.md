@@ -1,0 +1,8 @@
+- `XY Input_ Prompt S_R`: This node is designed to facilitate the search and replace functionality within prompts, specifically targeting the enhancement or modification of text inputs for efficiency in processing. It operates by dynamically adjusting the content of prompts based on specified search and replace criteria, thereby optimizing the generation or refinement of text outputs.
+    - Inputs:
+        - `target_prompt` (Required): Specifies whether the prompt to be modified is positive or negative, directly influencing the type of modification applied to the text. Type should be `COMBO[STRING]`.
+        - `search_txt` (Required): The text string to be searched for within the prompt, serving as the basis for the replacement operation. Type should be `STRING`.
+        - `replace_count` (Required): Indicates the number of times the search text should be replaced, affecting the extent of modification. Type should be `INT`.
+        - `replace_i` (Required): Dynamic inputs representing the replacement text for each occurrence of the search text, allowing for varied modifications across multiple instances. Type should be `STRING`.
+    - Outputs:
+        - `X or Y`: Outputs the modified prompt text, reflecting either positive or negative modifications as specified by the input criteria. Type should be `XY`.

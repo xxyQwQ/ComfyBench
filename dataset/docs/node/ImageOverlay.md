@@ -1,8 +1,0 @@
-- `ImageOverlay`: The ImageOverlay node is designed to seamlessly overlay a foreground image onto a background image. It automatically adjusts the foreground image by filling, cropping, or resizing it to match the dimensions of the background image, ensuring a harmonious blend between the two.
-    - Parameters:
-        - `opacity`: Determines the transparency level of the foreground image when overlaid onto the background image. A higher value results in a less transparent foreground, making it more prominent in the final image. Type should be `FLOAT`.
-    - Inputs:
-        - `background_image`: The background image onto which the foreground image will be overlaid. It serves as the base layer in the overlay process. Type should be `IMAGE`.
-        - `foreground_image`: The foreground image to be overlaid onto the background image. This image is adjusted to match the size of the background image for a seamless overlay. Type should be `IMAGE`.
-    - Outputs:
-        - `result_img`: The resulting image after overlaying the foreground image onto the background image, with adjustments made for size and transparency. Type should be `IMAGE`.

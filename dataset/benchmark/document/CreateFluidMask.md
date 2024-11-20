@@ -1,0 +1,14 @@
+- `CreateFluidMask`: The CreateFluidMask node is designed for generating dynamic fluid-based masks for images. It utilizes fluid dynamics to create visually complex and evolving masks that can be applied to frames, offering a unique way to enhance visual content with fluid effects.
+    - Inputs:
+        - `invert` (Required): A boolean flag that, when set to True, inverts the colors of the generated fluid mask, offering an alternative visual style. Type should be `BOOLEAN`.
+        - `frames` (Required): Specifies the number of frames for which the fluid mask will be generated, affecting the duration and evolution of the fluid effect. Type should be `INT`.
+        - `width` (Required): Determines the width of the generated fluid mask, directly impacting the resolution and aspect ratio of the output. Type should be `INT`.
+        - `height` (Required): Sets the height of the generated fluid mask, influencing the resolution and aspect ratio of the output. Type should be `INT`.
+        - `inflow_count` (Required): Controls the number of inflow points within the fluid simulation, affecting the complexity and dynamics of the mask. Type should be `INT`.
+        - `inflow_velocity` (Required): Determines the velocity of the inflow within the fluid simulation, influencing the speed and movement of the fluid effect. Type should be `INT`.
+        - `inflow_radius` (Required): Specifies the radius of the inflow points in the fluid simulation, impacting the size and spread of the fluid effect. Type should be `INT`.
+        - `inflow_padding` (Required): Sets the padding around the inflow points, ensuring there's a buffer zone within the simulation area. Type should be `INT`.
+        - `inflow_duration` (Required): Defines the duration for which the inflow is active within the simulation, affecting the initial phase of the fluid effect. Type should be `INT`.
+    - Outputs:
+        - `image`: The generated fluid mask applied to images, showcasing the dynamic fluid effects over the specified frames. Type should be `IMAGE`.
+        - `mask`: A binary mask representing the areas affected by the fluid simulation, useful for further image processing or masking operations. Type should be `MASK`.

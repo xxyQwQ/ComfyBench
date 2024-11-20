@@ -1,0 +1,7 @@
+- `ADE_AnimateDiffModelSettings_Release`: This node is designed to configure motion model settings for the AnimateDiff process, allowing users to adjust motion scale parameters to fine-tune the animation effects.
+    - Inputs:
+        - `min_motion_scale` (Required): Specifies the minimum scale for motion in the animation, serving as a baseline for how subtle or pronounced the motion effects should be. Type should be `FLOAT`.
+        - `max_motion_scale` (Required): Defines the maximum scale for motion, setting an upper limit on the intensity of the animation effects. Type should be `FLOAT`.
+        - `mask_motion_scale` (Optional): An optional mask tensor to apply scale adjustments selectively across different parts of the image, enhancing the control over motion effects. Type should be `MASK`.
+    - Outputs:
+        - `ad_settings`: Returns the configured motion model settings, encapsulating the adjustments made to motion scales. Type should be `AD_SETTINGS`.

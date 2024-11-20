@@ -1,0 +1,13 @@
+- `LayerUtility_ SaveImagePlus`: The SaveImagePlus node is designed to enhance image saving capabilities within a workflow, offering advanced options such as custom file paths, filename prefixes, timestamping, image formatting, quality adjustments, metadata inclusion, and the option to add a blind watermark. It also supports saving workflow configurations as JSON and provides a preview feature, making it a versatile tool for managing output images and related data.
+    - Inputs:
+        - `images` (Required): The images to be saved. This parameter is essential for defining the content that will be processed and saved by the node. Type should be `IMAGE`.
+        - `custom_path` (Required): Specifies a custom directory path where the images will be saved. This allows for flexible file management and organization. Type should be `STRING`.
+        - `filename_prefix` (Required): A prefix added to the filename of the saved images, enabling easy identification and sorting. Type should be `STRING`.
+        - `timestamp` (Required): Determines whether and how a timestamp is added to the filename, offering options for none, second, or millisecond precision. This helps in versioning and organizing saved images. Type should be `COMBO[STRING]`.
+        - `format` (Required): The file format for the saved images, with options including PNG and JPG. This choice affects the image's compatibility and quality. Type should be `COMBO[STRING]`.
+        - `quality` (Required): Adjusts the quality of the saved images, applicable for formats that support compression. It allows for balancing between image quality and file size. Type should be `INT`.
+        - `meta_data` (Required): A boolean indicating whether to include metadata in the saved images, enhancing the information content of the image files. Type should be `BOOLEAN`.
+        - `blind_watermark` (Required): An optional string to be used as a blind watermark, adding a layer of security or branding to the images without altering their appearance. Type should be `STRING`.
+        - `save_workflow_as_json` (Required): When enabled, saves the current workflow configuration as a JSON file alongside the images, useful for documentation or replication purposes. Type should be `BOOLEAN`.
+        - `preview` (Required): A boolean flag that, when enabled, saves a preview image to a temporary directory, useful for quick checks or as a thumbnail. Type should be `BOOLEAN`.
+    - Outputs:

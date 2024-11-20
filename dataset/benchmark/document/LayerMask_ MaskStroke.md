@@ -1,0 +1,9 @@
+- `LayerMask_ MaskStroke`: The MaskStroke node is designed to process image masks by applying transformations such as inversion, growth, width adjustment, and blurring to create stylized stroke effects around the mask's edges. It's aimed at enhancing visual elements by dynamically modifying mask boundaries for artistic or design purposes.
+    - Inputs:
+        - `mask` (Required): The 'mask' parameter represents the input image mask to be transformed. It is crucial for defining the area where stroke effects will be applied, serving as the base for subsequent modifications. Type should be `MASK`.
+        - `invert_mask` (Required): The 'invert_mask' parameter allows for the inversion of the input mask, flipping the areas to be considered as the foreground and background. This inversion is essential for achieving desired visual effects based on the mask's context. Type should be `BOOLEAN`.
+        - `stroke_grow` (Required): Specifies the growth or shrinkage of the stroke's inner boundary, adjusting the mask's coverage area before applying the stroke width. It's key for fine-tuning the effect's intensity and reach. Type should be `INT`.
+        - `stroke_width` (Required): Determines the thickness of the stroke applied around the mask's edges, directly influencing the visual prominence of the stroke effect. Type should be `INT`.
+        - `blur` (Required): Controls the level of blur applied to the stroke, smoothing the edges for a more refined or subtle effect. Type should be `INT`.
+    - Outputs:
+        - `mask`: The transformed mask with the applied stroke effect, showcasing the adjustments made to the original mask through inversion, growth, width modification, and blurring. Type should be `MASK`.

@@ -1,6 +1,0 @@
-- `DF_Square_root`: The SquareRootNode provides a mathematical operation to calculate the square root of a given value, returning both the positive and negative square root values.
-    - Parameters:
-        - `Value`: The input value for which the square root is to be calculated. This value determines the magnitude of the output. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The positive and negative square root values of the input. Type should be `FLOAT`.

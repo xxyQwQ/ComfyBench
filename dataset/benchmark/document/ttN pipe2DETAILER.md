@@ -1,0 +1,11 @@
+- `ttN pipe2DETAILER`: The ttN pipe2DETAILER node is designed to enhance and detail the data pipeline by integrating additional processing steps. It focuses on refining and enriching the pipeline's output, making it more detailed and tailored for subsequent operations or analyses.
+    - Inputs:
+        - `pipe` (Required): The 'pipe' input is the primary data structure that carries the flow of data through the node. It is essential for the node's operation, serving as the basis for the detailing process. Type should be `PIPE_LINE`.
+        - `bbox_detector` (Required): The 'bbox_detector' input specifies the bounding box detector to be used for identifying regions of interest within the data. This is crucial for the detailing process, as it allows for targeted enhancements. Type should be `BBOX_DETECTOR`.
+        - `wildcard` (Required): The 'wildcard' input allows for flexible specification of additional conditions or parameters that can be applied during the detailing process. It enables customization and fine-tuning of the output. Type should be `STRING`.
+        - `sam_model_opt` (Optional): An optional input for specifying a SAM model to be used in the detailing process. It provides an opportunity to apply specialized attention mechanisms for improved detail and accuracy. Type should be `SAM_MODEL`.
+        - `segm_detector_opt` (Optional): An optional input for specifying a segmentation detector. This enhances the detailing process by allowing for precise segmentation of areas within the data, contributing to more focused enhancements. Type should be `SEGM_DETECTOR`.
+        - `detailer_hook` (Optional): An optional input that allows for the integration of custom detailing functions or hooks. This enables the node to perform highly customized detailing operations based on specific requirements. Type should be `DETAILER_HOOK`.
+    - Outputs:
+        - `detailer_pipe`: The 'detailer_pipe' output represents the enhanced and detailed version of the input pipeline, enriched with additional data and processing steps. Type should be `DETAILER_PIPE`.
+        - `pipe`: The 'pipe' output provides the original input pipeline, allowing for comparison or further processing alongside the detailed version. Type should be `PIPE_LINE`.

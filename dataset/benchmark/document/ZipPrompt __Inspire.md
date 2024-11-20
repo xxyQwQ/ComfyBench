@@ -1,0 +1,7 @@
+- `ZipPrompt __Inspire`: The ZipPrompt node is designed to combine positive and negative textual prompts, along with an optional name, into a single zipped prompt. This functionality is crucial for organizing and structuring prompt data in a way that facilitates further processing or storage, especially within the context of the InspirePack for prompt management.
+    - Inputs:
+        - `positive` (Required): The positive prompt text, which is a required multiline string input. This text represents the desired attributes or characteristics to be emphasized in the generated content. Type should be `STRING`.
+        - `negative` (Required): The negative prompt text, which is a required multiline string input. This text outlines the attributes or characteristics to be minimized or avoided in the generated content. Type should be `STRING`.
+        - `name_opt` (Optional): An optional single-line string input that provides a name for the zipped prompt, aiding in its identification and organization. Type should be `STRING`.
+    - Outputs:
+        - `zipped_prompt`: The output is a tuple containing the positive, negative, and optional name inputs, effectively zipping them into a single structured prompt. Type should be `ZIPPED_PROMPT`.

@@ -1,0 +1,8 @@
+- `AV_CheckpointMerge`: The AV_CheckpointMerge node is designed for merging model checkpoints within the Art Venture framework. It abstracts the complexities of combining different model states into a unified checkpoint, facilitating the integration or experimentation with various model configurations in a streamlined manner.
+    - Inputs:
+        - `model1` (Required): The first model to be merged, contributing to the creation of a new, unified model checkpoint. Type should be `MODEL`.
+        - `model2` (Required): The second model to be merged, which combines with the first model to form a new, unified model checkpoint. Type should be `MODEL`.
+        - `model1_weight` (Required): A weight factor for the first model, influencing the degree to which it impacts the merged model checkpoint. Type should be `FLOAT`.
+        - `model2_weight` (Required): A weight factor for the second model, influencing the degree to which it impacts the merged model checkpoint. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The resulting merged model checkpoint, incorporating elements from both input models. Type should be `MODEL`.

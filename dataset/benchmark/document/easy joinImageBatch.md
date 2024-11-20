@@ -1,0 +1,6 @@
+- `easy joinImageBatch`: This node is designed to merge a batch of images into a single large image, either by stacking them horizontally or vertically based on the specified mode. It abstracts the complexity of image manipulation and resizing, providing a straightforward way to create composite images from multiple inputs.
+    - Inputs:
+        - `images` (Required): A batch of images to be joined into a single image. The importance of this parameter lies in its role as the primary input that determines the content and structure of the output image. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the orientation for joining images, either 'horizontal' or 'vertical'. This affects the final layout of the composite image, influencing its visual presentation and dimensions. Type should be `['horizontal', 'vertical']`.
+    - Outputs:
+        - `image`: The resulting single large image created by joining the input batch of images according to the specified mode. Type should be `IMAGE`.

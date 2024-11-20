@@ -1,0 +1,6 @@
+- `JWMaskLikeImageSize`: This node generates a mask of the same size as the input image, filled with a specified value. It's useful for creating uniform masks that match the dimensions of a given image.
+    - Inputs:
+        - `image` (Required): The input image tensor whose dimensions are used to determine the size of the generated mask. Type should be `IMAGE`.
+        - `value` (Required): A float value used to fill the generated mask, allowing for customization of the mask's intensity or transparency. Type should be `FLOAT`.
+    - Outputs:
+        - `mask`: The output is a mask tensor of the same size as the input image, filled with the specified value. Type should be `MASK`.

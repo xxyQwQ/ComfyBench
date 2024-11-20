@@ -1,0 +1,15 @@
+- `SeargeGenerationParameters`: This node is designed to handle and process generation parameters for the SeargeSDXL system. It focuses on configuring and optimizing the generation settings to align with user inputs and preferences, ensuring that the output is tailored to the specific requirements of the task at hand.
+    - Inputs:
+        - `seed` (Required): Specifies the initial seed for generation, ensuring reproducibility of results. Type should be `INT`.
+        - `image_size_preset` (Required): Selects a predefined image size for the generation, simplifying the configuration process. Type should be `COMBO[STRING]`.
+        - `image_width` (Required): Defines the width of the generated image, allowing for custom dimensions. Type should be `INT`.
+        - `image_height` (Required): Sets the height of the generated image, enabling customization of output size. Type should be `INT`.
+        - `steps` (Required): Determines the number of steps in the generation process, affecting the detail and quality of the output. Type should be `INT`.
+        - `cfg` (Required): Controls the CFG scale, adjusting the influence of the conditioning on the generation. Type should be `FLOAT`.
+        - `sampler_preset` (Required): Chooses a preset for the sampling method, affecting the generation's randomness and diversity. Type should be `COMBO[STRING]`.
+        - `sampler_name` (Required): Specifies the exact sampler to be used, offering fine control over the generation process. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Selects the scheduler for controlling the sampling process, impacting the progression of generation steps. Type should be `COMBO[STRING]`.
+        - `base_vs_refiner_ratio` (Required): Adjusts the balance between base and refiner models, tailoring the output's refinement level. Type should be `FLOAT`.
+        - `data` (Optional): Incorporates various generation parameters and settings, encapsulating all necessary information for the generation. Type should be `SRG_DATA_STREAM`.
+    - Outputs:
+        - `data`: Outputs the comprehensive set of generation parameters, configured and ready for use in the generation process. Type should be `SRG_DATA_STREAM`.

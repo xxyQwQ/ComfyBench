@@ -1,0 +1,6 @@
+- `LoadImageMask`: The LoadImageMask node is designed for loading and processing an image to generate a mask based on a specified color channel. It supports handling images with different formats and orientations, converting them to a standardized RGBA format if necessary, and extracting a specific channel (alpha, red, green, blue) to create a mask. This functionality is crucial for tasks that require image segmentation or specific channel manipulation.
+    - Inputs:
+        - `image` (Required): Specifies the image file to be loaded and processed. The selection is limited to the files available in a predefined input directory, facilitating the upload and handling of images for mask generation. Type should be `COMBO[STRING]`.
+        - `channel` (Required): Determines the color channel ('alpha', 'red', 'green', 'blue') of the image to be used for mask creation. This choice directly influences the resulting mask by selecting the relevant channel data. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `mask`: The output is a mask generated from the specified color channel of the input image. This mask is useful for segmentation and other image processing tasks that require specific channel information. Type should be `MASK`.

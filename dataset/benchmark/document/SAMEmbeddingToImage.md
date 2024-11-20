@@ -1,0 +1,5 @@
+- `SAMEmbeddingToImage`: The SAMEmbeddingToImage node is designed to convert SAM embeddings into visual representations, enabling the intuitive interpretation and manipulation of the embedded data. It abstracts the complex information contained within the embeddings into a more accessible image format.
+    - Inputs:
+        - `embedding` (Required): The embedding input represents the SAM embedding to be transformed into an image. This embedding is crucial as it contains the encoded information that will be visualized as an image. Type should be `SAM_EMBEDDING`.
+    - Outputs:
+        - `image`: The output is an image generated from the SAM embedding, allowing for the visualization and further processing of the encoded information. Type should be `IMAGE`.

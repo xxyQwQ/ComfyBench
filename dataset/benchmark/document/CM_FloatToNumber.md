@@ -1,0 +1,5 @@
+- `CM_FloatToNumber`: This node is designed for converting floating-point values to a more general number type, facilitating operations across different numeric types by standardizing them to a common format.
+    - Inputs:
+        - `a` (Required): The floating-point value to be converted into a general number type. This conversion enables seamless integration and manipulation within a broader range of mathematical operations. Type should be `FLOAT`.
+    - Outputs:
+        - `number`: The result of converting the input floating-point value to a general number type, allowing for its use in a wide array of numerical computations and operations. Type should be `NUMBER`.

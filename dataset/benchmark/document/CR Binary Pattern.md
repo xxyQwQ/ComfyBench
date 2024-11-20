@@ -1,0 +1,19 @@
+- `CR Binary Pattern`: This node is designed to generate complex binary patterns, offering a creative tool for generating intricate designs and textures based on binary logic. It abstracts the complexity of creating binary patterns, making it accessible for users to incorporate these patterns into their graphics projects.
+    - Inputs:
+        - `binary_pattern` (Required): Specifies the binary pattern as a multiline string, where each line represents a row in the pattern. This pattern determines the visual structure of the generated image. Type should be `STRING`.
+        - `width` (Required): Sets the width of the output image. It defines the horizontal dimension of the canvas on which the binary pattern will be drawn. Type should be `INT`.
+        - `height` (Required): Sets the height of the output image. It defines the vertical dimension of the canvas on which the binary pattern will be drawn. Type should be `INT`.
+        - `background_color` (Required): Determines the background color of the output image. It sets the color that will appear in the background of the binary pattern. Type should be `COMBO[STRING]`.
+        - `color_0` (Required): Specifies the color for the '0' bits in the binary pattern. This color will fill the squares corresponding to '0' bits. Type should be `COMBO[STRING]`.
+        - `color_1` (Required): Specifies the color for the '1' bits in the binary pattern. This color will fill the squares corresponding to '1' bits. Type should be `COMBO[STRING]`.
+        - `outline_thickness` (Required): Defines the thickness of the outline around each square in the pattern. A thickness of 0 means no outline. Type should be `INT`.
+        - `outline_color` (Required): Sets the color of the outline around each square in the pattern. Type should be `COMBO[STRING]`.
+        - `jitter_distance` (Required): Specifies the maximum distance that squares in the pattern can be randomly displaced to create a jitter effect. Type should be `INT`.
+        - `bias` (Required): Adjusts the probability of a square being colored with 'color_1' over 'color_0', allowing for more control over the pattern's appearance. Type should be `FLOAT`.
+        - `bg_color_hex` (Optional): An optional hexadecimal value specifying the background color, providing an alternative to the 'background_color' input. Type should be `STRING`.
+        - `color0_hex` (Optional): An optional hexadecimal value specifying the color for '0' bits, providing an alternative to the 'color_0' input. Type should be `STRING`.
+        - `color1_hex` (Optional): An optional hexadecimal value specifying the color for '1' bits, providing an alternative to the 'color_1' input. Type should be `STRING`.
+        - `outline_color_hex` (Optional): An optional hexadecimal value specifying the outline color, providing an alternative to the 'outline_color' input. Type should be `STRING`.
+    - Outputs:
+        - `IMAGE`: The generated image based on the specified binary pattern and color settings. Type should be `IMAGE`.
+        - `show_help`: A URL to a help page providing additional information and guidance on using the binary pattern node. Type should be `STRING`.

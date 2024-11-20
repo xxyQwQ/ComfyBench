@@ -1,9 +1,0 @@
-- `CR Simple Binary Pattern`: This node generates simple binary patterns, offering a straightforward approach to creating binary (two-color) designs. It abstracts the complexity of pattern generation, enabling users to easily produce visually appealing binary patterns for various applications.
-    - Parameters:
-        - `binary_pattern`: Specifies the binary pattern as a multiline string, where each line represents a row in the pattern. This pattern dictates the visual structure of the generated image. Type should be `STRING`.
-        - `width`: Determines the width of the generated image. The width influences the scale of the binary pattern, affecting its display size. Type should be `INT`.
-        - `height`: Sets the height of the generated image. Similar to width, height impacts the scale and display size of the binary pattern. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `IMAGE`: The generated image based on the binary pattern input. This output is a visual representation of the binary design. Type should be `IMAGE`.
-        - `show_help`: A string URL providing additional help and documentation related to binary pattern generation. Type should be `STRING`.

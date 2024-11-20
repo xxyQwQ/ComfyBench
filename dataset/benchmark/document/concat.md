@@ -1,0 +1,7 @@
+- `concat`: The `concat` node is designed to concatenate strings, potentially including an optional additional string, following specific guidelines. It abstracts the process of string concatenation, ensuring that the operation adheres to predefined formatting rules, such as adding spaces between concatenated strings for readability and coherence.
+    - Inputs:
+        - `string_a` (Required): The primary string to be concatenated. It serves as the base string to which other strings are appended. Type should be `STRING`.
+        - `string_b` (Required): The second string to be concatenated to the primary string, enhancing the base content. Type should be `STRING`.
+        - `string_c` (Required): An optional third string that can be concatenated to the primary and second strings, providing additional flexibility in the concatenation process. Type should be `STRING`.
+    - Outputs:
+        - `string`: The result of concatenating up to three strings, with optional spaces between non-empty strings for proper formatting. Type should be `STRING`.

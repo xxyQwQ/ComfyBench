@@ -1,0 +1,10 @@
+- `LoadImagesFromDir __Inspire`: This node is designed to load a batch of images from a specified directory, processing them for use in image-based machine learning or image processing tasks. It efficiently handles image loading, optional resizing, and format normalization to ensure compatibility with downstream processes.
+    - Inputs:
+        - `directory` (Required): Specifies the directory path from which images are to be loaded. This parameter is crucial for determining the source of the images to be processed by the node. Type should be `STRING`.
+        - `image_load_cap` (Optional): Limits the number of images to be loaded from the directory, allowing for control over resource usage and processing time. Type should be `INT`.
+        - `start_index` (Optional): Determines the starting index for loading images, enabling partial loading of images from a directory based on order. Type should be `INT`.
+        - `load_always` (Optional): A flag to indicate whether images should be loaded regardless of other conditions, ensuring flexibility in loading behavior. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The loaded images, processed and formatted for further use in image-based applications. Type should be `IMAGE`.
+        - `mask`: Optional masks associated with the loaded images, useful for tasks requiring background separation or focus on specific image regions. Type should be `MASK`.
+        - `int`: The total number of images loaded, providing a count that can be useful for further processing steps or for informational purposes. Type should be `INT`.

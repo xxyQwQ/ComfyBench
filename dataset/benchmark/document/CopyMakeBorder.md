@@ -1,0 +1,7 @@
+- `CopyMakeBorder`: The CopyMakeBorder node is designed to add a border around an image. It allows for the customization of the border size and type, excluding transparent borders, to enhance or modify the visual appearance of the image.
+    - Inputs:
+        - `image` (Required): The input image to which the border will be added. This is the primary data upon which the border operation is performed. Type should be `IMAGE`.
+        - `border_size` (Required): Specifies the size of the border to be added around the image. It affects the thickness of the border applied. Type should be `INT`.
+        - `border_type` (Required): Determines the type of border to be applied to the image, excluding transparent types. This choice influences the visual style of the border. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The output image with the added border. This is the result of applying the specified border size and type to the input image. Type should be `IMAGE`.

@@ -1,8 +1,0 @@
-- `Empty Images`: This node is designed to generate a batch of empty images with specified dimensions and color. It serves as a foundational tool for creating placeholder or background images in various image processing and generation tasks.
-    - Parameters:
-        - `num_images`: Specifies the total number of images to generate. This parameter can be used to control the overall output volume when generating images. Type should be `INT`.
-        - `splits`: Defines how the total number of images should be divided into separate batches or groups. This can be used to create varied sets of images within the overall batch. Type should be `INT`.
-        - `batch_size`: Determines the number of images to generate in a single batch. This allows for the creation of multiple images at once, optimizing processing time. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `Image`: The output is a batch of images with the specified dimensions and color. Type should be `IMAGE`.

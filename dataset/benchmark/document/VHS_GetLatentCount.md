@@ -1,0 +1,5 @@
+- `VHS_GetLatentCount`: This node is designed to count the number of latent representations present in a given input. It provides a straightforward way to quantify the size of latent batches, facilitating operations that require knowledge of batch dimensions.
+    - Inputs:
+        - `latents` (Required): Represents the latent representations to be counted. This input is crucial for determining the total number of latents in the batch, which directly influences the node's output. Type should be `LATENT`.
+    - Outputs:
+        - `count`: The total number of latent representations in the input batch. This output is essential for understanding the size of the latent batch and for further processing that depends on batch size. Type should be `INT`.

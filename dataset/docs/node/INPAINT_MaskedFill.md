@@ -1,9 +1,0 @@
-- `INPAINT_MaskedFill`: The `MaskedFill` node is designed to fill masked areas of an image with specified fill methods, including a neutral color fill or advanced inpainting techniques. It leverages image processing and conditional operations to seamlessly blend filled areas with the surrounding image pixels, offering a versatile solution for image inpainting tasks.
-    - Parameters:
-        - `fill`: Specifies the filling method to be used. Options include 'neutral' for a simple color fill and advanced methods like 'telea' and 'inpaint_ns' for more sophisticated inpainting. Type should be `COMBO[STRING]`.
-        - `falloff`: Determines the transition smoothness between filled areas and the original image, affecting the blending quality. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image tensor to be processed, where masked areas are identified and filled according to the specified method. Type should be `IMAGE`.
-        - `mask`: A tensor indicating the areas of the image to be filled. The mask guides the filling process, ensuring that only specified regions are altered. Type should be `MASK`.
-    - Outputs:
-        - `image`: The output image tensor after the masked areas have been filled, showcasing the inpainting results. Type should be `IMAGE`.

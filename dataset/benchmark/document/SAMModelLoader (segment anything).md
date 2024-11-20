@@ -1,0 +1,5 @@
+- `SAMModelLoader (segment anything)`: The SAMModelLoader node is designed to load and prepare SAM (Segment Anything Model) models for use in image segmentation tasks. It handles the retrieval and initialization of various SAM models, ensuring they are ready for segmentation operations.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the SAM model to be loaded. This parameter is crucial for determining which specific model is retrieved and initialized for segmentation tasks. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `sam_model`: The loaded and initialized SAM model, ready for segmentation tasks. Type should be `SAM_MODEL`.

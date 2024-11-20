@@ -1,0 +1,6 @@
+- `Masks Subtract`: The node is designed to perform subtraction between two sets of masks, effectively removing parts of one mask using another. This operation is useful in image processing tasks where specific areas of interest need to be isolated or removed from an image mask.
+    - Inputs:
+        - `masks_a` (Required): Represents the first set of masks to be used in the subtraction operation. It plays a crucial role in determining the areas to be retained. Type should be `MASK`.
+        - `masks_b` (Required): Represents the second set of masks to be subtracted from the first set. It determines the areas to be removed from the resulting mask. Type should be `MASK`.
+    - Outputs:
+        - `MASKS`: The resulting mask after subtracting 'masks_b' from 'masks_a', containing only the areas present in 'masks_a' but not in 'masks_b'. Type should be `MASK`.

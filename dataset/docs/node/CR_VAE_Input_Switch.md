@@ -1,9 +1,0 @@
-- `CR VAE Input Switch`: This node allows for dynamic selection between two VAE inputs based on a specified condition, facilitating flexible workflow configurations and enabling users to switch between different VAE models or settings.
-    - Parameters:
-        - `Input`: Determines which VAE input to select, enabling conditional logic within the workflow. Type should be `INT`.
-    - Inputs:
-        - `VAE1`: The first VAE input option. This input is optional and allows for the selection of a VAE model when the condition is met. Type should be `VAE`.
-        - `VAE2`: The second VAE input option. This input is optional and provides an alternative VAE model selection based on the specified condition. Type should be `VAE`.
-    - Outputs:
-        - `VAE`: The selected VAE input based on the specified condition. Type should be `VAE`.
-        - `show_help`: A URL providing documentation and help for using the CR VAE Input Switch node. Type should be `STRING`.

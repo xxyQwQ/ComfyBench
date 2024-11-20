@@ -1,6 +1,0 @@
-- `LLMTrafilaturaWebReaderAdv`: This node is designed for advanced web content extraction, leveraging the Trafilatura library to efficiently parse and retrieve documents from a list of URLs. It focuses on validating URLs and extracting web content into a structured document format, suitable for further processing or analysis.
-    - Parameters:
-    - Inputs:
-        - `urls`: A list of URLs from which the node will attempt to extract web content. This parameter is essential for defining the sources of information the node will process. Type should be `LIST`.
-    - Outputs:
-        - `documents`: The extracted web content, structured as documents. This output is crucial for users needing processed and accessible information from the provided URLs. Type should be `DOCUMENT`.

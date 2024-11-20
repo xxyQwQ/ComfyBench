@@ -1,8 +1,0 @@
-- `BlurMaskFast`: The BlurMaskFast node is designed to apply a Gaussian blur to masks, allowing for the softening of edges and the creation of a smoother mask appearance. This operation is particularly useful in image processing tasks where the harshness of mask boundaries needs to be reduced.
-    - Parameters:
-        - `radius_x`: Determines the horizontal radius of the Gaussian blur. A larger radius results in a more pronounced blur effect horizontally. Type should be `INT`.
-        - `radius_y`: Determines the vertical radius of the Gaussian blur. A larger radius results in a more pronounced blur effect vertically. Type should be `INT`.
-    - Inputs:
-        - `masks`: Specifies the masks to be blurred. This input is crucial for defining the areas within the image where the blur effect will be applied. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The output is a mask that has been smoothed by the Gaussian blur process, with softer edges compared to the original. Type should be `MASK`.

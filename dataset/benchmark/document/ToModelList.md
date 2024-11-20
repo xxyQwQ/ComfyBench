@@ -1,0 +1,5 @@
+- `ToModelList`: The `ToModelList` node is designed to aggregate multiple model-related inputs into a single list. This functionality is essential for operations that require handling a collection of models simultaneously, such as batch processing or model comparison tasks. It abstracts away the complexity of managing multiple inputs by providing a streamlined way to group them together.
+    - Inputs:
+        - `inputs_len` (Required): Specifies the number of model inputs to be aggregated into the list. This parameter determines the size of the resulting list and plays a crucial role in the node's execution by dictating how many model inputs will be considered. Type should be `INT`.
+    - Outputs:
+        - `model`: The output is a list containing the aggregated model inputs. This list facilitates operations that need to process multiple models in a unified manner, enhancing flexibility and efficiency in handling model collections. Type should be `MODEL`.

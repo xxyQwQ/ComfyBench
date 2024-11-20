@@ -1,0 +1,6 @@
+- `PreviewAnimation`: The PreviewAnimation node is designed to generate a preview animation from a sequence of images, optionally applying masks to each frame. It allows for the customization of the animation's frames per second (fps), enabling the creation of smooth transitions and dynamic visualizations tailored to specific requirements.
+    - Inputs:
+        - `fps` (Required): Specifies the frames per second for the animation, controlling the speed at which the images are displayed. Type should be `FLOAT`.
+        - `images` (Optional): A list of images to be included in the animation. Each image in the sequence contributes to the overall animation. Type should be `IMAGE`.
+        - `masks` (Optional): Optional masks to apply to each image in the sequence, allowing for selective visibility or effects on the animation frames. Type should be `MASK`.
+    - Outputs:

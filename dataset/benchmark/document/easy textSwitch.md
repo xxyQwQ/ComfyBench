@@ -1,0 +1,7 @@
+- `easy textSwitch`: The easy textSwitch node provides a mechanism to switch between two text inputs based on a boolean condition. It serves as a conditional operator, enabling dynamic text output selection within a flow.
+    - Inputs:
+        - `input` (Required): A boolean value determining which of the two text inputs to output. If true, text1 is selected; otherwise, text2 is chosen. Type should be `INT`.
+        - `text1` (Optional): The first text option to choose from. This input is part of the conditional operation, selected when the boolean condition is true. Type should be `STRING`.
+        - `text2` (Optional): The second text option to choose from. This input is part of the conditional operation, selected when the boolean condition is false. Type should be `STRING`.
+    - Outputs:
+        - `STRING`: The output text, selected based on the boolean condition. It dynamically switches between text1 and text2. Type should be `STRING`.

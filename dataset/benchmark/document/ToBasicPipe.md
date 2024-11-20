@@ -1,0 +1,9 @@
+- `ToBasicPipe`: The ToBasicPipe node is designed to aggregate essential components for a generative pipeline into a single, basic pipeline structure. It combines models, clips, VAEs, and conditioning information into a unified format, facilitating easier manipulation and use in subsequent processes.
+    - Inputs:
+        - `model` (Required): The model parameter represents the core generative model to be included in the basic pipeline. It is crucial for the generation process. Type should be `MODEL`.
+        - `clip` (Required): The clip parameter is included to provide additional context or constraints for the generation process, enhancing the output's relevance or quality. Type should be `CLIP`.
+        - `vae` (Required): The vae parameter is a variational autoencoder used for processing or transforming the input data, playing a significant role in the pipeline's functionality. Type should be `VAE`.
+        - `positive` (Required): The positive conditioning information guides the generation towards desired attributes or characteristics. Type should be `CONDITIONING`.
+        - `negative` (Required): The negative conditioning information steers the generation away from undesired attributes or characteristics, refining the output. Type should be `CONDITIONING`.
+    - Outputs:
+        - `basic_pipe`: The basic_pipe output encapsulates the combined model, clip, VAE, and conditioning information into a single, manageable structure for further processing. Type should be `BASIC_PIPE`.

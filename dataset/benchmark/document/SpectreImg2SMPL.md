@@ -1,0 +1,8 @@
+- `SpectreImg2SMPL`: The SpectreImg2SMPL node is designed to transform images into 3D models using the Spectre model, focusing on generating SMPL (Skinned Multi-Person Linear) models from input images. It processes images to detect facial landmarks, crops and normalizes the images around the face, and then utilizes these preprocessed images to generate 3D representations, including vertices and camera parameters, suitable for further 3D rendering or analysis.
+    - Inputs:
+        - `spectre_model` (Required): The spectre_model parameter is a tuple containing the face tracker and the Spectre model itself, essential for detecting facial landmarks and generating 3D models from input images. Type should be `SPECTRE_MODEL`.
+        - `image` (Required): The image parameter represents the input image to be transformed into a 3D model. It undergoes preprocessing such as cropping around the face before being processed by the Spectre model. Type should be `IMAGE`.
+        - `chunk_size` (Required): The chunk_size parameter determines the number of images processed in a single batch, optimizing the performance and efficiency of the model's operation. Type should be `INT`.
+    - Outputs:
+        - `SMPL_MULTIPLE_SUBJECTS`: The SMPL_MULTIPLE_SUBJECTS output contains the 3D vertices of the generated models, essential for constructing the 3D mesh. Type should be `SMPL_MULTIPLE_SUBJECTS`.
+        - `CROPPED_FACE_IMAGE`: The CROPPED_FACE_IMAGE output includes the preprocessed images that have been cropped and normalized, ready for further processing or visualization. Type should be `IMAGE`.

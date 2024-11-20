@@ -1,0 +1,8 @@
+- `MonoMerge`: The MonoMerge node is designed to merge two images into a monochromatic image based on a target color scheme (either towards white or black). This process involves comparing the luminance (L component) of corresponding pixels from both images and selecting the higher or lower value depending on the target, resulting in an image that emphasizes either the lighter or darker aspects of the combined images.
+    - Inputs:
+        - `image1` (Required): The first image to be merged. It plays a crucial role in the merging process as its pixels are compared with those of the second image to determine the final image based on the target color scheme. Type should be `IMAGE`.
+        - `image2` (Required): The second image to be merged. It is compared against the first image to select the appropriate luminance values for the final monochromatic image, depending on the target color scheme. Type should be `IMAGE`.
+        - `target` (Required): Specifies the target color scheme for the merge, either 'white' or 'black'. This determines whether the merge will favor lighter or darker pixel values from the input images. Type should be `COMBO[STRING]`.
+        - `output_format` (Required): Defines the format of the output image, such as JPEG, PNG, etc. This affects how the final image is encoded and saved. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The resulting monochromatic image after merging the two input images based on the specified target color scheme. Type should be `IMAGE`.

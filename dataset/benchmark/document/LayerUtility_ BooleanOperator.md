@@ -1,0 +1,7 @@
+- `LayerUtility_ BooleanOperator`: This node performs a variety of boolean operations between two inputs based on a specified operator. It abstracts the complexity of conditional logic into a simple interface, allowing users to easily implement logical conditions and comparisons within their data flows.
+    - Inputs:
+        - `a` (Required): The first input for the boolean operation. Its role varies based on the chosen operator, acting either as a standalone value for unary operations or one of the operands for binary operations. Type should be `*`.
+        - `b` (Required): The second input for the boolean operation, serving as the other operand in binary operations. It is not used in unary operations like 'not(a)'. Type should be `*`.
+        - `operator` (Required): Specifies the boolean operation to be performed. It supports a range of operators including comparison, logical, and bitwise operations, directly influencing the outcome of the node. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `output`: The result of the boolean operation, indicating the truth value of the applied condition. Type should be `BOOLEAN`.

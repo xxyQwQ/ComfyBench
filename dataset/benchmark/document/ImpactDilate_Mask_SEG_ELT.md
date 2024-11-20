@@ -1,0 +1,6 @@
+- `ImpactDilate_Mask_SEG_ELT`: This node is designed to apply dilation to the mask of a single segmentation element (SEG_ELT), allowing for the adjustment of the mask's boundaries. It is part of the ImpactPack/Util category and serves as a utility for modifying the spatial extent of segmentation masks, which can be crucial for various image processing and computer vision tasks.
+    - Inputs:
+        - `seg_elt` (Required): Represents a single segmentation element (SEG_ELT) whose mask will be modified through dilation, depending on the dilation parameter value. This adjustment can be essential for refining segmentation results or preparing data for further processing. Type should be `SEG_ELT`.
+        - `dilation` (Required): Specifies the intensity of the mask modification. Positive values cause dilation (expanding the mask), allowing for flexible mask adjustments. Type should be `INT`.
+    - Outputs:
+        - `seg_elt`: The output is a modified single segmentation element (SEG_ELT) with its mask dilated, based on the input parameters. This modification enables refined control over the segmentation mask's boundaries. Type should be `SEG_ELT`.

@@ -1,9 +1,0 @@
-- `PolyexponentialScheduler`: The PolyexponentialScheduler node is designed to generate a sequence of sigma values based on a polyexponential function. These sigma values are used to control the noise level at each step of a diffusion process, allowing for fine-tuned adjustments to the sampling behavior.
-    - Parameters:
-        - `steps`: Specifies the number of steps for which sigma values are to be generated, affecting the granularity of the diffusion process. Type should be `INT`.
-        - `sigma_max`: The maximum sigma value, setting the upper limit of noise to be introduced in the early stages of the diffusion process. Type should be `FLOAT`.
-        - `sigma_min`: The minimum sigma value, determining the lower limit of noise for the final stages, ensuring the process gradually refines the generated output. Type should be `FLOAT`.
-        - `rho`: A parameter influencing the shape of the polyexponential curve, thereby affecting the distribution of sigma values across the steps. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `sigmas`: A sequence of sigma values calculated based on the polyexponential function, tailored for each step of the diffusion process. Type should be `SIGMAS`.

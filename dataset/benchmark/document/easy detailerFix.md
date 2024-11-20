@@ -1,0 +1,12 @@
+- `easy detailerFix`: The 'easy detailerFix' node is designed for enhancing and refining images through a detailed fixing process. It operates by applying a series of adjustments and enhancements to the input image, aiming to improve its overall quality and appearance.
+    - Inputs:
+        - `pipe` (Required): Specifies the pipeline configuration for the image enhancement process, indicating the sequence of operations to be applied. Type should be `PIPE_LINE`.
+        - `image_output` (Required): Determines how the output image is handled, offering options such as hiding, previewing, saving, or sending the enhanced image. Type should be `COMBO[STRING]`.
+        - `link_id` (Required): An identifier for linking the output with other processes or nodes, facilitating integration and further processing. Type should be `INT`.
+        - `save_prefix` (Required): A prefix added to the filename of the saved image, allowing for organized storage and easy retrieval. Type should be `STRING`.
+        - `model` (Optional): The model used for the image enhancement, providing the capability to customize the fixing process based on different models. Type should be `MODEL`.
+    - Outputs:
+        - `pipe`: The updated pipeline configuration after the image enhancement process. Type should be `PIPE_LINE`.
+        - `image`: The enhanced image resulting from the detailed fixing process. Type should be `IMAGE`.
+        - `cropped_refined`: A refined version of the cropped area from the original image, highlighting the improvements made. Type should be `IMAGE`.
+        - `cropped_enhanced_alpha`: An enhanced version of the cropped area with alpha transparency, offering a detailed view of the adjustments. Type should be `IMAGE`.

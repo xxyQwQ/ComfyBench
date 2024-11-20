@@ -1,0 +1,25 @@
+- `BatchPromptScheduleSDXLLatentInput`: This node is designed to process animation prompts for both G and L clips, applying a scheduling algorithm that separates, tokenizes, and then recombines these prompts with weighted adjustments before finally applying a batch of conditionings. It uniquely handles latent inputs, allowing for the dynamic adjustment of animation parameters based on the provided latents.
+    - Inputs:
+        - `width` (Required): The width of the clip or frame in pixels. Type should be `INT`.
+        - `height` (Required): The height of the clip or frame in pixels. Type should be `INT`.
+        - `crop_w` (Required): The width of the crop area in pixels. Type should be `INT`.
+        - `crop_h` (Required): The height of the crop area in pixels. Type should be `INT`.
+        - `target_width` (Required): The target width of the clip or frame after processing. Type should be `INT`.
+        - `target_height` (Required): The target height of the clip or frame after processing. Type should be `INT`.
+        - `text_g` (Required): The text prompt for G clips, which will be processed, tokenized, and adjusted according to the scheduling algorithm. Type should be `STRING`.
+        - `clip` (Required): Represents the clip information or parameters that are used in conjunction with the text prompts to apply the scheduling algorithm. Type should be `CLIP`.
+        - `text_l` (Required): The text prompt for L clips, similar to text_g, it will be processed, tokenized, and adjusted for scheduling. Type should be `STRING`.
+        - `num_latents` (Required): The number of latent inputs that are used to dynamically adjust the animation parameters during the scheduling process. Type should be `LATENT`.
+        - `print_output` (Required): A flag indicating whether to print the output of the scheduling process. Type should be `BOOLEAN`.
+        - `pre_text_G` (Optional): Pre-text to be added to the G clip's text prompt before processing. Type should be `STRING`.
+        - `app_text_G` (Optional): App-text to be appended to the G clip's text prompt after processing. Type should be `STRING`.
+        - `pre_text_L` (Optional): Pre-text to be added to the L clip's text prompt before processing. Type should be `STRING`.
+        - `app_text_L` (Optional): App-text to be appended to the L clip's text prompt after processing. Type should be `STRING`.
+        - `pw_a` (Optional): Weight parameter a, used in the scheduling algorithm for adjusting prompts. Type should be `FLOAT`.
+        - `pw_b` (Optional): Weight parameter b, used in the scheduling algorithm for adjusting prompts. Type should be `FLOAT`.
+        - `pw_c` (Optional): Weight parameter c, used in the scheduling algorithm for adjusting prompts. Type should be `FLOAT`.
+        - `pw_d` (Optional): Weight parameter d, used in the scheduling algorithm for adjusting prompts. Type should be `FLOAT`.
+    - Outputs:
+        - `POS`: The positive conditioning batch resulting from the applied scheduling and animation adjustments. Type should be `CONDITIONING`.
+        - `NEG`: The negative conditioning batch resulting from the applied scheduling and animation adjustments. Type should be `CONDITIONING`.
+        - `POS_CUR`: The current positive prompt conditioning, part of the output detailing the specific conditioning state at the current animation frame. Type should be `LATENT`.

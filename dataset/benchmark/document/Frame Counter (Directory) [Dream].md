@@ -1,0 +1,9 @@
+- `Frame Counter (Directory) [Dream]`: This node is designed to count the number of frames based on images found in a specified directory, matching a given pattern, and ordered either numerically or alphabetically. It's particularly useful in animation projects where tracking the progression of frames is essential.
+    - Inputs:
+        - `directory_path` (Required): Specifies the path to the directory containing the images to be counted. This path is crucial for locating and processing the images. Type should be `STRING`.
+        - `pattern` (Required): Defines the pattern (e.g., '*.jpg') to match files in the directory. This pattern determines which files are considered in the frame count. Type should be `STRING`.
+        - `indexing` (Required): Determines the order in which images are indexed and counted, either numerically or alphabetically. This affects the sequence of frame counting. Type should be `COMBO[STRING]`.
+        - `total_frames` (Required): Sets the maximum number of frames to count, providing a limit to the frame counting process. Type should be `INT`.
+        - `frames_per_second` (Required): Specifies the frame rate, which is used to calculate the duration of the animation based on the number of frames. Type should be `INT`.
+    - Outputs:
+        - `frame_counter`: Outputs a FrameCounter object, encapsulating the current frame count, total frames, and frames per second. Type should be `FRAME_COUNTER`.

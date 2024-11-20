@@ -1,8 +1,0 @@
-- `easy promptList`: The `promptList` node is designed to generate a list of strings based on a given multiline prompt, starting from a specified index and up to a maximum number of rows. It aims to facilitate the extraction and manipulation of text data by breaking down larger text inputs into manageable, indexed segments.
-    - Parameters:
-        - `prompt_i`: unknown Type should be `STRING`.
-    - Inputs:
-        - `optional_prompt_list`: An optional parameter that accepts a list of prompts, providing flexibility in the input by allowing multiple prompts to be combined or processed separately. Type should be `LIST`.
-    - Outputs:
-        - `prompt_list`: Outputs a list of prompts, aggregating inputs from various sources into a unified list. Type should be `LIST`.
-        - `prompt_strings`: Outputs the same list of prompts as `prompt_list`, effectively duplicating the output for potential different uses or processing steps. Type should be `STRING`.

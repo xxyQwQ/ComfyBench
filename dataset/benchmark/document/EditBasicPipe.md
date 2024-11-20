@@ -1,0 +1,10 @@
+- `EditBasicPipe`: The EditBasicPipe node is designed to modify elements of a basic pipeline configuration, allowing for the customization of model, clip, VAE, and conditioning components.
+    - Inputs:
+        - `basic_pipe` (Required): Represents the initial state of the basic pipeline components, which include model, clip, VAE, and conditioning elements. It is essential for determining the starting point for modifications. Type should be `BASIC_PIPE`.
+        - `model` (Optional): Optional parameter to replace the current model component of the basic pipe. Type should be `MODEL`.
+        - `clip` (Optional): Optional parameter to replace the current clip component of the basic pipe. Type should be `CLIP`.
+        - `vae` (Optional): Optional parameter to replace the current VAE component of the basic pipe. Type should be `VAE`.
+        - `positive` (Optional): Optional parameter to add or replace the positive conditioning component of the basic pipe. Type should be `CONDITIONING`.
+        - `negative` (Optional): Optional parameter to add or replace the negative conditioning component of the basic pipe. Type should be `CONDITIONING`.
+    - Outputs:
+        - `basic_pipe`: The modified basic pipeline configuration, reflecting any changes made to the model, clip, VAE, and conditioning components. Type should be `BASIC_PIPE`.

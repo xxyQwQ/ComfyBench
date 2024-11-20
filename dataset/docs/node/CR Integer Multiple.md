@@ -1,8 +1,0 @@
-- `CR Integer Multiple`: The CR_IntegerMultipleOf node is designed to multiply an integer by a specified multiple, adjusting the integer's value accordingly. It provides a straightforward way to scale integers by a factor, with an option to access help documentation for further guidance.
-    - Parameters:
-        - `integer`: Specifies the integer to be multiplied. This parameter is central to the node's operation, determining the base value that will be scaled. Type should be `INT`.
-        - `multiple`: Defines the factor by which the integer will be multiplied. This parameter allows for the dynamic scaling of the integer's value. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `INT`: The result of multiplying the input integer by the specified multiple. Type should be `INT`.
-        - `show_help`: A URL providing access to additional documentation and help for using this node. Type should be `STRING`.

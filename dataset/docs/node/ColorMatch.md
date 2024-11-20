@@ -1,8 +1,0 @@
-- `ColorMatch`: The ColorMatch node is designed for transferring color schemes between images, utilizing various color matching techniques. It supports multiple color transfer methods, including MKL and histogram matching, to adapt the color palette of a target image to match that of a reference image.
-    - Parameters:
-        - `method`: Specifies the color transfer method to be used, such as MKL or histogram matching, affecting the style of color adaptation. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image_ref`: The reference image whose color palette is to be transferred. It plays a crucial role in determining the final appearance of the target image. Type should be `IMAGE`.
-        - `image_target`: The target image that will receive the color palette of the reference image. This image is transformed to match the color scheme of the reference image. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The resulting image after color transfer, with its colors adapted to match the reference image's palette. Type should be `IMAGE`.

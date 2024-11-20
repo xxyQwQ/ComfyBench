@@ -1,0 +1,21 @@
+- `LLMKSamplerTool`: This node is designed to facilitate the generation of language models by providing a toolkit for sampling. It abstracts the complexities involved in sampling processes, making it easier to generate language models with specific characteristics or based on certain criteria.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for sampling, setting the foundation for the generation process. Type should be `MODEL`.
+        - `clip` (Required): Specifies the CLIP model to be used alongside the main model for enhanced conditioning. Type should be `CLIP`.
+        - `vae` (Required): Specifies the VAE model to be used in the generation process, contributing to the visual aspects of the generated model. Type should be `VAE`.
+        - `width` (Required): Defines the width of the generated images, affecting the dimensions of the output. Type should be `INT`.
+        - `height` (Required): Defines the height of the generated images, affecting the dimensions of the output. Type should be `INT`.
+        - `seed` (Required): Determines the randomness seed for sampling, ensuring reproducibility of results. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps to perform in the sampling process, affecting the detail and quality of the generated model. Type should be `INT`.
+        - `cfg` (Required): Controls the conditioning factor, influencing the variance and creativity of the generated output. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the specific sampling algorithm to use, tailoring the generation process to specific needs. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduler for controlling the sampling process, further customizing the output. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Adjusts the level of denoising applied during the sampling process, affecting the clarity of the generated model. Type should be `FLOAT`.
+        - `optional_control_net` (Optional): Optionally specifies a ControlNet model for additional control over the generation process. Type should be `CONTROL_NET`.
+        - `optional_control_image` (Optional): Optionally includes a control image to guide the visual aspects of the generated model. Type should be `IMAGE`.
+        - `optional_latent_image` (Optional): Optionally incorporates a latent image to influence the visual aspects of the generated model. Type should be `LATENT`.
+        - `cn_strength` (Optional): Specifies the strength of the ControlNet's influence on the generation process. Type should be `FLOAT`.
+        - `cn_start_percent` (Optional): Defines the starting point of the ControlNet's influence in terms of the generation process's progress percentage. Type should be `FLOAT`.
+        - `cn_end_percent` (Optional): Defines the ending point of the ControlNet's influence in terms of the generation process's progress percentage. Type should be `FLOAT`.
+    - Outputs:
+        - `tool`: Outputs the tool encapsulating the result of the sampling process, designed for generating language models. Type should be `TOOL`.

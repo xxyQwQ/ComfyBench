@@ -1,6 +1,0 @@
-- `CM_BreakoutVec4`: The node is designed to decompose a four-dimensional vector into its individual components, facilitating operations that require access to the separate elements of a Vec4.
-    - Parameters:
-    - Inputs:
-        - `a`: This parameter represents the four-dimensional vector to be decomposed. It is crucial for the operation as it provides the vector whose components are to be extracted. Type should be `VEC4`.
-    - Outputs:
-        - `float`: Each output represents one of the four components of the input Vec4, allowing for individual manipulation or analysis. Type should be `FLOAT`.

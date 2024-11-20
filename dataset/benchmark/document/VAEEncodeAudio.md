@@ -1,0 +1,6 @@
+- `VAEEncodeAudio`: The VAEEncodeAudio node is designed for encoding audio data into a latent representation using a specified VAE model. It supports audio input of any sample rate by resampling to 44100 Hz if necessary, ensuring compatibility with the VAE's encoding capabilities.
+    - Inputs:
+        - `audio` (Required): The 'audio' input is the audio data to be encoded. It includes the waveform and its sample rate, which is resampled to 44100 Hz if not already at this rate, to ensure compatibility with the VAE model's expectations. Type should be `AUDIO`.
+        - `vae` (Required): The 'vae' input specifies the VAE model to be used for encoding the audio data into its latent representation. Type should be `VAE`.
+    - Outputs:
+        - `latent`: The output is the latent representation of the input audio, encoded by the specified VAE model. Type should be `LATENT`.

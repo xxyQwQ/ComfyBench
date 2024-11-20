@@ -1,0 +1,9 @@
+- `NumberScaler`: The NumberScaler node is designed to scale a numerical value within a specified range to a new range, effectively normalizing or denormalizing the value based on the provided minimum and maximum boundaries.
+    - Inputs:
+        - `min` (Required): Specifies the minimum value of the original range. It sets the lower boundary for scaling the input value. Type should be `FLOAT`.
+        - `max` (Required): Defines the maximum value of the original range. It sets the upper boundary for scaling the input value. Type should be `FLOAT`.
+        - `scale_to_min` (Required): Determines the minimum value of the target scaling range. It influences the lower limit of the output scaled value. Type should be `FLOAT`.
+        - `scale_to_max` (Required): Sets the maximum value of the target scaling range. It influences the upper limit of the output scaled value. Type should be `FLOAT`.
+        - `value` (Required): The numerical value to be scaled from its original range to the target range. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: The scaled numerical value, adjusted to fit within the new specified range. Type should be `FLOAT`.

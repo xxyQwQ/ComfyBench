@@ -1,0 +1,15 @@
+- `PresetRatioSelector`: The PresetRatioSelector node is designed to manage and apply predefined and user-defined ratio presets for image dimensions. It dynamically reads, merges, and deduplicates ratio presets from both a default set and user-customized configurations, providing a flexible way to select and apply specific aspect ratios for image generation tasks.
+    - Inputs:
+        - `select_preset` (Required): Specifies the preset to be selected for determining image dimensions. This allows for the direct selection of a predefined or user-defined ratio preset. Type should be `COMBO[STRING]`.
+        - `swap_axis` (Required): Determines whether the width and height dimensions of selected ratios should be swapped, allowing for easy adjustment of orientation. Type should be `COMBO[STRING]`.
+        - `use_preset_seed` (Required): Indicates whether to use a preset seed for selecting a ratio preset, enabling deterministic selection of presets based on a seed value. Type should be `COMBO[STRING]`.
+        - `seed` (Required): The seed value used for deterministic selection of a ratio preset when 'use_preset_seed' is true. It ensures consistent preset selection across runs. Type should be `INT`.
+    - Outputs:
+        - `latent_w`: The width dimension of the latent space determined by the selected preset. Type should be `INT`.
+        - `latent_h`: The height dimension of the latent space determined by the selected preset. Type should be `INT`.
+        - `cte_w`: Width dimension for clip text encode, determined by the selected preset. Type should be `INT`.
+        - `cte_h`: Height dimension for clip text encode, determined by the selected preset. Type should be `INT`.
+        - `target_w`: The target width dimension for image generation, determined by the selected preset. Type should be `INT`.
+        - `target_h`: The target height dimension for image generation, determined by the selected preset. Type should be `INT`.
+        - `crop_w`: The width dimension for cropping, determined by the selected preset. Type should be `INT`.
+        - `crop_h`: The height dimension for cropping, determined by the selected preset. Type should be `INT`.

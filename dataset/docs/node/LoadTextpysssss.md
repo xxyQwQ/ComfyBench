@@ -1,7 +1,0 @@
-- `LoadTextpysssss`: The LoadText node is designed for loading text content from a specified file within a given directory. It facilitates the retrieval of text data, enabling further processing or display within a workflow.
-    - Parameters:
-        - `root_dir`: Specifies the directory from which the file will be loaded. It is crucial for locating the file and ensuring the correct path is used for file access. Type should be `COMBO[STRING]`.
-        - `file`: The specific file to be loaded. This parameter is essential for identifying which text file's contents are to be retrieved and loaded. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `string`: Returns the content of the specified text file as a string. Type should be `STRING`.

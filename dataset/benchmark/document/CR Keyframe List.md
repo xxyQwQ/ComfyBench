@@ -1,0 +1,7 @@
+- `CR Keyframe List`: This node is designed to process and format a list of keyframes for animation purposes, providing a structured way to define animation sequences and their formats. It also offers a link to further help and documentation on how to use the node effectively.
+    - Inputs:
+        - `keyframe_list` (Required): A multiline string representing a list of keyframes. This list is essential for defining the sequence of frames in an animation, where each keyframe specifies a significant point in the animation that will be interpolated between by the animation software. Type should be `STRING`.
+        - `keyframe_format` (Required): Specifies the format of the keyframes, allowing for different animation frameworks or custom formats to be used. This flexibility ensures compatibility with various animation tools and workflows. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `keyframe_list`: Returns the processed list of keyframes, ready for use in animation sequences. Type should be `STRING`.
+        - `show_help`: Provides a URL to further documentation and help for using the node, facilitating user understanding and effective utilization. Type should be `STRING`.

@@ -1,0 +1,9 @@
+- `Mask Paste Region`: The node is designed to paste a specified region within an image mask, allowing for precise manipulation and modification of mask areas. It focuses on enhancing or altering the mask's characteristics by integrating selected regions, thereby facilitating targeted adjustments in image processing tasks.
+    - Inputs:
+        - `mask` (Required): The 'mask' parameter represents the primary image mask to be processed. It is essential for identifying the area within which the pasting operation will be executed, directly influencing the node's execution and the resulting modified mask. Type should be `MASK`.
+        - `crop_mask` (Required): The 'crop_mask' parameter specifies the mask of the region to be pasted into the primary mask. It defines the shape and area of the region being integrated into the 'mask' parameter. Type should be `MASK`.
+        - `crop_data` (Required): Optional parameter providing additional data related to the crop, such as its position or size. It can influence how the 'crop_mask' is integrated into the 'mask'. Type should be `CROP_DATA`.
+        - `crop_blending` (Required): Specifies the blending level between the 'mask' and 'crop_mask' during the pasting operation. A higher value results in smoother blending. Type should be `FLOAT`.
+        - `crop_sharpening` (Required): Determines the level of sharpening applied to the 'crop_mask' before it is pasted onto the 'mask'. This can enhance the clarity of the pasted region. Type should be `INT`.
+    - Outputs:
+        - `mask`: This output represents the modified image mask after the pasting operation has been applied. It encapsulates the alterations made to the original mask, showcasing the region that has been pasted as per the specified parameters. Type should be `MASK`.

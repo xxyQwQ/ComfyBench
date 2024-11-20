@@ -1,0 +1,5 @@
+- `MorphologicSkeletoning`: The MorphologicSkeletoning node is designed to perform skeletonization on binary images. It transforms the input image into its skeletal representation, reducing all objects to lines without changing the fundamental structure.
+    - Inputs:
+        - `src` (Required): The source image to be skeletonized. It is crucial for the operation as it directly influences the skeletonization process. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The skeletal representation of the input image, highlighting its essential structure with minimal thickness. Type should be `IMAGE`.

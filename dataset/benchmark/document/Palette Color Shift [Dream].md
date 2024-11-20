@@ -1,0 +1,9 @@
+- `Palette Color Shift [Dream]`: This node applies a color shift to a given palette by adjusting the red, green, and blue color components according to specified multipliers, optionally maintaining a fixed brightness level. It enables the customization of color palettes for images or visual elements, enhancing or altering their aesthetic appeal.
+    - Inputs:
+        - `palette` (Required): The input palette to be modified. It represents a collection of colors that will undergo adjustments based on the provided multipliers. Type should be `RGB_PALETTE`.
+        - `red_multiplier` (Required): A multiplier for the red component of each color in the palette, allowing for the intensification or reduction of red hues. Type should be `FLOAT`.
+        - `green_multiplier` (Required): A multiplier for the green component of each color in the palette, enabling the adjustment of green hues. Type should be `FLOAT`.
+        - `blue_multiplier` (Required): A multiplier for the blue component of each color in the palette, facilitating the modification of blue hues. Type should be `FLOAT`.
+        - `fixed_brightness` (Required): Determines whether the brightness level of the palette should remain constant despite the color shifts. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `palette`: The modified palette after applying the specified red, green, and blue multipliers, potentially with fixed brightness. Type should be `RGB_PALETTE`.

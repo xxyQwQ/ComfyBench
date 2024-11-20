@@ -1,0 +1,7 @@
+- `ImageRemoveBackground+`: This node is designed for removing the background from images using the rembg library. It processes each image in the input, applies the background removal algorithm, and returns the foreground image along with a mask indicating the areas of the image that were kept.
+    - Inputs:
+        - `rembg_session` (Required): The session object for the rembg library, used to manage settings and configurations for the background removal process. Type should be `REMBG_SESSION`.
+        - `image` (Required): The input image or images to have their background removed. The node supports batch processing of multiple images. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The foreground of the input image(s) after background removal, with the background areas made transparent or removed. Type should be `IMAGE`.
+        - `mask`: A binary mask indicating the areas of the image that were kept during the background removal process. Type should be `MASK`.

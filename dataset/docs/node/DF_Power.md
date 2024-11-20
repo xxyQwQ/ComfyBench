@@ -1,7 +1,0 @@
-- `DF_Power`: The `DF_Power` node performs exponentiation, raising a base value to the power of a specified exponent. It abstracts the mathematical operation of exponentiation, enabling the dynamic computation of powers within a workflow.
-    - Parameters:
-        - `Value`: The base value for the exponentiation operation. It determines the number being raised to the power of the exponent. Type should be `FLOAT`.
-        - `Exponent`: The exponent value in the exponentiation operation. It specifies the power to which the base value is raised. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The result of raising the base value to the power of the exponent, computed as a floating-point number. Type should be `FLOAT`.

@@ -1,0 +1,14 @@
+- `LayerUtility_ ImageShift`: The ImageShift node is designed to manipulate images by shifting them horizontally and/or vertically. It supports cyclic shifting, allowing images to wrap around edges, and can apply a border mask to the shifted images for enhanced visual effects. This node is useful for creating dynamic visual transformations and adjusting image compositions.
+    - Inputs:
+        - `image` (Required): The primary image to be shifted. This input is essential for determining the base visual content that will undergo the shifting process. Type should be `IMAGE`.
+        - `shift_x` (Required): Specifies the horizontal shift distance for the image. Positive values shift the image to the right, while negative values shift it to the left. Type should be `INT`.
+        - `shift_y` (Required): Specifies the vertical shift distance for the image. Positive values shift the image downwards, while negative values shift it upwards. Type should be `INT`.
+        - `cyclic` (Required): Determines whether the image shift should be cyclic, allowing the shifted parts of the image to wrap around to the opposite edge. Type should be `BOOLEAN`.
+        - `background_color` (Required): Defines the background color to use for areas of the image that become unfilled due to the shift. Type should be `STRING`.
+        - `border_mask_width` (Required): Sets the width of the border mask applied to the edges of the shifted image, enhancing visual separation. Type should be `INT`.
+        - `border_mask_blur` (Required): Determines the blur intensity of the border mask, providing a smoother transition at the image edges. Type should be `INT`.
+        - `mask` (Optional): An optional mask that can be applied to the image, specifying areas to be excluded or differently treated during the shift. Type should be `MASK`.
+    - Outputs:
+        - `image`: The shifted image, transformed according to the specified parameters. Type should be `IMAGE`.
+        - `mask`: A mask generated during the shifting process, potentially useful for further image processing steps. Type should be `MASK`.
+        - `border_mask`: A border mask applied to the shifted image, enhancing its visual appearance with a defined edge. Type should be `MASK`.

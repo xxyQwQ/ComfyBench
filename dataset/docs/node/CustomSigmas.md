@@ -1,7 +1,0 @@
-- `CustomSigmas`: The CustomSigmas node is designed to transform a list of float values into a tensor of sigmas, facilitating the manipulation and application of these values in noise-related operations within neural network models.
-    - Parameters:
-        - `sigmas_string`: This parameter represents a string of comma-separated sigma values intended to be converted into a tensor of sigmas. It is crucial for defining the specific sigma values to be used in subsequent operations, directly influencing the behavior and outcome of the noise application. Type should be `STRING`.
-        - `interpolate_to_steps`: Specifies the number of steps to which the sigma values should be interpolated. This parameter is essential for adjusting the length of the sigma tensor to match the desired number of steps in the model's processing. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `SIGMAS`: The output is a tensor of sigmas derived from the input list of float values. This tensor is essential for noise manipulation and application processes in neural network models. Type should be `SIGMAS`.

@@ -1,0 +1,16 @@
+- `easy latentNoisy`: The `easyLatentNoisy` node is designed to inject noise into latent representations, enhancing the diversity and richness of generated content. It supports various noise types and levels, allowing for fine-tuned control over the noise injection process.
+    - Inputs:
+        - `sampler_name` (Required): Specifies the sampler to be used in the noise injection process, affecting the method and characteristics of noise generation. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Determines the scheduling algorithm for noise injection, influencing the timing and sequence of noise application. Type should be `COMBO[STRING]`.
+        - `steps` (Required): Defines the number of steps in the noise injection process, allowing for control over the duration and granularity of noise application. Type should be `INT`.
+        - `start_at_step` (Required): Indicates the starting step for noise injection, enabling targeted application of noise at specific stages. Type should be `INT`.
+        - `end_at_step` (Required): Specifies the ending step for noise injection, defining the conclusion of the noise application process. Type should be `INT`.
+        - `source` (Required): The original source of the latent representation, serving as the basis for noise injection. Type should be `COMBO[STRING]`.
+        - `seed` (Required): Sets the seed for random noise generation, ensuring reproducibility of the noise characteristics. Type should be `INT`.
+        - `pipe` (Optional): The processing pipeline context in which the noise injection occurs, integrating the node's functionality within a broader workflow. Type should be `PIPE_LINE`.
+        - `optional_model` (Optional): An optional model parameter that, if provided, can influence the noise generation process based on the model's characteristics. Type should be `MODEL`.
+        - `optional_latent` (Optional): An optional latent parameter that can be used to specify an alternative latent representation for noise injection. Type should be `LATENT`.
+    - Outputs:
+        - `pipe`: The updated processing pipeline after noise injection, reflecting the integration of the noisy latent within the workflow. Type should be `PIPE_LINE`.
+        - `latent`: The modified latent representation after noise injection, showcasing the effects of the added noise. Type should be `LATENT`.
+        - `sigma`: The level of noise applied to the latent representation, quantifying the intensity of the noise injection. Type should be `FLOAT`.

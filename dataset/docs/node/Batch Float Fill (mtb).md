@@ -1,9 +1,0 @@
-- `Batch Float Fill (mtb)`: This node is designed to extend a batch of floating-point numbers to a specified length by filling it with a given value, either at the beginning or the end of the batch, depending on the specified direction.
-    - Parameters:
-        - `direction`: Specifies whether the filling should occur at the beginning ('head') or the end ('tail') of the batch, influencing the order in which the batch is extended. Type should be `COMBO[STRING]`.
-        - `value`: The floating-point number used to fill the batch, allowing customization of the fill value. Type should be `FLOAT`.
-        - `count`: The target length for the batch after filling, determining how many times the fill value will be added. Type should be `INT`.
-    - Inputs:
-        - `floats`: The list of floating-point numbers to be extended. It serves as the base batch that will be filled to reach the target length. Type should be `FLOATS`.
-    - Outputs:
-        - `floats`: The resulting batch of floating-point numbers after being filled to the target length. Type should be `FLOATS`.

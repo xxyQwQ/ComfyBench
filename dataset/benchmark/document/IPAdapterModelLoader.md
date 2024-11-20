@@ -1,0 +1,5 @@
+- `IPAdapterModelLoader`: The IPAdapterModelLoader node is designed to load IPAdapter models from a specified directory, facilitating the integration and application of these models within the IPAdapter framework.
+    - Inputs:
+        - `ipadapter_file` (Required): Specifies the file path of the IPAdapter model to be loaded. This parameter is crucial for identifying and loading the correct model file for use in the IPAdapter framework. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `ipadapter`: Represents the loaded IPAdapter model, ready for integration and use within the IPAdapter framework. Type should be `IPADAPTER`.

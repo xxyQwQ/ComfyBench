@@ -1,0 +1,15 @@
+- `CR XY From Folder`: The CR XY From Folder node is designed to automate the process of loading and processing a sequence of images from a specified folder, converting them into a format suitable for further manipulation or analysis. This node streamlines the task of handling multiple images, facilitating operations such as annotation and organization into a grid layout based on their filenames.
+    - Inputs:
+        - `image_folder` (Required): Specifies the list of subfolders within the specified directory from which images are to be loaded. This allows for targeted processing of images grouped in specific folders. Type should be `COMBO[STRING]`.
+        - `start_index` (Required): Defines the starting index for processing images within the folder. This allows for selective processing of images, starting from a specific point in the sequence. Type should be `INT`.
+        - `end_index` (Required): Specifies the ending index for image processing, enabling selective processing of images within a defined range. Type should be `INT`.
+        - `max_columns` (Required): Sets the maximum number of columns for organizing the images into a grid layout. This parameter helps in structuring the output in a visually coherent manner. Type should be `INT`.
+        - `x_annotation` (Required): Provides the annotations for the x-axis of the grid, allowing for descriptive labeling of columns. Type should be `STRING`.
+        - `y_annotation` (Required): Supplies the annotations for the y-axis of the grid, enabling descriptive labeling of rows. Type should be `STRING`.
+        - `font_size` (Required): Determines the font size used for annotating the images. This parameter is crucial for ensuring that annotations are legible and appropriately scaled. Type should be `INT`.
+        - `gap` (Required): Specifies the gap between images in the grid layout. This parameter allows for adjusting the spacing to achieve the desired layout appearance. Type should be `INT`.
+        - `trigger` (Optional): Acts as a control mechanism to initiate the node's operation. When set to True, the node proceeds with loading and processing the images from the specified folder. Type should be `BOOLEAN`.
+    - Outputs:
+        - `IMAGE`: The processed images organized into a grid layout, ready for further manipulation or analysis. Type should be `IMAGE`.
+        - `trigger`: Indicates whether the node's operation was initiated. Type should be `BOOLEAN`.
+        - `show_help`: Provides helpful information or guidance related to the node's functionality. Type should be `STRING`.

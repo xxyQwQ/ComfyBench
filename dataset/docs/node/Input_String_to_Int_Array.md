@@ -1,6 +1,0 @@
-- `Input_String to Int Array`: This node is designed to convert a string representation of integers, separated by commas, into an array of integers. It is versatile for handling different types of input sources.
-    - Parameters:
-        - `inStr`: The input string containing integers separated by commas, or an array of integers. This parameter allows for flexible input handling. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `int_array`: The output is an array of integers, derived from parsing the input string or directly using the input array. Type should be `INT_ARRAY`.

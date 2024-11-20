@@ -1,6 +1,0 @@
-- `SeargeVAELoader`: The SeargeVAELoader node is designed for loading pre-trained VAE models by name, facilitating the integration of these models into the processing pipeline for various tasks such as image generation or manipulation.
-    - Parameters:
-    - Inputs:
-        - `vae_name`: Specifies the name of the VAE model to be loaded, serving as a key to retrieve the corresponding pre-trained model. Type should be `VAE_NAME`.
-    - Outputs:
-        - `vae`: Returns the loaded VAE model, ready for use in downstream tasks such as encoding or decoding images. Type should be `VAE`.

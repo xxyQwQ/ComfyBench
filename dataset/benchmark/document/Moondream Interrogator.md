@@ -1,0 +1,11 @@
+- `Moondream Interrogator`: The Moondream Interrogator node is designed to generate textual descriptions for images using a visual language model. It leverages the Moondream model to interpret and answer questions about the given images, providing a bridge between visual content and natural language descriptions.
+    - Inputs:
+        - `image` (Required): The input image tensor to be described. It is crucial for generating the textual descriptions by interpreting the visual content. Type should be `IMAGE`.
+        - `prompt` (Required): A string or a list of strings representing the questions or prompts to guide the generation of descriptions for the image. Type should be `STRING`.
+        - `separator` (Required): A string used to separate multiple descriptions in the output, allowing for clear distinction between different pieces of generated text. Type should be `STRING`.
+        - `model_revision` (Required): Specifies the version of the Moondream model to use, enabling the selection of different model capabilities or updates. Type should be `COMBO[STRING]`.
+        - `temperature` (Required): Controls the randomness in the generation process, affecting the variability and creativity of the output descriptions. Type should be `FLOAT`.
+        - `device` (Required): Indicates whether to use CPU or GPU for computation, affecting performance and resource utilization. Type should be `COMBO[STRING]`.
+        - `trust_remote_code` (Required): A boolean flag that must be set to true to enable the use of this node, ensuring security and trust in the remote code executed. Type should be `BOOLEAN`.
+    - Outputs:
+        - `description`: The generated textual description for the input image, based on the provided prompts and questions. Type should be `STRING`.

@@ -1,0 +1,7 @@
+- `ADE_AnimateDiffLoRALoader`: The ADE_AnimateDiffLoRALoader node is designed to load motion LoRA (Locally Recurrent Architecture) configurations for use in animation processes. It facilitates the selection and application of specific motion LoRA settings, enhancing the control and customization of animation dynamics.
+    - Inputs:
+        - `lora_name` (Required): Specifies the name of the motion LoRA to be loaded. It is crucial for identifying the specific LoRA configuration to apply. Type should be `COMBO[STRING]`.
+        - `strength` (Required): Determines the strength of the motion LoRA effect. This parameter allows for fine-tuning the intensity of the motion applied, affecting the animation's overall dynamics. Type should be `FLOAT`.
+        - `prev_motion_lora` (Optional): Optional. Represents the previous motion LoRA configuration. If provided, it enables the chaining or layering of motion LoRA effects for more complex animations. Type should be `MOTION_LORA`.
+    - Outputs:
+        - `motion_lora`: Returns the updated motion LoRA configuration, incorporating the selected LoRA settings and strength. This output is essential for subsequent animation steps. Type should be `MOTION_LORA`.

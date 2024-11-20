@@ -1,8 +1,0 @@
-- `CLIP Vision Input Switch`: This node provides a mechanism to switch between two CLIP vision models based on a boolean condition. It enables dynamic selection of vision models within a workflow, facilitating conditional processing of visual data.
-    - Parameters:
-        - `boolean`: A boolean value determining which CLIP vision model (A or B) to pass through. True selects 'clip_vision_a', and False selects 'clip_vision_b'. Type should be `BOOLEAN`.
-    - Inputs:
-        - `clip_vision_a`: The first CLIP vision model to choose from. Acts as a potential input for the switch operation, contributing to conditional logic in processing visual data. Type should be `CLIP_VISION`.
-        - `clip_vision_b`: The second CLIP vision model to choose from. Serves as an alternative input for the switch operation, enabling a choice between two models based on a condition. Type should be `CLIP_VISION`.
-    - Outputs:
-        - `clip_vision`: The selected CLIP vision model based on the boolean condition. Enables conditional routing of visual model processing. Type should be `CLIP_VISION`.

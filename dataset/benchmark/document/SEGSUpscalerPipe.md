@@ -1,0 +1,23 @@
+- `SEGSUpscalerPipe`: The SEGSUpscalerPipe node is designed for upscaling images using segmentation maps as guidance. It integrates with a basic pipeline to enhance image resolution while considering the segmentation details, ensuring that the upscale process respects the original image's segmented regions.
+    - Inputs:
+        - `image` (Required): The original image to be upscaled. It serves as the primary input for the upscaling process. Type should be `IMAGE`.
+        - `segs` (Required): Segmentation maps corresponding to the original image. These maps guide the upscaling process to maintain fidelity to the segmented regions. Type should be `SEGS`.
+        - `basic_pipe` (Required): A collection of models and configurations used in the upscaling process, including model, clip, vae, and settings for sampling and scheduling. Type should be `BASIC_PIPE`.
+        - `rescale_factor` (Required): The factor by which the image will be upscaled. It determines the increase in resolution. Type should be `FLOAT`.
+        - `resampling_method` (Required): The method used for resampling during the upscaling process, affecting the quality of the upscaled image. Type should be `COMBO[STRING]`.
+        - `supersample` (Required): A boolean indicating whether to apply supersampling, which can enhance the upscaling quality by reducing aliasing. Type should be `COMBO[STRING]`.
+        - `rounding_modulus` (Required): A value used to round the upscaled image dimensions, ensuring they are multiples of this modulus. Type should be `INT`.
+        - `seed` (Required): The seed for random number generation, ensuring reproducibility of the upscaling process. Type should be `INT`.
+        - `steps` (Required): The number of steps to perform in the upscaling process, affecting the detail and quality of the result. Type should be `INT`.
+        - `cfg` (Required): Configuration settings for the upscaling process, including parameters for the model and sampling. Type should be `FLOAT`.
+        - `sampler_name` (Required): The name of the sampler to use during upscaling, influencing the texture and details of the upscaled image. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler used to adjust the learning rate during the upscaling process, affecting the convergence and quality. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): A boolean indicating whether to apply denoising, which can improve the visual quality of the upscaled image by reducing noise. Type should be `FLOAT`.
+        - `feather` (Required): The feathering amount applied to the edges of the segmentation maps, smoothing transitions between segments. Type should be `INT`.
+        - `inpaint_model` (Required): The model used for inpainting missing or uncertain areas in the upscaled image, enhancing overall quality. Type should be `BOOLEAN`.
+        - `noise_mask_feather` (Required): The amount of feathering applied to the noise mask, affecting the blending of noise-reduced areas. Type should be `INT`.
+        - `upscale_model_opt` (Optional): Optional configurations for the upscale model, allowing customization of the upscaling process. Type should be `UPSCALE_MODEL`.
+        - `upscaler_hook_opt` (Optional): Optional hooks to modify the behavior of the upscaler, enabling advanced customization. Type should be `UPSCALER_HOOK`.
+        - `scheduler_func_opt` (Optional): Optional scheduler functions to further customize the learning rate adjustment during upscaling. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `image`: The upscaled image, enhanced in resolution while preserving the details and regions defined by the segmentation maps. Type should be `IMAGE`.

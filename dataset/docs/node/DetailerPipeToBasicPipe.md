@@ -1,7 +1,0 @@
-- `DetailerPipeToBasicPipe`: This node transforms a detailer pipe configuration into two basic pipe configurations, one for the base model and another for the refiner model. It abstracts the complexity of handling different components within a detailer pipe and simplifies it into more manageable basic pipe structures.
-    - Parameters:
-    - Inputs:
-        - `detailer_pipe`: The detailer pipe input is a comprehensive configuration that includes models, clips, VAEs, and conditioning information for both the base and refiner setups. It serves as the source from which the basic pipe configurations are derived. Type should be `DETAILER_PIPE`.
-    - Outputs:
-        - `base_basic_pipe`: The base basic pipe configuration, derived from the input detailer pipe, containing the model, clip, VAE, and conditioning information for the base setup. Type should be `BASIC_PIPE`.
-        - `refiner_basic_pipe`: The refiner basic pipe configuration, also derived from the input detailer pipe, but focusing on the refiner model's setup including its model, clip, VAE, and conditioning information. Type should be `BASIC_PIPE`.

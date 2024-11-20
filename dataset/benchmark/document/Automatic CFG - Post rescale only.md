@@ -1,0 +1,13 @@
+- `Automatic CFG - Post rescale only`: This node applies a post-conditional generative feedback (CFG) rescaling operation to adjust the balance between the original and degraded image features based on a scaling factor derived from the difference between the original and a secondary image (sag). It dynamically adjusts the scaling of the added CFG effect, aiming to enhance image restoration or modification tasks by recalibrating the intensity of changes applied to the original image, ensuring a more controlled and precise enhancement.
+    - Inputs:
+        - `model` (Required): The model to which the post-CFG rescaling operation will be applied, serving as the base for further adjustments. Type should be `MODEL`.
+        - `subtract_latent_mean` (Required): A boolean flag indicating whether to subtract the mean of the latent space representation. Type should be `BOOLEAN`.
+        - `subtract_latent_mean_sigma_start` (Required): The starting value of sigma for which subtracting the latent mean is applicable. Type should be `FLOAT`.
+        - `subtract_latent_mean_sigma_end` (Required): The ending value of sigma for which subtracting the latent mean is applicable. Type should be `FLOAT`.
+        - `latent_intensity_rescale` (Required): A boolean flag indicating whether to apply intensity rescaling to the latent space representation. Type should be `BOOLEAN`.
+        - `latent_intensity_rescale_method` (Required): The method used for rescaling the intensity of the latent space representation. Type should be `COMBO[STRING]`.
+        - `latent_intensity_rescale_cfg` (Required): The configuration parameters for the latent intensity rescale operation. Type should be `FLOAT`.
+        - `latent_intensity_rescale_sigma_start` (Required): The starting value of sigma for which the latent intensity rescale is applicable. Type should be `FLOAT`.
+        - `latent_intensity_rescale_sigma_end` (Required): The ending value of sigma for which the latent intensity rescale is applicable. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The model after applying the dynamic rescaling of the CFG effect, reflecting a balanced enhancement. Type should be `MODEL`.

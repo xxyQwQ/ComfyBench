@@ -1,0 +1,9 @@
+- `Camera_AnglesStyler`: The Camera_AnglesStyler node is designed to manipulate and style 3D model representations by adjusting camera angles, including elevation and azimuth. It leverages deep learning models to encode visual and spatial information, enabling the generation of conditioned outputs that reflect the specified camera perspectives.
+    - Inputs:
+        - `text_positive` (Required): unknown Type should be `STRING`.
+        - `text_negative` (Required): unknown Type should be `STRING`.
+        - `camera_angles` (Required): unknown Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): unknown Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive`: Represents the conditioned output with applied camera angle adjustments, reflecting the specified elevation and azimuth in a positive context. Type should be `STRING`.
+        - `text_negative`: Provides a baseline or control output without the applied camera angle adjustments, serving for comparison or as a negative context. Type should be `STRING`.

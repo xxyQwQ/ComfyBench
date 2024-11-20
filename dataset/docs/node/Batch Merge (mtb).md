@@ -1,7 +1,0 @@
-- `Batch Merge (mtb)`: The MTB_BatchMerge node is designed to merge multiple image batches into a single batch, adjusting for different frame counts among the batches and applying a specified fusion method to combine images.
-    - Parameters:
-        - `fusion_mode`: Specifies the method for merging images from different batches. It affects how the final merged image is created, with options including adding, multiplying, or averaging the images. Type should be `COMBO[STRING]`.
-        - `fill`: Determines how to fill the frame count discrepancy in batches, either by repeating the first (head) or last (tail) frame of the batch. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `image`: The output is a single image batch that results from merging and adjusting the input image batches according to the specified fusion mode and fill method. Type should be `IMAGE`.

@@ -1,8 +1,0 @@
-- `BinaryPreprocessor`: The BinaryPreprocessor node is designed for preprocessing images by applying a binary thresholding technique. This method converts images into binary images (black and white) based on a specified threshold, which is useful for highlighting certain features or simplifying the image for further processing.
-    - Parameters:
-        - `bin_threshold`: The 'bin_threshold' parameter specifies the cutoff value for converting pixel values in the image to either black or white. Pixels with values above this threshold are turned white, and those below are turned black, aiding in the extraction of prominent features from the image. Type should be `INT`.
-        - `resolution`: The 'resolution' parameter specifies the resolution to which the input image is resized before applying the binary thresholding. This allows for consistent processing across images of varying original resolutions. Type should be `INT`.
-    - Inputs:
-        - `image`: The 'image' parameter is the input image to be processed. It is the primary data on which the binary thresholding operation is performed. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a binary (black and white) version of the input image, where the conversion is based on the specified bin_threshold value. Type should be `IMAGE`.

@@ -1,0 +1,19 @@
+- `MarigoldDepthEstimationVideo`: The MarigoldDepthEstimationVideo node is designed for depth estimation in videos using a diffusion-based approach. It incorporates optical flow for enhanced frame consistency, aiming to produce more accurate and coherent depth maps across video sequences. This node is an experimental version that extends the capabilities of monocular depth estimation to video content, leveraging advanced techniques for improved depth perception and visual quality.
+    - Inputs:
+        - `image` (Required): A single image from a video sequence to be processed for depth estimation. The node uses this image along with optical flow to generate a depth map, ensuring consistency between frames. Type should be `IMAGE`.
+        - `seed` (Required): unknown Type should be `INT`.
+        - `first_frame_denoise_steps` (Required): The number of denoising steps to apply specifically for the first frame in a video sequence, affecting the initial depth map's accuracy and processing time. Type should be `INT`.
+        - `first_frame_n_repeat` (Required): Specifies the number of iterations to ensemble for the first frame's depth map, aiming to enhance the depth estimation accuracy for the video's starting point. Type should be `INT`.
+        - `n_repeat_batch_size` (Required): Determines how many of the n_repeats are processed as a batch, allowing for adjustments based on available VRAM for potentially faster processing. Type should be `INT`.
+        - `invert` (Required): A boolean flag indicating whether to invert the depth map's color scheme, where the default setting has black representing the foreground. Type should be `BOOLEAN`.
+        - `keep_model_loaded` (Required): Indicates whether the Marigold model should remain loaded between frames to optimize processing time for video sequences. Type should be `BOOLEAN`.
+        - `scheduler` (Required): unknown Type should be `COMBO[STRING]`.
+        - `normalize` (Required): A boolean flag that specifies whether the output depth maps should be normalized, affecting the visual representation of depth. Type should be `BOOLEAN`.
+        - `denoise_steps` (Required): unknown Type should be `INT`.
+        - `flow_warping` (Required): Enables the use of optical flow for warping depth maps between frames, enhancing the consistency and accuracy of depth estimation across the video. Type should be `BOOLEAN`.
+        - `flow_depth_mix` (Required): Determines the blending ratio between the depth map generated from the current frame and the warped depth map from the previous frame, affecting the smoothness and consistency of the video output. Type should be `FLOAT`.
+        - `noise_ratio` (Required): Specifies the ratio of noise to signal in the depth estimation process, influencing the model's behavior and the quality of the depth maps. Type should be `FLOAT`.
+        - `dtype` (Required): Defines the data type used during processing, such as fp16 or fp32, impacting VRAM usage and potentially the quality of the depth estimation. Type should be `COMBO[STRING]`.
+        - `model` (Optional): Specifies the Marigold model to be used for depth estimation, allowing selection between the standard and LCM versions of Marigold. This choice influences the depth estimation process and the quality of the output depth maps. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `ensembled_image`: The output ensembled depth map image, representing the combined result of depth estimation across multiple frames for enhanced accuracy and consistency. Type should be `IMAGE`.

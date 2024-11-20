@@ -1,0 +1,6 @@
+- `SV_random`: The RandomImageFromDir node is designed to select a random image from a specified directory. This functionality is particularly useful for applications requiring variability and unpredictability in the selection of images, such as in data augmentation processes or when simulating diverse scenarios within a given context.
+    - Inputs:
+        - `folder_path` (Required): Specifies the path to the directory from which a random image will be selected. This parameter is crucial for determining the pool of available images for random selection. Type should be `STRING`.
+    - Outputs:
+        - `image`: Returns a randomly selected image from the specified directory. This output is essential for introducing variability and randomness in the selection of images for further processing or display. Type should be `IMAGE`.
+        - `mask`: Provides a mask associated with the randomly selected image, if applicable, to facilitate further image processing tasks. Type should be `MASK`.

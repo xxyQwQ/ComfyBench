@@ -1,6 +1,0 @@
-- `ACN_SparseCtrlIndexMethodNode`: This node is designed to generate a sparse control method based on unique integer indexes. It processes a string of comma-separated indexes, ensuring they are unique and valid, to create a method that selectively applies control based on these specified indexes.
-    - Parameters:
-        - `indexes`: Specifies the unique integer indexes as a comma-separated string. These indexes determine the specific elements to which the sparse control method will be applied, ensuring targeted and efficient control. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `sparse_method`: The output is a sparse method configured with the specified unique indexes. This method is used to apply control selectively to the elements identified by the indexes. Type should be `SPARSE_METHOD`.

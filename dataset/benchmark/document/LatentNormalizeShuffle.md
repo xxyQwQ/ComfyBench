@@ -1,0 +1,8 @@
+- `LatentNormalizeShuffle`: This node is designed to normalize and shuffle the latent representations of images, ensuring they are prepared for further processing or generation tasks. It adjusts the latent vectors to have a standard distribution and rearranges them to introduce variability, optimizing the input for diverse image generation outcomes.
+    - Inputs:
+        - `latents` (Required): The 'latents' input represents the latent representations of images to be normalized and shuffled. This process ensures that the data is standardized and randomized, which is crucial for achieving varied and high-quality image generation results. Type should be `LATENT`.
+        - `flatten` (Required): The 'flatten' input specifies whether the latent representations should be flattened as part of the normalization process, affecting the structure of the data for subsequent operations. Type should be `INT`.
+        - `normalize` (Required): The 'normalize' input determines whether the latent representations undergo normalization, adjusting their scale and distribution for consistent processing. Type should be `BOOLEAN`.
+        - `shuffle` (Required): The 'shuffle' input indicates whether the latent representations should be shuffled, introducing randomness and variability into the dataset for enhanced diversity in generation. Type should be `BOOLEAN`.
+    - Outputs:
+        - `latent`: The output 'latent' are the normalized and shuffled latent representations, ready for use in subsequent image generation tasks. This ensures that the input data is optimally prepared for producing diverse and high-quality images. Type should be `LATENT`.

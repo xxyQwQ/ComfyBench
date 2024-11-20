@@ -1,0 +1,23 @@
+- `KSamplerAdvancedProgress __Inspire`: This node represents an advanced version of the KSampler for progressive sampling in the Inspire pack. It extends the functionality of the standard KSampler by incorporating advanced features for more nuanced control over the sampling process, including progress tracking and optional callbacks for intermediate steps. This allows for a more detailed and customizable generation of samples, catering to specific needs and enhancing the overall sampling experience.
+    - Inputs:
+        - `model` (Required): The model parameter represents the generative model to be used for sampling. It is crucial for defining the behavior and output of the sampling process. Type should be `MODEL`.
+        - `add_noise` (Required): Indicates whether noise should be added to the sampling process, affecting the diversity and quality of the generated samples. Type should be `BOOLEAN`.
+        - `noise_seed` (Required): The seed for noise generation, ensuring reproducibility and control over the randomness introduced in the sampling process. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps to be taken in the sampling process, directly impacting the detail and quality of the generated samples. Type should be `INT`.
+        - `cfg` (Required): Configuration settings for the sampling process, allowing for customization of various aspects such as temperature and noise levels. Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the particular sampler to be used, enabling the selection of different sampling strategies based on the task at hand. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler parameter controls the progression of sampling steps, allowing for fine-tuned adjustments to the sampling dynamics. Type should be `COMBO[STRING]`.
+        - `positive` (Required): A list of positive prompts guiding the sampling towards desired attributes or themes in the generated samples. Type should be `CONDITIONING`.
+        - `negative` (Required): A list of negative prompts used to steer the sampling away from undesired attributes or themes, enhancing the relevance of the output. Type should be `CONDITIONING`.
+        - `latent_image` (Required): The initial latent image to start the sampling from, setting the baseline for the generation process. Type should be `LATENT`.
+        - `start_at_step` (Required): Specifies the starting step for the sampling process, allowing for resumed or phased sampling operations. Type should be `INT`.
+        - `end_at_step` (Required): Defines the end step of the sampling process, marking the completion of the generation. Type should be `INT`.
+        - `noise_mode` (Required): Determines the mode of noise application during the sampling, influencing the texture and variability of the output. Type should be `COMBO[STRING]`.
+        - `return_with_leftover_noise` (Required): Indicates whether the final output should include residual noise, offering an option for post-processing or further manipulation. Type should be `BOOLEAN`.
+        - `interval` (Required): The interval at which progress callbacks are triggered, enabling periodic updates and adjustments during the sampling. Type should be `INT`.
+        - `omit_start_latent` (Required): A flag to exclude the starting latent image from the results, useful for focusing on the changes introduced during the sampling. Type should be `BOOLEAN`.
+        - `prev_progress_latent_opt` (Optional): unknown Type should be `LATENT`.
+        - `scheduler_func_opt` (Optional): An optional scheduler function for additional control over the sampling steps, enhancing the flexibility of the process. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `latent`: unknown Type should be `LATENT`.
+        - `progress_latent`: The final generated samples or progress states, encapsulating the outcomes of the advanced sampling process. Type should be `LATENT`.

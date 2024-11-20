@@ -1,0 +1,11 @@
+- `CtrlNet OpenPose Settings (JPS)`: This node is designed to configure settings for the OpenPose algorithm within a control network, allowing users to specify parameters such as the source of the pose estimation, the strength of the pose estimation, and whether to enable or disable body, face, and hand estimations. It abstracts the complexity of OpenPose configuration into a simple, user-friendly interface.
+    - Inputs:
+        - `openpose_from` (Required): Specifies the source image for OpenPose estimation, allowing selection between 'Source Image', 'Support Image', or 'Support Direct'. This choice determines the input image on which the OpenPose algorithm will be applied. Type should be `COMBO[STRING]`.
+        - `openpose_strength` (Required): Controls the intensity of the OpenPose estimation, with a range from 0.00 to 10.00. This parameter allows for fine-tuning the impact of pose estimation on the final output. Type should be `FLOAT`.
+        - `openpose_start` (Required): Defines the starting point of the OpenPose effect within the processing pipeline, allowing for precise control over when the pose estimation begins. Type should be `FLOAT`.
+        - `openpose_end` (Required): Sets the endpoint for the OpenPose effect, enabling users to define the duration and finality of the pose estimation within the workflow. Type should be `FLOAT`.
+        - `openpose_body` (Required): Enables or disables body estimation in the OpenPose algorithm, offering control over the inclusion of body pose data in the output. Type should be `COMBO[STRING]`.
+        - `openpose_face` (Required): Allows the user to enable or disable face estimation, providing flexibility in whether facial pose data is included in the OpenPose analysis. Type should be `COMBO[STRING]`.
+        - `openpose_hand` (Required): Determines whether hand estimation is enabled or disabled, enabling users to decide if hand pose data should be factored into the OpenPose results. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `openpose_settings`: Outputs the configured settings for OpenPose as a tuple, ready to be used in the control network's pose estimation pipeline. Type should be `BASIC_PIPE`.

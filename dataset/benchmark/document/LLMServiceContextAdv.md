@@ -1,0 +1,15 @@
+- `LLMServiceContextAdv`: This node is designed to create an advanced service context for language model operations, incorporating various configurations and parameters to tailor the context to specific needs. It enables fine-tuning of the language model's behavior, including chunk size, overlap, context window, and output specifications, to optimize performance for complex tasks.
+    - Inputs:
+        - `llm_model` (Required): Specifies the language model and its embedding model, serving as the foundation for creating the service context. It's crucial for defining the behavior and capabilities of the language model within the service context. Type should be `LLM_MODEL`.
+        - `llm_embed_model` (Optional): Determines the embedding model used alongside the language model, allowing for customization beyond the default setting. Type should be `LLM_EMBED`.
+        - `llm_node_parser` (Optional): Optional parser for processing language model nodes, providing additional flexibility in handling model outputs. Type should be `LLM_NODE_PARSER`.
+        - `enable_chunk_overlap` (Optional): Enables overlapping of chunks to ensure continuity and coherence in model outputs, particularly in segmented processing scenarios. Type should be `BOOLEAN`.
+        - `chunk_overlap` (Optional): Specifies the overlap size between chunks, enhancing the model's ability to maintain context across segments. Type should be `INT`.
+        - `enable_context_window` (Optional): Activates a context window to limit the scope of the model's attention, focusing its analysis and generation on a specified range. Type should be `BOOLEAN`.
+        - `context_window` (Optional): Sets the size of the context window, controlling the amount of text the model considers for each operation. Type should be `INT`.
+        - `enable_num_output` (Optional): Allows setting a limit on the number of outputs the model generates, useful for controlling output volume and detail. Type should be `BOOLEAN`.
+        - `num_output` (Optional): Determines the maximum number of outputs produced by the model, offering control over the model's verbosity. Type should be `INT`.
+        - `enable_chunk_size_limit` (Optional): Permits the imposition of a maximum chunk size, potentially reducing memory demands and processing time. Type should be `BOOLEAN`.
+        - `chunk_size_limit` (Optional): Defines the maximum allowable chunk size, ensuring that processing demands remain within manageable limits. Type should be `INT`.
+    - Outputs:
+        - `llm_context`: The advanced service context created, encapsulating all specified configurations and parameters to customize the language model's operation. Type should be `LLM_CONTEXT`.

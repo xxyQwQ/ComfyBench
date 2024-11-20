@@ -1,0 +1,6 @@
+- `easy sliderControl`: The 'easy sliderControl' node provides a user-friendly interface for dynamically adjusting parameters within the ComfyUI environment. It simplifies the process of fine-tuning values through sliders, enhancing the user's ability to experiment with and control the behavior of various features or models in real-time.
+    - Inputs:
+        - `mode` (Required): Specifies the operational mode of the node, affecting how parameters are adjusted and applied within the ComfyUI environment. Type should be `COMBO[STRING]`.
+        - `model_type` (Required): Determines the type of model to which the adjustments will be applied, influencing the node's execution and the outcome of parameter modifications. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `layer_weights`: Outputs the adjusted layer weights as determined by the slider controls, reflecting the changes made to the model's parameters. Type should be `STRING`.

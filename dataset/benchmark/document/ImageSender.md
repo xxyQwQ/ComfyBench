@@ -1,0 +1,6 @@
+- `ImageSender`: The ImageSender node is designed for sending images over a network to a specified destination, incorporating additional information such as a filename prefix and a link ID. It primarily serves the purpose of transmitting image data, potentially with extra metadata, to facilitate remote processing or storage.
+    - Inputs:
+        - `images` (Required): Specifies the images to be sent. This is the primary data that the node operates on, determining the content that will be transmitted. Type should be `IMAGE`.
+        - `filename_prefix` (Required): A prefix for the filename under which the images will be saved or identified. This helps in organizing or categorizing the images on the receiving end. Type should be `STRING`.
+        - `link_id` (Required): An identifier used to link the sent images to a specific context or session. This aids in tracking and managing images across different parts of a system. Type should be `INT`.
+    - Outputs:

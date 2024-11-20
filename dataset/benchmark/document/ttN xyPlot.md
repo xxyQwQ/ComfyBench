@@ -1,0 +1,12 @@
+- `ttN xyPlot`: The ttN xyPlot node is designed for generating and manipulating XY plots, including the ability to flip axes, manage plot points for X, Y, and optionally Z dimensions, and configure plot appearance and behavior. It supports advanced plotting features such as grid spacing and saving individual plot elements, catering to customized visualization needs.
+    - Inputs:
+        - `grid_spacing` (Required): Specifies the spacing between grid lines in the plot, affecting the plot's granularity and visual density. Type should be `INT`.
+        - `latent_id` (Required): Identifies a specific latent variable or feature within the dataset, used for generating plots based on latent dimensions. Type should be `INT`.
+        - `output_individuals` (Required): Determines whether individual plot elements should be outputted, enabling detailed analysis and customization of plot components. Type should be `COMBO[STRING]`.
+        - `flip_xy` (Required): Controls whether the X and Y axes should be swapped, allowing for flexible orientation of the plot based on data or preference. Type should be `COMBO[STRING]`.
+        - `x_axis` (Required): Specifies the data or dimension to be used for the X-axis in the plot, defining the horizontal aspect of the visualization. Type should be `COMBO[STRING]`.
+        - `x_values` (Required): Provides the specific values or range of values for the X-axis, used to plot data points horizontally. Type should be `STRING`.
+        - `y_axis` (Required): Specifies the data or dimension to be used for the Y-axis in the plot, defining the vertical aspect of the visualization. Type should be `COMBO[STRING]`.
+        - `y_values` (Required): Provides the specific values or range of values for the Y-axis, used to plot data points vertically. Type should be `STRING`.
+    - Outputs:
+        - `xyPlot`: The generated XY plot data, including coordinates for X, Y, and optionally Z axes, grid spacing, and individual element saving options. Type should be `XYPLOT`.

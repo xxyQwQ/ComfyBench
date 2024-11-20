@@ -1,0 +1,11 @@
+- `ADE_ConditioningSetMaskAndCombine`: This node specializes in the advanced manipulation of conditioning data for generative models, specifically focusing on the application of masks, the combination of multiple conditioning inputs, and the adjustment of their influence through strength parameters. It enables the dynamic alteration and enhancement of conditioning inputs to tailor the generative process more precisely to desired outcomes.
+    - Inputs:
+        - `cond` (Required): The original conditioning data to be modified or enhanced. Type should be `CONDITIONING`.
+        - `cond_ADD` (Required): Additional conditioning data to be combined with the original conditioning, allowing for the introduction of new elements or modifications. Type should be `CONDITIONING`.
+        - `strength` (Required): A scalar value that determines the intensity of the applied modifications or enhancements on the conditioning data. Type should be `FLOAT`.
+        - `set_cond_area` (Required): Specifies the area within the conditioning data that the modifications, such as masking or strength adjustments, should be applied to. Type should be `COMBO[STRING]`.
+        - `opt_mask` (Optional): An optional mask that can be applied to the conditioning data to selectively modify or enhance specific regions. Type should be `MASK`.
+        - `opt_lora_hook` (Optional): An optional hook for applying LoRA adjustments to the conditioning data, enabling more fine-grained control over the modifications. Type should be `LORA_HOOK`.
+        - `opt_timesteps` (Optional): Optional timesteps conditioning that allows for temporal adjustments to the conditioning data, useful in sequential generative processes. Type should be `TIMESTEPS_COND`.
+    - Outputs:
+        - `conditioning`: The resulting conditioning data after applying the specified modifications, combinations, and enhancements. Type should be `CONDITIONING`.

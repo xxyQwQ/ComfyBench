@@ -1,0 +1,5 @@
+- `SaltJSONListToStringList`: This node is designed to convert a JSON list into a list of strings, ensuring that the input JSON is properly formatted and is indeed a list before proceeding with the conversion.
+    - Inputs:
+        - `json_input` (Required): The JSON input that needs to be converted into a list of strings. It must be a valid JSON string representing a list. Type should be `STRING`.
+    - Outputs:
+        - `strings`: The output list of strings converted from the input JSON list. Type should be `STRING`.

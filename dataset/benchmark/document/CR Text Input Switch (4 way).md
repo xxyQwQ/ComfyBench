@@ -1,0 +1,10 @@
+- `CR Text Input Switch (4 way)`: This node allows for the selection of one out of four text inputs based on a given integer input, facilitating conditional text flow in a workflow.
+    - Inputs:
+        - `Input` (Required): Determines which of the four text inputs to select and pass forward. The integer value ranges from 1 to 4, each corresponding to a different text input. Type should be `INT`.
+        - `text1` (Optional): The first text option that can be selected. It is one of the four possible text inputs that can be chosen based on the 'Input' value. Type should be `STRING`.
+        - `text2` (Optional): The second text option that can be selected. It serves as one of the four possible choices, determined by the 'Input' parameter. Type should be `STRING`.
+        - `text3` (Optional): The third text option available for selection. This input is part of the four choices that can be made based on the 'Input' value. Type should be `STRING`.
+        - `text4` (Optional): The fourth and final text option that can be selected. It is included as one of the possible choices, contingent on the 'Input' parameter. Type should be `STRING`.
+    - Outputs:
+        - `STRING`: The selected text input based on the 'Input' parameter. Type should be `STRING`.
+        - `show_help`: A URL providing help and documentation for using this node. Type should be `STRING`.

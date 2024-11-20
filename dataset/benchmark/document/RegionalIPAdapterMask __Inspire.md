@@ -1,0 +1,16 @@
+- `RegionalIPAdapterMask __Inspire`: This node specializes in applying regional IP adapter masks to influence the generation process, allowing for precise control over specific areas of an image during the generation or modification process. It leverages IP adapter conditioning techniques to integrate regional preferences or constraints, enhancing the customization and creativity of the output.
+    - Inputs:
+        - `mask` (Required): The mask parameter specifies the area of the image to be influenced by the IP adapter, serving as a crucial factor in determining the scope and impact of the adaptation process. Type should be `MASK`.
+        - `image` (Required): Image represents the target content that will be modified or generated, serving as the base for the application of the IP adapter mask. Type should be `IMAGE`.
+        - `weight` (Required): Weight determines the intensity of the embedding's influence within the masked region, allowing for fine-tuning of the adaptation's effect. Type should be `FLOAT`.
+        - `noise` (Required): Noise adds a level of randomness to the adaptation process, offering a way to introduce variability and prevent overfitting to the embeddings. Type should be `FLOAT`.
+        - `weight_type` (Required): Weight type specifies the method of applying weight to the embeddings, offering different strategies for integrating the embeddings into the generation process. Type should be `COMBO[STRING]`.
+        - `start_at` (Required): Start at indicates the initial point in the generation process at which the embeddings begin to influence the output, providing temporal control over the adaptation. Type should be `FLOAT`.
+        - `end_at` (Required): End at defines the final point in the generation process where the embeddings' influence ceases, allowing for precise temporal adaptation. Type should be `FLOAT`.
+        - `unfold_batch` (Required): Unfold batch is a boolean parameter that, when enabled, allows for batch processing of the adaptation, potentially improving efficiency. It affects the node's execution by enabling or disabling the processing of multiple inputs in a single batch, impacting the efficiency and speed of the adaptation process. Type should be `BOOLEAN`.
+        - `faceid_v2` (Optional): FaceID v2 is an optional boolean parameter that, when enabled, applies a second version of face identification technology to enhance the adaptation process. Type should be `BOOLEAN`.
+        - `weight_v2` (Optional): Weight v2 allows for an alternative weighting mechanism to be applied, offering additional flexibility in how the adaptation's effect is calibrated. Type should be `FLOAT`.
+        - `combine_embeds` (Optional): Combine embeds specifies the method for combining multiple embeddings, providing strategies such as concatenation or averaging to integrate different attributes or styles. Type should be `COMBO[STRING]`.
+        - `neg_image` (Optional): Neg image allows for the specification of a negative image, offering a way to explicitly discourage certain attributes or styles within the masked region. Type should be `IMAGE`.
+    - Outputs:
+        - `regional_ipadapter`: The output is a conditioned model adapted to the specified regional preferences or constraints, ready for further processing or generation tasks. Type should be `REGIONAL_IPADAPTER`.

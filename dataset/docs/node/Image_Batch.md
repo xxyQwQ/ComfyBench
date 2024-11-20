@@ -1,9 +1,0 @@
-- `Image Batch`: The Image Batch node is designed to combine multiple images into a single batch, allowing for operations that require batch processing or collective analysis of images. It ensures that images are compatible in dimensions before batching them together, making it suitable for workflows that involve image manipulation, augmentation, or processing in batches.
-    - Parameters:
-    - Inputs:
-        - `images_a`: The first image to be included in the batch. It serves as a reference for resizing subsequent images if their dimensions do not match, ensuring uniformity in the batch. Type should be `IMAGE`.
-        - `images_b`: The second image to be included in the batch. It is resized to match the dimensions of the first image if necessary, ensuring that all images in the batch have uniform dimensions. Type should be `IMAGE`.
-        - `images_c`: The third image to be included in the batch, resized if necessary to ensure uniform dimensions across the batch. Type should be `IMAGE`.
-        - `images_d`: The fourth image to be included in the batch, resized if necessary to ensure uniform dimensions across the batch. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a single batched image, combined from the input images. This batch can be used for further processing or analysis as a collective group. Type should be `IMAGE`.

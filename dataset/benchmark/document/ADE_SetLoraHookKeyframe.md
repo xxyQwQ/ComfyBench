@@ -1,0 +1,6 @@
+- `ADE_SetLoraHookKeyframe`: This node is designed to assign a set of LoRA hook keyframes to a specific LoRA hook group. It enables the customization and dynamic adjustment of LoRA hook behaviors over the animation timeline, facilitating precise control over the model's response at different stages of the animation process.
+    - Inputs:
+        - `lora_hook` (Required): The LoRA hook group to which the keyframes will be applied. This parameter is crucial for identifying the target group of hooks that will receive the new keyframe settings. Type should be `LORA_HOOK`.
+        - `hook_kf` (Required): The set of LoRA hook keyframes to be assigned to the specified LoRA hook group. This parameter defines the timing, strength, and other characteristics of the LoRA hooks over the animation timeline. Type should be `LORA_HOOK_KEYFRAMES`.
+    - Outputs:
+        - `lora_hook`: The updated LoRA hook group with the new set of keyframes applied. This output reflects the changes made to the LoRA hooks, incorporating the specified keyframe settings. Type should be `LORA_HOOK`.

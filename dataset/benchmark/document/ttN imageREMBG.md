@@ -1,0 +1,8 @@
+- `ttN imageREMBG`: The node is designed to remove the background from images using the REMBG library, converting images to a format suitable for further processing or visualization. It emphasizes the extraction of the main subject by eliminating the background, potentially enhancing the focus on the subject matter for subsequent operations.
+    - Inputs:
+        - `image` (Required): The input image to be processed for background removal. This parameter is crucial as it directly influences the effectiveness of the background removal process. Type should be `IMAGE`.
+        - `image_output` (Required): Determines how the output image is handled, offering options such as hiding, previewing, saving, or a combination of hiding and saving. This parameter affects the output format and visibility of the processed image. Type should be `COMBO[STRING]`.
+        - `save_prefix` (Required): Specifies the prefix for saving the processed image, indicating how the output file names should begin. This parameter is essential when the image output is set to save, guiding the naming convention of the saved files. Type should be `STRING`.
+    - Outputs:
+        - `image`: The processed image tensor with the background removed, ready for further use. Type should be `IMAGE`.
+        - `mask`: A mask tensor indicating the areas of the image where the background was removed. Type should be `MASK`.

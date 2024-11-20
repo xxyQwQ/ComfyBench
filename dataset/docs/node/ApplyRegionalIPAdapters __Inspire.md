@@ -1,7 +1,0 @@
-- `ApplyRegionalIPAdapters __Inspire`: This node is designed to apply regional IP adapters to a model, enabling the customization and enhancement of model outputs based on regional adaptations. It facilitates the integration of various IP adapter components into a cohesive model, allowing for dynamic adjustments and improvements in model performance with respect to specific regions or aspects.
-    - Parameters:
-    - Inputs:
-        - `ipadapter_pipe`: The pipeline of components necessary for the regional adaptation process, provided as a tuple. Type should be `IPADAPTER_PIPE`.
-        - `regional_ipadapter1`: The regional IP adapter to be applied for targeted modifications and enhancements. Type should be `REGIONAL_IPADAPTER`.
-    - Outputs:
-        - `model`: The modified model with applied regional IP adapters, reflecting the customized enhancements and adaptations. Type should be `MODEL`.

@@ -1,6 +1,0 @@
-- `Text Multiline`: The Text Multiline node is designed to process multiline text inputs, removing lines that start with a hash '#' (commonly used for comments) and concatenating the remaining lines into a single string. This node aims to clean and prepare text data by eliminating unwanted lines and comments, making it suitable for further text processing or analysis.
-    - Parameters:
-        - `text`: The 'text' parameter takes a multiline string input, which is then processed to remove lines starting with '#' and concatenate the remaining text. This preprocessing step is crucial for cleaning the input text, making it ready for further analysis or processing. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The output is a single string that has been cleaned of lines starting with '#', with all remaining lines concatenated together. This cleaned text is ready for further processing or analysis. Type should be `STRING`.

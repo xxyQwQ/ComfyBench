@@ -1,0 +1,6 @@
+- `LoraInfo`: The LoraInfo node is designed to retrieve and provide detailed information about a specific LoRa (Low-Power, Long-Range) configuration, including its output characteristics, trigger words, example prompts, and the base model it is associated with. This node serves as a bridge to access pre-stored or dynamically generated LoRa metadata, facilitating the integration and utilization of LoRa configurations within applications.
+    - Inputs:
+        - `lora_name` (Required): The name of the LoRa configuration for which information is being requested. It is crucial for identifying the specific LoRa setup and retrieving its associated data. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `trigger_words`: The trigger words associated with the specified LoRa configuration, providing insights into its usage. Type should be `STRING`.
+        - `example_prompt`: An example prompt associated with the specified LoRa configuration, offering a glimpse into how it can be utilized. Type should be `STRING`.

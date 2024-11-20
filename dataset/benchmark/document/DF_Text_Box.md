@@ -1,0 +1,5 @@
+- `DF_Text_Box`: The DF_Text_Box node is designed to capture and process multiline text input, allowing for the handling of extended text data within a node-based programming environment.
+    - Inputs:
+        - `Text` (Required): This parameter accepts multiline text input, enabling the node to process and manipulate text data that spans multiple lines. Type should be `STRING`.
+    - Outputs:
+        - `string`: Outputs the processed text as a string, maintaining its multiline format. Type should be `STRING`.

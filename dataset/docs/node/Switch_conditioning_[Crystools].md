@@ -1,8 +1,0 @@
-- `Switch conditioning [Crystools]`: The node provides a mechanism to switch between two conditioning inputs based on a boolean value, effectively allowing conditional logic to be applied to the flow of conditioning data.
-    - Parameters:
-        - `boolean`: A boolean value that determines which of the two conditionings (on_true or on_false) should be used. Type should be `BOOLEAN`.
-    - Inputs:
-        - `on_true`: The conditioning to be used if the boolean value is true. It determines the flow of data when the condition is met. Type should be `CONDITIONING`.
-        - `on_false`: The conditioning to be used if the boolean value is false. It serves as an alternative flow of data when the condition is not met. Type should be `CONDITIONING`.
-    - Outputs:
-        - `conditioning`: The selected conditioning output, determined by the boolean input value. Type should be `CONDITIONING`.

@@ -1,8 +1,0 @@
-- `HaldCLUT `: The HaldCLUT node applies a color lookup table (CLUT) to an image, optionally performing gamma correction, to achieve various color grading effects. This process allows for the transformation of the image's color palette based on predefined CLUT files, enhancing or altering its aesthetic according to the selected CLUT.
-    - Parameters:
-        - `hald_clut`: The name of the HaldCLUT file to be used for color transformation. This selection determines the specific color grading effect to be applied to the input image. Type should be `COMBO[STRING]`.
-        - `gamma_correction`: A boolean flag indicating whether gamma correction should be applied to the input image before color transformation. This can affect the image's brightness and contrast. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The input image to which the color lookup table will be applied. This image undergoes color transformation based on the selected HaldCLUT file and gamma correction settings. Type should be `IMAGE`.
-    - Outputs:
-        - `i`: The output image after applying the selected color lookup table and optional gamma correction. This image reflects the color grading effect determined by the HaldCLUT file. Type should be `IMAGE`.

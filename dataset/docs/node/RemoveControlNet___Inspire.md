@@ -1,6 +1,0 @@
-- `RemoveControlNet __Inspire`: This node is designed to remove control networks from regional prompts within a given dataset. It iterates over each regional prompt, extracts positive and negative conditioning texts, applies a process to remove control networks from these texts, and then reassembles the prompts with the updated conditionings. The purpose is to cleanse the dataset of specific control network influences, making it suitable for further processing or analysis.
-    - Parameters:
-    - Inputs:
-        - `conditioning`: The conditioning data from which control network influences are to be removed. This process aims to purify the conditioning for subsequent use, ensuring it is free from specific control network attributes. Type should be `CONDITIONING`.
-    - Outputs:
-        - `conditioning`: Conditioning data with control networks removed. This output is purified and ready for further processing, devoid of the previously specified control network influences. Type should be `CONDITIONING`.

@@ -1,6 +1,0 @@
-- `MasksToMaskList`: The MasksToMaskList node is designed to transform a collection of individual masks into a list of masks, applying a 3D mask transformation to each mask in the process. This operation is essential for preparing mask data for further processing or analysis within a pipeline that requires masks in a standardized format.
-    - Parameters:
-    - Inputs:
-        - `masks`: The 'masks' parameter represents the collection of masks to be transformed. It is crucial for the node's operation as it provides the raw data that will be processed into a standardized list format. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The output is a list of masks, each transformed into a 3D format, ready for further processing or analysis. Type should be `MASK`.

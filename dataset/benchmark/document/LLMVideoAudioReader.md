@@ -1,0 +1,6 @@
+- `LLMVideoAudioReader`: The LLMVideoAudioReader node specializes in reading multimedia files, specifically Mp3 and Mp4 formats, and extracting audio transcripts to create a structured document. This process enables the integration of multimedia content into text-based data analysis and processing workflows.
+    - Inputs:
+        - `path` (Required): Specifies the file path to the Mp3 or Mp4 file to be processed. This path is essential for locating and accessing the file for transcript extraction. Type should be `STRING`.
+        - `extra_info` (Optional): Provides additional, optional information that can be used to influence the processing of the multimedia file. This could include parameters for audio processing or metadata to be included in the output document. Type should be `STRING`.
+    - Outputs:
+        - `documents`: The output is a structured document containing the extracted audio transcript from the input multimedia file. This document is ready for further processing or analysis. Type should be `DOCUMENT`.

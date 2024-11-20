@@ -1,0 +1,21 @@
+- `SaltKSamplerSequence`: The SaltKSamplerSequence node is designed for advanced audio visualization and manipulation tasks, leveraging a sequence-based approach to sample, modify, and enhance audio data. It integrates complex scheduling, noise injection, and latent space interpolation techniques to produce high-quality audio outputs tailored to specific conditions or creative objectives.
+    - Inputs:
+        - `model` (Required): Specifies the model used for audio sampling, serving as the core engine driving the node's functionality. Type should be `MODEL`.
+        - `seed_sequence` (Required): A sequence of seeds used to initialize the random number generator at different stages of the sampling process, ensuring variability and control over the output. Type should be `LIST`.
+        - `steps` (Required): Defines the number of steps to perform in the sampling process, affecting the granularity and quality of the audio output. Type should be `INT`.
+        - `cfg` (Required): Controls the conditioning factor, influencing the strength of the conditioning on the generated audio. Type should be `FLOAT`.
+        - `sampler_name` (Required): Determines the specific sampling algorithm to use, impacting the texture and characteristics of the audio output. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Selects the scheduling algorithm for controlling the sampling process, affecting the evolution of the audio over time. Type should be `COMBO[STRING]`.
+        - `denoise_start` (Required): Specifies the starting point of denoise strength, setting the initial condition for noise reduction in the audio. Type should be `FLOAT`.
+        - `denoise_sequence` (Required): A sequence of denoise values to apply at different stages of the sampling process, allowing for dynamic control over noise reduction. Type should be `LIST`.
+        - `positive_sequence` (Required): A sequence of positive conditioning factors to enhance certain aspects of the audio throughout the sampling process. Type should be `CONDITIONING`.
+        - `negative_sequence` (Required): A sequence of negative conditioning factors to suppress certain aspects of the audio throughout the sampling process. Type should be `CONDITIONING`.
+        - `use_latent_interpolation` (Required): Indicates whether latent space interpolation is used, enabling transitions between different audio states. Type should be `BOOLEAN`.
+        - `latent_interpolation_mode` (Required): Specifies the mode of latent space interpolation, affecting how transitions between audio states are handled. Type should be `COMBO[STRING]`.
+        - `latent_interp_strength_sequence` (Required): A sequence of strengths for latent space interpolation, controlling the intensity of transitions between audio states. Type should be `LIST`.
+        - `unsample_latents` (Required): Determines whether to perform unsampling on the latents, potentially enhancing the quality of the audio output. Type should be `BOOLEAN`.
+        - `inject_noise` (Required): Indicates whether noise is injected into the sampling process, adding texture and variability to the audio. Type should be `BOOLEAN`.
+        - `noise_strength_sequence` (Required): A sequence of noise strengths to apply at different stages of the sampling process, allowing for dynamic control over the texture of the audio. Type should be `LIST`.
+        - `latent_image` (Required): The latent image to be used or modified during the sampling process, serving as a basis for audio manipulation. Type should be `LATENT`.
+    - Outputs:
+        - `latent`: The final latent output, which is the result of the complex sampling and manipulation process, tailored to the specified conditions and creative objectives. Type should be `LATENT`.

@@ -1,0 +1,11 @@
+- `Restore Face (mtb)`: The Restore Face node leverages advanced face restoration techniques to enhance and restore faces in images. It utilizes models like GFPGan to improve the quality of facial features, making it suitable for applications requiring high-quality face images.
+    - Inputs:
+        - `image` (Required): The input image tensor containing faces to be restored. It plays a crucial role in the restoration process by serving as the primary data on which enhancement operations are performed. Type should be `IMAGE`.
+        - `model` (Required): The face enhancement model used for restoring faces. This model dictates the restoration technique and its effectiveness. Type should be `FACEENHANCE_MODEL`.
+        - `aligned` (Required): A boolean indicating whether the input faces are aligned. This affects the restoration process by determining how the model approaches face enhancement. Type should be `BOOLEAN`.
+        - `only_center_face` (Required): A boolean that specifies whether to only restore the center face in the image. This is useful for focusing the enhancement on the primary subject. Type should be `BOOLEAN`.
+        - `weight` (Required): A float value representing the weight of the restoration effect. It allows for fine-tuning the intensity of the face enhancement. Type should be `FLOAT`.
+        - `save_tmp_steps` (Required): A boolean indicating whether to save intermediate steps of the restoration process. This can be useful for debugging or for detailed analysis of the enhancement process. Type should be `BOOLEAN`.
+        - `preserve_alpha` (Optional): A boolean that determines whether to preserve the alpha channel of the input image during restoration. This is important for maintaining transparency in images where applicable. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output tensor containing the enhanced and restored faces. It represents the final result of the face restoration process. Type should be `IMAGE`.

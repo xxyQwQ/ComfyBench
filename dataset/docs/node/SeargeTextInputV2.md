@@ -1,6 +1,0 @@
-- `SeargeTextInputV2`: SeargeTextInputV2 is designed to capture and process textual input from the user, specifically for generating or modifying prompts in a user interface context. It allows for multiline text input, providing a straightforward mechanism for users to input or edit text for various applications.
-    - Parameters:
-        - `prompt`: The 'prompt' parameter is the primary text input from the user. It is essential for capturing user input, which can then be processed or passed on for further actions. The parameter supports multiline text, enabling more complex or detailed input from the user. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `prompt_text`: The 'prompt_text' output returns the user's input text without modification. It serves as a direct reflection of the user's input, facilitating further processing or use within the application. Type should be `SRG_PROMPT_TEXT`.

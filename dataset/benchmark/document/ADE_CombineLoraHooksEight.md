@@ -1,0 +1,12 @@
+- `ADE_CombineLoraHooksEight`: This node is designed to combine up to eight LoRA hooks into a single, unified LoRA hook group. It facilitates the integration of multiple LoRA hook modifications, allowing for more complex and nuanced adjustments to model behavior in generative tasks.
+    - Inputs:
+        - `lora_hook_A` (Optional): Represents the first LoRA hook group to be combined. It plays a foundational role in the aggregation process, setting the initial conditions for the combined LoRA hook group. Type should be `LORA_HOOK`.
+        - `lora_hook_B` (Optional): Serves as the second LoRA hook group to be combined. Its inclusion allows for the expansion of the combined LoRA hook group's capabilities and modifications. Type should be `LORA_HOOK`.
+        - `lora_hook_C` (Optional): Acts as the third LoRA hook group in the combination process. It contributes additional modifications, further enriching the combined LoRA hook group's functionality. Type should be `LORA_HOOK`.
+        - `lora_hook_D` (Optional): Represents the fourth LoRA hook group to be combined. It adds to the diversity of modifications within the combined LoRA hook group. Type should be `LORA_HOOK`.
+        - `lora_hook_E` (Optional): Serves as the fifth LoRA hook group in the combination. It enhances the combined LoRA hook group by introducing more nuanced adjustments. Type should be `LORA_HOOK`.
+        - `lora_hook_F` (Optional): Acts as the sixth LoRA hook group to be combined. Its inclusion broadens the scope of modifications available in the combined LoRA hook group. Type should be `LORA_HOOK`.
+        - `lora_hook_G` (Optional): Represents the seventh LoRA hook group in the combination process. It adds further complexity and depth to the combined LoRA hook group's adjustments. Type should be `LORA_HOOK`.
+        - `lora_hook_H` (Optional): Serves as the eighth and final LoRA hook group to be combined. It completes the aggregation, maximizing the potential modifications and adjustments within the combined LoRA hook group. Type should be `LORA_HOOK`.
+    - Outputs:
+        - `lora_hook`: The result of combining up to eight LoRA hooks into a single, unified LoRA hook group. This combined group is capable of applying a comprehensive set of modifications to model behavior. Type should be `LORA_HOOK`.

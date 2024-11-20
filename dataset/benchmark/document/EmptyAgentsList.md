@@ -1,0 +1,4 @@
+- `EmptyAgentsList`: The EmptyAgentsList node is designed to initialize an empty list of agents. This functionality is essential for scenarios where a fresh start is needed or when beginning to populate a list of agents from scratch.
+    - Inputs:
+    - Outputs:
+        - `agents`: Returns an empty list, signifying the initialization of an agent list without any pre-existing agents. Type should be `AGENTS`.

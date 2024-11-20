@@ -1,7 +1,0 @@
-- `ImageBatchMultiple+`: The ImageBatchMultiple+ node is designed to combine multiple images into a single batch, facilitating operations that require batch processing of images. This node abstracts the complexity of handling multiple image formats and sizes, ensuring they are compatible for batch operations.
-    - Parameters:
-        - `method`: Specifies the method used for combining images into a batch, ensuring uniformity and compatibility among all images. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image_i`: Represents an image to be included in the batch. Its format and size are adjusted as necessary to ensure compatibility with other images in the batch. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a batch of images, combined from the input images. This batch can be used for further image processing or analysis tasks. Type should be `IMAGE`.

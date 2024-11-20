@@ -1,0 +1,10 @@
+- `CR Image Output`: The CR Image Output node is designed to facilitate the output of images within a computational graph, providing a streamlined way to export, display, or further process images generated or modified by preceding nodes. It abstracts the complexities involved in handling image data, ensuring that images are appropriately formatted and ready for use or display.
+    - Inputs:
+        - `images` (Required): The 'images' parameter represents the image data to be outputted. It plays a crucial role in determining the content and format of the output, affecting how images are processed and presented in the final output. Type should be `IMAGE`.
+        - `output_type` (Required): Specifies the type of output operation to perform with the images, such as saving to disk or displaying. Type should be `COMBO[STRING]`.
+        - `filename_prefix` (Required): A prefix to be added to the filenames of saved images, allowing for organized and identifiable output. Type should be `STRING`.
+        - `prefix_presets` (Required): Predefined prefix options that can be selected for convenience and standardization. Type should be `COMBO[STRING]`.
+        - `file_format` (Required): The format in which the images will be saved, such as PNG or JPEG. Type should be `COMBO[STRING]`.
+        - `trigger` (Optional): A control signal that triggers the output operation, ensuring that images are processed and saved/displayed at the correct time. Type should be `BOOLEAN`.
+    - Outputs:
+        - `trigger`: Indicates the completion of the output operation, potentially used to trigger subsequent nodes in the computational graph. Type should be `BOOLEAN`.

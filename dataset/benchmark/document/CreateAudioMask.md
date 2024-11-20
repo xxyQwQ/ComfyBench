@@ -1,0 +1,10 @@
+- `CreateAudioMask`: The CreateAudioMask node is designed for generating audio-based visual masks by analyzing the amplitude of audio signals. It utilizes audio data to create dynamic masks that can visually represent the audio's intensity and rhythm, making it suitable for applications requiring audio-visual synchronization or enhancements.
+    - Inputs:
+        - `invert` (Required): A boolean flag that, when set to true, inverts the color scheme of the generated masks, offering a visual contrast option. Type should be `BOOLEAN`.
+        - `frames` (Required): Specifies the number of frames to generate for the mask, affecting the temporal resolution of the output. Type should be `INT`.
+        - `scale` (Required): A scaling factor that adjusts the size of visual elements within the mask, allowing for customization of the mask's visual intensity. Type should be `FLOAT`.
+        - `audio_path` (Required): The file path to the audio file from which the mask will be generated, serving as the source for audio analysis. Type should be `STRING`.
+        - `width` (Required): Determines the width of each generated mask frame, impacting the spatial resolution of the visual representation. Type should be `INT`.
+        - `height` (Required): Sets the height of each generated mask frame, influencing the vertical dimension of the mask's visual output. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a series of images representing the audio mask, where each image corresponds to a frame of the mask generated based on the audio input. Type should be `IMAGE`.

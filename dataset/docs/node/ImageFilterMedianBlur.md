@@ -1,7 +1,0 @@
-- `ImageFilterMedianBlur`: The ImageFilterMedianBlur node applies a median blur filter to images, effectively reducing noise and smoothing the image while preserving edges. This filter is particularly useful for removing salt-and-pepper noise from images.
-    - Parameters:
-        - `size`: Defines the size of the kernel used for the median blur. A larger size will result in a more pronounced blurring effect. Type should be `INT`.
-    - Inputs:
-        - `images`: Specifies the images to be processed. This parameter is crucial as it determines the input on which the median blur effect will be applied. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: Returns the images after applying the median blur filter, showcasing a smoother appearance with reduced noise. Type should be `IMAGE`.

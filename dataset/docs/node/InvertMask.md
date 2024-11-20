@@ -1,6 +1,0 @@
-- `InvertMask`: The InvertMask node is designed to invert the values of a given mask, effectively flipping the masked and unmasked areas. This operation is fundamental in image processing tasks where the focus of interest needs to be switched between the foreground and the background.
-    - Parameters:
-    - Inputs:
-        - `mask`: The 'mask' parameter represents the input mask to be inverted. It is crucial for determining the areas to be flipped in the inversion process. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The output is an inverted version of the input mask, with previously masked areas becoming unmasked and vice versa. Type should be `MASK`.

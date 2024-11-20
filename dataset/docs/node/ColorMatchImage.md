@@ -1,9 +1,0 @@
-- `ColorMatchImage`: The ColorMatchImage node is designed to adjust the colors of an image to match or harmonize with a target color scheme or another image. This process is essential in image editing and compositing workflows where color consistency across different elements is crucial.
-    - Parameters:
-        - `blur`: The 'blur' input controls the level of blur applied to the reference image, affecting the softness of the color matching. Type should be `INT`.
-        - `factor`: The 'factor' input determines the intensity of the color matching effect, allowing for fine-tuning of the final appearance. Type should be `FLOAT`.
-    - Inputs:
-        - `images`: The 'images' input represents the source images that need color adjustment. It is crucial for defining the starting point for the color matching process. Type should be `IMAGE`.
-        - `reference`: The 'reference' input specifies the target image or color scheme that the source images should match. It is essential for guiding the color matching process towards the desired outcome. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The 'image' output provides the resulting images after color adjustment, showcasing the effectiveness of the color matching process. Type should be `IMAGE`.

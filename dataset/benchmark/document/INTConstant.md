@@ -1,0 +1,5 @@
+- `INTConstant`: The INTConstant node provides a mechanism to define a constant integer value within a node-based programming environment. It allows for the specification of a static integer value that can be used as a constant input across various computational graphs or pipelines.
+    - Inputs:
+        - `value` (Required): Specifies the integer value to be used as a constant. This value serves as a fixed input that influences the node's output by providing a predetermined integer. Type should be `INT`.
+    - Outputs:
+        - `value`: Outputs the specified constant integer value. This output can be utilized as a fixed input in subsequent nodes or processes within the computational graph. Type should be `INT`.

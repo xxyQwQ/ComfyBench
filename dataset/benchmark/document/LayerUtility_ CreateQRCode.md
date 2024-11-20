@@ -1,0 +1,7 @@
+- `LayerUtility_ CreateQRCode`: This node generates QR codes based on specified text inputs, allowing for the creation of customizable QR codes with defined sizes and border thicknesses. It encapsulates the process of QR code generation, offering a straightforward way to integrate QR code creation into workflows or applications.
+    - Inputs:
+        - `size` (Required): Specifies the size of the generated QR code image. A larger size means the QR code will be bigger, affecting its visibility and scannability. Type should be `INT`.
+        - `border` (Required): Determines the thickness of the border around the QR code. A thicker border can help distinguish the QR code from its surroundings, potentially improving its readability. Type should be `INT`.
+        - `text` (Required): The text to be encoded into the QR code. This can be any string, such as a URL or a message, which will be converted into a QR code format. Type should be `STRING`.
+    - Outputs:
+        - `image`: The generated QR code as an image. This output can be used directly in UIs or further processed as needed. Type should be `IMAGE`.

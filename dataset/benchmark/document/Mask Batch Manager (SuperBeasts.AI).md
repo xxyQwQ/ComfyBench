@@ -1,0 +1,7 @@
+- `Mask Batch Manager (SuperBeasts.AI)`: The Mask Batch Manager node is designed to aggregate multiple individual masks or batches of masks into a single, processed batch. It adjusts the size and order of the input masks according to specified dimensions and optional ordering, ensuring the output is a unified batch suitable for further processing or analysis.
+    - Inputs:
+        - `width` (Required): Specifies the desired width of the output masks, affecting how each input mask is resized or cropped to match this width. Type should be `INT`.
+        - `height` (Required): Determines the desired height of the output masks, influencing the resizing and cropping operations to ensure each mask conforms to this height. Type should be `INT`.
+        - `new_order` (Optional): An optional parameter that allows specifying the order in which input masks should be arranged in the output batch, enabling custom sequencing of masks. Type should be `STRING`.
+    - Outputs:
+        - `mask`: The aggregated output of processed masks, combined into a single batch for further use. Type should be `MASK`.

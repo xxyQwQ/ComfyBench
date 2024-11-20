@@ -1,0 +1,10 @@
+- `CustomControlNetWeights`: This node is designed to dynamically load and apply custom control net weights for advanced manipulation of neural network behavior. It allows for fine-tuning the influence of various control parameters on the network's output, enabling more precise and tailored generation of content.
+    - Inputs:
+        - `weight_i` (Required): Specifies a weight in the control net, contributing to the nuanced adjustment of network behavior. The index 'i' ranges from 00 to 03, allowing for detailed control over the network's processing and output. Type should be `FLOAT`.
+        - `flip_weights` (Required): A boolean flag that, when set, reverses the order of weight application, potentially altering the network's behavior in significant ways. Type should be `BOOLEAN`.
+        - `uncond_multiplier` (Optional): Adjusts the unconditional multiplier for the control weights, offering an additional layer of fine-tuning over the network's output. Type should be `FLOAT`.
+        - `cn_extras` (Optional): Provides a mechanism to include extra control weight parameters, further expanding the customization capabilities for network behavior. Type should be `CN_WEIGHTS_EXTRAS`.
+        - `autosize` (Optional): Configures the autosizing feature, which automatically adjusts the size of control weights based on specified parameters, enhancing the adaptability of network behavior. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `CN_WEIGHTS`: The customized control net weights, tailored according to the input parameters. Type should be `CONTROL_NET_WEIGHTS`.
+        - `TK_SHORTCUT`: A shortcut to timestep keyframe data, facilitating easier manipulation and application of control net weights over time. Type should be `TIMESTEP_KEYFRAME`.

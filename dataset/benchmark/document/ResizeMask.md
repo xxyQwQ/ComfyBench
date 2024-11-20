@@ -1,0 +1,10 @@
+- `ResizeMask`: The ResizeMask node is designed to adjust the dimensions of a given mask or a batch of masks to a specified width and height, optionally maintaining the original proportions. This functionality is crucial for tasks that require masks to match the dimensions of corresponding images or other layers within a graphical or machine learning pipeline.
+    - Inputs:
+        - `mask` (Required): The mask parameter represents the input mask or batch of masks that will be resized. It is central to the node's operation, determining the base data that will be transformed. Type should be `MASK`.
+        - `width` (Required): Specifies the target width for the resized mask. If keep_proportions is True and width is set to 0, the original width is maintained, adjusting only the height based on the aspect ratio. Type should be `INT`.
+        - `height` (Required): Specifies the target height for the resized mask. Similar to width, if keep_proportions is True and height is set to 0, the original height is preserved, adjusting the width to maintain the aspect ratio. Type should be `INT`.
+        - `keep_proportions` (Required): A boolean flag indicating whether to maintain the original aspect ratio of the mask during resizing. When True, the mask is resized to fit within the specified dimensions without altering its aspect ratio. Type should be `BOOLEAN`.
+    - Outputs:
+        - `mask`: The resized mask or batch of masks, adjusted to the specified dimensions. Type should be `MASK`.
+        - `width`: The actual width of the resized mask, which may differ from the input width if keep_proportions is True. Type should be `INT`.
+        - `height`: The actual height of the resized mask, which may differ from the input height if keep_proportions is True. Type should be `INT`.

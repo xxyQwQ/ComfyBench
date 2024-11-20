@@ -1,0 +1,15 @@
+- `PlotCoordinates`: The PlotCoordinates node is designed to process and manipulate coordinate data for visualization purposes. It adjusts bounding box sizes based on a size multiplier, ensures coordinates fit within specified frame boundaries, and generates a tensor representation of the plotted coordinates. This node is essential for visualizing spatial data, such as object locations in an image, by dynamically adjusting and plotting the coordinates according to given parameters.
+    - Inputs:
+        - `coordinates` (Required): A JSON string or list of dictionaries representing the coordinates to be plotted. Each dictionary should contain 'x' and 'y' keys with their respective values. This input is crucial for determining the spatial locations to be visualized. Type should be `STRING`.
+        - `text` (Required): A text prompt or description associated with the coordinates. This parameter can be used for adding contextual information to the visualization. Type should be `STRING`.
+        - `width` (Required): The width of the frame in which the coordinates are to be plotted. This parameter defines the horizontal boundary for the visualization. Type should be `INT`.
+        - `height` (Required): The height of the frame in which the coordinates are to be plotted. This parameter defines the vertical boundary for the visualization. Type should be `INT`.
+        - `bbox_width` (Required): The base width of the bounding boxes before adjustment with the size multiplier. It sets the initial horizontal size for each plotted coordinate. Type should be `INT`.
+        - `bbox_height` (Required): The base height of the bounding boxes before adjustment with the size multiplier. It sets the initial vertical size for each plotted coordinate. Type should be `INT`.
+        - `size_multiplier` (Optional): A list of multipliers to adjust the size of each bounding box based on the index. It allows for dynamic resizing of the bounding boxes for each coordinate, enhancing the visualization's adaptability. Type should be `FLOAT`.
+    - Outputs:
+        - `images`: A sequence of images representing the plotted coordinates within the specified frame. This output is essential for visualizing the adjusted and fitted coordinates. Type should be `IMAGE`.
+        - `width`: The width of the output image frame. Type should be `INT`.
+        - `height`: The height of the output image frame. Type should be `INT`.
+        - `bbox_width`: The width of the bounding boxes in the output image. Type should be `INT`.
+        - `bbox_height`: The height of the bounding boxes in the output image. Type should be `INT`.

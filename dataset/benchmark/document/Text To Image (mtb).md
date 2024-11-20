@@ -1,0 +1,19 @@
+- `Text To Image (mtb)`: The Text To Image node is designed to convert text into an image using specified fonts. It searches for font files within a specified directory and utilizes these fonts to render the given text into an image format. This functionality allows for dynamic text visualization with various font styles, supporting a range of font file formats.
+    - Inputs:
+        - `text` (Required): The text string to be converted into an image. This parameter is crucial as it defines the content that will be visually represented in the resulting image. Type should be `STRING`.
+        - `font` (Required): Specifies the font to be used for rendering the text into an image. This parameter allows for customization of the text's appearance, enhancing the visual appeal of the output. Type should be `COMBO[STRING]`.
+        - `wrap` (Required): Determines whether the text should wrap to fit within the specified width of the image. This parameter is important for ensuring the text fits neatly within the image boundaries without being cut off. Type should be `BOOLEAN`.
+        - `trim` (Required): Indicates whether whitespace around the text should be trimmed in the final image. This parameter helps in creating a cleaner, more focused visual representation of the text. Type should be `BOOLEAN`.
+        - `line_height` (Required): Controls the spacing between lines of text when the text wraps. This parameter is essential for maintaining readability and aesthetic spacing in multi-line text images. Type should be `FLOAT`.
+        - `font_size` (Required): The size of the font used to render the text. This parameter directly affects the readability and visual impact of the text in the image. Type should be `INT`.
+        - `width` (Required): The desired width of the output image. This parameter defines the horizontal dimension of the image canvas. Type should be `INT`.
+        - `height` (Required): The desired height of the output image. This parameter defines the vertical dimension of the image canvas. Type should be `INT`.
+        - `color` (Required): The color of the text in the image. This parameter allows for customization of the text color, enabling contrast and visibility against the background. Type should be `COLOR`.
+        - `background` (Required): The background color of the image. This parameter is crucial for setting the overall tone and contrast of the image, affecting the visibility of the text. Type should be `COLOR`.
+        - `h_align` (Required): Horizontal alignment of the text within the image. This parameter controls the text's positioning along the horizontal axis, affecting the layout and balance of the image. Type should be `COMBO[STRING]`.
+        - `v_align` (Required): Vertical alignment of the text within the image. This parameter controls the text's positioning along the vertical axis, affecting the layout and balance of the image. Type should be `COMBO[STRING]`.
+        - `h_offset` (Required): Horizontal offset for the text position from its aligned location. This parameter allows for fine-tuning of the text's placement within the image, enabling precise layout adjustments. Type should be `INT`.
+        - `v_offset` (Required): Vertical offset for the text position from its aligned location. This parameter allows for fine-tuning of the text's placement within the image, enabling precise layout adjustments. Type should be `INT`.
+        - `h_coverage` (Required): Specifies the percentage of the image width that the text should cover. This parameter is important for controlling the text's spread across the image, affecting the visual density and readability. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is an image with the specified text rendered using the chosen font and settings. This image represents the visual interpretation of the input text, customized according to the provided parameters. Type should be `IMAGE`.

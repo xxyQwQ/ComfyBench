@@ -1,0 +1,5 @@
+- `UNETLoader`: The UNETLoader node is designed for loading U-Net models by name, facilitating the use of pre-trained U-Net architectures within the system.
+    - Inputs:
+        - `unet_name` (Required): Specifies the name of the U-Net model to be loaded. This name is used to locate the model within a predefined directory structure, enabling the dynamic loading of different U-Net models. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `model`: Returns the loaded U-Net model, allowing it to be utilized for further processing or inference within the system. Type should be `MODEL`.

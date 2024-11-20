@@ -1,8 +1,0 @@
-- `GenerateReply`: The GenerateReply node is designed to facilitate conversation between agents by generating replies based on the input message and the context of the conversation. It abstracts the complexities of conversational agent interactions, enabling the creation of dynamic and responsive dialogues.
-    - Parameters:
-        - `message`: The input message to which the recipient agent is expected to respond. This message sets the context for the reply generation. Type should be `STRING`.
-    - Inputs:
-        - `recipient`: Specifies the agent intended to receive the message, playing a crucial role in determining the context and content of the generated reply. Type should be `AGENT`.
-        - `sender`: Optional parameter identifying the sender of the message, used to tailor the reply more accurately within the conversation's context. Type should be `AGENT`.
-    - Outputs:
-        - `reply`: The generated reply from the recipient agent to the input message, encapsulating the agent's response within the ongoing conversation. Type should be `STRING`.

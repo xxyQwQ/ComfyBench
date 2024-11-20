@@ -1,0 +1,11 @@
+- `Image Voronoi Noise Filter`: This node generates a Voronoi noise pattern on an image, leveraging parameters such as density and modulator to influence the visual complexity and style of the noise. It's designed to create visually appealing or useful noise patterns for various applications in image processing and graphics.
+    - Inputs:
+        - `width` (Required): Specifies the width of the output image. It determines the horizontal dimension of the generated noise pattern. Type should be `INT`.
+        - `height` (Required): Specifies the height of the output image. It affects the vertical dimension of the generated noise pattern. Type should be `INT`.
+        - `density` (Required): Controls the density of the Voronoi cells in the noise pattern, affecting the overall complexity and appearance of the noise. Type should be `INT`.
+        - `modulator` (Required): Adjusts the modulation of the noise pattern, allowing for finer control over the visual characteristics of the generated noise. Type should be `INT`.
+        - `seed` (Required): Sets the seed for the noise generation algorithm, ensuring reproducibility of the noise patterns. Type should be `INT`.
+        - `flat` (Optional): Determines whether the noise pattern should have a flat appearance, affecting the visual depth of the noise. Type should be `COMBO[STRING]`.
+        - `RGB_output` (Optional): Specifies whether the output image should be in RGB color mode, influencing the color information of the generated noise pattern. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The generated image with the Voronoi noise pattern applied. It showcases the visual effects of the input parameters on the noise generation. Type should be `IMAGE`.

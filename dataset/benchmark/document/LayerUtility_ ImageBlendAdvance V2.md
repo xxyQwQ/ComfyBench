@@ -1,0 +1,19 @@
+- `LayerUtility_ ImageBlendAdvance V2`: This node specializes in advanced blending techniques for layer-based image editing. It leverages sophisticated algorithms to merge images, allowing for more complex and nuanced image compositions than its predecessor.
+    - Inputs:
+        - `background_image` (Required): The primary image over which the layer image will be blended, serving as the backdrop for the composition. Type should be `IMAGE`.
+        - `layer_image` (Required): The secondary image to be blended onto the background image, acting as the overlay in the composition. Type should be `IMAGE`.
+        - `invert_mask` (Required): A boolean value that determines whether the mask applied to the layer image should be inverted, affecting the blending areas. Type should be `BOOLEAN`.
+        - `blend_mode` (Required): Specifies the method of blending used to combine the background and layer images, influencing the visual outcome of the blend. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): An integer defining the opacity level of the layer image, dictating its transparency when blended with the background image. Type should be `INT`.
+        - `x_percent` (Required): A float value indicating the horizontal positioning of the layer image relative to the background image, as a percentage. Type should be `FLOAT`.
+        - `y_percent` (Required): A float value indicating the vertical positioning of the layer image relative to the background image, as a percentage. Type should be `FLOAT`.
+        - `mirror` (Required): Specifies the mirror mode applied to the layer image, such as horizontal or vertical flipping, before blending. Type should be `COMBO[STRING]`.
+        - `scale` (Required): A float value that determines the scaling factor of the layer image, affecting its size relative to the background image. Type should be `FLOAT`.
+        - `aspect_ratio` (Required): A float value that adjusts the aspect ratio of the layer image, influencing its proportions when scaled. Type should be `FLOAT`.
+        - `rotate` (Required): A float value specifying the rotation angle of the layer image, in degrees, applied before blending. Type should be `FLOAT`.
+        - `transform_method` (Required): Defines the interpolation method used for scaling and rotating the layer image, affecting the quality of the transformation. Type should be `COMBO[STRING]`.
+        - `anti_aliasing` (Required): An integer indicating the level of anti-aliasing applied to the layer image, enhancing the smoothness of its edges. Type should be `INT`.
+        - `layer_mask` (Optional): An optional mask that can be applied to the layer image, allowing for more precise control over which parts of the layer are visible or blended. Type should be `MASK`.
+    - Outputs:
+        - `image`: The resulting image after blending the layer image with the background, incorporating all specified adjustments and effects. Type should be `IMAGE`.
+        - `mask`: The mask applied to the layer image, determining the areas of the layer that are visible or blended in the final composition. Type should be `MASK`.

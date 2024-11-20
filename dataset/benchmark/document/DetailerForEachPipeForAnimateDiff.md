@@ -1,0 +1,25 @@
+- `DetailerForEachPipeForAnimateDiff`: This node is designed to apply detailed animation effects to each frame or segment within a pipeline, enhancing the visual impact and dynamic elements of the content. It operates by iterating over each applicable segment or frame, applying a set of predefined or dynamically generated animation details to improve the overall aesthetic and engagement of the animation.
+    - Inputs:
+        - `image_frames` (Required): The sequence of image frames to which animation effects will be applied. This input is crucial for determining the visual flow and continuity of the animation. Type should be `IMAGE`.
+        - `segs` (Required): Segmentation information for the image frames, used to identify and apply detailed effects to specific areas of the animation. Type should be `SEGS`.
+        - `guide_size` (Required): Specifies the size guide for the animation detailing process, influencing the scale at which details are applied. Type should be `FLOAT`.
+        - `guide_size_for` (Required): A boolean flag indicating whether the guide size applies to the bounding box or the crop region, affecting how details are scaled and applied. Type should be `BOOLEAN`.
+        - `max_size` (Required): The maximum size limit for the animation details, ensuring that the detailing process stays within computational and aesthetic bounds. Type should be `FLOAT`.
+        - `seed` (Required): A seed value for random number generation, providing consistency in the detailing effects applied across different runs. Type should be `INT`.
+        - `steps` (Required): The number of steps to execute in the detailing process, affecting the depth and complexity of the applied effects. Type should be `INT`.
+        - `cfg` (Required): Configuration parameter for the detailing process, allowing for fine-tuning of the animation effects. Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the sampler to be used in the detailing process, influencing the variation and quality of the applied effects. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Determines the scheduling algorithm for the detailing process, impacting the efficiency and outcome of the animation effects. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): The denoising factor applied during the detailing process, affecting the clarity and quality of the animation. Type should be `FLOAT`.
+        - `feather` (Required): unknown Type should be `INT`.
+        - `basic_pipe` (Required): The basic pipeline configuration for the animation detailing process, defining the core components and their interactions. Type should be `BASIC_PIPE`.
+        - `refiner_ratio` (Required): The ratio of refinement applied to the detailing process, adjusting the intensity of the effects for a more nuanced outcome. Type should be `FLOAT`.
+        - `detailer_hook` (Optional): unknown Type should be `DETAILER_HOOK`.
+        - `refiner_basic_pipe_opt` (Optional): unknown Type should be `BASIC_PIPE`.
+        - `noise_mask_feather` (Optional): unknown Type should be `INT`.
+        - `scheduler_func_opt` (Optional): unknown Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `image`: The enhanced image frames after applying animation effects, showcasing the improved visual impact. Type should be `IMAGE`.
+        - `segs`: The updated segmentation information reflecting the detailed effects applied to specific areas of the animation. Type should be `SEGS`.
+        - `basic_pipe`: The basic pipeline configuration after the detailing process, potentially modified to incorporate new detailing components. Type should be `BASIC_PIPE`.
+        - `cnet_images`: A collection of images generated during the detailing process, used for further refinement or as part of the animation. Type should be `IMAGE`.

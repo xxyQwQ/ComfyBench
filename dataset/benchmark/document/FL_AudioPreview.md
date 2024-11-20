@@ -1,0 +1,4 @@
+- `FL_AudioPreview`: The FL_AudioPreview node is designed to play audio segments, allowing users to preview audio data within their workflow. It supports both mono and stereo audio formats and can handle audio data provided as either PyTorch tensors or numpy arrays.
+    - Inputs:
+        - `audio_segment` (Required): A tuple containing the audio data and its sample rate. This input is crucial for determining the audio content to be played and its playback speed. Type should be `AUDIO`.
+    - Outputs:

@@ -1,0 +1,14 @@
+- `Write to Video`: The 'Write to Video' node is designed to facilitate the creation and manipulation of video files from images. It encompasses functionalities such as writing individual images to a video, generating transition frames between images, adding still image delays, and configuring video properties like frame rate and resolution. This node aims to provide a comprehensive set of tools for video editing and generation, making it easier to produce high-quality video content.
+    - Inputs:
+        - `image` (Required): The image or sequence of images to be written into the video. This is the primary content that will be displayed in the video. Type should be `IMAGE`.
+        - `transition_frames` (Required): Specifies the number of frames used for creating smooth transitions between images in the video. It enhances the visual flow of the video content. Type should be `INT`.
+        - `image_delay_sec` (Required): Determines the duration for which each image is displayed in the video, allowing for the creation of still image delays. This parameter helps in controlling the pacing of the video content. Type should be `FLOAT`.
+        - `fps` (Required): Sets the frame rate of the video, defining how many frames are displayed per second. This parameter is crucial for determining the smoothness and playback speed of the video. Type should be `INT`.
+        - `max_size` (Required): Specifies the maximum size (in pixels) for the images in the video, ensuring that all images are uniformly scaled. This parameter helps in maintaining consistent video quality and aspect ratio. Type should be `INT`.
+        - `output_path` (Required): The path to the directory where the video will be saved. It determines the location of the output video file. Type should be `STRING`.
+        - `filename` (Required): The name of the output video file. It allows for easy identification and organization of created videos. Type should be `STRING`.
+        - `codec` (Required): Defines the codec used for encoding the video. Different codecs can affect the video's compatibility, size, and quality. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `IMAGE_PASS`: Indicates whether the image processing and video writing operations were successful. Type should be `IMAGE`.
+        - `filepath_text`: The full path to the created video file, including its name. It provides a direct link to access or share the video. Type should be `STRING`.
+        - `filename_text`: The name of the created video file. It helps in identifying the video among other files. Type should be `STRING`.

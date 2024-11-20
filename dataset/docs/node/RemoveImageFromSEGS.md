@@ -1,6 +1,0 @@
-- `RemoveImageFromSEGS`: The RemoveImageFromSEGS node is designed to process a collection of segmented images (SEGS) by removing the image data while preserving other segment attributes. This operation is useful for scenarios where the image data is no longer needed or desired, allowing for a focus on the remaining segment metadata.
-    - Parameters:
-    - Inputs:
-        - `segs`: The 'segs' parameter represents the collection of segmented images to be processed. It is essential for specifying the input data from which the images will be removed, affecting the node's execution by determining the segments to be modified. Type should be `SEGS`.
-    - Outputs:
-        - `segs`: The output is a modified version of the input SEGS, where the image data has been removed from each segment, leaving other attributes intact. Type should be `SEGS`.

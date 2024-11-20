@@ -1,0 +1,11 @@
+- `LayerMask_ CreateGradientMask`: This node is designed to create gradient masks with customizable dimensions, gradient direction, scale, offset, and opacity. It allows for the creation of nuanced layer masks that can be applied to images for various effects, such as fading or blending.
+    - Inputs:
+        - `width` (Required): Specifies the width of the gradient mask to be created. It determines the horizontal dimension of the resulting mask. Type should be `INT`.
+        - `height` (Required): Specifies the height of the gradient mask to be created. It determines the vertical dimension of the resulting mask. Type should be `INT`.
+        - `gradient_side` (Required): Determines the side from which the gradient starts. This affects the direction of the gradient applied to the mask. Type should be `COMBO[STRING]`.
+        - `gradient_scale` (Required): Controls the scale of the gradient effect within the mask, affecting how gradual or steep the gradient appears. Type should be `INT`.
+        - `gradient_offset` (Required): Adjusts the starting point of the gradient within the mask, allowing for shifted gradient effects. Type should be `INT`.
+        - `opacity` (Required): Sets the opacity level of the gradient mask, enabling transparency effects. Type should be `INT`.
+        - `size_as` (Optional): Optionally specifies another object's size to match for the gradient mask, providing flexibility in mask dimensions. Type should be `*`.
+    - Outputs:
+        - `mask`: The resulting gradient mask, ready for application to images or layers for various visual effects. Type should be `MASK`.

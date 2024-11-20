@@ -1,0 +1,7 @@
+- `SeamlessTile`: The SeamlessTile node enables the modification of a model to support seamless tiling in generated images. It can either modify the model in place or create a modified copy, depending on the user's choice, and supports different tiling modes including enabling tiling on both axes, only on the X-axis, or only on the Y-axis.
+    - Inputs:
+        - `model` (Required): The model to be modified for seamless tiling. It is the core component that will undergo modifications to support different tiling modes. Type should be `MODEL`.
+        - `tiling` (Required): Specifies the tiling mode to apply to the model, which can be enabling tiling on both axes, only on the X-axis, or only on the Y-axis, or disabling it. Type should be `COMBO[STRING]`.
+        - `copy_model` (Required): Determines whether to modify the original model in place or to create and modify a copy, allowing for non-destructive edits. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `model`: The modified model with seamless tiling capabilities applied according to the specified tiling mode. Type should be `MODEL`.

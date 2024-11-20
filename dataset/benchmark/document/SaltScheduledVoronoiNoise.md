@@ -1,0 +1,16 @@
+- `SaltScheduledVoronoiNoise`: This node is designed to generate visual noise patterns based on the Voronoi diagram algorithm, with the ability to schedule various parameters over time. It allows for dynamic creation of complex, aesthetically pleasing visual textures that can be customized and animated according to specific schedules for scale, detail, randomness, and more.
+    - Inputs:
+        - `batch_size` (Required): Specifies the number of noise patterns to generate in one execution. It affects the output's scale and can be used to create multiple instances of noise patterns simultaneously. Type should be `INT`.
+        - `width` (Required): Determines the width of the generated noise pattern. It directly influences the spatial resolution of the output texture. Type should be `INT`.
+        - `height` (Required): Sets the height of the generated noise pattern, affecting the spatial resolution of the output texture similarly to width. Type should be `INT`.
+        - `distance_metric` (Optional): Chooses the method for calculating distances in the Voronoi diagram, affecting the visual characteristics of the noise pattern. Type should be `COMBO[STRING]`.
+        - `x_schedule` (Optional): A schedule for the x-axis positions over time, allowing for dynamic changes in the noise pattern's horizontal distribution. Type should be `LIST`.
+        - `y_schedule` (Optional): A schedule for the y-axis positions over time, enabling dynamic alterations in the vertical distribution of the noise pattern. Type should be `LIST`.
+        - `scale_schedule` (Optional): Controls the scale of the noise pattern over time, enabling zoom in/out effects. Type should be `LIST`.
+        - `detail_schedule` (Optional): Adjusts the level of detail in the noise pattern over time, affecting its complexity and texture. Type should be `LIST`.
+        - `randomness_schedule` (Optional): Modifies the randomness factor of the noise pattern over time, influencing its unpredictability and variation. Type should be `LIST`.
+        - `seed_schedule` (Optional): Schedules the seed values used for noise generation, allowing for controlled variations in the pattern. Type should be `LIST`.
+        - `device` (Optional): Specifies the computing device (CPU/GPU) on which the noise generation is executed, affecting performance. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `images`: The generated noise patterns as a batch of images, ready for further processing or visualization. Type should be `IMAGE`.
+        - `batch_size`: The number of generated noise patterns, confirming the input batch size was processed as requested. Type should be `INT`.

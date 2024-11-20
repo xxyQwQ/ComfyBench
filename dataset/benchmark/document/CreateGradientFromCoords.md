@@ -1,0 +1,10 @@
+- `CreateGradientFromCoords`: This node is designed to generate a gradient image based on specified start and end coordinates, colors, and a multiplier. It creates a visual transition between two colors across the image canvas, allowing for the creation of dynamic and customizable gradient backgrounds or elements.
+    - Inputs:
+        - `coordinates` (Required): A string representing the start and end coordinates for the gradient. These coordinates dictate the direction and span of the gradient across the image. Type should be `STRING`.
+        - `frame_width` (Required): The width of the output image in pixels. It defines the horizontal dimension of the gradient image. Type should be `INT`.
+        - `frame_height` (Required): The height of the output image in pixels. It defines the vertical dimension of the gradient image. Type should be `INT`.
+        - `start_color` (Required): The color at the start of the gradient, specified as a string. This color marks the beginning of the gradient effect. Type should be `STRING`.
+        - `end_color` (Required): The color at the end of the gradient, specified as a string. This color marks the completion of the gradient effect. Type should be `STRING`.
+        - `multiplier` (Required): A float that adjusts the intensity of the gradient effect, allowing for finer control over the gradient's appearance. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The generated gradient image, returned as a tensor. This image visually represents the gradient created from the specified coordinates and colors. Type should be `IMAGE`.

@@ -1,6 +1,0 @@
-- `easy XYInputs PositiveCond`: This node is designed to process positive conditioning inputs for XY plotting, allowing users to specify conditions that influence the plotting axis and values based on positive scenarios. It abstracts the complexity of handling conditional logic for positive inputs, facilitating the creation of customized plots that reflect specific positive conditions.
-    - Parameters:
-    - Inputs:
-        - `positive_i`: Represents a positive condition to be applied, where 'i' can range from 1 to 4. Each condition incrementally modifies the plot's axis and values, enhancing the plot's specificity and allowing for a layered approach to customizing the plot's appearance based on positive scenarios. Type should be `CONDITIONING`.
-    - Outputs:
-        - `X or Y`: Outputs the configured axis and values for the plot, reflecting the applied positive conditions. This output demonstrates the flexibility in choosing either the X or Y axis based on the conditions applied, providing a tailored plotting experience. Type should be `X_Y`.

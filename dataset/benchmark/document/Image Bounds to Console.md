@@ -1,0 +1,6 @@
+- `Image Bounds to Console`: This node is designed for debugging purposes, specifically to output the bounds of an image to the console. It allows for a customizable label to accompany the bounds information, enhancing readability and traceability during debugging sessions.
+    - Inputs:
+        - `image_bounds` (Required): Represents the boundaries of an image that are to be debugged. This input is crucial for determining the specific area of the image to focus on during the debugging process. Type should be `IMAGE_BOUNDS`.
+        - `label` (Required): An optional label to accompany the bounds information in the console output. This label can provide context or a description for the bounds being debugged, making the output more informative. Type should be `STRING`.
+    - Outputs:
+        - `image_bounds`: Echoes back the input image bounds, allowing for further processing or analysis in subsequent nodes. Type should be `IMAGE_BOUNDS`.

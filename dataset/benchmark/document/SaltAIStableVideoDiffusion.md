@@ -1,0 +1,9 @@
+- `SaltAIStableVideoDiffusion`: The SaltAIStableVideoDiffusion node is designed to interface with the Stability AI API for generating videos based on input images. It encapsulates the process of sending an image to the API, managing the request, and processing the returned video data into a sequence of frames. This node leverages advanced video diffusion techniques to create high-quality, stable videos from static images, providing a seamless integration for applications requiring video generation capabilities.
+    - Inputs:
+        - `image` (Required): The input image tensor that serves as the basis for video generation. It is crucial for defining the visual content from which the video will be generated, affecting the overall theme and appearance of the output video. Type should be `IMAGE`.
+        - `api_key` (Required): A required parameter for authenticating with the Stability AI API. It ensures authorized access to the video generation service, impacting the node's ability to generate videos. Type should be `STRING`.
+        - `seed` (Required): An optional parameter to control the randomness of video generation, enhancing the reproducibility of results by allowing for the generation of consistent videos across multiple runs. Type should be `INT`.
+        - `cfg` (Required): The CFG scale parameter influences the creativity and coherence of the generated video, balancing between fidelity to the input image and the novelty of the generated content. Type should be `FLOAT`.
+        - `mbi` (Required): The motion bucket ID parameter guides the motion dynamics in the generated video, affecting how elements within the video move and interact. Type should be `INT`.
+    - Outputs:
+        - `frames`: A sequence of video frames represented as tensors, providing the generated video content in a format suitable for further processing or visualization. Type should be `IMAGE`.

@@ -1,0 +1,18 @@
+- `easy kSamplerDownscaleUnet`: This node specializes in simplifying the process of image sampling by integrating Unet downscaling capabilities. It aims to enhance efficiency and performance in image generation tasks by applying a downscaling factor to the Unet model, which is particularly useful for handling high-resolution images or complex sampling scenarios. The node facilitates a streamlined workflow for image sampling with an emphasis on reducing computational load without compromising the quality of the generated images.
+    - Inputs:
+        - `pipe` (Required): The pipeline through which the image data flows, serving as the primary conduit for processing and transforming images within the node. Type should be `PIPE_LINE`.
+        - `downscale_mode` (Required): Determines the mode of downscaling to be applied to the Unet model, affecting how the model's resolution is reduced. Type should be `COMBO[STRING]`.
+        - `block_number` (Required): Specifies the block number within the Unet model to which the downscaling is applied, targeting specific layers for resolution reduction. Type should be `INT`.
+        - `downscale_factor` (Required): The factor by which the Unet model's resolution is reduced, directly influencing the detail and size of the output images. Type should be `FLOAT`.
+        - `start_percent` (Required): Defines the starting percentage of the model's depth at which downscaling begins, allowing for selective downscaling depth. Type should be `FLOAT`.
+        - `end_percent` (Required): Sets the ending percentage of the model's depth where downscaling concludes, further refining the downscaling process. Type should be `FLOAT`.
+        - `downscale_after_skip` (Required): A boolean parameter that determines whether downscaling occurs after skip connections in the Unet model, affecting the model's internal processing flow. Type should be `BOOLEAN`.
+        - `downscale_method` (Required): Specifies the method used for reducing the resolution of the Unet model, impacting the quality and characteristics of the downscaled output. Type should be `COMBO[STRING]`.
+        - `upscale_method` (Required): The method used to upscale the model back to its original or a specified resolution, complementing the downscaling process. Type should be `COMBO[STRING]`.
+        - `image_output` (Required): Controls the output format of the images, including options for previewing, saving, or hiding the generated images. Type should be `COMBO[STRING]`.
+        - `link_id` (Required): An identifier used for linking the node's output with other processes or outputs, facilitating integration within larger workflows. Type should be `INT`.
+        - `save_prefix` (Required): A prefix applied to filenames when saving output images, aiding in the organization and retrieval of generated content. Type should be `STRING`.
+        - `model` (Optional): The model to be downscaled, typically a Unet model, which is central to the node's operation and directly affects the output quality. Type should be `MODEL`.
+    - Outputs:
+        - `pipe`: The modified pipeline after processing, which includes the downscaled Unet model and potentially other transformations applied to the image data. Type should be `PIPE_LINE`.
+        - `image`: The final image output after downscaling, reflecting the applied adjustments and ready for further use or analysis. Type should be `IMAGE`.

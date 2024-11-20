@@ -1,0 +1,11 @@
+- `CR Multiline Text`: This node is designed to process and manipulate multiline text, allowing for operations such as removing specific characters, splitting strings, and converting from CSV format. It aims to provide versatile text processing capabilities tailored to multiline inputs.
+    - Inputs:
+        - `text` (Required): The primary text input that will be processed. This is the multiline text that operations such as character removal, string splitting, and CSV conversion will be applied to. Type should be `STRING`.
+        - `convert_from_csv` (Required): A boolean flag that, when set to True, treats the input text as CSV data and processes it accordingly. Type should be `BOOLEAN`.
+        - `csv_quote_char` (Required): Specifies the quote character used in the CSV data. This is relevant only when the convert_from_csv option is enabled. Type should be `STRING`.
+        - `remove_chars` (Required): A boolean flag that, when set to True, triggers the removal of specified characters from the input text. Type should be `BOOLEAN`.
+        - `chars_to_remove` (Required): Specifies the characters to be removed from the input text. This parameter is used when the remove_chars option is enabled. Type should be `STRING`.
+        - `split_string` (Required): A boolean flag that, when set to True, splits the input text into a list of strings. Type should be `BOOLEAN`.
+    - Outputs:
+        - `multiline_text`: The processed text after applying the specified operations. Type should be `*`.
+        - `show_help`: A URL to a help page providing more information about the node's functionality. Type should be `STRING`.

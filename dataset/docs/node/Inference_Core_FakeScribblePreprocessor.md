@@ -1,8 +1,0 @@
-- `Inference_Core_FakeScribblePreprocessor`: The Inference_Core_FakeScribblePreprocessor node is designed for preprocessing images to generate fake scribble lines, simulating the appearance of hand-drawn scribbles. It utilizes a modified HED edge detection model to create stylized line drawings that mimic the scribble effect, offering an alternative to traditional edge detection methods for artistic and creative applications.
-    - Parameters:
-        - `safe`: A mode selector that enables or disables safety features during the image processing, affecting the final appearance of the scribble lines. Type should be `COMBO[STRING]`.
-        - `resolution`: Specifies the resolution at which the image processing should be performed, impacting the detail level of the generated scribble lines. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for fake scribble line generation. It serves as the primary data for the node's execution, determining the visual output. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed image with fake scribble lines, representing a stylized version of the original input. Type should be `IMAGE`.

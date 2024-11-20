@@ -1,8 +1,0 @@
-- `MediaPipe_FaceMesh_Preprocessor_Provider_for_SEGS __Inspire`: This node provides a preprocessor for SEGS (semantic segmentation) tasks, specifically utilizing MediaPipe's FaceMesh technology to detect facial features and landmarks. It is designed to enhance the input data for SEGS models by applying face mesh detection, allowing for more accurate and detailed segmentation of facial regions.
-    - Parameters:
-        - `max_faces`: Specifies the maximum number of faces to detect in the input image. This parameter helps in optimizing the detection process for images with multiple faces. Type should be `INT`.
-        - `min_confidence`: Sets the minimum confidence threshold for detecting faces. Faces with a confidence score below this threshold will not be considered, ensuring that only faces detected with sufficient certainty are processed. Type should be `FLOAT`.
-        - `resolution_upscale_by`: Determines the factor by which the input image's resolution is upscaled before face mesh detection. Upscaling can improve the detection of facial features in lower-resolution images. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `segs_preprocessor`: Returns a preprocessor object configured for SEGS tasks, specifically tailored for facial feature detection using MediaPipe's FaceMesh technology. Type should be `SEGS_PREPROCESSOR`.

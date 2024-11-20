@@ -1,5 +1,0 @@
-- `CreateRequestMetadata`: This node is responsible for creating and managing a JSON file that contains metadata about a request. It provides functionalities to update request data, add resources to the request, and manage the request's state, ensuring that there is only one instance of this node per prompt to avoid conflicts.
-    - Parameters:
-        - `request_id`: The unique identifier for the request. It is crucial for tracking and managing the request throughout its lifecycle. Type should be `STRING`.
-    - Inputs:
-    - Outputs:

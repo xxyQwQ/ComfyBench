@@ -1,0 +1,7 @@
+- `LLMPostProcessDocuments`: This node is designed to refine and filter a collection of documents based on specified keywords. It allows for the inclusion of documents containing certain required keywords while excluding those with specified unwanted keywords, effectively tailoring the document set to more closely match user-defined criteria.
+    - Inputs:
+        - `document` (Required): Represents the collection of documents to be processed. It is the primary data upon which the node operates, determining which documents are retained based on the presence or absence of specified keywords. Type should be `DOCUMENT`.
+        - `required_keywords` (Optional): A comma-separated list of keywords that must be present in a document for it to be included in the output. This parameter enables the filtering of documents to those that are relevant to specific criteria. Type should be `STRING`.
+        - `exclude_keywords` (Optional): A comma-separated list of keywords that, if present in a document, will result in its exclusion from the output. This parameter helps in removing documents that contain undesired content. Type should be `STRING`.
+    - Outputs:
+        - `documents`: The filtered collection of documents, which have been processed to include only those matching the required keywords and exclude those with any of the excluded keywords. Type should be `DOCUMENT`.

@@ -1,0 +1,1402 @@
+{
+    "001": {
+        "name": "baseketball_player",
+        "instruction": "Generate an image of a male basketball player shooting in a gym. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "002": {
+        "name": "motorcycle_rider",
+        "instruction": "Generate an image of a woman riding a motorcycle on a highway. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "003": {
+        "name": "hotel_room",
+        "instruction": "Generate an image of a hotel room containing a bed, a desk, and a window. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "004": {
+        "name": "sitting_dog",
+        "instruction": "Generate an image of a dog sitting on a grass field. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "005": {
+        "name": "running_bus",
+        "instruction": "Generate an image of a bus running in a city street. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "006": {
+        "name": "sunset_beach",
+        "instruction": "Generate an image of a beach at sunset with waves gently crashing on the shore. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "007": {
+        "name": "mountain_landscape",
+        "instruction": "Generate an image of a mountain landscape with snow-capped peaks and a river flowing below. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "008": {
+        "name": "city_skyline",
+        "instruction": "Generate an image of a modern city skyline at night with illuminated skyscrapers. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "009": {
+        "name": "forest_path",
+        "instruction": "Generate an image of a narrow path winding through a dense green forest. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "010": {
+        "name": "window_cat",
+        "instruction": "Generate an image of a cat sitting on a windowsill looking outside. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "011": {
+        "name": "futuristic_car",
+        "instruction": "Generate an image of a futuristic car driving on a neon-lit street in a sci-fi city. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "012": {
+        "name": "snowy_village",
+        "instruction": "Generate an image of a small village covered in snow with smoke coming from chimneys. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "013": {
+        "name": "flying_eagle",
+        "instruction": "Generate an image of an eagle flying high above a canyon. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "014": {
+        "name": "underwater_scene",
+        "instruction": "Generate an image of an underwater scene with colorful fish and coral reefs. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "015": {
+        "name": "campfire_night",
+        "instruction": "Generate an image of people sitting around a campfire under a starry night sky. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "016": {
+        "name": "desert_oasis",
+        "instruction": "Generate an image of a desert oasis with palm trees and a small pond. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "017": {
+        "name": "flying_airplane",
+        "instruction": "Generate an image of an airplane flying high above the clouds. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "018": {
+        "name": "robot_factory",
+        "instruction": "Generate an image of a futuristic factory filled with robots assembling machines. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "019": {
+        "name": "street_market",
+        "instruction": "Generate an image of a bustling street market with vendors selling fruits and vegetables. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "020": {
+        "name": "soccer_stadium",
+        "instruction": "Generate an image of a soccer stadium filled with cheering fans during a match. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "021": {
+        "name": "flying_balloon",
+        "instruction": "Generate an image of a hot air balloon floating over a scenic valley at sunrise. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "022": {
+        "name": "space_station",
+        "instruction": "Generate an image of a futuristic space station orbiting Earth with spacecraft docked. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "023": {
+        "name": "chef_cooking",
+        "instruction": "Generate an image of a chef cooking in a modern kitchen with fresh ingredients on the counter. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "024": {
+        "name": "rainy_street",
+        "instruction": "Generate an image of a rainy city street at night with reflections of neon signs on the wet pavement. The result should be a high-quality image.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "025": {
+        "name": "cartoon_panda",
+        "instruction": "Generate a 2-second video of a cartoon panda walking in a bamboo forest. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "026": {
+        "name": "flowing_river",
+        "instruction": "Generate a 2-second video of a river flowing through a valley with mountains in the background. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "027": {
+        "name": "running_train",
+        "instruction": "Generate a 2-second video of a train running on a railway track through a countryside landscape. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "028": {
+        "name": "dancing_girl",
+        "instruction": "Generate a 2-second video of a girl dancing in a room with colorful lights. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "029": {
+        "name": "mountain_sunrise",
+        "instruction": "Generate a 2-second video of the sun rising over a mountain range with mist in the valleys. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "030": {
+        "name": "flying_bird",
+        "instruction": "Generate a 2-second video of a bird flying over a dense forest during sunrise. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "031": {
+        "name": "city_night",
+        "instruction": "Generate a 2-second video of a bustling city at night with skyscrapers and bright lights. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "032": {
+        "name": "snowy_mountain",
+        "instruction": "Generate a 2-second video of a snowy mountain peak with clouds gently moving around it. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "033": {
+        "name": "spinning_robot",
+        "instruction": "Generate a 2-second video of a robot spinning in circles on a white background. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "034": {
+        "name": "swimming_fish",
+        "instruction": "Generate a 2-second video of colorful fish swimming in an aquarium with bubbles rising to the surface. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "035": {
+        "name": "volcano_eruption",
+        "instruction": "Generate a 2-second video of a volcano erupting with lava flowing down the sides. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "036": {
+        "name": "space_travel",
+        "instruction": "Generate a 2-second video of a spaceship traveling through space with stars and planets in the background. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "037": {
+        "name": "raining_forest",
+        "instruction": "Generate a 2-second video of a rainforest during a heavy rainstorm with thunder and lightning. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "038": {
+        "name": "desert_wind",
+        "instruction": "Generate a 2-second video of sand dunes in a desert with wind blowing the sand. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "039": {
+        "name": "urban_skateboarder",
+        "instruction": "Generate a 2-second video of a skateboarder performing tricks in an urban skate park. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "040": {
+        "name": "fireworks_show",
+        "instruction": "Generate a 2-second video of a fireworks show over a city skyline during a festival. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "041": {
+        "name": "playing_dog",
+        "instruction": "Generate a 2-second video of a dog happily playing with a ball in a park. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "042": {
+        "name": "alien_landscape",
+        "instruction": "Generate a 2-second video of an alien landscape with strange plants and creatures. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "043": {
+        "name": "ballet_performance",
+        "instruction": "Generate a 2-second video of a ballet dancer performing on stage with spotlights. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "044": {
+        "name": "stormy_ocean",
+        "instruction": "Generate a 2-second video of a stormy ocean with large waves crashing against rocks. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "vanilla"
+    },
+    "045": {
+        "name": "jacket_man_video",
+        "instruction": "You are given an image `jacket_man.jpg`, which is a photo of a man wearing a jacket. Create a 2-second video of the man touching his jacket based on the image. The result should be a high-quality video.",
+        "resource": "jacket_man.jpg",
+        "modality": "i2v",
+        "category": "vanilla"
+    },
+    "046": {
+        "name": "large_castle_video",
+        "instruction": "You are given an image `large_castle.png`, which is a photo of a large castle. Create a 2-second video of the castle with clouds moving in the sky based on the image. The result should be a high-quality video.",
+        "resource": "large_castle.png",
+        "modality": "i2v",
+        "category": "vanilla"
+    },
+    "047": {
+        "name": "standing_cat_video",
+        "instruction": "You are given an image `standing_cat.jpg`, which is a photo of a standing cat. Create a 2-second video of the cat looking around based on the image. The result should be a high-quality video.",
+        "resource": "standing_cat.jpg",
+        "modality": "i2v",
+        "category": "vanilla"
+    },
+    "048": {
+        "name": "warm_bedroom_video",
+        "instruction": "You are given an image `warm_bedroom.jpg`, which is a photo of a bedroom with warm lighting. Create a 2-second video of the bedroom with the perspective changing based on the image. The result should be a high-quality video.",
+        "resource": "warm_bedroom.jpg",
+        "modality": "i2v",
+        "category": "vanilla"
+    },
+    "049": {
+        "name": "budapest_city_video",
+        "instruction": "You are given an image `budapest_city.jpg`, which is a photo of the city of Budapest. Create a 2-second video of the cityscape with the perspective changing based on the image. The result should be a high-quality video.",
+        "resource": "budapest_city.jpg",
+        "modality": "i2v",
+        "category": "vanilla"
+    },
+    "050": {
+        "name": "president_trump_video",
+        "instruction": "You are given an image `president_trump.jpg`, which is a photo of President Trump. Create a 2-second video of President Trump speaking based on the image. The result should be a high-quality video.",
+        "resource": "president_trump.jpg",
+        "modality": "i2v",
+        "category": "vanilla"
+    },
+    "051": {
+        "name": "street_car_video",
+        "instruction": "You are given an image `street_car.png`, which is a photo of a red car parked on the street. Create a 2-second video of the car driving on the street based on the image. The result should be a high-quality video.",
+        "resource": "street_car.png",
+        "modality": "i2v",
+        "category": "vanilla"
+    },
+    "052": {
+        "name": "motorbike_man_video",
+        "instruction": "You are given an image `motorbike_man.png`, which is a photo of a man riding a motorbike on the road. Create a 2-second video of the man riding the motorbike based on the image. The result should be a high-quality video.",
+        "resource": "motorbike_man.png",
+        "modality": "i2v",
+        "category": "vanilla"
+    },
+    "053": {
+        "name": "young_man_video",
+        "instruction": "You are given an image `young_man.jpg`, which is a photo of a young man. Create a 2-second video of the man smiling based on the image. The result should be a high-quality video.",
+        "resource": "young_man.jpg",
+        "modality": "i2v",
+        "category": "vanilla"
+    },
+    "054": {
+        "name": "many_people_video",
+        "instruction": "You are given an image `many_people.png`, which is a photo of a crowd of people. Create a 2-second video of the people cheering based on the image. The result should be a high-quality video.",
+        "resource": "many_people.png",
+        "modality": "i2v",
+        "category": "vanilla"
+    },
+    "055": {
+        "name": "grassland_dog_addition",
+        "instruction": "You are given an image `large_grassland.png` of a large grassland under a clear sky. Add a dog on the grassland in the image. The result should be a high-quality image without visible artifacts.",
+        "resource": "large_grassland.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "056": {
+        "name": "grassland_eagle_addition",
+        "instruction": "You are given an image `large_grassland.png` of a large grassland under a clear sky. Add a flying eagle in the sky in the image. The result should be a high-quality image without visible artifacts.",
+        "resource": "large_grassland.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "057": {
+        "name": "grassland_woman_addition",
+        "instruction": "You are given an image `large_grassland.png` of a large grassland under a clear sky. Add a woman standing on the grassland in the image. The result should be a high-quality image without visible artifacts.",
+        "resource": "large_grassland.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "058": {
+        "name": "grassland_tree_removal",
+        "instruction": "You are given an image `large_grassland.png` of a large grassland under a clear sky. Remove the tree on the grassland in the image. The result should be a high-quality image without visible artifacts.",
+        "resource": "large_grassland.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "059": {
+        "name": "grassland_ground_replacement",
+        "instruction": "You are given an image `large_grassland.png` of a large grassland under a clear sky. Replace the grassland with soil ground in the image. The result should be a high-quality image without visible artifacts.",
+        "resource": "large_grassland.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "060": {
+        "name": "table_plate_removal",
+        "instruction": "You are given an image `dish_table.png` of a table filled with dishes. Remove the plate together with all the food inside it from the table. The result should be a high-quality image without visible artifacts.",
+        "resource": "dish_table.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "061": {
+        "name": "table_fork_removal",
+        "instruction": "You are given an image `dish_table.png` of a table filled with dishes. Remove the fork on the table. The result should be a high-quality image without visible artifacts.",
+        "resource": "dish_table.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "062": {
+        "name": "table_glass_removal",
+        "instruction": "You are given an image `dish_table.png` of a table filled with dishes. Remove the glass on the table. The result should be a high-quality image without visible artifacts.",
+        "resource": "dish_table.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "063": {
+        "name": "table_dish_replacement",
+        "instruction": "You are given an image `dish_table.png` of a table filled with dishes. Replace the dish in the plate with a cake. The result should be a high-quality image without visible artifacts.",
+        "resource": "dish_table.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "064": {
+        "name": "table_fork_replacement",
+        "instruction": "You are given an image `dish_table.png` of a table filled with dishes. Replace the fork on the table with a spoon. The result should be a high-quality image without visible artifacts.",
+        "resource": "dish_table.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "065": {
+        "name": "stream_bridge_addition",
+        "instruction": "You are given an image `mountain_stream.png` of a stream flowing through a mountain. Add a single-plank bridge over the stream. The result should be a high-quality image without visible artifacts.",
+        "resource": "mountain_stream.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "066": {
+        "name": "stream_man_addition",
+        "instruction": "You are given an image `mountain_stream.png` of a stream flowing through a mountain. Add a man standing by the stream. The result should be a high-quality image without visible artifacts.",
+        "resource": "mountain_stream.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "067": {
+        "name": "stream_train_removal",
+        "instruction": "You are given an image `mountain_stream.png` of a stream flowing through a mountain. Remove the train near the stream. The result should be a high-quality image without visible artifacts.",
+        "resource": "mountain_stream.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "068": {
+        "name": "stream_bush_removal",
+        "instruction": "You are given an image `mountain_stream.png` of a stream flowing through a mountain. Remove the bush near the stream. The result should be a high-quality image without visible artifacts.",
+        "resource": "mountain_stream.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "069": {
+        "name": "stream_rock_removal",
+        "instruction": "You are given an image `mountain_stream.png` of a stream flowing through a mountain. Remove the rock in the stream. The result should be a high-quality image without visible artifacts.",
+        "resource": "mountain_stream.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "070": {
+        "name": "street_car_removal",
+        "instruction": "You are given an image `street_car.png` of a red car parked on the street. Remove the car from the street. The result should be a high-quality image without visible artifacts.",
+        "resource": "street_car.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "071": {
+        "name": "street_tree_removal",
+        "instruction": "You are given an image `street_car.png` of a red car parked on the street. Remove the tree behind the car. The result should be a high-quality image without visible artifacts.",
+        "resource": "street_car.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "072": {
+        "name": "street_car_replacement",
+        "instruction": "You are given an image `street_car.png` of a red car parked on the street. Replace the red car with a green car. The result should be a high-quality image without visible artifacts.",
+        "resource": "street_car.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "073": {
+        "name": "street_tree_replacement",
+        "instruction": "You are given an image `street_car.png` of a red car parked on the street. Replace the tree behind the car with a white house. The result should be a high-quality image without visible artifacts.",
+        "resource": "street_car.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "074": {
+        "name": "street_ground_replacement",
+        "instruction": "You are given an image `street_car.png` of a red car parked on the street. Replace the ground on the street with grass. The result should be a high-quality image without visible artifacts.",
+        "resource": "street_car.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "075": {
+        "name": "castle_style_cloning",
+        "instruction": "You are given an image `large_castle.png`, which is a photo of a large castle. Follow the architecture style of the castle to generate a large church. The result should be an image of a church with a similar architectural style.",
+        "resource": "large_castle.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "076": {
+        "name": "bedroom_style_cloning",
+        "instruction": "You are given an image `warm_bedroom.jpg`, which is a photo of a bedroom with warm lighting. Follow the style of the bedroom to generate a living room. The result should be an image of a living room with a similar decoration style.",
+        "resource": "warm_bedroom.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "077": {
+        "name": "girl_pose_cloning",
+        "instruction": "You are given an image `play_guitar.jpg` of a girl playing the guitar. Generate an image of an old man playing the guitar in a forest with the same pose as the girl. The result should be a realistic image of an old man playing the guitar.",
+        "resource": "play_guitar.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "078": {
+        "name": "man_pose_cloning",
+        "instruction": "You are given an image `jacket_man.jpg`, which is a photo of a man wearing a jacket. Generate a standing robot with the same pose as the man. The result should be a realistic image of a robot standing.",
+        "resource": "jacket_man.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "079": {
+        "name": "pagoda_area_composition",
+        "instruction": "Generate an image of a pagoda in a quite forest. The pagoda should be placed in the left half of the image, with trees filling other areas. The result should be a high-quality image of a pagoda in a forest.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "080": {
+        "name": "ship_area_composition",
+        "instruction": "Generate an image of a ship floating in the sea. The ship should be placed in the right half of the image, with the sea filling other areas. The result should be a high-quality image of a ship in the sea.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "081": {
+        "name": "budapest_image_extension",
+        "instruction": "You are given an image `budapest_city.jpg`, which is a photo of the city of Budapest. Extend the image by 128 pixels on both the left and right sides. The result should be a larger image of the city of Budapest.",
+        "resource": "budapest_city.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "082": {
+        "name": "man_image_extension",
+        "instruction": "You are given an image `young_man.jpg`, which is a photo of a young man. Extend the image by 256 pixels on the bottom side. The result should be a more complete image of the man.",
+        "resource": "young_man.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "083": {
+        "name": "people_image_upscaling",
+        "instruction": "You are given an image `many_people.png`, which is a low-resolution photo of a crowd of people. Upscale the image by 4x. The result should be a high-resolution image of the crowd of people.",
+        "resource": "many_people.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "084": {
+        "name": "bedroom_image_upscaling",
+        "instruction": "You are given an image `warm_bedroom.jpg`, which is a photo of a bedroom. Upscale the image by 2x. The result should be a high-resolution image of the bedroom.",
+        "resource": "warm_bedroom.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "085": {
+        "name": "taylor_video_interpolation",
+        "instruction": "You are given a video `taylor_swift.mp4`, which is a video of Taylor Swift speaking on stage. Interpolate the video to increase the frame rate by 3x. The result should be a smoother video of Taylor Swift speaking.",
+        "resource": "taylor_swift.mp4",
+        "modality": "v2v",
+        "category": "vanilla"
+    },
+    "086": {
+        "name": "car_video_interpolation",
+        "instruction": "You are given a video `passing_car.mp4` of a gray car passing by on the road. Interpolate the video to increase the frame rate by 2x. The result should be a smoother video of the gray car passing by.",
+        "resource": "passing_car.mp4",
+        "modality": "v2v",
+        "category": "vanilla"
+    },
+    "087": {
+        "name": "white_text_overlay",
+        "instruction": "Generate an image of a white text of \"Have a nice day!\" overlaid on a black background. The text should be centered in the image. The result should be an image with the text overlaid.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "088": {
+        "name": "golden_text_overlay",
+        "instruction": "Generate an image of a golden text of \"Lorem Ipsum\" overlaid on a black background. The text should be at the top-left corner of the image. The result should be an image with the text overlaid.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "vanilla"
+    },
+    "089": {
+        "name": "dog_scene_enhancement",
+        "instruction": "You are given an image `toy_dog.jpg` of a furry toy dog. Replace the background with a scene of a sunny park with green grass while keeping the lighting and shadows consistent. The result should be an image of the toy dog in the park scene.",
+        "resource": "toy_dog.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "090": {
+        "name": "cat_scene_enhancement",
+        "instruction": "You are given an image `standing_cat.jpg`, which is a photo of a standing cat. Replace the background with a scene of a cozy living room with a sofa and a window while keeping the lighting and shadows consistent. The result should be an image of the cat in the living room scene.",
+        "resource": "standing_cat.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "091": {
+        "name": "flower_scribble_repaint",
+        "instruction": "You are given an image `flower_scribble.jpg`, which is a scribble of a flower. Repaint the scribble into a realistic red flower. The result should be an image of a red flower.",
+        "resource": "flower_scribble.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "092": {
+        "name": "pigeon_scribble_repaint",
+        "instruction": "You are given an image `pigeon_scribble.png`, which is a scribble of a pigeon. Repaint the scribble into a realistic gray pigeon. The result should be an image of a gray pigeon.",
+        "resource": "pigeon_scribble.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "093": {
+        "name": "apple_image_repaint",
+        "instruction": "You are given an image `red_apple.jpg`, which is a photo of a red apple. Change it into a green apple while maintaining other details. The result should be an image of a green apple.",
+        "resource": "red_apple.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "094": {
+        "name": "man_image_repaint",
+        "instruction": "You are given an image `bareheaded_man.png`, which is a photo of a bareheaded man. Change it into a man wearing a cap on his head while maintaining other details. The result should be an image of a man wearing a cap.",
+        "resource": "bareheaded_man.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "095": {
+        "name": "logo_image_repaint",
+        "instruction": "You are given an image `colorful_logo.png`, which is a sample logo of a bird. Convert it into a cubist art poster with dark colors. The result should be an image of a poster without watermark.",
+        "resource": "colorful_logo.png",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "096": {
+        "name": "calligraphy_image_repaint",
+        "instruction": "You are given an image `chinese_calligraphy.jpg`, which is a photo of Chinese calligraphy. Convert it into a poster with traditional Chinese style. The result should be an image of a poster without watermark.",
+        "resource": "chinese_calligraphy.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "097": {
+        "name": "man_face_refinement",
+        "instruction": "You are given an image `president_trump.jpg`, which is a photo of President Trump. Refine the face to make it look better. The result should be an image of President Trump with a refined face.",
+        "resource": "president_trump.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "098": {
+        "name": "woman_face_refinement",
+        "instruction": "You are given an image `woman_photo.jpg`, which is a photo of a woman smiling. Refine the face to make it look better. The result should be an image of a refined face of the woman.",
+        "resource": "woman_photo.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "099": {
+        "name": "man_portrait_conversion",
+        "instruction": "You are given an image `president_trump.jpg`, which is a photo of President Trump. Convert it into a portrait in a golden palace while keeping other details. The result should be an image of President Trump as a portrait.",
+        "resource": "president_trump.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "100": {
+        "name": "woman_portrait_conversion",
+        "instruction": "You are given an image `woman_photo.jpg`, which is a photo of a woman smiling. Convert it into a portrait in a large hall while keeping other details. The result should be an image of the woman as a portrait.",
+        "resource": "woman_photo.jpg",
+        "modality": "i2i",
+        "category": "vanilla"
+    },
+    "101": {
+        "name": "cat_generation_and_upscaling",
+        "instruction": "First generate an image of a cat in a snowy forest. Then upscale it by 2x. The result should be a high-resolution image of a cat",
+        "resource": null,
+        "modality": "t2i",
+        "category": "complex"
+    },
+    "102": {
+        "name": "street_generation_and_upscaling",
+        "instruction": "First generate an image of a city street at night. Then upscale it by 2x. The result should be a high-resolution image of a city street.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "complex"
+    },
+    "103": {
+        "name": "mountain_image_generation_and_upscaling",
+        "instruction": "First generate an image of a snowy mountain peak with clouds gently moving around it. Then upscale the image by 2x. The result should be a high-resolution image of a snowy mountain.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "complex"
+    },
+    "104": {
+        "name": "bird_video_generation_and_upscaling",
+        "instruction": "First generate a 2-second video of a bird flying over a dense forest during sunrise. Then upscale the video by 2x. The result should be a high-resolution video of a bird flying over the forest.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "105": {
+        "name": "sunrise_video_generation_and_upscaling",
+        "instruction": "First generate a 2-second video of the sun rising over a mountain range with mist in the valleys. Then upscale the video by 2x. The result should be a high-resolution video of a mountain sunrise.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "106": {
+        "name": "robot_video_generation_and_upscaling",
+        "instruction": "First generate a 2-second video of a robot spinning in circles on a white background. Then upscale the video by 2x. The result should be a high-resolution video of the spinning robot.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "107": {
+        "name": "bedroom_extension_and_upscaling",
+        "instruction": "You are given an image `warm_bedroom.jpg`, which is a photo of a bedroom with warm lighting. First extend the image by 128 pixels on both left and right sides. Then upscale it by 2x. The result should be a high-resolution image of the bedroom.",
+        "resource": "warm_bedroom.jpg",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "108": {
+        "name": "street_car_replacement_and_upscaling",
+        "instruction": "You are given an image `street_car.png` of a red car parked on the street. First replace the red car with a green car. Then upscale the image by 2x. The result should be a high-resolution image of a green car.",
+        "resource": "street_car.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "109": {
+        "name": "woman_face_refinement_and_upscaling",
+        "instruction": "You are given an image `woman_photo.jpg`, which is a photo of a woman smiling. First refine the face to make it look better. Then upscale it by 2x. The result should be a high-resolution image of the woman as a portrait.",
+        "resource": "woman_photo.jpg",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "110": {
+        "name": "woman_portrait_conversion_and_upscaling",
+        "instruction": "You are given an image `woman_photo.jpg`, which is a photo of a woman smiling. First convert it into a portrait in a large hall while keeping other details. Then upscale it by 2x. The result should be a high-resolution image of the woman as a portrait.",
+        "resource": "woman_photo.jpg",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "111": {
+        "name": "girl_video_generation_and_interpolation",
+        "instruction": "First generate a 2-second video of a girl dancing in a room with colorful lights. Then interpolate the video to increase the frame rate by 3x. The result should be a smoother video of the dancing girl.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "112": {
+        "name": "city_video_generation_and_interpolation",
+        "instruction": "First generate a 2-second video of a bustling city at night with skyscrapers and bright lights. Then interpolate the video to increase the frame rate by 3x. The result should be a smoother video of the city at night.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "113": {
+        "name": "fish_video_generation_and_interpolation",
+        "instruction": "First generate a 2-second video of colorful fish swimming in an aquarium with bubbles rising to the surface. Then interpolate the video to increase the frame rate by 3x. The result should be a smoother video of the swimming fish.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "114": {
+        "name": "budapest_video_generation_and_interpolation",
+        "instruction": "You are given an image `budapest_city.jpg`, which is a photo of the city of Budapest. First create a 2-second video of the cityscape with the perspective changing. Then interpolate the video to increase the frame rate by 3x. The result should be a smoother video of the cityscape.",
+        "resource": "budapest_city.jpg",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "115": {
+        "name": "trump_video_generation_and_interpolation",
+        "instruction": "You are given an image `president_trump.jpg`, which is a photo of President Trump. First create a 2-second video of President Trump speaking based on the image. Then interpolate the video to increase the frame rate by 3x. The result should be a smoother video of President Trump speaking.",
+        "resource": "president_trump.jpg",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "116": {
+        "name": "car_video_generation_and_interpolation",
+        "instruction": "You are given an image `street_car.png`, which is a photo of a red car parked on the street. First create a 2-second video of the car driving on the street based on the image. Then interpolate the video to increase the frame rate by 3x. The result should be a smoother video of the car driving on the street.",
+        "resource": "street_car.png",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "117": {
+        "name": "taylor_upscaling_and_interpolation",
+        "instruction": "You are given a video `taylor_swift.mp4`, which is a video of Taylor Swift speaking on stage. First upscale the video to 2x. Then interpolate the video to increase the frame rate by 2x. The result should be a high-quality video of Taylor Swift speaking.",
+        "resource": "taylor_swift.mp4",
+        "modality": "v2v",
+        "category": "complex"
+    },
+    "118": {
+        "name": "idol_upscaling_and_interpolation",
+        "instruction": "You are given a video `male_idol.mp4` of a male idol dancing. First upscale the video to 2x. Then interpolate the video to increase the frame rate by 2x. The result should be a high-quality video of the male idol dancing.",
+        "resource": "male_idol.mp4",
+        "modality": "v2v",
+        "category": "complex"
+    },
+    "119": {
+        "name": "grassland_style_cloning_and_repaint",
+        "instruction": "You are given an image `large_grassland.png` of a large grassland under a clear sky. First follow its style to generate a new image of a grassland. Then convert it into a painting with oil style. The result should be an image of a grassland as a painting.",
+        "resource": "large_grassland.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "120": {
+        "name": "girl_pose_cloning_and_repaint",
+        "instruction": "You are given an image `play_guitar.jpg` of a girl playing the guitar. First generate an image of an old man playing the guitar in a forest with the same pose as the girl. Then convert it into a painting with oil style. The result should be an image of an old man playing the guitar as a painting.",
+        "resource": "play_guitar.jpg",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "121": {
+        "name": "table_fork_removal_and_repaint",
+        "instruction": "You are given an image `dish_table.png` of a table filled with dishes. First remove the fork on the table. Then convert the image into a painting with watercolor style. The result should be an image of the table without a fork as a watercolor painting.",
+        "resource": "dish_table.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "122": {
+        "name": "stream_train_removal_and_repaint",
+        "instruction": "You are given an image `mountain_stream.png` of a stream flowing through a mountain. First remove the train near the stream. Then convert the image into a painting with watercolor style. The result should be a high-quality image of the stream as a watercolor painting.",
+        "resource": "mountain_stream.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "123": {
+        "name": "street_car_removal_and_repaint",
+        "instruction": "You are given an image `street_car.png` of a red car parked on the street. First remove the car from the street. Then convert the image into a painting with oil style. The result should be a high-quality image of the street without the car as an oil painting.",
+        "resource": "street_car.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "124": {
+        "name": "table_dish_replacement_and_repaint",
+        "instruction": "You are given an image `dish_table.png` of a table filled with dishes. First replace the dish in the plate with a cake. Then convert the image into a painting with watercolor style. The result should be a high-quality image of the table with a cake as a watercolor painting.",
+        "resource": "dish_table.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "125": {
+        "name": "pagoda_area_composition_and_repaint",
+        "instruction": "First generate an image of a pagoda in a quiet forest. The pagoda should be placed in the left half of the image, with trees filling other areas. Then convert the image into a painting with oil style. The result should be a high-quality image of the pagoda as an oil painting.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "complex"
+    },
+    "126": {
+        "name": "ship_area_composition_and_repaint",
+        "instruction": "First generate an image of a ship floating in the sea. The ship should be placed in the right half of the image, with the sea filling other areas. Then convert the image into a painting with watercolor style. The result should be a high-quality image of the ship as a watercolor painting.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "complex"
+    },
+    "127": {
+        "name": "player_generation_and_video_conversion",
+        "instruction": "First generate an image of a male basketball player shooting in a gym. Then convert it into a 2-second video of the player shooting. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "128": {
+        "name": "rider_generation_and_video_conversion",
+        "instruction": "First generate an image of a woman riding a motorcycle on a highway. Then convert it into a 2-second video of the woman riding the motorcycle. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "129": {
+        "name": "dog_generation_and_video_conversion",
+        "instruction": "First generate an image of a dog sitting on a grass field. Then convert it into a 2-second video of the dog looking around. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "130": {
+        "name": "bus_generation_and_video_conversion",
+        "instruction": "First generate an image of a bus running in a city street. Then convert it into a 2-second video of the bus moving through the street. The result should be a high-quality video.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "131": {
+        "name": "castle_style_cloning_and_video_conversion",
+        "instruction": "You are given an image `large_castle.png`, which is a photo of a large castle. First follow the architecture style of the castle to generate a large church. Then convert it into a 2-second video. The result should be a video of a large church.",
+        "resource": "large_castle.png",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "132": {
+        "name": "bedroom_style_cloning_and_video_conversion",
+        "instruction": "You are given an image `warm_bedroom.jpg`, which is a photo of a bedroom with warm lighting. First follow the style of the bedroom to generate a living room. Then convert it into a 2-second video of the living room. The result should be a high-quality video.",
+        "resource": "warm_bedroom.jpg",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "133": {
+        "name": "girl_pose_cloning_and_video_conversion",
+        "instruction": "You are given an image `play_guitar.jpg` of a girl playing the guitar. First generate an image of an old man playing the guitar in a forest with the same pose as the girl. Then convert it into a 2-second video. The result should be a video of an old man playing the guitar.",
+        "resource": "play_guitar.jpg",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "134": {
+        "name": "man_pose_cloning_and_video_conversion",
+        "instruction": "You are given an image `jacket_man.jpg`, which is a photo of a man wearing a jacket. First generate a standing robot with the same pose as the man. Then convert it into a 2-second video of the robot moving slightly. The result should be a high-quality video of the robot.",
+        "resource": "jacket_man.jpg",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "135": {
+        "name": "cat_scene_enhancement_and_video_conversion",
+        "instruction": "You are given an image `standing_cat.jpg`, which is a photo of a standing cat. First replace the background with a cozy living room scene. Then convert it into a 2-second video of the cat looking around in the living room. The result should be a high-quality video.",
+        "resource": "standing_cat.jpg",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "136": {
+        "name": "pigeon_scribble_repaint_and_video_conversion",
+        "instruction": "You are given an image `pigeon_scribble.png`, which is a scribble of a pigeon. First repaint the scribble into a realistic gray pigeon. Then convert it into a 2-second video of the pigeon flying. The result should be a high-quality video.",
+        "resource": "pigeon_scribble.png",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "137": {
+        "name": "woman_face_refinement_and_video_conversion",
+        "instruction": "You are given an image `woman_photo.jpg`, which is a photo of a woman smiling. First refine the face to make it look better. Then convert it into a 2-second video of the woman smiling. The result should be a high-quality video.",
+        "resource": "woman_photo.jpg",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "138": {
+        "name": "woman_portrait_conversion_and_video_conversion",
+        "instruction": "You are given an image `woman_photo.jpg`, which is a photo of a woman smiling. First convert it into a portrait in a large hall while keeping other details. Then convert it into a 2-second video of the portrait. The result should be a high-quality video.",
+        "resource": "woman_photo.jpg",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "139": {
+        "name": "pagoda_generation_and_scene_enhancement",
+        "instruction": "First generate an image of a pagoda in a quiet forest. Then replace the background with a scene of a mountain landscape. The result should be a high-quality image of a pagoda with a mountain background.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "complex"
+    },
+    "140": {
+        "name": "ship_generation_and_scene_enhancement",
+        "instruction": "First generate an image of a ship floating in the sea. Then replace the background with a sunset sky. The result should be a high-quality image of a ship in the sea during sunset.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "complex"
+    },
+    "141": {
+        "name": "rider_generation_and_scene_enhancement",
+        "instruction": "First generate an image of a woman riding a motorcycle on a highway. Then replace the background with a modern city skyline at night. The result should be a high-quality image of a motorcycle rider with a city skyline background.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "complex"
+    },
+    "142": {
+        "name": "mountain_video_generation_and_scene_enhancement",
+        "instruction": "First generate a 2-second video of a snowy mountain peak with clouds gently moving around it. Then replace the background with a dense forest scene. The result should be a high-quality video of the snowy mountain with a forest background.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "143": {
+        "name": "bird_video_generation_and_scene_enhancement",
+        "instruction": "First generate a 2-second video of a bird flying over a dense forest during sunrise. Then replace the background with a mountain range. The result should be a high-quality video of a bird flying over the mountains.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "144": {
+        "name": "ballet_video_generation_and_scene_enhancement",
+        "instruction": "First generate a 2-second video of a ballet dancer performing on stage with spotlights. Then replace the background with a red carpet. The result should be a high-quality video of the ballet dancer on a red carpet.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "complex"
+    },
+    "145": {
+        "name": "castle_style_cloning_and_scene_enhancement",
+        "instruction": "You are given an image `large_castle.png`, which is a photo of a large castle. First follow the architecture style of the castle to generate a large church. Then replace the background with a mountain landscape. The result should be a high-quality image of a church with a mountain background.",
+        "resource": "large_castle.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "146": {
+        "name": "girl_pose_cloning_and_scene_enhancement",
+        "instruction": "You are given an image `play_guitar.jpg` of a girl playing the guitar. First generate an image of an old man playing the guitar in a forest with the same pose as the girl. Then replace the background with a sunset beach. The result should be a high-quality image of an old man playing the guitar at the beach.",
+        "resource": "play_guitar.jpg",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "147": {
+        "name": "man_portrait_conversion_and_scene_enhancement",
+        "instruction": "You are given an image `president_trump.jpg`, which is a photo of President Trump. First convert it into a portrait while keeping other details. Then replace the background with a scene of a snowy forest. The result should be an image of President Trump as a portrait in a snowy forest.",
+        "resource": "president_trump.jpg",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "148": {
+        "name": "woman_portrait_conversion_and_scene_enhancement",
+        "instruction": "You are given an image `woman_photo.jpg`, which is a photo of a woman smiling. First convert it into a portrait while keeping other details. Then replace the background with a scene of a night street. The result should be an image of the woman as a portrait in a night street.",
+        "resource": "woman_photo.jpg",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "149": {
+        "name": "book_generation_and_text_overlay",
+        "instruction": "First generate an image of a book on a table. Then overlay a white text \"Book\" at the top left corner of the image. The result should be an image of a book with the required text.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "complex"
+    },
+    "150": {
+        "name": "logo_repaint_and_text_overlay",
+        "instruction": "You are given an image `colorful_logo.png`, which is a sample logo of a bird. First convert it into a cubist art poster with dark colors. Then overlay a white text \"Cubist Poster\" at the center of the poster. The result should be an image of a poster with the required text.",
+        "resource": "colorful_logo.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "151": {
+        "name": "stream_train_removal_and_content_cloning",
+        "instruction": "You are given an image `mountain_stream.png` of a stream flowing through a mountain. First remove the train near the stream. Then follow its content to generate a new image of a stream in a mountain. The result should be a high-quality image of a mountain stream.",
+        "resource": "mountain_stream.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "152": {
+        "name": "table_fork_removal_and_content_cloning",
+        "instruction": "You are given an image `dish_table.png` of a table filled with dishes. First remove the fork on the table. Then follow its content to generate a new image of a table. The result should be a high-quality image of a table.",
+        "resource": "dish_table.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "153": {
+        "name": "beach_generation_and_style_cloning",
+        "instruction": "First generate an image of a beach at sunset with waves gently crashing on the shore. Then follow its style to generate a new image of a sunset over a mountain. The result should be a high-quality image of a mountain sunset.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "complex"
+    },
+    "154": {
+        "name": "scribble_repaint_and_style_cloning",
+        "instruction": "You are given an image `flower_scribble.jpg`, which is a scribble of a flower. First repaint the scribble into a realistic red flower. Then follow its style to generate a new image of a large flower field. The result should be a high-quality image of a flower field.",
+        "resource": "flower_scribble.jpg",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "155": {
+        "name": "grassland_style_cloning_and_image_extension",
+        "instruction": "You are given an image `large_grassland.png` of a large grassland under a clear sky. First follow its style to generate a new image of a grassland. Then extend the image by 128 pixels on both the left and right sides. The result should be a larger image of a grassland.",
+        "resource": "large_grassland.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "156": {
+        "name": "girl_pose_cloning_and_image_extension",
+        "instruction": "You are given an image `play_guitar.jpg` of a girl playing the guitar. First generate an image of an old man playing the guitar in a forest with the same pose as the girl. Then extend the image by 128 pixels on both the left and right sides. The result should be a larger image of an old man playing the guitar.",
+        "resource": "play_guitar.jpg",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "157": {
+        "name": "street_car_replacement_and_image_extension",
+        "instruction": "You are given an image `street_car.png` of a red car parked on the street. First replace the red car with a green car. Then extend the image by 128 pixels on both the left and right sides. The result should be a larger image of a green car.",
+        "resource": "street_car.png",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "158": {
+        "name": "woman_portrait_conversion_and_image_extension",
+        "instruction": "You are given an image `woman_photo.jpg`, which is a photo of a woman smiling. First convert it into a portrait in a large hall while keeping other details. Then extend the image by 128 pixels on both the left and right sides. The result should be a larger image of the woman as a portrait.",
+        "resource": "woman_photo.jpg",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "159": {
+        "name": "woman_portrait_conversion_and_image_extension_and_upscaling",
+        "instruction": "You are given an image `woman_photo.jpg`, which is a photo of a woman smiling. First convert it into a portrait in a large hall while keeping other details. Then extend the image by 128 pixels on both the left and right sides. Finally upscale the image by 2x. The result should be a larger image of the woman as a portrait.",
+        "resource": "woman_photo.jpg",
+        "modality": "i2i",
+        "category": "complex"
+    },
+    "160": {
+        "name": "castle_style_cloning_and_video_conversion_and_upscaling_interpolation",
+        "instruction": "You are given an image `large_castle.png`, which is a photo of a large castle. First follow its style to generate a new image of a large church. Then convert it into a 2-second video of the church. Finally, upscale it by 2x and interpolate it to increase the frame rate by 3x. The result should be a high-quality video of a church.",
+        "resource": "large_castle.png",
+        "modality": "i2v",
+        "category": "complex"
+    },
+    "161": {
+        "name": "hand_defect_refinement",
+        "instruction": "You are given an image `abnormal_hands.png` generated by an AI model, containing a young girl raising her hands. However, there are obvious defects with the hands. Try to refine the image to make the hands look realistic. The result should be an image maintaining most of the original content, but with improved hands.",
+        "resource": "abnormal_hands.png",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "162": {
+        "name": "old_photo_refinement",
+        "instruction": "You are given an image `old_photo.jpg` of an old photo that is unclear and black-and-white. Restore the photo so that it is clear and colorful. The result should be a high-quality image.",
+        "resource": "old_photo.jpg",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "163": {
+        "name": "breaking_bad_poster",
+        "instruction": "Generate a poster for a series named \"Breaking Bad\". The result should be a vertical image of the main character, Walter White, wearing a white vest with a serious expression, standing in front of a motorhome in the desert. The title \"Breaking Bad\" should be displayed in the top center of the image, followed by the tagline \"Say my name\".",
+        "resource": null,
+        "modality": "t2i",
+        "category": "creative"
+    },
+    "164": {
+        "name": "ice_cream_style",
+        "instruction": "You are given an image `large_castle.png` of a large castle standing on top of a hill. Stylize the castle with a whimsical \"ice cream\" aesthetic while maintaining its original structure. The result should be an image with the castle transformed into a colorful and fantastic ice cream castle.",
+        "resource": "large_castle.png",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "165": {
+        "name": "gold_material_statue",
+        "instruction": "You are given an image `toy_dog.jpg` of a furry toy dog. Transform the toy dog into a golden statue with intricate details and a shiny surface. The result should be an image of a golden dog statue with similar details as the original toy dog.",
+        "resource": "toy_dog.jpg",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "166": {
+        "name": "skin_color_modification",
+        "instruction": "You are given an image `yellow_race.png`, which is a photo of an Asian male. Try to modify the character into a white male with white skin. The result should be a realistic image with the facial features preserved.",
+        "resource": "yellow_race.png",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "167": {
+        "name": "comic_strip_generation",
+        "instruction": "Generate an image of a comic strip with four panels. The first panel should show a man waking up in bed, the second panel should show him looking at his smartphone, the third panel should show the smartphone displaying that it is Sunday, and the fourth panel should show the man continue to lie in bed. The result should be of high quality and visually appealing, with each panel clearly depicting the described scene.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "creative"
+    },
+    "168": {
+        "name": "identification_photo_conversion",
+        "instruction": "You are given an image `elon_musk.jpg`, which is a photo of Elon Musk. Convert the photo into an identification photo format so that only the head and shoulders are visible, and the background is plain red. The result should be a high-quality image suitable for an identification card.",
+        "resource": "elon_musk.jpg",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "169": {
+        "name": "book_cover_design",
+        "instruction": "Design a book cover for a novel titled \"A Song of Ice and Fire\". The cover should feature a dragon breathing fire, a snowy landscape, and a sword. The title of the book together with the author's name \"George R. R. Martin\" should be displayed prominently on the cover. The result should be an image of a visually striking book cover.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "creative"
+    },
+    "170": {
+        "name": "character_gender_swap",
+        "instruction": "You are given an image `lovely_man.jpg`, which is a photo of a male celebrity. Transform the man in the image into a beautiful woman with ponytail hair while preserving the facial identity. The result should be a realistic image of a woman with the same identity as the original man.",
+        "resource": "lovely_man.jpg",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "171": {
+        "name": "cosmetic_product_illumination",
+        "instruction": "You are given an image `cosmetic_product.jpg`, which contains two bottles of cosmetic products illuminated by a soft yellow light. Modify the illumination into a bright pink light to create a more vibrant and attractive appearance. The result should be an image of the cosmetic products with the new illumination.",
+        "resource": "cosmetic_product.jpg",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "172": {
+        "name": "character_cloth_modification",
+        "instruction": "You are given an image `jacket_man.jpg`, which is a photo of a man wearing a black jacket. Change the black jacket into a white hoodie while ensuring that the modification looks natural and realistic. The result should be a high-quality image of the man wearing a white hoodie.",
+        "resource": "jacket_man.jpg",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "173": {
+        "name": "character_age_progression",
+        "instruction": "You are given an image `young_man.jpg`, which is a photo of a young man. Generate another photo to show the man as an elderly version of himself, with wrinkles, gray hair, and other signs of aging, while preserving his identity. The result should be a realistic image of an older man.",
+        "resource": "young_man.jpg",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "174": {
+        "name": "handwritten_letter_generation",
+        "instruction": "Generate an image of a handwritten letter on a piece of paper. The letter should be addressed to \"My Darling\"  and signed with the name \"Juliet\". The content of the letter should express love and longing. The result should be an image of the handwritten letter, with readable and reasonable text.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "creative"
+    },
+    "175": {
+        "name": "character_hairstyle_modification",
+        "instruction": "You are given an image `bareheaded_man.png`, which is a photo of a bareheaded man. Modify the image to add curly hair with medium length to the man while ensuring that the hairstyle looks natural and realistic. The result should be an image of the man where only the hairstyle is changed.",
+        "resource": "bareheaded_man.png",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "176": {
+        "name": "arch_material_modification",
+        "instruction": "You are given an image `red_bridge.jpg` of a red bridge. Change the brick material of the arch above the bridge into a metallic material with a reflective surface. The result should be an image of the bridge with the modified arch material.",
+        "resource": "red_bridge.jpg",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "177": {
+        "name": "interior_plan_generation",
+        "instruction": "Generate an interior plan for a house from a top-down perspective. The plan should include a living room, a kitchen, a bedroom, and a bathroom, with furniture and appliances arranged in a realistic and reasonable layout. The result should be a high-quality image of the interior plan.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "creative"
+    },
+    "178": {
+        "name": "photo_watermark_generation",
+        "instruction": "Generate an image of a landscape with a visible watermark in the bottom right corner. The watermark should consist of the text \"Sample Watermark\" in a stylish and elegant font. The result should be an image of the landscape with the watermark.",
+        "resource": null,
+        "modality": "t2i",
+        "category": "creative"
+    },
+    "179": {
+        "name": "photo_watermark_removal",
+        "instruction": "You are given an image `watermarked_photo.png`, which is a photo of mountains and rivers with a visible watermark in the bottom right corner. Remove the watermark from the image while maintaining the quality and content of the original photo. The result should be a high-quality image without the watermark.",
+        "resource": "watermarked_photo.png",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "180": {
+        "name": "clay_sculpture_conversion",
+        "instruction": "You are given an image `president_trump.jpg`, which is a photo of Donald Trump. Generate an image of a clay sculpture based on the photo, which preserves the facial features and clothing details of the original image. The result should be a 3D-like image of a clay sculpture with a cartoonish style.",
+        "resource": "president_trump.jpg",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "181": {
+        "name": "human_element_removal",
+        "instruction": "You are given an image `red_bridge.jpg`, which is a photo of a red bridge with a person standing on it. Remove the person from the image while maintaining the original appearance of the bridge. The result should be an image of the bridge without the human element.",
+        "resource": "red_bridge.jpg",
+        "modality": "i2i",
+        "category": "creative"
+    },
+    "182": {
+        "name": "video_face_swap",
+        "instruction": "You are given a video `taylor_swift.mp4`, which is a video of Taylor Swift speaking on stage. Swap the face of Taylor Swift with the face of Emma Watson in the video while preserving the facial expressions and lip movements. The result should be a video of Emma Watson speaking with the other elements unchanged.",
+        "resource": "taylor_swift.mp4",
+        "modality": "v2v",
+        "category": "creative"
+    },
+    "183": {
+        "name": "video_transition_generation",
+        "instruction": "Generate a 3-second video composed of two clips. The first clip should show a sunrise over the mountains, and the second clip should show a sunset over the ocean. Create a smooth transition between the two clips, where the first clip fades into the second clip. The result should be a high-quality video with a seamless transition effect.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "creative"
+    },
+    "184": {
+        "name": "close_up_generation",
+        "instruction": "Generate a 3-second video composed of two clips. The first clip should show a boy sitting on the grass, and the second clip should show a close-up of the boy. The two clips should be consistent in lighting and color tone. The result should be a high-quality video including a wide shot and a close-up shot.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "creative"
+    },
+    "185": {
+        "name": "speaking_state_cloning",
+        "instruction": "You are given a video `speaking_man.mp4` of an old man speaking. Generate a new video of a beautiful girl speaking with the same lip movements and facial expressions as the old man. The result should be a realistic video of a girl speaking.",
+        "resource": "speaking_man.mp4",
+        "modality": "v2v",
+        "category": "creative"
+    },
+    "186": {
+        "name": "realistic_dance_cloning",
+        "instruction": "You are given a video `male_idol.mp4` of a male idol dancing. Generate a new video of a panda dancing with the same movements as the male idol. The result should be a realistic video of a dancing panda.",
+        "resource": "male_idol.mp4",
+        "modality": "v2v",
+        "category": "creative"
+    },
+    "187": {
+        "name": "cartoon_dance_cloning",
+        "instruction": "You are given a video `male_idol.mp4` of a male idol dancing. Generate a new video of an animated cartoon character dancing with the same movements as the male idol. The result should be a cartoon-style video of a dancing cartoon character.",
+        "resource": "male_idol.mp4",
+        "modality": "v2v",
+        "category": "creative"
+    },
+    "188": {
+        "name": "video_background_replacement",
+        "instruction": "You are given a video `male_idol.mp4` of a male idol dancing in a room. Replace the background of the video with a football stadium filled with cheering fans. The result should be a video of the idol dancing in a football field.",
+        "resource": "male_idol.mp4",
+        "modality": "v2v",
+        "category": "creative"
+    },
+    "189": {
+        "name": "creative_image_animation",
+        "instruction": "You are given an image `president_trump.jpg`, which is a photo of Donald Trump. Generate a 3-second video of a cartoon version of Donald Trump talking on the stage with the same outfit as the original image. The result should be a video of a cartoon version of Donald Trump speaking.",
+        "resource": "president_trump.jpg",
+        "modality": "i2v",
+        "category": "creative"
+    },
+    "190": {
+        "name": "age_progression_animation",
+        "instruction": "Generate a 3-second video showing the progression of a person's age from a baby to an elderly person. The video should include smooth transitions between different age stages, with each stage showing the person's face in detail. The result should be a high-quality video with consistent facial identity throughout the age progression.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "creative"
+    },
+    "191": {
+        "name": "season_transition_animation",
+        "instruction": "Generate a 3-second video showing the transition of seasons from winter to spring of the same landscape. The video should include changes in weather, vegetation, and lighting to depict the seasonal transition realistically. The result should be a high-quality video with smooth season transitions and consistent landscape elements.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "creative"
+    },
+    "192": {
+        "name": "bedroom_exploration_animation",
+        "instruction": "You are given an image `warm_bedroom.jpg`, which is a photo of a bedroom including a bed, a chair and some decorations. Generate a 3-second video based on the image to show the panoramic view of the bedroom from different angles. The result should be a video that explores the bedroom in a smooth manner.",
+        "resource": "warm_bedroom.jpg",
+        "modality": "i2v",
+        "category": "creative"
+    },
+    "193": {
+        "name": "logo_animation_generation",
+        "instruction": "Generate a 2-second video showing the animation of a logo. The logo should consist of a red dragon surrounded by flames, representing power and strength. The animation should include the dragon breathing fire and the flames flickering. The result should be a high-quality video of the logo animation.",
+        "resource": null,
+        "modality": "t2v",
+        "category": "creative"
+    },
+    "194": {
+        "name": "old_photo_animation",
+        "instruction": "You are given a image `old_photo.jpg`, which is a black-and-white photo of a woman. Modify the photo into a 2-second colorful video of the woman turning her head and smiling. The result should be a colorful video of the woman based on the original photo.",
+        "resource": "old_photo.jpg",
+        "modality": "i2v",
+        "category": "creative"
+    },
+    "195": {
+        "name": "video_illumination_modification",
+        "instruction": "You are given a video `two_babies.mp4` of two babies watching a laptop screen in a bright bedroom. Modify the illumination of the video as a night scene with a soft moonlight shining through the window. The result should be a video of the babies in a night scene with other elements unchanged.",
+        "resource": "two_babies.mp4",
+        "modality": "v2v",
+        "category": "creative"
+    },
+    "196": {
+        "name": "video_cap_removal",
+        "instruction": "You are given a video `speaking_man.mp4` of an old man wearing a white cap speaking. Remove the cap from his head while maintaining the consistency between the man and the background. The result should be a video of the old man speaking without the cap with other elements unchanged.",
+        "resource": "speaking_man.mp4",
+        "modality": "v2v",
+        "category": "creative"
+    },
+    "197": {
+        "name": "video_quality_enhancement",
+        "instruction": "You are given a video `baseball_game.mp4` of a baseball game with low resolution and blurry frames. Refine the video to make the frames clear and sharp. The result should be a high-quality video of the baseball game with improved visual quality.",
+        "resource": "baseball_game.mp4",
+        "modality": "v2v",
+        "category": "creative"
+    },
+    "198": {
+        "name": "cup_material_modification",
+        "instruction": "You are given a video `pour_water.mp4` of pouring water into a white ceramic cup. Change the cup material into a silver metallic cup with a reflective surface. The result should be a video of pouring water into the silver cup with other elements unchanged.",
+        "resource": "pour_water.mp4",
+        "modality": "v2v",
+        "category": "creative"
+    },
+    "199": {
+        "name": "passing_car_modification",
+        "instruction": "You are given a video `passing_car.mp4` of a gray car passing by on the road. Change the car color into red while maintaining the consistency of the video. The result should be a video of a red car passing by on the road with other elements unchanged.",
+        "resource": "passing_car.mp4",
+        "modality": "v2v",
+        "category": "creative"
+    },
+    "200": {
+        "name": "sketch_style_conversion",
+        "instruction": "You are given a video `male_idol.mp4` of a male idol dancing in a room. Convert the video into a sketch-style animation with black strokes and white background. The result should be a sketch-style video of the idol dancing while maintaining the original elements and movements.",
+        "resource": "male_idol.mp4",
+        "modality": "v2v",
+        "category": "creative"
+    }
+}

@@ -1,9 +1,0 @@
-- `CLIPTextEncodeWithWeight __Inspire`: The CLIPTextEncodeWithWeight node is designed to encode text inputs using a CLIP model, applying specified strength and additional weight adjustments to the encoding process. This node allows for the customization of text encoding, enabling more nuanced control over the generated embeddings by adjusting their intensity and bias.
-    - Parameters:
-        - `text`: The text input to be encoded. It serves as the primary content for the encoding process, influencing the generated embeddings. Type should be `STRING`.
-        - `strength`: A multiplier for the encoding strength. It adjusts the intensity of the text's representation in the embedding space. Type should be `FLOAT`.
-        - `add_weight`: An additional weight applied to the encoding. It allows for fine-tuning the bias of the embeddings, offering a way to subtly alter their characteristics. Type should be `FLOAT`.
-    - Inputs:
-        - `clip`: The CLIP model used for encoding the text. It determines the method and quality of the encoding, impacting the final embeddings. Type should be `CLIP`.
-    - Outputs:
-        - `conditioning`: The output is a conditioning object containing the encoded text along with any specified adjustments. It's ready for use in further processing or generation tasks. Type should be `CONDITIONING`.

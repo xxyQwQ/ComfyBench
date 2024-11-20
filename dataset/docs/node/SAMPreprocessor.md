@@ -1,7 +1,0 @@
-- `SAMPreprocessor`: The SAMPreprocessor node is designed to segment images using the SAM (Segment Anything Model) method. It preprocesses images to enhance them for further processing or analysis, specifically focusing on segmentation tasks.
-    - Parameters:
-        - `resolution`: Specifies the resolution to which the input image should be resized before processing. This parameter can influence the segmentation accuracy and performance. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be segmented. This is the primary data the SAMPreprocessor operates on, aiming to identify and segment various elements within. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a segmented version of the input image, where different segments are identified and separated. Type should be `IMAGE`.

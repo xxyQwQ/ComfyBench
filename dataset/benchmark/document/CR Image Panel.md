@@ -1,0 +1,15 @@
+- `CR Image Panel`: The CR Image Panel node is designed to create a panel layout for images, allowing users to organize and display multiple images in a structured grid format. It provides customization options for borders, outlines, and the arrangement of images within the grid, enhancing the visual presentation of image collections.
+    - Inputs:
+        - `image_1` (Required): The primary image to be included in the panel. This parameter is essential for initiating the layout of the image panel. Type should be `IMAGE`.
+        - `border_thickness` (Required): Specifies the thickness of the borders around each image in the panel, contributing to the visual separation and framing of the images. Type should be `INT`.
+        - `border_color` (Required): Defines the color of the borders around each image. This parameter allows for visual customization and can enhance the aesthetic appeal of the panel. Type should be `COMBO[STRING]`.
+        - `outline_thickness` (Required): Determines the thickness of the outline around the entire panel, providing an additional layer of visual definition. Type should be `INT`.
+        - `outline_color` (Required): Sets the color of the outline around the panel, further customizing the appearance and emphasizing the panel's boundaries. Type should be `COMBO[STRING]`.
+        - `layout_direction` (Required): Determines the arrangement direction of the images within the panel, either horizontally or vertically. Type should be `COMBO[STRING]`.
+        - `image_2` (Optional): An optional second image to include in the panel, allowing for more complex layouts. Type should be `IMAGE`.
+        - `image_3` (Optional): An optional third image to include in the panel, further expanding the layout possibilities. Type should be `IMAGE`.
+        - `image_4` (Optional): An optional fourth image to include in the panel, maximizing the layout customization. Type should be `IMAGE`.
+        - `border_color_hex` (Optional): An optional hexadecimal color code for the border color, offering an alternative way to specify the border color. Type should be `STRING`.
+    - Outputs:
+        - `image`: The final image output of the panel, combining all input images according to the specified layout and customization options. Type should be `IMAGE`.
+        - `show_help`: A URL providing additional help and documentation for the CR Image Panel node. Type should be `STRING`.

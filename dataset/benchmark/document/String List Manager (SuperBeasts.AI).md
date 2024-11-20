@@ -1,0 +1,6 @@
+- `String List Manager (SuperBeasts.AI)`: The String List Manager node is designed to reorder a list of strings based on a specified new order. It allows for dynamic reorganization of string elements, facilitating customized sequencing or prioritization of data within a list.
+    - Inputs:
+        - `frames_per_image` (Required): Specifies the number of frames to be associated with each image, affecting the output string format by determining the numerical prefix for each string. Type should be `INT`.
+        - `new_order` (Optional): Defines a custom order for the strings to be rearranged. If provided, strings are reordered according to the indices specified in this parameter. Type should be `STRING`.
+    - Outputs:
+        - `string`: Outputs a reordered list of strings, formatted with frame numbers as prefixes, based on the input order and frames per image. Type should be `STRING`.

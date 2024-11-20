@@ -1,0 +1,6 @@
+- `BitwiseAndMaskForEach`: The BitwiseAndMaskForEach node applies a bitwise AND operation between a base segmentation (or segments) and a mask for each segment, effectively combining the mask information with each segment. This operation is useful for refining segmentation results by incorporating additional mask constraints.
+    - Inputs:
+        - `base_segs` (Required): The base segments to which the mask will be applied. This input is crucial for defining the scope of the operation and determining the segments that will be refined by the mask. Type should be `SEGS`.
+        - `mask_segs` (Required): The mask segments to be applied to the base segments. These masks dictate the areas of interest within each segment and are essential for the bitwise AND operation. Type should be `SEGS`.
+    - Outputs:
+        - `segs`: The resulting segments after applying the bitwise AND operation with the mask. This output reflects the refined segmentation, incorporating the constraints imposed by the mask. Type should be `SEGS`.

@@ -1,0 +1,6 @@
+- `SaltMaskClipHardeningFilter`: This node applies a clip hardening filter to mask regions, enhancing their edges and details through a sharpening process. It allows for adjustable strength to control the intensity of the effect.
+    - Inputs:
+        - `masks` (Required): The masks to be processed, enhancing their clarity and definition. Type should be `MASK`.
+        - `strength` (Optional): Controls the intensity of the sharpening effect applied to the masks. A higher value results in a more pronounced effect. Type should be `FLOAT`.
+    - Outputs:
+        - `MASKS`: The processed masks with enhanced edges and details after applying the clip hardening filter. Type should be `MASK`.

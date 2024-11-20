@@ -1,0 +1,7 @@
+- `BooleanPrimitive`: The BooleanPrimitive node is designed to manipulate boolean values, offering functionality to either pass through the input boolean value as is or reverse it. This node serves as a fundamental utility within the broader system, enabling conditional logic flows and binary decision-making processes.
+    - Inputs:
+        - `value` (Required): Specifies the boolean value to be manipulated. This parameter is central to the node's operation, determining the base value that may be reversed based on the 'reverse' parameter. Type should be `BOOLEAN`.
+        - `reverse` (Required): Determines whether the input boolean value should be reversed. When set to True, the output will be the logical negation of the input, enabling dynamic control over boolean logic flows. Type should be `BOOLEAN`.
+    - Outputs:
+        - `boolean`: The resulting boolean value after applying the 'reverse' logic to the input. This output reflects either the original or negated value, based on the 'reverse' parameter. Type should be `BOOLEAN`.
+        - `string`: A string representation of the resulting boolean value, providing a textual output that mirrors the boolean outcome. Type should be `STRING`.

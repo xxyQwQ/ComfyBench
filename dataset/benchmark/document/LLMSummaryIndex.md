@@ -1,0 +1,7 @@
+- `LLMSummaryIndex`: The LLMSummaryIndex node is designed to create a summary index from a collection of documents using a specified language model embedding. It processes each document to handle metadata and text, applying sentence splitting as part of its transformation steps, and then constructs an index that can be used for summarizing or retrieving information from the documents.
+    - Inputs:
+        - `llm_model` (Required): The language model and its embedding model used for generating document summaries. It's crucial for determining the embedding strategy for the documents. Type should be `LLM_MODEL`.
+        - `document` (Required): A list of documents to be indexed. Each document's text and metadata are processed for indexing. Type should be `DOCUMENT`.
+        - `optional_llm_context` (Optional): Optional context provided to the language model during the indexing process. It can be used to tailor the embedding process to specific requirements or contexts. Type should be `LLM_CONTEXT`.
+    - Outputs:
+        - `llm_index`: The summary index created from the documents, ready for use in summarization or information retrieval tasks. Type should be `LLM_INDEX`.

@@ -1,0 +1,6 @@
+- `LLMMarkdownReader`: The LLMMarkdownReader node is designed to read and process Markdown documentation files, such as GitHub READMEs, converting them into a structured document format suitable for further analysis or processing. This functionality facilitates the integration of Markdown content into data pipelines, enabling automated content extraction and transformation.
+    - Inputs:
+        - `path` (Required): Specifies the file system path to the Markdown file to be read. This parameter is essential for locating and accessing the file for processing. Type should be `STRING`.
+        - `extra_info` (Optional): Provides additional, optional information that can be used to influence the reading process. This could include metadata or configuration options in a JSON string format. Type should be `STRING`.
+    - Outputs:
+        - `documents`: Returns a structured document representation of the input Markdown file, ready for further processing or analysis. Type should be `DOCUMENT`.

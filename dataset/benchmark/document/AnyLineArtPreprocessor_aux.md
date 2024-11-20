@@ -1,0 +1,11 @@
+- `AnyLineArtPreprocessor_aux`: This node is designed to preprocess images by applying a line art extraction process, which can be customized to merge with different line art styles such as standard, realistic, anime, or manga. It enhances images for further processing or visualization by extracting prominent lines and adjusting them according to the selected line art style, making it versatile for various artistic and design applications.
+    - Inputs:
+        - `image` (Required): The input image to be processed for line art extraction. It serves as the primary data on which the line art preprocessing is performed, determining the visual output of the node. Type should be `IMAGE`.
+        - `merge_with_lineart` (Required): Specifies the line art style to merge with during the preprocessing, such as 'lineart_standard', 'lineart_realistic', 'lineart_anime', or 'manga_line'. This choice influences the aesthetic and stylistic outcome of the processed image. Type should be `COMBO[STRING]`.
+        - `resolution` (Required): Defines the resolution for the output image, affecting the detail and quality of the extracted line art. Type should be `INT`.
+        - `lineart_lower_bound` (Optional): Sets the lower bound for line art extraction, influencing the minimum intensity of lines to be included in the output. Type should be `FLOAT`.
+        - `lineart_upper_bound` (Optional): Sets the upper bound for line art extraction, influencing the maximum intensity of lines to be included in the output. Type should be `FLOAT`.
+        - `object_min_size` (Optional): Determines the minimum size of objects to be considered in the line art extraction, affecting the granularity of the output. Type should be `INT`.
+        - `object_connectivity` (Optional): Specifies the connectivity criteria for objects in the line art extraction, impacting how individual lines and shapes are interpreted and connected in the output. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed image with extracted line art, presented in a format suitable for visualization or further artistic processing. Type should be `IMAGE`.

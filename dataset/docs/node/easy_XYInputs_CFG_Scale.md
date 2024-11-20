@@ -1,8 +1,0 @@
-- `easy XYInputs CFG Scale`: This node is designed to facilitate the exploration and manipulation of CFG (Conditional Free Guidance) scale values within generative models. It allows users to dynamically adjust the CFG scale, enabling fine-tuning of the model's conditional generation capabilities for enhanced control over the output quality and adherence to specified conditions.
-    - Parameters:
-        - `batch_count`: Specifies the number of batches for which the CFG scale adjustments will be applied. This parameter is crucial for understanding the scale of the operation and ensuring that the adjustments are applied uniformly across multiple instances. Type should be `INT`.
-        - `first_cfg`: Determines the starting value of the CFG scale adjustment. This allows for the initial setting of the conditional guidance's influence on the generative process. Type should be `FLOAT`.
-        - `last_cfg`: Sets the ending value of the CFG scale adjustment. This parameter enables the fine-tuning of the CFG scale's influence on the generative process over a specified range, allowing for gradual adjustments. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `X or Y`: Returns the outcome of the CFG scale adjustments, which could be either a modified generative model or a specific set of generation results, depending on the context of the operation. Type should be `X_Y`.

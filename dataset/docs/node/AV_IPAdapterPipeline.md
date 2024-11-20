@@ -1,7 +1,0 @@
-- `AV_IPAdapterPipeline`: The AV_IPAdapterPipeline node is designed to load and configure IP adapter and clip vision models for use in art generation pipelines. It facilitates the integration of these models into a unified pipeline, enabling enhanced image processing and manipulation capabilities.
-    - Parameters:
-        - `ip_adapter_name`: Specifies the name of the IP adapter model to be loaded. This is crucial for identifying and loading the correct IP adapter model for the pipeline. Type should be `COMBO[STRING]`.
-        - `clip_name`: Determines the name of the clip vision model to be loaded. This is essential for fetching and integrating the appropriate clip vision model into the pipeline. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `p`: unknown Type should be `IPADAPTER`.

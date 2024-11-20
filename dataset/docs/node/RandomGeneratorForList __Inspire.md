@@ -1,8 +1,0 @@
-- `RandomGeneratorForList __Inspire`: The RandomGeneratorForList node is designed to generate a sequence of random values based on a given seed and a unique identifier. It ensures that each sequence is unique to its identifier, allowing for reproducible randomness across different executions.
-    - Parameters:
-        - `seed`: The seed input determines the starting point of the random number generation, ensuring reproducibility of the sequence. Type should be `INT`.
-    - Inputs:
-        - `signal`: The signal input acts as a trigger for the random generation process, ensuring the node's operation is initiated. Type should be `*`.
-    - Outputs:
-        - `signal`: The signal output is passed through unchanged, serving as a continuity element in the node's operation. Type should be `*`.
-        - `random_value`: The random_value output is a newly generated random number, providing a unique element for further processing. Type should be `INT`.

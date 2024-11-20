@@ -1,0 +1,11 @@
+- `WD14Tagger_pysssss`: The WD14Tagger node is designed to analyze images and generate tags based on their content, utilizing a model trained for this purpose. It supports customization of the tagging process through various parameters, allowing for tailored outputs that can include or exclude specific tags, adjust sensitivity thresholds, and format the output according to user preferences.
+    - Inputs:
+        - `image` (Required): The image to be analyzed and tagged. This is the primary input for the tagging process. Type should be `IMAGE`.
+        - `model` (Required): Specifies the model to use for tagging. The node supports using different models, allowing for flexibility in the tagging process based on available models. Type should be `COMBO[STRING]`.
+        - `threshold` (Required): Sets the minimum confidence level for general tags to be included in the output. Helps filter out less relevant tags. Type should be `FLOAT`.
+        - `character_threshold` (Required): Sets the minimum confidence level for character-specific tags to be included in the output. This allows for more precise control over which character tags are considered relevant. Type should be `FLOAT`.
+        - `replace_underscore` (Required): Determines whether underscores in tags should be replaced with spaces, affecting the readability of the output tags. Type should be `BOOLEAN`.
+        - `trailing_comma` (Required): Controls whether a trailing comma is added to the tags in the output, influencing the formatting of the generated tag string. Type should be `BOOLEAN`.
+        - `exclude_tags` (Required): Allows specifying tags to be excluded from the output, enabling users to filter out unwanted or irrelevant tags. Type should be `STRING`.
+    - Outputs:
+        - `string`: The output type 'string' represents the formatted string of generated tags for the image, which was not explicitly listed but is implied by the node's functionality. Type should be `STRING`.

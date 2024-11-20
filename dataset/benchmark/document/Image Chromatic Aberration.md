@@ -1,0 +1,10 @@
+- `Image Chromatic Aberration`: This node applies a chromatic aberration effect to an image by adjusting the RGB channels' offsets and intensity, simulating the way light disperses through a lens.
+    - Inputs:
+        - `image` (Required): The input image to which the chromatic aberration effect will be applied. Type should be `IMAGE`.
+        - `red_offset` (Required): The offset value for the red channel, affecting the dispersion effect. Type should be `INT`.
+        - `green_offset` (Required): The offset value for the green channel, affecting the dispersion effect. Type should be `INT`.
+        - `blue_offset` (Required): The offset value for the blue channel, affecting the dispersion effect. Type should be `INT`.
+        - `intensity` (Required): The intensity of the chromatic aberration effect. Type should be `FLOAT`.
+        - `fade_radius` (Required): The radius over which the chromatic aberration effect fades off. Type should be `INT`.
+    - Outputs:
+        - `image`: The image with the applied chromatic aberration effect. Type should be `IMAGE`.

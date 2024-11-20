@@ -1,0 +1,6 @@
+- `Export_SMPLMultipleSubjects_To_3DSoftware`: This node is designed to facilitate the export of 3D models of multiple subjects in the SMPL format to various 3D software environments. It aims to streamline the process of integrating complex, multi-subject 3D models into professional 3D CGI applications, enhancing the workflow for 3D animators and visual effects artists.
+    - Inputs:
+        - `smpl_multi_subjects` (Required): The dataset containing 3D models of multiple subjects in SMPL format, essential for exporting to 3D software. It plays a critical role in the node's operation by providing the necessary data for processing and conversion. Type should be `SMPL_MULTIPLE_SUBJECTS`.
+        - `foldername_prefix` (Required): A prefix for the folder name where the exported files will be saved, allowing for organized storage and easy retrieval. Type should be `STRING`.
+        - `format` (Required): The format in which the 3D models will be exported, such as 'obj', 'fbx', or 'glb', determining the compatibility with various 3D software. Type should be `COMBO[STRING]`.
+    - Outputs:

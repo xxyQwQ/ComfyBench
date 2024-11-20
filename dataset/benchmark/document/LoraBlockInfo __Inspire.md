@@ -1,0 +1,7 @@
+- `LoraBlockInfo __Inspire`: The LoraBlockInfo node is designed to extract and communicate detailed information about specific LoRA (Low-Rank Adaptation) blocks within a model. It loads a LoRA model, extracts relevant block information, and sends this information to a specified widget for display or further processing.
+    - Inputs:
+        - `model` (Required): The model parameter represents the deep learning model from which LoRA block information will be extracted. It is crucial for identifying the specific blocks within the model that are subject to LoRA's low-rank adaptations. Type should be `MODEL`.
+        - `clip` (Required): The clip parameter is used to specify the CLIP model associated with the LoRA model, enabling the extraction of information that is relevant to both the model and its CLIP components. Type should be `CLIP`.
+        - `lora_name` (Required): This parameter specifies the name of the LoRA model to be loaded and analyzed. It is essential for locating and loading the correct LoRA model file. Type should be `COMBO[STRING]`.
+        - `block_info` (Required): The block_info parameter provides additional textual information or specifications about the LoRA blocks to be analyzed, aiding in the extraction of detailed and relevant information. Type should be `STRING`.
+    - Outputs:

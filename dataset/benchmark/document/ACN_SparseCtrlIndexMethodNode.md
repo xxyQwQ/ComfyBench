@@ -1,0 +1,5 @@
+- `ACN_SparseCtrlIndexMethodNode`: This node is designed to generate a sparse control method based on specified indexes. It abstracts the complexity of selecting specific indexes for sparse control in advanced control networks, facilitating targeted manipulation or analysis of data points within a given dataset.
+    - Inputs:
+        - `indexes` (Required): Specifies the indexes to be used for the sparse control method. This parameter allows for targeted selection within the dataset, enabling precise control over which data points are manipulated or analyzed. Type should be `STRING`.
+    - Outputs:
+        - `sparse_method`: Returns a sparse method object configured with the specified indexes. This object is used to apply sparse control techniques within advanced control networks. Type should be `SPARSE_METHOD`.

@@ -1,7 +1,0 @@
-- `ImageBatch`: The ImageBatch node is designed for combining two images into a single batch. If the dimensions of the images do not match, it automatically rescales the second image to match the first one's dimensions before combining them.
-    - Parameters:
-    - Inputs:
-        - `image1`: The first image to be combined into the batch. It serves as the reference for the dimensions to which the second image will be adjusted if necessary. Type should be `IMAGE`.
-        - `image2`: The second image to be combined into the batch. It is automatically rescaled to match the dimensions of the first image if they differ. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The combined batch of images, with the second image rescaled to match the first one's dimensions if needed. Type should be `IMAGE`.

@@ -1,6 +1,0 @@
-- `SaltMaskFillRegion`: This node is designed to fill regions within masks, transforming the input masks by identifying and filling specified regions to produce modified masks.
-    - Parameters:
-    - Inputs:
-        - `masks`: The input masks to be processed for region filling. This parameter is crucial for determining the areas within each mask that will undergo the filling operation. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The output consists of masks with specified regions filled, resulting from the processing of the input masks. Type should be `MASK`.

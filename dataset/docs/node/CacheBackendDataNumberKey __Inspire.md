@@ -1,8 +1,0 @@
-- `CacheBackendDataNumberKey __Inspire`: This node is designed for caching data with numerical keys in the Inspire Pack backend. It allows for the storage and retrieval of data associated with a unique integer key and a descriptive tag, facilitating efficient data management and access within custom workflows.
-    - Parameters:
-        - `key`: The 'key' parameter is an integer that uniquely identifies the data to be cached. It serves as the primary identifier for storing and retrieving data. Type should be `INT`.
-        - `tag`: The 'tag' parameter is a string that provides a short description or label for the cached data, aiding in its identification and categorization. Type should be `STRING`.
-    - Inputs:
-        - `data`: The 'data' parameter represents the actual data to be cached. It can be of any type, allowing for versatile data storage options. Type should be `*`.
-    - Outputs:
-        - `data opt`: This output returns the same data that was input for caching, allowing for immediate verification or further processing. Type should be `*`.

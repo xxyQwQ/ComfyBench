@@ -1,0 +1,13 @@
+- `CR Upscale Image`: This node is designed to upscale images using a specified model, with options for adjusting the scale, resizing, and resampling methods. It provides flexibility in image processing by allowing for multiple loops of upscaling, choice of resampling methods, and control over the final image size and quality.
+    - Inputs:
+        - `image` (Required): The input image to be upscaled. This parameter is crucial as it determines the base image that will undergo the upscaling process. Type should be `IMAGE`.
+        - `upscale_model` (Required): Specifies the model to be used for upscaling the image. This choice impacts the quality and characteristics of the upscaled image. Type should be `COMBO[STRING]`.
+        - `mode` (Required): Defines the method used for resizing the image, such as rescaling or cropping, affecting the final appearance. Type should be `COMBO[STRING]`.
+        - `rescale_factor` (Required): The factor by which the image is upscaled, directly influencing the increase in image dimensions. Type should be `FLOAT`.
+        - `resize_width` (Required): Sets a specific width for the upscaled image, overriding the default scaling behavior. Type should be `INT`.
+        - `resampling_method` (Required): Specifies the algorithm used for resampling during resizing, influencing the smoothness and clarity of the upscaled image. Type should be `COMBO[STRING]`.
+        - `supersample` (Required): When enabled, applies supersampling for improved image quality, particularly in reducing aliasing effects. Type should be `COMBO[STRING]`.
+        - `rounding_modulus` (Required): Affects the final dimensions of the upscaled image by rounding them to the nearest multiple of this value, ensuring compatibility with certain processing or display requirements. Type should be `INT`.
+    - Outputs:
+        - `IMAGE`: The resulting tensor of upscaled images, potentially containing multiple images if loops are used. Type should be `IMAGE`.
+        - `show_help`: A URL providing additional help and documentation for the upscaling process. Type should be `STRING`.

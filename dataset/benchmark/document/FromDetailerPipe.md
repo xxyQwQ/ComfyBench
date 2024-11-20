@@ -1,0 +1,13 @@
+- `FromDetailerPipe`: The FromDetailerPipe node is designed to extract and return various components from a given detailer pipe, including models, clips, VAEs, conditioning information, bounding box detectors, SAM models, segmentation detectors, and detailer hooks. This node facilitates the decomposition of a complex detailer pipe into its constituent elements for further processing or analysis.
+    - Inputs:
+        - `detailer_pipe` (Required): Represents the detailer pipe from which various components are extracted. It is crucial for the operation as it contains all the elements that need to be decomposed and returned individually. Type should be `DETAILER_PIPE`.
+    - Outputs:
+        - `model`: Returns the model component extracted from the detailer pipe, essential for further processing or analysis. Type should be `MODEL`.
+        - `clip`: Returns the clip component extracted from the detailer pipe, essential for further processing or analysis. Type should be `CLIP`.
+        - `vae`: Returns the VAE component extracted from the detailer pipe, essential for further processing or analysis. Type should be `VAE`.
+        - `positive`: Returns the positive conditioning information extracted from the detailer pipe, essential for further processing or analysis. Type should be `CONDITIONING`.
+        - `negative`: Returns the negative conditioning information extracted from the detailer pipe, essential for further processing or analysis. Type should be `CONDITIONING`.
+        - `bbox_detector`: Returns the bounding box detector component extracted from the detailer pipe, essential for further processing or analysis. Type should be `BBOX_DETECTOR`.
+        - `sam_model_opt`: Returns the SAM model component extracted from the detailer pipe, essential for further processing or analysis. Type should be `SAM_MODEL`.
+        - `segm_detector_opt`: Returns the segmentation detector component extracted from the detailer pipe, essential for further processing or analysis. Type should be `SEGM_DETECTOR`.
+        - `detailer_hook`: Returns the detailer hook component extracted from the detailer pipe, essential for further processing or analysis. Type should be `DETAILER_HOOK`.

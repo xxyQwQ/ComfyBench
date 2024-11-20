@@ -1,0 +1,23 @@
+- `LayerUtility_ ImageAutoCrop V2`: This node automatically crops images based on their content, enhancing focus and composition by removing unnecessary background. It utilizes advanced algorithms to detect and retain the main subject of the image while discarding the extraneous parts, providing a cleaner, more focused visual output.
+    - Inputs:
+        - `image` (Required): The input image to be auto-cropped. This parameter is crucial as it determines the area of focus and the parts to be eliminated based on the content and composition of the image. Type should be `IMAGE`.
+        - `fill_background` (Required): A boolean flag indicating whether to fill the background after cropping. If true, the area outside the cropped region will be filled with the specified background color. Type should be `BOOLEAN`.
+        - `background_color` (Required): The color used to fill the background if fill_background is set to true. This parameter allows customization of the background color post-cropping. Type should be `STRING`.
+        - `aspect_ratio` (Required): Specifies the desired aspect ratio for the cropped image. This can be set to 'custom', 'original', 'detect_mask', or a specific ratio like '16:9', guiding the cropping process to maintain the specified aspect ratio. Type should be `COMBO[STRING]`.
+        - `proportional_width` (Required): When aspect_ratio is set to 'custom', this parameter defines the width component of the custom aspect ratio. Type should be `INT`.
+        - `proportional_height` (Required): When aspect_ratio is set to 'custom', this parameter defines the height component of the custom aspect ratio. Type should be `INT`.
+        - `scale_to_side` (Required): A boolean flag that, when true, scales the image to fit the longest side to the specified scale_to_length, maintaining the aspect ratio. Type should be `COMBO[STRING]`.
+        - `scale_to_length` (Required): Specifies the length to which the longest side of the image should be scaled when scale_to_side is true. Type should be `INT`.
+        - `detect` (Required): Determines the method used to detect the cropping area. Options include 'min_bounding_rect', 'max_inscribed_rect', and 'mask_area', each affecting how the crop area is calculated. Type should be `COMBO[STRING]`.
+        - `border_reserve` (Required): An additional border added around the detected crop area to ensure important parts of the image are not cut off. Specified in pixels. Type should be `INT`.
+        - `ultra_detail_range` (Required): Specifies the range for enhancing detail in the cropped area, useful for fine-tuning the focus on specific parts of the image. Type should be `INT`.
+        - `matting_method` (Required): The method used for image matting, which helps in separating the foreground from the background. Options include 'SegmentAnything' and other matting techniques. Type should be `COMBO[STRING]`.
+        - `sam_model` (Required): Specifies the model used for the 'SegmentAnything' matting method, affecting the quality and accuracy of the foreground extraction. Type should be `COMBO[STRING]`.
+        - `grounding_dino_model` (Required): Specifies the DINO model used for grounding, which assists in better foreground segmentation when using 'SegmentAnything'. Type should be `COMBO[STRING]`.
+        - `sam_threshold` (Required): The threshold value for the 'SegmentAnything' method, determining the sensitivity of the segmentation process. Type should be `FLOAT`.
+        - `sam_prompt` (Required): The prompt used for the 'SegmentAnything' method, guiding the model in understanding what part of the image to focus on during segmentation. Type should be `STRING`.
+        - `mask` (Optional): An optional mask that can be provided to guide the cropping process. It helps in specifying the areas of the image that should be retained or removed, enhancing the accuracy of the auto-cropping algorithm. Type should be `MASK`.
+    - Outputs:
+        - `cropped_image`: The result of the auto-cropping process, which is a version of the original image with unnecessary background removed, focusing on the main subject. Type should be `IMAGE`.
+        - `box_preview`: A visual preview of the bounding box used for cropping the image. It helps in understanding how the image was cropped and the area that was focused on. Type should be `IMAGE`.
+        - `cropped_mask`: The mask corresponding to the cropped area of the image. It indicates the parts of the image that were retained after the cropping process. Type should be `MASK`.

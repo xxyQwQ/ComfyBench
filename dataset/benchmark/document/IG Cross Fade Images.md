@@ -1,0 +1,8 @@
+- `IG Cross Fade Images`: The IG Cross Fade Images node is designed for creating a smooth transition between a sequence of images. It leverages crossfading techniques combined with easing functions to interpolate between images, allowing for customizable transitions in terms of duration and style. This node is particularly useful in generating animations or video effects where a seamless blend from one image to another is desired.
+    - Inputs:
+        - `input_images` (Required): A list of image tensors to be crossfaded. This parameter is crucial for defining the sequence of images that will undergo the transition process. Type should be `IMAGE`.
+        - `interpolation` (Required): Determines the easing function applied to the transition, influencing the animation's dynamic and feel. Type should be `COMBO[STRING]`.
+        - `transitioning_frames` (Required): Specifies the number of frames to be used for transitioning between each pair of images, affecting the smoothness and duration of the crossfade effect. Type should be `INT`.
+        - `repeat_count` (Required): Controls how many times each image is repeated before transitioning to the next, allowing for extended display of certain frames within the sequence. Type should be `INT`.
+    - Outputs:
+        - `image`: A tensor containing the sequence of crossfaded images, ready for visualization or further processing. Type should be `IMAGE`.

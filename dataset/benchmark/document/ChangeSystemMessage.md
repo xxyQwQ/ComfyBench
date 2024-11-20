@@ -1,0 +1,6 @@
+- `ChangeSystemMessage`: This node is designed to modify the system message within an agent, allowing for dynamic updates to the agent's instructions or behavior based on new system messages.
+    - Inputs:
+        - `agent` (Required): Represents the agent whose system message is to be updated, serving as the primary entity for modification. Type should be `AGENT`.
+        - `system_message` (Required): The new system message to be set for the agent, enabling customization of the agent's instructions or behavior. Type should be `STRING`.
+    - Outputs:
+        - `agent`: The updated agent with the new system message applied, reflecting the changes in instructions or behavior. Type should be `AGENT`.

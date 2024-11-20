@@ -1,0 +1,7 @@
+- `SALVTON_Apply`: The SALVTON_Apply node is designed for applying the SAL-VTON (Virtual Try-On) process, enabling the overlay of a garment onto a person's image with the assistance of a garment mask. This node leverages deep learning models to achieve realistic try-on effects by considering the shape and fit of the garment relative to the person's body.
+    - Inputs:
+        - `garment` (Required): The garment image to be overlaid onto the person's image. It plays a crucial role in the virtual try-on process by providing the specific item of clothing to be fitted. Type should be `IMAGE`.
+        - `person` (Required): The person's image onto which the garment will be applied. This image serves as the base for the virtual try-on, determining how the garment will be positioned and fitted. Type should be `IMAGE`.
+        - `garment_mask` (Required): A mask image for the garment, used to accurately overlay the garment onto the person's image by defining the garment's boundaries. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The resulting image after applying the virtual try-on process, showcasing the person with the garment realistically fitted onto them. Type should be `IMAGE`.

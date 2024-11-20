@@ -1,0 +1,12 @@
+- `RegionalIPAdapterEncodedMask __Inspire`: This node specializes in applying encoded mask-based image processing adaptations to enhance or modify images, leveraging regional IP adapter techniques. It allows for precise control over the image adaptation process through the use of masks, embedding weights, and various parameters, enabling customized image outputs tailored to specific regions of interest.
+    - Inputs:
+        - `mask` (Required): The mask parameter specifies the area of the image to be adapted, serving as a crucial element in defining the scope of the image processing operation. Type should be `MASK`.
+        - `embeds` (Required): Embeds represent the encoded information or features to be applied to the specified image regions, playing a pivotal role in the adaptation process. Type should be `EMBEDS`.
+        - `weight` (Required): Weight determines the intensity or influence of the applied adaptations, allowing for fine-tuning of the image processing effects. Type should be `FLOAT`.
+        - `weight_type` (Required): Weight type specifies the method of applying weights, offering options like original, linear, or channel penalty to customize the adaptation effect. Type should be `COMBO[STRING]`.
+        - `start_at` (Required): Start at indicates the initial point in the adaptation process, enabling phased or gradual application of changes. Type should be `FLOAT`.
+        - `end_at` (Required): End at defines the conclusion point for the adaptations, allowing for precise control over the extent of image processing. Type should be `FLOAT`.
+        - `unfold_batch` (Required): Unfold batch toggles the processing of images in batches, potentially optimizing performance for bulk adaptations. Type should be `BOOLEAN`.
+        - `neg_embeds` (Optional): Neg embeds allow for the application of inverse or contrasting features to the specified regions, enhancing the adaptability of the process. Type should be `EMBEDS`.
+    - Outputs:
+        - `regional_ipadapter`: Outputs a customized image with applied regional adaptations, reflecting the encoded mask and parameter specifications. Type should be `REGIONAL_IPADAPTER`.

@@ -1,8 +1,0 @@
-- `Text Dictionary Get`: This node retrieves a value associated with a specified key from a given dictionary. If the key does not exist, it returns a default value, allowing for flexible and error-tolerant data retrieval.
-    - Parameters:
-        - `key`: The key for which the value is sought in the dictionary. It specifies the exact data point to be retrieved. Type should be `STRING`.
-        - `default_value`: An optional default value to return if the specified key is not found in the dictionary. This parameter enhances the node's flexibility and error tolerance. Type should be `STRING`.
-    - Inputs:
-        - `dictionary`: The dictionary from which a value is to be retrieved. It is central to the node's operation, determining the source of data. Type should be `DICT`.
-    - Outputs:
-        - `string`: The value retrieved from the dictionary based on the specified key, or the default value if the key is not found. It encapsulates the result of the data retrieval operation. Type should be `STRING`.

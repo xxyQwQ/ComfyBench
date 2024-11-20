@@ -1,0 +1,5 @@
+- `LayerUtility_ Seed`: The Seed node is designed to initialize or set a seed value for processes that require deterministic outcomes. It ensures that operations which involve randomness can be replicated exactly by providing a consistent starting point.
+    - Inputs:
+        - `seed` (Required): The seed parameter is used to set the initial value for the seed, influencing the deterministic nature of subsequent operations. It ensures that results can be consistently replicated when the same seed is used. Type should be `INT`.
+    - Outputs:
+        - `seed`: Outputs the same seed value that was input, allowing it to be used in subsequent operations that require a deterministic starting point. Type should be `INT`.

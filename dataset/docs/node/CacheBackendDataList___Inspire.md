@@ -1,8 +1,0 @@
-- `CacheBackendDataList __Inspire`: The CacheBackendDataList node is designed to cache lists of data in a backend storage system, allowing for efficient retrieval and management of data collections. It supports caching data with a unique key and tag, facilitating organized storage and easy access to grouped data items.
-    - Parameters:
-        - `key`: The 'key' parameter is used to uniquely identify the list of data being cached. It serves as a primary identifier for storing and retrieving the data from the cache. Type should be `STRING`.
-        - `tag`: The 'tag' parameter provides a short description or label for the cached data, aiding in its categorization and retrieval. Type should be `STRING`.
-    - Inputs:
-        - `data`: The 'data' parameter represents the actual list of data items to be cached. It is crucial for the operation as it contains the content that will be stored in the backend. Type should be `*`.
-    - Outputs:
-        - `data opt`: Returns the list of data that was cached, confirming the successful storage of the provided data. Type should be `*`.

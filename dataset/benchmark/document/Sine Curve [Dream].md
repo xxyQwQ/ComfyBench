@@ -1,0 +1,10 @@
+- `Sine Curve [Dream]`: The 'Sine Curve' node generates a sine wave based on animation frame data, allowing for dynamic visual effects in animations. It utilizes parameters such as maximum and minimum values, periodicity, and phase to shape the sine wave's amplitude and frequency.
+    - Inputs:
+        - `frame_counter` (Required): The frame counter tracks the current time in seconds based on the animation's frame rate, serving as the basis for calculating the sine wave's position. Type should be `FRAME_COUNTER`.
+        - `max_value` (Required): Specifies the maximum amplitude of the sine wave, defining the peak value it can reach. Type should be `FLOAT`.
+        - `min_value` (Required): Determines the minimum amplitude of the sine wave, setting the lowest value it can descend to. Type should be `FLOAT`.
+        - `periodicity_seconds` (Required): Controls the period of the sine wave, affecting how quickly it completes a full cycle. Type should be `FLOAT`.
+        - `phase` (Required): Adjusts the phase of the sine wave, shifting its starting position within the cycle. Type should be `FLOAT`.
+    - Outputs:
+        - `FLOAT`: The calculated sine wave value at the current frame, as a floating-point number. Type should be `FLOAT`.
+        - `INT`: The sine wave value rounded to the nearest integer, for discrete animations or effects. Type should be `INT`.

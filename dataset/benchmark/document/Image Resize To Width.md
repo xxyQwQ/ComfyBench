@@ -1,0 +1,6 @@
+- `Image Resize To Width`: The node is designed to resize an image to a specific width while maintaining its aspect ratio, using a specified upscale method to ensure quality preservation.
+    - Inputs:
+        - `image` (Required): The image to be resized. This parameter is crucial as it provides the source image that will undergo resizing to match the target width. Type should be `IMAGE`.
+        - `target_width` (Required): The target width to which the image will be resized. This parameter determines the scale of the resizing operation and directly affects the output image's dimensions. Type should be `INT`.
+    - Outputs:
+        - `image`: The resized image with the specified target width, maintaining the original aspect ratio. Type should be `IMAGE`.

@@ -1,9 +1,0 @@
-- `Image Rotate`: The Image Rotate node is designed to rotate a batch of images to a specified angle, with options for different rotation modes and sampling methods. It ensures that rotations are constrained within a 360-degree range and supports adjustments to the rotation angle for more precise control. This node caters to both internal and external rotation modes, offering flexibility in how images are transformed.
-    - Parameters:
-        - `mode`: Specifies the rotation mode, either 'internal' for direct rotation or an alternative mode that involves transposing the image. This affects how the image is rotated and transformed. Type should be `COMBO[STRING]`.
-        - `rotation`: The angle in degrees to rotate the images. This parameter directly influences the final orientation of the processed images. Type should be `INT`.
-        - `sampler`: Defines the sampling method used during rotation, such as 'nearest', 'bicubic', or 'bilinear'. This affects the quality and appearance of the rotated images. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: A batch of images to be rotated. This parameter is crucial as it provides the raw visual data that the node will process and transform according to the specified rotation parameters. Type should be `IMAGE`.
-    - Outputs:
-        - `images`: The batch of rotated images, returned as a tensor. This output represents the transformed visual data after applying the specified rotation and sampling methods. Type should be `IMAGE`.

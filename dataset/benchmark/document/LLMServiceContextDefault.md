@@ -1,0 +1,5 @@
+- `LLMServiceContextDefault`: This node is designed to generate a service context for language model operations, encapsulating the necessary configurations and settings to facilitate interaction with language models.
+    - Inputs:
+        - `llm_model` (Required): Specifies the language model and its embedding model to be used, dictating the operational context for subsequent language processing tasks. Type should be `LLM_MODEL`.
+    - Outputs:
+        - `llm_context`: Provides the generated service context, enabling tailored interactions with the specified language model. Type should be `LLM_CONTEXT`.

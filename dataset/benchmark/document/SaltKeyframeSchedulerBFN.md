@@ -1,0 +1,16 @@
+- `SaltKeyframeSchedulerBFN`: This node is designed for scheduling keyframes in a customizable manner, allowing for the application of easing modes and the inclusion of optional variables to fine-tune the animation process. It provides a flexible framework for generating animation schedules based on keyframe data, easing specifications, and additional parameters, facilitating the creation of dynamic and nuanced animations.
+    - Inputs:
+        - `keyframe_schedule` (Required): Specifies the schedule of keyframes to be animated. It is crucial for defining the sequence and timing of the animation, impacting the overall flow and rhythm of the generated animation. Type should be `STRING`.
+        - `easing_mode` (Required): Determines the easing function to be applied to the keyframe animation, influencing the acceleration and deceleration of the animation between keyframes. This choice significantly affects the visual smoothness and dynamics of the animation. Type should be `COMBO[STRING]`.
+        - `end_frame` (Optional): Optional parameter that specifies the last frame of the animation, allowing for the animation duration to be limited or extended as needed. Type should be `INT`.
+        - `ndigits` (Optional): Optional parameter that defines the precision of the computed keyframe values, enabling control over the granularity of the animation's timing. Type should be `INT`.
+        - `a` (Optional): An optional variable that can be used to introduce custom behavior or adjustments to the animation schedule, enhancing flexibility. Type should be `*`.
+        - `b` (Optional): Another optional variable similar to 'a', providing additional capacity for custom modifications to the animation schedule. Type should be `*`.
+        - `c` (Optional): An optional variable that can be introduced for further customization of the animation schedule. Type should be `*`.
+        - `d` (Optional): Similar to 'c', this optional variable allows for additional adjustments to the animation schedule. Type should be `*`.
+        - `e` (Optional): Provides further flexibility in customizing the animation schedule through this optional variable. Type should be `*`.
+        - `f` (Optional): An optional variable for additional customization options within the animation schedule. Type should be `*`.
+        - `g` (Optional): Allows for further adjustments and customization of the animation schedule. Type should be `*`.
+        - `h` (Optional): An optional variable for extending the customization capabilities of the animation schedule. Type should be `*`.
+    - Outputs:
+        - `schedule_list`: The generated animation schedule, comprising keyframe timings and values adjusted according to the specified easing mode and optional parameters. This output is essential for implementing the planned animation. Type should be `LIST`.

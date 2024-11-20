@@ -1,0 +1,6 @@
+- `CR Seed`: The CR Seed node is designed to provide a consistent starting point for random number generation processes by supplying a seed value. It also offers a link to further documentation on its usage.
+    - Inputs:
+        - `seed` (Required): The seed parameter is crucial for initializing the random number generator to ensure reproducibility of results across different runs. Type should be `INT`.
+    - Outputs:
+        - `seed`: Returns the same seed value that was input, allowing it to be used in subsequent operations. Type should be `INT`.
+        - `show_help`: Provides a URL to the documentation for further assistance and detailed information about the CR Seed node. Type should be `STRING`.

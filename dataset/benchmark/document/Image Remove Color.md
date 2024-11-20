@@ -1,0 +1,12 @@
+- `Image Remove Color`: The node is designed to selectively remove a specific color from an image, replacing it with another color. It operates by comparing each pixel's color to the target color within a defined threshold, effectively filtering out the target color and substituting it with a predefined replacement color. This functionality is useful for tasks such as background removal or color correction in images.
+    - Inputs:
+        - `image` (Required): The input image from which a specific color is to be removed. It serves as the primary data for the node's operation, determining the visual content that will undergo color removal and replacement. Type should be `IMAGE`.
+        - `target_red` (Required): Specifies the red component of the target color to be removed from the image. It determines the red value of the color that the node will seek to filter out. Type should be `INT`.
+        - `target_green` (Required): Specifies the green component of the target color to be removed from the image. It determines the green value of the color that the node will seek to filter out. Type should be `INT`.
+        - `target_blue` (Required): Specifies the blue component of the target color to be removed from the image. It determines the blue value of the color that the node will seek to filter out. Type should be `INT`.
+        - `replace_red` (Required): Specifies the red component of the replacement color. This color will fill the areas where the target color has been removed. Type should be `INT`.
+        - `replace_green` (Required): Specifies the green component of the replacement color. This color will fill the areas where the target color has been removed. Type should be `INT`.
+        - `replace_blue` (Required): Specifies the blue component of the replacement color. This color will fill the areas where the target color has been removed. Type should be `INT`.
+        - `clip_threshold` (Required): Defines the sensitivity of the color comparison, determining how closely a pixel's color must match the target color to be replaced. A lower threshold means a stricter match is required, while a higher threshold allows for more variation in the colors that are considered a match. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image after the specified color has been removed and replaced with the replacement color. This image reflects the changes made during the color removal process, showcasing the effect of the target color's substitution. Type should be `IMAGE`.

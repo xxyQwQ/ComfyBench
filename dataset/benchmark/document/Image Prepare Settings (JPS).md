@@ -1,0 +1,16 @@
+- `Image Prepare Settings (JPS)`: This node is designed to configure and prepare image settings for further processing or transformation. It allows for the customization of various parameters such as resizing, cropping, padding, and applying specific image adjustments like sharpening or interpolation, facilitating tailored image preparation workflows.
+    - Inputs:
+        - `offset_width` (Required): The horizontal offset applied to the image, useful for precise positioning or adjustments. Type should be `INT`.
+        - `offset_height` (Required): The vertical offset applied to the image, useful for precise positioning or adjustments. Type should be `INT`.
+        - `crop_left` (Required): The amount of cropping from the left side of the image, allowing for tailored image composition. Type should be `INT`.
+        - `crop_right` (Required): The amount of cropping from the right side of the image, allowing for tailored image composition. Type should be `INT`.
+        - `crop_top` (Required): The amount of cropping from the top of the image, allowing for tailored image composition. Type should be `INT`.
+        - `crop_bottom` (Required): The amount of cropping from the bottom of the image, allowing for tailored image composition. Type should be `INT`.
+        - `padding_left` (Required): The amount of padding added to the left side of the image, useful for framing or specific layout requirements. Type should be `INT`.
+        - `padding_right` (Required): The amount of padding added to the right side of the image, useful for framing or specific layout requirements. Type should be `INT`.
+        - `padding_top` (Required): The amount of padding added to the top of the image, useful for framing or specific layout requirements. Type should be `INT`.
+        - `padding_bottom` (Required): The amount of padding added to the bottom of the image, useful for framing or specific layout requirements. Type should be `INT`.
+        - `interpolation` (Required): Specifies the interpolation method used during resizing or transforming the image, affecting the image's smoothness and quality. Type should be `COMBO[STRING]`.
+        - `sharpening` (Required): The level of sharpening applied to the image, enhancing detail and clarity. Type should be `FLOAT`.
+    - Outputs:
+        - `imageprepare_settings`: The configured settings for image preparation, encapsulating all adjustments and transformations to be applied. Type should be `BASIC_PIPE`.

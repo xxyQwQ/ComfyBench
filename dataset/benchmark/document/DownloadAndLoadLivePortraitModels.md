@@ -1,0 +1,5 @@
+- `DownloadAndLoadLivePortraitModels`: This node is responsible for downloading and loading the necessary models for the LivePortrait feature. It ensures that all components required for generating live portraits, such as appearance feature extractors, motion extractors, warping modules, and retargeting networks, are properly initialized and ready for use. The node dynamically adjusts model precision based on the execution environment and manages model dependencies to facilitate seamless live portrait generation.
+    - Inputs:
+        - `precision` (Optional): Specifies the desired precision for model computations, which can be set manually or determined automatically based on the device's capabilities. This affects the overall performance and accuracy of the live portrait generation process. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `live_portrait_pipe`: Returns a fully initialized pipeline configured for live portrait generation, including all necessary models and settings tailored to the specified precision. The specific type returned is a custom class instance that encapsulates the live portrait pipeline. Type should be `LIVEPORTRAITPIPE`.

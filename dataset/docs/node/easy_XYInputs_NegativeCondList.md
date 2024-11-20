@@ -1,6 +1,0 @@
-- `easy XYInputs NegativeCondList`: This node processes a list of negative conditions for XY plotting, transforming them into a structured format suitable for further processing or visualization. It abstracts the complexity of handling multiple negative conditions by encapsulating them into a unified representation.
-    - Parameters:
-    - Inputs:
-        - `negative`: The 'negative' input accepts a list of conditions intended to be used for negative scenarios in XY plotting. It plays a crucial role in defining the conditions under which certain actions or events are considered negative, thereby influencing the outcome of the plotting process. Type should be `CONDITIONING`.
-    - Outputs:
-        - `X or Y`: Outputs a structured representation of the negative conditions, including their indices and corresponding conditions, formatted for easy integration with XY plotting functionalities. Type should be `X_Y`.

@@ -1,0 +1,13 @@
+- `SaltConditioningSetMaskAndCombine`: The SaltConditioningSetMaskAndCombine node is designed for advanced conditioning manipulation in audio-visual scheduling tasks. It combines conditioning schedules with masks, allowing for precise control over the application of conditions based on spatial or temporal criteria. This node facilitates the integration and coordination of multiple conditioning layers, enhancing the flexibility and specificity of audio-visual content generation.
+    - Inputs:
+        - `positive_schedule_a` (Required): Represents the first set of positive conditionings to be scheduled and combined with a mask. Type should be `CONDITIONING`.
+        - `negative_schedule_a` (Required): Represents the first set of negative conditionings to be scheduled and combined with a mask. Type should be `CONDITIONING`.
+        - `positive_schedule_b` (Required): Represents the second set of positive conditionings to be scheduled and combined with a mask. Type should be `CONDITIONING`.
+        - `negative_schedule_b` (Required): Represents the second set of negative conditionings to be scheduled and combined with a mask. Type should be `CONDITIONING`.
+        - `mask_a` (Required): The mask to be applied to the first set of conditionings. Type should be `MASK`.
+        - `mask_b` (Required): The mask to be applied to the second set of conditionings. Type should be `MASK`.
+        - `mask_strengths_a` (Optional): A list of strengths for each mask applied to the first set of conditionings, allowing for variable influence. Type should be `LIST`.
+        - `mask_strengths_b` (Optional): A list of strengths for each mask applied to the second set of conditionings, allowing for variable influence. Type should be `LIST`.
+        - `set_cond_area` (Optional): Determines whether the conditioning area is set to default or bounded by the mask. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `conditioning`: The combined and conditioned output for both sets of schedules, reflecting the applied masks and strengths. Type should be `CONDITIONING`.

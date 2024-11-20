@@ -1,7 +1,0 @@
-- `Text to Console`: The 'Text to Console' node is designed for debugging purposes, allowing users to output text to the console with an optional label for easier identification. It serves as a simple yet effective tool for displaying text information during the development and testing of workflows.
-    - Parameters:
-        - `text`: The 'text' parameter is the primary content to be displayed on the console. It plays a crucial role in conveying information or data that needs to be debugged or reviewed. Type should be `STRING`.
-        - `label`: The 'label' parameter allows for an optional categorization or identification of the text output. It enhances readability and organization of console outputs, especially when multiple texts are printed. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: Returns the original text that was input, facilitating potential further use or processing in subsequent nodes. Type should be `STRING`.

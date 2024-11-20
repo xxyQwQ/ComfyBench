@@ -1,0 +1,5 @@
+- `Load Text`: The Load Text node is designed to read and process text data from a specified file path, filtering out any lines that start with a comment symbol. It abstracts the file reading and preprocessing steps, providing a clean text output for further use.
+    - Inputs:
+        - `file_path` (Required): Specifies the path to the text file to be loaded. This parameter is essential for locating and reading the file's contents. Type should be `STRING`.
+    - Outputs:
+        - `string`: Returns the processed text from the file, with comments removed and lines cleaned up. Type should be `STRING`.

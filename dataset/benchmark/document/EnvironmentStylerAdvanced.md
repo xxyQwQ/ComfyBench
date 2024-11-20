@@ -1,0 +1,15 @@
+- `EnvironmentStylerAdvanced`: The EnvironmentStylerAdvanced node dynamically subclasses from SDXLPromptStylerAdvanced to provide advanced styling capabilities for text prompts based on environmental themes. It utilizes a predefined set of templates to modify and enhance input text prompts, aiming to reflect specific environmental characteristics or themes within the generated content.
+    - Inputs:
+        - `text_positive_g` (Required): The global aspect of the positive text prompt to be styled, focusing on enhancing its environmental thematic elements. Type should be `STRING`.
+        - `text_positive_l` (Required): The local aspect of the positive text prompt to be styled, aiming to emphasize specific environmental details. Type should be `STRING`.
+        - `text_negative` (Required): The negative aspect of the text prompt to be styled, aiming to mitigate or remove undesired environmental elements. Type should be `STRING`.
+        - `environment` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Specifies the scope of the negative styling to be applied, whether globally, locally, or both. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag to enable or disable logging of the prompt styling process, providing insights into the selections made and their impact on the styled prompts. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The styled global positive text prompt, enriched with environmental themes. Type should be `STRING`.
+        - `text_positive_l`: The styled local positive text prompt, emphasizing specific environmental details. Type should be `STRING`.
+        - `text_positive`: The combined styled positive text prompt, integrating both global and local environmental enhancements. Type should be `STRING`.
+        - `text_negative_g`: unknown Type should be `STRING`.
+        - `text_negative_l`: unknown Type should be `STRING`.
+        - `text_negative`: The combined styled negative text prompt, reflecting the mitigation or removal of undesired environmental elements. Type should be `STRING`.

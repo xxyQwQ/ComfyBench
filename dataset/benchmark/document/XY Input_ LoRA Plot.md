@@ -1,0 +1,19 @@
+- `XY Input_ LoRA Plot`: This node is designed to generate XY plot data specifically for LoRA (Low-Rank Adaptation) parameters, facilitating the visualization of relationships between different LoRA configurations and their impacts. It dynamically handles various LoRA-related inputs to produce coordinated X and Y values for plotting, accommodating a range of LoRA parameters such as batch, weight, model strength, and clip strength.
+    - Inputs:
+        - `input_mode` (Required): Specifies the mode of input, determining which LoRA parameters (e.g., batch, weight, model strength, clip strength) are considered for generating the plot. This affects how the node processes and interprets the provided data. Type should be `COMBO[STRING]`.
+        - `lora_name` (Required): The name of the LoRA configuration being visualized, which is crucial for identifying and differentiating between various LoRA setups in the plot. Type should be `COMBO[STRING]`.
+        - `model_strength` (Required): The strength of the model adaptation applied, relevant when visualizing the impact of model strength on LoRA's effectiveness. Type should be `FLOAT`.
+        - `clip_strength` (Required): The strength of the clipping applied, relevant when assessing the impact of clip strength on LoRA's performance. Type should be `FLOAT`.
+        - `X_batch_count` (Required): Specifies the number of batches to be considered for the X-axis values, influencing the granularity of the plot. Type should be `INT`.
+        - `X_batch_path` (Required): The file path to the batch data for the X-axis, essential for locating and processing the specific LoRA data to be visualized. Type should be `STRING`.
+        - `X_subdirectories` (Required): Indicates whether subdirectories should be included when searching for batch data, affecting the scope of data considered for the X-axis. Type should be `BOOLEAN`.
+        - `X_batch_sort` (Required): Determines the sorting order of batch data for the X-axis, which can influence the plot's representation of temporal or ordinal relationships. Type should be `COMBO[STRING]`.
+        - `X_first_value` (Required): The starting value for generating a range of model strengths or clip strengths for the X-axis, setting the lower bound of the plot. Type should be `FLOAT`.
+        - `X_last_value` (Required): The ending value for generating a range of model strengths or clip strengths for the X-axis, setting the upper bound of the plot. Type should be `FLOAT`.
+        - `Y_batch_count` (Required): Specifies the number of batches to be considered for the Y-axis values, influencing the granularity of the plot. Type should be `INT`.
+        - `Y_first_value` (Required): The starting value for generating a range of model strengths or clip strengths for the Y-axis, setting the lower bound of the plot. Type should be `FLOAT`.
+        - `Y_last_value` (Required): The ending value for generating a range of model strengths or clip strengths for the Y-axis, setting the upper bound of the plot. Type should be `FLOAT`.
+        - `lora_stack` (Optional): An optional stack of LoRA configurations that can be included in the plot, allowing for the visualization of multiple LoRA setups within a single plot. Type should be `LORA_STACK`.
+    - Outputs:
+        - `X`: The data represented on the X-axis, including the type and values derived from the specified LoRA parameters. Type should be `XY`.
+        - `Y`: The data represented on the Y-axis, including the type and values derived from the specified LoRA parameters. Type should be `XY`.

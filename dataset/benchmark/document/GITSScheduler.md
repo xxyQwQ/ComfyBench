@@ -1,0 +1,7 @@
+- `GITSScheduler`: The GITSScheduler node is designed to generate a sequence of sigma values for guiding the noise levels in generative models. It adjusts the sequence based on the provided coefficients, steps, and denoise factor, offering a customizable approach to noise scheduling in sampling processes.
+    - Inputs:
+        - `coeff` (Required): The coefficient value influences the overall scale of the sigma values, allowing for fine-tuning of the noise level introduced at each step of the generation process. Type should be `FLOAT`.
+        - `steps` (Required): Defines the total number of steps in the generation process, directly impacting the length and granularity of the sigma sequence. Type should be `INT`.
+        - `denoise` (Required): A factor that adjusts the effective number of steps by reducing noise, thereby refining the output by potentially reducing the amount of introduced noise. Type should be `FLOAT`.
+    - Outputs:
+        - `sigmas`: A sequence of sigma values tailored to the specified parameters, used to control the noise level across different steps of the generative process. Type should be `SIGMAS`.

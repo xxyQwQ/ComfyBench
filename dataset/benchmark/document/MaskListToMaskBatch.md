@@ -1,0 +1,5 @@
+- `MaskListToMaskBatch`: The MaskListToMaskBatch node is designed to transform a list of individual masks into a single batch of masks, handling differences in dimensions by upsampling and concatenating them as necessary. This operation facilitates the processing of multiple masks in a unified manner, optimizing for batch operations in image processing tasks.
+    - Inputs:
+        - `mask` (Required): The 'mask' input represents a list of individual masks to be transformed into a batch. It is crucial for batch processing of images, allowing for the handling of multiple masks in a unified operation. Type should be `MASK`.
+    - Outputs:
+        - `mask`: The output is a batch of masks, either as a single 3D mask if the input list contains one mask, or a concatenated batch of 3D masks if the input list contains multiple masks. This facilitates batch processing in image manipulation tasks. Type should be `MASK`.

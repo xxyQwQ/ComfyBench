@@ -1,6 +1,0 @@
-- `Primitive string [Crystools]`: This node is designed to handle and process primitive string data. It provides a straightforward interface for receiving a string input, performing any necessary operations, and then outputting the modified or unmodified string.
-    - Parameters:
-        - `string`: The string input for the node. It represents the primary data that the node will process. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The output of the node, which is a string that has potentially been processed or modified by the node. Type should be `STRING`.

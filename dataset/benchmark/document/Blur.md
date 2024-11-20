@@ -1,0 +1,7 @@
+- `Blur`: The Blur node applies a Gaussian blur to an image, allowing for the adjustment of the blur's intensity and spread through parameters. This process can soften the image or reduce noise and detail, making it useful for post-processing effects or preparing images for further processing steps.
+    - Inputs:
+        - `image` (Required): The input image to be blurred. This is the primary data upon which the blur effect is applied, affecting the visual clarity and detail of the image. Type should be `IMAGE`.
+        - `radius` (Required): Determines the radius of the blur effect. A larger radius results in a more pronounced blur, affecting the overall softness of the image. Type should be `INT`.
+        - `sigma_factor` (Required): Controls the spread of the blur effect. A higher sigma value increases the spread of the blur, contributing to the intensity and softness of the effect. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The blurred image, which has undergone a Gaussian blur transformation to reduce detail and soften the image. Type should be `IMAGE`.

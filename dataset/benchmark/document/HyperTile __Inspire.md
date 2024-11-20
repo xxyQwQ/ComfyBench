@@ -1,0 +1,10 @@
+- `HyperTile __Inspire`: The HyperTileInspire node is designed to enhance the functionality of models by applying a specialized tiling mechanism. This mechanism rearranges the output of models to optimize for specific tasks, such as image generation or processing, by modifying the attention mechanism's input and output patches.
+    - Inputs:
+        - `model` (Required): The model to be modified with the HyperTile mechanism, serving as the foundation for the tiling process. Type should be `MODEL`.
+        - `tile_size` (Required): Determines the size of the tiles used in the tiling process, directly influencing the granularity of the output. Type should be `INT`.
+        - `swap_size` (Required): Specifies the size of the swap operation within the tiling process, affecting the model's ability to generate diverse outputs. Type should be `INT`.
+        - `max_depth` (Required): Defines the maximum depth for applying the tiling mechanism, impacting the complexity and detail of the tiled output. Type should be `INT`.
+        - `scale_depth` (Required): A boolean flag that determines whether the depth scaling is applied, influencing the variation in detail across different depths. Type should be `BOOLEAN`.
+        - `seed` (Required): Optional seed for random number generation, ensuring reproducibility of the tiling process. Type should be `INT`.
+    - Outputs:
+        - `model`: Returns a modified version of the model with adjusted attention mechanism patches, tailored for enhanced performance in tasks requiring specialized tiling. Type should be `MODEL`.

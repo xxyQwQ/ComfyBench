@@ -1,0 +1,10 @@
+- `Mask By Text`: This node automatically generates masks based on textual prompts, allowing for the creation of image masks that are aligned with the semantic content of the provided text. It utilizes natural language processing to interpret the prompts and generate corresponding masks, facilitating targeted image editing and manipulation.
+    - Inputs:
+        - `image` (Required): The input image for which the mask will be generated, serving as the canvas for the text-based mask creation. Type should be `IMAGE`.
+        - `prompt` (Required): The positive text prompt that guides the mask generation, focusing on what should be included or highlighted in the generated mask. Type should be `STRING`.
+        - `negative_prompt` (Required): The negative text prompt that guides the mask generation by specifying what should be excluded from the generated mask, helping to refine the mask's focus. Type should be `STRING`.
+        - `precision` (Required): Specifies the precision of the mask generation, allowing for control over the mask's sensitivity to the text prompts. Type should be `FLOAT`.
+        - `normalize` (Required): Determines whether the mask should be normalized, affecting the scale and distribution of the mask values. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `thresholded_mask`: The mask generated based on the text prompts, thresholded to distinguish between the areas of interest and the background. Type should be `IMAGE`.
+        - `raw_mask`: The raw mask generated from the text prompts before any thresholding, providing a more nuanced view of the mask's response to the text. Type should be `IMAGE`.

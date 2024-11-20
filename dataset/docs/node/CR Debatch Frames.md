@@ -1,6 +1,0 @@
-- `CR Debatch Frames`: The CR_DebatchFrames node is designed to transform a batch of image frames into a list of individual frames, facilitating frame-by-frame processing or analysis within animation workflows.
-    - Parameters:
-    - Inputs:
-        - `frames`: The 'frames' parameter represents a batch of image frames to be debatched into individual frames. This is essential for operations that require handling each frame separately, such as animation frame processing. Type should be `IMAGE`.
-    - Outputs:
-        - `debatched_frames`: A list of individual image frames, each extracted from the input batch. This allows for frame-by-frame manipulation or analysis. Type should be `IMAGE`.

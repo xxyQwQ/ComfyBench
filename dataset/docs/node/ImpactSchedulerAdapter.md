@@ -1,7 +1,0 @@
-- `ImpactSchedulerAdapter`: The ImpactSchedulerAdapter node is designed to adapt various scheduling strategies for tasks or processes, allowing for dynamic selection and application of scheduling algorithms based on specific conditions or preferences.
-    - Parameters:
-        - `scheduler`: Specifies the primary scheduler to be used, with an option to default to a predefined input scheduler. Type should be `COMBO[STRING]`.
-        - `ays_scheduler`: Allows for the selection of an alternative scheduling strategy from a predefined list, including the option to not use an alternative scheduler ('None'). Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `scheduler`: Outputs the selected scheduler, which could be the primary scheduler or an alternative one based on the conditions provided. Type should be `COMBO[STRING]`.

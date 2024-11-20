@@ -1,6 +1,0 @@
-- `ImpactConcatConditionings`: The ImpactConcatConditionings node is designed to concatenate multiple conditioning inputs into a single conditioning output. This process involves merging the features of the given conditionings, facilitating the combination of different conditioning elements for enhanced model input preparation.
-    - Parameters:
-    - Inputs:
-        - `conditioning1`: The primary conditioning input to which additional conditionings will be concatenated. It serves as the base for the concatenation process. Type should be `CONDITIONING`.
-    - Outputs:
-        - `conditioning`: The result of concatenating the given conditionings into a single, unified conditioning output. Type should be `CONDITIONING`.

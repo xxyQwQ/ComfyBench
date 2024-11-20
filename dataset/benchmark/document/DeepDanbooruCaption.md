@@ -1,0 +1,14 @@
+- `DeepDanbooruCaption`: The DeepDanbooruCaption node is designed to generate captions for images using the DeepDanbooru model. It processes images to identify and describe their content with tags, optionally applying a prefix and suffix to each caption, and can be configured to filter tags, adjust thresholds, and sort tags alphabetically.
+    - Inputs:
+        - `image` (Required): The image to be captioned. It is the primary input for generating captions. Type should be `IMAGE`.
+        - `threshold` (Required): The confidence threshold for including tags in the caption. Tags with confidence below this threshold are excluded. Type should be `FLOAT`.
+        - `sort_alpha` (Required): Determines whether the tags should be sorted alphabetically in the caption. Type should be `BOOLEAN`.
+        - `use_spaces` (Required): Controls whether spaces should be used between tags in the caption. Type should be `BOOLEAN`.
+        - `escape` (Required): Indicates whether special characters in tags should be escaped. Type should be `BOOLEAN`.
+        - `filter_tags` (Required): A list of tags to be excluded from the captions. Type should be `STRING`.
+        - `device_mode` (Optional): Specifies the device mode (e.g., CPU, GPU, AUTO) for running the DeepDanbooru model. Type should be `COMBO[STRING]`.
+        - `prefix` (Optional): A prefix to be added before each caption. Type should be `STRING`.
+        - `suffix` (Optional): A suffix to be added after each caption. Type should be `STRING`.
+        - `enabled` (Optional): Enables or disables the captioning functionality. Type should be `BOOLEAN`.
+    - Outputs:
+        - `caption`: The generated captions for the input image, potentially modified by prefix and suffix. Type should be `STRING`.

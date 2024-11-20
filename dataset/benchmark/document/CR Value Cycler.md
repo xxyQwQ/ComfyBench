@@ -1,0 +1,9 @@
+- `CR Value Cycler`: The CR_ValueCycler node is designed to cycle through a list of values, repeating each value a specified number of times and looping through the entire list for a given number of iterations. It is capable of parsing numeric values from a multiline string, converting them into floats and integers, and outputting these numbers in separate lists.
+    - Inputs:
+        - `values` (Required): A multiline string containing values to be cycled through. This input is crucial for defining the set of values the node will operate on. Type should be `STRING`.
+        - `repeats` (Required): Specifies how many times each value should be repeated in a single loop. This affects the length and repetition pattern of the output lists. Type should be `INT`.
+        - `loops` (Required): Determines the number of times the entire set of values is cycled through. This influences the total number of iterations and the final size of the output lists. Type should be `INT`.
+    - Outputs:
+        - `FLOAT`: A list of floating-point numbers parsed from the input values, repeated and looped according to the specified parameters. Type should be `FLOAT`.
+        - `INT`: A list of integers converted from the floating-point numbers in the input values, following the same repetition and looping pattern. Type should be `INT`.
+        - `show_text`: A URL to a help page providing additional information and guidance on using the CR_ValueCycler node. Type should be `STRING`.

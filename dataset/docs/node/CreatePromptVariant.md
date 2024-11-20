@@ -1,8 +1,0 @@
-- `CreatePromptVariant`: The CreatePromptVariant node is designed to generate variations of a given text prompt, incorporating a level of randomness or 'insanity' to modify the original prompt in creative ways. It allows for the customization of the generated prompt based on specified parameters, such as the degree of variation and a seed for reproducibility.
-    - Parameters:
-        - `prompt_input`: The primary text input for which the variant is to be created. This serves as the base content that will be modified according to the other parameters. Type should be `STRING`.
-        - `insanitylevel`: Determines the degree of variation from the original prompt. A higher value indicates a greater level of randomness and creativity in the generated prompt. Type should be `INT`.
-        - `seed`: A seed value for the random number generator, ensuring that the prompt variation can be reproduced if the same seed is used again. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `prompt`: The generated variant of the original text prompt, incorporating the specified level of variation. Type should be `STRING`.

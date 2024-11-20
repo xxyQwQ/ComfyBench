@@ -1,0 +1,12 @@
+- `MarigoldDepthEstimation_v2_video`: The MarigoldDepthEstimation_v2_video node is designed for depth estimation in videos using a diffusion-based approach. It incorporates optical flow to ensure consistency between video frames, enhancing the depth estimation process by leveraging temporal information. This node is an experimental version that aims to provide more accurate and visually coherent depth maps for video sequences.
+    - Inputs:
+        - `marigold_model` (Required): Specifies the Marigold model to be used for depth estimation. This selection influences the accuracy and quality of the depth maps generated. Type should be `MARIGOLDMODEL`.
+        - `images` (Required): A collection of images or a single image to be processed for depth estimation. The images serve as input for generating depth maps. Type should be `IMAGE`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the depth estimation results. Type should be `INT`.
+        - `denoise_steps` (Required): The number of denoising steps to apply, affecting the clarity and detail of the generated depth maps. Type should be `INT`.
+        - `processing_resolution` (Required): The resolution at which the images are processed, impacting the balance between processing speed and depth map quality. Type should be `INT`.
+        - `scheduler` (Required): The scheduler type used for controlling the diffusion process, affecting the characteristics of the depth estimation. Type should be `COMBO[STRING]`.
+        - `blend_factor` (Required): Determines the blending ratio of the current frame with the previous frame's latent representation, enhancing temporal consistency in videos. Type should be `FLOAT`.
+        - `use_taesd_vae` (Required): A boolean flag indicating whether to use the TAESD VAE model for improved depth estimation accuracy. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output image after depth estimation, representing the depth map of the input image(s). Type should be `IMAGE`.

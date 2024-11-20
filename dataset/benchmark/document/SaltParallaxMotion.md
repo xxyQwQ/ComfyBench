@@ -1,0 +1,26 @@
+- `SaltParallaxMotion`: The SaltParallaxMotion node is designed to generate a schedule for parallax motion parameters, enabling dynamic visual effects in audio-visual presentations. It leverages Perlin noise and various movement modes to create complex, organic motion patterns that enhance the depth and immersion of visual content.
+    - Inputs:
+        - `zoom_preset` (Required): Specifies the zoom behavior for the parallax motion, allowing selection from predefined options or custom settings to tailor the visual zoom effect. Type should be `COMBO[STRING]`.
+        - `horizontal_pan_preset` (Required): Determines the horizontal pan direction and behavior, offering a range of predefined or custom options to control the horizontal movement. Type should be `COMBO[STRING]`.
+        - `vertical_pan_preset` (Required): Defines the vertical pan direction and behavior, with options for predefined or custom settings to manage the vertical movement. Type should be `COMBO[STRING]`.
+        - `custom_x_min` (Required): The minimum custom horizontal position, enabling precise control over the horizontal aspect of the parallax motion. Type should be `FLOAT`.
+        - `custom_x_max` (Required): The maximum custom horizontal position, allowing for detailed customization of the horizontal movement extent. Type should be `FLOAT`.
+        - `custom_y_min` (Required): The minimum custom vertical position, facilitating fine-tuned control over the vertical aspect of the parallax motion. Type should be `FLOAT`.
+        - `custom_y_max` (Required): The maximum custom vertical position, enabling detailed adjustment of the vertical movement range. Type should be `FLOAT`.
+        - `custom_z_min` (Required): The minimum custom depth position, providing control over the depth aspect of the parallax motion. Type should be `FLOAT`.
+        - `custom_z_max` (Required): The maximum custom depth position, allowing for precise depth customization in the parallax effect. Type should be `FLOAT`.
+        - `parallax_intensity` (Required): Determines the intensity of the parallax effect, influencing how much the background moves relative to the foreground to create a sense of depth. Type should be `FLOAT`.
+        - `zoom_intensity` (Required): Controls the intensity of the zoom effect, adjusting how much the zoom changes between the foreground and background layers to enhance the parallax effect. Type should be `FLOAT`.
+    - Outputs:
+        - `front_x_min`: The minimum X position for the front layer, part of the calculated parallax motion parameters. Type should be `FLOAT`.
+        - `front_x_max`: The maximum X position for the front layer, part of the calculated parallax motion parameters. Type should be `FLOAT`.
+        - `front_y_min`: The minimum Y position for the front layer, part of the calculated parallax motion parameters. Type should be `FLOAT`.
+        - `front_y_max`: The maximum Y position for the front layer, part of the calculated parallax motion parameters. Type should be `FLOAT`.
+        - `front_z_min`: The minimum Z position for the front layer, indicating the depth of zoom at the start of the parallax motion. Type should be `FLOAT`.
+        - `front_z_max`: The maximum Z position for the front layer, indicating the depth of zoom at the end of the parallax motion. Type should be `FLOAT`.
+        - `back_x_min`: The minimum X position for the back layer, calculated to create a differential motion effect with the front layer. Type should be `FLOAT`.
+        - `back_x_max`: The maximum X position for the back layer, calculated to create a differential motion effect with the front layer. Type should be `FLOAT`.
+        - `back_y_min`: The minimum Y position for the back layer, calculated to enhance the depth effect in the parallax motion. Type should be `FLOAT`.
+        - `back_y_max`: The maximum Y position for the back layer, calculated to enhance the depth effect in the parallax motion. Type should be `FLOAT`.
+        - `back_z_min`: The minimum Z position for the back layer, kept constant to maintain a consistent background depth throughout the parallax motion. Type should be `FLOAT`.
+        - `back_z_max`: The maximum Z position for the back layer, kept constant to maintain a consistent background depth throughout the parallax motion. Type should be `FLOAT`.

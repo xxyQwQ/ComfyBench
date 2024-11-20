@@ -1,8 +1,0 @@
-- `Empty Latent Ratio Custom SDXL`: This node is designed to generate a custom-sized latent representation based on specified width and height dimensions, tailored for the SDXL latent format. It utilizes predefined ratios to adjust the dimensions if they match known ratios, or calculates the appropriate size otherwise, ensuring the generated latent space is optimized for subsequent image generation tasks.
-    - Parameters:
-        - `width`: Specifies the desired width of the latent representation. This dimension is used to determine the final size of the latent space, potentially adjusted based on predefined ratios or calculated to fit the SDXL format. Type should be `INT`.
-        - `height`: Specifies the desired height of the latent representation. Similar to width, this dimension influences the final size of the latent space, adjusted according to predefined ratios or calculated for optimal compatibility with the SDXL format. Type should be `INT`.
-        - `batch_size`: Determines the number of latent representations to generate in a single batch. This allows for the generation of multiple latents simultaneously, enhancing efficiency. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `latent`: The generated latent representation, optimized for the SDXL format. It is a tensor structured to facilitate subsequent image synthesis processes. Type should be `LATENT`.

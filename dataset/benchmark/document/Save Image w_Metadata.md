@@ -1,0 +1,21 @@
+- `Save Image w_Metadata`: This node specializes in saving images with additional metadata, allowing for enhanced traceability and context of the generated images. It supports various image formats and incorporates custom metadata, such as generation parameters and prompts, directly into the image files.
+    - Inputs:
+        - `images` (Required): The images to be saved, potentially with added metadata for context. Type should be `IMAGE`.
+        - `filename` (Required): The base filename for the saved images, which can include formatting for dynamic naming based on other parameters. Type should be `STRING`.
+        - `path` (Required): The directory path where the images will be saved. Type should be `STRING`.
+        - `extension` (Required): The file format extension for the saved images, supporting formats like PNG, JPEG, and WEBP. Type should be `COMBO[STRING]`.
+        - `steps` (Required): The number of steps involved in the image generation process, potentially included in the metadata. Type should be `INT`.
+        - `cfg` (Required): The CFG (classifier-free guidance) scale used during image generation, optionally included in the metadata. Type should be `FLOAT`.
+        - `modelname` (Required): The name of the model used for generating the images, which can be included in the metadata. Type should be `COMBO[STRING]`.
+        - `sampler_name` (Required): The name of the sampling method used in the generation process, optionally included in the metadata. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler used during the image generation, which can be included in the metadata. Type should be `COMBO[STRING]`.
+        - `positive` (Optional): Positive prompts or keywords that influenced the image generation, optionally included in the metadata. Type should be `STRING`.
+        - `negative` (Optional): Negative prompts or keywords that were avoided during the image generation, optionally included in the metadata. Type should be `STRING`.
+        - `seed_value` (Optional): The seed value used for random number generation during image creation, optionally included in the metadata. Type should be `INT`.
+        - `width` (Optional): The width of the generated images. Type should be `INT`.
+        - `height` (Optional): The height of the generated images. Type should be `INT`.
+        - `lossless_webp` (Optional): A flag indicating whether to save images in a lossless format when using WEBP. Type should be `BOOLEAN`.
+        - `quality_jpeg_or_webp` (Optional): The quality setting for JPEG or WEBP images, affecting file size and image clarity. Type should be `INT`.
+        - `counter` (Optional): A counter that can be used for naming or ordering images, potentially included in the metadata. Type should be `INT`.
+        - `time_format` (Optional): The format for timestamps that can be included in the filename or metadata, providing temporal context for the image generation. Type should be `STRING`.
+    - Outputs:

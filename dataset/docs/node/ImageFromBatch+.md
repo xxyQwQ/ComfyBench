@@ -1,8 +1,0 @@
-- `ImageFromBatch+`: The `ImageFromBatch` node extracts a specific range of images from a batch based on the provided start index and length, allowing for selective processing or analysis of batched image data.
-    - Parameters:
-        - `start`: Specifies the starting index within the batch from which images will be extracted. This parameter determines the beginning of the subset to be processed. Type should be `INT`.
-        - `length`: Defines the number of images to extract from the specified starting index. This parameter controls the size of the subset to be processed. Type should be `INT`.
-    - Inputs:
-        - `image`: The batched image input from which a subset will be extracted. This parameter is crucial for specifying the source of the images to be processed. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The extracted subset of images from the original batch, based on the specified start index and length. Type should be `IMAGE`.

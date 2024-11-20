@@ -1,0 +1,19 @@
+- `KSamplerProgress __Inspire`: The KSamplerProgress //Inspire node is designed to iteratively generate samples from a model, providing intermediate results at specified intervals. This node is particularly useful for monitoring the progress of sample generation, allowing for adjustments based on intermediate outputs.
+    - Inputs:
+        - `model` (Required): The model parameter specifies the generative model from which samples are to be generated. It plays a crucial role in determining the characteristics and quality of the generated samples. Type should be `MODEL`.
+        - `seed` (Required): The seed parameter sets the initial seed for the sampling process, ensuring reproducibility of results. Type should be `INT`.
+        - `steps` (Required): The steps parameter determines the number of steps to perform in the sample generation process, impacting the detail and quality of the generated samples. Type should be `INT`.
+        - `cfg` (Required): The cfg parameter configures the sampling process, influencing how the model generates samples based on the provided configuration. Type should be `FLOAT`.
+        - `sampler_name` (Required): The sampler_name parameter identifies the specific sampling strategy to be used, affecting the generation process and the characteristics of the output. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler parameter allows for the specification of a scheduling strategy to control the sampling process over time, potentially improving the quality of the generated samples. Type should be `COMBO[STRING]`.
+        - `positive` (Required): The positive parameter specifies positive guidance prompts, directing the model to generate samples that align with the provided positive descriptions. Type should be `CONDITIONING`.
+        - `negative` (Required): The negative parameter specifies negative guidance prompts, instructing the model to avoid generating samples that align with the provided negative descriptions. Type should be `CONDITIONING`.
+        - `latent_image` (Required): The latent_image parameter provides the initial state for the sample generation process, which can be modified through the sampling steps. Type should be `LATENT`.
+        - `denoise` (Required): The denoise parameter controls the level of denoising applied to the samples, affecting the clarity and quality of the output. Type should be `FLOAT`.
+        - `noise_mode` (Required): The noise_mode parameter defines how noise is applied during the sample generation process, affecting the diversity and quality of the output. Type should be `COMBO[STRING]`.
+        - `interval` (Required): unknown Type should be `INT`.
+        - `omit_start_latent` (Required): The omit_start_latent parameter determines whether the initial latent state is included in the output, affecting the range of samples returned. Type should be `BOOLEAN`.
+        - `scheduler_func_opt` (Optional): The scheduler_func_opt parameter provides an optional scheduling function to further customize the sampling process, potentially enhancing the generation results. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `latent`: unknown Type should be `LATENT`.
+        - `progress_latent`: The progress_latent output includes intermediate samples generated during the sampling process, showcasing the progression of the sample generation. Type should be `LATENT`.

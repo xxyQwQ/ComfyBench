@@ -1,0 +1,5 @@
+- `String-🔬`: The String node is designed to process and return string values. It encapsulates the functionality to accept a string input, potentially perform operations on it, and then output the processed string.
+    - Inputs:
+        - `value` (Required): Represents the string value to be processed by the node. It is the primary input upon which the node operates, allowing for potential manipulation or evaluation of string data. Type should be `STRING`.
+    - Outputs:
+        - `STRING`: Outputs the processed or original string value received as input, depending on the node's implementation. Type should be `STRING`.

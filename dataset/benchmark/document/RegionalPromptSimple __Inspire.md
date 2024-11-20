@@ -1,0 +1,16 @@
+- `RegionalPromptSimple __Inspire`: The RegionalPromptSimple node is designed to facilitate the creation of region-specific prompts within an image generation pipeline. It leverages regional information to tailor the generation process, ensuring that the output images are aligned with the specified regional characteristics and constraints.
+    - Inputs:
+        - `basic_pipe` (Required): Represents the foundational components of the image generation pipeline, including models and initial conditions. It's essential for the node to function within the broader generation context. Type should be `BASIC_PIPE`.
+        - `mask` (Required): An image mask defining the regions of interest. It is used to apply regional prompts specifically to areas highlighted by the mask. Type should be `MASK`.
+        - `cfg` (Required): Controls the conditioning factor for generation, affecting how strongly the regional prompts influence the output. Type should be `FLOAT`.
+        - `sampler_name` (Required): Determines the sampling method used during image generation, impacting the diversity and quality of the output. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Defines the scheduling algorithm for controlling the generation process, influencing the progression and variation of the output. Type should be `COMBO[STRING]`.
+        - `wildcard_prompt` (Required): Allows for the inclusion of dynamic or variable text elements within the prompts, adding flexibility to the generation process. Type should be `STRING`.
+        - `controlnet_in_pipe` (Required): Indicates whether control networks are included in the pipeline, affecting the application of regional prompts. Type should be `BOOLEAN`.
+        - `sigma_factor` (Required): Adjusts the noise level in the generation process, influencing the variability and creativity of the output. Type should be `FLOAT`.
+        - `variation_seed` (Optional): A seed for introducing variations in the generation process, providing a way to explore different outcomes. Type should be `INT`.
+        - `variation_strength` (Optional): Determines the strength of the variations introduced by the variation seed, affecting the diversity of the generated output. Type should be `FLOAT`.
+        - `variation_method` (Optional): Specifies the method used for applying variations, influencing how changes are integrated into the generation process. Type should be `COMBO[STRING]`.
+        - `scheduler_func_opt` (Optional): An optional scheduling function that can be used to further customize the generation process. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `regional_prompts`: The generated regional prompts, tailored to specific areas of the image as defined by the input mask. Type should be `REGIONAL_PROMPTS`.

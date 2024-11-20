@@ -1,0 +1,5 @@
+- `RequestInputs`: The RequestInputs node is designed to process a string of values, typically received as a JSON string, and convert them into a tuple of strings. This node is essential for handling and parsing input data received from web requests or other input sources, making it a key component in preparing data for further processing or analysis within a system.
+    - Inputs:
+        - `values` (Required): The 'values' parameter accepts a JSON string representing the input values. It plays a crucial role in the node's operation by determining the data that will be parsed and converted into a tuple of strings for further processing. Type should be `STRING`.
+    - Outputs:
+        - `string`: Each element in the output tuple represents a string value extracted and parsed from the input JSON string, facilitating the handling of multiple input values simultaneously. Type should be `STRING`.

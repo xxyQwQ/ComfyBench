@@ -1,0 +1,6 @@
+- `FromListGet1Cond`: This node is designed to extract a single conditioning element from a list based on a specified index. It enables selective access to conditioning data within a list, facilitating operations that require individual manipulation or inspection of conditioning elements.
+    - Inputs:
+        - `list` (Required): The list from which a conditioning element is to be extracted. This parameter is crucial for specifying the source list. Type should be `CONDITIONING`.
+        - `index` (Required): The index at which the conditioning element is to be extracted from the list. Supports negative indexing for reverse access. Type should be `INT`.
+    - Outputs:
+        - `conditioning`: The extracted conditioning element from the specified index in the list. Type should be `CONDITIONING`.

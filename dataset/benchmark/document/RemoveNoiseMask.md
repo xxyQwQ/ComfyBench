@@ -1,0 +1,5 @@
+- `RemoveNoiseMask`: The RemoveNoiseMask node is designed to process and modify latent representations by removing or altering the noise mask associated with them. This operation is crucial for refining the quality of generated images or for preparing the latent representations for further processing steps that require a specific noise configuration.
+    - Inputs:
+        - `samples` (Required): The 'samples' parameter represents the latent representations that are to be processed. It plays a crucial role in determining the outcome of the noise mask removal or alteration, affecting the quality and characteristics of the resulting images. Type should be `LATENT`.
+    - Outputs:
+        - `latent`: The 'latent' output represents the modified latent representations after the noise mask has been removed or altered. This output is essential for subsequent image generation or processing steps, as it provides a refined basis for further manipulations. Type should be `LATENT`.

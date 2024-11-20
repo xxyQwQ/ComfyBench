@@ -1,8 +1,0 @@
-- `OverlayInpaintedLatent`: The OverlayInpaintedLatent node is designed to blend original and inpainted latent representations based on a given mask, producing a seamless overlay where the inpainted content is integrated with the original content. This process is crucial for applications in art and image editing, where maintaining the integrity of the original image while incorporating new elements is essential.
-    - Parameters:
-    - Inputs:
-        - `original`: The 'original' input represents the original latent representation before any inpainting has been applied. It serves as the base for the overlay process, ensuring that the inpainted content is integrated in a way that respects the original image's structure and content. Type should be `LATENT`.
-        - `inpainted`: The 'inpainted' input contains the latent representation of the inpainted areas. It is crucial for the overlay process, as it provides the new content that will be blended with the original latent representation based on the mask. Type should be `LATENT`.
-        - `mask`: The 'mask' input specifies the areas of the original latent representation that should be replaced or blended with the inpainted content. It plays a key role in determining how the original and inpainted representations are combined during the overlay process. Type should be `MASK`.
-    - Outputs:
-        - `latent`: The output is a latent representation that combines the original and inpainted content based on the provided mask, resulting in a seamless integration of both elements. Type should be `LATENT`.

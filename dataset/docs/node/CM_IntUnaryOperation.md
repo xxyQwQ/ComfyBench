@@ -1,7 +1,0 @@
-- `CM_IntUnaryOperation`: Performs unary operations on integers, applying a specified operation to a single integer input and producing an integer result. This node abstracts mathematical operations that modify the value or state of an integer based on predefined unary operations.
-    - Parameters:
-        - `op`: Specifies the unary operation to be applied to the integer. This determines how the integer's value will be modified. Type should be `COMBO[STRING]`.
-        - `a`: The integer to which the unary operation will be applied. This is the input integer that will be modified by the specified operation. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `int`: The result of applying the unary operation to the input integer. Type should be `INT`.

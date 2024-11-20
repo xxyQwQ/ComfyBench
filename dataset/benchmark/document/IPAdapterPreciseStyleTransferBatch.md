@@ -1,0 +1,16 @@
+- `IPAdapterPreciseStyleTransferBatch`: This node specializes in applying precise style transfer techniques to images in batch mode, leveraging advanced image processing algorithms to blend styles from one image to another with high fidelity. It extends the capabilities of IPAdapterPreciseStyleTransfer by handling multiple images simultaneously, optimizing for efficiency and scalability in style transfer operations.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for the style transfer process, serving as the core computational engine. Type should be `MODEL`.
+        - `ipadapter` (Required): Refers to the IPAdapter instance used for integrating various image processing functionalities and models. Type should be `IPADAPTER`.
+        - `image` (Required): The target image(s) to which the style will be transferred, serving as the canvas for the style application. Type should be `IMAGE`.
+        - `weight` (Required): Controls the intensity of the style transfer effect, allowing for fine-tuning of the style application's strength. Type should be `FLOAT`.
+        - `style_boost` (Required): Adjusts the intensity of the style enhancement, enabling more pronounced style features in the transferred style. Type should be `FLOAT`.
+        - `combine_embeds` (Required): Determines the method for combining embeddings from different sources, affecting the final style transfer outcome. Type should be `COMBO[STRING]`.
+        - `start_at` (Required): Defines the starting point in the model's layers for applying the style transfer, allowing for layer-specific style applications. Type should be `FLOAT`.
+        - `end_at` (Required): Sets the endpoint in the model's layers for the style transfer, enabling precise control over the depth of style integration. Type should be `FLOAT`.
+        - `embeds_scaling` (Required): Specifies the scaling method for embeddings, influencing how style features are emphasized or balanced. Type should be `COMBO[STRING]`.
+        - `image_negative` (Optional): An optional negative image to contrast with the primary style transfer, used for refining the style application. Type should be `IMAGE`.
+        - `attn_mask` (Optional): An optional attention mask to focus or exclude specific areas from the style transfer process. Type should be `MASK`.
+        - `clip_vision` (Optional): Optionally integrates CLIP vision models to guide the style transfer with semantic understanding. Type should be `CLIP_VISION`.
+    - Outputs:
+        - `model`: The modified model after applying the style transfer, showcasing the integration of the desired style into the target images. Type should be `MODEL`.

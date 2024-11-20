@@ -1,8 +1,0 @@
-- `SeargeLoras`: SeargeLoras is designed to manage and apply LoRA (Low-Rank Adaptation) adjustments to models within a generative AI framework. It dynamically adjusts the LoRA stack based on input parameters, ensuring that the model's behavior is modified according to specified LoRA configurations for enhanced performance or specific outcomes.
-    - Parameters:
-        - `lora_i`: Specifies the LoRA's name, serving as a key identifier for applying specific LoRA adjustments. This is a generic placeholder for multiple LoRA inputs (lora_1 to lora_5). Type should be `COMBO[STRING]`.
-        - `lora_i_strength`: Determines the strength of the LoRA's effect, influencing how significantly the LoRA adjustment alters the model. This applies to multiple LoRA inputs, each having its own strength parameter. Type should be `FLOAT`.
-    - Inputs:
-        - `data`: An optional data structure that can be provided to include additional context or parameters for the LoRA adjustments. Type should be `SRG_DATA_STREAM`.
-    - Outputs:
-        - `data`: Returns the updated data structure including the modified LoRA stack, reflecting the applied LoRA adjustments. Type should be `SRG_DATA_STREAM`.

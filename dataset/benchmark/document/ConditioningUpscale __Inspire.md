@@ -1,0 +1,6 @@
+- `ConditioningUpscale __Inspire`: The ConditioningUpscale node is designed to upscale conditioning areas within a given set of conditionings, adjusting their dimensions based on specified scalar values. It focuses on modifying the 'area' attribute of each conditioning, scaling it to achieve a desired enlargement effect, which is crucial for applications requiring precise control over conditioning dimensions in generative tasks.
+    - Inputs:
+        - `conditioning` (Required): The 'conditioning' input represents the set of conditionings to be upscaled. It is essential for determining the areas within the input that will undergo scaling, directly influencing the output's spatial characteristics. Type should be `CONDITIONING`.
+        - `scalar` (Required): The 'scalar' input specifies the factor by which the conditioning areas are to be upscaled. It plays a pivotal role in determining the extent of scaling applied to each conditioning area, affecting the overall dimensions of the output. Type should be `INT`.
+    - Outputs:
+        - `conditioning`: The output is a modified version of the input conditionings, with each 'area' attribute scaled according to the specified scalar value. This is crucial for applications that require adjusted conditioning dimensions for enhanced generative performance. Type should be `CONDITIONING`.

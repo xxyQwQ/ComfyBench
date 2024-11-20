@@ -1,6 +1,0 @@
-- `Image Comparer (rgthree)`: This node provides a user interface for comparing two images, allowing for a side-by-side comparison to evaluate differences or similarities.
-    - Parameters:
-    - Inputs:
-        - `image_a`: The primary image to be compared. It is a required input for the comparison process. Type should be `IMAGE`.
-        - `image_b`: The secondary image to be compared against the primary image. This input is optional; if not provided, a second image from the 'image_a' batch can be used. Type should be `IMAGE`.
-    - Outputs:

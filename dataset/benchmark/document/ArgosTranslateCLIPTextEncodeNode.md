@@ -1,0 +1,9 @@
+- `ArgosTranslateCLIPTextEncodeNode`: This node is designed for translating text from one language to another and encoding the translated text using the CLIP model for further processing or conditioning in AI models. It supports a variety of languages and leverages the CLIP model to provide a rich, contextual representation of the translated text.
+    - Inputs:
+        - `from_translate` (Required): Specifies the source language from which the text will be translated. It determines the starting point of the translation process. Type should be `COMBO[STRING]`.
+        - `to_translate` (Required): Defines the target language to which the text will be translated. It affects the final output of the translation process by setting the desired language. Type should be `COMBO[STRING]`.
+        - `text` (Required): The text to be translated. This input is crucial as it provides the content that will undergo translation and subsequent encoding. Type should be `STRING`.
+        - `clip` (Required): A CLIP model instance used for encoding the translated text. It plays a key role in generating contextual embeddings for the text. Type should be `CLIP`.
+    - Outputs:
+        - `conditioning`: Provides the conditioning information derived from the CLIP model's encoding of the translated text. Type should be `CONDITIONING`.
+        - `string`: The translated text, serving as a direct output of the translation process. Type should be `STRING`.

@@ -1,0 +1,11 @@
+- `FL_HexagonalPattern`: The FL_HexagonalPattern node is designed to transform a collection of images into a hexagonal pattern, adjusting the size of hexagons based on the image dimensions and applying optional shadow effects for enhanced visual depth. It allows for customization of the hexagonal pattern through parameters such as hexagon size, shadow properties, and background color, enabling a versatile approach to image styling.
+    - Inputs:
+        - `images` (Required): A collection of images to be transformed into a hexagonal pattern. This parameter is essential for the node's operation, serving as the primary input around which the hexagonal pattern is generated. Type should be `IMAGE`.
+        - `hexagon_size` (Optional): Specifies the desired size of the hexagons in the pattern, affecting the overall appearance and granularity of the hexagonal tiling. Type should be `INT`.
+        - `shadow_offset` (Optional): Determines the offset distance for the shadow effect applied to each hexagon, enhancing the pattern's visual depth. Type should be `INT`.
+        - `shadow_color` (Optional): Defines the color of the shadow effect, allowing for customization of the shadow's appearance. Type should be `STRING`.
+        - `background_color` (Optional): Sets the background color of the output image, providing a base for the hexagonal pattern. Type should be `STRING`.
+        - `rotation` (Optional): Controls the rotation angle of each hexagon in the pattern, offering an additional dimension of stylistic customization. Type should be `FLOAT`.
+        - `spacing` (Optional): Adjusts the spacing between individual hexagons in the pattern, influencing the pattern's density and overall aesthetic. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The transformed image with the applied hexagonal pattern, incorporating any specified shadow effects and background color. Type should be `IMAGE`.

@@ -1,7 +1,0 @@
-- `ColorPreprocessor`: The ColorPreprocessor node is designed to process images by detecting and annotating colors within them, utilizing a specialized color detection model. This preprocessing step is crucial for tasks that require color analysis or modification before further processing.
-    - Parameters:
-        - `resolution`: Specifies the resolution to which the input image should be resized before processing. This parameter influences the precision and performance of color detection. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for color detection and annotation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed image with color detection and annotation applied. Type should be `IMAGE`.

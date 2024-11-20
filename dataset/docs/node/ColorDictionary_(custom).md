@@ -1,7 +1,0 @@
-- `ColorDictionary (custom)`: This node allows for the creation of a custom color dictionary by mapping user-defined color names to their corresponding color values. It ensures that the number of color names matches the number of color values provided, adjusting the lists to match in length if necessary.
-    - Parameters:
-        - `color_names`: A list of user-defined names for colors. These names will be used as keys in the resulting color dictionary. Type should be `STRING`.
-    - Inputs:
-        - `colors`: A list of color values corresponding to the color names provided. These values will be used as values in the resulting color dictionary. Type should be `COLOR`.
-    - Outputs:
-        - `color_dict`: The resulting custom color dictionary mapping the provided color names to their corresponding color values. Type should be `COLOR_DICT`.

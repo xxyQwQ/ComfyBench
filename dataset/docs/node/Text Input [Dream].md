@@ -1,6 +1,0 @@
-- `Text Input [Dream]`: Provides a user interface component for text input, allowing multiline text entry with a default value. It's designed for collecting textual data from users within a graphical interface.
-    - Parameters:
-        - `value`: Represents the text value entered by the user. It supports multiline input and starts with an empty string by default, facilitating the collection of user-generated text. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `STRING`: Outputs the text entered by the user, directly reflecting the input without modification. Type should be `STRING`.

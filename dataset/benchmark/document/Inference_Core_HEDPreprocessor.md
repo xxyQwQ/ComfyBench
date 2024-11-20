@@ -1,0 +1,7 @@
+- `Inference_Core_HEDPreprocessor`: The HEDPreprocessor node is designed for extracting soft-edge lines from images using the HED (Holistically-Nested Edge Detection) model. It preprocesses images to enhance edge features, facilitating downstream tasks that require detailed edge or line information.
+    - Inputs:
+        - `image` (Required): The input image to be processed for edge detection. The resolution parameter allows specifying the desired output resolution, affecting the level of detail in the detected edges. Type should be `IMAGE`.
+        - `safe` (Optional): A mode toggle that enables or disables safety checks during edge detection, potentially affecting performance and output quality. Type should be `COMBO[STRING]`.
+        - `resolution` (Optional): Specifies the resolution of the output image, influencing the granularity of detected edges. Higher resolutions yield more detailed edge information. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed image with enhanced edge details, suitable for use in various image analysis and manipulation tasks. Type should be `IMAGE`.

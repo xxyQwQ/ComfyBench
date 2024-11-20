@@ -1,8 +1,0 @@
-- `ImageFilterRank`: The `ImageFilterRank` node applies a rank filter to a collection of images, allowing for the enhancement or modification of image details based on the rank and size parameters specified. This node is part of the image filtering category and is designed to process images by applying a specific rank-based filtering operation.
-    - Parameters:
-        - `size`: Specifies the size of the filter to be applied. The size parameter influences the extent of the filtering effect on the images. Type should be `INT`.
-        - `rank`: Determines the rank of the filter within the specified size, affecting the intensity and type of filtering applied to the images. Type should be `INT`.
-    - Inputs:
-        - `images`: The collection of images to which the rank filter will be applied. This parameter is crucial for defining the input images that will undergo the filtering process. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a collection of images that have undergone rank-based filtering, showcasing the effect of the specified rank and size parameters on the original images. Type should be `IMAGE`.

@@ -1,0 +1,7 @@
+- `SaltAudioMixer`: The SaltAudioMixer node is designed for blending two audio streams into a single output by overlaying one audio stream onto another at a specified mix time. This functionality is essential for creating composite audio tracks or for audio editing purposes where multiple sounds need to be combined.
+    - Inputs:
+        - `audio_a` (Required): The first audio stream to be mixed. It serves as the base layer onto which the second audio stream will be overlaid. Type should be `AUDIO`.
+        - `audio_b` (Required): The second audio stream to be mixed. It is overlaid onto the first audio stream at the specified mix time. Type should be `AUDIO`.
+        - `mix_time_seconds` (Required): The time, in seconds, at which the second audio stream is to be overlaid onto the first. This determines the starting point of the overlay in the resulting mixed audio. Type should be `FLOAT`.
+    - Outputs:
+        - `mixed_audio`: The resulting audio stream after mixing the two input streams. It represents the composite audio track created by overlaying the second audio stream onto the first at the specified mix time. Type should be `AUDIO`.

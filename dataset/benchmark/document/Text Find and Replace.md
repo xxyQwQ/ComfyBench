@@ -1,0 +1,10 @@
+- `Text Find and Replace`: This node provides functionality for searching and replacing specified substrings within a given text. It allows users to dynamically alter text content by finding occurrences of a specified pattern and replacing them with a new string, which can be useful for text preprocessing, data cleaning, or content transformation tasks.
+    - Inputs:
+        - `text` (Required): The text in which to search and replace substrings. It serves as the primary content for manipulation, where specified patterns will be identified and replaced. Type should be `STRING`.
+        - `find` (Required): The substring to find within the input text. This parameter defines the pattern that will be searched for replacement. Type should be `STRING`.
+        - `replace` (Required): The new substring that will replace each occurrence of the 'find' pattern in the input text. It defines the content that will be inserted in place of the identified patterns. Type should be `STRING`.
+    - Outputs:
+        - `result_text`: The modified text after all occurrences of the 'find' pattern have been replaced with the 'replace' string. Type should be `STRING`.
+        - `replacement_count_number`: The total number of replacements made within the text. Type should be `NUMBER`.
+        - `replacement_count_float`: The total number of replacements made within the text, represented as a float. Type should be `FLOAT`.
+        - `replacement_count_int`: The total number of replacements made within the text, represented as an integer. Type should be `INT`.

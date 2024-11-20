@@ -1,0 +1,7 @@
+- `XY Input_ Denoise`: This node is designed to generate a set of floating-point values representing denoising levels for a batch of data. It abstracts the process of calculating denoise values across a specified range, facilitating the visualization or analysis of denoising effects in a computational efficiency context.
+    - Inputs:
+        - `batch_count` (Required): Specifies the number of denoise values to generate, allowing for control over the granularity of the denoising analysis. Type should be `INT`.
+        - `first_denoise` (Required): Defines the starting point of the denoise range, enabling customization of the denoising process's lower bound. Type should be `FLOAT`.
+        - `last_denoise` (Required): Sets the endpoint of the denoise range, allowing for the adjustment of the upper limit in the denoising analysis. Type should be `FLOAT`.
+    - Outputs:
+        - `X or Y`: Outputs a tuple containing the type of values ('Denoise') and the generated floating-point denoise values, suitable for plotting or further analysis. Type should be `XY`.

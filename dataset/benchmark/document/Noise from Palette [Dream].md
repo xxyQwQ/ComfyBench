@@ -1,0 +1,10 @@
+- `Noise from Palette [Dream]`: This node generates a noise pattern based on a given palette, allowing for the creation of textured images with specific color schemes. It utilizes parameters such as width, height, blur amount, density, and seed to customize the noise generation process, producing a unique and stylized noise image.
+    - Inputs:
+        - `palette` (Required): The palette parameter defines the color scheme used for noise generation, influencing the overall appearance and color distribution of the resulting image. Type should be `RGB_PALETTE`.
+        - `width` (Required): Specifies the width of the generated noise image, determining its horizontal dimension. Type should be `INT`.
+        - `height` (Required): Specifies the height of the generated noise image, determining its vertical dimension. Type should be `INT`.
+        - `blur_amount` (Required): Controls the amount of blur applied to the noise, affecting the smoothness and blending of colors. Type should be `FLOAT`.
+        - `density` (Required): Adjusts the density of the noise pattern, influencing how closely packed the noise elements are. Type should be `FLOAT`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the noise pattern. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a stylized noise image generated based on the input palette and other parameters. Type should be `IMAGE`.

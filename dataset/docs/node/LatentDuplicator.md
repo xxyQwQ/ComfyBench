@@ -1,7 +1,0 @@
-- `LatentDuplicator`: The LatentDuplicator node is designed to duplicate latent images a specified number of times, facilitating the generation of multiple copies of the same image for further processing or analysis.
-    - Parameters:
-        - `dup_times`: Specifies the number of times the input latent image should be duplicated. This count determines how many copies of the base image will be produced. Type should be `INT`.
-    - Inputs:
-        - `latent_image`: The input latent image to be duplicated. It serves as the base image from which multiple copies will be generated, based on the duplication count specified. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The output consists of the duplicated latent images, concatenated into a single tensor, effectively multiplying the number of available images for subsequent operations. Type should be `LATENT`.

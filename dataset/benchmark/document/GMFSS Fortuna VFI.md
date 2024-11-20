@@ -1,0 +1,9 @@
+- `GMFSS Fortuna VFI`: The GMFSS Fortuna VFI node is designed for frame interpolation in video processing, leveraging deep learning models to predict intermediate frames between two given frames. It utilizes a specialized architecture to enhance the quality and accuracy of the interpolation, aiming to produce smooth and visually coherent transitions.
+    - Inputs:
+        - `ckpt_name` (Required): The checkpoint name for the model, specifying which pretrained model to use for frame interpolation. Type should be `COMBO[STRING]`.
+        - `frames` (Required): A tensor containing the sequence of frames for interpolation. It is the primary input from which intermediate frames are generated. Type should be `IMAGE`.
+        - `clear_cache_after_n_frames` (Required): Specifies after how many frames the CUDA cache should be cleared to prevent memory overflow. Type should be `INT`.
+        - `multiplier` (Required): Determines the number of intermediate frames to be generated between each pair of input frames. Type should be `INT`.
+        - `optional_interpolation_states` (Optional): An optional parameter that allows for the skipping of frames based on certain conditions, potentially optimizing the interpolation process. Type should be `INTERPOLATION_STATES`.
+    - Outputs:
+        - `image`: The output of the interpolation process, consisting of the original frames along with the newly interpolated frames. Type should be `IMAGE`.

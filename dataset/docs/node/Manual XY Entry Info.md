@@ -1,5 +1,0 @@
-- `Manual XY Entry Info`: This node is designed to provide detailed information about manual entries for XY plots within a specific context, facilitating the understanding and manipulation of XY data for customized plotting and analysis.
-    - Parameters:
-        - `notes`: The 'notes' input allows users to provide additional context or information related to the manual XY entries, enhancing the customization and specificity of the plotting process. Type should be `STRING`.
-    - Inputs:
-    - Outputs:

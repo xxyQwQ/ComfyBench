@@ -1,0 +1,6 @@
+- `LayerUtility_ PurgeVRAM`: The PurgeVRAM node is designed to free up GPU memory resources by optionally clearing PyTorch's cache and unloading all models from memory. It's a system utility node aimed at optimizing memory usage during runtime, especially useful in environments with limited GPU memory or when running multiple model inference tasks sequentially.
+    - Inputs:
+        - `anything` (Required): A placeholder input that does not affect the operation of the node, allowing for flexible integration into workflows. Type should be `*`.
+        - `purge_cache` (Required): Determines whether the PyTorch cache should be cleared, helping to free up GPU memory. Type should be `BOOLEAN`.
+        - `purge_models` (Required): Controls whether all models should be unloaded from memory, further aiding in the optimization of GPU memory usage. Type should be `BOOLEAN`.
+    - Outputs:

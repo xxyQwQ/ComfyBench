@@ -1,6 +1,0 @@
-- `CheckpointHash`: The CheckpointHash node is designed to generate a hash value for a given checkpoint file. This functionality is crucial for verifying the integrity of checkpoint files and ensuring that they have not been altered or corrupted. It plays a key role in maintaining the reliability and consistency of model loading processes by providing a means to track and validate checkpoint files.
-    - Parameters:
-        - `ckpt_name`: The 'ckpt_name' parameter specifies the name of the checkpoint file for which the hash is to be generated. It is essential for identifying the correct file within a collection of checkpoints and is a key factor in the hash generation process. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `ckpt_hash`: The 'ckpt_hash' output is the generated hash value of the specified checkpoint file, serving as a unique identifier and integrity verifier for the file. Type should be `STRING`.

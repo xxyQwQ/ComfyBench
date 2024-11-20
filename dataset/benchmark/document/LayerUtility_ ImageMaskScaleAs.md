@@ -1,0 +1,13 @@
+- `LayerUtility_ ImageMaskScaleAs`: This node is designed to scale images and masks to match the dimensions of a target image or mask, applying various resizing methods and fitting options to ensure the output aligns with the specified dimensions. It supports different interpolation methods for resizing, offering flexibility in how the scaling is performed to meet the needs of different use cases.
+    - Inputs:
+        - `scale_as` (Required): Specifies the target tensor to scale the image or mask as, determining the dimensions to which the inputs should be resized. Type should be `*`.
+        - `fit` (Required): Defines how the image or mask should be fitted to the target dimensions, affecting the scaling and cropping behavior. Type should be `COMBO[STRING]`.
+        - `method` (Required): Determines the interpolation method used for resizing, such as 'bicubic', 'nearest', etc., influencing the quality and characteristics of the output. Type should be `COMBO[STRING]`.
+        - `image` (Optional): The image tensor to be scaled. It is optional and when provided, it will be resized to match the target dimensions. Type should be `IMAGE`.
+        - `mask` (Optional): The mask tensor to be scaled. It is optional and when provided, it will be resized alongside the image to match the target dimensions. Type should be `MASK`.
+    - Outputs:
+        - `image`: The scaled image tensor, resized to match the target dimensions specified by 'scale_as'. Type should be `IMAGE`.
+        - `mask`: The scaled mask tensor, resized alongside the image to match the target dimensions specified by 'scale_as'. Type should be `MASK`.
+        - `original_size`: A list containing the original width and height of the input image or mask before scaling. Type should be `BOX`.
+        - `widht`: unknown Type should be `INT`.
+        - `height`: The target height to which the image or mask has been scaled. Type should be `INT`.

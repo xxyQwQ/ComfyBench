@@ -1,6 +1,0 @@
-- `ReActorLoadFaceModel`: The ReActorLoadFaceModel node is designed for loading face models into the ReActor system. It facilitates the retrieval and application of pre-trained face models, enabling the enhancement or modification of facial features in images.
-    - Parameters:
-        - `face_model`: Specifies the name of the face model to be loaded. This parameter is crucial for identifying and retrieving the correct model from a predefined set of available models, impacting the accuracy and effectiveness of face-related operations. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `face_model`: Returns the loaded face model, which can be utilized for further face manipulation tasks within the ReActor system. Type should be `FACE_MODEL`.

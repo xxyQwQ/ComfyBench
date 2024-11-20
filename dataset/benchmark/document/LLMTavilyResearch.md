@@ -1,0 +1,14 @@
+- `LLMTavilyResearch`: This node is designed to leverage the capabilities of the Tavily Research model, focusing on advanced language understanding and generation tasks. It aims to provide deep insights and analyses, potentially enhancing various applications with sophisticated language processing features.
+    - Inputs:
+        - `tavily_api_key` (Required): Specifies the API key required to access the Tavily Research model, essential for authenticating and enabling the node's operations. Type should be `STRING`.
+        - `search_query` (Required): The query input for conducting searches, serving as the basis for retrieving relevant information and insights. Type should be `STRING`.
+        - `search_depth` (Optional): Determines the depth of the search, affecting the comprehensiveness of the results obtained. Type should be `COMBO[STRING]`.
+        - `max_results` (Optional): Limits the number of results returned, allowing for control over the volume of data processed. Type should be `INT`.
+        - `include_answer` (Optional): A flag to include direct answers within the search results, enhancing the utility of the output. Type should be `BOOLEAN`.
+        - `include_raw_content` (Optional): A flag to include the raw content of the search results, providing access to unprocessed data. Type should be `BOOLEAN`.
+        - `include_domains` (Optional): Specifies domains to be included in the search results, focusing the search on specific sources. Type should be `STRING`.
+        - `exclude_domains` (Optional): Specifies domains to be excluded from the search results, refining the scope of the search. Type should be `STRING`.
+        - `keep_looking_limit` (Optional): Sets a limit on the number of times the search will attempt to find more results beyond the initial set, affecting the thoroughness of the search. Type should be `INT`.
+    - Outputs:
+        - `documents`: A collection of documents retrieved as a result of the search, providing structured insights. Type should be `DOCUMENT`.
+        - `urls`: A list of URLs corresponding to the documents found, offering direct links to the source material. Type should be `LIST`.

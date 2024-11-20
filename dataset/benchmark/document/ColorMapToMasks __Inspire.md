@@ -1,0 +1,7 @@
+- `ColorMapToMasks __Inspire`: The `ColorMapToMasks` node is designed to process a color map image to identify and extract masks corresponding to the top colors present in the image. It aims to simplify the segmentation of images into distinct color-based regions, facilitating further image manipulation or analysis tasks.
+    - Inputs:
+        - `color_map` (Required): The `color_map` parameter represents the input image from which masks will be generated based on the dominant colors. It plays a crucial role in determining the segmentation outcome. Type should be `IMAGE`.
+        - `min_pixels` (Required): The `min_pixels` parameter sets the minimum number of pixels a color must have within the color map to be considered for mask creation. This helps in filtering out less significant colors. Type should be `INT`.
+        - `max_count` (Required): The `max_count` parameter limits the number of top colors to be considered for mask generation. This controls the granularity of the segmentation. Type should be `INT`.
+    - Outputs:
+        - `mask`: The output is a tensor of masks, each corresponding to one of the top colors identified in the input color map. These masks enable targeted manipulation or analysis of specific color regions within the image. Type should be `MASK`.

@@ -1,0 +1,9 @@
+- `AlphaClean`: The AlphaClean node is designed for image preprocessing, specifically targeting the enhancement and cleaning of image alpha channels. It employs techniques such as bilateral filtering, Gaussian blurring, and dynamic thresholding to refine the transparency and edges of images, making it particularly useful in graphics and image processing applications where precise alpha manipulation is required.
+    - Inputs:
+        - `images` (Required): The input images to be processed, expected to have their alpha channels cleaned and enhanced. Type should be `IMAGE`.
+        - `radius` (Required): Specifies the radius for Gaussian blurring, affecting the smoothness of the alpha channel's edges. Type should be `INT`.
+        - `fill_holes` (Required): Determines whether and how much to fill holes in the alpha channel, enhancing image completeness. Type should be `INT`.
+        - `white_threshold` (Required): Sets the threshold for considering a pixel as white, aiding in the separation of foreground from background. Type should be `FLOAT`.
+        - `extra_clip` (Required): Applies an additional clipping factor to the image, adjusting the intensity of the cleaning effect. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The processed images with cleaned and enhanced alpha channels, ready for further use or display. Type should be `IMAGE`.

@@ -1,0 +1,10 @@
+- `ttN advanced xyPlot`: The `ttN advanced xyPlot` node is designed for advanced plotting capabilities, focusing on generating and manipulating XY plots. It enables the creation of plots based on X, Y, and optionally Z coordinates, with features such as flipping the X and Y axes, adjusting grid spacing, and saving individual plots. This node is tailored for visualizing complex data relationships through customizable 2D and 3D plots.
+    - Inputs:
+        - `grid_spacing` (Required): Specifies the spacing between grid lines in the plot, affecting the plot's resolution and visual density. Type should be `INT`.
+        - `save_individuals` (Required): Determines whether to save each plotted point as an individual file, enabling detailed analysis of specific data points. Type should be `BOOLEAN`.
+        - `flip_xy` (Required): Controls whether the X and Y axes should be swapped, allowing for alternative data perspective visualization. Type should be `BOOLEAN`.
+        - `x_plot` (Required): The X coordinates for plotting, defining the horizontal positioning of data points. Type should be `STRING`.
+        - `y_plot` (Required): The Y coordinates for plotting, defining the vertical positioning of data points. Type should be `STRING`.
+        - `z_plot` (Required): The Z coordinates for plotting, adding a third dimension to the visualization when applicable. Type should be `STRING`.
+    - Outputs:
+        - `adv_xyPlot`: The generated XY plot data, including coordinates and configuration settings for visualization. Type should be `ADV_XYPLOT`.

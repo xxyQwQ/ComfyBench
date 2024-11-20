@@ -1,7 +1,0 @@
-- `VAEEncodeBatch`: The VAEEncodeBatch node is designed for batch processing of images to encode them into a latent space representation using a specified VAE model. It allows for the encoding of multiple images at once, optimizing the process for efficiency and scalability.
-    - Parameters:
-        - `inputs_len`: Specifies the number of images to be encoded in the batch. This parameter controls the iteration over the images and their subsequent encoding, affecting the node's execution and the size of the output latent representation. Type should be `INT`.
-    - Inputs:
-        - `vae`: The VAE model used for encoding the images. This parameter is crucial for determining how the images are transformed into their latent space representations. Type should be `VAE`.
-    - Outputs:
-        - `latent`: The encoded latent space representation of the batch of images. This output encapsulates the transformation of the input images into a format suitable for further processing or analysis. Type should be `LATENT`.

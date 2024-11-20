@@ -1,6 +1,0 @@
-- `LLMTrafilaturaWebReader`: The LLMTrafilaturaWebReader node is designed to extract and read content from web pages using the Trafilatura library. It processes up to four URLs to retrieve textual data, facilitating the consumption of web content in a structured format.
-    - Parameters:
-        - `url_i`: A URL from which to extract content. This parameter is essential for the node's operation as it defines the starting point for content extraction. The node can process up to four URLs (url_1 to url_4), allowing for the extraction of content from multiple web pages in a single operation. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `documents`: The extracted content from the specified web pages, returned as structured documents. Type should be `DOCUMENT`.

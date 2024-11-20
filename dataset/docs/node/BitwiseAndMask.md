@@ -1,7 +1,0 @@
-- `BitwiseAndMask`: The BitwiseAndMask node performs a bitwise AND operation between two masks, resulting in a new mask that represents the intersection of the input masks. This operation is useful for combining or filtering mask data based on overlapping regions.
-    - Parameters:
-    - Inputs:
-        - `mask1`: The first input mask for the bitwise AND operation. It plays a crucial role in determining the resulting mask by intersecting its content with the second mask. Type should be `MASK`.
-        - `mask2`: The second input mask for the bitwise AND operation. It intersects with the first mask to produce the resulting mask that highlights the overlapping areas. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The output mask resulting from the bitwise AND operation between the two input masks, highlighting the areas where both masks overlap. Type should be `MASK`.

@@ -1,0 +1,7 @@
+- `AV_ControlNetLoader`: The AV_ControlNetLoader node is designed to load control net configurations for use in art and design applications. It supports loading specific control net models by name, with optional overrides and timestep keyframe adjustments, facilitating dynamic and flexible control net application within creative workflows.
+    - Inputs:
+        - `control_net_name` (Required): Specifies the name of the control net to be loaded. This parameter is essential for identifying which control net configuration to apply, enabling the customization of art generation processes. Type should be `COMBO[STRING]`.
+        - `control_net_override` (Optional): Allows for the specification of an alternative control net to be used instead of the one named in 'control_net_name', providing flexibility in control net selection. Type should be `STRING`.
+        - `timestep_keyframe` (Optional): Optional parameter to specify a particular timestep keyframe for the control net, enabling fine-tuned adjustments to how the control net is applied. Type should be `TIMESTEP_KEYFRAME`.
+    - Outputs:
+        - `control_net`: Returns the loaded control net configuration, ready for application in art generation processes. Type should be `CONTROL_NET`.

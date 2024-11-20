@@ -1,0 +1,8 @@
+- `Inpaint`: The Inpaint node is designed to reconstruct the missing or damaged parts of images using a specified inpainting technique. It leverages computer vision algorithms to fill in gaps or remove unwanted objects from images, based on the surrounding pixel information.
+    - Inputs:
+        - `img` (Required): The image to be inpainted. It serves as the primary input where missing parts or imperfections are identified and subsequently reconstructed. Type should be `IMAGE`.
+        - `mask` (Required): A mask image indicating the areas to be inpainted. Pixels marked in the mask are the targets for inpainting, guiding the algorithm on where to apply the reconstruction process. Type should be `IMAGE`.
+        - `radius` (Required): Defines the neighborhood size around each point to consider for inpainting. A larger radius uses more surrounding pixels for reconstruction, potentially leading to smoother results. Type should be `INT`.
+        - `flag` (Required): Specifies the inpainting technique to use. Different methods can produce varying results based on the algorithm's approach to filling in missing data. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The inpainted image, where the specified areas have been reconstructed using the chosen inpainting technique. Type should be `IMAGE`.

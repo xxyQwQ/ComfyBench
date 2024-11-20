@@ -1,0 +1,18 @@
+- `easy preSamplingSdTurbo`: The `easy preSamplingSdTurbo` node is designed to facilitate the pre-sampling process for image generation tasks, leveraging the SDTurbo scheduler for efficient sampling. It integrates various components such as model selection, step configuration, and denoise settings to prepare and optimize the sampling pipeline, aiming to enhance the quality and efficiency of generated images.
+    - Inputs:
+        - `pipe` (Required): Specifies the pipeline configuration to be used for pre-sampling, including model, sampling steps, and other relevant settings. Type should be `PIPE_LINE`.
+        - `steps` (Required): Determines the number of steps to be used in the SDTurbo scheduler for the sampling process, affecting the detail and quality of the generated images. Type should be `INT`.
+        - `cfg` (Required): Configures the conditioning factor for the sampling process, influencing the adherence to the input conditions and the overall image quality. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the specific sampler to be used in conjunction with the SDTurbo scheduler, impacting the sampling strategy and output characteristics. Type should be `COMBO[STRING]`.
+        - `eta` (Required): Adjusts the eta parameter for the sampling process, influencing the randomness and variability of the generated images. Type should be `FLOAT`.
+        - `s_noise` (Required): Specifies the seed noise level for the sampling process, affecting the initial randomness of the generated images. Type should be `FLOAT`.
+        - `upscale_ratio` (Required): Determines the upscale ratio for image enhancement during the pre-sampling process, affecting the resolution and clarity of the output. Type should be `FLOAT`.
+        - `start_step` (Required): Specifies the starting step for the sampling process, allowing for finer control over the generation progression. Type should be `INT`.
+        - `end_step` (Required): Defines the end step for the sampling process, setting the limit for the generation progression. Type should be `INT`.
+        - `upscale_n_step` (Required): Sets the number of steps for the upscaling process, affecting the detail and quality of the upscaled images. Type should be `INT`.
+        - `unsharp_kernel_size` (Required): Configures the kernel size for the unsharp mask applied during image enhancement, affecting the sharpness and clarity. Type should be `INT`.
+        - `unsharp_sigma` (Required): Sets the sigma value for the unsharp mask, influencing the edge enhancement during the image upscaling process. Type should be `FLOAT`.
+        - `unsharp_strength` (Required): Adjusts the strength of the unsharp mask, fine-tuning the contrast and detail enhancement during upscaling. Type should be `FLOAT`.
+        - `seed` (Required): Sets the random seed for the sampling process, ensuring reproducibility of the generated images. Type should be `INT`.
+    - Outputs:
+        - `pipe`: Outputs the modified pipeline configuration after the pre-sampling process, including updated model, sampling settings, and generated samples. Type should be `PIPE_LINE`.

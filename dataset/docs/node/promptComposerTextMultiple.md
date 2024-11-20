@@ -1,9 +1,0 @@
-- `promptComposerTextMultiple`: The `promptComposerTextMultiple` node is designed to compose a text prompt by combining multiple text inputs, each with an associated weight. This node allows for the dynamic creation of prompts by adjusting the significance of each text input through weights, enabling a flexible and weighted composition of text elements for various applications.
-    - Parameters:
-        - `text_i`: A text input to be included in the prompt composition. The index 'i' can range from 1 to 10, allowing for up to ten different text inputs. Type should be `STRING`.
-        - `weight_i`: The weight associated with the corresponding text input, determining its significance in the composed prompt. The index 'i' matches that of 'text_i', allowing for individual weighting of up to ten text inputs. Type should be `FLOAT`.
-        - `active`: A boolean input that activates or deactivates the composition of the prompt. When false, the node may ignore the text inputs and weights, resulting in an empty or default prompt. Type should be `BOOLEAN`.
-        - `text_in_opt`: An optional initial text input that can be included in the prompt composition. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `text_out`: The composed text prompt, resulting from the combination and weighting of the provided text inputs. Type should be `STRING`.

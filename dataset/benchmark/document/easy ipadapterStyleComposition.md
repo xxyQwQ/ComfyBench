@@ -1,0 +1,21 @@
+- `easy ipadapterStyleComposition`: This node facilitates the application of style and composition adjustments to images using an IPAdapter. It abstracts the complexity of applying various style and composition weights and parameters, enabling users to easily enhance or modify the visual attributes of images.
+    - Inputs:
+        - `model` (Required): Specifies the model to which the IPAdapter adjustments will be applied, serving as the foundation for style and composition enhancements. Type should be `MODEL`.
+        - `image_style` (Required): The image that provides the style reference, guiding the stylistic adjustments to be applied to the target image. Type should be `IMAGE`.
+        - `preset` (Required): Defines the preset configuration for the IPAdapter, setting a baseline for style and composition adjustments. Type should be `COMBO[STRING]`.
+        - `weight_style` (Required): Specifies the weight for style adjustments, influencing the intensity of style application. Type should be `FLOAT`.
+        - `weight_composition` (Required): Specifies the weight for composition adjustments, influencing the intensity of composition application. Type should be `FLOAT`.
+        - `expand_style` (Required): Indicates whether to expand the style adjustments beyond the initial parameters, allowing for more extensive stylistic modifications. Type should be `BOOLEAN`.
+        - `combine_embeds` (Required): Determines how style and composition embeddings are combined, affecting the final visual outcome. Type should be `COMBO[STRING]`.
+        - `start_at` (Required): Specifies the starting point for applying style and composition adjustments, allowing for phased application. Type should be `FLOAT`.
+        - `end_at` (Required): Specifies the ending point for applying style and composition adjustments, defining the scope of application. Type should be `FLOAT`.
+        - `embeds_scaling` (Required): Controls the scaling of embeddings, affecting the intensity and focus of style and composition adjustments. Type should be `COMBO[STRING]`.
+        - `cache_mode` (Required): Determines the caching strategy for the IPAdapter, optimizing performance and resource usage. Type should be `COMBO[STRING]`.
+        - `image_composition` (Optional): The image that serves as a composition reference, guiding the compositional adjustments to be applied to the target image. Type should be `IMAGE`.
+        - `image_negative` (Optional): An optional image that provides a negative style reference, used to guide adjustments by indicating undesired stylistic attributes. Type should be `IMAGE`.
+        - `attn_mask` (Optional): An optional attention mask, used to focus or exclude specific areas from style and composition adjustments. Type should be `MASK`.
+        - `clip_vision` (Optional): Indicates whether to use CLIP's vision capabilities for guiding the style and composition adjustments, enhancing the alignment between the image's content and the desired stylistic attributes. Type should be `CLIP_VISION`.
+        - `optional_ipadapter` (Optional): An optional IPAdapter instance, allowing for the use of a pre-configured adapter for style and composition adjustments. Type should be `IPADAPTER`.
+    - Outputs:
+        - `model`: The model with applied style and composition adjustments, ready for further processing or generation tasks. Type should be `MODEL`.
+        - `ipadapter`: The IPAdapter instance configured with the specified style and composition adjustments, encapsulating the transformation logic. Type should be `IPADAPTER`.

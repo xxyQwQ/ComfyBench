@@ -1,0 +1,8 @@
+- `Text Find and Replace by Dictionary`: This node performs a search and replace operation on a given text using a dictionary. It identifies specific terms within the text, marked by a customizable replacement key, and replaces them with random selections from lists associated with those terms in the dictionary. The operation can be influenced by a seed for reproducible randomness.
+    - Inputs:
+        - `text` (Required): The input text to be processed. It serves as the base content for search and replace operations. Type should be `STRING`.
+        - `dictionary` (Required): A dictionary where keys represent terms to be replaced in the text, and values are lists of possible replacements. Type should be `DICT`.
+        - `replacement_key` (Required): A string used to mark the beginning and end of terms in the text that should be replaced. It helps in identifying the exact terms to be replaced. Type should be `STRING`.
+        - `seed` (Required): An integer used to seed the random number generator for reproducible randomness in the selection of replacements. Type should be `INT`.
+    - Outputs:
+        - `string`: The modified text after search and replace operations have been performed, with specific terms replaced by random selections from the dictionary. Type should be `STRING`.

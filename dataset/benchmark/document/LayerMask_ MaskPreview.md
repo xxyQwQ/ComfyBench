@@ -1,0 +1,4 @@
+- `LayerMask_ MaskPreview`: The MaskPreview node is designed to generate a visual preview of a mask by transforming it into an image format suitable for visualization. It extends the functionality of saving images by specifically handling mask data, ensuring that masks can be easily reviewed and verified within a workflow.
+    - Inputs:
+        - `mask` (Required): The 'mask' input is crucial for generating a preview of the mask. It represents the mask data that will be transformed into a visual format. The processing of this input directly influences the appearance of the generated preview, making it essential for visual verification of mask conditions. Type should be `MASK`.
+    - Outputs:

@@ -1,0 +1,8 @@
+- `RemapStretch`: The RemapStretch node is designed to apply a stretching transformation to images based on specified power factors along the x and y axes, and a center point around which the stretch is applied. This node allows for the dynamic adjustment of image geometry to simulate effects such as stretching or elongation, providing a versatile tool for image manipulation and enhancement.
+    - Inputs:
+        - `power_x` (Required): Specifies the power factor for stretching along the x-axis. A higher value results in more pronounced stretching effect. Type should be `FLOAT`.
+        - `power_y` (Required): Specifies the power factor for stretching along the y-axis. Similar to `power_x`, a higher value intensifies the stretching effect. Type should be `FLOAT`.
+        - `center_x` (Required): Determines the x-coordinate of the center point around which the stretching effect is applied. This allows for targeted manipulation of the image geometry. Type should be `FLOAT`.
+        - `center_y` (Required): Determines the y-coordinate of the center point around which the stretching effect is applied, enabling precise control over the area of effect. Type should be `FLOAT`.
+    - Outputs:
+        - `remap`: Produces a transformed image where the specified stretching effects have been applied, altering the original geometry according to the input parameters. Type should be `REMAP`.

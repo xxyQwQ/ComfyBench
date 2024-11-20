@@ -1,0 +1,12 @@
+- `SaltScheduledImageAdjust`: This node is designed for batch processing of images, allowing for scheduled adjustments to various image attributes such as brightness, contrast, saturation, sharpness, gaussian blur, and edge enhancement. It enables the dynamic modification of these attributes over a sequence of images, facilitating complex visual effects and enhancements in an automated manner.
+    - Inputs:
+        - `images` (Required): The collection of images to be adjusted. This parameter is central to the node's operation, as it determines the base content that will be modified according to the specified schedules. Type should be `IMAGE`.
+        - `masks` (Optional): Optional masks that can be applied to the images for selective adjustment. This allows for more precise control over which areas of the images are affected by the scheduled adjustments. Type should be `MASK`.
+        - `brightness_schedule` (Optional): A schedule dictating the brightness adjustments over time. This enables dynamic changes to the brightness of the images, enhancing visual storytelling or compensating for lighting variations. Type should be `LIST`.
+        - `contrast_schedule` (Optional): A schedule for adjusting the contrast of the images. This can be used to emphasize texture and depth, or to create a specific mood by altering the visual intensity of the images. Type should be `LIST`.
+        - `saturation_schedule` (Optional): Defines how the color saturation of the images will change over time. This is useful for creating vivid or muted color effects in a sequence of images. Type should be `LIST`.
+        - `sharpness_schedule` (Optional): A schedule for modifying the sharpness of the images, allowing for the enhancement or softening of details within the images. Type should be `LIST`.
+        - `gaussian_blur_schedule` (Optional): Determines the intensity of gaussian blur applied to the images over time, useful for creating depth of field effects or focusing attention on specific elements. Type should be `LIST`.
+        - `edge_enhance_schedule` (Optional): A schedule for the application of edge enhancement, which can be used to accentuate edges and details within the images. Type should be `LIST`.
+    - Outputs:
+        - `image`: unknown Type should be `IMAGE`.

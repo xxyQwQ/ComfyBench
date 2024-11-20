@@ -1,6 +1,0 @@
-- `Masks Combine Batch`: This node is designed to combine multiple mask tensors into a single mask tensor by summing them up. It ensures that the resulting mask values are clamped between 0 and 1, maintaining the integrity of mask data.
-    - Parameters:
-    - Inputs:
-        - `masks`: The 'masks' input consists of a batch of mask tensors to be combined. It plays a crucial role in the node's operation by providing the raw data that will be processed into a single, unified mask. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The output is a single mask tensor that represents the combined effect of the input masks, with values clamped between 0 and 1. Type should be `MASK`.

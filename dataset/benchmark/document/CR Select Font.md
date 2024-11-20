@@ -1,0 +1,6 @@
+- `CR Select Font`: This node allows users to select a font from a list of available TrueType fonts (.ttf) based on the operating system's font directory. It is designed to facilitate the customization of text appearance in graphics by providing access to system fonts.
+    - Inputs:
+        - `font_name` (Required): Specifies the name of the font to be selected. This parameter enables the customization of text appearance by allowing users to choose from available TrueType fonts. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `font_name`: Returns the selected font name, facilitating further text customization operations. Type should be `*`.
+        - `show_help`: Provides a URL to the help documentation for the CR Select Font node, offering users guidance on its usage. Type should be `STRING`.

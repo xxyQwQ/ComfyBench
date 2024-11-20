@@ -1,8 +1,0 @@
-- `ModelSamplingDiscrete`: This node is designed to modify the sampling behavior of a model by applying a discrete sampling strategy. It allows for the selection of different sampling methods, such as epsilon, v_prediction, lcm, or x0, and optionally adjusts the model's noise reduction strategy based on the zero-shot noise ratio (zsnr) setting.
-    - Parameters:
-        - `sampling`: Specifies the discrete sampling method to be applied to the model. The choice of method affects how the model generates samples, offering different strategies for sampling. Type should be `COMBO[STRING]`.
-        - `zsnr`: A boolean flag that, when enabled, adjusts the model's noise reduction strategy based on the zero-shot noise ratio. This can influence the quality and characteristics of the generated samples. Type should be `BOOLEAN`.
-    - Inputs:
-        - `model`: The model to which the discrete sampling strategy will be applied. This parameter is crucial as it defines the base model that will undergo modification. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The modified model with the applied discrete sampling strategy. This model is now equipped to generate samples using the specified method and adjustments. Type should be `MODEL`.

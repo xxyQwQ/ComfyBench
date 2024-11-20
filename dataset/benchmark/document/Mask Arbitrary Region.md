@@ -1,0 +1,7 @@
+- `Mask Arbitrary Region`: This node is designed to process image masks by applying an arbitrary region masking technique. It adjusts the regions within the masks based on specified size and threshold parameters, effectively altering the mask's focus or coverage area.
+    - Inputs:
+        - `masks` (Required): The input masks to be processed. These masks are adjusted to focus on arbitrary regions based on the given size and threshold. Type should be `MASK`.
+        - `size` (Required): Specifies the size of the region to focus on within each mask. It influences the scale of the region being highlighted or suppressed. Type should be `INT`.
+        - `threshold` (Required): Determines the intensity threshold for selecting which parts of the mask to include in the arbitrary region. It affects the mask's detail level and the region's prominence. Type should be `INT`.
+    - Outputs:
+        - `MASKS`: The processed masks with arbitrary regions applied, reflecting the specified size and threshold adjustments. Type should be `MASK`.

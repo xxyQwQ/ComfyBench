@@ -1,0 +1,7 @@
+- `SaltLoadDirectoryAsJSON`: This node is designed to compile files from a specified directory into a single JSON object. It reads each file within the directory, assuming they are in JSON format, and combines them into a unified JSON structure. The method of combination can vary based on the mode specified, such as using filenames as keys, which allows for a structured and accessible way to handle multiple JSON files collectively.
+    - Inputs:
+        - `path` (Required): Specifies the path to the directory containing the JSON files to be compiled. This path is crucial as it determines the source of the JSON files that will be processed and combined. Type should be `STRING`.
+        - `mode` (Required): Determines the method used to compile the JSON files into a single JSON object. For example, using filenames as keys to associate each file's content with its name in the resulting JSON structure. Type should be `COMBO[STRING]`.
+        - `reverse_order` (Required): A boolean flag indicating whether the files should be processed in reverse order. This can affect the final structure of the compiled JSON, especially if the order of files is significant. Type should be `BOOLEAN`.
+    - Outputs:
+        - `json_output`: The resulting JSON object after compiling the files from the specified directory. It represents a unified structure containing the contents of all processed files. Type should be `STRING`.

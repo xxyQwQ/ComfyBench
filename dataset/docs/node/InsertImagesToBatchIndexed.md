@@ -1,8 +1,0 @@
-- `InsertImagesToBatchIndexed`: The node is designed to insert images at specified indices into an original batch of images, effectively modifying the original sequence by adding new images at the designated positions. This operation allows for dynamic manipulation of image batches, enabling the customization of image sequences for various applications.
-    - Parameters:
-        - `indexes`: A string of comma-separated indices indicating where in the original batch the new images should be inserted. This parameter dictates the positions at which the images will be added, affecting the final arrangement of the batch. Type should be `STRING`.
-    - Inputs:
-        - `original_images`: Represents the original batch of images where new images will be inserted. It is crucial for defining the base sequence that will be modified. Type should be `IMAGE`.
-        - `images_to_insert`: Specifies the images to be inserted into the original batch. This parameter is essential for determining which new images will be added to the sequence. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The modified batch of images after the insertion of new images at specified indices. Type should be `IMAGE`.

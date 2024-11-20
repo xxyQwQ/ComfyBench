@@ -1,6 +1,0 @@
-- `XY Input Add_Return Noise`: The node TSC_XYplot_AddReturnNoise is designed to handle XY input types specifically for adding or returning noise within a given process. It maps input types to their corresponding noise actions, enabling or disabling noise based on the specified type.
-    - Parameters:
-        - `XY_type`: Specifies the type of noise action to be performed, either adding noise or returning with leftover noise, which determines how the node processes the input. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `X or Y`: unknown Type should be `XY`.

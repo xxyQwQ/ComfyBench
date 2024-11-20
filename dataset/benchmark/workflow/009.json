@@ -1,0 +1,64 @@
+{
+    "11": {
+        "_meta": {
+            "title": "Load Upscale Model"
+        },
+        "class_type": "UpscaleModelLoader",
+        "inputs": {
+            "model_name": "4x-UltraSharp.pth"
+        }
+    },
+    "12": {
+        "_meta": {
+            "title": "Upscale Image (using Model)"
+        },
+        "class_type": "ImageUpscaleWithModel",
+        "inputs": {
+            "image": [
+                "31",
+                0
+            ],
+            "upscale_model": [
+                "11",
+                0
+            ]
+        }
+    },
+    "29": {
+        "_meta": {
+            "title": "Save Image"
+        },
+        "class_type": "SaveImage",
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "30",
+                0
+            ]
+        }
+    },
+    "30": {
+        "_meta": {
+            "title": "Upscale Image By"
+        },
+        "class_type": "ImageScaleBy",
+        "inputs": {
+            "image": [
+                "12",
+                0
+            ],
+            "scale_by": 0.5,
+            "upscale_method": "bilinear"
+        }
+    },
+    "31": {
+        "_meta": {
+            "title": "Load Image"
+        },
+        "class_type": "LoadImage",
+        "inputs": {
+            "image": "titled_book.png",
+            "upload": "image"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+- `CR Select Model`: The CR Select Model node is designed to select and load a specific model based on user input. It facilitates the dynamic selection of models from a predefined list, enabling users to switch between different models for their generative tasks.
+    - Inputs:
+        - `ckpt_name1` (Required): Represents the first checkpoint name option for model selection. Type should be `COMBO[STRING]`.
+        - `ckpt_name2` (Required): Represents the second checkpoint name option for model selection. Type should be `COMBO[STRING]`.
+        - `ckpt_name3` (Required): Represents the third checkpoint name option for model selection. Type should be `COMBO[STRING]`.
+        - `ckpt_name4` (Required): Represents the fourth checkpoint name option for model selection. Type should be `COMBO[STRING]`.
+        - `ckpt_name5` (Required): Represents the fifth checkpoint name option for model selection. Type should be `COMBO[STRING]`.
+        - `select_model` (Required): An integer input that determines which model checkpoint to load from the given options. Type should be `INT`.
+    - Outputs:
+        - `MODEL`: unknown Type should be `MODEL`.
+        - `CLIP`: unknown Type should be `CLIP`.
+        - `VAE`: unknown Type should be `VAE`.
+        - `ckpt_name`: The name of the selected model. Type should be `STRING`.
+        - `show_help`: A URL to the help documentation for this node. Type should be `STRING`.

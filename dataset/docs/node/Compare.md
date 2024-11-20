@@ -1,8 +1,0 @@
-- `Compare`: The Compare node is designed to evaluate the relationship between two inputs based on a specified comparison operation (e.g., equality, inequality, greater than, less than). It abstracts the logic of comparison into a simple interface, allowing users to dynamically assess and act upon the conditions of their data or variables.
-    - Parameters:
-        - `comparison`: Specifies the type of comparison to perform between the two inputs (e.g., '==', '!=', '<', '>', '<=', '>='). This determines the logic applied for comparison and directly influences the result. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `a`: The first input to be compared. It plays a crucial role in determining the outcome of the comparison operation. Type should be `*`.
-        - `b`: The second input to be compared against the first. Its value is essential in evaluating the specified comparison condition. Type should be `*`.
-    - Outputs:
-        - `B`: The result of the comparison operation, indicating whether the specified condition between the two inputs holds true or not. Type should be `BOOLEAN`.

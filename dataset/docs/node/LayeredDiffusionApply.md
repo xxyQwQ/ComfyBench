@@ -1,8 +1,0 @@
-- `LayeredDiffusionApply`: The LayeredDiffusionApply node is designed to integrate and apply layered diffusion techniques to enhance image generation processes. It leverages multiple diffusion models to apply complex transformations and refinements to images, aiming to improve the quality and detail of the generated visuals.
-    - Parameters:
-        - `config`: The config parameter determines the configuration settings for the layered diffusion model, specifying how the model should be applied and operated. Type should be `COMBO[STRING]`.
-        - `weight`: Weight defines the influence level of the layered diffusion process on the final image output, adjusting the intensity of the applied transformations. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The model parameter represents the diffusion model to be patched and used for the layered diffusion process. It is crucial for defining the specific model behavior and characteristics that will be applied during the image generation. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The output model after applying the layered diffusion process, reflecting the transformations and refinements made to the original model. Type should be `MODEL`.

@@ -1,8 +1,0 @@
-- `JWImageResizeByLongerSide`: This node resizes an image by adjusting its longer side to a specified size, maintaining the aspect ratio, and allows for different interpolation methods to be applied during the resizing process.
-    - Parameters:
-        - `size`: The target size for the longer side of the image, which determines the new dimensions while preserving the aspect ratio. Type should be `INT`.
-        - `interpolation_mode`: Specifies the method used for interpolating the pixels in the resized image, affecting the visual quality of the output. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The image to be resized. It's crucial for maintaining the visual content while adjusting the dimensions. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The resized image with its longer side adjusted to the specified size, maintaining the original aspect ratio. Type should be `IMAGE`.

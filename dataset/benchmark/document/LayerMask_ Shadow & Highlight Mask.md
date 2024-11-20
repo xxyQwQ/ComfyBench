@@ -1,0 +1,11 @@
+- `LayerMask_ Shadow & Highlight Mask`: This node is designed to generate shadow and highlight masks for images, allowing for detailed manipulation of lighting effects in image processing tasks. It processes images to extract or enhance shadows and highlights based on specified level offsets and ranges, supporting both aesthetic adjustments and functional analysis.
+    - Inputs:
+        - `image` (Required): The primary image input for which shadow and highlight masks are to be generated. It plays a crucial role in determining the areas of shadow and highlight to be enhanced or extracted. Type should be `IMAGE`.
+        - `shadow_level_offset` (Required): Specifies the offset for shadow levels, adjusting the intensity of shadows in the image. This parameter fine-tunes the shadow mask generation process. Type should be `INT`.
+        - `shadow_range` (Required): Defines the range of shadow levels to be considered, affecting the breadth of shadows captured in the mask. It helps in customizing the depth and extent of shadows. Type should be `FLOAT`.
+        - `highlight_level_offset` (Required): Specifies the offset for highlight levels, adjusting the brightness of highlights in the image. This parameter fine-tunes the highlight mask generation process. Type should be `INT`.
+        - `highlight_range` (Required): Defines the range of highlight levels to be considered, affecting the breadth of highlights captured in the mask. It helps in customizing the intensity and extent of highlights. Type should be `FLOAT`.
+        - `mask` (Optional): An optional mask that can be applied to the image to focus the shadow and highlight mask generation on specific areas, enhancing processing efficiency and precision. Type should be `MASK`.
+    - Outputs:
+        - `shadow_mask`: The generated mask that emphasizes shadows in the image, useful for further image manipulation or analysis. Type should be `MASK`.
+        - `highlight_mask`: The generated mask that emphasizes highlights in the image, useful for further image manipulation or analysis. Type should be `MASK`.

@@ -1,0 +1,28 @@
+- `AV_CheckpointLoader`: The AV_CheckpointLoader node is designed for loading model checkpoints with optional overrides for specific components such as the checkpoint itself, VAE, or LoRA models. It extends the functionality of a standard checkpoint loader by allowing users to specify alternative sources for model components, enhancing flexibility in model configuration and experimentation.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the name of the checkpoint to load. This parameter can be overridden to load a different checkpoint if desired, providing flexibility in model experimentation. Type should be `COMBO[STRING]`.
+        - `vae_name` (Required): Specifies the name of the VAE model to load. This parameter can be overridden to load a different VAE model if desired, allowing for experimentation with different VAE configurations. Type should be `COMBO[STRING]`.
+        - `clip_skip` (Required): Indicates whether to skip loading the CLIP model. This parameter allows for selective loading of model components based on requirements. Type should be `INT`.
+        - `lora_name` (Required): Specifies the name of the LoRA model to load. This parameter can be overridden to load a different LoRA model if desired, enabling customization of the LoRA component. Type should be `COMBO[STRING]`.
+        - `lora_model_strength` (Required): unknown Type should be `FLOAT`.
+        - `lora_clip_strength` (Required): unknown Type should be `FLOAT`.
+        - `positive` (Required): unknown Type should be `STRING`.
+        - `negative` (Required): unknown Type should be `STRING`.
+        - `token_normalization` (Required): unknown Type should be `COMBO[STRING]`.
+        - `weight_interpretation` (Required): unknown Type should be `COMBO[STRING]`.
+        - `empty_latent_width` (Required): unknown Type should be `INT`.
+        - `empty_latent_height` (Required): unknown Type should be `INT`.
+        - `batch_size` (Required): unknown Type should be `INT`.
+        - `lora_stack` (Optional): unknown Type should be `LORA_STACK`.
+        - `cnet_stack` (Optional): unknown Type should be `CONTROL_NET_STACK`.
+        - `ckpt_override` (Optional): unknown Type should be `STRING`.
+        - `vae_override` (Optional): unknown Type should be `STRING`.
+        - `lora_override` (Optional): unknown Type should be `STRING`.
+    - Outputs:
+        - `MODEL`: The loaded model instance. Type should be `MODEL`.
+        - `CONDITIONING+`: Positive conditioning components loaded or configured during the checkpoint loading process. Type should be `CONDITIONING`.
+        - `CONDITIONING-`: Negative conditioning components loaded or configured during the checkpoint loading process. Type should be `CONDITIONING`.
+        - `LATENT`: Latent representations or configurations loaded or derived from the checkpoint. Type should be `LATENT`.
+        - `VAE`: The VAE model loaded as part of the checkpoint, if applicable. Type should be `VAE`.
+        - `CLIP`: The CLIP model loaded as part of the checkpoint, if applicable. Type should be `CLIP`.
+        - `DEPENDENCIES`: Any additional dependencies or components loaded alongside the main model components. Type should be `DEPENDENCIES`.

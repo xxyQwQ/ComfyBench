@@ -1,7 +1,0 @@
-- `Prune By Mask`: The Prune By Mask node is designed to filter out images from a batch based on the associated mask's average pixel value, ensuring only images with sufficiently defined masks are processed further.
-    - Parameters:
-    - Inputs:
-        - `image`: The image input represents the batch of images to be filtered based on their associated mask's average pixel value. Type should be `IMAGE`.
-        - `mask`: The mask input is used to determine which images in the batch meet the criteria for having an average pixel value of at least 0.5, acting as a filter criterion. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: This output consists of the filtered batch of images that have passed the mask's average pixel value criterion. Type should be `IMAGE`.

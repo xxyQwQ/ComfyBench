@@ -1,0 +1,10 @@
+- `AdaptiveThresholding`: The AdaptiveThresholding node applies adaptive thresholding techniques to images, dynamically adjusting the threshold value over different regions of the image based on local image characteristics. This method is particularly useful for images with varying lighting conditions, enhancing the ability to distinguish foreground from background.
+    - Inputs:
+        - `src` (Required): The source image to be thresholded. It is crucial for defining the input on which the adaptive thresholding operation will be performed. Type should be `IMAGE`.
+        - `max_value` (Required): The maximum intensity value that a pixel can have after thresholding. It determines the brightness of the foreground region in the output image. Type should be `INT`.
+        - `adaptive_method` (Required): Specifies the algorithm to use for calculating the threshold for a particular region of the image. It affects how the threshold values are computed across the image. Type should be `COMBO[STRING]`.
+        - `threshold_type` (Required): Determines the type of thresholding to be applied, influencing how pixels are classified into foreground and background. Type should be `COMBO[STRING]`.
+        - `block_size` (Required): The size of the neighborhood area used to calculate the threshold for each pixel. It influences the granularity of the thresholding. Type should be `INT`.
+        - `c` (Required): A constant subtracted from the mean or weighted mean calculated. It allows fine-tuning of the thresholding process. Type should be `INT`.
+    - Outputs:
+        - `image`: The result of applying adaptive thresholding to the input image, enhancing the distinction between regions of different intensities. Type should be `IMAGE`.

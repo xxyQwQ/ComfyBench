@@ -1,0 +1,10 @@
+- `RestoreDetail`: The RestoreDetail node is designed to enhance the visual quality of images by restoring details that may have been lost or obscured. It focuses on improving the clarity and sharpness of images, making them appear more vivid and lifelike.
+    - Inputs:
+        - `images` (Required): The input images to be processed for detail restoration, aiming to enhance clarity and sharpness. Type should be `IMAGE`.
+        - `detail` (Required): A secondary image or detail layer that guides the restoration process, emphasizing specific details to be enhanced or recovered. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the operation mode (e.g., 'add' or 'multiply') to combine the input image with the detail layer, affecting the enhancement effect. Type should be `COMBO[STRING]`.
+        - `blur_type` (Required): Determines the type of blur (e.g., 'blur' or 'guidedFilter') applied as part of the detail restoration process. Type should be `COMBO[STRING]`.
+        - `blur_size` (Required): The size of the blur filter to be applied, influencing the smoothness or sharpness of the restored details. Type should be `INT`.
+        - `factor` (Required): A scaling factor that adjusts the intensity of the detail restoration effect. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The enhanced image with restored details, reflecting the positive aspects described in the input. Type should be `IMAGE`.

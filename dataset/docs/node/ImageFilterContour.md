@@ -1,6 +1,0 @@
-- `ImageFilterContour`: The ImageFilterContour node applies a contour filter to images, enhancing edges to create a distinct outline effect. This node is designed for image processing tasks where the goal is to accentuate the boundaries and features of objects within an image.
-    - Parameters:
-    - Inputs:
-        - `images`: The 'images' parameter represents the collection of images to which the contour filter will be applied. It is crucial for defining the input data that will undergo the transformation to highlight edges and features. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a modified version of the input images, where each image has been processed to emphasize its contours, making the edges and features more pronounced. Type should be `IMAGE`.

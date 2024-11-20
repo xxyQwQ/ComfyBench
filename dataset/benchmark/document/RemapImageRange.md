@@ -1,0 +1,8 @@
+- `RemapImageRange`: The RemapImageRange node is designed to adjust the pixel value range of an input image to a specified new range. It supports optional clamping to ensure that the remapped image values stay within a desired interval, enhancing flexibility in image preprocessing for various applications.
+    - Inputs:
+        - `image` (Required): The input image to be remapped. This parameter is crucial for defining the source image whose pixel values are to be adjusted. Type should be `IMAGE`.
+        - `min` (Required): Specifies the minimum value of the new range for the image pixel values. It plays a key role in defining the lower bound of the target range. Type should be `FLOAT`.
+        - `max` (Required): Defines the maximum value of the new range for the image pixel values, setting the upper limit of the target range. Type should be `FLOAT`.
+        - `clamp` (Required): A boolean flag that determines whether the remapped image values should be clamped to the [0.0, 1.0] range, ensuring that pixel values remain valid. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output image with its pixel values remapped to the specified new range. This parameter signifies the transformed image ready for further processing or analysis. Type should be `IMAGE`.

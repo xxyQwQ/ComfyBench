@@ -1,0 +1,11 @@
+- `SeargeFreeU`: SeargeFreeU is a node designed to configure and apply specific settings for the FreeU mode in a generative model's processing pipeline. It allows for the dynamic adjustment of parameters based on the selected FreeU mode, enhancing the model's output through fine-tuned control.
+    - Inputs:
+        - `freeu_mode` (Required): Specifies the mode of operation for FreeU, affecting how other parameters are set and ultimately influencing the generative model's output. Type should be `COMBO[STRING]`.
+        - `b1` (Required): A floating-point parameter influencing the behavior of the FreeU mode, contributing to the model's output customization. Type should be `FLOAT`.
+        - `b2` (Required): Another floating-point parameter for fine-tuning the FreeU mode's effect, further customizing the output. Type should be `FLOAT`.
+        - `s1` (Required): A parameter controlling a specific aspect of the FreeU mode, affecting the output's characteristics. Type should be `FLOAT`.
+        - `s2` (Required): Similar to s1, this floating-point parameter adjusts another aspect of the FreeU mode, impacting the final generative model's output. Type should be `FLOAT`.
+        - `freeu_version` (Required): Determines the version of FreeU to be applied, directly influencing the behavior of other parameters and the overall effect on the model's output. Type should be `COMBO[STRING]`.
+        - `data` (Optional): Optional data stream for further processing or modification within the FreeU mode, allowing for extended customization and flexibility. Type should be `SRG_DATA_STREAM`.
+    - Outputs:
+        - `data`: The modified data stream, enriched or altered by the FreeU settings applied, ready for subsequent stages in the processing pipeline. Type should be `SRG_DATA_STREAM`.

@@ -1,9 +1,0 @@
-- `OpenPose_Preprocessor_Provider_for_SEGS __Inspire`: This node provides a preprocessor for SEGS (semantic segmentation) using OpenPose, enabling the detection and processing of human hands, bodies, and faces within images. It allows for the adjustment of detection features and image resolution scaling to prepare images for further processing or analysis.
-    - Parameters:
-        - `detect_hand`: Enables or disables the detection of hands in the image, affecting the node's ability to identify and process hand-related features. Type should be `BOOLEAN`.
-        - `detect_body`: Enables or disables the detection of bodies in the image, influencing the node's capability to recognize and process body-related features. Type should be `BOOLEAN`.
-        - `detect_face`: Enables or disables the detection of faces in the image, impacting the node's ability to identify and process face-related features. Type should be `BOOLEAN`.
-        - `resolution_upscale_by`: Adjusts the resolution of the image by a specified upscale factor, affecting the clarity and detail of the processed image. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `segs_preprocessor`: Provides a preprocessed image object ready for semantic segmentation tasks, specifically tailored for SEGS applications. Type should be `SEGS_PREPROCESSOR`.

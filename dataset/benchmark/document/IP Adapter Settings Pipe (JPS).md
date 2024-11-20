@@ -1,0 +1,17 @@
+- `IP Adapter Settings Pipe (JPS)`: The IP Adapter Settings Pipe node is designed to process and adapt image processing settings, facilitating the customization and application of various image processing techniques based on the provided settings. It abstracts the complexity of configuring and applying these settings, making it easier to achieve desired image manipulation effects.
+    - Inputs:
+        - `ip_adapter_settings` (Required): Specifies the settings for image processing adaptation, including weights, types, noise levels, start and stop points, cropping preferences, zoom levels, offsets, mask types, interpolation methods, sharpening levels, and model types. This comprehensive set of parameters allows for detailed customization of the image processing pipeline. Type should be `BASIC_PIPE`.
+    - Outputs:
+        - `ipa_weight`: The weight factor applied to the image processing settings, influencing the intensity of the applied effects. Type should be `FLOAT`.
+        - `ipa_wtype`: The type of weight application method used in the image processing settings, such as linear or ease in-out. Type should be `COMBO[STRING]`.
+        - `ipa_noise`: The level of noise to be applied to the image as part of the processing settings. Type should be `FLOAT`.
+        - `ipa_start`: The starting point for applying the image processing effects, typically related to the intensity or duration of the effect. Type should be `FLOAT`.
+        - `ipa_stop`: The stopping point for the image processing effects, marking the end of the effect application. Type should be `FLOAT`.
+        - `ipa_crop`: The cropping method applied to the image, which can be directional (e.g., center, top, bottom) or based on specific dimensions. Type should be `COMBO[STRING]`.
+        - `ipa_zoom`: The zoom level applied to the image, affecting the focus and scale of the processed image. Type should be `FLOAT`.
+        - `ipa_offset_x`: The horizontal offset applied to the image, adjusting its position along the x-axis. Type should be `INT`.
+        - `ipa_offset_y`: The vertical offset applied to the image, adjusting its position along the y-axis. Type should be `INT`.
+        - `ipa_mask`: The type of mask applied to the image, which can influence the areas of the image that are affected by the processing settings. Type should be `INT`.
+        - `crop_intpol`: The interpolation method used for cropping the image, affecting the smoothness and quality of the cropped areas. Type should be `COMBO[STRING]`.
+        - `sharpening`: The level of sharpening applied to the image, enhancing its clarity and detail. Type should be `FLOAT`.
+        - `ipa_model`: The model type used for processing the image, which can affect the overall style and quality of the output. Type should be `INT`.

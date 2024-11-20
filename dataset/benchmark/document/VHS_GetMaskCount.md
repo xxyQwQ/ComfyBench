@@ -1,0 +1,5 @@
+- `VHS_GetMaskCount`: The `VHS_GetMaskCount` node is designed to count the number of masks in a given batch. It provides a straightforward way to quantify the number of mask elements, facilitating operations that require knowledge of batch size or element count.
+    - Inputs:
+        - `mask` (Required): The `mask` parameter represents the batch of masks for which the count is to be determined. It is crucial for understanding the scale of operations or adjustments needed based on the batch size. Type should be `MASK`.
+    - Outputs:
+        - `count`: The `count` output represents the total number of masks in the input batch. This information is essential for batch processing or for scaling operations according to the batch size. Type should be `INT`.

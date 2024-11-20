@@ -1,0 +1,8 @@
+- `LLMJsonComposer`: The LLMJsonComposer node is designed to generate valid JSON objects from given text inputs by leveraging a language model. It processes textual data along with a set of classifiers and optional directions to compose JSON structures that encapsulate the provided information accurately and coherently.
+    - Inputs:
+        - `llm_model` (Required): Specifies the language model to be used for generating the JSON object, playing a crucial role in interpreting the input text and classifiers to produce the desired output. Type should be `LLM_MODEL`.
+        - `text_input` (Required): The primary textual data from which the JSON object will be composed, serving as the base content for the generation process. Type should be `STRING`.
+        - `classifier_list` (Required): A comma-separated list of classifiers that guide the JSON composition by categorizing the input text, influencing the structure and content of the generated JSON. Type should be `STRING`.
+        - `extra_directions` (Optional): Optional additional instructions for the language model to follow when composing the JSON, allowing for more tailored and specific outputs. Type should be `STRING`.
+    - Outputs:
+        - `json_output`: The generated JSON object as a string, representing a structured and valid JSON format of the input text and classifiers. Type should be `STRING`.

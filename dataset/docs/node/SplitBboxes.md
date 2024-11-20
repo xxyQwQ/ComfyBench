@@ -1,8 +1,0 @@
-- `SplitBboxes`: The SplitBboxes node is designed to divide a list of bounding boxes (bboxes) into two separate lists at a specified index. This functionality is essential for processing and manipulating bounding box data in various computer vision tasks, enabling targeted operations on segmented portions of the data.
-    - Parameters:
-        - `index`: The 'index' parameter specifies the position at which the list of bounding boxes should be split. It plays a pivotal role in dividing the bounding box list into two distinct parts. Type should be `INT`.
-    - Inputs:
-        - `bboxes`: The 'bboxes' parameter represents the list of bounding boxes to be split. It is crucial for determining the segments of data to be processed and divided at the specified index. Type should be `BBOX`.
-    - Outputs:
-        - `bboxes_a`: The first output list of bounding boxes, containing elements from the start of the original list up to (but not including) the specified index. Type should be `BBOX`.
-        - `bboxes_b`: The second output list of bounding boxes, starting from the specified index to the end of the original list. Type should be `BBOX`.

@@ -1,0 +1,5 @@
+- `Seed Everywhere`: The Seed Everywhere node is designed to propagate a given seed value throughout the system, ensuring consistent and reproducible results across different components or executions. It emphasizes the importance of seed management in maintaining the determinism of operations.
+    - Inputs:
+        - `seed` (Required): The seed parameter is crucial for initializing random number generators or other stochastic processes in a deterministic manner, ensuring that the same input leads to the same output across different runs. Type should be `INT`.
+    - Outputs:
+        - `int`: Returns the same seed value that was input, allowing it to be used or propagated further. Type should be `INT`.

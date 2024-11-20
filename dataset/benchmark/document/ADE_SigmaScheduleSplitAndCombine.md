@@ -1,0 +1,7 @@
+- `ADE_SigmaScheduleSplitAndCombine`: This node is designed to manipulate sigma schedules by splitting and combining them based on specified weights and interpolation methods. It enables the creation of new sigma schedules that are hybrids of two input schedules, allowing for customized progression of sigma values over time.
+    - Inputs:
+        - `schedule_Start` (Required): The starting sigma schedule for the split and combination process, determining the initial segment of the new sigma schedule. Type should be `SIGMA_SCHEDULE`.
+        - `schedule_End` (Required): The ending sigma schedule for the split and combination process, influencing the latter segment of the new sigma schedule. Type should be `SIGMA_SCHEDULE`.
+        - `idx_split_percent` (Required): The percentage at which the initial sigma schedule is split, dictating the point of transition between the two schedules. Type should be `FLOAT`.
+    - Outputs:
+        - `sigma_schedule`: The resulting sigma schedule, a hybrid of the starting and ending input schedules modified according to the specified split percentage. Type should be `SIGMA_SCHEDULE`.

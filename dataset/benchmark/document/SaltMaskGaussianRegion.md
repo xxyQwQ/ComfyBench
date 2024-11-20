@@ -1,0 +1,6 @@
+- `SaltMaskGaussianRegion`: Applies a Gaussian filter to specified regions within masks, allowing for the softening of edges and blending of regions for a smoother appearance. This node is particularly useful for image processing tasks where the focus is on enhancing or modifying the visual characteristics of masked areas.
+    - Inputs:
+        - `masks` (Required): The masks to which the Gaussian filter will be applied. These masks define the regions that will be processed to achieve a smoother appearance. Type should be `MASK`.
+        - `radius` (Required): Specifies the radius of the Gaussian filter. A larger radius results in a more pronounced smoothing effect, allowing for greater control over the degree of blending and softening of the masked regions. Type should be `FLOAT`.
+    - Outputs:
+        - `MASKS`: The modified masks after the application of the Gaussian filter, showcasing smoother and more blended regions. Type should be `MASK`.

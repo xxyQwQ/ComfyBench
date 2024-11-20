@@ -1,0 +1,5 @@
+- `LoadPromptsFromDir __Inspire`: The LoadPromptsFromDir node is designed to facilitate the loading of prompt data from a specified directory. It scans the directory for text files, extracts prompts that match a predefined format, and organizes them into a structured format for further processing. This node streamlines the process of retrieving and structuring prompt data, making it readily accessible for creative or analytical applications within the Inspire ecosystem.
+    - Inputs:
+        - `prompt_dir` (Required): Specifies the directory path from which to load the prompts. This path is used to locate and read the text files containing prompt data, playing a crucial role in the node's operation by determining the source of the prompts to be processed. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `zipped_prompt`: Returns a list of tuples, each containing the positive and negative parts of a prompt along with the file name from which it was extracted. This structured output facilitates easy access and manipulation of the loaded prompt data for subsequent nodes or processes. Type should be `ZIPPED_PROMPT`.

@@ -1,8 +1,0 @@
-- `LeRes_DepthMap_Preprocessor_Provider_for_SEGS __Inspire`: This node provides preprocessing capabilities for depth map images using the LeReS algorithm, tailored for the SEGS framework. It focuses on removing nearest and background elements from the depth map and optionally boosting the remaining features to enhance the depth perception for subsequent processing stages.
-    - Parameters:
-        - `rm_nearest`: Specifies the extent to which the nearest elements in the depth map should be removed, affecting the clarity and focus of the depth map. Type should be `FLOAT`.
-        - `rm_background`: Determines the degree to which background elements are removed from the depth map, enhancing the depth map's overall quality by focusing on relevant features. Type should be `FLOAT`.
-        - `boost`: A boolean flag that, when enabled, boosts the features of the depth map after removing nearest and background elements, enhancing depth perception. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `segs_preprocessor`: Returns a preprocessed depth map object ready for further processing within the SEGS framework. Type should be `SEGS_PREPROCESSOR`.

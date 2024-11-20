@@ -1,0 +1,7 @@
+- `ImpactGaussianBlurMask`: The ImpactGaussianBlurMask node is designed to apply a Gaussian blur to a given mask, normalizing it to a 3-dimensional format if necessary. This process enhances the mask's smoothness and can be adjusted through kernel size and sigma parameters, making it suitable for applications requiring softened edges or gradients in mask representations.
+    - Inputs:
+        - `mask` (Required): The mask input represents the target mask for the Gaussian blur operation. It is crucial for defining the area to be smoothed. Type should be `MASK`.
+        - `kernel_size` (Required): Specifies the size of the Gaussian kernel used for blurring. Larger values increase the blur effect. Type should be `INT`.
+        - `sigma` (Required): Determines the spread of the blur effect. Higher sigma values result in a more pronounced blur. Type should be `FLOAT`.
+    - Outputs:
+        - `mask`: The output is a blurred version of the input mask, processed to enhance smoothness and visual quality. Type should be `MASK`.

@@ -1,6 +1,0 @@
-- `easy negative`: The 'easy negative' node is designed to process negative conditioning inputs for generative models, focusing on embedding and normalizing these inputs for enhanced model performance. It encapsulates the complexity of handling negative prompts, including tokenization, embedding, and optional adjustments based on specific normalization and weighting strategies, to optimize the generation process towards avoiding certain traits or characteristics.
-    - Parameters:
-        - `negative`: The 'negative' input represents the textual content that the model should avoid generating. It is crucial for guiding the model to negate certain aspects or themes in the output, affecting the overall direction and quality of the generated content. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `negative`: unknown Type should be `STRING`.

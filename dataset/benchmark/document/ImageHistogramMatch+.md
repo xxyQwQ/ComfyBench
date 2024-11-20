@@ -1,0 +1,9 @@
+- `ImageHistogramMatch+`: This node is designed to perform histogram matching on images, a process that adjusts the pixel values of an image so its histogram matches that of a reference image. This technique is useful for color correction and achieving consistent visual styles across different images.
+    - Inputs:
+        - `image` (Required): The image to be processed and adjusted to match the histogram of the reference image. It plays a pivotal role in the histogram matching operation, determining the final appearance of the adjusted image. Type should be `IMAGE`.
+        - `reference` (Required): The reference image providing the desired histogram distribution for the histogram matching process. It establishes the target histogram characteristics for the image adjustment. Type should be `IMAGE`.
+        - `method` (Required): Specifies the method to be used for histogram matching. This parameter allows for the selection between different histogram matching techniques, influencing the approach and potentially the quality of the result. Type should be `COMBO[STRING]`.
+        - `factor` (Required): A blending factor that determines the degree to which the matched histogram influences the final image, allowing for partial adjustments. Type should be `FLOAT`.
+        - `device` (Required): Indicates the computational device ('cpu', 'gpu', or 'auto') where the histogram matching process will be executed, affecting performance and resource utilization. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The output image after applying histogram matching, reflecting the adjusted pixel values to match the histogram of the reference image. Type should be `IMAGE`.

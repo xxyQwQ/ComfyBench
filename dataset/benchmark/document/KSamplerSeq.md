@@ -1,0 +1,24 @@
+- `KSamplerSeq`: The KSamplerSeq node is designed for advanced sampling in generative models, specifically focusing on the iterative refinement of latent images through a sequence of steps. It incorporates mechanisms for unsampling latents, adjusting denoise levels dynamically, and optionally looping through the sequence to enhance the quality or diversity of the generated samples.
+    - Inputs:
+        - `model` (Required): Specifies the generative model to be used for sampling. Type should be `MODEL`.
+        - `seed` (Required): Determines the initial random seed for sampling, affecting the randomness and reproducibility of the generated samples. Type should be `INT`.
+        - `seed_mode_seq` (Required): Defines the mode of seed progression throughout the sequence, allowing for incremental, decremental, random, or fixed seed values. Type should be `COMBO[STRING]`.
+        - `alternate_values` (Required): Enables or disables the alternation of certain parameters between iterations to introduce variability. Type should be `BOOLEAN`.
+        - `steps` (Required): The total number of steps to execute in the sampling process, impacting the refinement and detail of the output. Type should be `INT`.
+        - `cfg` (Required): Controls the conditioning factor, influencing the adherence of the generated samples to the specified conditions. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the specific sampling algorithm to be used, from a predefined set of samplers. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduling algorithm for controlling the sampling process, affecting the progression of denoising and refinement. Type should be `COMBO[STRING]`.
+        - `sequence_loop_count` (Required): Determines how many times the sampling sequence is looped, potentially enhancing the output through repeated refinement. Type should be `INT`.
+        - `positive_seq` (Required): Specifies the positive conditioning sequence, guiding the generative model towards desired attributes in the output. Type should be `CONDITIONING_SEQ`.
+        - `negative_seq` (Required): Specifies the negative conditioning sequence, steering the generative model away from undesired attributes in the output. Type should be `CONDITIONING_SEQ`.
+        - `use_conditioning_slerp` (Required): Enables or disables spherical linear interpolation (slerp) for blending conditioning vectors, affecting the smoothness of transitions between conditions. Type should be `BOOLEAN`.
+        - `cond_slerp_strength` (Required): Controls the strength of the conditioning slerp, adjusting the influence of interpolated conditions on the output. Type should be `FLOAT`.
+        - `latent_image` (Required): Provides the initial latent image to be refined through the sampling process. Type should be `LATENT`.
+        - `use_latent_interpolation` (Required): Enables or disables the interpolation of latent images, affecting the diversity and smoothness of transitions in the output. Type should be `BOOLEAN`.
+        - `latent_interpolation_mode` (Required): Selects the mode of latent image interpolation, allowing for blend, slerp, or cosine interpolation methods. Type should be `COMBO[STRING]`.
+        - `latent_interp_strength` (Required): Determines the strength of the latent image interpolation, influencing the degree of blending or transition between latent images. Type should be `FLOAT`.
+        - `denoise_start` (Required): Sets the initial denoise level, affecting the clarity and detail of the generated samples at the start of the sequence. Type should be `FLOAT`.
+        - `denoise_seq` (Required): Specifies the denoise level for subsequent iterations in the sequence, allowing for dynamic adjustment of clarity and detail. Type should be `FLOAT`.
+        - `unsample_latents` (Required): Determines whether to perform unsampling on the latents, potentially enhancing the quality or diversity of the output. Type should be `BOOLEAN`.
+    - Outputs:
+        - `latent`: The latent representation of the generated samples, indicating the underlying data structure that defines the output images. Type should be `LATENT`.

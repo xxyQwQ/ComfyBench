@@ -1,0 +1,10 @@
+- `Image Paste Face`: This node specializes in seamlessly integrating a cropped image onto a target image, with options for blending and sharpening to ensure a natural and aesthetically pleasing result. It does not specifically focus on facial detection or adjustment but rather on the general process of pasting and adjusting an image segment within another image.
+    - Inputs:
+        - `image` (Required): The base image onto which the cropped image will be pasted. It serves as the backdrop for the integration process. Type should be `IMAGE`.
+        - `crop_image` (Required): The cropped image that will be pasted onto the base image. This image is the focal point of the operation, being integrated into the base image. Type should be `IMAGE`.
+        - `crop_data` (Required): Data specifying how the cropped image should be adjusted and aligned on the base image. It includes positional adjustments and size modifications to ensure a proper fit. Type should be `CROP_DATA`.
+        - `crop_blending` (Required): Determines the degree of blending between the cropped image and the base image, affecting the smoothness of the integration. Type should be `FLOAT`.
+        - `crop_sharpening` (Required): Controls the sharpness of the pasted image, enhancing the clarity and detail of the image features after integration. Type should be `INT`.
+    - Outputs:
+        - `IMAGE`: The resulting image after the cropped image has been pasted and integrated with the base image, potentially blended and sharpened for aesthetic enhancement. Type should be `IMAGE`.
+        - `MASK_IMAGE`: The mask image representing the area affected by the pasting operation, useful for further processing or analysis. Type should be `IMAGE`.

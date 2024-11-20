@@ -1,0 +1,5 @@
+- `Image size to string`: The node converts the dimensions of an image into a string representation, indicating the image's width and height in a concise format. It abstracts the process of extracting image dimensions and formatting them into a human-readable string.
+    - Inputs:
+        - `image` (Required): The input image whose dimensions are to be converted into a string. This parameter is crucial for determining the size of the image to be represented as a string. Type should be `IMAGE`.
+    - Outputs:
+        - `size`: A string representing the dimensions of the input image, formatted as 'widthxheight'. Type should be `STRING`.

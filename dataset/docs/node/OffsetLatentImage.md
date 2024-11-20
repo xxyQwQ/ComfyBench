@@ -1,9 +1,0 @@
-- `OffsetLatentImage`: The OffsetLatentImage node is designed to manipulate the latent space representation of images by applying specified offsets to each channel. This operation allows for the adjustment and fine-tuning of the generated image's characteristics at a low level, offering a means to explore variations in the image generation process.
-    - Parameters:
-        - `width`: Specifies the width of the latent image to be generated. This parameter directly influences the dimensions of the output latent representation. Type should be `INT`.
-        - `height`: Determines the height of the latent image. Similar to width, it affects the size of the latent output, enabling control over the generated image's aspect ratio. Type should be `INT`.
-        - `batch_size`: Controls the number of latent images to be generated in a single batch, facilitating batch processing for efficiency. Type should be `INT`.
-        - `offset_i`: Applies a specific offset to the ith channel of the latent representation, altering its characteristics. The index i ranges from 0 to 3, allowing for detailed customization of each channel in the latent space. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `latent`: Returns the modified latent representation of images with applied offsets, ready for further processing or image generation. Type should be `LATENT`.

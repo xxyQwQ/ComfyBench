@@ -1,0 +1,18 @@
+- `BatchPromptScheduleLatentInput`: This node is designed to process animation prompts for generating scheduled latent inputs. It sequences the user's formatted prompt into current and next prompts along with their conditioning strengths, evaluates expressions within the prompts, and applies a scheduling algorithm to produce a batch of conditionings tailored to the input latent. The node's functionality facilitates the creation of dynamic, time-sequenced visual content by manipulating latent space representations in accordance with the specified prompt schedule.
+    - Inputs:
+        - `text` (Required): The user's input prompt intended for animation, which is processed to generate positive and negative prompts for content generation. This input is crucial for defining the thematic and narrative direction of the generated content. Type should be `STRING`.
+        - `clip` (Required): A representation of the clip model used for conditioning the input prompt, playing a key role in the generation process by influencing the visual characteristics of the output. Type should be `CLIP`.
+        - `num_latents` (Required): Specifies the number of latent vectors to be used in the generation process, directly impacting the diversity and variation of the generated content. Type should be `LATENT`.
+        - `print_output` (Required): A boolean flag that, when set, enables the printing of output for debugging purposes, aiding in the analysis and refinement of the generation process. Type should be `BOOLEAN`.
+        - `pre_text` (Optional): Pre-text added to the animation prompts before processing, influencing the initial context and direction of the generated content. Type should be `STRING`.
+        - `app_text` (Optional): Appended text to the animation prompts, modifying the final output by adding specific details or themes to the generated content. Type should be `STRING`.
+        - `start_frame` (Optional): Defines the starting frame for the animation, setting the initial point for the prompt scheduling process. Type should be `INT`.
+        - `end_frame` (Optional): Specifies the ending frame for the animation, marking the conclusion of the prompt scheduling. Type should be `INT`.
+        - `pw_a` (Optional): A parameter weight influencing the conditioning strength of the animation, affecting the intensity of the generated content's attributes. Type should be `FLOAT`.
+        - `pw_b` (Optional): A parameter weight that adjusts the balance between different attributes in the generated content, impacting the overall visual outcome. Type should be `FLOAT`.
+        - `pw_c` (Optional): A parameter weight used to fine-tune the conditioning process, allowing for precise control over the generated content's characteristics. Type should be `FLOAT`.
+        - `pw_d` (Optional): A parameter weight that affects the temporal dynamics of the animation, influencing how attributes evolve over time. Type should be `FLOAT`.
+    - Outputs:
+        - `POS`: The processed and scheduled positive conditioning, ready for use in generating content that emphasizes desired attributes. Type should be `CONDITIONING`.
+        - `NEG`: The processed and scheduled negative conditioning, aimed at minimizing or avoiding certain attributes in the generated content. Type should be `CONDITIONING`.
+        - `INPUT_LATENTS`: The original input latents passed through the node, potentially modified or unchanged, depending on the node's internal logic. Type should be `LATENT`.

@@ -1,0 +1,6 @@
+- `Image Switch (JPS)`: The Image Switch node is designed to select and output one of several input images based on a given selection index. It facilitates dynamic image routing within a pipeline, allowing for conditional image processing paths.
+    - Inputs:
+        - `select` (Required): The 'select' parameter determines which of the input images to output, based on its numerical index. It is essential for controlling the flow of images through the node. Type should be `INT`.
+        - `img_i` (Optional): Represents a series of optional input images (img_1 to img_5) that can be selected for output. The specific image selected is determined by the 'select' parameter. Type should be `IMAGE`.
+    - Outputs:
+        - `img_out`: The output image selected based on the 'select' parameter. It enables conditional image processing by dynamically routing one of the input images. Type should be `IMAGE`.

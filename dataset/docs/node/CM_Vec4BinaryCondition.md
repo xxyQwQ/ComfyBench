@@ -1,8 +1,0 @@
-- `CM_Vec4BinaryCondition`: This node performs binary conditional operations on two 4-dimensional vectors (Vec4), evaluating to a boolean result based on the specified operation. It abstracts complex vector comparisons into simple, reusable logic.
-    - Parameters:
-        - `op`: Specifies the binary conditional operation to be performed on the vectors, determining the nature of the comparison. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `a`: The first 4-dimensional vector (Vec4) to be compared. Type should be `VEC4`.
-        - `b`: The second 4-dimensional vector (Vec4) to be compared. Type should be `VEC4`.
-    - Outputs:
-        - `bool`: The boolean result of the binary conditional operation between the two Vec4 inputs. Type should be `BOOL`.

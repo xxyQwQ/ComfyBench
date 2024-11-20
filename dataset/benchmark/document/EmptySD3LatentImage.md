@@ -1,0 +1,7 @@
+- `EmptySD3LatentImage`: This node is designed to generate a blank latent image with a specific shape and initial value for use in SD3 models. It primarily serves as a starting point for further processing or manipulation within the SD3 framework.
+    - Inputs:
+        - `width` (Required): Specifies the width of the latent image to be generated. It determines the horizontal dimension of the output latent tensor. Type should be `INT`.
+        - `height` (Required): Specifies the height of the latent image to be generated. It affects the vertical dimension of the output latent tensor. Type should be `INT`.
+        - `batch_size` (Required): Determines the number of latent images to generate in a single batch. This allows for the creation of multiple latent images simultaneously. Type should be `INT`.
+    - Outputs:
+        - `latent`: The output is a latent representation in the form of a tensor, initialized with a specific value, ready for further processing in the SD3 pipeline. Type should be `LATENT`.

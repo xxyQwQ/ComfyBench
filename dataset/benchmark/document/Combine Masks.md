@@ -1,0 +1,9 @@
+- `Combine Masks`: The Combine Masks node is designed to perform various operations on two input masks, such as union, intersection, difference, and others, to produce a single output mask. It allows for flexible manipulation of masks, enabling the creation of complex mask shapes and patterns by combining simpler ones.
+    - Inputs:
+        - `image1` (Required): The first input mask for the operation. It plays a crucial role in determining the base of the operation, such as the starting point for union, intersection, or difference calculations. Type should be `IMAGE`.
+        - `image2` (Required): The second input mask that is combined with the first mask according to the specified operation. It contributes to the final shape and content of the output mask. Type should be `IMAGE`.
+        - `op` (Required): Specifies the type of operation to perform on the input masks, such as union, intersection, difference, etc. This determines how the masks are combined to produce the output. Type should be `COMBO[STRING]`.
+        - `clamp_result` (Required): Determines whether the resulting mask values should be clamped between 0 and 1, ensuring valid mask values. Type should be `COMBO[STRING]`.
+        - `round_result` (Required): Indicates whether the values in the resulting mask should be rounded to the nearest integer, potentially simplifying the mask. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The resulting mask after applying the specified operation on the input masks. It represents the combined effect of the inputs according to the operation. Type should be `IMAGE`.

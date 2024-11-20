@@ -1,7 +1,0 @@
-- `Mask Erode Region`: The node is designed to perform erosion on specified mask regions, effectively shrinking the mask areas based on the number of iterations specified. This operation is useful for refining mask boundaries or reducing noise in mask regions.
-    - Parameters:
-        - `iterations`: Specifies the number of times the erosion operation is applied to the mask regions. A higher number of iterations results in more pronounced erosion. Type should be `INT`.
-    - Inputs:
-        - `masks`: The input masks to be eroded. This parameter is crucial for determining the regions within the image that will undergo the erosion process. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The eroded mask regions as a result of applying the erosion operation specified by the iterations parameter. Type should be `MASK`.

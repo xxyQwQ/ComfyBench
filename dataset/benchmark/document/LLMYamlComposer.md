@@ -1,0 +1,8 @@
+- `LLMYamlComposer`: The LLMYamlComposer node is designed to generate YAML documents from given text inputs, utilizing specified classifiers and any additional directions provided. It abstracts the complexity of YAML composition, leveraging language models to ensure the output is correctly formatted and comprehensive.
+    - Inputs:
+        - `llm_model` (Required): Specifies the language model to use for generating the YAML document. It plays a crucial role in interpreting the input text and classifiers to produce a well-structured YAML output. Type should be `LLM_MODEL`.
+        - `text_input` (Required): The primary text input from which the YAML document will be generated. This input forms the basis of the content that will be structured into YAML format. Type should be `STRING`.
+        - `classifier_list` (Required): A comma-separated list of classifiers that guide the language model in structuring the input text into a YAML document. These classifiers help in categorizing and organizing the data more effectively. Type should be `STRING`.
+        - `extra_directions` (Optional): Additional instructions to further guide the language model in generating the YAML document. This allows for more tailored and specific YAML outputs. Type should be `STRING`.
+    - Outputs:
+        - `yaml_output`: The generated YAML document, structured and formatted based on the input text, classifiers, and any additional directions provided. Type should be `STRING`.

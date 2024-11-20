@@ -1,0 +1,10 @@
+- `LayerMask_ MaskGradient`: The `MaskGradient` node is designed to apply gradient effects to masks, enhancing visual aesthetics or highlighting specific areas. It leverages gradient parameters to dynamically adjust the appearance of input masks, offering a versatile tool for image manipulation and layer styling within graphical interfaces.
+    - Inputs:
+        - `mask` (Required): The mask input represents the target image mask to which the gradient effect will be applied. It is crucial for defining the area of effect and the base for gradient application. Type should be `MASK`.
+        - `invert_mask` (Required): This parameter determines whether the input mask should be inverted before applying the gradient effect, allowing for flexibility in targeting either the masked area or its inverse. Type should be `BOOLEAN`.
+        - `gradient_side` (Required): Specifies the side of the mask where the gradient effect begins, enabling directional control over the gradient application. Type should be `COMBO[STRING]`.
+        - `gradient_scale` (Required): Controls the scale of the gradient effect, affecting how the gradient transitions across the mask area. Type should be `INT`.
+        - `gradient_offset` (Required): Adjusts the starting point of the gradient effect within the mask, offering additional customization for the gradient's positioning. Type should be `INT`.
+        - `opacity` (Required): Sets the opacity level of the gradient effect, allowing for fine-tuning of the visual impact on the mask. Type should be `INT`.
+    - Outputs:
+        - `mask`: The output is a tensor containing the modified mask(s) with the applied gradient effect, showcasing the visual transformation. Type should be `MASK`.

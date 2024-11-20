@@ -1,7 +1,0 @@
-- `Zoe-DepthMapPreprocessor`: This node is designed to preprocess images for depth map estimation using the Zoe Detector model. It adjusts the input image's resolution and processes it through the model to generate a depth map, which can be utilized for various applications such as 3D modeling and scene understanding.
-    - Parameters:
-        - `resolution`: Specifies the resolution to which the input image should be resized before processing. This parameter allows for standardizing the input size for consistent depth map estimation across different images. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for depth map estimation. This image is the primary input for the Zoe Detector model to analyze and generate the corresponding depth map. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output depth map generated from the input image. This depth map provides a per-pixel estimation of depth, useful for understanding the scene's spatial layout. Type should be `IMAGE`.

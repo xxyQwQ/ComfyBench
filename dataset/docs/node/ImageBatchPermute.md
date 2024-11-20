@@ -1,8 +1,0 @@
-- `ImageBatchPermute`: The ImageBatchPermute node is designed to reorder a batch of images according to a specified permutation. It allows for dynamic reorganization of image sequences, facilitating operations like shuffling or specific ordering for processing or visualization purposes.
-    - Parameters:
-        - `permute`: The 'permute' parameter specifies the order in which the images in the batch should be arranged. It directly influences the final arrangement of the images, enabling custom sequences or shuffles. Type should be `STRING`.
-        - `start_with_zero`: The 'start_with_zero' parameter indicates whether the permutation indexing starts at zero. This affects how the permutation pattern is applied to the image batch, aligning with zero-based or one-based indexing conventions. Type should be `BOOLEAN`.
-    - Inputs:
-        - `images`: The 'images' parameter represents the batch of images to be permuted. It is crucial for defining the set of images that will undergo reordering based on the permutation pattern. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a reordered batch of images, arranged according to the specified permutation pattern. It enables the dynamic reorganization of image sequences for further processing or visualization. Type should be `IMAGE`.

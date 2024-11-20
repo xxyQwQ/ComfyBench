@@ -1,7 +1,0 @@
-- `MaskSmooth+`: The MaskSmooth node is designed to apply a Gaussian blur to a given mask, with the intensity of the blur adjustable by the user. This process smooths the edges of the mask, creating a more visually appealing and less jagged appearance.
-    - Parameters:
-        - `amount`: The amount parameter controls the intensity of the Gaussian blur applied to the mask. A higher value results in a more pronounced smoothing effect. Type should be `INT`.
-    - Inputs:
-        - `mask`: The mask input represents the binary or grayscale image to which the Gaussian blur will be applied. It is central to achieving the smoothing effect. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The output is a modified version of the input mask, having undergone Gaussian blurring to smooth its edges. Type should be `MASK`.

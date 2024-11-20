@@ -1,0 +1,8 @@
+- `RemapInsideParabolasAdvanced`: This node specializes in adjusting the mapping of images based on the geometry of two parabolas within a given mask. It allows for fine-tuning the remapping process through curve and orthogonal adjustments, as well as the option to flip the orthogonal direction, enhancing flexibility in image processing tasks that require precise spatial transformations.
+    - Inputs:
+        - `dst_mask_with_i_parabolas` (Required): unknown Type should be `MASK`.
+        - `curve_wise_adjust` (Required): Adjusts the curvature of the remapping process, allowing for finer control over the spatial transformation along the curve defined by the parabolas. Type should be `FLOAT`.
+        - `ortho_wise_adjust` (Required): Adjusts the orthogonal transformation relative to the parabolas' curve, enabling precise control over the image's spatial deformation. Type should be `FLOAT`.
+        - `flip_ortho` (Required): Determines whether the orthogonal direction of the remapping should be flipped, offering an additional degree of transformation customization. Type should be `BOOLEAN`.
+    - Outputs:
+        - `remap`: The output is a transformed image that has been remapped according to the specified parabolas and adjustments. This includes the spatially transformed image data, which is the result of applying the curve and orthogonal adjustments, as well as the optional flipping of the orthogonal direction. Type should be `REMAP`.

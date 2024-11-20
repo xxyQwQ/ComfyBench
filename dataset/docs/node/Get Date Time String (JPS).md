@@ -1,6 +1,0 @@
-- `Get Date Time String (JPS)`: This node generates a string representing the current date and time, formatted according to a specified style from a predefined list of formats. It's designed to provide a flexible way to capture the exact moment in a format that suits various application needs, such as logging, file naming, or timestamping data.
-    - Parameters:
-        - `style`: Specifies the format for the date and time string. The choice of format affects how the current timestamp is represented, catering to different formatting needs. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `time_format`: The formatted date and time string as per the specified style. Type should be `STRING`.

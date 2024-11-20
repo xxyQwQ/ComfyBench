@@ -1,8 +1,0 @@
-- `VAE Input Switch`: This node is designed to switch between two VAE (Variational Autoencoder) models based on a boolean condition. It facilitates dynamic model selection within workflows, enabling conditional logic to dictate the choice of VAE model for subsequent operations.
-    - Parameters:
-        - `boolean`: A boolean condition that determines which VAE model (vae_a or vae_b) is selected for output. True selects vae_a, and false selects vae_b. Type should be `BOOLEAN`.
-    - Inputs:
-        - `vae_a`: The first VAE model option for the switch. This model is selected if the boolean condition is true. Type should be `VAE`.
-        - `vae_b`: The second VAE model option for the switch. This model is chosen if the boolean condition is false. Type should be `VAE`.
-    - Outputs:
-        - `vae`: The selected VAE model based on the boolean condition. This output can then be used in subsequent nodes that require a VAE model. Type should be `VAE`.

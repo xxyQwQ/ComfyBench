@@ -1,8 +1,0 @@
-- `CopyMakeBorder`: The CopyMakeBorder node is designed to add a border around an image. It allows for the customization of the border's size and type, providing flexibility in adjusting the image's appearance.
-    - Parameters:
-        - `border_size`: Specifies the size of the border to be added around the image. It influences the thickness of the border, thereby affecting the overall dimensions of the output image. Type should be `INT`.
-        - `border_type`: Determines the type of border to be applied. This parameter allows for various border styles, influencing the visual appearance of the border. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The input image to which the border will be added. This parameter is crucial as it defines the base image that will be modified. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output image with the added border. This image will have increased dimensions due to the border addition. Type should be `IMAGE`.

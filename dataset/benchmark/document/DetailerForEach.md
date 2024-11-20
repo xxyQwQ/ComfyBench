@@ -1,0 +1,29 @@
+- `DetailerForEach`: The `DetailerForEach` node is designed to apply detailed processing to each element in a given dataset or collection. It focuses on enhancing or modifying the details of each item, potentially for purposes such as improving visual quality, extracting features, or applying specific transformations based on the context of use.
+    - Inputs:
+        - `image` (Required): This input type is used to specify the images within the dataset or collection that the node will process. It focuses on applying detailed modifications or enhancements to improve the visual quality or extract features from each image. Type should be `IMAGE`.
+        - `segs` (Required): Segments to be detailed within the image, used for targeted detail enhancement or modification. Type should be `SEGS`.
+        - `model` (Required): The model used for generating enhancements or modifications on the image. Type should be `MODEL`.
+        - `clip` (Required): CLIP model used for guiding the detail enhancement process based on textual descriptions. Type should be `CLIP`.
+        - `vae` (Required): VAE model used for processing the image in a latent space for detail enhancement. Type should be `VAE`.
+        - `guide_size` (Required): unknown Type should be `FLOAT`.
+        - `guide_size_for` (Required): unknown Type should be `BOOLEAN`.
+        - `max_size` (Required): unknown Type should be `FLOAT`.
+        - `seed` (Required): unknown Type should be `INT`.
+        - `steps` (Required): unknown Type should be `INT`.
+        - `cfg` (Required): unknown Type should be `FLOAT`.
+        - `sampler_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): unknown Type should be `COMBO[STRING]`.
+        - `positive` (Required): Positive conditioning factors to guide the detail enhancement process. Type should be `CONDITIONING`.
+        - `negative` (Required): Negative conditioning factors to guide the detail enhancement process. Type should be `CONDITIONING`.
+        - `denoise` (Required): unknown Type should be `FLOAT`.
+        - `feather` (Required): unknown Type should be `INT`.
+        - `noise_mask` (Required): unknown Type should be `BOOLEAN`.
+        - `force_inpaint` (Required): unknown Type should be `BOOLEAN`.
+        - `wildcard` (Required): unknown Type should be `STRING`.
+        - `cycle` (Required): unknown Type should be `INT`.
+        - `detailer_hook` (Optional): unknown Type should be `DETAILER_HOOK`.
+        - `inpaint_model` (Optional): unknown Type should be `BOOLEAN`.
+        - `noise_mask_feather` (Optional): unknown Type should be `INT`.
+        - `scheduler_func_opt` (Optional): unknown Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `image`: This output type represents the images after the node's processing, which have been enhanced or modified in detail. The processing aims to improve visual quality or extract specific features. Type should be `IMAGE`.

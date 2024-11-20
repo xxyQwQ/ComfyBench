@@ -1,6 +1,0 @@
-- `MorphologicSkeletoning`: The MorphologicSkeletoning node is designed for computing the morphological skeleton of an image. It transforms the input image into a minimal, yet fully representative, skeletal form that retains the structure and connectivity of the original shape.
-    - Parameters:
-    - Inputs:
-        - `src`: The 'src' parameter represents the source image to be processed. It is essential for determining the structure and connectivity of the original shape in the skeletal transformation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a skeletal representation of the input image, preserving the structure and connectivity of the original shape in a minimal form. Type should be `IMAGE`.

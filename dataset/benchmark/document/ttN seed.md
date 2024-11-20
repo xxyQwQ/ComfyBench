@@ -1,0 +1,5 @@
+- `ttN seed`: The ttN seed node is designed to manage and apply seed values for generating or manipulating data within the TinyTerra ecosystem. It integrates with various components such as models, conditioning parameters, and latent spaces to ensure consistent and controlled outcomes. This node plays a crucial role in the procedural generation or transformation of content, allowing for reproducibility and customization through seed manipulation.
+    - Inputs:
+        - `seed` (Required): The seed parameter is used to initialize the random number generator, ensuring that the generation or manipulation of data can be reproducible. It is crucial for achieving consistent results across different runs. Type should be `INT`.
+    - Outputs:
+        - `seed`: The seed value used in the process, ensuring reproducibility and consistency of the results. Type should be `INT`.

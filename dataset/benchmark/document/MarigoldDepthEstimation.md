@@ -1,0 +1,19 @@
+- `MarigoldDepthEstimation`: The MarigoldDepthEstimation node is designed for diffusion-based monocular depth estimation, leveraging the Marigold model to generate depth maps from single images. This node focuses on enhancing the accuracy of depth perception in images by employing a series of denoising steps and iterations, allowing for the creation of ensembled depth maps that offer a more detailed and accurate representation of depth. It supports various configurations, including model selection and inversion of depth map colors, to cater to different use cases and preferences.
+    - Inputs:
+        - `image` (Required): The input image for which the depth map is to be estimated. This is the primary input over which the depth estimation process is executed. Type should be `IMAGE`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the depth estimation process. Type should be `INT`.
+        - `denoise_steps` (Required): Specifies the number of steps per depth map to enhance the accuracy of the depth estimation. Increasing this value results in more detailed depth maps at the cost of longer processing times. Type should be `INT`.
+        - `n_repeat` (Required): Determines the amount of iterations to be ensembled into a single depth map, affecting the overall depth accuracy and detail. Type should be `INT`.
+        - `regularizer_strength` (Required): Adjusts the strength of the regularization during the ensembling process, typically left at default settings. Type should be `FLOAT`.
+        - `reduction_method` (Required): Specifies the method used for reducing the ensemble of depth maps into a single map, impacting the final depth representation. Type should be `COMBO[STRING]`.
+        - `max_iter` (Required): Sets the maximum number of iterations for the ensembling process, controlling the depth map's refinement level. Type should be `INT`.
+        - `tol` (Required): Defines the tolerance level for the ensembling process, determining when the process should terminate based on convergence criteria. Type should be `FLOAT`.
+        - `invert` (Required): Inverts the default depth map colors from black representing the front to the opposite, catering to specific application requirements. Type should be `BOOLEAN`.
+        - `keep_model_loaded` (Required): Indicates whether the Marigold model should remain loaded between invocations, improving performance at the expense of memory usage. Type should be `BOOLEAN`.
+        - `n_repeat_batch_size` (Required): Controls how many of the n_repeat iterations are processed in a batch, optimizing VRAM usage and processing speed based on available resources. Type should be `INT`.
+        - `use_fp16` (Required): Determines whether to use fp16 precision for processing, affecting VRAM usage and potentially the depth map's quality. Type should be `BOOLEAN`.
+        - `scheduler` (Required): Chooses the scheduler for the denoising steps, affecting the depth map's final quality and characteristics. Type should be `COMBO[STRING]`.
+        - `normalize` (Required): Specifies whether the depth map should be normalized, affecting the range and distribution of depth values. Type should be `BOOLEAN`.
+        - `model` (Optional): Selects between the Marigold model and its LCM version for depth estimation, influencing the depth map's accuracy and appearance. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `ensembled_image`: The resulting depth map, ensembled from multiple iterations and denoising steps, providing a detailed representation of depth in the image. Type should be `IMAGE`.

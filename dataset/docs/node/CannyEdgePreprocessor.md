@@ -1,9 +1,0 @@
-- `CannyEdgePreprocessor`: The CannyEdgePreprocessor node is designed for edge detection in images using the Canny algorithm. It preprocesses images by applying a Canny edge detector to highlight the edges within the image, making it suitable for further image processing or analysis tasks.
-    - Parameters:
-        - `low_threshold`: The low_threshold parameter sets the lower bound for the hysteresis thresholding step in the Canny edge detection algorithm. It helps in identifying the weak edges in the image. Type should be `INT`.
-        - `high_threshold`: The high_threshold parameter sets the upper bound for the hysteresis thresholding step in the Canny edge detection algorithm. It is crucial for distinguishing strong edges in the image. Type should be `INT`.
-        - `resolution`: The resolution parameter specifies the resolution to which the input image will be resized before applying the Canny edge detection algorithm. Type should be `INT`.
-    - Inputs:
-        - `image`: The image parameter is the input image on which edge detection will be performed using the Canny algorithm. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is an image where the edges have been highlighted using the Canny edge detection algorithm. Type should be `IMAGE`.

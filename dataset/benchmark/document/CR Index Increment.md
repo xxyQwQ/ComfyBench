@@ -1,0 +1,8 @@
+- `CR Index Increment`: The CR Index Increment node is designed to modify an index value by incrementing it with a specified interval. It provides a simple yet effective way to iterate through sequences or collections by adjusting the index according to the defined interval.
+    - Inputs:
+        - `index` (Required): The 'index' parameter represents the current position in a sequence or collection. It is the base value that will be incremented to move to the next position. Type should be `INT`.
+        - `interval` (Required): The 'interval' parameter specifies the amount by which the 'index' should be incremented. This allows for flexible stepping through a sequence or collection. Type should be `INT`.
+    - Outputs:
+        - `index`: The updated index after being incremented by the specified interval. Type should be `INT`.
+        - `interval`: The 'interval' parameter as it was input, unchanged by the operation. Type should be `INT`.
+        - `show_help`: A URL providing additional help and information about the CR Index Increment node. Type should be `STRING`.

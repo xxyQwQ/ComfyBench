@@ -1,0 +1,9 @@
+- `FL_PixelSort`: The FL_PixelSort node applies a pixel sorting effect to images based on their hue values, allowing for artistic manipulation of image textures. It supports customization through parameters such as direction, threshold, smoothing, and rotation to achieve various visual effects.
+    - Inputs:
+        - `images` (Required): A collection of images to be processed. The images are sorted based on their hue values, allowing for creative retexturing and manipulation. Type should be `IMAGE`.
+        - `direction` (Optional): Specifies the direction of the pixel sorting process, either 'Horizontal' or 'Vertical'. This affects the orientation of the sorting effect on the images. Type should be `COMBO[STRING]`.
+        - `threshold` (Optional): A value that determines the sensitivity of hue changes required to trigger sorting. A lower threshold results in more aggressive sorting based on smaller hue differences. Type should be `FLOAT`.
+        - `smoothing` (Optional): Controls the smoothness of the transitions between sorted and unsorted regions, with higher values resulting in smoother transitions. Type should be `FLOAT`.
+        - `rotation` (Optional): Applies a rotation to the image before sorting, with possible values indicating the number of 90-degree rotations. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed images with the pixel sorting effect applied, based on the specified parameters. Type should be `IMAGE`.

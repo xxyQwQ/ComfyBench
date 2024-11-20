@@ -1,0 +1,6 @@
+- `SelectNthMask __Inspire`: The SelectNthMask node is designed to select a specific mask from a batch of masks based on a given index. It abstracts the functionality of indexing into a collection of masks and retrieving a single mask, which can be particularly useful in workflows that require manipulation or analysis of individual masks within a larger dataset.
+    - Inputs:
+        - `masks` (Required): The collection of masks from which a specific mask is to be selected. It plays a crucial role in determining the output by specifying the batch of available masks. Type should be `MASK`.
+        - `idx` (Required): The index of the mask to be selected from the batch. This parameter dictates which mask is retrieved, allowing for targeted manipulation or analysis within a sequence of masks. Type should be `INT`.
+    - Outputs:
+        - `mask`: The mask selected from the input batch based on the specified index. It represents a single mask extracted for further processing or analysis. Type should be `MASK`.

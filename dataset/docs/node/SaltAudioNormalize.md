@@ -1,6 +1,0 @@
-- `SaltAudioNormalize`: The SaltAudioNormalize node is designed to adjust the audio level of a given audio file to a standard level, ensuring consistent volume across different audio tracks.
-    - Parameters:
-    - Inputs:
-        - `audio`: The 'audio' parameter is the raw audio data that needs normalization. It is crucial for determining the audio's current volume level and adjusting it to the target normalization level. Type should be `AUDIO`.
-    - Outputs:
-        - `audio`: The normalized audio data, with adjusted volume levels for consistency across different tracks. Type should be `AUDIO`.

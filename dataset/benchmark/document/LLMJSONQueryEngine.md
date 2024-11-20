@@ -1,0 +1,11 @@
+- `LLMJSONQueryEngine`: This node is designed to process queries against JSON data using a language model, enabling the extraction of information or execution of tasks based on a JSON schema and data. It leverages a JSON query engine to interpret and respond to queries, making it suitable for applications requiring dynamic data interpretation or manipulation.
+    - Inputs:
+        - `llm_model` (Required): Specifies the language model to be used for processing queries. This model is crucial for understanding and generating responses based on the JSON data and schema provided. Type should be `LLM_MODEL`.
+        - `json_data` (Required): The actual JSON data on which queries will be executed. This data is parsed according to the provided JSON schema. Type should be `STRING`.
+        - `json_schema` (Required): Defines the structure of the JSON data to be queried. This schema guides the query engine in interpreting the data correctly. Type should be `STRING`.
+        - `prompt` (Required): The query or command to be executed against the JSON data. This prompt drives the interaction with the data. Type should be `STRING`.
+        - `human_readable` (Required): A flag indicating whether the response should be synthesized for human readability. This affects how the query results are presented. Type should be `BOOLEAN`.
+        - `optional_service_context` (Optional): An optional context that can be provided to customize the service's behavior or processing environment. Type should be `LLM_CONTEXT`.
+    - Outputs:
+        - `result`: The direct response from the query execution, containing the information or results extracted from the JSON data. Type should be `STRING`.
+        - `json_path`: Additional data about the query execution, including paths within the JSON data that were accessed to generate the response. Type should be `STRING`.

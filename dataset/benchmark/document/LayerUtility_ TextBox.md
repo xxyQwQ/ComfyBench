@@ -1,0 +1,5 @@
+- `LayerUtility_ TextBox`: The TextBox node is designed to encapsulate and return the input text as is, supporting multiline text inputs. It serves as a basic utility for handling and passing through text data within a node-based processing pipeline.
+    - Inputs:
+        - `text` (Required): The 'text' parameter accepts a string input, potentially spanning multiple lines, and passes it through without modification. It's essential for operations where the exact input text needs to be preserved or displayed. Type should be `STRING`.
+    - Outputs:
+        - `text`: The output is the same as the input text, allowing for the direct passage of text data through the node. Type should be `STRING`.

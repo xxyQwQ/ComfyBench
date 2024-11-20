@@ -1,0 +1,13 @@
+- `Image Filter Adjustments`: This node provides a comprehensive suite of image adjustment tools, allowing users to modify and enhance images through a variety of filters such as brightness, contrast, saturation, sharpness, and blur adjustments. It serves as a versatile tool for fine-tuning the visual aspects of images to meet specific aesthetic or technical requirements.
+    - Inputs:
+        - `image` (Required): The input image to be adjusted. This parameter is crucial as it serves as the base for all subsequent adjustments, determining the visual output of the node. Type should be `IMAGE`.
+        - `brightness` (Required): Adjusts the brightness level of the input image, affecting its overall lightness or darkness. Type should be `FLOAT`.
+        - `contrast` (Required): Modifies the contrast of the input image, enhancing or reducing the difference between its light and dark areas. Type should be `FLOAT`.
+        - `saturation` (Required): Alters the saturation level of the input image, adjusting the intensity of its colors. Type should be `FLOAT`.
+        - `sharpness` (Required): Adjusts the sharpness of the input image, affecting the clarity and detail of its visual elements. Type should be `FLOAT`.
+        - `blur` (Required): Applies a blur effect to the input image, softening its appearance by reducing detail and texture. Type should be `INT`.
+        - `gaussian_blur` (Required): Applies a Gaussian blur effect to the input image, creating a smooth, blurred appearance with a specific radius. Type should be `FLOAT`.
+        - `edge_enhance` (Required): Enhances the edges within the input image, making them more pronounced and defined. Type should be `FLOAT`.
+        - `detail_enhance` (Required): Enhances the details of the input image, improving its overall sharpness and clarity. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The adjusted image, reflecting the applied filters and enhancements. Type should be `IMAGE`.

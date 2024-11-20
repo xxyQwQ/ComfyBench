@@ -1,0 +1,8 @@
+- `Inference_Core_CannyEdgePreprocessor`: The Canny Edge Preprocessor node is designed for edge detection in images, utilizing the Canny edge detection algorithm to highlight the contours and edges within an image. This preprocessing step is crucial for tasks that require clear delineation of object boundaries, such as in image segmentation or feature extraction processes.
+    - Inputs:
+        - `image` (Required): The input image to be processed for edge detection. Type should be `IMAGE`.
+        - `low_threshold` (Optional): Specifies the lower bound for the hysteresis thresholding step in the Canny edge detection algorithm, controlling the detection of weak edges. Type should be `INT`.
+        - `high_threshold` (Optional): Defines the upper bound for the hysteresis thresholding step, determining the detection of strong edges in the image. Type should be `INT`.
+        - `resolution` (Optional): The resolution to which the input image is resized before applying the Canny edge detection algorithm, affecting the detail level of detected edges. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed image with edges highlighted using the Canny edge detection technique. Type should be `IMAGE`.

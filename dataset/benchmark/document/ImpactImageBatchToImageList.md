@@ -1,0 +1,5 @@
+- `ImpactImageBatchToImageList`: This node is designed to convert a batch of images into a list of individual images, facilitating operations that require handling images one at a time. It's particularly useful in workflows where images need to be processed or analyzed separately after being batch-processed.
+    - Inputs:
+        - `image` (Required): The input parameter 'image' represents the batch of images to be split into individual images. It plays a crucial role in the node's operation by providing the data that will be decomposed. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The output is a list of individual images, each extracted from the input batch. This allows for further individual processing or analysis of each image. Type should be `IMAGE`.

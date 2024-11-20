@@ -1,7 +1,0 @@
-- `Image Tiled`: This node is designed to process an image by dividing it into a specified number of smaller, equally-sized tiles. It aims to facilitate image analysis or manipulation tasks that benefit from focusing on smaller sections of an image at a time.
-    - Parameters:
-        - `num_tiles`: Specifies the number of tiles the input image should be divided into. This parameter directly influences the granularity of the tiling process, affecting both the number and size of the resulting tiles. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be tiled. This parameter is crucial as it determines the source image that will be divided into smaller tiles. Type should be `IMAGE`.
-    - Outputs:
-        - `IMAGES`: The output is a collection of smaller, equally-sized tiles derived from the input image. These tiles can be individually analyzed or manipulated further. Type should be `IMAGE`.

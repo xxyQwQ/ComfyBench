@@ -1,0 +1,7 @@
+- `MergeModels`: The MergeModels node is designed to blend two models together based on a specified ratio, effectively merging their characteristics and features. This process allows for the creation of hybrid models that combine the strengths or attributes of both input models.
+    - Inputs:
+        - `model1` (Required): The first model to be merged. It serves as the base model onto which patches from the second model are applied, influenced by the specified ratio. Type should be `MODEL`.
+        - `model2` (Required): The second model to be merged. Key patches from this model are applied to the first model, with the extent of their influence determined by the ratio. Type should be `MODEL`.
+        - `ratio` (Required): A floating-point value that determines the balance between the two models in the merging process. A ratio closer to 1.0 gives more weight to the second model's characteristics. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The resulting model after merging the two input models according to the specified ratio. Type should be `MODEL`.

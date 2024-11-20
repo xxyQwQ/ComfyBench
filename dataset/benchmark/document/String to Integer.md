@@ -1,0 +1,5 @@
+- `String to Integer`: This node is designed to convert string representations of numbers into their integer equivalents. It ensures compatibility with both string and integer inputs, facilitating seamless data processing and integration within a pipeline that may receive inputs from various sources.
+    - Inputs:
+        - `inStr` (Required): The input string to be converted into an integer. This parameter allows the node to accept both numerical strings and integer values, ensuring flexibility in handling different types of input. Type should be `STRING`.
+    - Outputs:
+        - `int`: The integer representation of the input string or integer value. Type should be `INT`.

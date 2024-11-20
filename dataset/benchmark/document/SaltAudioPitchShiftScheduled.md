@@ -1,0 +1,7 @@
+- `SaltAudioPitchShiftScheduled`: This node is designed for applying a scheduled pitch shift to audio data. It allows for dynamic adjustments to the pitch over time, based on a predefined schedule, enabling more complex and nuanced audio transformations than a static pitch shift.
+    - Inputs:
+        - `audio` (Required): The audio data to be processed. It is the primary input for pitch shifting operations, determining the raw sound material to be modified. Type should be `AUDIO`.
+        - `schedule` (Required): A list or array defining the pitch shift values over time. This schedule dictates how the pitch is altered throughout the audio, allowing for dynamic and varied pitch changes. Type should be `LIST`.
+        - `interpolate` (Optional): A boolean flag indicating whether to interpolate between scheduled pitch values for smoother transitions or to apply them directly as discrete steps. Type should be `BOOLEAN`.
+    - Outputs:
+        - `audio`: The resulting audio data after applying the scheduled pitch shifts. It reflects the dynamic pitch adjustments made according to the input schedule. Type should be `AUDIO`.

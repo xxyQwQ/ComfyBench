@@ -1,7 +1,0 @@
-- `Inference_Core_BAE-NormalMapPreprocessor`: This node is designed to preprocess images for normal map estimation using the BAE (Boundary Aware Estimator) model. It adjusts images to the required resolution and format before passing them through the BAE model to generate normal maps.
-    - Parameters:
-        - `resolution`: Specifies the resolution to which the input image should be resized before processing. This parameter influences the detail level of the output normal map. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for normal map estimation. It is the primary data that the node operates on, affecting the quality and accuracy of the output normal map. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output normal map generated from the input image, providing a detailed representation of surface normals. Type should be `IMAGE`.

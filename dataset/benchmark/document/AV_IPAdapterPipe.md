@@ -1,0 +1,6 @@
+- `AV_IPAdapterPipe`: The AV_IPAdapterPipe node is designed to facilitate the integration of IP adapter and clip vision models into a unified pipeline for enhancing image processing tasks. It abstracts the complexity of loading and applying these models, providing a streamlined interface for incorporating advanced vision capabilities into applications.
+    - Inputs:
+        - `ip_adapter_name` (Required): Specifies the name of the IP adapter model to be loaded. It is crucial for identifying which IP adapter model to use in the pipeline, affecting the overall image processing outcome. Type should be `COMBO[STRING]`.
+        - `clip_name` (Required): Determines the specific clip vision model to be loaded. This selection influences the vision processing capabilities of the pipeline, impacting the final image enhancement results. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `p`: Outputs a pipeline dictionary containing the loaded IP adapter and clip vision models, ready for application in image processing tasks. Type should be `IPADAPTER`.

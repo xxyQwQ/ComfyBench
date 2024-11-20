@@ -1,0 +1,5 @@
+- `MarigoldModelLoader`: This node is designed to load and initialize Marigold models for further processing. It prepares the model environment, ensuring that the necessary configurations and resources are in place for efficient execution of depth estimation or other related tasks.
+    - Inputs:
+        - `model` (Required): Specifies the model to be loaded. This parameter determines the type of Marigold model that will be initialized for use in subsequent processing steps, affecting the capabilities and performance of the node. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `marigold_model`: The loaded Marigold model, encapsulated within a dictionary that includes the pipeline and model type. This output is ready for use in depth estimation or other image processing tasks. Type should be `MARIGOLDMODEL`.

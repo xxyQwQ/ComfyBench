@@ -1,0 +1,25 @@
+- `PromptScheduleEncodeSDXL`: This node is designed to schedule and encode prompts specifically for the SDXL model, handling the process of tokenization, applying weighted combinations of prompts, and returning the conditioned output for either the current, next, or an averaged state. It focuses on enhancing the flexibility and precision of prompt conditioning in generative models.
+    - Inputs:
+        - `width` (Required): Specifies the width of the image for which the prompt is being scheduled, affecting the spatial dimensions of the generated output. Type should be `INT`.
+        - `height` (Required): Specifies the height of the image for which the prompt is being scheduled, affecting the spatial dimensions of the generated output. Type should be `INT`.
+        - `crop_w` (Required): Defines the width of the crop area, which is used to refine the focus of the generated output within the specified width. Type should be `INT`.
+        - `crop_h` (Required): Defines the height of the crop area, which is used to refine the focus of the generated output within the specified height. Type should be `INT`.
+        - `target_width` (Required): The target width after processing, which may involve resizing or cropping to fit specific output requirements. Type should be `INT`.
+        - `target_height` (Required): The target height after processing, which may involve resizing or cropping to fit specific output requirements. Type should be `INT`.
+        - `text_g` (Required): Represents the global textual content to be scheduled and encoded, serving as a foundational element for generating prompts within the SDXL model. Type should be `STRING`.
+        - `clip` (Required): Specifies the clip model to be used in conjunction with the prompt for generating or refining outputs, integrating visual context or constraints into the prompt scheduling process. Type should be `CLIP`.
+        - `text_l` (Required): unknown Type should be `STRING`.
+        - `max_frames` (Required): The maximum number of frames to be considered for scheduling, defining the temporal boundary of the animation or video output. Type should be `INT`.
+        - `current_frame` (Required): The current frame number in the sequence, used to determine the specific state of prompt conditioning at any given time. Type should be `INT`.
+        - `print_output` (Required): unknown Type should be `BOOLEAN`.
+        - `pre_text_G` (Optional): Pre-text for global prompts, used to prepend additional context or instructions to the global text, enhancing the specificity of the generated output. Type should be `STRING`.
+        - `app_text_G` (Optional): Append text for global prompts, used to add concluding remarks or instructions to the global text, further refining the output. Type should be `STRING`.
+        - `pre_text_L` (Optional): Pre-text for local prompts, similar to global pre-text but applied to local or specific areas of interest within the generated output. Type should be `STRING`.
+        - `app_text_L` (Optional): Append text for local prompts, similar to global append text but focused on enhancing local or specific areas within the output. Type should be `STRING`.
+        - `pw_a` (Optional): Weight parameter A, part of a set of parameters used to adjust the influence of different prompts or aspects of the prompt on the final output. Type should be `FLOAT`.
+        - `pw_b` (Optional): Weight parameter B, works in conjunction with other weight parameters to fine-tune the balance between various elements of the prompt. Type should be `FLOAT`.
+        - `pw_c` (Optional): Weight parameter C, another factor in the complex equation of prompt weighting, contributing to the nuanced control over the generated output. Type should be `FLOAT`.
+        - `pw_d` (Optional): Weight parameter D, completes the set of weight parameters, ensuring a comprehensive approach to prompt conditioning. Type should be `FLOAT`.
+    - Outputs:
+        - `POS`: The enhanced positive prompt, conditioned and ready for use in generating desired outputs with the SDXL model. Type should be `CONDITIONING`.
+        - `NEG`: The adjusted negative prompt, conditioned to minimize its influence on the generated outputs. Type should be `CONDITIONING`.

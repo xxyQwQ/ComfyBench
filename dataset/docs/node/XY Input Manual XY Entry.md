@@ -1,7 +1,0 @@
-- `XY Input Manual XY Entry`: This node facilitates the manual entry of X and Y values for plotting purposes, allowing users to define and manipulate XY data points directly. It is designed to support a variety of input formats and types, enabling the customization of data for visualization in XY plots.
-    - Parameters:
-        - `plot_type`: Specifies the type of plot to be generated, influencing the interpretation and visualization of the XY data. Type should be `COMBO[STRING]`.
-        - `plot_value`: Determines the specific values to be used for plotting, directly affecting the plot's appearance and the data's representation. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `X or Y`: Outputs either X or Y values, depending on the node's processing, suitable for further use in visualization or analysis. Type should be `XY`.

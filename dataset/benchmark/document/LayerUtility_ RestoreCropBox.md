@@ -1,0 +1,10 @@
+- `LayerUtility_ RestoreCropBox`: The RestoreCropBox node is designed to reintegrate a previously cropped image back into its original background, optionally utilizing an inversion mask and a specific crop box to accurately place the cropped image. This functionality is crucial for image editing tasks where maintaining the original context of the image is necessary after modifications.
+    - Inputs:
+        - `background_image` (Required): The original image from which a portion was cropped. This image serves as the canvas where the cropped image will be placed back. Type should be `IMAGE`.
+        - `croped_image` (Required): The cropped portion of the image that needs to be restored onto the original background. Type should be `IMAGE`.
+        - `invert_mask` (Required): A boolean flag indicating whether the mask used for cropping should be inverted during the restoration process. Type should be `BOOLEAN`.
+        - `crop_box` (Required): Defines the specific area (box) on the background image where the cropped image will be placed. Type should be `BOX`.
+        - `croped_mask` (Optional): An optional mask that was used during the cropping process. It can be utilized for more precise restoration. Type should be `MASK`.
+    - Outputs:
+        - `image`: The resulting image after the cropped image has been restored onto the original background. Type should be `IMAGE`.
+        - `mask`: The mask used during the restoration process, which can be useful for further image processing steps. Type should be `MASK`.

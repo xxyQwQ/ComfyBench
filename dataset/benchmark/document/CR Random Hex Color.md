@@ -1,0 +1,9 @@
+- `CR Random Hex Color`: This node generates a set of random hexadecimal color values based on a given seed. It aims to provide a simple way to generate consistent color schemes for design and visualization purposes.
+    - Inputs:
+        - `seed` (Required): The seed parameter initializes the random number generator, ensuring that the same set of colors is generated each time for a given seed value. This allows for reproducibility in color generation. Type should be `INT`.
+    - Outputs:
+        - `hex_color1`: A randomly generated hexadecimal color value. Type should be `STRING`.
+        - `hex_color2`: A randomly generated hexadecimal color value. Type should be `STRING`.
+        - `hex_color3`: A randomly generated hexadecimal color value. Type should be `STRING`.
+        - `hex_color4`: A randomly generated hexadecimal color value. Type should be `STRING`.
+        - `show_help`: A URL to the help documentation for this node. Type should be `STRING`.

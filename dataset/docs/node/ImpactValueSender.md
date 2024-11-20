@@ -1,8 +1,0 @@
-- `ImpactValueSender`: The ImpactValueSender node is designed to transmit a specified value to a designated link within the system, optionally carrying an additional signal. It serves as a conduit for sending data across different parts of the application, facilitating communication and data flow.
-    - Parameters:
-        - `link_id`: Identifies the target link for sending the value. It specifies the destination within the system, ensuring the data reaches the intended recipient. Type should be `INT`.
-    - Inputs:
-        - `value`: The value to be sent. This parameter is central to the node's function as it determines the data that will be transmitted. Type should be `*`.
-        - `signal_opt`: An optional signal that can be sent along with the value. It provides additional context or control information accompanying the main data. Type should be `*`.
-    - Outputs:
-        - `signal`: The optional signal sent along with the value, if provided. It represents additional data or control information that accompanies the main value. Type should be `*`.

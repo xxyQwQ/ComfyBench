@@ -1,8 +1,0 @@
-- `ImageQuantize`: The ImageQuantize node is designed to reduce the number of colors in an image to a specified number, optionally applying dithering techniques to maintain visual quality. This process is useful for creating palette-based images or reducing the color complexity for certain applications.
-    - Parameters:
-        - `colors`: Specifies the number of colors to reduce the image to. It directly influences the quantization process by determining the color palette size. Type should be `INT`.
-        - `dither`: Determines the dithering technique to be applied during quantization, affecting the visual quality and appearance of the output image. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The input image tensor to be quantized. It affects the node's execution by being the primary data upon which color reduction is performed. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The quantized version of the input image, with reduced color complexity and optionally dithered to maintain visual quality. Type should be `IMAGE`.

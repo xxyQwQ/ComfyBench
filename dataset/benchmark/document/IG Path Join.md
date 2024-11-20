@@ -1,0 +1,6 @@
+- `IG Path Join`: The IG Path Join node is designed to concatenate two string paths into a single path string, facilitating file and directory path construction within a workflow.
+    - Inputs:
+        - `first` (Required): Specifies the first part of the path to be joined. It forms the base to which the second part will be appended. Type should be `STRING`.
+        - `second` (Required): Defines the second part of the path to be joined to the first. This addition completes the construction of the full path. Type should be `STRING`.
+    - Outputs:
+        - `string`: The complete path string resulting from the concatenation of the first and second input strings. Type should be `STRING`.

@@ -1,8 +1,0 @@
-- `SaltMaskAdaptiveThresholdingRegion`: This node applies adaptive thresholding to a set of mask images, converting them into binary images based on local pixel value variations. It is designed to enhance the visibility of features in regions with varying illumination by adjusting the threshold value dynamically across the image.
-    - Parameters:
-        - `block_size`: The size of the local region around each pixel to calculate its threshold value. It determines the adaptability of the thresholding process to local changes in illumination. Type should be `INT`.
-        - `constant`: A constant subtracted from the mean or weighted mean calculated over the block size. This fine-tunes the thresholding process. Type should be `INT`.
-    - Inputs:
-        - `masks`: The input masks to be processed for adaptive thresholding. These masks are transformed into binary images using a locally adaptive threshold. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The output tensor containing the regions after applying adaptive thresholding, enhancing local features in the masks. Type should be `MASK`.

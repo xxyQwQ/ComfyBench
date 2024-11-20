@@ -1,0 +1,11 @@
+- `Load Lora`: The Load Lora node is designed to dynamically enhance the capabilities of machine learning models by applying LoRA (Low-Rank Adaptation) adjustments. It allows for the fine-tuning of model and clip parameters through the application of pre-trained LoRA adjustments, thereby enabling more precise control over the model's behavior and outputs without the need for extensive retraining.
+    - Inputs:
+        - `model` (Required): The original machine learning model to which LoRA adjustments will be applied. It serves as the foundation for the enhancement process. Type should be `MODEL`.
+        - `clip` (Required): The clip parameter works alongside the model to receive LoRA adjustments, allowing for a coordinated enhancement of both components. Type should be `CLIP`.
+        - `lora_name` (Required): The name of the LoRA adjustment file to be applied. This parameter specifies which pre-trained LoRA adjustments are to be used for enhancing the model and clip. Type should be `COMBO[STRING]`.
+        - `strength_model` (Required): Determines the intensity of the LoRA adjustments applied to the model. It allows for fine-tuning the impact of LoRA on the model's behavior. Type should be `FLOAT`.
+        - `strength_clip` (Required): Specifies the intensity of the LoRA adjustments applied to the clip parameter, enabling precise control over its enhancement. Type should be `FLOAT`.
+    - Outputs:
+        - `MODEL`: The enhanced version of the model after the application of LoRA adjustments, reflecting the improved capabilities and fine-tuning achieved. Type should be `MODEL`.
+        - `CLIP`: The enhanced version of the clip parameter after the application of LoRA adjustments, showcasing the precise control and improvement. Type should be `CLIP`.
+        - `NAME_STRING`: The name of the LoRA adjustment applied, providing a reference to the specific enhancements made. Type should be `STRING`.

@@ -1,0 +1,10 @@
+- `BRIAAI Matting`: The BRIAAI Matting node is designed for video frame background removal, leveraging deep learning models to separate foreground elements from their backgrounds. It processes video frames in batches, applying a sophisticated neural network architecture to accurately extract foreground objects with the option to adjust the background color, optimize for performance with FP16 precision, and handle various input sizes and batch processing requirements.
+    - Inputs:
+        - `video_frames` (Required): The sequence of video frames to be processed for background removal. This input is crucial for determining the foreground elements to be extracted from each frame. Type should be `IMAGE`.
+        - `version` (Required): Specifies the version of the BRIAAI model to be used, allowing for flexibility in choosing the model's capabilities based on its version. Type should be `COMBO[STRING]`.
+        - `fp16` (Required): A flag indicating whether to use FP16 precision for model computations, optimizing performance on compatible hardware. Type should be `BOOLEAN`.
+        - `bg_color` (Required): The color to be used for the background in the output frames, enabling customization of the background appearance post-matting. Type should be `STRING`.
+        - `batch_size` (Required): The number of frames to process in a single batch, affecting memory usage and computational efficiency. Type should be `INT`.
+    - Outputs:
+        - `image`: The foreground elements extracted from the video frames, with the background removed or altered to the specified color. Type should be `IMAGE`.
+        - `mask`: The binary masks indicating the foreground regions in each frame, useful for further processing or analysis. Type should be `MASK`.

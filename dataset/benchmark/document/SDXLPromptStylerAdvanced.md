@@ -1,0 +1,15 @@
+- `SDXLPromptStylerAdvanced`: The SDXLPromptStylerAdvanced node is designed to process and style text prompts using advanced templates. It allows for the customization of positive and negative prompts with specific styles, and supports logging of the styled prompts for debugging or analysis purposes. This node is capable of handling more complex prompt styling scenarios, including the differentiation between global and local positive prompts, as well as the selective application of negative prompts.
+    - Inputs:
+        - `text_positive_g` (Required): The global positive text to be styled. This text is intended for use across multiple prompts or contexts, providing a consistent positive message. Type should be `STRING`.
+        - `text_positive_l` (Required): The local positive text to be styled. This text is specific to a particular prompt or context, allowing for more targeted positive messaging. Type should be `STRING`.
+        - `text_negative` (Required): The negative text to be styled. This text is used to provide a contrasting or opposing viewpoint to the positive text, enhancing the prompt's effectiveness. Type should be `STRING`.
+        - `style` (Required): The style identifier used to select the template for styling the prompts. This allows for the customization of prompt appearance according to predefined styles. Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Determines the application scope of the negative prompt, whether it applies globally, locally, or both, influencing how the negative text is integrated into the styled prompts. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A flag indicating whether the styled prompts should be logged to the console. This is useful for debugging or analyzing the styling process. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `text_positive_g`: The styled global positive text, reflecting the application of the selected style. Type should be `STRING`.
+        - `text_positive_l`: The styled local positive text, tailored to a specific context or prompt. Type should be `STRING`.
+        - `text_positive`: The combined styled positive text, incorporating both global and local positive messages. Type should be `STRING`.
+        - `text_negative_g`: The styled global negative text, applicable when the negative prompt is set to affect global context. Type should be `STRING`.
+        - `text_negative_l`: The styled local negative text, applicable when the negative prompt is set to affect local context. Type should be `STRING`.
+        - `text_negative`: The combined styled negative text, integrating both global and local negative messages. Type should be `STRING`.

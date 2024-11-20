@@ -1,0 +1,10 @@
+- `SaltJSONFormat`: The SaltJSONFormat node is designed to reformat JSON data according to specified formatting options such as indentation, width, depth, compactness, and dictionary sorting. This node aims to enhance readability or compactness of JSON data for better handling and visualization.
+    - Inputs:
+        - `json_input` (Required): The raw JSON string that needs to be reformatted. It is essential for defining the structure and content of the data to be processed. Type should be `STRING`.
+        - `indent` (Required): Specifies the number of spaces to use for indentation in the formatted JSON, allowing customization of the visual structure. Type should be `INT`.
+        - `width` (Required): Sets the maximum width of each line in the formatted JSON, controlling line breaks for readability. Type should be `INT`.
+        - `depth` (Required): Determines the maximum depth to which the JSON will be formatted, affecting the visibility of nested structures. Type should be `INT`.
+        - `compact` (Required): A boolean flag that, when true, minimizes the use of whitespace in the formatted JSON to produce a more compact output. Type should be `BOOLEAN`.
+        - `sort_dicts` (Required): Controls whether dictionaries within the JSON are sorted by key, aiding in consistent and organized output. Type should be `BOOLEAN`.
+    - Outputs:
+        - `json_output`: The reformatted JSON string, which has been adjusted according to the input parameters for improved structure and readability. Type should be `STRING`.

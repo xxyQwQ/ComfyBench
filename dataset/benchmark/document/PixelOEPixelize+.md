@@ -1,0 +1,11 @@
+- `PixelOEPixelize+`: The PixelOEPixelize node focuses on transforming images by applying a pixelization effect. It abstracts the complexity of manipulating pixel data to achieve a stylized reduction in image resolution, often used for aesthetic purposes or to anonymize sensitive information in images.
+    - Inputs:
+        - `image` (Required): The input image to be pixelized. This image undergoes a transformation where its resolution is reduced in a stylized manner, effectively 'pixelizing' the image. Type should be `IMAGE`.
+        - `downscale_mode` (Required): Specifies the method used for downscaling the image as part of the pixelization process. Different modes can affect the visual outcome of the pixelization. Type should be `COMBO[STRING]`.
+        - `target_size` (Required): Defines the target size for the pixelization process, determining the final dimensions of the pixelized image. Type should be `INT`.
+        - `patch_size` (Required): The size of each 'pixel' in the pixelized image, affecting the granularity of the pixelization effect. Type should be `INT`.
+        - `thickness` (Required): Controls the thickness of the grid lines in the pixelized image, adding to the stylized effect. Type should be `INT`.
+        - `color_matching` (Required): Determines how colors are matched during the pixelization process, influencing the color accuracy of the pixelized image. Type should be `BOOLEAN`.
+        - `upscale` (Required): A flag indicating whether the pixelized image should be upscaled back to its original resolution, affecting the final appearance. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The resulting image after applying the pixelization effect, which may be upscaled to match the original image's resolution. Type should be `IMAGE`.

@@ -1,0 +1,5 @@
+- `SaltStringPathBasename`: This node extracts the basename (the final component of a file path) from a given file path string. It simplifies file path manipulation by isolating the most specific part of the path, such as the file name and extension, from a complete path.
+    - Inputs:
+        - `file_path` (Required): The complete file path from which the basename is to be extracted. This input is crucial for determining the specific file or directory name at the end of the path. Type should be `STRING`.
+    - Outputs:
+        - `path_basename`: The basename of the provided file path, which is the file name and extension or the final directory name in the path. Type should be `STRING`.

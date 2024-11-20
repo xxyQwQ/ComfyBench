@@ -1,0 +1,14 @@
+- `StabilityAPI_SD3`: The StabilityAPI_SD3 node interfaces with the StabilityAI API to facilitate image generation or manipulation tasks. It leverages the StabilityAI platform's capabilities, allowing users to generate images based on textual descriptions or modify existing images. This node emphasizes the use of specific API keys for operation and warns against potential metadata storage issues when saving images through separate nodes.
+    - Inputs:
+        - `prompt` (Required): The main textual description guiding the image generation or manipulation process, serving as the primary input for creating or altering images. Type should be `STRING`.
+        - `n_prompt` (Required): A negative textual description to guide the image generation process by specifying what to avoid, refining the output. Type should be `STRING`.
+        - `seed` (Required): A seed value for ensuring reproducibility of the generated images. Type should be `INT`.
+        - `model` (Required): Specifies the model used by StabilityAI for the image generation or manipulation task. Type should be `COMBO[STRING]`.
+        - `aspect_ratio` (Required): The desired aspect ratio for the output image, influencing its dimensions. Type should be `COMBO[STRING]`.
+        - `output_format` (Required): The format in which the generated image will be outputted, such as PNG or JPEG. Type should be `COMBO[STRING]`.
+        - `api_key` (Optional): The API key required for accessing the StabilityAI platform's services. Type should be `STRING`.
+        - `image` (Optional): An existing image to be modified or used as a basis for generation in image-to-image tasks. Type should be `IMAGE`.
+        - `img2img_strength` (Optional): Controls the influence of the input image on the generated output in image-to-image tasks. Type should be `FLOAT`.
+        - `disable_metadata` (Optional): A flag to disable metadata storage, addressing privacy or data storage concerns. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The generated or manipulated image as a result of the process, aligning with the provided descriptions and parameters. Type should be `IMAGE`.

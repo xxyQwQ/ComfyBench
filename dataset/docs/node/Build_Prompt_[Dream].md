@@ -1,8 +1,0 @@
-- `Build Prompt [Dream]`: The 'Build Prompt' node is designed for constructing and weighting textual prompts for generative tasks, allowing for the dynamic adjustment of prompt importance through weights.
-    - Parameters:
-        - `added_prompt`: Specifies the text to be added to the prompt, which can be dynamically adjusted in importance using the weight parameter. Type should be `STRING`.
-        - `weight`: Determines the weight of the added prompt text, influencing its significance in the resulting prompt composition. Type should be `FLOAT`.
-    - Inputs:
-        - `partial_prompt`: An optional initial prompt structure that can be further modified by adding text with specified weight. If not provided, a new prompt structure is initialized. Type should be `PARTIAL_PROMPT`.
-    - Outputs:
-        - `partial_prompt`: The modified or newly created prompt structure, incorporating the added text with its specified weight. Type should be `PARTIAL_PROMPT`.

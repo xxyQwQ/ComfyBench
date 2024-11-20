@@ -1,0 +1,5 @@
+- `String`: The String node is designed to simply pass through the input string it receives without modification. This node serves as a straightforward utility within a larger processing pipeline, allowing for the direct transfer of string data from one node to another.
+    - Inputs:
+        - `inStr` (Required): This parameter represents the input string that will be passed through the node. It is essential for the node's operation as it directly determines the output of the node. Type should be `STRING`.
+    - Outputs:
+        - `string`: The output of this node is the input string unchanged, facilitating the transfer of string data within a processing pipeline. Type should be `STRING`.

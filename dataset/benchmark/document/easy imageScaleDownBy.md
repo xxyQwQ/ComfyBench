@@ -1,0 +1,6 @@
+- `easy imageScaleDownBy`: The node is designed to scale down images by a specified factor, adjusting the dimensions of the image while maintaining its aspect ratio. It provides a straightforward way to reduce the resolution of images for various applications, such as optimizing for performance or adjusting for display sizes.
+    - Inputs:
+        - `images` (Required): Specifies the images to be scaled down. This parameter is crucial for defining the input images that will undergo the scaling process. Type should be `IMAGE`.
+        - `scale_by` (Required): Determines the factor by which the images will be scaled down. This parameter directly influences the output size of the images, allowing for precise control over the scaling process. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The scaled-down images, with dimensions adjusted according to the specified scale factor. Type should be `IMAGE`.

@@ -1,0 +1,6 @@
+- `DetailerHookCombine`: The DetailerHookCombine node is designed to enhance the detail processing capabilities of image generation models by combining the functionalities of two distinct detailer hooks. This node sequentially applies the cycle_latent and post_detection methods of each hook to the input data, effectively integrating their individual effects to produce more refined and detailed outputs.
+    - Inputs:
+        - `hook1` (Required): The first detailer hook to be combined. It contributes to the initial phase of detail enhancement by applying its cycle_latent and post_detection methods to the input data. Type should be `DETAILER_HOOK`.
+        - `hook2` (Required): The second detailer hook to be combined. It further processes the data already enhanced by the first hook, applying its own cycle_latent and post_detection methods to achieve additional detail refinement. Type should be `DETAILER_HOOK`.
+    - Outputs:
+        - `detailer_hook`: The output of the DetailerHookCombine node, which represents the enhanced and refined data after the combined effects of the two detailer hooks have been applied. Type should be `DETAILER_HOOK`.

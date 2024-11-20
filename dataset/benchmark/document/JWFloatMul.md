@@ -1,0 +1,6 @@
+- `JWFloatMul`: This node performs multiplication between two floating-point numbers, providing a straightforward way to scale or combine numerical values in a floating-point context.
+    - Inputs:
+        - `a` (Required): The first floating-point number to be multiplied. It serves as one of the operands in the multiplication operation. Type should be `FLOAT`.
+        - `b` (Required): The second floating-point number to be multiplied. It acts as the other operand in the multiplication operation, contributing to the final product. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: The result of multiplying the two input floating-point numbers, returned as a single floating-point number. Type should be `FLOAT`.

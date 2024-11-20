@@ -1,0 +1,20 @@
+- `PixelKSampleUpscalerProvider`: This node specializes in upscaling images through a K-sample strategy, leveraging advanced sampling techniques to enhance pixel quality. It simplifies the application of sophisticated upscaling algorithms, aiming to produce higher resolution images with greater detail and clarity.
+    - Inputs:
+        - `scale_method` (Required): Specifies the method used for upscaling, allowing selection from predefined algorithms to tailor the upscaling process to specific needs. Type should be `COMBO[STRING]`.
+        - `model` (Required): Identifies the model used for upscaling, enabling the application of specific models tailored to enhance image quality. Type should be `MODEL`.
+        - `vae` (Required): Specifies the variational autoencoder used in the upscaling process, contributing to the generation of high-quality images. Type should be `VAE`.
+        - `seed` (Required): Sets the seed for random number generation, ensuring reproducibility of the upscaling process. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps in the upscaling process, allowing control over the refinement level of the upscaled image. Type should be `INT`.
+        - `cfg` (Required): Configures the conditioning factor, influencing the upscaling process by adjusting the balance between the input image and the generated details. Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the sampler used in the upscaling process, affecting the sampling strategy and ultimately the quality of the upscaled image. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Determines the scheduler for the upscaling process, managing the progression of steps to optimize image quality. Type should be `COMBO[STRING]`.
+        - `positive` (Required): Represents positive conditioning data that guides the upscaling towards desired outcomes, emphasizing certain visual features. Type should be `CONDITIONING`.
+        - `negative` (Required): Represents negative conditioning data that the upscaling process should minimize, steering the algorithm away from undesired features. Type should be `CONDITIONING`.
+        - `denoise` (Required): Controls the level of denoising applied during upscaling, affecting the clarity and detail of the upscaled image. Type should be `FLOAT`.
+        - `use_tiled_vae` (Required): Indicates whether a tiled VAE is used, affecting the handling of large images by breaking them into manageable tiles for processing. Type should be `BOOLEAN`.
+        - `tile_size` (Required): Specifies the size of tiles when using a tiled VAE, impacting the processing of large images by dividing them into smaller, manageable sections. Type should be `INT`.
+        - `upscale_model_opt` (Optional): Optionally specifies an upscale model to be used, allowing for customization of the upscaling process with specific models. Type should be `UPSCALE_MODEL`.
+        - `pk_hook_opt` (Optional): Optionally specifies a post-processing hook, enabling custom post-upscaling adjustments. Type should be `PK_HOOK`.
+        - `scheduler_func_opt` (Optional): Optionally specifies a scheduler function, allowing for advanced control over the scheduling of upscaling steps. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `upscaler`: Produces the upscaled image, showcasing the enhanced resolution and detail achieved through the upscaling process. Type should be `UPSCALER`.

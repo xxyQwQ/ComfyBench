@@ -1,0 +1,9 @@
+- `CR Font File List`: This node is designed to list TrueType font files (.ttf) from specified sources, including system fonts, Comfyroll's own font directory, or any user-specified folder. It aims to provide a convenient way to access and utilize font files for text rendering or design purposes within the Comfyroll environment.
+    - Inputs:
+        - `source_folder` (Required): Specifies the source from which to list the font files. It can be the system's font directory, Comfyroll's internal font directory, or a custom folder path provided by the user. This choice dictates where the node searches for TrueType font files (.ttf). Type should be `COMBO[STRING]`.
+        - `start_index` (Required): Determines the starting index from which to begin listing the font files. This allows for pagination or selective listing of font files based on their order in the source directory. Type should be `INT`.
+        - `max_rows` (Required): Specifies the maximum number of font files to list. This parameter can be used to limit the number of font files returned by the node, facilitating easier management and selection. Type should be `INT`.
+        - `folder_path` (Optional): When the source folder is set to 'from folder', this parameter specifies the custom folder path from which to list the font files. It enables the node to access and list font files from a user-defined directory. Type should be `STRING`.
+    - Outputs:
+        - `LIST`: A list of TrueType font files (.ttf) found in the specified source directory. This output can be used to select specific fonts for text rendering or design tasks within Comfyroll. Type should be `*`.
+        - `show_help`: Provides a URL to the documentation or help page for this node, offering additional information or guidance on its use. Type should be `STRING`.

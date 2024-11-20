@@ -1,0 +1,5 @@
+- `easy int`: The `easy int` node is designed to simplify the process of generating and manipulating integer values within a user's workflow. It abstracts away the complexities associated with integer operations, offering a straightforward interface for creating, configuring, and utilizing integers in various computational tasks.
+    - Inputs:
+        - `value` (Required): Represents an integer value that can be configured by the user. It serves as the primary input for the node, allowing for the specification of integer-based parameters or values that influence the node's operation. Type should be `INT`.
+    - Outputs:
+        - `int`: Outputs an integer value as a result of the node's processing, reflecting the manipulation or generation of integer values based on the input provided. Type should be `INT`.

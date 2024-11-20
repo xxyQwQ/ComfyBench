@@ -1,0 +1,13 @@
+- `LayerUtility_ GetColorToneV2`: The GetColorToneV2 node is designed to analyze and manipulate the color tone of images. It offers advanced features for removing backgrounds, adjusting masks, and determining the main or average color tone of specific image areas, such as the entire image, the background, or the subject. This node is an enhancement over its predecessor, providing more control over the image processing and color analysis.
+    - Inputs:
+        - `image` (Required): The input image to be processed for color tone analysis. This parameter is crucial as it serves as the base for all subsequent operations within the node. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the method of color tone analysis: either determining the main color or calculating the average color of the image. This choice affects the algorithm used for color extraction. Type should be `COMBO[STRING]`.
+        - `color_of` (Required): Determines the area of the image to analyze: the entire image, just the background, or only the subject. This parameter allows for targeted color analysis based on the specified area. Type should be `COMBO[STRING]`.
+        - `remove_bkgd_method` (Required): The method used for background removal from the image, offering options like 'BiRefNet' or 'RMBG 1.4'. This is essential for isolating the subject or background for accurate color analysis. Type should be `COMBO[STRING]`.
+        - `invert_mask` (Required): A boolean flag to invert the mask applied during image processing, which can alter the area of interest for color analysis. Type should be `BOOLEAN`.
+        - `mask_grow` (Required): Specifies the amount to grow or shrink the mask around the subject or background, allowing for finer control over the area being analyzed. Type should be `INT`.
+        - `mask` (Optional): An optional mask that can be applied to the image for more precise control over the areas to be analyzed for color tone. Type should be `MASK`.
+    - Outputs:
+        - `image`: The processed image with applied color tone adjustments or background removal effects. Type should be `IMAGE`.
+        - `color_in_hex`: The determined color of the specified image area in HEX format, providing a precise color representation. Type should be `STRING`.
+        - `HSV color in list`: The HSV (Hue, Saturation, Value) representation of the determined color, offering an alternative color space for analysis. Type should be `LIST`.

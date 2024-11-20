@@ -1,0 +1,12 @@
+- `ICLightConditioning`: The ICLightConditioning node is designed to prepare and condition inputs specifically for the IC-Light model, ensuring compatibility and optimal performance. It focuses on adjusting and validating input data, such as images and noise, to meet the model's requirements, facilitating enhanced image generation processes.
+    - Inputs:
+        - `positive` (Required): A set of conditioning instructions intended to guide the image generation towards desired attributes or features, enhancing the positive aspects of the output. Type should be `CONDITIONING`.
+        - `negative` (Required): A set of conditioning instructions aimed at steering the image generation away from undesired attributes or features, minimizing the negative aspects of the output. Type should be `CONDITIONING`.
+        - `vae` (Required): The variational autoencoder used to encode images into a latent space, providing a compressed representation of the input images for further processing. Type should be `VAE`.
+        - `foreground` (Required): The latent representation of the foreground image to be used in the conditioning process, contributing to the generation of the final image. Type should be `LATENT`.
+        - `multiplier` (Required): A scalar value that adjusts the intensity of the effect of the foreground latent representation on the conditioning process. Type should be `FLOAT`.
+        - `opt_background` (Optional): An optional latent representation of the background image, which can be used to modify the background of the generated image. Type should be `LATENT`.
+    - Outputs:
+        - `positive`: The modified set of positive conditioning instructions, incorporating the effects of the input latent representations and adjustments. Type should be `CONDITIONING`.
+        - `negative`: The modified set of negative conditioning instructions, incorporating the effects of the input latent representations and adjustments. Type should be `CONDITIONING`.
+        - `empty_latent`: A placeholder latent representation, typically used when no specific output latent is required for the operation. Type should be `LATENT`.

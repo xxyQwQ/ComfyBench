@@ -1,8 +1,0 @@
-- `HypernetworkLoader (dirty)`: The HypernetworkLoader node is designed to dynamically modify a given model by applying a hypernetwork patch. This process enhances the model's capabilities by integrating additional computational paths, thereby enabling more complex and nuanced behaviors. The node focuses on the customization and enhancement of models through the application of hypernetworks, facilitating a more versatile and adaptive model performance.
-    - Parameters:
-        - `hypernetwork_name`: The 'hypernetwork_name' parameter specifies the name of the hypernetwork to be applied to the model. It determines the specific computational modifications that will be integrated into the model, affecting its behavior and performance. Type should be `STRING`.
-        - `strength`: The 'strength' parameter controls the intensity of the hypernetwork's influence on the model. It adjusts how significantly the hypernetwork's modifications impact the model's behavior, allowing for fine-tuning of the enhancement process. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The 'model' parameter represents the base model to which the hypernetwork patch will be applied. It is crucial for defining the starting point of the enhancement process, as the hypernetwork's modifications are built upon this model. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The output 'model' is the enhanced version of the input model, having been modified by the applied hypernetwork patch. It represents the culmination of the node's process, showcasing the model's improved capabilities and performance. Type should be `MODEL`.

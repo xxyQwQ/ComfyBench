@@ -1,0 +1,11 @@
+- `Text List`: The node is designed to aggregate multiple string inputs into a single list, allowing for flexible text data collection and manipulation.
+    - Inputs:
+        - `text_a` (Optional): A string input that can be optionally provided to be included in the output list. Type should be `STRING`.
+        - `text_b` (Optional): A string input that can be optionally provided to be included in the output list. Type should be `STRING`.
+        - `text_c` (Optional): A string input that can be optionally provided to be included in the output list. Type should be `STRING`.
+        - `text_d` (Optional): A string input that can be optionally provided to be included in the output list. Type should be `STRING`.
+        - `text_e` (Optional): A string input that can be optionally provided to be included in the output list. Type should be `STRING`.
+        - `text_f` (Optional): A string input that can be optionally provided to be included in the output list. Type should be `STRING`.
+        - `text_g` (Optional): A string input that can be optionally provided to be included in the output list. Type should be `STRING`.
+    - Outputs:
+        - `list`: The output is a list of strings aggregated from the provided inputs. Type should be `LIST`.

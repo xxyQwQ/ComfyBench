@@ -1,0 +1,8 @@
+- `Seed`: The WAS_Seed node initializes a seed value for random number generation, providing a foundation for deterministic outcomes in processes that involve randomness.
+    - Inputs:
+        - `seed` (Required): Specifies the initial seed value for random number generation. It's crucial for ensuring reproducibility of random processes by initializing the random number generator with a known state. Type should be `INT`.
+    - Outputs:
+        - `seed`: Returns the initialized seed value, allowing it to be used in subsequent random number generation processes. Type should be `SEED`.
+        - `number`: Outputs the seed value as a generic number, facilitating its use in contexts where a specific number type is not required. Type should be `NUMBER`.
+        - `float`: Provides the seed value as a floating-point number, enabling its application in scenarios that require decimal precision. Type should be `FLOAT`.
+        - `int`: Delivers the seed value explicitly as an integer, ensuring compatibility with operations that necessitate integer inputs. Type should be `INT`.

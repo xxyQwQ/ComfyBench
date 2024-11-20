@@ -1,0 +1,9 @@
+- `Inference_Core_LayeredDiffusionJointApply`: This node is designed to apply a layered diffusion process to joint models, integrating multiple diffusion models or layers to generate or manipulate images in a cohesive manner. It leverages the strengths of each individual model layer to produce enhanced, high-quality outputs.
+    - Inputs:
+        - `model` (Required): The model parameter represents the diffusion model to be applied. It is crucial for defining the specific diffusion process and its configuration, directly influencing the quality and characteristics of the output. Type should be `MODEL`.
+        - `config` (Required): Config defines the configuration settings for the layered diffusion process, including model specifics and operational parameters, crucial for tailoring the diffusion to desired outcomes. Type should be `COMBO[STRING]`.
+        - `fg_cond` (Optional): Foreground conditions specify the conditional inputs for the foreground of the diffusion process, guiding the generation or transformation of the output in the foreground areas. Type should be `CONDITIONING`.
+        - `bg_cond` (Optional): Background conditions specify the conditional inputs for the background of the diffusion process, influencing the generation or transformation of the output in the background areas. Type should be `CONDITIONING`.
+        - `blended_cond` (Optional): Blended conditions combine foreground and background conditions, providing a unified conditional input for the diffusion process across both areas. Type should be `CONDITIONING`.
+    - Outputs:
+        - `model`: The output is a modified version of the input model, enhanced through the layered diffusion process to produce or transform images based on the provided conditions and configurations. Type should be `MODEL`.

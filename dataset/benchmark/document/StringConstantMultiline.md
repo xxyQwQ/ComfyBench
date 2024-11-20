@@ -1,0 +1,6 @@
+- `StringConstantMultiline`: The StringConstantMultiline node is designed to process multiline string inputs, optionally stripping newline characters based on a boolean flag. It enables the manipulation of text data by allowing the preservation or removal of formatting, making it versatile for various text processing tasks.
+    - Inputs:
+        - `string` (Required): The primary text input that the node processes. It accepts multiline strings, enabling the handling of text data that spans multiple lines. Type should be `STRING`.
+        - `strip_newlines` (Required): A boolean flag that determines whether newline characters in the input string should be removed. When set to true, it strips newline characters, flattening the text to a single line. Type should be `BOOLEAN`.
+    - Outputs:
+        - `string`: Outputs the processed string, which may have newline characters removed based on the input flag. This allows for flexible text manipulation and formatting. Type should be `STRING`.

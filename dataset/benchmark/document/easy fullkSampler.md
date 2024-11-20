@@ -1,0 +1,30 @@
+- `easy fullkSampler`: The `easy fullkSampler` node is designed to facilitate the sampling process in generative models by providing a simplified interface for users. It abstracts the complexities involved in sampling configurations, allowing for easy experimentation with different models, seeds, steps, conditioning, and denoising parameters. This node aims to make the process of generating new samples more accessible and user-friendly, especially for those not deeply familiar with the underlying algorithms.
+    - Inputs:
+        - `pipe` (Required): The pipeline configuration for the sampling process, integrating various nodes and operations for a comprehensive workflow. Type should be `PIPE_LINE`.
+        - `steps` (Required): Defines the number of steps to be used in the sampling process. This parameter affects the detail and quality of the generated samples, with a higher number of steps potentially leading to more refined outputs. Type should be `INT`.
+        - `cfg` (Required): Controls the conditioning factor, which influences the adherence of the generated samples to the specified conditions. This parameter allows for fine-tuning the balance between randomness and conditioning in the sampling output. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the specific sampling algorithm to be used. This choice impacts the sampling behavior and the characteristics of the generated images, offering flexibility in exploring different sampling strategies. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduler for the sampling process, which determines how the sampling parameters are adjusted over time. This affects the progression and quality of the sampling process. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Sets the denoising strength used in the sampling process. Adjusting this parameter can help in controlling the level of detail and clarity in the generated samples. Type should be `FLOAT`.
+        - `image_output` (Required): Determines the output format for images, including options for file types and quality settings. Type should be `COMBO[STRING]`.
+        - `link_id` (Required): A unique identifier for linking the output with other processes or storage locations. Type should be `INT`.
+        - `save_prefix` (Required): A prefix added to the filenames of saved images, allowing for organized storage and retrieval. Type should be `STRING`.
+        - `seed` (Optional): Sets the initial seed for the random number generator used in the sampling process. This ensures reproducibility of results, allowing users to generate the same output given the same set of parameters. Type should be `INT`.
+        - `model` (Optional): Specifies the generative model to be used for sampling. This parameter is crucial as it determines the base model from which samples will be generated, affecting the overall quality and characteristics of the output. Type should be `MODEL`.
+        - `positive` (Optional): Specifies positive conditioning to guide the sampling towards desired attributes or features in the generated output. This parameter helps in directing the model to produce samples that match certain criteria. Type should be `CONDITIONING`.
+        - `negative` (Optional): Specifies negative conditioning to avoid certain attributes or features in the generated output. This parameter is useful for steering the sampling away from undesired characteristics. Type should be `CONDITIONING`.
+        - `latent` (Optional): Provides an initial latent image to start the sampling from. This can be used for tasks like image editing or continuation, where the starting point is a pre-existing latent representation. Type should be `LATENT`.
+        - `vae` (Optional): Specifies the VAE model to be used in conjunction with the sampling process for tasks like encoding or decoding. Type should be `VAE`.
+        - `clip` (Optional): Specifies the CLIP model for text or image conditioning, enhancing the relevance of the generated samples to given prompts or images. Type should be `CLIP`.
+        - `xyPlot` (Optional): An optional parameter for plotting or visualizing data related to the sampling process. Type should be `XYPLOT`.
+        - `image` (Optional): An optional input image for tasks such as image editing or style transfer. Type should be `IMAGE`.
+    - Outputs:
+        - `pipe`: The output pipeline configuration, encapsulating the entire sampling process and its results. Type should be `PIPE_LINE`.
+        - `image`: The generated image or images as a result of the sampling process. Type should be `IMAGE`.
+        - `model`: The model used in the sampling process, potentially modified or updated through the operation. Type should be `MODEL`.
+        - `positive`: The positive conditioning applied during the sampling, influencing the characteristics of the generated output. Type should be `CONDITIONING`.
+        - `negative`: The negative conditioning applied to steer the sampling away from certain features or attributes. Type should be `CONDITIONING`.
+        - `latent`: The output latent representation of the generated sample. This can be used for further processing or conversion into an image, representing the final result of the sampling process. Type should be `LATENT`.
+        - `vae`: The VAE model involved in the sampling process, if applicable, including any encoding or decoding operations. Type should be `VAE`.
+        - `clip`: The CLIP model used for conditioning, reflecting its role in shaping the output based on textual or visual prompts. Type should be `CLIP`.
+        - `seed`: The seed value used in the sampling process, indicating the role of randomness and reproducibility in generating the output. Type should be `INT`.

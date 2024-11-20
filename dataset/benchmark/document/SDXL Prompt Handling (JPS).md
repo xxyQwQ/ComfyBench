@@ -1,0 +1,8 @@
+- `SDXL Prompt Handling (JPS)`: This node is designed to process and handle text prompts for image generation tasks, optimizing them for use with the SDXL model. It focuses on refining and structuring input prompts to enhance the clarity and effectiveness of the generated images.
+    - Inputs:
+        - `handling` (Required): Specifies the method for handling the combination or selection of positive prompts, offering various strategies to optimize prompt effectiveness. Type should be `COMBO[STRING]`.
+        - `pos_g` (Required): Represents the global positive prompt, providing a broad thematic or subject matter direction for the image generation. Type should be `STRING`.
+        - `pos_l` (Required): Denotes the local positive prompt, offering more specific details or elements to be included in the generated image. Type should be `STRING`.
+    - Outputs:
+        - `pos_g`: The processed global positive prompt, reflecting the chosen handling strategy and ready for use with the SDXL model. Type should be `STRING`.
+        - `pos_l`: The processed local positive prompt, adjusted according to the handling method and tailored for the image generation task. Type should be `STRING`.

@@ -1,6 +1,0 @@
-- `FromListGetInts`: The `FromListGetInts` node is designed to extract a single integer value from a list of integers based on a specified index. It enables random access within a list, allowing for both direct indexing and reverse access through negative indices, thereby facilitating flexible data retrieval from integer lists.
-    - Parameters:
-        - `list`: The list of integers from which a single integer value is to be retrieved. This parameter is essential for specifying the source list for extraction. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `int`: The extracted integer value from the specified index within the list. Type should be `INT`.

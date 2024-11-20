@@ -1,8 +1,0 @@
-- `ImageScaleToMegapixels`: The node is designed to adjust the size of an image to meet a specified total number of megapixels, either by upscaling or downscaling. It incorporates various upscaling methods to achieve the desired image quality and size, ensuring the final image adheres to the specified megapixel count while maintaining aspect ratio.
-    - Parameters:
-        - `megapixels`: Defines the target size of the image in megapixels, guiding the scaling process to either increase or decrease the image's dimensions to meet this specification. Type should be `FLOAT`.
-    - Inputs:
-        - `images`: The input images to be resized. This parameter is crucial as it serves as the base for the scaling operation, determining the starting point for any upscaling or downscaling to achieve the target megapixel size. Type should be `IMAGE`.
-        - `upscale_model_opt`: Optionally specifies the upscale model to be used for upscaling the image, allowing for advanced customization of the image quality and appearance post-scaling. This parameter influences the visual outcome of the resized image, especially when upscale is required beyond a certain threshold. Type should be `UPSCALE_MODEL`.
-    - Outputs:
-        - `image`: The resized image, adjusted to meet the specified megapixel count. This output is the direct result of the scaling operation, reflecting the changes in size and potentially quality based on the chosen upscaling method. Type should be `IMAGE`.

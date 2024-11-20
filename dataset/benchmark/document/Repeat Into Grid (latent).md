@@ -1,0 +1,7 @@
+- `Repeat Into Grid (latent)`: This node is designed to replicate and arrange input latent samples into a grid format based on specified dimensions. It enables the creation of a structured layout of latent representations, facilitating operations that require uniform spatial arrangements, such as visualization or further processing in grid-based models.
+    - Inputs:
+        - `samples` (Required): The latent samples to be tiled into a grid. This input is crucial for determining the content that will be replicated across the grid. Type should be `LATENT`.
+        - `columns` (Required): Specifies the number of columns in the grid. This parameter directly influences the grid's width and the arrangement of the replicated samples. Type should be `INT`.
+        - `rows` (Required): Determines the number of rows in the grid. It affects the grid's height and how the samples are distributed vertically. Type should be `INT`.
+    - Outputs:
+        - `latent`: The output is a modified version of the input latent samples, now arranged into a grid as specified by the input dimensions. Type should be `LATENT`.

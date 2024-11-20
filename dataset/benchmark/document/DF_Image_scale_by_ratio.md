@@ -1,0 +1,8 @@
+- `DF_Image_scale_by_ratio`: This node is designed to upscale an image by a specified ratio, applying a chosen upscale method and optionally cropping the image. It focuses on adjusting the image's dimensions based on a scaling factor, enhancing the image quality or fitting it into a desired size while maintaining its aspect ratio.
+    - Inputs:
+        - `image` (Required): The image to be upscaled. It is central to the node's operation as it determines the base for scaling and the subject of the upscale process. Type should be `IMAGE`.
+        - `upscale_by` (Required): The factor by which the image's dimensions should be increased. This value directly influences the final size of the upscaled image. Type should be `FLOAT`.
+        - `upscale_method` (Required): The method used for upscaling the image. Different methods can affect the quality and characteristics of the upscaled image. Type should be `COMBO[STRING]`.
+        - `crop` (Required): Determines if and how the upscaled image should be cropped, affecting the final composition and aspect ratio of the output. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The upscaled version of the input image, potentially cropped according to the specified method. Type should be `IMAGE`.

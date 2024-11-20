@@ -1,9 +1,0 @@
-- `ImageTransformPaddingAbsolute`: This node applies absolute padding to a batch of images, allowing for the addition of a specified number of pixels to the height and width of each image. The padding method can be chosen from predefined options to control how the added space is filled.
-    - Parameters:
-        - `add_width`: The number of pixels to add to the width of each image. Type should be `INT`.
-        - `add_height`: The number of pixels to add to the height of each image. Type should be `INT`.
-        - `method`: The method used to fill the added padding area, with options including 'reflect', 'edge', and 'constant'. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: The batch of images to which padding will be applied. This is the primary input for the transformation process. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The batch of images after padding has been applied, with increased dimensions according to the specified add_width and add_height. Type should be `IMAGE`.

@@ -1,0 +1,9 @@
+- `LLMDirectoryReader`: The LLMDirectoryReader node specializes in reading and processing directory structures, enabling the extraction and organization of document data from various file types contained within. It serves as a versatile tool for handling bulk document processing tasks, streamlining the workflow for data ingestion from directories.
+    - Inputs:
+        - `input_directory` (Required): Specifies the root directory from which documents will be read. This is the starting point for the directory traversal. Type should be `STRING`.
+        - `optional_path_list` (Optional): A list of specific paths within the directory to include or exclude, providing finer control over which files are processed. Type should be `*`.
+        - `recursive` (Optional): Determines whether the directory reading should be recursive, allowing for the inclusion of files in subdirectories. Type should be `BOOLEAN`.
+        - `required_ext_list` (Optional): A comma-separated list of file extensions to include in the reading process, enabling filtering of files by type. Type should be `STRING`.
+        - `exclude_glob_list` (Optional): A comma-separated list of patterns to exclude from the reading process, offering a way to skip over unwanted files or directories. Type should be `STRING`.
+    - Outputs:
+        - `documents`: The output is a collection of documents extracted from the specified directory, organized and ready for further processing. Type should be `DOCUMENT`.

@@ -1,9 +1,0 @@
-- `XY Input Clip Skip`: This node is designed to process and validate clip skip values for efficiency in generating XY plots. It focuses on adjusting clip skip values within specified bounds and ensuring they are appropriate for the target checkpoint, either 'Base' or 'Refiner'. The node plays a crucial role in optimizing the generation process by fine-tuning the clip skip parameters, which are essential for controlling the granularity of the plot data.
-    - Parameters:
-        - `target_ckpt`: Specifies the target checkpoint for which the clip skip values are being adjusted. It determines the context ('Base' or 'Refiner') in which the clip skip values are applied, affecting the output XY plot's granularity. Type should be `COMBO[STRING]`.
-        - `batch_count`: Defines the number of batches for which clip skip values are generated. It influences the volume of data processed and the detail level in the resulting XY plot. Type should be `INT`.
-        - `first_clip_skip`: The starting point of the clip skip range. It sets the lower limit for clip skip adjustments, impacting the plot's detail level. Type should be `INT`.
-        - `last_clip_skip`: The ending point of the clip skip range. It sets the upper limit for clip skip adjustments, impacting the plot's detail level. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `X or Y`: unknown Type should be `XY`.

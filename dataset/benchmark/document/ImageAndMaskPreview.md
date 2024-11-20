@@ -1,0 +1,9 @@
+- `ImageAndMaskPreview`: This node is designed to generate a preview of an image with an optional mask applied. It supports adjusting the mask's opacity and color, and can handle cases where either the image, the mask, or both are provided. The node also offers functionality to pass through the generated preview without saving, or to save the preview with a specified filename prefix, incorporating additional PNG metadata if provided.
+    - Inputs:
+        - `mask_opacity` (Required): Specifies the opacity level of the mask when both an image and a mask are provided, affecting the visibility of the mask overlay on the image. Type should be `FLOAT`.
+        - `mask_color` (Required): Defines the color of the mask in either RGB or hexadecimal format, which is applied when both an image and a mask are present, influencing the appearance of the mask overlay. Type should be `STRING`.
+        - `pass_through` (Required): A boolean flag that determines whether the generated preview is directly returned without being saved, allowing for immediate use or further processing. Type should be `BOOLEAN`.
+        - `image` (Optional): The image to be previewed, which can be optionally accompanied by a mask to create a composite preview. Type should be `IMAGE`.
+        - `mask` (Optional): The mask to be applied over the image, which can be adjusted in terms of opacity and color, or used alone to generate a mask-only preview. Type should be `MASK`.
+    - Outputs:
+        - `composite`: The generated preview of the image with the optional mask applied, which can be either passed through directly or saved to a file. Type should be `IMAGE`.

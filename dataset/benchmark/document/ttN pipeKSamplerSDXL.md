@@ -1,0 +1,39 @@
+- `ttN pipeKSamplerSDXL`: This node is designed to manage the sampling process within a specific pipeline, handling the initialization, state management, and output generation for image sampling tasks. It leverages a sampler to initialize states for pipeline and results, conditionally manages image output visibility, and updates the pipeline state based on the sampling results.
+    - Inputs:
+        - `sdxl_pipe` (Required): Represents the pipeline configuration for the sampling process, affecting how images are sampled and processed. Type should be `PIPE_LINE_SDXL`.
+        - `upscale_method` (Required): unknown Type should be `COMBO[STRING]`.
+        - `factor` (Required): unknown Type should be `FLOAT`.
+        - `crop` (Required): unknown Type should be `COMBO[STRING]`.
+        - `sampler_state` (Required): unknown Type should be `COMBO[STRING]`.
+        - `base_steps` (Required): unknown Type should be `INT`.
+        - `refiner_steps` (Required): unknown Type should be `INT`.
+        - `cfg` (Required): unknown Type should be `FLOAT`.
+        - `sampler_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): unknown Type should be `COMBO[STRING]`.
+        - `image_output` (Required): Controls the visibility and saving behavior of the sampled images, influencing whether images are displayed or saved based on specified conditions. Type should be `COMBO[STRING]`.
+        - `save_prefix` (Required): unknown Type should be `STRING`.
+        - `seed` (Optional): unknown Type should be `INT`.
+        - `optional_model` (Optional): unknown Type should be `MODEL`.
+        - `optional_positive` (Optional): unknown Type should be `CONDITIONING`.
+        - `optional_negative` (Optional): unknown Type should be `CONDITIONING`.
+        - `optional_vae` (Optional): unknown Type should be `VAE`.
+        - `optional_refiner_model` (Optional): unknown Type should be `MODEL`.
+        - `optional_refiner_positive` (Optional): unknown Type should be `CONDITIONING`.
+        - `optional_refiner_negative` (Optional): unknown Type should be `CONDITIONING`.
+        - `optional_refiner_vae` (Optional): unknown Type should be `VAE`.
+        - `optional_latent` (Optional): unknown Type should be `LATENT`.
+        - `optional_clip` (Optional): unknown Type should be `CLIP`.
+    - Outputs:
+        - `sdxl_pipe`: unknown Type should be `PIPE_LINE_SDXL`.
+        - `model`: unknown Type should be `MODEL`.
+        - `positive`: unknown Type should be `CONDITIONING`.
+        - `negative`: unknown Type should be `CONDITIONING`.
+        - `vae`: unknown Type should be `VAE`.
+        - `refiner_model`: unknown Type should be `MODEL`.
+        - `refiner_positive`: unknown Type should be `CONDITIONING`.
+        - `refiner_negative`: unknown Type should be `CONDITIONING`.
+        - `refiner_vae`: unknown Type should be `VAE`.
+        - `latent`: unknown Type should be `LATENT`.
+        - `clip`: unknown Type should be `CLIP`.
+        - `image`: unknown Type should be `IMAGE`.
+        - `seed`: unknown Type should be `INT`.

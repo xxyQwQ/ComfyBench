@@ -1,0 +1,13 @@
+- `ControlNetApplySD3`: The ControlNetApplySD3 node is designed for applying a control network to modify the generation of images based on positive and negative conditioning inputs. It leverages a control network, a VAE, and specific strength parameters to influence the image generation process, allowing for fine-tuned control over the output based on the provided conditioning.
+    - Inputs:
+        - `positive` (Required): Positive conditioning inputs that guide the image generation towards desired attributes or features. Type should be `CONDITIONING`.
+        - `negative` (Required): Negative conditioning inputs that guide the image generation away from certain attributes or features. Type should be `CONDITIONING`.
+        - `control_net` (Required): The control network used to apply specific modifications or influences on the image generation process. Type should be `CONTROL_NET`.
+        - `vae` (Required): A variational autoencoder used for encoding and decoding images, contributing to the control network's ability to modify the image generation. Type should be `VAE`.
+        - `image` (Required): The input image to be modified by the control network based on the conditioning. Type should be `IMAGE`.
+        - `strength` (Required): A parameter controlling the intensity of the control network's influence on the image generation. Type should be `FLOAT`.
+        - `start_percent` (Required): The starting percentage of the control effect applied to the image generation process. Type should be `FLOAT`.
+        - `end_percent` (Required): The ending percentage of the control effect applied to the image generation process. Type should be `FLOAT`.
+    - Outputs:
+        - `positive`: The modified positive conditioning after applying the control network. Type should be `CONDITIONING`.
+        - `negative`: The modified negative conditioning after applying the control network. Type should be `CONDITIONING`.

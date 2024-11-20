@@ -1,0 +1,7 @@
+- `ACN_DefaultUniversalWeights`: This node specializes in loading and configuring default universal weights for the Advanced ControlNet system, facilitating the customization and optimization of weight parameters for enhanced control in text-to-image adaptation processes.
+    - Inputs:
+        - `cn_extras` (Optional): Allows for the inclusion of additional, custom weight parameters, offering extended customization capabilities for the control network. Type should be `CN_WEIGHTS_EXTRAS`.
+        - `autosize` (Optional): Configures automatic sizing for the control network, optimizing its structure and parameters for improved performance. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `CN_WEIGHTS`: Outputs the configured control net weights, ready for use in the Advanced ControlNet system. Type should be `CONTROL_NET_WEIGHTS`.
+        - `TK_SHORTCUT`: Provides a shortcut to timestep keyframe configurations, facilitating efficient integration and application within the system. Type should be `TIMESTEP_KEYFRAME`.

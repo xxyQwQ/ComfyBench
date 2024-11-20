@@ -1,0 +1,6 @@
+- `Image Select Channel`: This node is designed to isolate and extract a specific color channel (red, green, or blue) from an input image, converting the selected channel into a greyscale image that is then recombined into a three-channel image where all channels are the same, effectively filtering the image through the lens of the selected color channel.
+    - Inputs:
+        - `image` (Required): The input image to be processed. It is the primary data on which the channel selection operation is performed. Type should be `IMAGE`.
+        - `channel` (Required): Specifies the color channel ('red', 'green', or 'blue') to isolate from the input image. This selection determines which channel of the image will be extracted and processed. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The output is an image where the selected color channel has been isolated and converted into a greyscale image, then recombined into a three-channel image. Type should be `IMAGE`.

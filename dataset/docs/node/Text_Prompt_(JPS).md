@@ -1,6 +1,0 @@
-- `Text Prompt (JPS)`: The Text Prompt (JPS) node is designed to receive a textual input and return it unchanged. It serves as a straightforward mechanism for inputting and outputting text within a workflow, essentially acting as a pass-through for text data.
-    - Parameters:
-        - `text`: This parameter accepts a multiline string input, serving as the prompt text. It allows for dynamic prompts, enabling users to input text that can be dynamically processed or utilized within the node's workflow. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `text`: Outputs the same text string that was input, effectively acting as a pass-through for the text data. Type should be `STRING`.

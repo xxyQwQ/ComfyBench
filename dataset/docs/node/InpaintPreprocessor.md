@@ -1,7 +1,0 @@
-- `InpaintPreprocessor`: The InpaintPreprocessor node is designed for preparing images for inpainting tasks by applying a mask to the input image. It modifies the image by marking specified areas (as defined by the mask) as needing inpainting, effectively setting up the image for further processing where these areas can be filled or corrected.
-    - Parameters:
-    - Inputs:
-        - `image`: The 'image' parameter represents the input image that needs inpainting. It is crucial for defining the areas that will remain unchanged during the inpainting process. Type should be `IMAGE`.
-        - `mask`: The 'mask' parameter specifies the areas within the image that require inpainting. It plays a key role in identifying which parts of the image should be processed or filled by the inpainting algorithm. Type should be `MASK`.
-    - Outputs:
-        - `image`: The output is a modified version of the input image, where areas specified by the mask are marked for inpainting, ready for further processing. Type should be `IMAGE`.

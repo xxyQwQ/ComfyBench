@@ -1,0 +1,5 @@
+- `easy imageCount`: The `easy imageCount` node is designed to count the number of images in a given batch, providing a straightforward way to quantify image collections within a workflow.
+    - Inputs:
+        - `images` (Required): The `images` parameter represents the batch of images to be counted. It is crucial for determining the total number of images present, affecting the node's output directly. Type should be `IMAGE`.
+    - Outputs:
+        - `count`: The `count` output represents the total number of images in the input batch, providing a simple integer count. Type should be `INT`.

@@ -1,0 +1,6 @@
+- `RepeatImageBatch`: The RepeatImageBatch node is designed to duplicate a given image a specified number of times, creating a batch of identical images. This functionality is essential for operations that require multiple instances of the same image for batch processing or augmentation purposes.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the image to be duplicated. It is crucial for determining the content of the output batch. Type should be `IMAGE`.
+        - `amount` (Required): The 'amount' parameter specifies the number of times the input image should be repeated. It directly influences the size of the output batch. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a batch of images, each identical to the input image, repeated the specified number of times. Type should be `IMAGE`.

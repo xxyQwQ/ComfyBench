@@ -1,7 +1,0 @@
-- `ReActorImageDublicator`: The ReActorImageDublicator node is designed to create duplicates of images, potentially in a list format, as part of the ReActor suite. This functionality is essential for operations that require multiple instances of the same image for processing or analysis, enhancing the workflow within image manipulation and augmentation tasks.
-    - Parameters:
-        - `count`: Determines the number of duplicates to be created from the original image. Type should be `INT`.
-    - Inputs:
-        - `image`: Specifies the original image to be duplicated. Type should be `IMAGE`.
-    - Outputs:
-        - `IMAGES`: Returns a list of duplicated images based on the specified count. Type should be `IMAGE`.

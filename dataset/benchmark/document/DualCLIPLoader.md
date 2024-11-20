@@ -1,0 +1,7 @@
+- `DualCLIPLoader`: The DualCLIPLoader node is designed for loading two CLIP models simultaneously, based on their names and a specified type. It supports loading models for different versions of the Stable Diffusion architecture, enhancing flexibility in model usage for various applications.
+    - Inputs:
+        - `clip_name1` (Required): Specifies the name of the first CLIP model to load. The choice of model affects the outcome and capabilities of the loaded model. Type should be `COMBO[STRING]`.
+        - `clip_name2` (Required): Specifies the name of the second CLIP model to load, allowing for dual model loading to accommodate complex or comparative tasks. Type should be `COMBO[STRING]`.
+        - `type` (Required): Determines the type of CLIP models to load, supporting either 'sdxl' or 'sd3' versions, which influences the model's functionality and compatibility. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `clip`: Returns a combined CLIP model object, integrating the functionalities of the two specified CLIP models. Type should be `CLIP`.

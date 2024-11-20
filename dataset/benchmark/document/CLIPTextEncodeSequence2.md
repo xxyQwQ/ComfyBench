@@ -1,0 +1,12 @@
+- `CLIPTextEncodeSequence2`: This node is designed to encode text inputs into a sequence of conditionings suitable for guiding generative models. It processes each line of the input text, optionally using an advanced encoding method if available, and organizes the encoded data into a structured sequence that can be utilized for conditional generation tasks.
+    - Inputs:
+        - `clip` (Required): The CLIP model used for encoding the text. It plays a crucial role in transforming textual descriptions into a format that can be understood by generative models. Type should be `CLIP`.
+        - `token_normalization` (Required): Determines whether or not to normalize tokens during encoding, impacting the consistency and quality of the generated output. Type should be `COMBO[STRING]`.
+        - `weight_interpretation` (Required): Controls how the weights are interpreted during the encoding process, potentially altering the emphasis on different aspects of the input text. Type should be `COMBO[STRING]`.
+        - `cond_keyframes_type` (Required): Specifies the type of keyframe conditioning to apply, influencing how the encoded text is structured into a sequence for generation. Type should be `COMBO[STRING]`.
+        - `frame_count` (Required): The total number of frames to generate, affecting the distribution of conditionings across the sequence. Type should be `INT`.
+        - `text` (Required): The input text to be encoded. It is processed line by line, with each line potentially representing a separate conditioning for the generative model. Type should be `STRING`.
+    - Outputs:
+        - `conditioning_sequence`: The sequence of encoded conditionings derived from the input text, ready for use in guiding generative models. Type should be `CONDITIONING`.
+        - `cond_keyframes`: The calculated keyframe conditionings based on the input parameters, providing a structured approach to sequence generation. Type should be `INT`.
+        - `frame_count`: The total number of frames that will be generated, reflecting the input parameter. Type should be `INT`.

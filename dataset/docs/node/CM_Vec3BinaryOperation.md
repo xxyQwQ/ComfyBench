@@ -1,8 +1,0 @@
-- `CM_Vec3BinaryOperation`: Performs binary operations on two 3-dimensional vectors, resulting in a new 3-dimensional vector. This node abstracts complex vector arithmetic into simple, high-level operations.
-    - Parameters:
-        - `op`: Specifies the binary operation to perform on the vectors, such as addition or subtraction, influencing the result of the operation. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `a`: The first 3-dimensional vector operand in the binary operation. Type should be `VEC3`.
-        - `b`: The second 3-dimensional vector operand in the binary operation. Type should be `VEC3`.
-    - Outputs:
-        - `vec3`: The resulting 3-dimensional vector after performing the specified binary operation on the input vectors. Type should be `VEC3`.

@@ -1,0 +1,8 @@
+- `SegmDetectorCombined_v2`: The SegmDetectorCombined_v2 node is designed for image segmentation tasks, combining detection and segmentation processes to output a mask representing the segmented areas of the input image. It abstracts the complexity of underlying segmentation models and detection algorithms, providing a streamlined interface for generating segmentation masks.
+    - Inputs:
+        - `segm_detector` (Required): The segmentation detector model used for detecting and segmenting objects within the image. It plays a crucial role in the overall segmentation process. Type should be `SEGM_DETECTOR`.
+        - `image` (Required): The input image to be processed for segmentation. The image is analyzed to identify and segment relevant objects or areas. Type should be `IMAGE`.
+        - `threshold` (Required): A threshold value used to determine the sensitivity of the segmentation detection. It influences the segmentation outcome by filtering out detections below this threshold. Type should be `FLOAT`.
+        - `dilation` (Required): Specifies the dilation level applied to the segmentation masks, affecting the mask's boundary smoothness and size. Type should be `INT`.
+    - Outputs:
+        - `mask`: The output segmentation mask, indicating the segmented areas of the input image. Type should be `MASK`.

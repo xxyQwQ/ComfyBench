@@ -1,0 +1,11 @@
+- `LayerUtility_ NumberCalculatorV2`: The NumberCalculatorV2 node is designed to perform a variety of arithmetic operations between two numbers, including basic arithmetic, exponentiation, and nth root calculations. It extends the functionality of basic arithmetic by allowing inputs as strings and parsing them for numerical values, providing a flexible interface for dynamic calculation scenarios.
+    - Inputs:
+        - `a_value` (Required): A string representing the first number or a numeric expression. If 'a' is not provided, 'a_value' is parsed to extract the first number for the operation, enhancing flexibility in handling numeric inputs. Type should be `STRING`.
+        - `b_value` (Required): A string representing the second number or a numeric expression. Similar to 'a_value', if 'b' is not provided, 'b_value' is parsed to extract the first number, allowing for dynamic numeric operations based on string inputs. Type should be `STRING`.
+        - `operator` (Required): Specifies the arithmetic operation to perform on the numbers. It supports a range of operators including basic arithmetic and nth root, enabling complex mathematical calculations. Type should be `COMBO[STRING]`.
+        - `a` (Optional): An optional numeric input that directly specifies the first operand. If provided, it overrides the number extracted from 'a_value', offering direct control over the calculation. Type should be `*`.
+        - `b` (Optional): An optional numeric input that directly specifies the second operand. If provided, it overrides the number extracted from 'b_value', giving direct input capability for the operation. Type should be `*`.
+    - Outputs:
+        - `int`: The integer part of the calculation result, providing a discrete numerical outcome. Type should be `INT`.
+        - `float`: The floating-point part of the calculation result, offering a precise numerical outcome. Type should be `FLOAT`.
+        - `string`: The string representation of the calculation result, enabling easy integration and display in various contexts. Type should be `STRING`.

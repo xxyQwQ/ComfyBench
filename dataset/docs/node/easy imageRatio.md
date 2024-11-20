@@ -1,9 +1,0 @@
-- `easy imageRatio`: The `easy imageRatio` node calculates the simplified width and height ratios of an image, providing both integer and floating-point representations. This functionality is essential for understanding the aspect ratio of images in a more digestible form, which can be particularly useful for resizing, scaling, or any form of image manipulation where maintaining aspect ratio is crucial.
-    - Parameters:
-    - Inputs:
-        - `image`: The input image for which the width and height ratios are to be calculated. This image's dimensions are used to compute the greatest common divisor (GCD) and subsequently the simplified width and height ratios. Type should be `IMAGE`.
-    - Outputs:
-        - `width_ratio_int`: The simplified width ratio of the image as an integer. Type should be `INT`.
-        - `height_ratio_int`: The simplified height ratio of the image as an integer. Type should be `INT`.
-        - `width_ratio_float`: The simplified width ratio of the image as a floating-point number, identical to the integer ratio in this context. Type should be `FLOAT`.
-        - `height_ratio_float`: The simplified height ratio of the image as a floating-point number, identical to the integer ratio in this context. Type should be `FLOAT`.

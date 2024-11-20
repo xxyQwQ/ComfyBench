@@ -1,0 +1,6 @@
+- `SaltJSONValuesToList`: This node is designed to extract the values from a JSON object and provide them in two formats: as a list and as a string with each value separated by a newline. It ensures that the input JSON is properly formatted and is a dictionary before proceeding with the extraction.
+    - Inputs:
+        - `json_input` (Required): The JSON string input from which values are to be extracted. It must be a well-formed JSON dictionary. This input is crucial for the node's operation as it determines the source of the values to be processed. Type should be `STRING`.
+    - Outputs:
+        - `values`: A list of values extracted from the input JSON dictionary. Type should be `LIST`.
+        - `values_list`: A string representation of the values extracted from the input JSON, separated by newlines. Type should be `STRING`.

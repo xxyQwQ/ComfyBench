@@ -1,6 +1,0 @@
-- `PreviewLatentXL`: The PreviewLatentXL node specializes in generating previews of latent representations using the SDXL base model. It enhances the visualization of latent spaces by automatically determining the optimal preview method and incorporating additional information such as prompts and unique identifiers.
-    - Parameters:
-    - Inputs:
-        - `latent`: The latent representation to be visualized. This is the core input for generating previews. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The modified latent representation, potentially adjusted during the preview generation process. Type should be `LATENT`.

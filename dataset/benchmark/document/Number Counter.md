@@ -1,0 +1,12 @@
+- `Number Counter`: The node is designed to perform various numerical operations such as incrementing, decrementing, and adjusting numbers within specified ranges, based on a unique identifier and mode of operation. It abstracts the complexity of numerical manipulations, providing a flexible tool for numerical adjustments in sequences or cycles.
+    - Inputs:
+        - `number_type` (Required): Specifies the type of number to be manipulated, either as an integer or a float, affecting the precision and nature of the operation. Type should be `COMBO[STRING]`.
+        - `mode` (Required): Determines the operation to be performed on the number, such as incrementing, decrementing, or adjusting to a stop value, defining the behavior of the numerical adjustment. Type should be `COMBO[STRING]`.
+        - `start` (Required): The starting value for the operation, serving as the base number from which adjustments are made. Type should be `FLOAT`.
+        - `stop` (Required): The target value for operations that adjust to a stop, setting a limit for the adjustment. Type should be `FLOAT`.
+        - `step` (Required): The increment or decrement step size, dictating the magnitude of each adjustment. Type should be `FLOAT`.
+        - `reset_bool` (Optional): A flag to reset the counter to the start value, enabling reinitialization of the operation. Type should be `NUMBER`.
+    - Outputs:
+        - `number`: The resulting number after the operation, reflecting the adjustment made. Type should be `NUMBER`.
+        - `float`: The resulting number in float format after the operation. Type should be `FLOAT`.
+        - `int`: The resulting number in integer format after the operation. Type should be `INT`.

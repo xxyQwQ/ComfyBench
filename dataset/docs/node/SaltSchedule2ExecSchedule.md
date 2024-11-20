@@ -1,6 +1,0 @@
-- `SaltSchedule2ExecSchedule`: This node is designed to transform a list into an iterative execution list, facilitating the conversion of scheduling data into a format suitable for sequential processing.
-    - Parameters:
-    - Inputs:
-        - `list_input`: Represents the input list to be converted into an iterative execution list, serving as the primary data structure for transformation. Type should be `LIST`.
-    - Outputs:
-        - `float`: Outputs a list of floats derived from the input list, indicating the transformed scheduling data. Type should be `FLOAT`.

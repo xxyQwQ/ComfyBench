@@ -1,0 +1,5 @@
+- `VHS_BatchManager`: The BatchManager node is designed to manage and orchestrate the processing of video data in batches. It facilitates the efficient handling of large video datasets by breaking them down into smaller, manageable batches for processing, thereby optimizing resource utilization and improving performance.
+    - Inputs:
+        - `frames_per_batch` (Required): Specifies the number of frames to be processed in each batch. This parameter is essential for controlling the batch size and thus directly influences the processing efficiency and resource allocation. Type should be `INT`.
+    - Outputs:
+        - `meta_batch`: Returns the updated meta information about the batch after processing, which includes details such as the current state and any data associated with the batch. Type should be `VHS_BatchManager`.

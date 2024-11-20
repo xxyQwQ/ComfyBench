@@ -1,0 +1,6 @@
+- `SaveImageOpenEXR`: This node specializes in saving images in the OpenEXR format, catering to the need for high dynamic range (HDR) imaging. It ensures that images are saved with enhanced luminance levels, accommodating a broader spectrum of light and color details. The node is designed to adapt to the system's available resources, ensuring that images are preserved in the desired format with high fidelity.
+    - Inputs:
+        - `images` (Required): The images to be saved, expected to be in a NumPy array format. This input is crucial as it directly represents the data that will be processed and saved in the EXR format. Type should be `IMAGE`.
+        - `filename_prefix` (Required): A prefix for the filename under which the image will be saved. This allows for customizable naming of output files, facilitating better organization and retrieval of saved images. Type should be `STRING`.
+    - Outputs:
+        - `file_url`: The URL or path to the saved EXR file. This output provides a direct link to the saved image, enabling easy access and integration into further processing or storage solutions. Type should be `STRING`.

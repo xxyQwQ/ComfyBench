@@ -1,0 +1,7 @@
+- `SeargeDebugPrinter`: The SeargeDebugPrinter node is designed for debugging purposes within the ComfyUI SDXL environment, providing a mechanism to print and inspect the state of data streams. It allows for conditional output based on an enabled flag, and formats the data with optional prefixes for improved readability and organization.
+    - Inputs:
+        - `enabled` (Required): Determines whether the debug output is enabled, allowing for conditional printing based on this flag. Type should be `BOOLEAN`.
+        - `data` (Optional): The data stream to be printed. It supports various data types and structures, enabling detailed inspection of the content. Type should be `SRG_DATA_STREAM`.
+        - `prefix` (Optional): An optional prefix to prepend to each line of the debug output, enhancing the clarity and context of the printed information. Type should be `STRING`.
+    - Outputs:
+        - `data`: Returns the original data stream, allowing for further processing or inspection after debugging. Type should be `SRG_DATA_STREAM`.

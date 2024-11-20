@@ -1,0 +1,10 @@
+- `CR Set Switch From String`: This node dynamically sets a switch based on a string input, allowing for conditional logic flows within a node network. It supports up to four predefined string conditions to determine the switch's state.
+    - Inputs:
+        - `text` (Required): The primary string input used to determine the switch's state. It's essential for executing the node's logic and determining the output. Type should be `STRING`.
+        - `switch_1` (Optional): A predefined condition string. If it matches the 'text' input, the switch is set to 1. Type should be `STRING`.
+        - `switch_2` (Optional): A predefined condition string. If it matches the 'text' input, the switch is set to 2. Type should be `STRING`.
+        - `switch_3` (Optional): A predefined condition string. If it matches the 'text' input, the switch is set to 3. Type should be `STRING`.
+        - `switch_4` (Optional): A predefined condition string. If it matches the 'text' input, the switch is set to 4. Type should be `STRING`.
+    - Outputs:
+        - `switch`: The output switch state determined by the input string, indicating which condition was met. Type should be `INT`.
+        - `show_help`: A URL providing additional help and documentation for using this node. Type should be `STRING`.

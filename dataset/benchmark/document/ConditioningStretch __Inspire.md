@@ -1,0 +1,9 @@
+- `ConditioningStretch __Inspire`: The ConditioningStretch node is designed to modify the dimensions of conditioning areas within a given set of conditionings, adjusting them to new specified widths and heights. This node plays a crucial role in adapting conditionings to fit different resolutions or aspect ratios, ensuring that the conditioning effects are appropriately scaled and positioned.
+    - Inputs:
+        - `conditioning` (Required): The 'conditioning' input specifies the set of conditionings to be stretched. It is essential for determining the base conditionings that will undergo dimensional adjustments. Type should be `CONDITIONING`.
+        - `resolutionX` (Required): Specifies the original width of the image or area to which the conditioning was applied. It's crucial for calculating the stretch ratio. Type should be `INT`.
+        - `resolutionY` (Required): Specifies the original height of the image or area to which the conditioning was applied, essential for calculating the stretch ratio. Type should be `INT`.
+        - `newWidth` (Required): The target width to stretch the conditioning areas to. It defines how much the original conditioning areas will be horizontally expanded or contracted. Type should be `INT`.
+        - `newHeight` (Required): The target height to stretch the conditioning areas to. It defines how much the original conditioning areas will be vertically expanded or contracted. Type should be `INT`.
+    - Outputs:
+        - `conditioning`: Returns the set of conditionings with their areas adjusted to the new specified dimensions, ensuring they are appropriately scaled and positioned. Type should be `CONDITIONING`.

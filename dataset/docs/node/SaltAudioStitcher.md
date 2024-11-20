@@ -1,8 +1,0 @@
-- `SaltAudioStitcher`: The SaltAudioStitcher node is designed for stitching together two audio files with an optional silent transition between them. It enables the creation of a seamless audio experience by combining multiple audio segments.
-    - Parameters:
-        - `silent_transition_seconds`: The duration of silence in seconds to insert between the two audio files. This allows for a smooth transition or pause between the audio segments. Type should be `FLOAT`.
-    - Inputs:
-        - `audio_a`: The first audio file to be stitched. It serves as the starting point of the stitched audio output. Type should be `AUDIO`.
-        - `audio_b`: The second audio file to be stitched. It follows the first audio file in the stitched audio output. Type should be `AUDIO`.
-    - Outputs:
-        - `stitched_audio`: The resulting audio file after stitching the input audio files together, potentially with a silent transition in between. Type should be `AUDIO`.

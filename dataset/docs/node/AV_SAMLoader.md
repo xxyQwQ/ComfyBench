@@ -1,6 +1,0 @@
-- `AV_SAMLoader`: The AV_SAMLoader node is designed for loading SAM (Segmentation-Aware Models) specifically tailored for Art Venture's segmentation tasks. It facilitates the dynamic loading of SAM models based on the model name, ensuring that the appropriate segmentation model is utilized for image processing tasks.
-    - Parameters:
-        - `model_name`: Specifies the name of the SAM model to be loaded. This parameter is crucial for identifying and loading the correct model for segmentation tasks. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `sam_model`: Returns the loaded SAM model, ready for segmentation tasks. Type should be `AV_SAM_MODEL`.

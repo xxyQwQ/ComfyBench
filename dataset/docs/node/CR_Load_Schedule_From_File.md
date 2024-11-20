@@ -1,9 +1,0 @@
-- `CR Load Schedule From File`: This node is designed to load animation schedules from a specified file, enabling the dynamic control of animation parameters over time. It facilitates the integration of pre-defined animation timelines into the animation workflow, streamlining the process of applying complex animation schedules.
-    - Parameters:
-        - `input_file_path`: Specifies the directory path where the schedule file is located. This path is crucial for locating and loading the correct file. Type should be `STRING`.
-        - `file_name`: The name of the file to be loaded. This name, combined with the file extension, is used to identify and access the specific schedule file. Type should be `STRING`.
-        - `file_extension`: Defines the file format (e.g., 'txt', 'csv') of the schedule file. This information is essential for correctly parsing the file's content. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `SCHEDULE`: The loaded schedule, represented as a structured format suitable for further processing and application within the animation workflow. Type should be `SCHEDULE`.
-        - `show_text`: Provides a textual representation of the loaded schedule, useful for debugging or informational purposes. Type should be `STRING`.

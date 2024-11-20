@@ -1,7 +1,0 @@
-- `AV_OpenAIApi`: The AV_OpenAIApi node is designed to facilitate interaction with OpenAI's API, enabling the creation and management of API calls for various language model tasks. It abstracts the complexity of direct API communication, providing a streamlined interface for accessing OpenAI's language models.
-    - Parameters:
-        - `openai_api_key`: The OpenAI API key is essential for authenticating requests to OpenAI's services, allowing the node to perform API calls. Type should be `STRING`.
-        - `endpoint`: The API endpoint URL specifies the base address for OpenAI's API calls, with a default value pointing to OpenAI's standard API endpoint. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `llm_api`: Returns an instance configured for interacting with OpenAI's API, encapsulating the necessary details for making language model requests. Type should be `LLM_API`.

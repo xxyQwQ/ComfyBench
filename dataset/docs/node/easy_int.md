@@ -1,6 +1,0 @@
-- `easy int`: The `easy int` node is designed to simplify the process of handling integer values within the ComfyUI framework. It abstracts the complexities involved in integer operations, providing a straightforward interface for users to work with integer data.
-    - Parameters:
-        - `value`: Represents an integer value that the node processes. This parameter is crucial for the node's operation as it directly influences the outcome of the integer manipulation. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `int`: The output is an integer value, resulting from the node's processing of the input integer. Type should be `INT`.

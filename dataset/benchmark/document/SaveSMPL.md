@@ -1,0 +1,5 @@
+- `SaveSMPL`: The SaveSMPL node is designed for saving SMPL model data, including thetas and metadata, to a specified output directory. It supports appending a custom prefix to the filename and saving the data in a structured format for further use or analysis.
+    - Inputs:
+        - `smpl` (Required): The SMPL model data to be saved, including thetas and metadata, which are crucial for reconstructing the 3D model. Type should be `SMPL`.
+        - `filename_prefix` (Required): A prefix for the filename to help organize and identify the saved SMPL model data files easily. Type should be `STRING`.
+    - Outputs:

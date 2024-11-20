@@ -1,0 +1,10 @@
+- `IFRNet VFI`: The IFRNet VFI node specializes in video frame interpolation, utilizing deep learning models to predict and generate intermediate frames between existing frames in a video sequence. This process enhances video smoothness and can be used to increase the frame rate of videos.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the checkpoint name for the model to be loaded, determining the specific pre-trained weights to use for frame interpolation. Type should be `COMBO[STRING]`.
+        - `frames` (Required): A tensor containing the sequence of frames to be interpolated. This is the primary input on which the interpolation process is applied. Type should be `IMAGE`.
+        - `clear_cache_after_n_frames` (Required): Controls the cache clearing mechanism to manage memory usage during the interpolation process, by specifying after how many frames the cache should be cleared. Type should be `INT`.
+        - `multiplier` (Required): Determines the number of intermediate frames to be generated between each pair of original frames, effectively controlling the output video's frame rate. Type should be `INT`.
+        - `scale_factor` (Required): A scaling factor for adjusting the resolution of the interpolated frames relative to the original frames. Type should be `COMBO[FLOAT]`.
+        - `optional_interpolation_states` (Optional): Optional states that can be used to influence the interpolation process, allowing for customization and optimization based on specific requirements. Type should be `INTERPOLATION_STATES`.
+    - Outputs:
+        - `image`: The output tensor containing the interpolated frames, enhancing the smoothness and frame rate of the input video sequence. Type should be `IMAGE`.

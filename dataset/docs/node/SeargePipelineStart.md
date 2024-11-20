@@ -1,8 +1,0 @@
-- `SeargePipelineStart`: This node initiates the pipeline for data processing, setting up the initial conditions and configurations necessary for the workflow to proceed. It prepares the data stream by merging any additional data provided, configures pipeline settings based on the workflow version, and updates the pipeline with hidden and version-specific information.
-    - Parameters:
-        - `wf_version`: Specifies the version of the workflow to be used, determining the configuration and behavior of the pipeline. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `data`: The primary data stream to be processed by the pipeline. This data can be augmented with additional data if provided. Type should be `SRG_DATA_STREAM`.
-        - `additional_data`: Optional data that can be merged with the primary data stream for enhanced processing capabilities. Type should be `SRG_DATA_STREAM`.
-    - Outputs:
-        - `data`: The processed data stream, ready for further stages in the pipeline. Type should be `SRG_DATA_STREAM`.

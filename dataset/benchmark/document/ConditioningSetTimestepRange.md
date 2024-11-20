@@ -1,0 +1,7 @@
+- `ConditioningSetTimestepRange`: This node is designed to adjust the temporal aspect of conditioning data by setting a specific range of timesteps. It allows for the precise control over the period during which the conditioning is applied, enhancing the flexibility and specificity of the conditioning process.
+    - Inputs:
+        - `conditioning` (Required): The conditioning data to be modified. It serves as the base upon which the timestep range adjustments are applied, directly influencing the outcome of the conditioning process. Type should be `CONDITIONING`.
+        - `start` (Required): Specifies the starting point of the timestep range as a percentage. This parameter determines the beginning of the conditioning effect within the specified range, allowing for fine-tuned control over the application timing. Type should be `FLOAT`.
+        - `end` (Required): Defines the ending point of the timestep range as a percentage. This parameter sets the limit for the conditioning effect, enabling precise demarcation of the conditioning period. Type should be `FLOAT`.
+    - Outputs:
+        - `conditioning`: The modified conditioning data with the specified timestep range applied. This output reflects the adjustments made to the temporal aspects of the conditioning, tailored to the specified start and end points. Type should be `CONDITIONING`.

@@ -1,0 +1,9 @@
+- `Image Blank`: The WAS_Image_Blank node generates a blank image with specified dimensions and color. It allows for the creation of a simple, solid-colored image by defining its width, height, and RGB color values.
+    - Inputs:
+        - `width` (Required): Specifies the width of the generated image. Type should be `INT`.
+        - `height` (Required): Specifies the height of the generated image. Type should be `INT`.
+        - `red` (Required): Determines the red component of the image's color, allowing for customization of the image's appearance. Type should be `INT`.
+        - `green` (Required): Determines the green component of the image's color, contributing to the customization of the image's overall color. Type should be `INT`.
+        - `blue` (Required): Determines the blue component of the image's color, finalizing the customization of the image's color. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a blank image with the specified dimensions and color. Type should be `IMAGE`.

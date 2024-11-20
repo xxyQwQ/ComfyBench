@@ -1,0 +1,18 @@
+- `ImpactSimpleDetectorSEGS_for_AD`: This node is designed to perform complex detection tasks tailored for AnimateDiff (AD) applications within the SEGS framework, utilizing a combination of bounding box and segmentation models to process elements in image sequences. It supports a variety of configurations to optimize detection for animated content creation or manipulation, by identifying key visual components across frames.
+    - Inputs:
+        - `bbox_detector` (Required): Specifies the bounding box detector model used for initial detection steps, crucial for identifying preliminary regions of interest in the image frames. Type should be `BBOX_DETECTOR`.
+        - `image_frames` (Required): A sequence of images on which detection is performed. These frames serve as the primary data source for the detection algorithm, enabling temporal analysis across frames. Type should be `IMAGE`.
+        - `bbox_threshold` (Required): A threshold value for bounding box model predictions, controlling the sensitivity of detection. It influences the initial filtering of detected regions. Type should be `FLOAT`.
+        - `bbox_dilation` (Required): Specifies the dilation amount for the bounding boxes detected, allowing for adjustments in the boundaries to better capture the relevant segments. Type should be `INT`.
+        - `crop_factor` (Required): Determines the factor by which the detected bounding boxes are expanded or contracted, affecting the final cropping of segments. Type should be `FLOAT`.
+        - `drop_size` (Required): The minimum size of detected segments to be considered, helping to eliminate noise by disregarding overly small detections. Type should be `INT`.
+        - `sub_threshold` (Required): A threshold value for sub-segmentation within the initially detected bounding boxes, refining the detection process. Type should be `FLOAT`.
+        - `sub_dilation` (Required): Specifies the dilation amount for the sub-segmentation masks, fine-tuning the segmentation boundaries within each bounding box. Type should be `INT`.
+        - `sub_bbox_expansion` (Required): Determines the expansion size for bounding boxes during the sub-segmentation process, allowing for more inclusive segment capture. Type should be `INT`.
+        - `sam_mask_hint_threshold` (Required): A threshold value that influences the selection of segments for SAM (Segmentation-Aided Masking) model hints, guiding the model towards more relevant areas. Type should be `FLOAT`.
+        - `masking_mode` (Optional): Defines the strategy for combining detected segments across frames, affecting how animations are constructed from the detected elements. Type should be `COMBO[STRING]`.
+        - `segs_pivot` (Optional): Specifies the reference frame or mask used for segment alignment and combination, pivotal in determining the base for further processing. Type should be `COMBO[STRING]`.
+        - `sam_model_opt` (Optional): An optional parameter that specifies the SAM model to be used for enhanced segmentation, offering additional control over the detection quality. Type should be `SAM_MODEL`.
+        - `segm_detector_opt` (Optional): An optional parameter that specifies the segmentation detector model for refined detection, complementing the bounding box detection step. Type should be `SEGM_DETECTOR`.
+    - Outputs:
+        - `segs`: The output consists of segmented elements across the image frames, identified and processed based on the specified models and parameters. These segments are essential for the creation or manipulation of animated content in AnimateDiff applications. Type should be `SEGS`.

@@ -1,0 +1,10 @@
+- `MorphologicOperation`: This node provides a comprehensive suite of morphological operations for image processing, including erode, dilate, open, close, gradient, top hat, and bottom hat transformations. It allows for the manipulation of the structure of images using different kernel shapes and sizes, enabling a wide range of effects from refining image features to extracting structural elements.
+    - Inputs:
+        - `src` (Required): The source image to be processed. It serves as the primary input for applying morphological operations. Type should be `IMAGE`.
+        - `operation` (Required): Specifies the morphological operation to be applied to the source image. This determines the type of structural manipulation performed. Type should be `COMBO[STRING]`.
+        - `kernel_type` (Required): Defines the shape of the kernel used in the morphological operation, influencing the effect on the image's structure. Type should be `COMBO[STRING]`.
+        - `kernel_size_x` (Required): The horizontal size of the kernel. It affects the area of the image influenced by the operation. Type should be `INT`.
+        - `kernel_size_y` (Required): The vertical size of the kernel. It affects the area of the image influenced by the operation. Type should be `INT`.
+        - `iterations` (Required): The number of times the morphological operation is applied. Increasing this value intensifies the effect. Type should be `INT`.
+    - Outputs:
+        - `image`: The result of applying the specified morphological operation to the source image, potentially altering its structure. Type should be `IMAGE`.

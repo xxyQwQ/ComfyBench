@@ -1,0 +1,7 @@
+- `Pick From Batch (mtb)`: The MTB_PickFromBatch node allows for the selection of a specific number of images from a batch, based on a specified direction (either from the start or the end of the batch). This functionality is useful for operations that require a subset of images from a larger collection, enabling targeted manipulation or analysis.
+    - Inputs:
+        - `image` (Required): The batch of images from which a subset will be selected. This parameter is crucial as it determines the pool of available images for selection. Type should be `IMAGE`.
+        - `from_direction` (Required): Specifies the direction from which images are selected within the batch, either from the 'end' or the 'start'. This affects the subset of images chosen for output. Type should be `COMBO[STRING]`.
+        - `count` (Required): The number of images to select from the batch. This determines the size of the output subset. Type should be `INT`.
+    - Outputs:
+        - `image`: The selected subset of images from the batch, based on the specified count and direction. Type should be `IMAGE`.

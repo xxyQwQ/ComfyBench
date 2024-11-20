@@ -1,8 +1,0 @@
-- `ChangeImageBatchSize __Inspire`: The ChangeImageBatchSize node is designed to adjust the batch size of an image tensor to a specified size, using a simple mode to either expand or trim the batch based on the desired count. This functionality is crucial for ensuring that image data is correctly formatted for batch processing in various image manipulation and generation tasks.
-    - Parameters:
-        - `batch_size`: Specifies the target batch size for the image tensor, determining how the tensor will be resized. Type should be `INT`.
-        - `mode`: Defines the resizing mode, currently supporting a 'simple' method for expanding or trimming the tensor. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The image tensor to be resized. It's essential for batch processing where the batch size needs adjustment to meet specific requirements. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The resized image tensor with the adjusted batch size. Type should be `IMAGE`.

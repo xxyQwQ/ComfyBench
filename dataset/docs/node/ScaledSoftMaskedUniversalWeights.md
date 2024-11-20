@@ -1,9 +1,0 @@
-- `ScaledSoftMaskedUniversalWeights`: This node specializes in dynamically adjusting the weights of a control network based on a provided mask and specified minimum and maximum base multipliers. It aims to normalize and scale the control network's influence, ensuring that the weights are appropriately adjusted to enhance the model's performance under varying conditions.
-    - Parameters:
-        - `min_base_multiplier`: Specifies the minimum scaling factor for the weights, serving as a lower bound in the normalization process. It ensures that the weights do not fall below a certain threshold, maintaining a baseline level of influence. Type should be `FLOAT`.
-        - `max_base_multiplier`: Defines the maximum scaling factor for the weights, acting as an upper limit in the normalization process. This parameter ensures that the weights do not exceed a certain level, preventing overly dominant influences. Type should be `FLOAT`.
-    - Inputs:
-        - `mask`: The mask parameter is crucial for determining the areas of influence within the control network. It directly affects how weights are normalized and scaled, playing a pivotal role in the dynamic adjustment of the network's weights. Type should be `MASK`.
-    - Outputs:
-        - `CN_WEIGHTS`: Represents the adjusted control network weights after applying the mask and scaling factors. Type should be `CONTROL_NET_WEIGHTS`.
-        - `TK_SHORTCUT`: Encapsulates the timestep keyframe information, including the adjusted control weights, facilitating their integration into the model's processing flow. Type should be `TIMESTEP_KEYFRAME`.

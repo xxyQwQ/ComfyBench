@@ -1,7 +1,0 @@
-- `FromListGet1Float`: The `FromListGet1Float` node is designed to retrieve a single float value from a list based on a specified index. It allows for random access within the list, including the use of negative indices to access elements in reverse order, thereby enhancing flexibility in data manipulation.
-    - Parameters:
-        - `list`: The list from which a float value is to be retrieved. This parameter is essential for specifying the source list. Type should be `FLOAT`.
-        - `index`: The index at which the float value is to be retrieved from the list. Supports negative indexing for reverse access. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The float value retrieved from the specified index in the list. Type should be `FLOAT`.

@@ -1,0 +1,6 @@
+- `SaltAppendStringList`: The SaltAppendStringList node is designed to extend a list of strings by appending a new string to it. This functionality is essential for dynamically growing lists in applications that require concatenation or accumulation of string data.
+    - Inputs:
+        - `string_list` (Required): The list of strings to which a new string will be appended. It serves as the base list that will be modified by adding another string to its end. Type should be `LIST`.
+        - `string_input` (Required): The string to be appended to the list. This parameter represents the new data being added to the existing list of strings. Type should be `STRING`.
+    - Outputs:
+        - `updated_list`: The list of strings after the specified string has been appended to it. This reflects the updated state of the list, showcasing the addition of new string data. Type should be `LIST`.

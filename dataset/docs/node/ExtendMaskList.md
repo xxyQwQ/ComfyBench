@@ -1,6 +1,0 @@
-- `ExtendMaskList`: The ExtendMaskList node is designed to extend a list of masks, allowing for the aggregation of multiple mask elements into a single, comprehensive list. This functionality is crucial for operations that require the manipulation or analysis of multiple masks simultaneously, providing a streamlined approach to handling mask data in bulk.
-    - Parameters:
-        - `inputs_len`: The 'inputs_len' parameter represents the collection of mask elements to be extended. It plays a pivotal role in the node's operation by serving as the primary data input, which the node then processes to produce an extended list of masks. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `mask`: The output is an extended list of mask elements, consolidated into a single entity for ease of further processing or analysis. Type should be `MASK`.

@@ -1,6 +1,0 @@
-- `FaceRestoreModelLoader`: The FaceRestoreModelLoader node is designed to load and manage face restoration models, facilitating the initialization and configuration of models required for face restoration tasks. It acts as a central hub for accessing different face restoration and detection models, streamlining the process of model selection and loading for subsequent face restoration operations.
-    - Parameters:
-        - `model_name`: Specifies the name of the face restoration model to be loaded. This parameter is crucial for identifying and retrieving the correct model from a predefined list of available models. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `facerestore_model`: Returns the loaded face restoration model, ready for use in face restoration tasks. Type should be `FACERESTORE_MODEL`.

@@ -1,5 +1,0 @@
-- `DebugTensorShape+`: The DebugTensorShape+ node is designed to assist in debugging by printing the shapes of tensors within a given structure, such as lists, dictionaries, or tensors themselves. This functionality aids in understanding the dimensions and structure of data flowing through a model or computation graph.
-    - Parameters:
-    - Inputs:
-        - `tensor`: The 'tensor' parameter can be a tensor, list, or dictionary containing tensors. It is crucial for determining the structure and dimensions of the data to be debugged, impacting the node's execution by dictating which shapes are printed. Type should be `*`.
-    - Outputs:

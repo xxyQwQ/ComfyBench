@@ -1,7 +1,0 @@
-- `CLIPVisionEncode`: The CLIPVisionEncode node is designed to encode images using a CLIP vision model, transforming visual input into a format suitable for further processing or analysis. This node abstracts the complexity of image encoding, offering a streamlined interface for converting images into encoded representations.
-    - Parameters:
-    - Inputs:
-        - `clip_vision`: The CLIP vision model used for encoding the image. It is crucial for the encoding process, as it determines the method and quality of the encoding. Type should be `CLIP_VISION`.
-        - `image`: The image to be encoded. This input is essential for generating the encoded representation of the visual content. Type should be `IMAGE`.
-    - Outputs:
-        - `clip_vision_output`: The encoded representation of the input image, produced by the CLIP vision model. This output is suitable for further processing or analysis. Type should be `CLIP_VISION_OUTPUT`.

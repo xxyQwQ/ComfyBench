@@ -1,0 +1,14 @@
+- `SAMDetectorSegmented`: The SAMDetectorSegmented node is designed for generating segmented masks based on the SAM model. It processes an image along with segmentation hints and other parameters to produce a detailed mask that highlights specific areas of interest within the image.
+    - Inputs:
+        - `sam_model` (Required): The SAM model used for generating the mask. It plays a crucial role in determining the areas of interest within the image based on the provided segmentation hints. Type should be `SAM_MODEL`.
+        - `segs` (Required): Segmentation details that guide the mask generation process, enhancing the precision of the areas to be highlighted. Type should be `SEGS`.
+        - `image` (Required): The input image to be processed. It serves as the base for mask generation, with the SAM model and segmentation hints refining the output. Type should be `IMAGE`.
+        - `detection_hint` (Required): Hints that guide the detection process, allowing for more focused and accurate mask generation. Type should be `COMBO[STRING]`.
+        - `dilation` (Required): The dilation parameter adjusts the thickness of the mask's edges, allowing for finer control over the mask's boundary. Type should be `INT`.
+        - `threshold` (Required): A threshold value that determines the sensitivity of mask generation, influencing the areas that will be highlighted. Type should be `FLOAT`.
+        - `bbox_expansion` (Required): Controls the expansion of bounding boxes, which can affect the overall size and coverage of the generated mask. Type should be `INT`.
+        - `mask_hint_threshold` (Required): Sets the threshold for mask hints, influencing how hints are interpreted and applied during mask generation. Type should be `FLOAT`.
+        - `mask_hint_use_negative` (Required): Determines whether negative hints are used, affecting the exclusion of certain areas from the mask. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `combined_mask`: The combined mask output represents the aggregated result of the segmented mask generation, highlighting areas of interest across the entire image. Type should be `MASK`.
+        - `batch_masks`: The batch masks output provides individual segmented masks for each segment processed, offering detailed insights into specific areas of interest. Type should be `MASK`.

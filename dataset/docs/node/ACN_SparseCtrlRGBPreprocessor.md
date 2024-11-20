@@ -1,8 +1,0 @@
-- `ACN_SparseCtrlRGBPreprocessor`: The ACN_SparseCtrlRGBPreprocessor node is designed for preprocessing images for use with RGB Sparse ControlNet models. It adjusts the input image to match the latent size required by the model, encodes the image into a latent representation, and wraps this representation in a format that is specifically tailored for subsequent processing by Advanced ControlNet nodes. This preprocessing step is crucial for ensuring that the input images are compatible with the unique requirements of RGB Sparse ControlNet models.
-    - Parameters:
-    - Inputs:
-        - `image`: The input image to be preprocessed. This image is resized and encoded into a latent representation suitable for RGB Sparse ControlNet models. Type should be `IMAGE`.
-        - `vae`: The variational autoencoder (VAE) used for encoding the input image into a latent representation. Type should be `VAE`.
-        - `latent_size`: The target size for the latent representation, ensuring compatibility with the RGB Sparse ControlNet model's requirements. Type should be `LATENT`.
-    - Outputs:
-        - `proc_IMAGE`: The processed image, now in a latent format wrapped in a PreprocSparseRGBWrapper, ready for use with Advanced ControlNet nodes. Type should be `IMAGE`.

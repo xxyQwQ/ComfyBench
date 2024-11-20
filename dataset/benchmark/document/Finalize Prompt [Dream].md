@@ -1,0 +1,9 @@
+- `Finalize Prompt [Dream]`: This node finalizes the construction of prompts by applying adjustments and clamping to ensure the prompt's components are within specified bounds. It's designed to refine and finalize the text for prompts, making them ready for use in generating content.
+    - Inputs:
+        - `partial_prompt` (Required): Represents the initial or intermediate state of the prompt that is being finalized. It is crucial for determining the base content and structure of the final prompt. Type should be `PARTIAL_PROMPT`.
+        - `adjustment` (Required): Specifies the method of adjustment to apply to the prompt's components, such as scaling by absolute maximum or sum, or leaving them raw. This affects the final distribution of weights in the prompt. Type should be `COMBO[STRING]`.
+        - `clamp` (Required): The maximum allowed value for any component's weight in the prompt, ensuring no single part dominates excessively. Type should be `FLOAT`.
+        - `adjustment_reference` (Required): A reference value used in scaling adjustments to balance the weights of the prompt's components. Type should be `FLOAT`.
+    - Outputs:
+        - `positive`: The finalized prompt with positive weights, ready for generating content that aligns with the desired attributes. Type should be `STRING`.
+        - `negative`: The finalized prompt with negative weights, indicating content to avoid or minimize in generation. Type should be `STRING`.

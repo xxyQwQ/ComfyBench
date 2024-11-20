@@ -1,0 +1,14 @@
+- `VRAM_Debug`: The VRAM_Debug node is designed to monitor and manage the VRAM usage of models within a deep learning environment. It provides functionalities to clear the GPU cache, unload all models from memory, and perform garbage collection to free up VRAM. Additionally, it can return the amount of VRAM freed during its operation, aiding in debugging and optimizing memory usage.
+    - Inputs:
+        - `empty_cache` (Required): Controls whether the GPU cache is cleared, which can help in freeing up unused memory. Type should be `BOOLEAN`.
+        - `gc_collect` (Required): Determines whether garbage collection is performed, potentially freeing up memory by removing unused objects. Type should be `BOOLEAN`.
+        - `unload_all_models` (Required): Specifies whether all models should be unloaded from memory, which can significantly reduce VRAM usage. Type should be `BOOLEAN`.
+        - `any_input` (Optional): An optional input that can be passed through the node without modification, allowing for flexible usage. Type should be `*`.
+        - `image_pass` (Optional): An optional image input that can be passed through the node without modification. Type should be `IMAGE`.
+        - `model_pass` (Optional): An optional model input that can be passed through the node without modification. Type should be `MODEL`.
+    - Outputs:
+        - `any_output`: Returns the inputs passed to the node along with the VRAM usage information before and after the operation. Type should be `*`.
+        - `image_pass`: Returns the optional image input passed through the node without modification. Type should be `IMAGE`.
+        - `model_pass`: Returns the optional model input passed through the node without modification. Type should be `MODEL`.
+        - `freemem_before`: Returns the amount of free VRAM before the operation. Type should be `INT`.
+        - `freemem_after`: Returns the amount of free VRAM after the operation. Type should be `INT`.

@@ -1,7 +1,0 @@
-- `SaltAudioStereoMerge`: The SaltAudioStereoMerge node is designed to merge two mono audio inputs into a single stereo audio output. It ensures that both audio inputs are of the same length and converts them to mono if they are not already, before merging them into a stereo track.
-    - Parameters:
-    - Inputs:
-        - `audio_a`: The first audio input to be merged. It is treated as one of the channels in the resulting stereo audio. Type should be `AUDIO`.
-        - `audio_b`: The second audio input to be merged alongside the first input. It complements the first input to form the stereo audio output. Type should be `AUDIO`.
-    - Outputs:
-        - `audio`: The resulting stereo audio output from merging the two input audio tracks. Type should be `AUDIO`.

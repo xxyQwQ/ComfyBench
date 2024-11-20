@@ -1,0 +1,19 @@
+- `CR Overlay Text`: This node is designed to overlay text onto images, allowing for customization of text alignment, font properties, and positioning. It provides a versatile tool for adding textual annotations or labels directly onto visual content.
+    - Inputs:
+        - `image` (Required): The image onto which the text will be overlaid. It serves as the base layer for the text overlay operation. Type should be `IMAGE`.
+        - `text` (Required): The text content to be overlaid on the image. This parameter allows for dynamic text annotations on visual content. Type should be `STRING`.
+        - `font_name` (Required): The name of the font to be used for the text overlay. This determines the visual style of the text. Type should be `COMBO[STRING]`.
+        - `font_size` (Required): The size of the font for the text overlay. It influences the readability and visual impact of the text. Type should be `INT`.
+        - `font_color` (Required): The color of the font in RGB format. It affects the visibility and aesthetic of the text overlay. Type should be `COMBO[STRING]`.
+        - `align` (Required): Specifies the alignment of the text within the given margins. It affects the positioning and appearance of the text overlay. Type should be `COMBO[STRING]`.
+        - `justify` (Required): Determines the justification of the text, affecting its alignment relative to the specified margins. Type should be `COMBO[STRING]`.
+        - `margins` (Required): The margin size around the text, influencing its positioning within the image. Type should be `INT`.
+        - `line_spacing` (Required): The spacing between lines of text, affecting the layout and readability of the text overlay. Type should be `INT`.
+        - `position_x` (Required): The horizontal position of the text within the image, determining its exact placement. Type should be `INT`.
+        - `position_y` (Required): The vertical position of the text within the image, determining its exact placement. Type should be `INT`.
+        - `rotation_angle` (Required): The angle at which the text is rotated, allowing for dynamic text orientation. Type should be `FLOAT`.
+        - `rotation_options` (Required): Options for rotating the text, providing flexibility in text presentation. Type should be `COMBO[STRING]`.
+        - `font_color_hex` (Optional): The hexadecimal color code for the font. Provides an alternative way to specify the font color. Type should be `STRING`.
+    - Outputs:
+        - `IMAGE`: The resulting image after the text overlay operation, with the text visually integrated onto the original image. Type should be `IMAGE`.
+        - `show_help`: A string output that provides help or additional information related to the text overlay operation. Type should be `STRING`.

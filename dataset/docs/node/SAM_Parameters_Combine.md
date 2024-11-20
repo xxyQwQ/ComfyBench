@@ -1,7 +1,0 @@
-- `SAM Parameters Combine`: This node combines the parameters of two SAM (Spatial Attention Model) operations, effectively merging their points and labels into a single set. It's designed to facilitate the application of multiple SAM operations on a single image or dataset by consolidating their parameters for streamlined processing.
-    - Parameters:
-    - Inputs:
-        - `sam_parameters_a`: The first set of SAM parameters to be combined. It includes points and labels that specify regions of interest and their corresponding labels in an image. Type should be `SAM_PARAMETERS`.
-        - `sam_parameters_b`: The second set of SAM parameters to be combined. Similar to the first, it includes points and labels for regions of interest in an image. Type should be `SAM_PARAMETERS`.
-    - Outputs:
-        - `sam_parameters`: The combined SAM parameters, including points and labels from both input sets, ready for use in subsequent SAM operations. Type should be `SAM_PARAMETERS`.

@@ -1,9 +1,0 @@
-- `GoogleTranslateTextNode`: This node provides functionality for translating text from one language to another, with an option for manual translation bypass. It leverages the Google Translate API or a built-in translator, depending on configuration, to perform the translation.
-    - Parameters:
-        - `from_translate`: Specifies the source language code for the translation. If set to 'auto', the source language will be automatically detected. Type should be `COMBO[STRING]`.
-        - `to_translate`: Specifies the target language code for the translation. Type should be `COMBO[STRING]`.
-        - `manual_translate`: A boolean flag that, when true, bypasses the translation process and returns the original text. Useful for manual control over the translation process. Type should be `COMBO[BOOLEAN]`.
-        - `text`: The text to be translated. Supports multiline input. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `text`: The translated text. Type should be `STRING`.

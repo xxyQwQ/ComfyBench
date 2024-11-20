@@ -1,8 +1,0 @@
-- `ControlLoraSave`: The ControlLoraSave node is designed to save the modified state of a model and its control network to a file, incorporating LoRA (Low-Rank Adaptation) adjustments. This process involves extracting and storing LoRA parameters from the model's and control network's state dictionaries, and saving them in a specified output directory.
-    - Parameters:
-        - `filename_prefix`: The filename_prefix parameter specifies the prefix for the output file names, allowing for organized storage and easy identification of saved models. Type should be `STRING`.
-        - `rank`: The rank parameter determines the rank of the LoRA adjustments, influencing the granularity and extent of modifications applied to the model's parameters. Type should be `INT`.
-    - Inputs:
-        - `model`: The model parameter represents the neural network model whose state is to be saved with LoRA adjustments. It is crucial for capturing the model's current configuration and modifications. Type should be `MODEL`.
-        - `control_net`: The control_net parameter signifies the control network associated with the model, which is essential for extracting and applying LoRA adjustments to the model's parameters. Type should be `CONTROL_NET`.
-    - Outputs:

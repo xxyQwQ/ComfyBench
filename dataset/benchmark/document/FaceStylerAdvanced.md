@@ -1,0 +1,15 @@
+- `FaceStylerAdvanced`: The FaceStylerAdvanced node is designed to apply advanced styling techniques to faces within images, leveraging deep learning models to enhance or alter facial features according to specified styles or parameters. This node focuses on providing users with the ability to customize and refine the appearance of faces in their digital content, offering a range of styling options that can be dynamically applied to achieve desired aesthetic outcomes.
+    - Inputs:
+        - `text_positive_g` (Required): This parameter represents the global positive textual descriptors or keywords that guide the overall styling process, influencing the node's output by specifying general aspects to enhance or introduce in the face styling. Type should be `STRING`.
+        - `text_positive_l` (Required): This parameter focuses on local positive textual descriptors or keywords, allowing for more detailed guidance on specific facial features or areas to be enhanced according to the styling preferences. Type should be `STRING`.
+        - `text_negative` (Required): Captures negative textual descriptors or keywords that indicate what aspects of the face styling to avoid or minimize, helping to steer the output away from undesired features or effects. Type should be `STRING`.
+        - `face` (Required): Allows users to input the face or faces to be styled, serving as the direct subject of the styling process. Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Specifies the scope of the negative prompts' application, whether to global, local, or both aspects of the styling process, thus affecting how the negative descriptors influence the outcome. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): Used for logging purposes, capturing the user's input prompt that describes the desired outcome of the face styling. It aids in tracking and refining the styling process based on user feedback and preferences. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: Represents the global enhancements achieved through the styling process, described in positive textual descriptors or keywords. Type should be `STRING`.
+        - `text_positive_l`: Captures the local enhancements to specific facial features or areas, as guided by the detailed positive textual descriptors. Type should be `STRING`.
+        - `text_positive`: unknown Type should be `STRING`.
+        - `text_negative_g`: This output captures the global aspects of face styling that were successfully minimized or avoided, as indicated by the negative textual descriptors or keywords. Type should be `STRING`.
+        - `text_negative_l`: Represents the local aspects of face styling that were successfully minimized or avoided, focusing on specific facial features or areas. Type should be `STRING`.
+        - `text_negative`: unknown Type should be `STRING`.

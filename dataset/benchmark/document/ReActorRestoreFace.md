@@ -1,0 +1,9 @@
+- `ReActorRestoreFace`: The ReActorRestoreFace node is designed for restoring faces in images using specified face restoration models. It adjusts the visibility of the restored face based on a given parameter, blending it with the original face to achieve a natural restoration effect.
+    - Inputs:
+        - `image` (Required): The image to be processed for face restoration. It serves as the base for detecting faces and applying restoration models. Type should be `IMAGE`.
+        - `facedetection` (Required): The face detection model used to identify faces within the input image, crucial for targeted restoration. Type should be `COMBO[STRING]`.
+        - `model` (Required): Specifies the model to be used for face restoration, allowing for different restoration techniques to be applied. Type should be `COMBO[STRING]`.
+        - `visibility` (Required): Controls the blend level between the original and restored faces, determining the visibility of the restoration effect. Type should be `FLOAT`.
+        - `codeformer_weight` (Required): A weight parameter specific to the CodeFormer model, influencing the restoration outcome. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The result of the face restoration process, including the restored face image. Type should be `IMAGE`.

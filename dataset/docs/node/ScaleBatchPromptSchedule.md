@@ -1,8 +1,0 @@
-- `ScaleBatchPromptSchedule`: This node is designed to adapt a batch schedule from one frame count to another, effectively scaling the schedule to fit a new frame duration. It is particularly useful in scenarios where animation or video frame counts are modified, ensuring that the timing of prompts or actions remains synchronized with the new frame length.
-    - Parameters:
-        - `input_str`: The string representation of the original batch schedule, specifying key frames and their associated values. It serves as the basis for scaling to the new frame count. Type should be `STRING`.
-        - `old_frame_count`: The original frame count of the batch schedule. This value is crucial for calculating the scaling factor to adjust the schedule to a new frame count. Type should be `INT`.
-        - `new_frame_count`: The target frame count to which the original schedule will be scaled. This determines the new timing and distribution of key frames in the schedule. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `string`: The scaled batch schedule in string format, reflecting the adjusted key frames and values for the new frame count. Type should be `STRING`.

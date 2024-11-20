@@ -1,0 +1,4 @@
+- `Get Prompt`: The Get Prompt node is designed to process and modify a given prompt structure for execution or output purposes. It performs deep copying to avoid altering the original prompt, cleanses the prompt by removing unnecessary widget inputs, and supports outputting the modified prompt either to the console or to a file based on specified parameters. This node plays a crucial role in preparing prompts for execution by ensuring they are in the correct format and contain only the necessary information.
+    - Inputs:
+        - `api_prompt` (Required): Specifies the output mode for the modified prompt, influencing how the prompt is processed and presented. Type should be `COMBO[STRING]`.
+    - Outputs:

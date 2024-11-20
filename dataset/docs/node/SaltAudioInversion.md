@@ -1,6 +1,0 @@
-- `SaltAudioInversion`: The SaltAudioInversion node is designed to invert the waveform of an audio file, effectively flipping its phase. This process can be used to create unique sound effects or for audio testing purposes, where phase inversion might be necessary.
-    - Parameters:
-    - Inputs:
-        - `audio`: The 'audio' parameter takes an audio file as input, which is the target for phase inversion. This input is crucial as it directly influences the outcome of the inversion process, determining the characteristics of the resulting audio. Type should be `AUDIO`.
-    - Outputs:
-        - `audio`: The output is the inverted audio file, where the phase of the original audio has been flipped. This can be used for further audio processing or as an effect in audio production. Type should be `AUDIO`.

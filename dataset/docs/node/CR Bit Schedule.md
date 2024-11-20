@@ -1,9 +1,0 @@
-- `CR Bit Schedule`: The CR Bit Schedule node is designed to generate a schedule based on a binary string, where each bit represents a state at a given interval over a specified number of loops. It abstracts the process of creating time-based sequences from binary data, facilitating the scheduling of animations or other time-sensitive operations.
-    - Parameters:
-        - `binary_string`: The binary string input represents a sequence of states (0 or 1) that are used to generate the schedule. Each bit in the string corresponds to a state at a specific time interval, playing a crucial role in defining the schedule's structure. Type should be `STRING`.
-        - `interval`: The interval input specifies the time gap between each state in the schedule, determining the pace at which the binary string's states are processed and included in the schedule. Type should be `INT`.
-        - `loops`: The loops input defines how many times the binary string is repeated in the schedule, allowing for the extension or repetition of the sequence to meet the desired duration. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `SCHEDULE`: The SCHEDULE output is a string representation of the generated schedule, where each line corresponds to a time-stamped state derived from the binary string. Type should be `STRING`.
-        - `show_text`: The show_text output provides a link to helpful documentation or additional information related to the node's functionality. Type should be `STRING`.

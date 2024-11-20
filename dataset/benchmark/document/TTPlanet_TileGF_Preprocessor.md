@@ -1,0 +1,9 @@
+- `TTPlanet_TileGF_Preprocessor`: This node preprocesses images for tile detection by applying a guided filter technique, enhancing the image's features relevant for tile detection. It adjusts the image based on scale factor, blur strength, radius, and epsilon values to prepare it for further processing or analysis.
+    - Inputs:
+        - `image` (Required): The input image to be processed. It is the primary data on which the guided filter and other preprocessing steps are applied. Type should be `IMAGE`.
+        - `scale_factor` (Required): Determines the scaling of the image, affecting its resolution and the granularity of details to be preserved or enhanced. Type should be `FLOAT`.
+        - `blur_strength` (Required): Controls the intensity of the blur applied to the image, which can help in reducing noise and improving the effectiveness of the guided filter. Type should be `FLOAT`.
+        - `radius` (Required): Specifies the radius of the guided filter, influencing the size of the local region around each pixel considered during filtering. Type should be `INT`.
+        - `eps` (Required): Epsilon value for the guided filter, determining the degree of smoothing and edge preservation. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The processed image, enhanced and ready for further tile detection steps. Type should be `IMAGE`.

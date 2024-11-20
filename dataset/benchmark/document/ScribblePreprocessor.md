@@ -1,0 +1,6 @@
+- `ScribblePreprocessor`: The ScribblePreprocessor node is designed for preprocessing images to detect scribble lines. It utilizes a specific model to analyze and process the input image, aiming to highlight or extract scribble-like patterns.
+    - Inputs:
+        - `image` (Required): The input image to be processed for scribble line detection. This parameter is crucial as it provides the visual data on which the scribble detection model operates. Type should be `IMAGE`.
+        - `resolution` (Optional): Specifies the resolution to which the input image is resized before processing. This affects the detail level of the scribble line detection. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed image with scribble lines detected or highlighted. This output is useful for further processing or visualization of scribble patterns. Type should be `IMAGE`.

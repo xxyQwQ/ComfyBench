@@ -1,0 +1,13 @@
+- `NormalizedAmplitudeToMask`: This node is designed to convert normalized amplitude values from audio signals into masks, applying a transformation that maps the amplitude range to a corresponding visual representation. It emphasizes the integration of audio data with visual elements, enabling dynamic adjustments to visual content based on audio input.
+    - Inputs:
+        - `normalized_amp` (Required): The normalized amplitude values, expected to be in the range [0, 1], serve as the basis for generating masks. These values dictate the intensity and characteristics of the resulting visual masks, directly influencing the visual output. Type should be `NORMALIZED_AMPLITUDE`.
+        - `width` (Required): Specifies the width of the output mask, allowing for customization of the mask's dimensions based on the requirements of the visual representation. Type should be `INT`.
+        - `height` (Required): Determines the height of the output mask, enabling adjustment of the mask's size to fit specific visual contexts. Type should be `INT`.
+        - `frame_offset` (Required): An integer value used to offset the amplitude values, providing a means to shift the visual representation of the mask in relation to the audio input. Type should be `INT`.
+        - `location_x` (Required): The x-coordinate location where the mask will be applied, allowing for precise positioning of the visual effect within the larger image or scene. Type should be `INT`.
+        - `location_y` (Required): The y-coordinate location for the mask application, facilitating accurate placement of the audio-induced visual effect. Type should be `INT`.
+        - `size` (Required): Defines the size of the mask, offering control over the scale of the visual effect generated from the audio amplitude. Type should be `INT`.
+        - `shape` (Required): Allows selection of the mask's shape, providing options such as 'none', 'circle', 'square', and 'triangle' to customize the visual outcome. Type should be `COMBO[STRING]`.
+        - `color` (Required): Chooses the color scheme of the mask, with options like 'white' and 'amplitude' to influence the visual appearance based on the audio input. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `mask`: The output mask generated from the normalized amplitude values, where the amplitude information is visually encoded into the mask's structure. Type should be `MASK`.

@@ -1,0 +1,7 @@
+- `Inference_Core_Scribble_XDoG_Preprocessor`: This node is designed to preprocess images by applying a combination of Scribble and XDoG (eXtended Difference of Gaussians) techniques to extract stylized line drawings. It's part of the ControlNet Preprocessors/Line Extractors category, aimed at enhancing image analysis and processing tasks by emphasizing essential outlines and features.
+    - Inputs:
+        - `image` (Required): The input image to be processed. It serves as the primary data for the line extraction process, where the node applies Scribble and XDoG techniques to highlight and stylize important features. Type should be `IMAGE`.
+        - `threshold` (Optional): Defines the intensity threshold for the XDoG filter, affecting the contrast and visibility of the extracted lines. It allows for fine-tuning the line extraction to achieve the desired artistic effect. Type should be `INT`.
+        - `resolution` (Optional): Specifies the resolution for the output image. It determines the level of detail and quality of the processed image, ensuring that the extracted lines are appropriately scaled. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a processed image with stylized lines extracted using the Scribble and XDoG techniques. It highlights essential features and outlines, suitable for further image analysis or artistic applications. Type should be `IMAGE`.

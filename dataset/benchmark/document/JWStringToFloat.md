@@ -1,0 +1,5 @@
+- `JWStringToFloat`: The JWStringToFloat node is designed to convert a string representation of a floating-point number into its actual float value. This node facilitates the transformation of textual data into numerical format for further processing or computation.
+    - Inputs:
+        - `text` (Required): The text input is a string that represents a floating-point number. This input is crucial for converting the textual representation into a numerical float value, enabling further numerical operations or analyses. Type should be `STRING`.
+    - Outputs:
+        - `float`: The output is the floating-point number that has been converted from the input string. This allows for the numerical representation of the text to be used in subsequent operations. Type should be `FLOAT`.

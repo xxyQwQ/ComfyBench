@@ -1,0 +1,5 @@
+- `Mask Fill Holes`: This node is designed to fill in the regions of a mask where there are holes, effectively creating a more solid and continuous mask area. It operates on mask inputs, applying a filling operation to ensure that any gaps or holes within the mask are filled, enhancing the mask's integrity for further image processing tasks.
+    - Inputs:
+        - `masks` (Required): The 'masks' input represents the mask or masks to be filled. It is crucial for determining which areas of the image need to be processed to fill in the gaps or holes, directly influencing the node's output by specifying the target regions for the fill operation. Type should be `MASK`.
+    - Outputs:
+        - `MASKS`: The output 'MASKS' consists of the processed masks with filled regions, providing a more continuous and solid mask area for subsequent image manipulation or analysis tasks. Type should be `MASK`.

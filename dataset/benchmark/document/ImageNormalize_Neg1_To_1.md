@@ -1,0 +1,5 @@
+- `ImageNormalize_Neg1_To_1`: This node is designed to adjust the pixel values of images so that they fall within the range of -1 to 1, effectively normalizing them for further processing or analysis.
+    - Inputs:
+        - `images` (Required): The images to be normalized. This input is crucial for the operation as it directly affects the normalization process by scaling the pixel values. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The normalized images, with pixel values adjusted to fall within the range of -1 to 1. Type should be `IMAGE`.

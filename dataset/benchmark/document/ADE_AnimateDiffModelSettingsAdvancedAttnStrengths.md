@@ -1,0 +1,20 @@
+- `ADE_AnimateDiffModelSettingsAdvancedAttnStrengths`: This node is designed to fine-tune the attention strengths within the AnimateDiff model, allowing for advanced customization of the model's attention mechanisms. It provides the capability to adjust the multipliers for various components of the attention mechanism, including query, key, value, output weights, and biases, thereby offering a granular control over the model's focus and processing of input features.
+    - Inputs:
+        - `pe_strength` (Required): Specifies the multiplier for positional encoding adjustments, influencing how the model perceives the position of elements within the input. Type should be `FLOAT`.
+        - `attn_strength` (Required): Defines the overall multiplier for the attention mechanism, affecting the model's ability to focus on relevant parts of the input. Type should be `FLOAT`.
+        - `attn_q_strength` (Required): Adjusts the multiplier for the query component of the attention mechanism, impacting how queries are generated from the input. Type should be `FLOAT`.
+        - `attn_k_strength` (Required): Sets the multiplier for the key component, influencing the matching process between queries and keys. Type should be `FLOAT`.
+        - `attn_v_strength` (Required): Modifies the multiplier for the value component, affecting the information retrieved based on query-key matching. Type should be `FLOAT`.
+        - `attn_out_weight_strength` (Required): Controls the multiplier for the attention output weights, adjusting the influence of attention outputs on the final result. Type should be `FLOAT`.
+        - `attn_out_bias_strength` (Required): Determines the multiplier for the attention output biases, fine-tuning the bias applied to the attention outputs. Type should be `FLOAT`.
+        - `other_strength` (Required): Specifies the multiplier for other model components not explicitly covered by the other parameters, offering a catch-all adjustment mechanism. Type should be `FLOAT`.
+        - `motion_pe_stretch` (Required): Specifies the stretch factor for positional encoding in motion, adjusting how motion influences positional encoding. Type should be `INT`.
+        - `cap_initial_pe_length` (Required): Caps the initial length of positional encoding, limiting the extent of positional encoding adjustments. Type should be `INT`.
+        - `interpolate_pe_to_length` (Required): Determines the length to which positional encoding is interpolated, affecting the granularity of positional adjustments. Type should be `INT`.
+        - `initial_pe_idx_offset` (Required): Sets the initial index offset for positional encoding, adjusting the starting point of positional encoding. Type should be `INT`.
+        - `final_pe_idx_offset` (Required): Defines the final index offset for positional encoding, adjusting the endpoint of positional encoding adjustments. Type should be `INT`.
+        - `mask_motion_scale` (Optional): Specifies a tensor for scaling the attention mask based on motion, allowing for dynamic adjustment of attention based on motion. Type should be `MASK`.
+        - `min_motion_scale` (Optional): Sets the minimum scale for motion-based attention adjustments, ensuring a baseline level of motion influence. Type should be `FLOAT`.
+        - `max_motion_scale` (Optional): Defines the maximum scale for motion-based attention adjustments, capping the influence of motion on attention. Type should be `FLOAT`.
+    - Outputs:
+        - `ad_settings`: Returns an updated AnimateDiffSettings object that incorporates the specified attention and motion-related adjustments, enabling subsequent customization steps. Type should be `AD_SETTINGS`.

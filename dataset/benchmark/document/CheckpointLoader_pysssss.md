@@ -1,0 +1,7 @@
+- `CheckpointLoader_pysssss`: This node is a specialized version of the CheckpointLoaderSimple, enhanced to handle images alongside checkpoint names. It facilitates the loading of model checkpoints with an emphasis on image-related configurations, making it suitable for scenarios where visual content is a primary concern.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the name of the checkpoint to be loaded. This parameter is crucial as it determines which specific checkpoint the node will attempt to load, impacting the model's configuration and its subsequent performance. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `model`: The loaded model object, which is the primary output of the checkpoint loading process. It represents the model in its entirety, ready for further use or analysis. Type should be `MODEL`.
+        - `clip`: The CLIP model associated with the loaded checkpoint, if applicable. This is relevant for tasks involving text and image understanding or generation. Type should be `CLIP`.
+        - `vae`: The VAE (Variational Autoencoder) component loaded from the checkpoint. This is crucial for tasks involving image generation or manipulation. Type should be `VAE`.

@@ -1,8 +1,0 @@
-- `ImageFilterGaussianBlur`: This node applies a Gaussian blur filter to images, smoothing out image noise and details by using a Gaussian function. It's designed to process images by blurring them in a way that mimics the effect of viewing the image through a translucent screen, effectively reducing image noise and detail.
-    - Parameters:
-        - `size_x`: Specifies the horizontal size of the Gaussian kernel. This affects the extent of the blurring effect horizontally. Type should be `INT`.
-        - `size_y`: Specifies the vertical size of the Gaussian kernel. This affects the extent of the blurring effect vertically. Type should be `INT`.
-    - Inputs:
-        - `images`: The images to be processed. This parameter is crucial as it specifies the target images for the Gaussian blur effect. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The blurred images after applying the Gaussian blur filter. Type should be `IMAGE`.

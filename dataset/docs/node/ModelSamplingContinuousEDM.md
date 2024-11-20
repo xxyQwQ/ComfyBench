@@ -1,9 +1,0 @@
-- `ModelSamplingContinuousEDM`: The ModelSamplingContinuousEDM node is designed to configure and apply continuous, evenly distributed model sampling techniques within a deep learning model's architecture. It focuses on adjusting the model's sampling parameters based on provided configurations, enabling precise control over the diffusion process for generating or processing data.
-    - Parameters:
-        - `sampling`: Specifies the type of sampling technique to be applied, influencing the model's behavior and the characteristics of the generated or processed data. Type should be `COMBO[STRING]`.
-        - `sigma_max`: Defines the maximum value of sigma for the sampling process, setting an upper limit on the diffusion scale. Type should be `FLOAT`.
-        - `sigma_min`: Defines the minimum value of sigma for the sampling process, setting a lower limit on the diffusion scale. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The model input represents the deep learning model to which the sampling techniques will be applied, serving as the foundation for configuring and adjusting sampling parameters. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The modified model with updated sampling parameters, reflecting the applied continuous, evenly distributed model sampling techniques. Type should be `MODEL`.

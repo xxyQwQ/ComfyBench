@@ -1,0 +1,5 @@
+- `SaltFlattenJSON`: The SaltFlattenJSON node is designed to transform nested JSON structures into a flat dictionary format, where nested keys are combined into single keys separated by underscores. This simplification process aids in the easier handling and processing of complex JSON data by reducing its hierarchical depth.
+    - Inputs:
+        - `json_input` (Required): The JSON input that needs to be flattened. This parameter is crucial as it directly influences the node's ability to simplify complex JSON structures into a more manageable form. Type should be `STRING`.
+    - Outputs:
+        - `json_output`: The output of the node is a JSON string that represents the original JSON input in a flattened format. This makes the data easier to work with in environments that may not support deeply nested structures. Type should be `STRING`.

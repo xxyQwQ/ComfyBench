@@ -1,9 +1,0 @@
-- `Save image with extra metadata [Crystools]`: This node is designed to save images with additional metadata, which can include workflow details and custom metadata provided by the user. It extends the functionality of a standard image saving process by allowing the inclusion of extra information directly within the image file, enhancing traceability and context for each saved image.
-    - Parameters:
-        - `filename_prefix`: A prefix for the filename under which the image will be saved. This helps in organizing and identifying images easily, especially when dealing with multiple images or batches. Type should be `STRING`.
-        - `with_workflow`: A flag indicating whether workflow details should be included in the image's metadata. This can be useful for tracking the processing history or steps involved in generating the image. Type should be `BOOLEAN`.
-        - `metadata_extra`: Additional metadata in JSON format to be included with the image. This provides flexibility in embedding various types of information as part of the image's metadata. Type should be `STRING`.
-    - Inputs:
-        - `image`: The image to be saved. This parameter is crucial as it determines the content that will be stored and subsequently used for further processing or reference. Type should be `IMAGE`.
-    - Outputs:
-        - `Metadata RAW`: The result of the image saving process, including the saved image's path and any associated metadata. Type should be `METADATA_RAW`.

@@ -1,0 +1,14 @@
+- `CR Float Range List`: This node generates a list of floating-point numbers within a specified range, allowing for the creation of sequences with precise increments. It is designed to facilitate the creation of lists where each element is a float value, providing a tool for scenarios requiring detailed numerical sequences.
+    - Inputs:
+        - `start` (Required): Defines the starting point of the float range. It sets the initial value from which the sequence begins, playing a crucial role in determining the range's scope. Type should be `FLOAT`.
+        - `end` (Required): Specifies the ending point of the float range. It determines the value at which the sequence stops, thus defining the extent of the range. Type should be `FLOAT`.
+        - `step` (Required): Determines the increment between each number in the range. This value affects the density of the sequence, allowing for finer control over the spacing between elements. Type should be `FLOAT`.
+        - `operation` (Required): Specifies the mathematical operation to apply to each element in the range, such as 'none', 'sin', 'cos', or 'tan', allowing for the transformation of the sequence based on trigonometric functions. Type should be `COMBO[STRING]`.
+        - `decimal_places` (Required): Determines the number of decimal places for each number in the range, allowing for precision control over the float values. Type should be `INT`.
+        - `ignore_first_value` (Required): When true, the first value of the generated range is omitted from the output, allowing for sequences that start from the second value onwards. Type should be `BOOLEAN`.
+        - `max_values_per_loop` (Required): Limits the number of values generated per loop, providing control over the size of the output list within each iteration. Type should be `INT`.
+        - `loops` (Required): Indicates how many times the range sequence should be repeated. This parameter can be used to extend the sequence by looping it multiple times. Type should be `INT`.
+        - `ping_pong` (Required): A boolean flag that, when true, reverses the direction of the range on every other iteration, creating a back-and-forth pattern. Type should be `BOOLEAN`.
+    - Outputs:
+        - `FLOAT`: The generated list of floating-point numbers within the specified range. Type should be `FLOAT`.
+        - `show_help`: A URL to a help page providing detailed information and guidance on using the CR Float Range List node. Type should be `STRING`.

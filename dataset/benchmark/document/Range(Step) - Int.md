@@ -1,0 +1,9 @@
+- `Range(Step) - Int`: This node generates a sequence of integers within a specified range, allowing for control over the start, stop, and step values. It is designed to facilitate the creation of integer lists based on customizable intervals and endpoints, supporting both inclusive and exclusive end modes.
+    - Inputs:
+        - `start` (Required): Specifies the starting value of the range. This parameter sets the initial point from which the integer sequence begins. Type should be `INT`.
+        - `stop` (Required): Determines the stopping value of the range. This parameter defines the endpoint for the integer sequence, which can be inclusive or exclusive based on the end_mode. Type should be `INT`.
+        - `step` (Required): Defines the interval between each number in the range. This parameter controls the step size for the sequence generation. Type should be `INT`.
+        - `end_mode` (Required): Indicates whether the stop value is inclusive or exclusive. This parameter allows for flexibility in defining the bounds of the integer sequence. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `range`: The generated sequence of integers within the specified range. Type should be `INT`.
+        - `range_sizes`: The size of each generated integer sequence, providing insight into the number of elements within each range. Type should be `INT`.

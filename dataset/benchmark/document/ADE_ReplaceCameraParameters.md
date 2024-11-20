@@ -1,0 +1,9 @@
+- `ADE_ReplaceCameraParameters`: The node is designed to modify camera control parameters within an animation or image processing pipeline, allowing for the adjustment of camera poses based on predefined or dynamically generated criteria. This functionality is crucial for achieving desired visual effects, perspectives, or animations that require specific camera orientations or movements.
+    - Inputs:
+        - `poses` (Required): This parameter represents the camera poses to be modified. It plays a crucial role in determining the final output by specifying the initial camera positions and orientations that are subject to adjustment. Type should be `CAMERACTRL_POSES`.
+        - `fx` (Required): The focal length of the camera in the x-axis. Adjusting this parameter affects the camera's field of view along the x-axis, influencing the perspective and scale of the rendered scene. Type should be `FLOAT`.
+        - `fy` (Required): The focal length of the camera in the y-axis. Similar to 'fx', this parameter modifies the field of view but along the y-axis, impacting how the scene's depth and height are perceived. Type should be `FLOAT`.
+        - `cx` (Required): The x-coordinate of the camera's optical center. Altering this value shifts the scene's center point horizontally, which can be used to correct or achieve certain visual effects. Type should be `FLOAT`.
+        - `cy` (Required): The y-coordinate of the camera's optical center. This parameter shifts the scene's center vertically, enabling adjustments to the vertical alignment or to simulate camera tilt effects. Type should be `FLOAT`.
+    - Outputs:
+        - `cameractrl_poses`: The modified camera poses after applying the new camera parameters. This output is essential for downstream processes that rely on updated camera orientations for rendering or further processing. Type should be `CAMERACTRL_POSES`.

@@ -1,6 +1,0 @@
-- `DF_Float`: The DF_Float node is designed to directly pass through floating-point values without modification, serving as a fundamental building block for numerical data manipulation within the node network.
-    - Parameters:
-        - `Value`: Accepts a floating-point value as input, which is directly passed through without any modification. This parameter is essential for the node's operation as it determines the exact value that will be output. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: Outputs the same floating-point value as received in the input, ensuring a direct pass-through of numerical data. Type should be `FLOAT`.

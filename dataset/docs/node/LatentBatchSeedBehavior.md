@@ -1,7 +1,0 @@
-- `LatentBatchSeedBehavior`: The LatentBatchSeedBehavior node is designed to modify the seed behavior of a batch of latent samples. It allows for either randomizing or fixing the seed across the batch, thereby influencing the generation process by either introducing variability or maintaining consistency in the generated outputs.
-    - Parameters:
-        - `seed_behavior`: The 'seed_behavior' parameter dictates whether the seed for the batch of latent samples should be randomized or fixed. This choice significantly impacts the generation process by either introducing variability or ensuring consistency across the batch. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `samples`: The 'samples' parameter represents the batch of latent samples to be processed. Its modification depends on the seed behavior chosen, affecting the consistency or variability of the generated outputs. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The output is a modified version of the input latent samples, with adjustments made based on the specified seed behavior. It either maintains or alters the batch index to reflect the chosen seed behavior. Type should be `LATENT`.

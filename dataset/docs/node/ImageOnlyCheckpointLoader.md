@@ -1,8 +1,0 @@
-- `ImageOnlyCheckpointLoader`: This node specializes in loading checkpoints specifically for image-based models within video generation workflows. It efficiently retrieves and configures the necessary components from a given checkpoint, focusing on image-related aspects of the model.
-    - Parameters:
-        - `ckpt_name`: Specifies the name of the checkpoint to load. This parameter is crucial for identifying and retrieving the correct checkpoint file from a predefined list of available checkpoints. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `model`: Returns the main model loaded from the checkpoint, configured for image processing within video generation contexts. Type should be `MODEL`.
-        - `clip_vision`: Provides the CLIP vision component extracted from the checkpoint, tailored for image understanding and feature extraction. Type should be `CLIP_VISION`.
-        - `vae`: Delivers the Variational Autoencoder (VAE) component, essential for image manipulation and generation tasks. Type should be `VAE`.

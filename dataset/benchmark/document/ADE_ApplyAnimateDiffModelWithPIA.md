@@ -1,0 +1,15 @@
+- `ADE_ApplyAnimateDiffModelWithPIA`: This node is designed to apply a PIA (Pose Interpolation and Animation) model within the AnimateDiff framework, enabling the animation of images by interpolating between poses. It integrates motion models with specific PIA enhancements to enrich the animation process, ensuring compatibility and leveraging PIA's capabilities for more dynamic and detailed animations.
+    - Inputs:
+        - `motion_model` (Required): Specifies the motion model to be applied, which must be compatible with PIA. It is crucial for the animation process, dictating how the image is animated between poses. Type should be `MOTION_MODEL_ADE`.
+        - `image` (Required): The input image to be animated. This image serves as the basis for the animation process, with the motion model applying transformations to it. Type should be `IMAGE`.
+        - `vae` (Required): The VAE model used for encoding and decoding images during the animation process. It plays a key role in processing the images for animation. Type should be `VAE`.
+        - `start_percent` (Required): Defines the starting percentage of the animation, allowing for control over when the animation effect begins. Type should be `FLOAT`.
+        - `end_percent` (Required): Specifies the ending percentage of the animation, enabling control over when the animation effect concludes. Type should be `FLOAT`.
+        - `pia_input` (Optional): Optional PIA-specific input parameters that influence the animation effect. Allows for customization of the animation process. Type should be `PIA_INPUT`.
+        - `motion_lora` (Optional): A list of motion Lora settings that can be applied to the motion model for enhanced animation effects. Type should be `MOTION_LORA`.
+        - `scale_multival` (Optional): A multivalued parameter for scaling effects, providing additional customization for the animation. Type should be `MULTIVAL`.
+        - `effect_multival` (Optional): A multivalued parameter for effect intensity, offering further customization options for the animation. Type should be `MULTIVAL`.
+        - `ad_keyframes` (Optional): Specifies the keyframes for the animation, dictating the sequence and timing of animated poses. Type should be `AD_KEYFRAMES`.
+        - `prev_m_models` (Optional): A list of previously applied motion models, allowing for sequential animation effects to be layered or combined. Type should be `M_MODELS`.
+    - Outputs:
+        - `m_models`: The updated list of motion models after applying the PIA model, with the most recent model added first. Type should be `M_MODELS`.

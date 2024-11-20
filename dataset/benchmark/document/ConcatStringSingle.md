@@ -1,0 +1,6 @@
+- `ConcatStringSingle`: The ConcatStringSingle node is designed to concatenate two strings into a single string. It focuses on combining textual inputs, providing a straightforward way to merge text data.
+    - Inputs:
+        - `string_a` (Required): The first string to be concatenated. It serves as the initial part of the new combined string. Type should be `STRING`.
+        - `string_b` (Required): The second string to be concatenated. It is appended to the end of the first string, completing the new combined string. Type should be `STRING`.
+    - Outputs:
+        - `string`: The concatenated result of the two input strings, returned as a single string. Type should be `STRING`.

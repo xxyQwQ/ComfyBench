@@ -1,8 +1,0 @@
-- `CM_FloatBinaryOperation`: This node performs binary operations on two float inputs, such as addition, subtraction, multiplication, or division, based on the operation specified. It abstracts the complexity of float arithmetic operations, providing a straightforward way to execute binary mathematical operations on float values.
-    - Parameters:
-        - `op`: Specifies the binary operation to be performed on the float inputs. This parameter determines the mathematical operation (e.g., addition, subtraction) that will be applied. Type should be `COMBO[STRING]`.
-        - `a`: The first float input for the binary operation. Acts as one of the operands in the mathematical operation. Type should be `FLOAT`.
-        - `b`: The second float input for the binary operation. Serves as the other operand in the mathematical operation. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The result of the binary operation performed on the two float inputs. It is a single float value representing the outcome of the specified operation. Type should be `FLOAT`.

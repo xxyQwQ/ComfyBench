@@ -1,9 +1,0 @@
-- `RemapStretch`: The RemapStretch node applies a stretching transformation to images, adjusting their geometry based on specified power factors along the x and y axes, centered around a given point. This node is designed to manipulate image dimensions in a non-linear fashion, offering a way to simulate or correct distortions.
-    - Parameters:
-        - `power_x`: Specifies the power factor for stretching along the x-axis. A higher value results in more pronounced stretching. Type should be `FLOAT`.
-        - `power_y`: Specifies the power factor for stretching along the y-axis. Similar to `power_x`, it controls the degree of stretching but in the vertical direction. Type should be `FLOAT`.
-        - `center_x`: Determines the horizontal center point of the stretch effect. Values range from 0 to 1, representing a percentage of the image's width. Type should be `FLOAT`.
-        - `center_y`: Determines the vertical center point of the stretch effect. Values range from 0 to 1, representing a percentage of the image's height. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `remap`: The output is a set of parameters or a transformation map that defines how the image should be stretched according to the input parameters. This map is used to adjust the image geometry for stretching effects. Type should be `REMAP`.

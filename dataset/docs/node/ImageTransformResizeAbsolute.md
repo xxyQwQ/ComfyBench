@@ -1,9 +1,0 @@
-- `ImageTransformResizeAbsolute`: This node provides functionality for resizing a batch of images to specified absolute dimensions using various interpolation methods. It allows for precise control over the output size of images, making it suitable for tasks that require uniform image dimensions.
-    - Parameters:
-        - `width`: The target width for the resized images. It determines the horizontal dimension of the output images. Type should be `INT`.
-        - `height`: The target height for the resized images. It determines the vertical dimension of the output images. Type should be `INT`.
-        - `method`: The interpolation method used for resizing. This affects the quality and characteristics of the resized images. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: A batch of images to be resized. This parameter is crucial as it directly influences the node's operation by providing the raw data for resizing. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The resized images as a batch. This output is the direct result of the resizing operation, providing uniformly sized images. Type should be `IMAGE`.

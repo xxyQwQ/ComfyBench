@@ -1,8 +1,0 @@
-- `LLMMarkdownRepair`: The node is designed to repair malformed Markdown text, ensuring it is transformed into valid, well-structured Markdown without omitting any data. It leverages a language model to analyze and correct the input text based on given instructions.
-    - Parameters:
-        - `text_input`: The malformed Markdown text that needs to be repaired. This input is critical as it provides the content that the node will work on to produce valid Markdown. Type should be `STRING`.
-        - `extra_directions`: Optional additional instructions for the language model to follow when repairing the Markdown. This can guide the repair process more precisely according to specific requirements. Type should be `STRING`.
-    - Inputs:
-        - `llm_model`: Specifies the language model to use for repairing the Markdown. It plays a crucial role in understanding and fixing the malformed Markdown based on the provided prompt. Type should be `LLM_MODEL`.
-    - Outputs:
-        - `markdown_output`: The repaired Markdown text, which is the result of the language model's processing of the input text and any extra directions provided. Type should be `STRING`.

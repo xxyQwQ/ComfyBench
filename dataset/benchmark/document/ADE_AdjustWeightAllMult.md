@@ -1,0 +1,7 @@
+- `ADE_AdjustWeightAllMult`: The ADE_AdjustWeightAllMult node is designed for adjusting the weights of various components in an animation diffusion model by applying a multiplication factor to all weights simultaneously. This node facilitates the fine-tuning of animation generation by allowing for global adjustments to the model's behavior, enhancing or diminishing the influence of all weights based on the provided multiplier.
+    - Inputs:
+        - `all_MULT` (Required): Specifies the multiplication factor to be applied to all weights, enabling global adjustment of the model's behavior. This parameter allows for the scaling of weights to either amplify or reduce their influence in the animation generation process. Type should be `FLOAT`.
+        - `print_adjustment` (Required): A boolean flag that, when set to True, enables the printing of the adjustment details for debugging or informational purposes. Type should be `BOOLEAN`.
+        - `prev_weight_adjust` (Optional): An optional parameter that allows for the continuation of weight adjustments from a previous state, facilitating sequential adjustments within a workflow. Type should be `WEIGHT_ADJUST`.
+    - Outputs:
+        - `weight_adjust`: Returns an updated weight adjustment object, encapsulating the applied global multiplication adjustments to all weights. Type should be `WEIGHT_ADJUST`.

@@ -1,0 +1,6 @@
+- `ImpactQueueTrigger`: The ImpactQueueTrigger node is designed to conditionally trigger an action within a queue system based on a boolean mode. It serves as a control mechanism to either proceed with or halt the execution of subsequent tasks in the queue.
+    - Inputs:
+        - `signal` (Required): A generic input signal that triggers the node's operation. Its primary role is to initiate the execution flow. Type should be `*`.
+        - `mode` (Required): A boolean flag determining whether to trigger the subsequent action in the queue. When set to True, the action is triggered; otherwise, it is skipped. Type should be `BOOLEAN`.
+    - Outputs:
+        - `signal_opt`: The original input signal is passed through, allowing for the continuation of the execution flow. Type should be `*`.

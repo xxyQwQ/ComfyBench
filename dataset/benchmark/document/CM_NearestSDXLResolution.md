@@ -1,0 +1,6 @@
+- `CM_NearestSDXLResolution`: This node is designed to find the nearest supported SDXL resolution to the input image's resolution. It calculates the aspect ratio of the input image and compares it with a list of supported SDXL resolutions to select the closest match, ensuring optimal resizing without significant distortion.
+    - Inputs:
+        - `image` (Required): The input image for which the nearest SDXL resolution is to be found. The image's aspect ratio is used to determine the closest supported resolution. Type should be `IMAGE`.
+    - Outputs:
+        - `width`: The width component of the nearest SDXL resolution. Type should be `INT`.
+        - `height`: The height component of the nearest SDXL resolution. Type should be `INT`.

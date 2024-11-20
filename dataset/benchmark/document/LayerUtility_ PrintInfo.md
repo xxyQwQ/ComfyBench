@@ -1,0 +1,5 @@
+- `LayerUtility_ PrintInfo`: The 'LayerUtility: PrintInfo' node is designed to log and return information about the input it receives, including the type of the input, dimensions and shape if it's a tensor, and serialization of the input if possible. It's a utility node aimed at providing insights into the data flowing through a node pipeline, facilitating debugging and data inspection.
+    - Inputs:
+        - `anything` (Required): Accepts any type of input, aiming to provide detailed information about it, including its type, dimensions if applicable, and a serialized form. This flexibility allows for a wide range of data types to be inspected, making it a versatile tool for debugging and data analysis. Type should be `*`.
+    - Outputs:
+        - `text`: Outputs a string containing detailed information about the input, including its type, dimensions if applicable, and serialized form, aiding in debugging and data inspection. Type should be `STRING`.

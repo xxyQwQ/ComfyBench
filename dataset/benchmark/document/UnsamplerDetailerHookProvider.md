@@ -1,0 +1,15 @@
+- `UnsamplerDetailerHookProvider`: The UnsamplerDetailerHookProvider node is designed to provide hooks that modify the sampling process in image generation tasks. It focuses on adjusting the unsampling behavior, which is a critical step in refining the details and quality of generated images.
+    - Inputs:
+        - `model` (Required): Specifies the model used in the unsampling process, serving as the foundation for generating images. Type should be `MODEL`.
+        - `steps` (Required): Determines the number of steps in the unsampling process, affecting the level of detail and refinement in the generated images. Type should be `INT`.
+        - `start_end_at_step` (Required): Defines the starting point for the end step in the unsampling process, influencing the progression of image refinement. Type should be `INT`.
+        - `end_end_at_step` (Required): Specifies the ending point for the end step in the unsampling process, further refining the progression of image detail enhancement. Type should be `INT`.
+        - `cfg` (Required): Sets the configuration for the unsampling process, impacting the overall quality and characteristics of the generated images. Type should be `FLOAT`.
+        - `sampler_name` (Required): Indicates the sampler used in the unsampling process, affecting the method of image generation. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Determines the scheduling strategy for the unsampling process, influencing the timing and sequence of image refinement steps. Type should be `COMBO[STRING]`.
+        - `normalize` (Required): Specifies whether to normalize the output of the unsampling process, affecting the consistency and quality of the generated images. Type should be `COMBO[STRING]`.
+        - `positive` (Required): Defines positive conditioning factors for the unsampling process, guiding the generation towards desired attributes. Type should be `CONDITIONING`.
+        - `negative` (Required): Sets negative conditioning factors for the unsampling process, steering the generation away from undesired attributes. Type should be `CONDITIONING`.
+        - `schedule_for_cycle` (Required): unknown Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `detailer_hook`: Produces a detailer hook configured according to the specified unsampling parameters, ready to be integrated into the image generation pipeline. Type should be `DETAILER_HOOK`.

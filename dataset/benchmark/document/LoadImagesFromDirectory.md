@@ -1,0 +1,9 @@
+- `LoadImagesFromDirectory`: This node is designed for loading and processing a batch of images from a specified directory, including their associated masks if available. It supports filtering and limiting the number of images loaded based on provided criteria, and prepares the images and masks for further processing or analysis.
+    - Inputs:
+        - `directory` (Required): Specifies the directory path from which images are to be loaded. It is crucial for locating and accessing the image files for processing. Type should be `STRING`.
+        - `image_load_cap` (Optional): Determines the maximum number of images to load from the directory. If set to 0, there is no limit on the number of images to load. Type should be `INT`.
+        - `start_index` (Optional): Specifies the index from which to start loading images within the directory, allowing for partial loading of images. Type should be `INT`.
+    - Outputs:
+        - `image`: A tensor containing the loaded images, concatenated along the first dimension. Type should be `IMAGE`.
+        - `mask`: A tensor containing the masks associated with the loaded images, stacked along the first dimension. Type should be `MASK`.
+        - `int`: The total number of images successfully loaded and processed. Type should be `INT`.

@@ -1,0 +1,17 @@
+- `KSamplerAdvanced`: The KSamplerAdvanced node is designed to enhance the sampling process by providing advanced configurations and techniques. It aims to offer more sophisticated options for generating samples from a model, improving upon the basic KSampler functionalities.
+    - Inputs:
+        - `model` (Required): Specifies the model from which samples are to be generated, playing a crucial role in the sampling process. Type should be `MODEL`.
+        - `add_noise` (Required): Determines whether noise should be added to the sampling process, affecting the diversity and quality of the generated samples. Type should be `COMBO[STRING]`.
+        - `noise_seed` (Required): Sets the seed for noise generation, ensuring reproducibility in the sampling process. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps to be taken in the sampling process, impacting the detail and quality of the output. Type should be `INT`.
+        - `cfg` (Required): Controls the conditioning factor, influencing the direction and space of the sampling process. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the specific sampler to be used, allowing for customization of the sampling technique. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduler for controlling the sampling process, affecting the progression and quality of samples. Type should be `COMBO[STRING]`.
+        - `positive` (Required): Specifies the positive conditioning to guide the sampling towards desired attributes. Type should be `CONDITIONING`.
+        - `negative` (Required): Specifies the negative conditioning to steer the sampling away from certain attributes. Type should be `CONDITIONING`.
+        - `latent_image` (Required): Provides the initial latent image to be used in the sampling process, serving as a starting point. Type should be `LATENT`.
+        - `start_at_step` (Required): Determines the starting step of the sampling process, allowing for control over the sampling progression. Type should be `INT`.
+        - `end_at_step` (Required): Sets the ending step of the sampling process, defining the scope of the sampling. Type should be `INT`.
+        - `return_with_leftover_noise` (Required): Indicates whether to return the sample with leftover noise, affecting the final output's appearance. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `latent`: The output represents the latent image generated from the model, reflecting the applied configurations and techniques. Type should be `LATENT`.

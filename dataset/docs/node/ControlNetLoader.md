@@ -1,6 +1,0 @@
-- `ControlNetLoader`: The ControlNetLoader node is designed to load a ControlNet model from a specified path. It plays a crucial role in initializing ControlNet models, which are essential for applying control mechanisms over generated content or modifying existing content based on control signals.
-    - Parameters:
-        - `control_net_name`: Specifies the name of the ControlNet model to be loaded. This name is used to locate the model file within a predefined directory structure. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `control_net`: Returns the loaded ControlNet model, ready for use in controlling or modifying content generation processes. Type should be `CONTROL_NET`.

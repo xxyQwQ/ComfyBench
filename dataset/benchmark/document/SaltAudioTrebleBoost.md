@@ -1,0 +1,7 @@
+- `SaltAudioTrebleBoost`: This node enhances the treble frequencies of an audio file, allowing for a clearer and more pronounced high-end sound. It applies a high-pass filter at a specified cutoff frequency and then boosts the gain of frequencies above this threshold.
+    - Inputs:
+        - `audio` (Required): The audio input to be processed for treble enhancement. It serves as the primary content for treble frequency boosting. Type should be `AUDIO`.
+        - `cutoff_freq` (Required): The cutoff frequency for the high-pass filter, determining the lowest frequency to be boosted in the treble enhancement process. Type should be `INT`.
+        - `boost_dB` (Required): The amount of gain, in decibels, to apply to frequencies above the cutoff frequency, enhancing the treble portion of the audio. Type should be `FLOAT`.
+    - Outputs:
+        - `audio`: The processed audio with enhanced treble frequencies. Type should be `AUDIO`.

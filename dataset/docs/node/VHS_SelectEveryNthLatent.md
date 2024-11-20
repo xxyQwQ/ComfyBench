@@ -1,8 +1,0 @@
-- `VHS_SelectEveryNthLatent`: This node is designed to filter through a batch of latents, selecting every Nth latent according to a specified interval. It's useful for thinning out dense latent batches for more efficient processing or targeted analysis.
-    - Parameters:
-        - `select_every_nth`: Specifies the interval at which latents are selected. This parameter directly influences the density of the output latent batch, allowing for customizable thinning of the input. Type should be `INT`.
-    - Inputs:
-        - `latents`: The input latents to be filtered. This parameter is crucial for determining which latents will be processed and ultimately selected based on the interval. Type should be `LATENT`.
-    - Outputs:
-        - `LATENT`: The filtered set of latents, containing only every Nth latent based on the specified interval. Type should be `LATENT`.
-        - `count`: The total count of latents selected after applying the specified interval. This provides a quick reference to the size of the output batch. Type should be `INT`.

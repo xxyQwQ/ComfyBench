@@ -1,7 +1,0 @@
-- `MotionDiffLoader`: The MotionDiffLoader node is designed to load and initialize the Motion Diffusion Model (MDM) and its associated CLIP wrapper based on a specified model dataset. This node plays a crucial role in preparing the motion generation models for subsequent processing or inference tasks, ensuring they are correctly configured with the necessary dataset information.
-    - Parameters:
-        - `model_dataset`: Specifies the dataset model to be loaded. This selection determines the configuration of the Motion Diffusion Model and its CLIP wrapper, impacting the behavior and performance of motion generation. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `md_model`: Returns a wrapped instance of the Motion Diffusion Model, ready for motion generation tasks. Type should be `MD_MODEL`.
-        - `md_clip`: Returns a CLIP wrapper configured for the loaded Motion Diffusion Model, facilitating text-conditioned motion generation. Type should be `MD_CLIP`.

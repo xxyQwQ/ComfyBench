@@ -1,0 +1,7 @@
+- `SaltFilterJSON`: The SaltFilterJSON node is designed to filter elements from a JSON array based on a specified condition. It evaluates each element against a given key-value pair and returns a new JSON array containing only those elements that match the condition.
+    - Inputs:
+        - `json_input` (Required): The JSON string input that represents an array of objects. It is the primary data source for the filtering operation. Type should be `STRING`.
+        - `condition_key` (Required): The key to be checked within each object of the JSON array. It determines the field against which the condition is applied. Type should be `STRING`.
+        - `condition_value` (Required): The value that the specified key's value must match for an object to be included in the filtered output. Type should be `STRING`.
+    - Outputs:
+        - `json_output`: The output is a JSON string representing an array of objects that meet the specified condition. Type should be `STRING`.

@@ -1,0 +1,13 @@
+- `SeedExplorer __Inspire`: The SeedExplorer node is designed to explore and manipulate seed values within the Inspire Pack ecosystem. It provides functionality to adjust, set, or randomize seeds used in various generative processes, facilitating controlled variability and reproducibility in generated content.
+    - Inputs:
+        - `latent` (Required): Specifies the latent space vector to be used or modified in the seed exploration process, serving as a foundation for generative variations. Type should be `LATENT`.
+        - `seed_prompt` (Required): A string input that can be used to influence the seed exploration process, potentially guiding the generation towards specific themes or directions. Type should be `STRING`.
+        - `enable_additional` (Required): A boolean flag that enables or disables the use of additional seed manipulation features, offering more granular control over the generation process. Type should be `BOOLEAN`.
+        - `additional_seed` (Required): An integer representing an additional seed value to be used in conjunction with the primary seed, allowing for further customization of the generation. Type should be `INT`.
+        - `additional_strength` (Required): A float indicating the strength of the influence of the additional seed on the generation process, providing a means to adjust the impact of seed variations. Type should be `FLOAT`.
+        - `noise_mode` (Required): Specifies the computational backend (GPU or CPU) for noise generation, affecting the performance and possibly the outcomes of the seed exploration. Type should be `COMBO[STRING]`.
+        - `initial_batch_seed_mode` (Required): Determines the method for initializing seeds in batch processes, influencing the diversity and consistency of generated batches. Type should be `COMBO[STRING]`.
+        - `variation_method` (Optional): Defines the method for applying variations to the seed or latent space, such as linear interpolation or spherical linear interpolation (slerp), affecting the nature of generative changes. Type should be `COMBO[STRING]`.
+        - `model` (Optional): Identifies the model to be used in conjunction with the seed exploration, linking the seed manipulation to specific generative models. Type should be `model`.
+    - Outputs:
+        - `noise`: The modified or newly generated noise vector resulting from the seed exploration process, ready for further generative applications. Type should be `NOISE`.

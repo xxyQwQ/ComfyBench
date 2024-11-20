@@ -1,0 +1,8 @@
+- `BackgroundScaler`: The BackgroundScaler node is designed to adjust the grayscale level of masked areas within an image, allowing for dynamic scaling based on specified parameters. It provides a method to selectively modify the appearance of background elements in images by applying a scale factor to the masked regions.
+    - Inputs:
+        - `image` (Required): The input image to be processed. It serves as the primary canvas on which the grayscale scaling is applied to the masked areas. Type should be `IMAGE`.
+        - `mask` (Required): A mask that specifies the areas within the image to be scaled. The mask determines which parts of the image will undergo the grayscale adjustment. Type should be `MASK`.
+        - `scale` (Required): A scale factor that determines the intensity of the grayscale to be applied to the masked areas. It allows for fine-tuning the visual impact of the scaling on the image. Type should be `FLOAT`.
+        - `invert` (Required): A boolean flag that, when set to True, inverts the mask, thereby applying the scaling to the unmasked areas instead. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output image with the masked areas adjusted in grayscale according to the specified scale factor. Type should be `IMAGE`.

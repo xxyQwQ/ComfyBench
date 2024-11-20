@@ -1,0 +1,13 @@
+- `Color Correct (mtb)`: Provides a suite of color correction capabilities for images, allowing adjustments to gamma, contrast, exposure, offset, hue, saturation, and value to enhance or modify the image's appearance.
+    - Inputs:
+        - `image` (Required): The input image to be color corrected. This is the primary data upon which all color correction operations are applied. Type should be `IMAGE`.
+        - `clamp` (Required): A boolean flag indicating whether the color values should be clamped. Clamping ensures that the color values do not exceed the allowable range, maintaining image integrity. Type should be `COMBO[BOOLEAN]`.
+        - `gamma` (Required): Adjusts the gamma value of the image, affecting the luminance to either darken or lighten the image. Type should be `FLOAT`.
+        - `contrast` (Required): Modifies the contrast level of the image, enhancing the difference between the light and dark areas. Type should be `FLOAT`.
+        - `exposure` (Required): Alters the exposure level, simulating the effect of changing the amount of light the image is exposed to. Type should be `FLOAT`.
+        - `offset` (Required): Applies an offset to the color values, shifting all colors by a fixed amount. Type should be `FLOAT`.
+        - `hue` (Required): Changes the hue of the image, adjusting the overall color tone. Type should be `FLOAT`.
+        - `saturation` (Required): Adjusts the saturation level, affecting the intensity of the colors in the image. Type should be `FLOAT`.
+        - `value` (Required): Modifies the value (brightness) of the image, making it brighter or darker. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The color-corrected image, with adjustments applied as per the input parameters. Type should be `IMAGE`.

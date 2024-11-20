@@ -1,0 +1,12 @@
+- `ONNXDetectorSEGS`: This node is designed to utilize an ONNX model for detecting and segmenting objects within images. It leverages deep learning techniques to analyze image data and output segmented regions, making it suitable for applications requiring precise object localization and segmentation.
+    - Inputs:
+        - `bbox_detector` (Required): The bounding box detector model used for detection. It plays a critical role in identifying regions of interest within the image, which are then processed for segmentation. Type should be `BBOX_DETECTOR`.
+        - `image` (Required): The input image to be processed. This image is analyzed by the detector model to identify and segment objects within it. Type should be `IMAGE`.
+        - `threshold` (Required): A threshold value for detection confidence. Objects with confidence scores above this threshold are considered detected and segmented. Type should be `FLOAT`.
+        - `dilation` (Required): Specifies the dilation factor for the segmented regions. This can be used to expand or contract the segmented areas, affecting the final segmentation output. Type should be `INT`.
+        - `crop_factor` (Required): A factor that determines how much to crop around the detected objects. It affects the size of the output segmented regions by defining the margin around detected objects. Type should be `FLOAT`.
+        - `drop_size` (Required): The minimum size of objects to be considered in the segmentation. Objects smaller than this size are ignored, affecting the granularity of the segmentation. Type should be `INT`.
+        - `labels` (Required): Optional labels to filter the detected objects. Only objects with these labels will be included in the segmentation output. Type should be `STRING`.
+        - `detailer_hook` (Optional): An optional hook for custom post-processing of the detected objects. It allows for additional customization of the segmentation process. Type should be `DETAILER_HOOK`.
+    - Outputs:
+        - `segs`: The output segmented regions of the image. These regions are the result of the detector model's detection and segmentation process, providing detailed localization of objects within the image. Type should be `SEGS`.

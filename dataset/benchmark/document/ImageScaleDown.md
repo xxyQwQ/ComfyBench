@@ -1,0 +1,8 @@
+- `ImageScaleDown`: The ImageScaleDown node is designed to reduce the dimensions of an image or a batch of images to a smaller size, maintaining the aspect ratio and optionally center-cropping to fit the specified dimensions. This operation is essential for optimizing image processing workflows, reducing computational load, and preparing images for further processing or display.
+    - Inputs:
+        - `images` (Required): The input images to be scaled down. This parameter is crucial as it directly influences the output by determining which images undergo the scaling process. Type should be `IMAGE`.
+        - `width` (Required): The target width for the scaled-down image(s). This parameter defines the horizontal dimension of the output images, affecting the scaling ratio. Type should be `INT`.
+        - `height` (Required): The target height for the scaled-down image(s). This parameter defines the vertical dimension of the output images, affecting the scaling ratio. Type should be `INT`.
+        - `crop` (Required): A mode specifying if and how the images should be cropped after scaling to ensure they fit the target dimensions. This affects the final appearance of the scaled images. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The scaled-down images, potentially cropped to fit the specified dimensions. This output is the direct result of the scaling operation applied to the input images. Type should be `IMAGE`.

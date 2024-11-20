@@ -1,6 +1,0 @@
-- `SeargeSaveFolderInputs`: This node is designed to handle input related to saving files in a specific folder, allowing users to specify the destination for saved files within a deprecated Searge module.
-    - Parameters:
-        - `save_to`: Specifies the destination folder where files should be saved. This parameter plays a crucial role in determining the output path for saved files. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `save_to`: Returns the specified destination folder for saving files, reflecting the user's input. Type should be `SAVE_FOLDER`.

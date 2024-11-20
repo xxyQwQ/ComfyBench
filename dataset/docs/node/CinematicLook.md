@@ -1,7 +1,0 @@
-- `CinematicLook`: The CinematicLook node is designed to transform images by applying a cinematic look, combining techniques from ImageOverlay and HALDClut. It enhances visuals to evoke a film-like aesthetic, incorporating various styles such as modern, retro, and black and white, among others.
-    - Parameters:
-        - `look`: The look parameter specifies the desired cinematic style to be applied to the image, such as 'modern', 'retro', or 'black and white'. It influences the visual characteristics and mood of the output. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The image parameter represents the visual content to be transformed. It serves as the base for applying the cinematic look, determining the final aesthetic outcome. Type should be `IMAGE`.
-    - Outputs:
-        - `result_img`: The output is a transformed image with the applied cinematic look, reflecting the specified style and enhancing the visual appeal. Type should be `IMAGE`.

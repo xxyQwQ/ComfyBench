@@ -1,0 +1,11 @@
+- `APersonMaskGenerator`: This node is designed to generate masks for persons in images, leveraging advanced segmentation techniques to isolate specific parts of a person, such as hair, body, face, and clothes. It utilizes image segmentation models to create detailed masks that can be used for various applications like image editing or augmentation.
+    - Inputs:
+        - `images` (Required): The input images for which the masks need to be generated. They are essential for the segmentation process, as the quality and characteristics of the images directly influence the accuracy and detail of the generated masks. Type should be `IMAGE`.
+        - `face_mask` (Optional): Indicates whether a mask for the face should be generated, allowing for targeted segmentation of the face area. Type should be `BOOLEAN`.
+        - `background_mask` (Optional): Indicates whether a mask for the background should be generated, enabling isolation or removal of the background from the image. Type should be `BOOLEAN`.
+        - `hair_mask` (Optional): Specifies whether a mask for the hair should be generated, facilitating targeted editing or enhancement of the hair in the image. Type should be `BOOLEAN`.
+        - `body_mask` (Optional): Determines whether a mask for the body should be generated, allowing for precise segmentation of the body area for various editing purposes. Type should be `BOOLEAN`.
+        - `clothes_mask` (Optional): Indicates whether a mask for the clothes should be generated, enabling detailed editing or alteration of clothing in the image. Type should be `BOOLEAN`.
+        - `confidence` (Optional): The confidence threshold for mask generation, affecting the precision and accuracy of the segmentation process. Type should be `FLOAT`.
+    - Outputs:
+        - `masks`: The generated masks highlighting the specified parts of the person. These masks can be used for various purposes, including image editing and augmentation. Type should be `MASK`.

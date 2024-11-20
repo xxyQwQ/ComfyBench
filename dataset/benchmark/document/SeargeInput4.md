@@ -1,0 +1,11 @@
+- `SeargeInput4`: SeargeInput4 is designed to manage and process model names within the system, facilitating the selection and application of different AI models for various tasks. It abstracts the complexity of handling model identifiers, ensuring seamless integration and operation across different components.
+    - Inputs:
+        - `base_model` (Required): Specifies the base model to be used, impacting the selection process and ultimately influencing the outcomes of the tasks performed by the node. Type should be `COMBO[STRING]`.
+        - `refiner_model` (Required): Specifies the refiner model to be used, impacting the selection process and ultimately influencing the outcomes of the tasks performed by the node. Type should be `COMBO[STRING]`.
+        - `vae_model` (Required): Specifies the VAE model to be used, impacting the selection process and ultimately influencing the outcomes of the tasks performed by the node. Type should be `COMBO[STRING]`.
+        - `main_upscale_model` (Required): Specifies the main upscale model to be used, impacting the selection process and ultimately influencing the outcomes of the tasks performed by the node. Type should be `COMBO[STRING]`.
+        - `support_upscale_model` (Required): Specifies the support upscale model to be used, impacting the selection process and ultimately influencing the outcomes of the tasks performed by the node. Type should be `COMBO[STRING]`.
+        - `lora_model` (Required): Specifies the LORA model to be used, impacting the selection process and ultimately influencing the outcomes of the tasks performed by the node. Type should be `COMBO[STRING]`.
+        - `model_settings` (Optional): Optional settings for the models that can further customize the processing and application of the models. Type should be `MODEL_SETTINGS`.
+    - Outputs:
+        - `model_names`: Returns the processed model names, ready for use in subsequent operations, indicating successful handling and preparation of model identifiers. Type should be `MODEL_NAMES`.

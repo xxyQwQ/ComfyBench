@@ -1,0 +1,11 @@
+- `RegionalConditioningColorMask __Inspire`: This node specializes in applying regional conditioning to an image based on a specified color mask. It combines textual prompts with visual cues from a color mask to generate conditioning that is spatially aware, enhancing the relevance and specificity of the generated content within designated areas.
+    - Inputs:
+        - `clip` (Required): A CLIP model identifier used for encoding the textual prompt into a format suitable for conditioning. It plays a crucial role in aligning the text with the visual content. Type should be `CLIP`.
+        - `color_mask` (Required): An image serving as a mask, where a specific color defines the region of interest for conditioning. This mask guides where the conditioning should be applied. Type should be `IMAGE`.
+        - `mask_color` (Required): The color value used to identify the region of interest within the color mask. It determines which parts of the image are affected by the conditioning. Type should be `STRING`.
+        - `strength` (Required): A scalar value that adjusts the intensity of the conditioning effect within the specified region. It influences how strongly the conditioning is applied. Type should be `FLOAT`.
+        - `set_cond_area` (Required): Defines the area of conditioning, allowing for either default application or focusing on the bounds of the mask. This choice affects how the conditioning is spatially distributed. Type should be `COMBO[STRING]`.
+        - `prompt` (Required): The textual prompt that is encoded and integrated with the visual conditioning. It provides the thematic direction for the content generation. Type should be `STRING`.
+    - Outputs:
+        - `conditioning`: The resulting conditioning data, tailored to the specified region and prompt, ready for further processing in content generation. Type should be `CONDITIONING`.
+        - `mask`: The processed mask that delineates the region of interest for the applied conditioning. Type should be `MASK`.

@@ -1,0 +1,15 @@
+- `ImageResizeKJ`: The ImageResizeKJ node is designed to resize images to specified dimensions, with options to maintain the original aspect ratio, upscale using various methods, and ensure the final dimensions are divisible by a given number. It provides flexibility in defining the target size either directly or based on the size of another image, catering to diverse image processing needs.
+    - Inputs:
+        - `image` (Required): The input image to be resized. This parameter is crucial as it provides the source image for the resizing operation. Type should be `IMAGE`.
+        - `width` (Required): The target width for the resized image. If keep_proportion is true and width is set, the height will be adjusted to maintain the aspect ratio. Type should be `INT`.
+        - `height` (Required): The target height for the resized image. Similar to width, if keep_proportion is true and height is set, the width will be adjusted accordingly. Type should be `INT`.
+        - `upscale_method` (Required): Specifies the method to be used for upscaling the image, offering various algorithms to choose from. Type should be `COMBO[STRING]`.
+        - `keep_proportion` (Required): A boolean flag indicating whether to maintain the original aspect ratio of the image during resizing. Type should be `BOOLEAN`.
+        - `divisible_by` (Required): Ensures the dimensions of the resized image are divisible by this value, useful for certain types of neural network inputs. Type should be `INT`.
+        - `width_input` (Optional): An optional width input that overrides the width parameter if provided, allowing for dynamic resizing based on external inputs. Type should be `INT`.
+        - `height_input` (Optional): An optional height input that overrides the height parameter if provided, similar to width_input. Type should be `INT`.
+        - `get_image_size` (Optional): An optional image input used to determine the target size for resizing, based on the dimensions of this image. Type should be `IMAGE`.
+    - Outputs:
+        - `IMAGE`: unknown Type should be `IMAGE`.
+        - `width`: The width of the resized image. Type should be `INT`.
+        - `height`: The height of the resized image. Type should be `INT`.

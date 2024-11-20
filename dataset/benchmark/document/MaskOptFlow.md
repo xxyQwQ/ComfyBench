@@ -1,0 +1,7 @@
+- `MaskOptFlow`: The MaskOptFlow node applies a mask to an optical flow input, effectively filtering the optical flow data based on the mask provided. This operation is crucial for isolating relevant motion information from specific regions of interest within the optical flow data.
+    - Inputs:
+        - `optical_flow` (Required): The optical flow input represents the motion between two consecutive frames. It is essential for understanding the dynamics within the scene. Type should be `OPTICAL_FLOW`.
+        - `mask` (Required): The mask input is used to filter the optical flow data, allowing only the motion information from regions of interest to be retained. Type should be `MASK`.
+    - Outputs:
+        - `OPTICAL_FLOW`: The filtered optical flow data, where motion information is retained only for the regions specified by the mask. Type should be `OPTICAL_FLOW`.
+        - `PREVIEW_IMAGE`: A visualization of the filtered optical flow, providing a visual representation of the motion information retained by the mask. Type should be `IMAGE`.

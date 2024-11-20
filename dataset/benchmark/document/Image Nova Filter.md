@@ -1,0 +1,7 @@
+- `Image Nova Filter`: The node applies a 'Nova' filter effect to images, enhancing them with a specific visual style that alters their appearance in a distinctive way. This process involves modifying various aspects of the image to achieve the desired aesthetic, contributing to a broad range of creative and artistic applications.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the input image(s) to which the Nova filter effect will be applied. It plays a crucial role in determining the final output, as the filter effect directly modifies the visual characteristics of these images. Type should be `IMAGE`.
+        - `amplitude` (Required): The 'amplitude' parameter adjusts the intensity of the Nova filter effect, influencing the degree of visual alteration applied to the image. Type should be `FLOAT`.
+        - `frequency` (Required): The 'frequency' parameter controls the frequency of the visual patterns introduced by the Nova filter effect, affecting the overall texture and appearance of the image. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output is the transformed image(s) after the application of the Nova filter effect, showcasing the distinctive visual style imparted by the filter. Type should be `IMAGE`.

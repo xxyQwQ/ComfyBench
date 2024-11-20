@@ -1,0 +1,24 @@
+- `KSamplerAdvanced __Inspire`: This node is an advanced version of the KSampler tailored for the Inspire pack, designed to enhance sampling strategies with more sophisticated algorithms and options. It aims to provide users with enhanced control and flexibility over the sampling process, enabling the creation of more refined and complex generative art.
+    - Inputs:
+        - `model` (Required): Specifies the model used for the sampling process, serving as the core component that drives the generation of outputs. Type should be `MODEL`.
+        - `add_noise` (Required): Determines whether noise should be added to the sampling process, influencing the diversity and uniqueness of the generated results. Type should be `BOOLEAN`.
+        - `noise_seed` (Required): Sets the seed for noise generation, ensuring reproducibility and consistency in the sampling outcomes. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps to be taken in the sampling process, affecting the detail and quality of the generated outputs. Type should be `INT`.
+        - `cfg` (Required): Controls the configuration for the sampling, adjusting parameters such as creativity and variance in the generated results. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the specific sampler algorithm to be used, allowing for customization of the sampling strategy. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduler for controlling the sampling process, further customizing the generation approach. Type should be `COMBO[STRING]`.
+        - `positive` (Required): Specifies the positive conditioning to guide the sampling towards desired themes or concepts. Type should be `CONDITIONING`.
+        - `negative` (Required): Indicates the negative conditioning to avoid certain themes or elements in the generated results. Type should be `CONDITIONING`.
+        - `latent_image` (Required): Provides the initial latent image to be used in the sampling process, serving as a starting point for generation. Type should be `LATENT`.
+        - `start_at_step` (Required): Determines the starting step of the sampling process, allowing for mid-process interventions or adjustments. Type should be `INT`.
+        - `end_at_step` (Required): Specifies the ending step of the sampling process, defining the scope of the generation. Type should be `INT`.
+        - `noise_mode` (Required): Selects the mode of noise application, influencing the texture and quality of the generated images. Type should be `COMBO[STRING]`.
+        - `return_with_leftover_noise` (Required): Decides whether to include leftover noise in the final output, affecting the final visual appearance. Type should be `BOOLEAN`.
+        - `batch_seed_mode` (Required): Determines the mode for seed progression throughout the batch, affecting the variation and consistency of generated samples. Type should be `COMBO[STRING]`.
+        - `variation_seed` (Required): Sets the seed for variation, enabling controlled diversity in the sampling outcomes. Type should be `INT`.
+        - `variation_strength` (Required): Controls the strength of variation applied to the sampling, adjusting the degree of diversity in the results. Type should be `FLOAT`.
+        - `variation_method` (Optional): Specifies the method of applying variation, influencing how diversity is introduced into the sampling process. Type should be `COMBO[STRING]`.
+        - `noise_opt` (Optional): Specifies the optional noise parameters to be used in the sampling process, allowing for further customization of noise characteristics. Type should be `NOISE`.
+        - `scheduler_func_opt` (Optional): Optionally provides a custom scheduling function, offering advanced control over the sampling dynamics. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `latent`: Outputs the final latent representation after the sampling process, reflecting the culmination of the applied conditions and configurations. Type should be `LATENT`.

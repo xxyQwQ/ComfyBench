@@ -1,0 +1,18 @@
+- `LayerMask_ SegmentAnythingUltra V2`: This node specializes in segmenting various objects within an image, leveraging advanced algorithms to accurately distinguish and isolate different elements. It's designed to enhance layer-based editing by providing precise segmentation capabilities, making it a valuable tool for complex image manipulation tasks.
+    - Inputs:
+        - `image` (Required): The input image to be segmented. It serves as the primary source for the segmentation process, determining the visual content the algorithm will analyze and segment. Type should be `IMAGE`.
+        - `sam_model` (Required): Specifies the SAM model to be used for segmentation, influencing the algorithm's approach to identifying and isolating elements within the image. Type should be `COMBO[STRING]`.
+        - `grounding_dino_model` (Required): Determines the grounding DINO model to be utilized, affecting how the algorithm interprets and segments the image based on learned patterns and features. Type should be `COMBO[STRING]`.
+        - `threshold` (Required): Sets the threshold for segmentation, defining the sensitivity of the algorithm in distinguishing between different elements within the image. Type should be `FLOAT`.
+        - `detail_method` (Required): Chooses the method for enhancing detail in the segmentation, allowing for finer control over the clarity and precision of the segmented elements. Type should be `COMBO[STRING]`.
+        - `detail_erode` (Required): Specifies the amount of erosion to apply to the details in the segmentation, helping to refine the edges and boundaries of segmented elements. Type should be `INT`.
+        - `detail_dilate` (Required): Determines the amount of dilation for the details, enhancing the visibility and prominence of segmented elements. Type should be `INT`.
+        - `black_point` (Required): Sets the black point for the segmentation, adjusting the darkest areas of the image for better contrast and visibility of elements. Type should be `FLOAT`.
+        - `white_point` (Required): Defines the white point, modifying the brightest areas of the image to improve the segmentation's overall appearance and clarity. Type should be `FLOAT`.
+        - `process_detail` (Required): Enables or disables the processing of fine details in the segmentation, allowing users to choose between a more general or a more detailed segmentation result. Type should be `BOOLEAN`.
+        - `prompt` (Required): Provides a textual prompt to guide the segmentation process, offering contextual clues or specific instructions to the algorithm. Type should be `STRING`.
+        - `device` (Required): Specifies the computational device (CPU or GPU) on which the segmentation will be performed, affecting the performance and speed of the process. Type should be `COMBO[STRING]`.
+        - `max_megapixels` (Required): Limits the maximum resolution of the image to be processed, balancing detail against processing time and resource usage. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output image after segmentation, which may include modifications or enhancements applied during the process. Type should be `IMAGE`.
+        - `mask`: The generated mask corresponding to the segmented areas of the input image, useful for further editing or processing steps. Type should be `MASK`.

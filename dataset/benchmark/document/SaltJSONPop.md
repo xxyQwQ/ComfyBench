@@ -1,0 +1,7 @@
+- `SaltJSONPop`: The SaltJSONPop node is designed to selectively remove specified keys from a JSON structure. It can operate recursively, allowing for the deletion of keys not only at the root level but also deeply nested within the JSON object. This functionality is particularly useful for cleaning or modifying JSON data by removing unnecessary, sensitive, or redundant information.
+    - Inputs:
+        - `json_input` (Required): The JSON string from which keys will be removed. This input is crucial as it defines the structure and content that will be manipulated. Type should be `STRING`.
+        - `key` (Required): The name of the key(s) to be removed from the JSON input. This parameter determines which parts of the JSON structure will be targeted for deletion. Type should be `STRING`.
+        - `max_occurrences` (Required): Defines the maximum number of occurrences of the specified key to remove. If set to -1, there is no limit, allowing for the removal of all instances of the key. Type should be `INT`.
+    - Outputs:
+        - `json_output`: The modified JSON string after the specified keys have been removed. This output reflects the changes made to the original JSON structure. Type should be `STRING`.

@@ -1,7 +1,0 @@
-- `GetTextFromJson`: This node is designed to extract a string value from a JSON object based on a specified key. It simplifies the process of retrieving textual information from structured JSON data, making it a valuable utility in data processing and manipulation tasks within the Art Venture/Utils category.
-    - Parameters:
-        - `key`: The key corresponding to the value to be retrieved from the JSON object. This parameter allows for targeted extraction of data, enhancing the node's flexibility and utility. Type should be `STRING`.
-    - Inputs:
-        - `json`: The JSON object from which a string value is to be extracted. This parameter is crucial for specifying the source data. Type should be `JSON`.
-    - Outputs:
-        - `string`: The string value retrieved from the JSON object. This output is significant for downstream processing or display purposes. Type should be `STRING`.

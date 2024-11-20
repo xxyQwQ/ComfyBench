@@ -1,0 +1,10 @@
+- `PerpNegGuider`: The PerpNegGuider node is designed to guide the generation process by applying perpendicular negative conditioning. It adjusts the generation towards positive conditions while steering clear of specified negative conditions, utilizing a configurable scale for negative conditioning.
+    - Inputs:
+        - `model` (Required): The model parameter represents the generative model to which the guidance will be applied, serving as the foundation for the conditioning process. Type should be `MODEL`.
+        - `positive` (Required): The positive parameter specifies the desired attributes or conditions that the generation should align with, guiding the model towards generating content that matches these positive conditions. Type should be `CONDITIONING`.
+        - `negative` (Required): The negative parameter defines the attributes or conditions that the generation should avoid, helping to steer the generated content away from these undesired aspects. Type should be `CONDITIONING`.
+        - `empty_conditioning` (Required): The empty_conditioning parameter is used to reset or provide a baseline for the conditioning, ensuring that the guidance starts from a neutral state. Type should be `CONDITIONING`.
+        - `cfg` (Required): The cfg parameter controls the overall strength of the conditioning, allowing for fine-tuning of how strongly the positive and negative conditions influence the generation. Type should be `FLOAT`.
+        - `neg_scale` (Required): The neg_scale parameter adjusts the scale of the negative conditioning, modifying the extent to which negative conditions are avoided in the generation process. Type should be `FLOAT`.
+    - Outputs:
+        - `guider`: The output is a configured guider object that applies perpendicular negative conditioning to guide the generative model. Type should be `GUIDER`.

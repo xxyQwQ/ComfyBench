@@ -1,7 +1,0 @@
-- `SaltMaskDominantRegion`: This node focuses on identifying and isolating the dominant region within a given set of masks based on a specified threshold. It effectively highlights the most prominent area in an image mask, making it useful for tasks that require focus on significant mask regions.
-    - Parameters:
-        - `threshold`: A threshold value to distinguish the dominant region within the masks. It plays a pivotal role in defining what constitutes the 'dominant' area by setting a cutoff intensity value. Type should be `INT`.
-    - Inputs:
-        - `masks`: The input masks on which the dominant region detection is to be performed. These masks are crucial for determining the area of interest within the images. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The output is a tensor of masks with the dominant region highlighted. This is significant for applications needing to focus on or manipulate the primary area within the masks. Type should be `MASK`.

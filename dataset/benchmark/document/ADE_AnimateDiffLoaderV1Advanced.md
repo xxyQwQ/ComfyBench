@@ -1,0 +1,16 @@
+- `ADE_AnimateDiffLoaderV1Advanced`: This node is designed for advanced loading of AnimateDiff models, offering enhanced configuration options and optimizations for deprecated model versions. It aims to provide a more flexible and efficient way to work with older AnimateDiff models, ensuring compatibility and performance.
+    - Inputs:
+        - `model` (Required): Specifies the AnimateDiff model to be loaded, allowing for advanced configuration and optimization of deprecated models. Type should be `MODEL`.
+        - `latents` (Required): Defines the latent variables associated with the AnimateDiff model, crucial for its operation and performance. Type should be `LATENT`.
+        - `model_name` (Required): Identifies the specific AnimateDiff model to be loaded, enabling precise selection and configuration. Type should be `COMBO[STRING]`.
+        - `unlimited_area_hack` (Required): A boolean flag that, when enabled, allows for bypassing certain limitations, enhancing the model's flexibility. Type should be `BOOLEAN`.
+        - `context_length` (Required): unknown Type should be `INT`.
+        - `context_stride` (Required): unknown Type should be `INT`.
+        - `context_overlap` (Required): unknown Type should be `INT`.
+        - `context_schedule` (Required): unknown Type should be `COMBO[STRING]`.
+        - `closed_loop` (Required): unknown Type should be `BOOLEAN`.
+        - `beta_schedule` (Required): Determines the beta schedule used during the model's operation, affecting its performance and outcomes. Type should be `COMBO[STRING]`.
+        - `deprecation_warning` (Optional): Provides a warning about the deprecated status of the model, advising on its experimental or limited use. Type should be `ADEWARN`.
+    - Outputs:
+        - `model`: Outputs the loaded AnimateDiff model, configured and optimized for use. Type should be `MODEL`.
+        - `latent`: unknown Type should be `LATENT`.

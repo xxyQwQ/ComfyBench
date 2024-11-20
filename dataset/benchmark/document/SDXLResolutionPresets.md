@@ -1,0 +1,6 @@
+- `SDXLResolutionPresets`: The SDXLResolutionPresets node provides a selection of predefined image resolution presets for use in image generation tasks, allowing users to easily choose from a variety of common aspect ratios and dimensions.
+    - Inputs:
+        - `resolution` (Required): Specifies the desired image resolution from a predefined list of common resolutions, influencing the output image's dimensions. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `width`: The width component of the selected resolution preset. Type should be `INT`.
+        - `height`: The height component of the selected resolution preset. Type should be `INT`.

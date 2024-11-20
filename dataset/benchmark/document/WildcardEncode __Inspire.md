@@ -1,0 +1,17 @@
+- `WildcardEncode __Inspire`: The 'WildcardEncode __Inspire' node is designed to process and enhance text prompts through sophisticated encoding techniques, leveraging external models or custom algorithms. It focuses on refining the quality and specificity of generated content by applying advanced text manipulation strategies.
+    - Inputs:
+        - `model` (Required): Specifies the model to be used for encoding. It is a critical component that determines the effectiveness of the encoding process. Type should be `MODEL`.
+        - `clip` (Required): Refers to the CLIP model used alongside the primary model to enhance the encoding process. It plays a vital role in interpreting and processing the text. Type should be `CLIP`.
+        - `token_normalization` (Required): Defines the method for token normalization, affecting how text inputs are processed and encoded. It influences the encoding's adaptability to different text lengths and complexities. Type should be `COMBO[STRING]`.
+        - `weight_interpretation` (Required): Determines how weights are interpreted during the encoding process, impacting the final encoded output's quality and relevance. Type should be `COMBO[STRING]`.
+        - `wildcard_text` (Required): The text input that will be encoded. This parameter is central to the node's operation, directly influencing the output. Type should be `STRING`.
+        - `populated_text` (Required): The result of populating the wildcard text, automatically generated based on the encoding process. It reflects the enhanced version of the input text. Type should be `STRING`.
+        - `mode` (Required): Controls whether the text is populated dynamically or fixed, affecting how the wildcard text is processed and encoded. Type should be `BOOLEAN`.
+        - `Select to add LoRA` (Required): Allows selection of a LoRA to add to the text, enhancing the encoding with specific characteristics or effects. Type should be `COMBO[STRING]`.
+        - `Select to add Wildcard` (Required): Enables the addition of a predefined wildcard to the text, further customizing the encoding process. Type should be `COMBO[STRING]`.
+        - `seed` (Required): The seed value for random processes within the encoding, ensuring reproducibility and consistency in the output. Type should be `INT`.
+    - Outputs:
+        - `model`: The model after being processed and potentially modified by the encoding. Type should be `MODEL`.
+        - `clip`: The CLIP model after being processed and potentially modified by the encoding. Type should be `CLIP`.
+        - `conditioning`: The conditioning information generated as a result of the encoding process, used to guide the generation. Type should be `CONDITIONING`.
+        - `populated_text`: The final populated text after encoding, representing the enhanced and refined output. Type should be `STRING`.

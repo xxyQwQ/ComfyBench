@@ -1,0 +1,9 @@
+- `LayeredDiffusionDecode`: This node is designed to decode images through a layered diffusion process, leveraging advanced techniques to enhance image quality and detail. It focuses on reconstructing or generating images by applying a series of diffusion steps, aimed at improving visual fidelity and achieving high-resolution outputs.
+    - Inputs:
+        - `samples` (Required): Represents the input samples to be decoded, playing a crucial role in determining the characteristics and quality of the decoded images. Type should be `LATENT`.
+        - `images` (Required): A tensor of images to be processed, serving as the base for the diffusion decoding process. This parameter is essential for defining the initial state of the images before applying the diffusion steps. Type should be `IMAGE`.
+        - `sd_version` (Required): Indicates the version of the diffusion model to be used, impacting the decoding process's effectiveness and the final image quality. Type should be `COMBO[STRING]`.
+        - `sub_batch_size` (Required): Determines the size of sub-batches for processing, optimizing the decoding operation's efficiency and resource utilization. Type should be `INT`.
+    - Outputs:
+        - `image`: The decoded image output, showcasing the result of the layered diffusion decoding process. Type should be `IMAGE`.
+        - `mask`: The alpha mask output, representing the transparency layer decoded alongside the image, enhancing the image's composition and detail. Type should be `MASK`.

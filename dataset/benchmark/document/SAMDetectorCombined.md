@@ -1,0 +1,13 @@
+- `SAMDetectorCombined`: The SAMDetectorCombined node is designed for generating segmentation masks by leveraging a SAM model. It combines various inputs, including image data and segmentation hints, to produce detailed masks that highlight specific areas of interest within the image. This process is crucial for tasks that require precise image analysis and manipulation, such as object detection and image editing.
+    - Inputs:
+        - `sam_model` (Required): Specifies the SAM model to be used for mask generation. It plays a crucial role in determining the accuracy and quality of the output masks. Type should be `SAM_MODEL`.
+        - `segs` (Required): Represents the segmentation data that will be refined by the SAM model to produce the final mask. It's essential for guiding the mask generation process. Type should be `SEGS`.
+        - `image` (Required): The input image on which the mask generation is performed. It serves as the primary data source for the detection process. Type should be `IMAGE`.
+        - `detection_hint` (Required): Provides hints to the model about the expected location and shape of the object to be masked, enhancing the precision of the detection. Type should be `COMBO[STRING]`.
+        - `dilation` (Required): Adjusts the thickness of the edges in the generated mask, allowing for finer control over the mask's appearance. Type should be `INT`.
+        - `threshold` (Required): Sets the confidence threshold for mask generation, determining which areas are included in the final mask. Type should be `FLOAT`.
+        - `bbox_expansion` (Required): Controls the expansion of bounding boxes around detected objects, affecting the mask's coverage area. Type should be `INT`.
+        - `mask_hint_threshold` (Required): Determines the threshold for applying mask hints, influencing how hints are used to refine the mask. Type should be `FLOAT`.
+        - `mask_hint_use_negative` (Required): Indicates whether negative hints are used, which can exclude certain areas from the mask, providing more control over the mask's content. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `mask`: The output is a detailed mask that highlights specific areas of interest within the image, based on the provided inputs and model predictions. Type should be `MASK`.

@@ -1,0 +1,11 @@
+- `Image Resize`: The Image Resize node is designed to modify the dimensions of an input image according to specified parameters. It supports various resizing modes, including scaling, rescaling, and cropping, to accommodate different image processing needs. This node can also apply supersampling for higher quality resizing and adjust the image size to meet specific width and height requirements, making it versatile for a range of image manipulation tasks.
+    - Inputs:
+        - `image` (Required): The input image to be resized. This image undergoes transformations based on the specified mode and parameters, affecting the final output dimensions and quality. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the resizing mode, such as 'scale', 'rescale', or a cropping method. This determines how the image dimensions are adjusted. Type should be `COMBO[STRING]`.
+        - `supersample` (Required): Indicates whether supersampling should be applied to the image for higher quality resizing. Type should be `COMBO[STRING]`.
+        - `resampling` (Required): The resampling filter used during resizing, such as 'bicubic' or 'lanczos', affecting the quality of the resized image. Type should be `COMBO[STRING]`.
+        - `rescale_factor` (Required): The scaling factor used when the mode is set to 'rescale', determining how much the image dimensions are increased or decreased. Type should be `FLOAT`.
+        - `resize_width` (Required): The target width of the image after resizing. It ensures the final width is a multiple of 8 for optimal processing. Type should be `INT`.
+        - `resize_height` (Required): The target height of the image after resizing. It ensures the final height is a multiple of 8 for optimal processing. Type should be `INT`.
+    - Outputs:
+        - `image`: The resized version of the input image, adjusted according to the specified parameters and mode. Type should be `IMAGE`.

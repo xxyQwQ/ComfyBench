@@ -1,0 +1,15 @@
+- `LayerStyle_ OuterGlow`: The OuterGlow node applies an outer glow effect to images, enhancing their visual appeal by adding a soft, diffused light around their borders. This node is designed to stylize images by simulating the effect of a light source illuminating the outer edges, creating a distinctive glow that can be customized to fit various aesthetic requirements.
+    - Inputs:
+        - `background_image` (Required): The 'background_image' input specifies the base image to which the outer glow effect will be applied. It serves as the foundational layer for the effect. Type should be `IMAGE`.
+        - `layer_image` (Required): The 'layer_image' input represents the image layer that will receive the outer glow effect. This layer is superimposed on the background image to create the glow effect. Type should be `IMAGE`.
+        - `invert_mask` (Required): The 'invert_mask' input determines whether the mask applied to the layer image should be inverted, affecting how the glow effect is masked around the image. Type should be `BOOLEAN`.
+        - `blend_mode` (Required): The 'blend_mode' input specifies the blending mode used to combine the layer image with the outer glow, influencing the overall appearance of the effect. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): The 'opacity' input controls the transparency of the outer glow effect, allowing for fine-tuning of its visibility against the background image. Type should be `INT`.
+        - `brightness` (Required): The 'brightness' input adjusts the intensity of the glow effect, affecting how brightly the glow appears around the layer image. Type should be `INT`.
+        - `glow_range` (Required): The 'glow_range' input defines the spread of the outer glow effect, determining how far the glow extends from the edges of the layer image. Type should be `INT`.
+        - `blur` (Required): The 'blur' input sets the level of blur applied to the outer glow, softening the edges of the glow for a more diffused appearance. Type should be `INT`.
+        - `light_color` (Required): The 'light_color' input specifies the color at the center of the glow effect, contributing to the overall color scheme of the glow. Type should be `STRING`.
+        - `glow_color` (Required): The 'glow_color' input determines the color of the outer edges of the glow, allowing for a gradient effect from the center to the outskirts of the glow. Type should be `STRING`.
+        - `layer_mask` (Optional): The 'layer_mask' input allows for an additional masking layer to be applied to the layer image, providing further control over how the glow effect is applied and integrated with the image. Type should be `MASK`.
+    - Outputs:
+        - `image`: The 'image' output type represents the final image with the applied outer glow effect, showcasing the enhanced visual appeal with a soft, diffused light around its borders. Type should be `IMAGE`.

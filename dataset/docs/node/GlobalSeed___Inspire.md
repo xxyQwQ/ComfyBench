@@ -1,8 +1,0 @@
-- `GlobalSeed __Inspire`: The GlobalSeed node in the Inspire pack is designed to manage and manipulate the global seed value used across various nodes in a workflow. It allows for the setting of a seed value, choosing an action to modify this seed (e.g., increment, decrement, randomize), and controlling the seed's application mode (before or after generation). This functionality is crucial for ensuring consistency, repeatability, and variation in the outputs of a generative process.
-    - Parameters:
-        - `value`: Specifies the initial seed value. It is crucial for initializing the seed manipulation process and affects the starting point for any seed-based operations. Type should be `INT`.
-        - `mode`: Determines whether the seed manipulation occurs before or after the generation process, affecting how and when the seed value influences the workflow. Type should be `BOOLEAN`.
-        - `action`: Defines the operation to be performed on the seed value (e.g., fixed, increment, decrement, randomize), dictating how the seed changes over time or across nodes. Type should be `COMBO[STRING]`.
-        - `last_seed`: Holds the last seed value used, allowing for tracking and potentially reverting to a previous state. Type should be `STRING`.
-    - Inputs:
-    - Outputs:

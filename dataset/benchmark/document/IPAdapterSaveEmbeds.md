@@ -1,0 +1,5 @@
+- `IPAdapterSaveEmbeds`: The IPAdapterSaveEmbeds node is designed for saving embedding data to a file, facilitating the persistence of computed embeddings for later use or analysis. It abstracts the process of file handling and serialization of embeddings, ensuring data is efficiently stored in a structured manner.
+    - Inputs:
+        - `embeds` (Required): The 'embeds' parameter represents the embedding data to be saved. It is crucial for the operation as it contains the actual data that needs to be persisted. Type should be `EMBEDS`.
+        - `filename_prefix` (Required): The 'filename_prefix' parameter allows for customization of the saved file's name, providing flexibility in organizing and identifying embedding files. Type should be `STRING`.
+    - Outputs:

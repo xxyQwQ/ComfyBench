@@ -1,0 +1,5 @@
+- `List Length`: The List Length node is designed to calculate the length of a given list. It abstracts the process of determining how many elements are contained within a list, providing a straightforward way to obtain this information.
+    - Inputs:
+        - `In` (Required): Represents the input list whose length is to be calculated. The length of this list directly determines the output of the node. Type should be `*`.
+    - Outputs:
+        - `Length`: The output is the length of the input list, indicating how many elements it contains. Type should be `INT`.

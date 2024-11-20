@@ -1,9 +1,0 @@
-- `Inference_Core_MediaPipe-FaceMeshPreprocessor`: This node is designed to preprocess images for face mesh detection tasks by leveraging MediaPipe's Face Mesh technology. It dynamically installs dependencies, configures MediaPipe Face Mesh settings based on input parameters, and processes images to detect facial landmarks with configurable accuracy and face count limits.
-    - Parameters:
-        - `max_faces`: Specifies the maximum number of faces to detect in an image, allowing for control over the face detection scope and performance. Type should be `INT`.
-        - `min_confidence`: Determines the minimum confidence threshold for detecting faces, enabling fine-tuning of the detection sensitivity to balance between accuracy and detection rate. Type should be `FLOAT`.
-        - `resolution`: The resolution to which the input image is resized before processing, affecting the precision of face mesh detection. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for face mesh detection. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed image with detected face meshes, ready for further analysis or visualization. Type should be `IMAGE`.

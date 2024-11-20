@@ -1,0 +1,33 @@
+- `easy pipeEdit`: The `pipeEdit` node is designed to modify and enhance the pipeline configuration for generative tasks, allowing for the dynamic adjustment of parameters such as model settings, conditioning inputs, and other generative components. It serves as a utility to refine and adapt the pipeline based on specific requirements or to incorporate new information.
+    - Inputs:
+        - `clip_skip` (Required): unknown Type should be `INT`.
+        - `optional_positive` (Required): An optional parameter for specifying additional positive conditioning, which can be used to further guide the generative model towards desired outcomes. Type should be `STRING`.
+        - `positive_token_normalization` (Required): Determines the method for normalizing positive tokens, affecting how the model interprets and weights positive conditioning inputs. Type should be `COMBO[STRING]`.
+        - `positive_weight_interpretation` (Required): Specifies how the weight of positive conditioning inputs is interpreted, influencing the model's focus on these inputs during generation. Type should be `COMBO[STRING]`.
+        - `optional_negative` (Required): An optional parameter for specifying additional negative conditioning, which can be used to steer the generative model away from undesired outcomes. Type should be `STRING`.
+        - `negative_token_normalization` (Required): Determines the method for normalizing negative tokens, affecting how the model interprets and weights negative conditioning inputs. Type should be `COMBO[STRING]`.
+        - `negative_weight_interpretation` (Required): Specifies how the weight of negative conditioning inputs is interpreted, influencing the model's avoidance of these inputs during generation. Type should be `COMBO[STRING]`.
+        - `a1111_prompt_style` (Required): Indicates whether the A1111 prompt style is used, which can affect the interpretation and processing of conditioning inputs. Type should be `BOOLEAN`.
+        - `conditioning_mode` (Required): Specifies the mode of conditioning, which can alter how positive and negative conditioning inputs are combined and applied. Type should be `COMBO[STRING]`.
+        - `average_strength` (Required): Defines the average strength of conditioning, impacting the overall influence of conditioning inputs on the generative process. Type should be `FLOAT`.
+        - `old_cond_start` (Required): The starting point for the original conditioning range, used in adjusting the influence of conditioning inputs. Type should be `FLOAT`.
+        - `old_cond_end` (Required): The ending point for the original conditioning range, used in adjusting the influence of conditioning inputs. Type should be `FLOAT`.
+        - `new_cond_start` (Required): The starting point for the new conditioning range, allowing for the adjustment of conditioning input influence. Type should be `FLOAT`.
+        - `new_cond_end` (Required): The ending point for the new conditioning range, allowing for the adjustment of conditioning input influence. Type should be `FLOAT`.
+        - `pipe` (Optional): Represents the current state of the pipeline, encapsulating all relevant settings and parameters that define the generative process. It is crucial for determining the modifications to be applied. Type should be `PIPE_LINE`.
+        - `model` (Optional): unknown Type should be `MODEL`.
+        - `pos` (Optional): unknown Type should be `CONDITIONING`.
+        - `neg` (Optional): unknown Type should be `CONDITIONING`.
+        - `latent` (Optional): unknown Type should be `LATENT`.
+        - `vae` (Optional): unknown Type should be `VAE`.
+        - `clip` (Optional): unknown Type should be `CLIP`.
+        - `image` (Optional): unknown Type should be `IMAGE`.
+    - Outputs:
+        - `pipe`: The modified pipeline configuration, reflecting the applied edits and enhancements to accommodate the specified adjustments or new settings. Type should be `PIPE_LINE`.
+        - `model`: The selected or modified generative model within the new pipeline configuration. Type should be `MODEL`.
+        - `pos`: Positive conditioning parameters or text in the updated pipeline, guiding towards desired generative outcomes. Type should be `CONDITIONING`.
+        - `neg`: Negative conditioning parameters or text in the updated pipeline, used to avoid undesired generative outcomes. Type should be `CONDITIONING`.
+        - `latent`: Settings or parameters related to the latent space manipulation in the new pipeline configuration. Type should be `LATENT`.
+        - `vae`: VAE settings in the updated pipeline, if applicable, for image or text generation. Type should be `VAE`.
+        - `clip`: CLIP model parameters in the new pipeline configuration for enhanced content alignment. Type should be `CLIP`.
+        - `image`: Images specified for use or generation within the new pipeline configuration. Type should be `IMAGE`.

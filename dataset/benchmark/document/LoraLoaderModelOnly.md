@@ -1,0 +1,7 @@
+- `LoraLoaderModelOnly`: The LoraLoaderModelOnly node is designed to load and apply LoRA (Low-Rank Adaptation) modifications to a given model, enhancing its capabilities or adapting it for specific tasks without altering the original model architecture. It focuses on applying these modifications solely to the model, disregarding any other components such as CLIP or additional inputs.
+    - Inputs:
+        - `model` (Required): The model to which LoRA modifications will be applied. This parameter is crucial as it determines the base model that will be enhanced with LoRA parameters. Type should be `MODEL`.
+        - `lora_name` (Required): The name of the LoRA file to be applied to the model. This parameter specifies which LoRA modifications are to be loaded and applied, directly influencing the model's adaptation. Type should be `COMBO[STRING]`.
+        - `strength_model` (Required): A floating-point value that determines the strength of the LoRA modifications applied to the model. It allows for fine-tuning the impact of LoRA on the model's behavior. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The modified model with LoRA adaptations applied. This output showcases the enhanced capabilities or specific task adaptations of the original model through LoRA. Type should be `MODEL`.

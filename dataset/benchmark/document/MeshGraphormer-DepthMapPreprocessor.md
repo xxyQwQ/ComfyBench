@@ -1,0 +1,13 @@
+- `MeshGraphormer-DepthMapPreprocessor`: This node is designed to preprocess images for depth map generation, specifically tailored for hand gestures. It utilizes a MeshGraphormer model to refine depth maps and masks of hands within images, enhancing the accuracy of depth perception for each detected hand region.
+    - Inputs:
+        - `image` (Required): The input image to be processed for hand gesture depth map generation. It serves as the primary data for detecting hand landmarks and generating corresponding depth maps and masks. Type should be `IMAGE`.
+        - `mask_bbox_padding` (Optional): Specifies the padding around the bounding box of detected hands, affecting the area considered for depth map generation. It helps in adjusting the focus area around the hands. Type should be `INT`.
+        - `resolution` (Optional): The resolution to which the input images are resized before processing. This parameter directly impacts the model's performance and the quality of the output depth maps. Type should be `INT`.
+        - `mask_type` (Optional): Determines the type of mask to be generated, such as based on depth values or tight bounding boxes, influencing how hand regions are isolated from the background. Type should be `COMBO[STRING]`.
+        - `mask_expand` (Optional): Defines the expansion or contraction of the mask boundaries, allowing for finer control over the size of the hand region to be processed. Type should be `INT`.
+        - `rand_seed` (Optional): A seed value for random number generation, ensuring reproducibility of the depth maps and masks across multiple runs. Type should be `INT`.
+        - `detect_thr` (Optional): The detection threshold for the MeshGraphormer model, determining the sensitivity of hand detection within the images. Type should be `FLOAT`.
+        - `presence_thr` (Optional): The presence threshold for the MeshGraphormer model, affecting the likelihood of a hand's presence being recognized in the processed area. Type should be `FLOAT`.
+    - Outputs:
+        - `IMAGE`: The refined depth maps for each hand region detected in the input images. These maps provide detailed depth information, crucial for subsequent processing steps. Type should be `IMAGE`.
+        - `INPAINTING_MASK`: Binary masks corresponding to the hand regions within the input images. These masks are essential for isolating hand gestures from the background. Type should be `MASK`.

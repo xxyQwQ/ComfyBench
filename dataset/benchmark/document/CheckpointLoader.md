@@ -1,0 +1,8 @@
+- `CheckpointLoader`: The CheckpointLoader node is designed for advanced loading of model checkpoints, specifically enabling the selection of configurations and checkpoints from predefined folders. It facilitates the dynamic loading of various components such as models, CLIP, and VAE based on the specified configuration and checkpoint names, supporting complex setups and custom model loading strategies.
+    - Inputs:
+        - `config_name` (Required): Specifies the name of the configuration to use, allowing the node to locate and load the corresponding model settings from a predefined list of configurations. Type should be `COMBO[STRING]`.
+        - `ckpt_name` (Required): Determines the specific checkpoint to load, enabling the node to fetch and apply the model weights from a predefined list of checkpoints. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `model`: Outputs the loaded model, ready for further use or integration within a pipeline. Type should be `MODEL`.
+        - `clip`: Provides the CLIP component loaded alongside the model, if applicable. Type should be `CLIP`.
+        - `vae`: Returns the VAE component loaded with the model, facilitating various generative tasks. Type should be `VAE`.

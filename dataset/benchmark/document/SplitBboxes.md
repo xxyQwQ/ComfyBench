@@ -1,0 +1,7 @@
+- `SplitBboxes`: Splits a list of bounding boxes (bboxes) at a specified index into two separate lists, facilitating operations that require segmenting bounding box data.
+    - Inputs:
+        - `bboxes` (Required): The list of bounding boxes to be split. This parameter is crucial for determining how the bounding boxes are divided into two groups. Type should be `BBOX`.
+        - `index` (Required): The index at which the list of bounding boxes is split. This parameter dictates the division point, affecting the composition of the resulting bounding box lists. Type should be `INT`.
+    - Outputs:
+        - `bboxes_a`: The first sublist of bounding boxes, containing elements from the start of the original list up to (but not including) the specified index. Type should be `BBOX`.
+        - `bboxes_b`: The second sublist of bounding boxes, containing elements from the specified index to the end of the original list. Type should be `BBOX`.

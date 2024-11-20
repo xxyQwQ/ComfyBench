@@ -1,0 +1,14 @@
+- `PerturbedAttention`: The PerturbedAttention node introduces a mechanism to modify the behavior of attention mechanisms within neural network models, specifically targeting the self-attention components of U-Net architectures. It achieves this by applying perturbations to the attention calculations, potentially enhancing the model's ability to focus on relevant features or introducing variability for generative tasks.
+    - Inputs:
+        - `model` (Required): The neural network model to which perturbed attention will be applied. This parameter is crucial as it determines the base architecture that will be modified by the perturbation process. Type should be `MODEL`.
+        - `scale` (Required): Specifies the scale of perturbation to be applied, directly influencing the intensity and impact of the perturbations on the attention mechanism. Type should be `FLOAT`.
+        - `adaptive_scale` (Required): Determines the adaptive scaling factor for perturbations, allowing for dynamic adjustment based on model performance or other criteria. Type should be `FLOAT`.
+        - `unet_block` (Required): Identifies the specific U-Net block (input, middle, or output) where the perturbed attention mechanism will be applied, enabling precise targeting within the model. Type should be `COMBO[STRING]`.
+        - `unet_block_id` (Required): The numerical identifier for the U-Net block, further specifying the exact location for perturbation application within the chosen block. Type should be `INT`.
+        - `sigma_start` (Required): Defines the starting value of sigma for the perturbation process, controlling the intensity of perturbations applied to the attention mechanism. It plays a key role in adjusting the model's focus and variability. Type should be `FLOAT`.
+        - `sigma_end` (Required): Specifies the ending value of sigma, marking the point at which perturbation intensity ceases to increase, thereby defining the range of perturbation application. Type should be `FLOAT`.
+        - `rescale` (Required): A factor that adjusts the scale of perturbations, offering an additional layer of control over their intensity. Type should be `FLOAT`.
+        - `rescale_mode` (Required): Determines how the rescaling of perturbations is applied, with options including 'full' and 'partial', to influence the overall effect on the attention mechanism. Type should be `COMBO[STRING]`.
+        - `unet_block_list` (Optional): A list specifying the U-Net blocks where the perturbed attention mechanism will be applied. This allows for targeted modifications within the model, enhancing flexibility and control over the perturbation effects. Type should be `STRING`.
+    - Outputs:
+        - `model`: The modified neural network model with perturbed attention mechanisms applied to specified U-Net blocks. This output reflects the enhanced or altered capabilities of the model due to the perturbations. Type should be `MODEL`.

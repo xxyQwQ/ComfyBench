@@ -1,0 +1,15 @@
+- `StringSchedule`: This node is designed for scheduling and animating text and other elements within a given frame range. It supports dynamic text updates, conditional formatting based on frame-specific parameters, and the integration of various inputs to create complex animation sequences. The node facilitates the creation of animated visual content by interpolating between values or states across frames, enabling the development of engaging and dynamic presentations.
+    - Inputs:
+        - `text` (Required): The primary text input for animation, serving as the base content or narrative to be animated or modified across frames. Type should be `STRING`.
+        - `max_frames` (Required): Specifies the maximum number of frames for the animation, defining the length of the animation sequence. Type should be `INT`.
+        - `current_frame` (Required): Indicates the current frame number within the animation sequence, used to determine the specific modifications or animations to apply. Type should be `INT`.
+        - `print_output` (Required): A boolean flag to enable or disable printing of the animation output for debugging or preview purposes. Type should be `BOOLEAN`.
+        - `pre_text` (Optional): Optional text input that precedes the main text, used for adding introductory or contextual content to the animation. Type should be `STRING`.
+        - `app_text` (Optional): Optional text input that appends to the main text, used for adding concluding or additional content to the animation. Type should be `STRING`.
+        - `pw_a` (Optional): A parameter weight used for adjusting or influencing the animation or text modification process. Type should be `FLOAT`.
+        - `pw_b` (Optional): A parameter weight used for adjusting or influencing the animation or text modification process. Type should be `FLOAT`.
+        - `pw_c` (Optional): A parameter weight used for adjusting or influencing the animation or text modification process. Type should be `FLOAT`.
+        - `pw_d` (Optional): A parameter weight used for adjusting or influencing the animation or text modification process. Type should be `FLOAT`.
+    - Outputs:
+        - `POS`: Outputs the positive conditioning or formatted text for the current frame, reflecting dynamic changes or emphasis. Type should be `STRING`.
+        - `NEG`: Outputs the negative conditioning or formatted text for the current frame, providing contrast or alternative emphasis. Type should be `STRING`.

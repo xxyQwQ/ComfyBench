@@ -1,0 +1,6 @@
+- `FromListGet1Int`: This node is designed to retrieve a single integer value from a list based on a specified index. It allows for flexible access to list elements, including support for negative indexing to access elements from the end of the list.
+    - Inputs:
+        - `list` (Required): The list from which an integer value is to be retrieved. It is essential for the operation as it provides the data source. Type should be `INT`.
+        - `index` (Required): The index at which the integer value is to be retrieved from the list. Supports negative values for reverse access, affecting the selection of the output integer. Type should be `INT`.
+    - Outputs:
+        - `int`: The single integer value retrieved from the specified index of the list. Type should be `INT`.

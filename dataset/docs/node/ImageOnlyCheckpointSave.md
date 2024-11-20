@@ -1,8 +1,0 @@
-- `ImageOnlyCheckpointSave`: This node specializes in saving model checkpoints specifically for image-based applications, incorporating additional components like CLIP vision and VAE models. It allows for the customization of the checkpoint's filename prefix and optionally includes prompt and extra PNG information for enhanced flexibility and metadata storage.
-    - Parameters:
-        - `filename_prefix`: A customizable prefix for the checkpoint filename, allowing for organized storage and easy identification. Type should be `STRING`.
-    - Inputs:
-        - `model`: The primary model whose state is to be saved as a checkpoint. It is central to the checkpoint creation process. Type should be `MODEL`.
-        - `clip_vision`: The CLIP vision model to be included in the checkpoint, enabling enhanced image understanding capabilities. Type should be `CLIP_VISION`.
-        - `vae`: The VAE model to be included in the checkpoint, facilitating image generation or manipulation tasks. Type should be `VAE`.
-    - Outputs:

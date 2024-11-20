@@ -1,0 +1,8 @@
+- `ADE_MultivalScaledMask`: The ADE_MultivalScaledMask node is designed to dynamically adjust and scale the values of a mask based on specified minimum and maximum float values. It supports both absolute and relative scaling modes, allowing for flexible manipulation of mask values to fit various animation or image processing needs.
+    - Inputs:
+        - `min_float_val` (Required): Specifies the minimum value (or a list of minimum values) to which the mask's values will be scaled. This parameter sets the lower bound of the scaling operation. Type should be `FLOAT`.
+        - `max_float_val` (Required): Defines the maximum value (or a list of maximum values) to which the mask's values will be scaled. It sets the upper bound for the scaling, ensuring the mask's values are adjusted within a specific range. Type should be `FLOAT`.
+        - `mask` (Required): The mask input represents the initial mask to be scaled. It is crucial for determining the base structure and values that will be adjusted according to the scaling parameters. Type should be `MASK`.
+        - `scaling` (Optional): Determines the type of scaling to be applied: absolute or relative. This choice affects how the mask values are adjusted, either by directly setting new minimum and maximum values or by normalizing them within a range. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `multival`: The output is a dynamically adjusted version of the input mask, with its values scaled according to the specified minimum and maximum float values and the chosen scaling mode. Type should be `MULTIVAL`.

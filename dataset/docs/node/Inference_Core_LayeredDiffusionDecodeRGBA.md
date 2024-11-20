@@ -1,9 +1,0 @@
-- `Inference_Core_LayeredDiffusionDecodeRGBA`: This node is designed to decode the alpha channel from pixel values in images, effectively converting RGB images to RGBA format. It leverages a layered diffusion process to enhance image quality by adding transparency information, thereby facilitating more nuanced image manipulation and generation tasks.
-    - Parameters:
-        - `sd_version`: Specifies the version of the stable diffusion model to be used for decoding, impacting the decoding process and the quality of the output images. Type should be `COMBO[STRING]`.
-        - `sub_batch_size`: Determines the size of sub-batches for processing, affecting the efficiency and speed of the decoding operation. Type should be `INT`.
-    - Inputs:
-        - `samples`: Represents the input samples to be decoded, playing a crucial role in determining the final image output by providing the necessary data for the alpha channel decoding process. Type should be `LATENT`.
-        - `images`: The input images in tensor format, which are to be processed to decode the alpha channel and convert from RGB to RGBA format. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output RGBA images, where the alpha channel has been decoded and added to the original RGB images, enhancing their representation with transparency information. Type should be `IMAGE`.

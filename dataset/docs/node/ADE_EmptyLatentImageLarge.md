@@ -1,8 +1,0 @@
-- `ADE_EmptyLatentImageLarge`: The ADE_EmptyLatentImageLarge node is designed to initialize a large latent image tensor with zeros. This tensor serves as a blank canvas for further generative processes, allowing for the creation and manipulation of images at a latent level.
-    - Parameters:
-        - `width`: Specifies the width of the latent image to be generated. It determines the horizontal dimension of the resulting tensor. Type should be `INT`.
-        - `height`: Determines the height of the latent image. It affects the vertical dimension of the resulting tensor. Type should be `INT`.
-        - `batch_size`: Controls the number of latent images to generate in a single batch. It influences the first dimension of the resulting tensor, allowing for batch processing of multiple images. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `latent`: The output is a tensor representing a batch of blank latent images. Each image is initialized with zeros, ready for subsequent generative modifications. Type should be `LATENT`.

@@ -1,0 +1,4 @@
+- `AnimeLineArt_Preprocessor_Provider_for_SEGS __Inspire`: This node provides a preprocessor specifically tailored for anime line art within the SEGS framework, facilitating the preparation of images for further processing or analysis.
+    - Inputs:
+    - Outputs:
+        - `segs_preprocessor`: Returns an instance of a preprocessor designed for anime line art, ready to be used in the SEGS framework. Type should be `SEGS_PREPROCESSOR`.

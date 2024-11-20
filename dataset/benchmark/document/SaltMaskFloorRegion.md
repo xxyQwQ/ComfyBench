@@ -1,0 +1,5 @@
+- `SaltMaskFloorRegion`: The SaltMaskFloorRegion node is designed to identify and isolate floor regions within given masks. It processes each mask to extract the floor area, converting it into a tensor that represents the floor region.
+    - Inputs:
+        - `masks` (Required): The input masks for which floor regions need to be identified. These masks are processed to extract floor areas, significantly impacting the node's output. Type should be `MASK`.
+    - Outputs:
+        - `MASKS`: The output tensor representing the isolated floor regions within the input masks. Type should be `MASK`.

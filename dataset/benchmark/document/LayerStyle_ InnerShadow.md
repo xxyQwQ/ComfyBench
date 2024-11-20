@@ -1,0 +1,15 @@
+- `LayerStyle_ InnerShadow`: The InnerShadow node applies an inner shadow effect to a layer within an image, enhancing depth and visual interest by simulating shadows within the boundaries of the layer. It allows for customization of shadow properties such as direction, blur, and color, catering to various stylistic needs.
+    - Inputs:
+        - `background_image` (Required): Serves as the canvas for the inner shadow effect, providing context and depth to the layer. Type should be `IMAGE`.
+        - `layer_image` (Required): The target layer image for the inner shadow effect, enhancing its visual appearance by simulating shadows within its boundaries. Type should be `IMAGE`.
+        - `invert_mask` (Required): Determines whether the layer mask should be inverted, affecting the area where the inner shadow effect is applied. Type should be `BOOLEAN`.
+        - `blend_mode` (Required): Determines how the shadow's color interacts with the layer through the blending mode, influencing the final visual effect. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): Controls the shadow's visibility and impact on the layer image by adjusting its opacity level. Type should be `INT`.
+        - `distance_x` (Required): The horizontal displacement of the shadow effect, affecting the shadow's direction and perceived depth within the layer. Type should be `INT`.
+        - `distance_y` (Required): The vertical displacement of the shadow effect, similar to distance_x, it influences the shadow's direction and depth perception. Type should be `INT`.
+        - `grow` (Required): Adjusts the shadow's spread by increasing its size, affecting its softness and the overall depth effect. Type should be `INT`.
+        - `blur` (Required): The blur radius applied to the shadow, softening its edges and contributing to the realism of the effect. Type should be `INT`.
+        - `shadow_color` (Required): Allows customization of the shadow's color to complement or contrast with the layer image. Type should be `STRING`.
+        - `layer_mask` (Optional): Defines the specific regions of the layer image where the inner shadow effect should be applied, ensuring precision in the effect's placement. Type should be `MASK`.
+    - Outputs:
+        - `image`: The resulting image after applying the inner shadow effect, showcasing the enhanced layer with the shadow. Type should be `IMAGE`.

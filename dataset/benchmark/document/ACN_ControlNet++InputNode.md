@@ -1,0 +1,8 @@
+- `ACN_ControlNet++InputNode`: This node is designed to serve as the entry point for input data into the ControlNet++ architecture, facilitating the preprocessing and preparation of data for further processing within the advanced ControlNet++ framework. It abstracts the complexities of data formatting and ensures compatibility with the ControlNet++ model's requirements.
+    - Inputs:
+        - `image` (Required): Specifies the image data to be processed and manipulated by the ControlNet++ model, serving as the foundational input for the architecture. Type should be `IMAGE`.
+        - `control_type` (Required): Determines the type of control to be applied by the ControlNet++ model, influencing how the input image is processed. Type should be `COMBO[STRING]`.
+        - `prev_plus_input` (Optional): An optional parameter that allows for the chaining of ControlNet++ processing steps by using the output of a previous ControlNet++ node as input. Type should be `PLUS_INPUT`.
+        - `autosize` (Optional): An optional parameter that automatically adjusts the size of the input image to meet the requirements of the ControlNet++ model, ensuring optimal processing. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `plus_input`: The processed input data ready for further manipulation or analysis within the ControlNet++ framework. Type should be `PLUS_INPUT`.

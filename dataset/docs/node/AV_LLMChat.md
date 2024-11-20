@@ -1,9 +1,0 @@
-- `AV_LLMChat`: The AV_LLMChat node facilitates conversation generation by leveraging language model APIs. It processes a series of messages, configuration parameters, and an optional seed to produce a coherent and contextually relevant response.
-    - Parameters:
-        - `seed`: An optional seed for deterministic output generation, ensuring reproducibility of responses. Type should be `INT`.
-    - Inputs:
-        - `messages`: A list of messages that represent the conversation history. Each message has a role indicating its source (system, user, or assistant) and can include text and optionally an image. This input is crucial for maintaining context and generating relevant responses. Type should be `LLM_MESSAGE`.
-        - `api`: The API object used to communicate with a specific language model service, such as OpenAI or Claude. This parameter determines the underlying model and API settings for the response generation. Type should be `LLM_API`.
-        - `config`: Configuration settings for the language model, including the model type, maximum token count, and temperature. These settings fine-tune the generation process. Type should be `LLM_CONFIG`.
-    - Outputs:
-        - `response`: The generated text response from the language model, based on the input messages and configuration. Type should be `STRING`.

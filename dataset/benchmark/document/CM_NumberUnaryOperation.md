@@ -1,0 +1,6 @@
+- `CM_NumberUnaryOperation`: This node performs unary operations on numbers, allowing for the manipulation of a single numerical input through predefined operations.
+    - Inputs:
+        - `op` (Required): Specifies the unary operation to be performed on the input number. The choice of operation affects the outcome of the node's computation. Type should be `COMBO[STRING]`.
+        - `a` (Required): The numerical input on which the unary operation will be performed. This input is central to the node's functionality. Type should be `NUMBER`.
+    - Outputs:
+        - `number`: The result of applying the specified unary operation on the input number. Type should be `NUMBER`.

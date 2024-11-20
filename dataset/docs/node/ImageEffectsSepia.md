@@ -1,6 +1,0 @@
-- `ImageEffectsSepia`: The ImageEffectsSepia node applies a sepia tone effect to images, transforming the color scheme to mimic the appearance of photographs taken in the late 19th and early 20th centuries. This effect is achieved by adjusting the RGB values of the input images to create a warm, brownish tone that evokes a sense of nostalgia and timelessness.
-    - Parameters:
-    - Inputs:
-        - `images`: The 'images' parameter represents the input images to which the sepia effect will be applied. It is crucial for defining the visual content that will undergo the transformation, affecting the node's execution and the appearance of the output images. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a modified version of the input images with a sepia tone applied, reflecting a nostalgic and timeless appearance. Type should be `IMAGE`.

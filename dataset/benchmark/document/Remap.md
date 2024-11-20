@@ -1,0 +1,10 @@
+- `Remap`: The `Remap` node serves as a foundational class for various image remapping operations, providing a base structure and common functionalities for specialized remapping transformations. It abstracts the core mechanisms needed to perform complex image geometry alterations, enabling derived classes to implement specific remapping effects such as distortion correction, perspective adjustments, and custom image warping techniques.
+    - Inputs:
+        - `remap` (Required): Specifies the remapping function to be applied, which is a core component of the remapping process, determining how pixels from the source image are mapped to the destination image. Type should be `REMAP`.
+        - `src` (Required): The source image to be remapped, serving as the input for the remapping operation. Type should be `IMAGE`.
+        - `interpolation` (Required): Defines the interpolation method used in the remapping process, affecting the quality and appearance of the output image. Type should be `COMBO[STRING]`.
+        - `src_mask` (Optional): An optional mask that specifies which parts of the source image should be considered for remapping. Type should be `MASK`.
+        - `output_with_alpha` (Optional): A boolean flag indicating whether the output image should include an alpha channel, allowing for transparency effects. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The result of the remapping operation, which is a transformed version of the input image according to the specified remapping parameters. Type should be `IMAGE`.
+        - `mask`: An optional output mask that corresponds to the remapped image, indicating areas of interest or exclusion. Type should be `MASK`.

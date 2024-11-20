@@ -1,0 +1,10 @@
+- `LayerMask_ RemBgUltra`: The `LayerMask: RemBgUltra` node specializes in removing backgrounds from images with an emphasis on high detail preservation. It leverages advanced techniques to ensure that even fine details like hair or fur edges are retained after background removal, making it ideal for tasks requiring precise foreground extraction.
+    - Inputs:
+        - `image` (Required): The `image` parameter represents the collection of images from which backgrounds are to be removed. It plays a crucial role in the node's operation by serving as the primary data for background removal processes. Type should be `IMAGE`.
+        - `detail_range` (Required): Specifies the range within which detail enhancement and preservation are applied, affecting the precision of the background removal around edges. Type should be `INT`.
+        - `black_point` (Required): Defines the black point threshold for adjusting the contrast of the mask, influencing the visibility of finer details. Type should be `FLOAT`.
+        - `white_point` (Required): Sets the white point threshold for mask contrast adjustment, further refining the detail visibility in the extracted foreground. Type should be `FLOAT`.
+        - `process_detail` (Required): A boolean flag that determines whether additional detail processing is applied, enhancing the edge definition and overall detail preservation in the mask. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: A tensor containing the images with their backgrounds removed, preserving the original detail and quality. Type should be `IMAGE`.
+        - `mask`: A tensor of masks corresponding to the removed backgrounds, highlighting the precision in detail preservation. Type should be `MASK`.

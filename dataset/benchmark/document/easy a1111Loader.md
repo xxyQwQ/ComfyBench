@@ -1,0 +1,21 @@
+- `easy a1111Loader`: The easy a1111Loader node is designed to simplify the process of loading and configuring models for use in AI-driven applications. It abstracts the complexities involved in setting up models, including checkpoint loading, LoRA (Low-Rank Adaptation) adjustments, and optional control net stacking, making it easier for users to get started with their AI projects.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the checkpoint name for the model to be loaded. It is crucial for identifying which pre-trained model to use, affecting the node's execution by determining the initial state of the model. Type should be `COMBO[STRING]`.
+        - `vae_name` (Required): Defines the name of the VAE (Variational Autoencoder) to be used alongside the model. This parameter influences the quality and characteristics of the generated content by specifying the underlying generative model. Type should be `COMBO[STRING]`.
+        - `clip_skip` (Required): Specifies the number of CLIP model layers to skip during processing, allowing for customization of the model's focus and performance. Type should be `INT`.
+        - `lora_name` (Required): Indicates the name of the LoRA to apply to the model, allowing for fine-tuning and adaptation of the model's weights without extensive retraining. This parameter is key for customizing the model's behavior for specific tasks. Type should be `COMBO[STRING]`.
+        - `lora_model_strength` (Required): Determines the strength of the LoRA model adaptation, directly impacting the model's performance and output by adjusting the intensity of the applied modifications. Type should be `FLOAT`.
+        - `lora_clip_strength` (Required): Sets the strength of the LoRA clip adaptation, affecting the final output by modifying how strongly the clip adaptation influences the model's behavior. Type should be `FLOAT`.
+        - `resolution` (Required): Specifies the resolution for the output, directly affecting the visual quality and detail of the generated images or content. Type should be `COMBO[STRING]`.
+        - `empty_latent_width` (Required): Defines the width of the empty latent space, influencing the dimensionality and potential complexity of the generated content. Type should be `INT`.
+        - `empty_latent_height` (Required): Sets the height of the empty latent space, impacting the size and detail level of the generated outputs. Type should be `INT`.
+        - `positive` (Required): A string input for positive prompts, guiding the model to emphasize or generate content that aligns with the specified attributes or themes. Type should be `STRING`.
+        - `negative` (Required): A string input for negative prompts, instructing the model to de-emphasize or avoid content related to the specified attributes or themes. Type should be `STRING`.
+        - `batch_size` (Required): Determines the number of instances to process in a single batch, affecting the efficiency and speed of model execution. Type should be `INT`.
+        - `optional_lora_stack` (Optional): Allows for the specification of an optional stack of LoRA adjustments, enabling more complex and layered model customizations. Type should be `LORA_STACK`.
+        - `optional_controlnet_stack` (Optional): Enables the inclusion of an optional control net stack for further model customization and fine-tuning, offering advanced control over the model's behavior. Type should be `CONTROL_NET_STACK`.
+        - `a1111_prompt_style` (Optional): A boolean flag to toggle the A1111 prompt style, affecting how prompts are interpreted and processed by the model. Type should be `BOOLEAN`.
+    - Outputs:
+        - `pipe`: Outputs the configured pipeline, encapsulating the entire setup process for immediate use. Type should be `PIPE_LINE`.
+        - `model`: Returns the loaded and configured model, ready for use in generating or processing content. Type should be `MODEL`.
+        - `vae`: Provides the loaded VAE model, essential for generating or manipulating content in the latent space. Type should be `VAE`.

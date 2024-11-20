@@ -1,0 +1,14 @@
+- `TimestepKeyframe`: The TimestepKeyframe node is designed to encapsulate the concept of a keyframe within a timeline, specifying the moment and intensity of an effect, along with associated control weights, latent keyframes, and other properties. It serves as a foundational element for defining and manipulating animation or effect progressions over time.
+    - Inputs:
+        - `start_percent` (Required): Specifies the starting point of the keyframe as a percentage of the total animation or effect duration, influencing when the keyframe's effect begins. Type should be `FLOAT`.
+        - `prev_timestep_kf` (Optional): References a previous timestep keyframe group, allowing for the continuation or modification of existing keyframe sequences. Type should be `TIMESTEP_KEYFRAME`.
+        - `strength` (Optional): Determines the intensity or magnitude of the keyframe's effect, affecting how strongly it influences the animation or effect. Type should be `FLOAT`.
+        - `cn_weights` (Optional): Associates specific control net weights with the keyframe, dictating the influence of various control parameters on the keyframe's effect. Type should be `CONTROL_NET_WEIGHTS`.
+        - `latent_keyframe` (Optional): unknown Type should be `LATENT_KEYFRAME`.
+        - `null_latent_kf_strength` (Optional): Defines the strength of a null or default latent keyframe, providing a baseline effect intensity. Type should be `FLOAT`.
+        - `inherit_missing` (Optional): Indicates whether missing properties from the parent or previous keyframes should be inherited by this keyframe. Type should be `BOOLEAN`.
+        - `guarantee_steps` (Optional): Specifies the minimum number of steps for which the keyframe's effect is guaranteed to be applied, ensuring a minimum duration. Type should be `INT`.
+        - `mask_optional` (Optional): Optionally includes a mask hint, which can guide the application of the keyframe's effect based on spatial criteria. Type should be `MASK`.
+        - `autosize` (Optional): Configures automatic sizing for the keyframe, adjusting its dimensions based on specified parameters. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `TIMESTEP_KF`: Outputs a modified or newly created timestep keyframe group, incorporating the defined keyframe settings. Type should be `TIMESTEP_KEYFRAME`.

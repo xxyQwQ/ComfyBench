@@ -1,0 +1,11 @@
+- `CR Gradient Integer`: The CR_GradientInteger node is designed to generate a gradient of integer values based on a specified start and end value, frame duration, and the current frame. It interpolates the value at the current frame within the gradient, providing a smooth transition between the start and end values over the specified duration.
+    - Inputs:
+        - `start_value` (Required): The starting value of the gradient. It marks the beginning of the interpolation. Type should be `INT`.
+        - `end_value` (Required): The ending value of the gradient. It marks the end point of the interpolation. Type should be `INT`.
+        - `start_frame` (Required): The frame at which the gradient interpolation begins. Type should be `INT`.
+        - `frame_duration` (Required): The total duration over which the gradient transitions from the start value to the end value. Type should be `INT`.
+        - `current_frame` (Required): The current frame for which the interpolated value is calculated. It determines the specific point of interpolation within the gradient. Type should be `INT`.
+        - `gradient_profile` (Required): A profile that defines the characteristics of the gradient, such as its type or method of interpolation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `INT`: The interpolated integer value at the current frame within the gradient. Type should be `INT`.
+        - `show_help`: A URL to a help page providing more information about the CR_GradientInteger node. Type should be `STRING`.

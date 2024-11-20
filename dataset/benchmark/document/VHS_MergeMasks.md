@@ -1,0 +1,10 @@
+- `VHS_MergeMasks`: This node is designed to merge two mask batches into a single batch, applying a specified merge strategy to handle size discrepancies and scaling between the masks. It facilitates the combination of mask data, ensuring compatibility and uniformity across different mask dimensions for further processing or analysis.
+    - Inputs:
+        - `mask_A` (Required): The first mask batch to be merged. It plays a crucial role in determining the base template for merging when certain strategies are applied. Type should be `MASK`.
+        - `mask_B` (Required): The second mask batch to be merged. Depending on the merge strategy, it can either serve as the template for resizing or be resized to match the first mask batch. Type should be `MASK`.
+        - `merge_strategy` (Required): Defines the strategy for handling size discrepancies between the two mask batches. It dictates whether to match the size of the first mask, the second mask, or the larger/smaller of the two. Type should be `COMBO[STRING]`.
+        - `scale_method` (Required): Specifies the method to be used for scaling the masks during the merge process, ensuring that the masks are appropriately resized according to the merge strategy. Type should be `COMBO[STRING]`.
+        - `crop` (Required): Determines whether and how to crop the masks after scaling, to ensure they fit the desired dimensions. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `MASK`: The merged mask batch, resulting from the combination of the two input masks according to the specified merge strategy and scaling method. Type should be `MASK`.
+        - `count`: The total number of masks in the merged batch, providing a count of the output masks for further processing or analysis. Type should be `INT`.

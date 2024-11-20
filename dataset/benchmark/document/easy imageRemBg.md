@@ -1,0 +1,9 @@
+- `easy imageRemBg`: This node specializes in removing backgrounds from images, offering a streamlined approach for image processing tasks that require isolating subjects from their backgrounds. It leverages specific removal modes to adapt the background removal process to various requirements, enhancing flexibility and utility in image manipulation workflows.
+    - Inputs:
+        - `images` (Required): Specifies the images from which backgrounds are to be removed. This parameter is crucial for defining the input images that the node will process, directly influencing the outcome of the background removal. Type should be `IMAGE`.
+        - `rem_mode` (Required): Determines the removal mode to be used, which can affect the method and quality of the background removal. This allows for customization of the background removal process based on specific needs or preferences. Type should be `['RMBG-1.4']`.
+        - `image_output` (Required): Defines how the output image should be handled, whether it should be hidden, previewed, saved, or both hidden and saved. This parameter allows for flexible management of the output image. Type should be `COMBO[STRING]`.
+        - `save_prefix` (Required): Specifies the prefix for saved images, providing a way to organize and identify output files easily. Type should be `STRING`.
+    - Outputs:
+        - `image`: The output image with the background removed. This highlights the node's ability to isolate the subject from its background, providing a clean image ready for further processing or use. Type should be `IMAGE`.
+        - `mask`: The mask generated during the background removal process. This can be used for further image processing tasks, such as compositing or additional manipulations. Type should be `MASK`.

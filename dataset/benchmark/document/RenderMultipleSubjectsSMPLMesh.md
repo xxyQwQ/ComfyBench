@@ -1,0 +1,19 @@
+- `RenderMultipleSubjectsSMPLMesh`: This node is designed to render multiple SMPL mesh subjects within a given scene. It leverages 3D mesh rendering techniques to visualize the motion and form of multiple subjects simultaneously, providing a comprehensive view of their spatial interactions and dynamics.
+    - Inputs:
+        - `smpl_multi_subjects` (Required): This input is essential for rendering as it contains the SMPL models of multiple subjects, including their mesh data and possibly motion information. This dataset enables the node to accurately visualize each subject in the scene. Type should be `SMPL_MULTIPLE_SUBJECTS`.
+        - `draw_platform` (Required): Specifies whether to draw a platform for the subjects to stand on, enhancing the visualization's realism. Type should be `BOOLEAN`.
+        - `depth_only` (Required): Determines whether to render only the depth map of the scene, which can be useful for certain types of visual analysis. Type should be `BOOLEAN`.
+        - `fx_offset` (Required): Horizontal offset for the camera's focal point, allowing for adjustments in the rendered scene's perspective. Type should be `FLOAT`.
+        - `fy_offset` (Required): Vertical offset for the camera's focal point, enabling fine-tuning of the scene's visual perspective. Type should be `FLOAT`.
+        - `move_x` (Required): Moves the camera along the x-axis, offering control over the scene's composition. Type should be `FLOAT`.
+        - `move_y` (Required): Moves the camera along the y-axis, allowing for adjustments in the scene's framing. Type should be `FLOAT`.
+        - `move_z` (Required): Moves the camera along the z-axis, providing the ability to alter the scene's depth. Type should be `FLOAT`.
+        - `rotate_x` (Required): Rotates the camera around the x-axis, enabling changes in the scene's vertical orientation. Type should be `FLOAT`.
+        - `rotate_y` (Required): Rotates the camera around the y-axis, allowing for alterations in the scene's horizontal orientation. Type should be `FLOAT`.
+        - `rotate_z` (Required): Rotates the camera around the z-axis, offering the possibility to adjust the scene's rotational perspective. Type should be `FLOAT`.
+        - `background_hex_color` (Required): Sets the background color of the scene using a hexadecimal color code, enhancing the visual appeal. Type should be `STRING`.
+        - `normals` (Optional): Determines whether to render the normals of the mesh, which can provide additional detail for visual analysis. Type should be `BOOLEAN`.
+        - `remove_background` (Optional): Specifies whether to remove the background from the rendered scene, focusing the visualization solely on the subjects. Type should be `BOOLEAN`.
+    - Outputs:
+        - `IMAGE`: The output is a visual representation of multiple SMPL models, rendered as meshes within a scene. It provides a detailed view of the subjects' forms and motions. Type should be `IMAGE`.
+        - `DEPTH_MAP`: The depth map of the rendered scene, offering insights into the spatial relationships and distances between subjects. Type should be `IMAGE`.

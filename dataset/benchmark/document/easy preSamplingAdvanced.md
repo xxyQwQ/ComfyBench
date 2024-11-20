@@ -1,0 +1,16 @@
+- `easy preSamplingAdvanced`: This node is designed to configure advanced pre-sampling settings for image generation processes. It allows for detailed customization of the sampling process, enabling users to fine-tune parameters such as noise levels, scheduler types, denoise settings, and seed values to achieve desired image qualities and variations. The node serves as a crucial component for preparing the image generation pipeline, offering flexibility and control over the pre-sampling phase.
+    - Inputs:
+        - `pipe` (Required): The pipeline object that is being configured for the pre-sampling process. It is essential for defining the context and settings for the image generation workflow. Type should be `PIPE_LINE`.
+        - `steps` (Required): Specifies the number of steps to be executed in the pre-sampling process. This parameter directly influences the granularity and quality of the generated images. Type should be `INT`.
+        - `cfg` (Required): Configures the conditioning factor for the generation process, affecting the influence of the conditioning on the generated images. Type should be `FLOAT`.
+        - `sampler_name` (Required): Determines the sampling algorithm to be used, allowing for selection from a variety of predefined samplers to optimize the generation process. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Specifies the scheduler algorithm to be used during the pre-sampling process. This parameter allows for the selection from a predefined list of schedulers, including custom ones, to control the sampling behavior and efficiency. Type should be `COMBO[STRING]`.
+        - `start_at_step` (Required): Defines the starting step for the pre-sampling process, allowing for control over the initial state of image generation. Type should be `INT`.
+        - `end_at_step` (Required): Sets the ending step for the pre-sampling process, determining the final state of the generated images. Type should be `INT`.
+        - `add_noise` (Required): Enables or disables the addition of noise during the pre-sampling process, affecting the texture and details of the generated images. Type should be `COMBO[STRING]`.
+        - `seed` (Required): Sets the seed value for the random number generator used in the pre-sampling process. This ensures reproducibility of results by initializing the generator to a known state. Type should be `INT`.
+        - `return_with_leftover_noise` (Required): Determines whether the generated images should retain some level of noise, offering a balance between clarity and naturalness. Type should be `COMBO[STRING]`.
+        - `image_to_latent` (Optional): Optional input for providing an image to be converted into a latent representation, enabling direct manipulation of the latent space. Type should be `IMAGE`.
+        - `latent` (Optional): Optional input for providing a latent representation, offering an advanced level of customization by directly manipulating the latent space prior to sampling. Type should be `LATENT`.
+    - Outputs:
+        - `pipe`: Outputs a configured pipeline object, encapsulating all the specified pre-sampling settings and ready for integration into the image generation workflow. Type should be `PIPE_LINE`.

@@ -1,0 +1,19 @@
+- `easy dynamiCrafterLoader`: This node is designed to load and initialize the DynamiCrafter model, a specialized model for crafting dynamic content. It encapsulates the complexities of loading model configurations, initializing the model with the appropriate device settings, and preparing it for inference tasks.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the DynamiCrafter model to be loaded. This is crucial for identifying the correct model configuration and ensuring the model is loaded with the appropriate parameters. Type should be `COMBO[STRING]`.
+        - `clip_skip` (Required): Determines the number of clipping operations to skip during the model's inference process. This parameter can affect the speed and quality of the generated content. Type should be `INT`.
+        - `init_image` (Required): The initial image to be used by the model, serving as a starting point for content generation. Type should be `IMAGE`.
+        - `resolution` (Required): Defines the resolution for the output content, impacting the detail and quality of the generated images. Type should be `COMBO[STRING]`.
+        - `empty_latent_width` (Required): Specifies the width of the empty latent space to be used by the model, affecting the dimensions of the generated content. Type should be `INT`.
+        - `empty_latent_height` (Required): Specifies the height of the empty latent space to be used by the model, affecting the dimensions of the generated content. Type should be `INT`.
+        - `positive` (Required): A string of positive prompts or keywords that guide the content generation towards desired attributes or themes. Type should be `STRING`.
+        - `negative` (Required): A string of negative prompts or keywords that guide the content generation away from certain attributes or themes. Type should be `STRING`.
+        - `use_interpolate` (Required): Indicates whether interpolation should be used in the content generation process, affecting the smoothness and continuity of dynamic content. Type should be `BOOLEAN`.
+        - `fps` (Required): Specifies the frames per second for the generated content, impacting the smoothness and playback speed of dynamic videos. Type should be `INT`.
+        - `frames` (Required): Determines the total number of frames to be generated, defining the length of the dynamic content. Type should be `INT`.
+        - `scale_latents` (Required): Indicates whether the latent space should be scaled, affecting the variation and diversity of the generated content. Type should be `BOOLEAN`.
+        - `optional_vae` (Optional): An optional parameter to specify a VAE model to be used in conjunction with the DynamiCrafter model for enhanced content generation. Type should be `VAE`.
+    - Outputs:
+        - `pipe`: Provides the main pipeline object for content generation. Type should be `PIPE_LINE`.
+        - `model`: Returns the initialized DynamiCrafter model ready for generating dynamic content. Type should be `MODEL`.
+        - `vae`: Returns the VAE model associated with the DynamiCrafter, used for variational autoencoder tasks. Type should be `VAE`.

@@ -1,0 +1,6 @@
+- `Change Channel Count`: The Change Channel Count node is designed to modify the number of channels in an image tensor. It supports changing an image to a mask, RGB, or RGBA format, depending on the specified kind. This functionality is crucial for image processing tasks where the channel count of an image needs to be adjusted for compatibility with different models or outputs.
+    - Inputs:
+        - `image` (Required): The image tensor whose channel count is to be changed. This parameter is essential for determining the structure and content of the output image. Type should be `IMAGE`.
+        - `kind` (Required): Specifies the desired output format of the image, which can be a mask, RGB, or RGBA. This choice directly influences the transformation applied to the input image. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The transformed image tensor with the specified number of channels. Type should be `IMAGE`.

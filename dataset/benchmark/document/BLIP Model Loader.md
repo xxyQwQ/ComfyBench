@@ -1,0 +1,5 @@
+- `BLIP Model Loader`: The BLIP Model Loader node is designed to dynamically load and initialize BLIP models based on the specified configuration, such as model type (caption or interrogate). It ensures the models are ready for inference by setting them to evaluation mode and moving them to the appropriate device.
+    - Inputs:
+        - `blip_model` (Required): Specifies the type of BLIP model to load, such as 'caption' or 'interrogate', determining the model's functionality and application. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `blip_model`: The type of BLIP model loaded, reflecting the input specification. Type should be `BLIP_MODEL`.

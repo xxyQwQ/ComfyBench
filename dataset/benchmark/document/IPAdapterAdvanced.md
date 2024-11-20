@@ -1,0 +1,16 @@
+- `IPAdapterAdvanced`: The IPAdapterAdvanced node is designed to enhance image processing capabilities by applying advanced image processing techniques. It extends the functionality of simpler IP adapters, offering more sophisticated options for image manipulation and enhancement.
+    - Inputs:
+        - `model` (Required): The model parameter specifies the neural network model to be used for image processing. It plays a crucial role in determining the quality and type of image enhancements applied. Type should be `MODEL`.
+        - `ipadapter` (Required): This parameter represents the specific IP adapter to be applied, dictating the nature of the image processing technique used. Type should be `IPADAPTER`.
+        - `image` (Required): The input image to be processed, serving as the base for all applied enhancements. Type should be `IMAGE`.
+        - `weight` (Required): Controls the intensity of the applied image processing effect, offering flexibility in the final image output. Type should be `FLOAT`.
+        - `weight_type` (Required): Specifies the method used to calculate the weight of the image processing effect, affecting how the effect is applied over time. Type should be `COMBO[STRING]`.
+        - `combine_embeds` (Required): Determines how multiple embeddings are combined during the image processing, impacting the final image's characteristics. Type should be `COMBO[STRING]`.
+        - `start_at` (Required): Defines the starting point of the effect applied by the IP adapter, allowing for fine-tuned control over the image processing. Type should be `FLOAT`.
+        - `end_at` (Required): Specifies the endpoint of the effect applied, enabling precise manipulation of the image enhancement process. Type should be `FLOAT`.
+        - `embeds_scaling` (Required): Specifies the scaling method for embeddings, affecting the influence of different components in the image processing. Type should be `COMBO[STRING]`.
+        - `image_negative` (Optional): An optional image used to specify negative effects, enabling the exclusion of certain aspects from the final output. Type should be `IMAGE`.
+        - `attn_mask` (Optional): An optional attention mask for more precise control over the areas affected by the image processing. Type should be `MASK`.
+        - `clip_vision` (Optional): Optional parameter for integrating CLIP vision models, enhancing the semantic understanding of the image. Type should be `CLIP_VISION`.
+    - Outputs:
+        - `model`: Returns the modified model after applying the IP adapter, reflecting the enhancements made to the image processing capabilities. Type should be `MODEL`.

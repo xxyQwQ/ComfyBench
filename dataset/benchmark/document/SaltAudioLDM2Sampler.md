@@ -1,0 +1,12 @@
+- `SaltAudioLDM2Sampler`: This node is designed for sampling audio using the LDM2 model, providing a specialized approach to generating or processing audio data with advanced machine learning techniques. It focuses on leveraging the capabilities of the LDM2 architecture to offer high-quality audio sampling functionalities.
+    - Inputs:
+        - `audioldm2_model` (Required): Specifies the LDM2 model to be used for audio sampling, influencing the quality and characteristics of the generated audio. Type should be `AUDIOLDM_MODEL`.
+        - `seed` (Required): Determines the random seed for generating audio, ensuring reproducibility of results. Type should be `INT`.
+        - `steps` (Required): Defines the number of steps to be used in the sampling process, affecting the detail and quality of the output audio. Type should be `INT`.
+        - `guidance_scale` (Required): Controls the strength of the conditioning on the input prompts, influencing the adherence to the specified prompts. Type should be `FLOAT`.
+        - `audio_length_seconds` (Required): Sets the length of the generated audio in seconds. Type should be `FLOAT`.
+        - `num_waveforms` (Required): Determines the number of audio waveforms to generate. Type should be `INT`.
+        - `positive_prompt` (Required): The text prompt that encourages certain elements or themes in the generated audio. Type should be `STRING`.
+        - `negative_prompt` (Required): The text prompt that discourages certain elements or themes in the generated audio. Type should be `STRING`.
+    - Outputs:
+        - `audio`: The sampled audio output, generated based on the specified inputs and model. Type should be `AUDIO`.

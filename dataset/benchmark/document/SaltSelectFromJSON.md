@@ -1,0 +1,7 @@
+- `SaltSelectFromJSON`: This node is designed to select a specific item from a JSON structure based on a given JSON path and match index. It allows for precise extraction of data from complex JSON inputs, facilitating targeted data retrieval and manipulation.
+    - Inputs:
+        - `json_input` (Required): The JSON string from which data will be selected. It serves as the primary data source for the selection process. Type should be `STRING`.
+        - `json_path` (Required): The JSONPath expression used to specify the item to be selected from the JSON input. It defines the path to the target data within the JSON structure. Type should be `STRING`.
+        - `match_index` (Required): The index of the match to be selected when multiple items match the JSONPath expression. It determines which item is chosen if the path yields more than one result. Type should be `INT`.
+    - Outputs:
+        - `selection`: The selected item from the JSON input, returned as a JSON string. It represents the outcome of the selection process based on the provided path and index. Type should be `STRING`.

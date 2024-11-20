@@ -1,0 +1,15 @@
+- `ACN_TimestepKeyframeFromStrengthList`: This node is designed to generate a sequence of timestep keyframes based on a list of strength values. It facilitates the creation of dynamic animations or effects within a control network by interpolating between specified strength levels over a series of timesteps, allowing for precise control over the animation's progression.
+    - Inputs:
+        - `float_strengths` (Required): Specifies the strength values for each keyframe. This input allows for the dynamic generation of keyframes based on varying strength levels, enabling the creation of nuanced animations or effects. Type should be `FLOAT`.
+        - `start_percent` (Required): Defines the starting percentage for the keyframe sequence, allowing for the customization of when the animation effects begin within the control network. Type should be `FLOAT`.
+        - `end_percent` (Required): Sets the ending percentage for the keyframe sequence, determining when the animation effects conclude within the control network. Type should be `FLOAT`.
+        - `prev_timestep_kf` (Optional): An optional input representing the previous state of timestep keyframes, enabling the continuation or modification of an existing sequence. Type should be `TIMESTEP_KEYFRAME`.
+        - `cn_weights` (Optional): Optional control network weights that can be applied to the keyframes, offering additional customization for the animation's behavior. Type should be `CONTROL_NET_WEIGHTS`.
+        - `latent_keyframe` (Optional): Optional latent keyframes that can be integrated into the timestep keyframes for enhanced control over the animation's characteristics. Type should be `LATENT_KEYFRAME`.
+        - `null_latent_kf_strength` (Optional): Defines the strength of a null latent keyframe, allowing for the adjustment of the animation's intensity. Type should be `FLOAT`.
+        - `inherit_missing` (Optional): A boolean flag indicating whether missing keyframe attributes should be inherited from previous keyframes, ensuring continuity in the animation. Type should be `BOOLEAN`.
+        - `mask_optional` (Optional): An optional mask that can be applied to the keyframes, providing further customization of the animation's appearance. Type should be `MASK`.
+        - `print_keyframes` (Optional): A boolean flag that, when set to true, enables logging of the generated keyframes for debugging or informational purposes. Type should be `BOOLEAN`.
+        - `autosize` (Optional): Specifies the autosizing options for the control network, facilitating the automatic adjustment of the network's dimensions based on the provided parameters. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `TIMESTEP_KF`: The output is a sequence of timestep keyframes, which are generated based on the provided strength values and other parameters. This sequence can be used to control animations or effects within a control network. Type should be `TIMESTEP_KEYFRAME`.

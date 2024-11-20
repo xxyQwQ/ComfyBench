@@ -1,0 +1,13 @@
+- `LayerUtility_ LayerImageTransform`: The LayerImageTransform node is designed to perform various image transformations on a given layer, including scaling, rotating, mirroring, and applying anti-aliasing. It allows for precise adjustments to an image's appearance, enabling the creation of customized visual effects and adjustments.
+    - Inputs:
+        - `image` (Required): The input image to be transformed. It serves as the base for all subsequent transformations, including scaling, rotating, and mirroring. Type should be `IMAGE`.
+        - `x` (Required): The horizontal offset to apply after transformations, allowing for precise positioning of the transformed image. Type should be `INT`.
+        - `y` (Required): The vertical offset to apply after transformations, enabling precise vertical positioning of the transformed image. Type should be `INT`.
+        - `mirror` (Required): Specifies the mirroring mode to apply to the image, such as horizontal or vertical flipping, enhancing the image's symmetry or creating reflections. Type should be `COMBO[STRING]`.
+        - `scale` (Required): The scaling factor to apply to the image, adjusting its size while preserving its aspect ratio. Type should be `FLOAT`.
+        - `aspect_ratio` (Required): The aspect ratio to maintain during scaling, allowing for proportional adjustments to the image's dimensions. Type should be `FLOAT`.
+        - `rotate` (Required): The rotation angle in degrees to apply to the image, enabling orientation adjustments. Type should be `FLOAT`.
+        - `transform_method` (Required): The method used for image transformation, such as resizing or rotating, affecting the image's quality and appearance. Type should be `COMBO[STRING]`.
+        - `anti_aliasing` (Required): The level of anti-aliasing to apply, reducing the appearance of jagged edges in the transformed image. Type should be `INT`.
+    - Outputs:
+        - `image`: The transformed image after applying scaling, rotating, mirroring, and anti-aliasing effects. Type should be `IMAGE`.

@@ -1,0 +1,11 @@
+- `Conditioning Grid (string)`: This node automates the process of generating conditionings for a grid layout by encoding text inputs using ClipTextEncode and then applying these conditionings to the grid's AreaConditioners. It simplifies the creation of complex conditioning structures for grid-based layouts, making it easier to customize and generate content based on textual descriptions.
+    - Inputs:
+        - `clip` (Required): The CLIP model used for encoding the text inputs. It's crucial for converting textual descriptions into a format that can be utilized for conditioning the grid. Type should be `CLIP`.
+        - `base` (Required): A base text input that serves as the foundational conditioning for the entire grid. It's encoded and applied to set a baseline for further customization. Type should be `STRING`.
+        - `columns` (Required): Specifies the number of columns in the grid, determining its horizontal structure. Type should be `INT`.
+        - `rows` (Required): Defines the number of rows in the grid, shaping its vertical layout. Type should be `INT`.
+        - `width` (Required): The width of each cell in the grid, affecting the resolution and detail of the conditioned content. Type should be `INT`.
+        - `height` (Required): The height of each cell in the grid, influencing the vertical resolution and detail of the conditioned content. Type should be `INT`.
+        - `strength` (Required): Controls the intensity of the applied conditioning, allowing for fine-tuning of the grid's overall effect. Type should be `FLOAT`.
+    - Outputs:
+        - `conditioning`: The resulting conditioning structure for the grid, ready to be used for generating content based on the encoded text inputs. Type should be `CONDITIONING`.

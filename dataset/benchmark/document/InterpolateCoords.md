@@ -1,0 +1,6 @@
+- `InterpolateCoords`: The InterpolateCoords node is designed for interpolating a set of coordinates based on a specified curve. It processes input coordinates and an interpolation curve to generate a new set of coordinates that follow the given curve, effectively transforming the spatial layout of the original points.
+    - Inputs:
+        - `coordinates` (Required): A string representing the original coordinates to be interpolated. This parameter is crucial for defining the starting point of the interpolation process. Type should be `STRING`.
+        - `interpolation_curve` (Required): A list of floating-point numbers representing the curve along which the coordinates will be interpolated. This parameter determines the shape and trajectory of the interpolation. Type should be `FLOAT`.
+    - Outputs:
+        - `coordinates`: A string representation of the interpolated coordinates, formatted as a list of dictionaries with 'x' and 'y' keys. Type should be `STRING`.

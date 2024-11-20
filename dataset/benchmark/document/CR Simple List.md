@@ -1,0 +1,6 @@
+- `CR Simple List`: The CR_SimpleList node is designed to process a list of string values, performing operations such as trimming and filtering empty strings, to produce a cleaned and streamlined list. It also provides a link to further documentation or help related to its functionality.
+    - Inputs:
+        - `list_values` (Required): This parameter takes a multiline string input representing list values. Each line is considered a separate list item. The node processes these values to trim whitespace and filter out empty strings, effectively cleaning the list. Type should be `STRING`.
+    - Outputs:
+        - `LIST`: This output is a list of strings that have been cleaned by trimming whitespace and filtering out empty strings. Type should be `*`.
+        - `show_help`: Provides a URL to further documentation or help related to the CR_SimpleList node's functionality. Type should be `STRING`.

@@ -1,0 +1,6 @@
+- `CM_Vec2UnaryCondition`: This node performs unary condition operations on 2-dimensional vectors, evaluating a specified condition for a given vector.
+    - Inputs:
+        - `op` (Required): Specifies the unary condition operation to be performed on the vector. The choice of operation affects the outcome of the condition evaluation. Type should be `COMBO[STRING]`.
+        - `a` (Required): The 2-dimensional vector on which the unary condition operation is to be performed. Type should be `VEC2`.
+    - Outputs:
+        - `bool`: The result of the unary condition operation, indicating whether the specified condition holds true for the given vector. Type should be `BOOL`.

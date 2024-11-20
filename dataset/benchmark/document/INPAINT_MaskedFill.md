@@ -1,0 +1,8 @@
+- `INPAINT_MaskedFill`: The 'Fill Masked Area' node is designed to fill areas of an image that are masked, using either a neutral color fill or advanced inpainting techniques. It provides options for different fill methods, including a simple neutral fill or more complex methods leveraging OpenCV's inpainting algorithms, to seamlessly blend the filled area with the surrounding image content.
+    - Inputs:
+        - `image` (Required): The image tensor to be processed, where masked areas are to be filled. It serves as the primary input for the inpainting operation. Type should be `IMAGE`.
+        - `mask` (Required): A tensor representing the mask, indicating areas of the image to be filled. It plays a crucial role in determining which parts of the image are subject to inpainting. Type should be `MASK`.
+        - `fill` (Required): Specifies the method of filling: 'neutral' for a simple color fill, or 'telea'/'ns' for using OpenCV's inpainting algorithms. This choice affects the visual outcome of the filled areas. Type should be `COMBO[STRING]`.
+        - `falloff` (Required): An integer defining the falloff effect around the edges of the mask, enhancing the blending of filled areas with the rest of the image. Type should be `INT`.
+    - Outputs:
+        - `image`: The image tensor after the masked areas have been filled, showcasing the result of the inpainting operation. Type should be `IMAGE`.

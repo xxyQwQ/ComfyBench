@@ -1,0 +1,9 @@
+- `Compare Palettes [Dream]`: The 'Compare Palettes' node is designed to compare two color palettes by calculating the average multipliers for brightness, contrast, and RGB color intensities between them. This comparison provides a quantitative measure of the differences in color characteristics between the two palettes.
+    - Inputs:
+        - `a` (Required): The first RGB palette to be compared. It serves as the baseline for comparison against the second palette. Type should be `RGB_PALETTE`.
+        - `b` (Required): The second RGB palette to be compared against the first. This comparison yields multipliers indicating how much brighter, more contrasted, or differently colored the second palette is relative to the first. Type should be `RGB_PALETTE`.
+    - Outputs:
+        - `brightness_multiplier`: The average multiplier for brightness differences between the two palettes. Type should be `FLOAT`.
+        - `contrast_multiplier`: The average multiplier for contrast differences between the two palettes. Type should be `FLOAT`.
+        - `red_multiplier`: The average multiplier for red color intensity differences between the two palettes. Type should be `FLOAT`.
+        - `green_multiplier`: The average multiplier for green color intensity differences between the two palettes. Type should be `FLOAT`.

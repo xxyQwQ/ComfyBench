@@ -1,7 +1,0 @@
-- `BAE-NormalMapPreprocessor`: The BAE-NormalMapPreprocessor node is designed for preprocessing images to generate normal maps using the BAE (Boundary Aware Encoder) model. It enhances images for further processing or visualization by estimating surface normals.
-    - Parameters:
-        - `resolution`: The resolution to which the input image is resized before processing. It affects the detail level of the generated normal map. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for normal map generation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output normal map generated from the input image, providing an estimation of surface normals. Type should be `IMAGE`.

@@ -1,0 +1,13 @@
+- `Mikey Sampler Tiled Base Only`: This node specializes in generating tiled samples based solely on base conditions, optimizing for scenarios where a straightforward, tile-based approach is preferred. It leverages the underlying MikeySamplerTiled framework to efficiently produce these samples, focusing on simplicity and direct application without the need for advanced refinements or smooth transitions.
+    - Inputs:
+        - `base_model` (Required): The base_model parameter specifies the underlying model used for generating the tiled samples. It is crucial for defining the foundational architecture and capabilities that the sampling process will utilize. Type should be `MODEL`.
+        - `samples` (Required): The samples parameter represents the initial latent space inputs that the node will use to generate the tiled samples. It plays a key role in shaping the starting point of the generation process. Type should be `LATENT`.
+        - `positive_cond_base` (Required): This parameter provides the positive conditioning for the base model, influencing the generation towards desired attributes or themes. Type should be `CONDITIONING`.
+        - `negative_cond_base` (Required): The negative_cond_base parameter offers a way to specify attributes or themes to avoid in the generation process, providing a counterbalance to the positive conditioning. Type should be `CONDITIONING`.
+        - `vae` (Required): The vae parameter indicates the variational autoencoder used in conjunction with the base model to refine and adjust the generated samples. Type should be `VAE`.
+        - `model_name` (Required): model_name allows for the selection of a specific model configuration or variant from a predefined list, tailoring the generation process to specific requirements or preferences. Type should be `COMBO[STRING]`.
+        - `seed` (Required): The seed parameter ensures the reproducibility of the generated samples. By providing a specific seed value, users can achieve consistent results across multiple runs, facilitating comparisons and iterative improvements. Type should be `INT`.
+        - `upscale_by` (Required): upscale_by determines the scaling factor applied to the generated samples, affecting their resolution and detail level. Type should be `FLOAT`.
+        - `tiler_denoise` (Required): This parameter controls the denoising level applied to the tiled samples, influencing the clarity and quality of the final output. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output is an image or a set of images representing the generated tiled samples, visually encapsulating the content specified by the input parameters. Type should be `IMAGE`.

@@ -1,0 +1,5 @@
+- `Apply Text Template (mtb)`: This node is designed for dynamic string interpolation, allowing users to insert variables into a template string. It provides a flexible way to generate customized text outputs by replacing placeholders within a template with actual values.
+    - Inputs:
+        - `template` (Required): The template string with placeholders for variables, which will be dynamically replaced with actual values during execution. This parameter is essential for defining the structure and content of the output text. Type should be `STRING`.
+    - Outputs:
+        - `string`: The resulting string after all placeholders in the template have been replaced with their corresponding values. Type should be `STRING`.

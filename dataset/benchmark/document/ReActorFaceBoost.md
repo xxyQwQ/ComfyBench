@@ -1,0 +1,10 @@
+- `ReActorFaceBoost`: The ReActorFaceBoost node is designed to enhance the quality of facial images through advanced restoration techniques. It leverages deep learning models to upscale, denoise, and improve the overall visual fidelity of faces in images, making it suitable for applications requiring high-quality facial visuals.
+    - Inputs:
+        - `enabled` (Required): Activates or deactivates the face restoration process, allowing users to control when face enhancement is applied. Type should be `BOOLEAN`.
+        - `boost_model` (Required): Specifies the deep learning model used for face restoration, affecting the quality and style of the output. Different models can be chosen based on desired resolution and restoration features. Type should be `COMBO[STRING]`.
+        - `interpolation` (Required): Determines the method used for resizing images during the restoration process, impacting the smoothness and clarity of the upscaled face. Type should be `COMBO[STRING]`.
+        - `visibility` (Required): Controls the blend between the original and restored face, allowing for fine-tuning of the restoration effect to achieve a natural-looking result. Type should be `FLOAT`.
+        - `codeformer_weight` (Required): Adjusts the influence of the CodeFormer model in the restoration process, allowing for customization of the restoration effect based on the model's weight. Type should be `FLOAT`.
+        - `restore_with_main_after` (Required): Determines whether additional restoration steps should be applied after the main restoration process, enabling further enhancement of the facial image. Type should be `BOOLEAN`.
+    - Outputs:
+        - `face_boost`: The enhanced facial image, with improvements in clarity, noise reduction, and resolution, as a result of the restoration process. Type should be `FACE_BOOST`.

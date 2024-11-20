@@ -1,7 +1,0 @@
-- `RemoveBackendData __Inspire`: The `RemoveBackendData` node in the Inspire Pack is designed to selectively clear data from a backend cache. It allows for the removal of specific entries based on a provided key or the clearance of the entire cache with a special key. This functionality supports dynamic data management within backend processes, enabling efficient data updates and deletions.
-    - Parameters:
-        - `key`: The `key` parameter specifies the identifier for the data to be removed from the cache. Using '*' as the key clears all data from the cache, allowing for bulk deletion or reset operations. Type should be `STRING`.
-    - Inputs:
-        - `signal_opt`: An optional signal parameter that can be passed through and returned by the node, facilitating the chaining of operations or the passing of control signals without affecting the cache operation. Type should be `*`.
-    - Outputs:
-        - `signal`: Returns the optional signal parameter passed to the node, allowing it to be used in subsequent operations or logic flows. Type should be `*`.

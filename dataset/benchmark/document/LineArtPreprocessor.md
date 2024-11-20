@@ -1,0 +1,7 @@
+- `LineArtPreprocessor`: The LineArtPreprocessor node is designed for extracting line art from images, specifically focusing on creating realistic line art representations. It utilizes a specialized model to process images and optionally allows for the adjustment of the line art's coarseness.
+    - Inputs:
+        - `image` (Required): The input image to be processed for line art extraction. Type should be `IMAGE`.
+        - `coarse` (Optional): This parameter allows users to toggle the coarseness of the line art extraction, enabling a choice between a more detailed or a more generalized representation. Type should be `COMBO[STRING]`.
+        - `resolution` (Optional): Specifies the resolution at which the image should be processed, affecting the detail level of the extracted line art. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is an image that has been processed to extract realistic line art, suitable for various artistic and design applications. Type should be `IMAGE`.

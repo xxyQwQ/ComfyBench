@@ -1,0 +1,8 @@
+- `CalculateFrameOffset`: This node is designed to calculate the offset for frame numbers in a sequence, facilitating the management of frame-based operations in animations or simulations. It computes the starting frame number based on the current frame, maximum number of frames, number of latent inputs, and an index, ensuring seamless transitions and looping in frame sequences.
+    - Inputs:
+        - `current_frame` (Required): Specifies the current frame in the sequence. It is crucial for determining the starting point for the offset calculation. Type should be `INT`.
+        - `max_frames` (Required): Defines the maximum number of frames in the sequence. It is essential for ensuring the calculated frame number loops correctly within the sequence limits. Type should be `INT`.
+        - `num_latent_inputs` (Required): Indicates the number of latent inputs used in the frame sequence. This parameter influences the calculation of the frame offset by adjusting the spacing between frames. Type should be `INT`.
+        - `index` (Required): Represents an index used in the calculation of the frame offset. It affects the final computed frame number, contributing to the determination of the starting frame. Type should be `INT`.
+    - Outputs:
+        - `int`: Returns the calculated frame offset as an integer, facilitating the determination of the next frame in the sequence. Type should be `INT`.

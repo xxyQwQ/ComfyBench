@@ -1,0 +1,7 @@
+- `ImageBorder`: The ImageBorder node is designed to add a decorative or functional border around an image. It supports various border styles, including checkerboard patterns, blurred edges, and solid colors, allowing for a wide range of visual effects to enhance the image's appearance.
+    - Inputs:
+        - `image` (Required): The input image to which the border will be applied. This parameter is crucial as it defines the base image that will be modified by adding a border. Type should be `IMAGE`.
+        - `border_width` (Required): Specifies the width of the border to be added around the image. This parameter directly influences the thickness of the border, affecting the overall visual impact of the border on the image. Type should be `INT`.
+        - `border_color` (Required): Determines the color or style of the border. It can be a solid color, a checkerboard pattern, or a blurred effect, offering flexibility in the border's appearance. Type should be `STRING`.
+    - Outputs:
+        - `image`: The output image with the applied border. This image includes the original content with the added border, enhancing its visual appeal. Type should be `IMAGE`.

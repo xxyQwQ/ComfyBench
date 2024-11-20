@@ -1,8 +1,0 @@
-- `CLIPTextEncodeControlnet`: The CLIPTextEncodeControlnet node is designed for encoding text inputs using a CLIP model, specifically tailored for generating conditioning data that integrates with control networks. This node processes text to produce embeddings and pooled outputs, which are then augmented with existing conditioning data to enhance control over generative processes.
-    - Parameters:
-        - `text`: The input text to be encoded. This text is tokenized and encoded to produce embeddings and pooled outputs, serving as a basis for the conditioning augmentation. Type should be `STRING`.
-    - Inputs:
-        - `clip`: The CLIP model used for text tokenization and encoding. It plays a crucial role in transforming the input text into a format suitable for further processing and embedding generation. Type should be `CLIP`.
-        - `conditioning`: A collection of conditioning data to be augmented with the encoded text outputs. This data is essential for tailoring the generative process to specific requirements or contexts. Type should be `CONDITIONING`.
-    - Outputs:
-        - `conditioning`: Enhanced conditioning data, incorporating the encoded text's embeddings and pooled outputs. This output is crucial for controlling and guiding generative models. Type should be `CONDITIONING`.

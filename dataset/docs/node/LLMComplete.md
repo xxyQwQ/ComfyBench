@@ -1,7 +1,0 @@
-- `LLMComplete`: The LLMComplete node is designed to generate text completions based on a given prompt using a specified language model. It abstracts the complexity of querying language models, allowing for straightforward integration into larger systems that require natural language processing capabilities.
-    - Parameters:
-        - `prompt`: The input text prompt based on which the language model generates completions. This parameter is essential for guiding the model's output towards the desired context or question. Type should be `STRING`.
-    - Inputs:
-        - `llm_model`: Specifies the language model to be used for generating text completions. This parameter is crucial as it determines the linguistic and knowledge capabilities of the generated text. Type should be `LLM_MODEL`.
-    - Outputs:
-        - `completion`: The generated text completion based on the input prompt and the specified language model. Type should be `STRING`.

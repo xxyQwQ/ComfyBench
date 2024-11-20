@@ -1,0 +1,6 @@
+- `SaltChangeAudioVolume`: The node is designed to adjust the volume of an audio file. It modifies the volume level of the input audio data based on a specified decibel value, allowing for both amplification and attenuation.
+    - Inputs:
+        - `audio` (Required): The raw audio data to be processed. This parameter is crucial as it serves as the input audio file whose volume is to be adjusted. Type should be `AUDIO`.
+        - `volume_decibals` (Required): The amount, in decibels, by which to increase or decrease the volume of the input audio. This parameter directly influences the loudness of the output audio. Type should be `FLOAT`.
+    - Outputs:
+        - `audio`: The modified audio data with the adjusted volume level. Type should be `AUDIO`.

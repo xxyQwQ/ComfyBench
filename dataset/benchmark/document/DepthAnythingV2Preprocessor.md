@@ -1,0 +1,7 @@
+- `DepthAnythingV2Preprocessor`: This node is designed to preprocess images for depth estimation, utilizing a selection of pretrained models to generate depth maps. It allows for the customization of the model checkpoint and resolution, catering to different levels of detail and accuracy in depth estimation.
+    - Inputs:
+        - `image` (Required): The input image to be processed for depth estimation. It is the primary data upon which the depth map will be generated. Type should be `IMAGE`.
+        - `ckpt_name` (Optional): The name of the checkpoint file for the pretrained model to be used in depth estimation. This selection enables the use of different model architectures or training datasets for varied depth estimation needs. Type should be `COMBO[STRING]`.
+        - `resolution` (Optional): The resolution at which the depth map should be generated. Higher resolutions can provide more detailed depth estimations but may require more computational resources. Type should be `INT`.
+    - Outputs:
+        - `image`: The output depth map image, providing a visual representation of the estimated depths across the input image. Type should be `IMAGE`.

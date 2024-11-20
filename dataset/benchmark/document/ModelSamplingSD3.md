@@ -1,0 +1,6 @@
+- `ModelSamplingSD3`: This node introduces an advanced model sampling technique by applying a discrete flow-based modification to the input model. It enhances the model's sampling capabilities by integrating a shift parameter, allowing for refined control over the sampling process.
+    - Inputs:
+        - `model` (Required): The model to which the sampling technique will be applied. It serves as the foundation for the advanced sampling modifications. Type should be `MODEL`.
+        - `shift` (Required): A parameter that adjusts the intensity of the sampling modification, offering a means to fine-tune the model's sampling behavior. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The modified model with enhanced sampling capabilities, incorporating the discrete flow-based adjustments. Type should be `MODEL`.

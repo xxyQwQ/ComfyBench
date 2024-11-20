@@ -1,0 +1,6 @@
+- `LayerUtility_ AddBlindWaterMark`: This node is designed to embed a blind watermark into an image, utilizing a method that allows the watermark to be later extracted or detected without altering the visible characteristics of the original image significantly. It operates by manipulating the image's channels to encode the watermark invisibly.
+    - Inputs:
+        - `image` (Required): The primary image(s) into which the watermark is to be embedded. This parameter is crucial for determining the base content that will carry the hidden watermark. Type should be `IMAGE`.
+        - `watermark_image` (Required): The image(s) to be used as the watermark. This parameter is essential for defining the content of the watermark that will be invisibly embedded into the primary image(s). Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The resulting image(s) after the watermark has been embedded. This output is significant as it represents the original image(s) altered to include the invisible watermark, ready for use or further processing. Type should be `IMAGE`.

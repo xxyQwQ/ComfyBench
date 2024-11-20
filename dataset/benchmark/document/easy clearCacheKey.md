@@ -1,0 +1,5 @@
+- `easy clearCacheKey`: This node provides a mechanism to selectively clear specific entries from a cache based on a given key. It aims to manage and optimize cache usage by allowing the removal of outdated or unnecessary cache entries, thereby ensuring that the cache remains efficient and relevant.
+    - Inputs:
+        - `anything` (Required): A placeholder parameter that does not affect the operation of the node but is required for the node's execution. Type should be `*`.
+        - `cache_key` (Required): Specifies the key of the cache entry to be removed. This key identifies the specific cache entry targeted for deletion, playing a crucial role in managing cache content. Type should be `STRING`.
+    - Outputs:

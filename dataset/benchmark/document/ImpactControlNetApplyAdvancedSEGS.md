@@ -1,0 +1,11 @@
+- `ImpactControlNetApplyAdvancedSEGS`: This node is designed to apply advanced segmentation (SEGS) adjustments using a control network. It enhances or modifies the segmentation data based on the control network's parameters, offering a way to fine-tune or dynamically adjust the segmentation output for more precise or varied results.
+    - Inputs:
+        - `segs` (Required): The segmentation data to be processed. It serves as the primary input for the node, determining the base segmentation that will be adjusted. Type should be `SEGS`.
+        - `control_net` (Required): The control network used to adjust the segmentation. It defines the transformation or adjustment logic applied to the segmentation data. Type should be `CONTROL_NET`.
+        - `strength` (Required): A scalar value that determines the intensity of the control network's effect on the segmentation. Higher values result in more pronounced adjustments. Type should be `FLOAT`.
+        - `start_percent` (Required): The starting percentage of the effect's application range, allowing for gradual application of the control network's adjustments. Type should be `FLOAT`.
+        - `end_percent` (Required): The ending percentage of the effect's application range, enabling fine-tuning of where the adjustments taper off. Type should be `FLOAT`.
+        - `segs_preprocessor` (Optional): An optional preprocessor for the segmentation data before applying the control network adjustments. It can be used for initial modifications or preparations of the SEGS. Type should be `SEGS_PREPROCESSOR`.
+        - `control_image` (Optional): An optional image that can influence the control network's adjustments, providing additional context or guidance for the transformations. Type should be `IMAGE`.
+    - Outputs:
+        - `segs`: The adjusted segmentation data after applying the control network's enhancements or modifications. Type should be `SEGS`.

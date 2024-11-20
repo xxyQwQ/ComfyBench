@@ -1,0 +1,8 @@
+- `LayerColor_ YUV`: The node 'LayerColor: YUV' is designed for color correction in the YUV color space. It adjusts the Y (luminance), U (chrominance), and V (chrominance) components of an image to achieve desired color effects or corrections.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the input image(s) to be processed. It is crucial for the color correction operation, serving as the base upon which YUV adjustments are applied. Type should be `IMAGE`.
+        - `Y` (Required): The 'Y' parameter adjusts the luminance component of the image. Its modification affects the brightness and contrast of the image. Type should be `INT`.
+        - `U` (Required): The 'U' parameter modifies the chrominance component related to blue color projection. Altering this value impacts the blue-yellow balance of the image. Type should be `INT`.
+        - `V` (Required): The 'V' parameter adjusts the chrominance component associated with red color projection, influencing the red-green balance of the image. Type should be `INT`.
+    - Outputs:
+        - `image`: The output 'image' is the result of applying YUV color corrections to the input image(s), reflecting the adjustments made to luminance and chrominance components. Type should be `IMAGE`.

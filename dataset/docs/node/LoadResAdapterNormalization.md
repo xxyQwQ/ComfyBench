@@ -1,7 +1,0 @@
-- `LoadResAdapterNormalization`: This node is designed to load and apply ResAdapter normalization weights to a given model. It ensures that the model is compatible with specific normalization standards by patching it with ResAdapter weights, enhancing its performance or compatibility with certain datasets or tasks.
-    - Parameters:
-        - `resadapter_path`: The file path to the ResAdapter normalization weights. This parameter is essential for locating and loading the specific normalization weights to be applied to the model. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `model`: The model to which ResAdapter normalization weights will be applied. This parameter is crucial as it determines the base model that will be enhanced with normalization patches. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The cloned model with applied ResAdapter normalization patches. This output is significant as it represents the enhanced version of the original model, ready for further use or evaluation. Type should be `MODEL`.

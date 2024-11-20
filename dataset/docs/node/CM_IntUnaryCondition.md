@@ -1,7 +1,0 @@
-- `CM_IntUnaryCondition`: This node performs unary operations on integers based on a specified operation. It abstracts the complexity of various unary operations into a simple interface, allowing for the evaluation of conditions or transformations on single integer values.
-    - Parameters:
-        - `op`: Specifies the unary operation to be performed on the integer. This operation determines how the integer is evaluated or transformed, impacting the node's output. Type should be `COMBO[STRING]`.
-        - `a`: The integer value to be operated on. This is the primary input for the unary operation, which will be evaluated or transformed according to the specified operation. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `bool`: The result of the unary operation on the integer, typically a boolean value indicating the outcome of a condition. Type should be `BOOL`.

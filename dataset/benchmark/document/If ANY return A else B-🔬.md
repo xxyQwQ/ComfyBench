@@ -1,0 +1,7 @@
+- `If ANY return A else B-🔬`: This node conditionally executes one of two provided operations based on a boolean input. It serves as a logical branch, allowing for dynamic flow control within a node network by executing the first operation if the condition is true, and the second operation if false.
+    - Inputs:
+        - `ANY` (Required): Represents a boolean condition that determines which of the two operations, IF_TRUE or IF_FALSE, will be executed. Its evaluation to True or False directs the flow of execution accordingly. Type should be `*`.
+        - `IF_TRUE` (Required): The operation to be executed if the ANY input evaluates to True. This allows for conditional execution of node operations based on the provided boolean condition. Type should be `*`.
+        - `IF_FALSE` (Required): The operation to be executed if the ANY input evaluates to False, providing an alternative path for execution in the node's logic. Type should be `*`.
+    - Outputs:
+        - `?`: The output is either the result of IF_TRUE or IF_FALSE operation, depending on the evaluation of the ANY input. Type should be `*`.

@@ -1,0 +1,14 @@
+- `CR 8 Channel Out`: This node is designed to output data across eight channels from a pipeline, facilitating complex data manipulation and routing within a node-based processing environment. It serves as a critical component for distributing data to multiple downstream nodes, enhancing modularity and flexibility in data processing workflows.
+    - Inputs:
+        - `pipe` (Required): The 'pipe' parameter represents the pipeline from which data is extracted and distributed across the eight output channels. It is essential for the node's operation as it sources the data to be processed and routed. Type should be `PIPE_LINE`.
+    - Outputs:
+        - `pipe`: Represents the pipeline data structure, carrying data through the node for processing and output across multiple channels. Type should be `PIPE_LINE`.
+        - `ch1`: Outputs the first channel of data processed by the node. Type should be `*`.
+        - `ch2`: Outputs the second channel of data processed by the node. Type should be `*`.
+        - `ch3`: Outputs the third channel of data processed by the node. Type should be `*`.
+        - `ch4`: Outputs the fourth channel of data processed by the node. Type should be `*`.
+        - `ch5`: Outputs the fifth channel of data processed by the node. Type should be `*`.
+        - `ch6`: Outputs the sixth channel of data processed by the node. Type should be `*`.
+        - `ch7`: Outputs the seventh channel of data processed by the node. Type should be `*`.
+        - `ch8`: Outputs the eighth channel of data processed by the node. Type should be `*`.
+        - `show_help`: Provides a URL to a help page, offering guidance on how to use the CR 8 Channel Out node effectively. Type should be `STRING`.

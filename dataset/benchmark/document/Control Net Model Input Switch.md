@@ -1,0 +1,7 @@
+- `Control Net Model Input Switch`: This node is designed to switch between two control net inputs based on a boolean condition. It facilitates dynamic control net selection within workflows, enabling conditional logic to dictate the control net used for further processing.
+    - Inputs:
+        - `control_net_a` (Required): The first control net option for selection. Type should be `CONTROL_NET`.
+        - `control_net_b` (Required): The second control net option for selection. Type should be `CONTROL_NET`.
+        - `boolean` (Required): A boolean value determining which control net is selected. If true, `control_net_a` is selected; otherwise, `control_net_b` is chosen. Type should be `BOOLEAN`.
+    - Outputs:
+        - `control_net`: The selected control net based on the boolean condition. Type should be `CONTROL_NET`.

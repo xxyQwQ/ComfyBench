@@ -1,0 +1,8 @@
+- `LayerColor_ LAB`: The LayerColor: LAB node is designed for color correction in the LAB color space. It adjusts the L, A, and B channels of an image, allowing for precise control over the lightness, green-red, and blue-yellow components, respectively.
+    - Inputs:
+        - `image` (Required): The input image to be color corrected. It serves as the base for applying LAB color space adjustments. Type should be `IMAGE`.
+        - `L` (Required): Adjusts the lightness of the image. A positive value increases lightness, while a negative value decreases it. Type should be `INT`.
+        - `A` (Required): Modifies the green-red axis of the image. Positive values shift towards red, negative values towards green. Type should be `INT`.
+        - `B` (Required): Alters the blue-yellow axis of the image. Positive values shift towards yellow, negative values towards blue. Type should be `INT`.
+    - Outputs:
+        - `image`: The color-corrected image in the LAB color space, reflecting adjustments made to the L, A, and B channels. Type should be `IMAGE`.

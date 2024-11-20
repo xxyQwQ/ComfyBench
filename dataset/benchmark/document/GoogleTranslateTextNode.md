@@ -1,0 +1,8 @@
+- `GoogleTranslateTextNode`: This node is designed to translate text from one language to another, offering an option for manual translation bypass. It leverages the Google Translate API or a manual override to return the translated text, streamlining the process of language translation within workflows.
+    - Inputs:
+        - `from_translate` (Required): Specifies the source language of the text to be translated, or 'auto' to automatically detect the language. This parameter is crucial for determining the starting point of translation. Type should be `COMBO[STRING]`.
+        - `to_translate` (Required): Defines the target language for the translation, guiding the node to convert the input text into the desired language. Type should be `COMBO[STRING]`.
+        - `manual_translate` (Required): A boolean flag that, when set to True, bypasses the translation process and returns the original text. This allows for optional manual control over the translation. Type should be `COMBO[BOOLEAN]`.
+        - `text` (Required): The text to be translated, serving as the primary input for the translation process. Type should be `STRING`.
+    - Outputs:
+        - `text`: The translated text, either through the Google Translate API or as manually inputted, depending on the manual_translate flag. Type should be `STRING`.

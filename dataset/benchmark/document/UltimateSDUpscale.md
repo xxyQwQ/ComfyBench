@@ -1,0 +1,29 @@
+- `UltimateSDUpscale`: The UltimateSDUpscale node integrates advanced upscaling techniques to enhance image resolution and quality within the ComfyUI framework, leveraging the Ultimate SD Upscale by Coyote-A. It utilizes deep learning models and custom algorithms to upscale images, apply seam fixing, and redraw images for improved visual fidelity, supporting various modes and configurations for tailored image processing.
+    - Inputs:
+        - `image` (Required): The input image tensor to be upscaled. It plays a crucial role in determining the final output quality and resolution, as the node applies deep learning-based upscaling techniques to enhance the image. Type should be `IMAGE`.
+        - `model` (Required): The deep learning model used for processing the image. It is essential for the upscaling and enhancement process, influencing the quality of the output. Type should be `MODEL`.
+        - `positive` (Required): Positive conditioning text to guide the image processing, enhancing specific attributes or elements within the image. Type should be `CONDITIONING`.
+        - `negative` (Required): Negative conditioning text to suppress undesired attributes or elements in the image during processing. Type should be `CONDITIONING`.
+        - `vae` (Required): The variational autoencoder used for image manipulation, playing a key role in the image's quality and detail enhancement. Type should be `VAE`.
+        - `upscale_by` (Required): The factor by which the image will be upscaled. This directly influences the size and detail level of the output image, enabling precise control over the upscaling process. Type should be `FLOAT`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the upscaling process. Type should be `INT`.
+        - `steps` (Required): The number of steps to perform in the upscaling process, affecting the detail and quality of the output image. Type should be `INT`.
+        - `cfg` (Required): Configuration parameter influencing the generation process, allowing for fine-tuning of the upscaling results. Type should be `FLOAT`.
+        - `sampler_name` (Required): The name of the sampler used in the processing, affecting the randomness and variation in the upscaling process. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler used for managing the upscaling process, contributing to the efficiency and outcome of the image enhancement. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): The denoising factor applied during upscaling, aiming to reduce noise and improve image clarity. Type should be `FLOAT`.
+        - `upscale_model` (Required): The specific upscaling model used, determining the technique and quality of the upscaling process. Type should be `UPSCALE_MODEL`.
+        - `mode_type` (Required): Specifies the upscaling mode to be used, affecting the upscaling technique and final image appearance. This parameter allows for customization of the upscaling process to suit different image types and desired outcomes. Type should be `COMBO[STRING]`.
+        - `tile_width` (Required): The width of the tiles used in the upscaling process, affecting the granularity and detail of the upscaled image. Type should be `INT`.
+        - `tile_height` (Required): The height of the tiles used in the upscaling process, affecting the granularity and detail of the upscaled image. Type should be `INT`.
+        - `mask_blur` (Required): The amount of blur applied to the mask during upscaling, affecting the smoothness and blending of the upscaled image. Type should be `INT`.
+        - `tile_padding` (Required): The padding around each tile during upscaling, affecting the overlap and blending between tiles. Type should be `INT`.
+        - `seam_fix_mode` (Required): Determines the seam fixing strategy to be applied after upscaling, aiming to improve the visual coherence of the upscaled image by addressing potential artifacts at tile boundaries. Type should be `COMBO[STRING]`.
+        - `seam_fix_denoise` (Required): The denoising factor applied specifically for seam fixing, aiming to improve the coherence and visual quality at tile boundaries. Type should be `FLOAT`.
+        - `seam_fix_width` (Required): The width of the area to apply seam fixing, affecting the extent of seam correction in the upscaled image. Type should be `INT`.
+        - `seam_fix_mask_blur` (Required): The amount of blur applied to the seam fix mask, influencing the smoothness and blending of corrected seams. Type should be `INT`.
+        - `seam_fix_padding` (Required): The padding applied during seam fixing, affecting the area of influence for seam corrections. Type should be `INT`.
+        - `force_uniform_tiles` (Required): A boolean indicating whether to force uniform tile sizes during upscaling, affecting the consistency and layout of the upscaled image. Type should be `BOOLEAN`.
+        - `tiled_decode` (Required): A boolean indicating whether to use tiled decoding in the upscaling process, affecting the performance and possibly the quality of the upscaling. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output image tensor representing the upscaled image. This tensor encapsulates the enhanced resolution and quality achieved through the upscaling process, ready for further processing or display. Type should be `IMAGE`.

@@ -1,0 +1,8 @@
+- `ADE_InjectPIAIntoAnimateDiffModel`: This node is designed to integrate PIA (Pose Independent Animation) capabilities into an existing AnimateDiff model. By injecting PIA-specific convolutional inputs into the model, it enhances the model's ability to handle motion and animation with greater flexibility and precision, particularly in scenarios where pose independence is crucial.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the motion model to be used. It is crucial for identifying the correct model within the available options, ensuring the node operates with the intended motion dynamics. Type should be `COMBO[STRING]`.
+        - `motion_model` (Required): Represents the motion model to be patched with PIA capabilities. This parameter is essential for the node to apply the necessary modifications to enable PIA features within the model. Type should be `MOTION_MODEL_ADE`.
+        - `ad_settings` (Optional): Optional settings for AnimateDiff that can be applied during the PIA injection process. These settings allow for customization and fine-tuning of the animation and motion effects. Type should be `AD_SETTINGS`.
+        - `deprecation_warning` (Optional): Provides a warning about the experimental status of the node, indicating that it may not function as expected. Type should be `ADEWARN`.
+    - Outputs:
+        - `MOTION_MODEL`: The modified motion model with PIA capabilities injected. This output enables enhanced animation and motion handling, especially for pose-independent animations. Type should be `MOTION_MODEL_ADE`.

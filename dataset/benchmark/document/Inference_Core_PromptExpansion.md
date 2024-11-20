@@ -1,0 +1,9 @@
+- `Inference_Core_PromptExpansion`: The Inference_Core_PromptExpansion node is designed to enhance and expand input prompts using a pre-trained language model. It automatically adjusts the input prompt based on a given seed, enriches it with additional context or variations, and outputs the expanded version. This process is aimed at improving the quality and relevance of the prompt for subsequent processing or generation tasks.
+    - Inputs:
+        - `model_name` (Required): Specifies the model used for prompt expansion. It determines the linguistic style and capabilities of the expansion. Type should be `COMBO[STRING]`.
+        - `text` (Required): The initial text prompt to be expanded. It serves as the base content that will be enriched and extended to generate a more detailed or varied output. Type should be `STRING`.
+        - `seed` (Required): An integer seed that influences the variation in the expanded prompt. It ensures reproducibility of the expansion process, allowing for consistent results across different runs. Type should be `INT`.
+        - `log_prompt` (Required): A boolean flag that controls the logging of the original and expanded prompts for debugging or analysis purposes. Type should be `BOOLEAN`.
+    - Outputs:
+        - `expanded_prompt`: The enriched and extended version of the original prompt, produced by incorporating additional context or variations based on the seed. Type should be `STRING`.
+        - `seed`: The seed value used for the expansion process, returned for reference or further use. Type should be `INT`.

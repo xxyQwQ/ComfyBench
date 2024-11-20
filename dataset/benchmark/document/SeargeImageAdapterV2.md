@@ -1,0 +1,9 @@
+- `SeargeImageAdapterV2`: The SeargeImageAdapterV2 node is designed to adapt image inputs for further processing within the SDXL framework, enabling the integration and manipulation of source images, image masks, and uploaded masks. It facilitates the creation of a standardized data structure for image-related inputs, ensuring compatibility and ease of use across various image processing operations.
+    - Inputs:
+        - `data` (Optional): An optional data stream that can be provided to include additional information or parameters for image processing. It serves as a flexible input to accommodate various data needs. Type should be `SRG_DATA_STREAM`.
+        - `source_image` (Optional): An optional image input representing the primary source image for processing. It plays a crucial role in image adaptation tasks. Type should be `IMAGE`.
+        - `image_mask` (Optional): An optional mask input for the source image, used to specify areas of interest or exclusion during image processing. Type should be `MASK`.
+        - `uploaded_mask` (Optional): An optional mask input uploaded by the user, allowing for custom mask definitions in image processing tasks. Type should be `MASK`.
+    - Outputs:
+        - `data`: Returns the adapted data stream, enriched with image processing inputs. Type should be `SRG_DATA_STREAM`.
+        - `image_inputs`: unknown Type should be `SRG_DATA_STREAM`.

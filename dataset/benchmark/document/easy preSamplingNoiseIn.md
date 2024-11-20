@@ -1,0 +1,14 @@
+- `easy preSamplingNoiseIn`: This node is designed to inject noise into latent representations before the sampling process in a customizable manner. It allows for the adjustment of noise characteristics and the application of noise based on specific conditions or parameters, enhancing the flexibility and control over the noise injection process in generative models.
+    - Inputs:
+        - `pipe` (Required): Represents the pipeline configuration and state, serving as the context for noise injection and other processing steps. Type should be `PIPE_LINE`.
+        - `factor` (Required): Adjusts the intensity of the noise injected into the latent representation, allowing for finer control over the noise level. Type should be `FLOAT`.
+        - `steps` (Required): Determines the number of steps for the sampling process, impacting the intensity and granularity of noise injection. Type should be `INT`.
+        - `cfg` (Required): Controls the configuration strength, influencing the balance between the original content and the generated aspects in the output. Type should be `FLOAT`.
+        - `sampler_name` (Required): Specifies the sampler to be used, allowing for different sampling strategies and their corresponding noise characteristics. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Defines the scheduling strategy for noise injection, enabling precise control over the timing and sequence of noise application. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Adjusts the denoising factor, affecting the level of noise reduction applied to the latent representation. Type should be `FLOAT`.
+        - `seed` (Required): Sets the seed for random number generation, ensuring consistency and reproducibility in noise injection. Type should be `INT`.
+        - `optional_noise_seed` (Optional): An optional seed for generating noise, providing an additional layer of control over the randomness of the noise injected. Type should be `INT`.
+        - `optional_latent` (Optional): An optional latent representation that can be directly manipulated or injected with noise, offering more flexibility in the noise injection process. Type should be `LATENT`.
+    - Outputs:
+        - `pipe`: The modified latent representation with noise injected, ready for further processing or sampling in the pipeline. Type should be `PIPE_LINE`.

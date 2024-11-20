@@ -1,0 +1,5 @@
+- `FromListGetImages`: The node 'FromListGetImages' is designed to retrieve a specific image from a list of images based on a given index. It enables random access to the images in the list, including the ability to access images in reverse order by using negative indexes.
+    - Inputs:
+        - `list` (Required): The 'list' parameter represents the list of images from which a specific image is to be retrieved. It is essential for specifying the source of the images. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: This output is the image retrieved from the specified position in the list. Type should be `IMAGE`.

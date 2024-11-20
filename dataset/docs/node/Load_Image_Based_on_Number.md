@@ -1,8 +1,0 @@
-- `Load Image Based on Number`: The node loads an image from a specified directory based on a given index (seed). It is designed to handle large indices by wrapping around the list of image files in the directory, ensuring a valid image is always returned regardless of the seed value.
-    - Parameters:
-        - `image_directory`: Specifies the directory from which to load the image. It is crucial for locating and accessing the desired images. Type should be `STRING`.
-        - `seed`: Determines the specific image to load by serving as an index into the sorted list of image files within the directory. The seed ensures a deterministic selection of images. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `image`: The loaded image, processed and converted into a tensor format suitable for further manipulation or analysis. Type should be `IMAGE`.
-        - `filename`: The name of the file from which the image was loaded, providing a reference to the original image file. Type should be `STRING`.

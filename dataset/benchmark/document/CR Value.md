@@ -1,0 +1,7 @@
+- `CR Value`: The CR Value node is designed to convert a given value into multiple formats, specifically float, integer, and string, and provide a link to further documentation. It serves as a utility node for format conversion and information retrieval.
+    - Inputs:
+        - `value` (Required): The 'value' parameter is the input that the node will convert into different formats. It plays a crucial role in determining the output formats (float, integer) and the information link provided. Type should be `FLOAT`.
+    - Outputs:
+        - `FLOAT`: A floating-point representation of the input value. Type should be `FLOAT`.
+        - `INT`: An integer representation of the input value. Type should be `INT`.
+        - `show_help`: A URL string pointing to further documentation about the CR Value node. Type should be `STRING`.

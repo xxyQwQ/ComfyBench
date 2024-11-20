@@ -1,0 +1,7 @@
+- `Convert Color Space`: The ConvertColorSpace node is designed to transform the color space of an image from one format to another, such as from RGB to HSV or HSL, and vice versa. This node facilitates the manipulation and analysis of images by allowing them to be represented in different color models, which can be more suitable for specific tasks or visual effects.
+    - Inputs:
+        - `in_space` (Required): Specifies the original color space of the input image. This parameter determines how the image's color data is interpreted before conversion. Type should be `COMBO[STRING]`.
+        - `out_space` (Required): Defines the target color space to which the image will be converted. This parameter sets the desired color model format for the output image. Type should be `COMBO[STRING]`.
+        - `image` (Required): The input image to be converted. This parameter is the actual image data that will undergo the color space transformation. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The output image after the color space conversion. This image will be in the target color space specified by the 'out_space' parameter. Type should be `IMAGE`.

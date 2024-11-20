@@ -1,0 +1,10 @@
+- `ADE_AdjustPEManual`: The ADE_AdjustPEManual node allows for manual adjustments to the positional encoding (PE) parameters within the AnimateDiff framework. It provides fine-grained control over the PE adjustments, enabling users to tailor the animation process to specific needs.
+    - Inputs:
+        - `cap_initial_pe_length` (Required): Specifies the maximum initial length of the positional encoding to be used, allowing for the capping of PE at the beginning of the process. This can be crucial for controlling the animation's starting point. Type should be `INT`.
+        - `interpolate_pe_to_length` (Required): Determines the length to which the positional encoding should be interpolated, enabling the adjustment of PE length to match specific animation requirements. Type should be `INT`.
+        - `initial_pe_idx_offset` (Required): Sets the starting index offset for the positional encoding, allowing for the adjustment of the animation's initial phase. Type should be `INT`.
+        - `final_pe_idx_offset` (Required): Defines the ending index offset for the positional encoding, facilitating the control over the animation's final phase. Type should be `INT`.
+        - `print_adjustment` (Required): Enables the printing of adjustment information, useful for debugging and understanding the impact of the applied adjustments. Type should be `BOOLEAN`.
+        - `prev_pe_adjust` (Optional): Allows for the inclusion of previous positional encoding adjustments, enabling cumulative adjustments over multiple steps. Type should be `PE_ADJUST`.
+    - Outputs:
+        - `pe_adjust`: Returns an adjusted positional encoding object, reflecting the manual adjustments made to the PE settings. Type should be `PE_ADJUST`.

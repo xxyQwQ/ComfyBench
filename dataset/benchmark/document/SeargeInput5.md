@@ -1,0 +1,10 @@
+- `SeargeInput5`: SeargeInput5 is designed for prompt processing within the SeargeSDXL framework. It focuses on refining and adjusting input prompts to better suit the generation process, ensuring that the prompts are optimized for the specific requirements of the SeargeSDXL models.
+    - Inputs:
+        - `base_conditioning_scale` (Required): Specifies the scale factor for base conditioning, influencing the impact of the base prompts on the generation process. Type should be `FLOAT`.
+        - `refiner_conditioning_scale` (Required): Determines the scale factor for refiner conditioning, affecting how much the refiner prompts contribute to the final generated content. Type should be `FLOAT`.
+        - `style_prompt_power` (Required): Controls the intensity of the style prompt's influence, allowing for fine-tuning of the stylistic elements in the generated content. Type should be `FLOAT`.
+        - `negative_style_power` (Required): Adjusts the degree to which negative style prompts are considered, helping to avoid undesired stylistic elements. Type should be `FLOAT`.
+        - `style_template` (Required): A template for styling the prompts, providing a structured approach to applying stylistic adjustments. Type should be `COMBO[STRING]`.
+        - `inputs` (Optional): A collection of input parameters and prompts that are processed and refined for content generation. Type should be `PARAMETER_INPUTS`.
+    - Outputs:
+        - `inputs`: The processed and refined collection of input parameters and prompts, ready for further processing or content generation. Type should be `PARAMETER_INPUTS`.

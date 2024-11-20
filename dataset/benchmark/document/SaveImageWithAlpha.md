@@ -1,0 +1,6 @@
+- `SaveImageWithAlpha`: This node is designed for saving images with an alpha channel, allowing for transparency effects. It processes a batch of images and their corresponding masks, applies the masks as alpha channels to the images, optionally adds metadata (such as prompts or additional PNG information), and saves the resulting images with transparency to a specified location.
+    - Inputs:
+        - `images` (Required): A batch of images to be processed and saved with alpha transparency. This input is crucial for defining the visual content of the output files. Type should be `IMAGE`.
+        - `mask` (Required): A batch of masks corresponding to the images, used to create the alpha channel for transparency effects. This input is essential for determining which parts of each image should be transparent. Type should be `MASK`.
+        - `filename_prefix` (Required): A prefix for the filenames of the saved images, allowing for organized storage and easy identification. Type should be `STRING`.
+    - Outputs:

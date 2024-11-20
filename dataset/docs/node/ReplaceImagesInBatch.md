@@ -1,8 +1,0 @@
-- `ReplaceImagesInBatch`: This node is designed to replace a subset of images within a batch with a new set of images, starting from a specified index. It facilitates the modification of image batches by allowing selective replacement, thereby enabling dynamic content updates or corrections within a batch of images.
-    - Parameters:
-        - `start_index`: The index within the original batch from which the replacement will begin. This parameter determines the starting point for modifications, allowing precise control over the update location. Type should be `INT`.
-    - Inputs:
-        - `original_images`: The batch of original images that will undergo replacement. This parameter is crucial as it provides the base content that will be modified. Type should be `IMAGE`.
-        - `replacement_images`: The images that will replace a portion of the original batch, starting from the specified index. This parameter is essential for defining the new content to be introduced into the batch. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The modified batch of images after the replacement operation, reflecting the updates or corrections made. Type should be `IMAGE`.

@@ -1,6 +1,0 @@
-- `LLMLlamaCPPModel`: The LLMLlamaCPPModel node is designed to load and initialize LlamaCPP models, providing a bridge to leverage the capabilities of LlamaCPP for natural language processing tasks. It encapsulates the process of locating, loading, and preparing the model for use, including the integration of an embedding model for enhanced functionality.
-    - Parameters:
-        - `model_name`: Specifies the name of the LlamaCPP model to be loaded. This name is used to locate the model within a predefined set of available models, ensuring the correct model is initialized for use. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `model`: Outputs a dictionary containing the loaded LlamaCPP model, its name, the associated embedding model, and the embedding model's name, ready for further processing or use in NLP tasks. Type should be `LLM_MODEL`.

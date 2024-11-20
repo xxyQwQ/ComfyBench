@@ -1,0 +1,12 @@
+- `Prompt Parser`: The Prompt Parser node is designed to process and transform text prompts based on a set of rules and conditions. It can parse input prompts to extract and format specific pieces of information, apply random selection to parts of the text based on predefined conditions, and integrate external tags into the prompt. This node is essential for dynamically generating or modifying text prompts in a controlled manner, allowing for customized and context-aware text output.
+    - Inputs:
+        - `prompt` (Required): The main text input that the node will process. It serves as the base content for parsing and applying transformations. Type should be `STRING`.
+        - `tags_file` (Required): A file path to a text file containing tags that can be used to replace placeholders within the prompt. This allows for dynamic content insertion based on external data. Type should be `STRING`.
+        - `seed` (Required): A seed value for random number generation, ensuring reproducibility of the random selections made within the prompt processing. Type should be `INT`.
+        - `extra1` (Optional): An optional text input for additional content that can be inserted into the prompt at a specified placeholder. Type should be `STRING`.
+        - `extra2` (Optional): Another optional text input for extra content, similar to 'extra1', providing further customization capability for the prompt. Type should be `STRING`.
+        - `tags` (Optional): Directly provides tags as text input for replacing placeholders in the prompt, offering an alternative to using a tags file. Type should be `STRING`.
+    - Outputs:
+        - `positive`: The processed text output containing elements designated as positive or desirable. Type should be `STRING`.
+        - `negative`: The processed text output containing elements designated as negative or undesirable. Type should be `STRING`.
+        - `debug`: A detailed log of the parsing process, including seed values, extra inputs, and the raw prompt before processing, useful for debugging and analysis. Type should be `STRING`.

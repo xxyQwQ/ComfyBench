@@ -1,6 +1,0 @@
-- `IPAdapterInsightFaceLoader`: The IPAdapterInsightFaceLoader node is designed to load the InsightFace model based on the specified provider. It facilitates the integration of facial recognition capabilities into the IPAdapter framework, enabling advanced face analysis and processing functionalities.
-    - Parameters:
-        - `provider`: Specifies the computing platform (CPU, CUDA, ROCM) for running the InsightFace model. The choice of provider directly influences the model's performance and compatibility with different hardware environments, ultimately affecting the efficiency and speed of facial recognition tasks. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `insightface`: Returns an instance of the InsightFace model, ready for facial recognition tasks. Type should be `INSIGHTFACE`.

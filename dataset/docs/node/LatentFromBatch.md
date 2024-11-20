@@ -1,8 +1,0 @@
-- `LatentFromBatch`: This node is designed to extract a specific subset of latent samples from a given batch based on the specified batch index and length. It allows for selective processing of latent samples, facilitating operations on smaller segments of the batch for efficiency or targeted manipulation.
-    - Parameters:
-        - `batch_index`: Specifies the starting index within the batch from which the subset of samples will begin. This parameter enables targeted extraction of samples from specific positions in the batch. Type should be `INT`.
-        - `length`: Defines the number of samples to be extracted from the specified starting index. This parameter controls the size of the subset to be processed, allowing for flexible manipulation of batch segments. Type should be `INT`.
-    - Inputs:
-        - `samples`: The collection of latent samples from which a subset will be extracted. This parameter is crucial for determining the source batch of samples to be processed. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The extracted subset of latent samples, now available for further processing or analysis. Type should be `LATENT`.

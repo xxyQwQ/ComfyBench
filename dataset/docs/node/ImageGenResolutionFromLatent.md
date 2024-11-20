@@ -1,7 +1,0 @@
-- `ImageGenResolutionFromLatent`: This node is designed to calculate the generation resolution for images based on the dimensions of a given latent representation. It extracts the height and width from the latent's shape and scales them to determine the appropriate resolution for image generation.
-    - Parameters:
-    - Inputs:
-        - `latent`: The latent representation from which the image generation resolution will be derived. The latent's shape is used to calculate the desired output dimensions by scaling its height and width. Type should be `LATENT`.
-    - Outputs:
-        - `IMAGE_GEN_WIDTH (INT)`: The calculated width for image generation, derived from the latent's dimensions and scaled appropriately. Type should be `INT`.
-        - `IMAGE_GEN_HEIGHT (INT)`: The calculated height for image generation, derived from the latent's dimensions and scaled appropriately. Type should be `INT`.

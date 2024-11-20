@@ -1,0 +1,7 @@
+- `LayerColor_ LUT Apply`: The node applies a Look-Up Table (LUT) to images for color correction, supporting different color spaces. It enables the transformation of the color palette of images according to predefined LUT files, facilitating advanced color grading and adjustments.
+    - Inputs:
+        - `image` (Required): The input image(s) to which the LUT will be applied. This is crucial for defining the visual content that will undergo color transformation. Type should be `IMAGE`.
+        - `LUT` (Required): Specifies the LUT file to be used for color correction. This determines the specific color transformation that will be applied to the input images. Type should be `COMBO[STRING]`.
+        - `color_space` (Required): Defines the color space of the input image(s), such as 'linear' or 'log', affecting how the LUT is applied and the final color correction outcome. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The output image(s) after applying the LUT, showcasing the result of the color correction process. Type should be `IMAGE`.

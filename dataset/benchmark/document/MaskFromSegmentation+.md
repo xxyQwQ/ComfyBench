@@ -1,0 +1,9 @@
+- `MaskFromSegmentation+`: This node is designed to generate masks from image segmentation, effectively converting segmented areas into distinct mask layers. It allows for advanced image editing and manipulation by isolating specific segments of an image for targeted operations.
+    - Inputs:
+        - `image` (Required): The input image to be segmented into masks. It serves as the basis for generating distinct mask layers for each segmented area. Type should be `IMAGE`.
+        - `segments` (Required): The number of segments to divide the image into. This parameter controls the granularity of the segmentation, with higher values resulting in more detailed masks. Type should be `INT`.
+        - `remove_isolated_pixels` (Required): A threshold for removing isolated pixels within a mask to clean up noise and improve mask quality. Type should be `INT`.
+        - `remove_small_masks` (Required): A threshold for removing small masks deemed to be noise, ensuring only significant segments are retained. Type should be `FLOAT`.
+        - `fill_holes` (Required): A boolean flag indicating whether to fill holes within the generated masks, enhancing their completeness and usability. Type should be `BOOLEAN`.
+    - Outputs:
+        - `mask`: The output consists of a stack of masks corresponding to the segmented areas of the input image, ready for further processing or application. Type should be `MASK`.

@@ -1,0 +1,6 @@
+- `LatentBatchSplitter __Inspire`: The LatentBatchSplitter node is designed to split a batch of latent representations into smaller batches or individual samples, based on a specified count. This functionality is crucial for managing and manipulating batches of data in scenarios where operations need to be performed on smaller subsets or individual items within a larger batch.
+    - Inputs:
+        - `latent` (Required): The 'latent' parameter represents the batch of latent representations to be split. It is crucial for determining the structure and content of the output batches. Type should be `LATENT`.
+        - `split_count` (Required): The 'split_count' parameter specifies the number of splits or individual samples to extract from the input batch. It affects the granularity of the splitting operation, allowing for flexible batch size adjustments. Type should be `INT`.
+    - Outputs:
+        - `latent`: The output is a tuple of smaller batches or individual latent representations, derived from the original input batch according to the specified split count. Type should be `LATENT`.

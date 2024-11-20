@@ -1,0 +1,10 @@
+- `InstructPixToPixConditioning`: This node is designed for encoding images into a conditioning format suitable for the InstructPix2Pix model, incorporating both positive and negative conditioning alongside pixel data and a variational autoencoder (VAE).
+    - Inputs:
+        - `positive` (Required): Positive conditioning data that influences the encoding process towards desired outcomes. Type should be `CONDITIONING`.
+        - `negative` (Required): Negative conditioning data that guides the encoding away from undesired outcomes. Type should be `CONDITIONING`.
+        - `vae` (Required): A variational autoencoder used to encode the pixel data into a latent space representation. Type should be `VAE`.
+        - `pixels` (Required): The pixel data of the image to be encoded, serving as the base for generating latent representations. Type should be `IMAGE`.
+    - Outputs:
+        - `positive`: Encoded positive conditioning data. Type should be `CONDITIONING`.
+        - `negative`: Encoded negative conditioning data. Type should be `CONDITIONING`.
+        - `latent`: The latent space representation of the input image. Type should be `LATENT`.

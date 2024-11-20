@@ -1,0 +1,7 @@
+- `SaveMetaData`: The SaveMetaData node is designed to save metadata information to a text file. It processes image metadata and additional information, such as prompts and extra PNG info, to generate a comprehensive metadata file that encapsulates various details about the image and its associated data.
+    - Inputs:
+        - `image` (Required): The image whose metadata is to be saved. This parameter is crucial as it determines the context and content of the metadata to be saved. Type should be `IMAGE`.
+        - `filename_prefix` (Required): A prefix for the filename under which the metadata will be saved. This allows for customizable naming conventions for the metadata files. Type should be `STRING`.
+        - `timestamp_prefix` (Required): A boolean flag indicating whether to prepend a timestamp to the filename, aiding in organizing and sorting the metadata files. Type should be `COMBO[STRING]`.
+        - `counter` (Required): A boolean flag that determines whether a counter should be appended to the filename, useful for versioning or tracking multiple metadata files for the same image. Type should be `COMBO[STRING]`.
+    - Outputs:

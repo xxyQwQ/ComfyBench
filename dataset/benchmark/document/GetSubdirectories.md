@@ -1,0 +1,5 @@
+- `GetSubdirectories`: This node is designed to retrieve all subdirectories within a specified directory, effectively scanning a directory path to list its immediate child directories. It serves as a utility for directory management and organization, facilitating the exploration and manipulation of filesystem structures.
+    - Inputs:
+        - `directory` (Required): Specifies the directory path to scan for subdirectories. It is the starting point for the search operation, determining where the node begins its directory traversal. Type should be `STRING`.
+    - Outputs:
+        - `subdirectories`: Returns a list of paths representing the subdirectories found within the specified directory. This output enables further processing or inspection of these directories. Type should be `STRING`.

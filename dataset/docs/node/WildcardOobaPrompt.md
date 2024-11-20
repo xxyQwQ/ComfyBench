@@ -1,7 +1,0 @@
-- `WildcardOobaPrompt`: The WildcardOobaPrompt node is designed to process input prompts by interpreting and replacing wildcard syntax and handling specific syntax for interacting with large language models (LLMs) through the OobaPrompt class. It aims to enhance the flexibility and expressiveness of prompts by allowing dynamic content insertion and custom processing for LLM requests.
-    - Parameters:
-        - `input_prompt`: The 'input_prompt' parameter is the initial input text that may contain wildcard syntax for dynamic content insertion and specific markers for LLM syntax processing. It plays a crucial role in determining the final output by guiding the node on how to transform the input prompt. Type should be `STRING`.
-        - `seed`: The 'seed' parameter is used to initialize the random number generator, ensuring reproducibility in selections made during the wildcard and random word selection processes. It affects the node's execution by influencing the randomness of content insertion. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `text`: The output is a transformed version of the input prompt, with wildcard syntax and LLM markers processed and replaced according to the provided rules and parameters. Type should be `STRING`.

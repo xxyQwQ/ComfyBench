@@ -1,0 +1,8 @@
+- `CR XY Product`: The CR XY Product node performs a Cartesian product operation on two lists of text inputs, generating a new list that combines each element of the first list with every element of the second list. This node is useful for creating combinations of different text elements, facilitating operations that require exhaustive pairing of input elements.
+    - Inputs:
+        - `text_x` (Required): Represents the first list of text inputs. Each line is considered a separate element in the list, and the node combines each of these elements with every element of the second list to form the Cartesian product. Type should be `STRING`.
+        - `text_y` (Required): Represents the second list of text inputs. Similar to 'text_x', each line is treated as a separate element, and is combined with elements from the first list to generate the Cartesian product. Type should be `STRING`.
+    - Outputs:
+        - `x_values`: A list containing the first elements of each pair in the Cartesian product. Type should be `*`.
+        - `y_values`: A list containing the second elements of each pair in the Cartesian product. Type should be `*`.
+        - `show_help`: A URL providing additional help and documentation for the CR XY Product node. Type should be `STRING`.

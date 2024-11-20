@@ -1,9 +1,0 @@
-- `FL_ImageCaptionSaver`: The FL_ImageCaptionSaver node is designed to save a batch of images along with their corresponding captions into specified directory, with options for file naming and overwrite control. It facilitates the organization and storage of generated images and textual descriptions, enhancing accessibility and management of visual content.
-    - Parameters:
-        - `folder_name`: The name of the folder where images and captions will be saved. It serves as the destination path for the output, influencing the organization of saved files. Type should be `STRING`.
-        - `caption_text`: The text caption to be saved alongside each image. This input provides contextual or descriptive information about the images, enriching the content's value. Type should be `STRING`.
-        - `overwrite`: A boolean flag indicating whether existing files with the same name should be overwritten. This affects how the node handles file naming conflicts and storage management. Type should be `BOOLEAN`.
-    - Inputs:
-        - `images`: A batch of images to be saved. This input is crucial for determining the content that will be stored, directly affecting the output files created. Type should be `IMAGE`.
-    - Outputs:
-        - `string`: A confirmation message detailing the number of images and captions saved and the directory where they are stored. It provides feedback on the operation's success. Type should be `STRING`.

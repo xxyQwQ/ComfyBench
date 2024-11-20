@@ -1,0 +1,10 @@
+- `ADE_PairedConditioningSetUnmaskedAndCombine`: This node is designed to process and combine pairs of conditioning inputs, applying unmasking and optional transformations through LoRA hooks. It focuses on integrating default or baseline conditionings with current ones to prepare them for further processing or generation tasks, enhancing the flexibility and control over the conditioning process.
+    - Inputs:
+        - `positive` (Required): The current positive conditioning input to be combined with its default counterpart. Type should be `CONDITIONING`.
+        - `negative` (Required): The current negative conditioning input to be combined with its default counterpart. Type should be `CONDITIONING`.
+        - `positive_DEFAULT` (Required): The default positive conditioning input to be combined with the current positive conditioning. Type should be `CONDITIONING`.
+        - `negative_DEFAULT` (Required): The default negative conditioning input to be combined with the current negative conditioning. Type should be `CONDITIONING`.
+        - `opt_lora_hook` (Optional): An optional LoRA hook to apply transformations to the conditioning inputs before combining them. Type should be `LORA_HOOK`.
+    - Outputs:
+        - `positive`: The combined positive conditioning output after integrating the current and default inputs. Type should be `CONDITIONING`.
+        - `negative`: The combined negative conditioning output after integrating the current and default inputs. Type should be `CONDITIONING`.

@@ -1,8 +1,0 @@
-- `Text Shuffle`: The `Text Shuffle` node is designed to randomly shuffle the segments of a given text string based on a specified separator. This functionality allows for the creation of varied and unpredictable text sequences, which can be useful in data augmentation, testing, or creating randomized outputs for creative purposes.
-    - Parameters:
-        - `text`: The `text` parameter is the input text string to be shuffled. The shuffling process rearranges the segments of this text, creating a new, randomized sequence. Type should be `STRING`.
-        - `separator`: The `separator` parameter defines the character or string that delimits the segments of the input text to be shuffled. This allows for flexible segmentation based on the specific needs of the text being processed. Type should be `STRING`.
-        - `seed`: The `seed` parameter sets the seed for the random number generator, ensuring reproducibility of the shuffle operation. This is useful for maintaining consistency across different runs or experiments. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `string`: The output is a new text string with its segments shuffled in a random order, based on the specified separator. Type should be `STRING`.

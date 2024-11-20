@@ -1,0 +1,6 @@
+- `SaltJSONToList`: Converts a JSON string into a list of its innermost values, providing both a string representation and the actual list of these values. This node is designed to extract and present the deepest nested values found within a JSON structure, making them accessible for further processing or analysis.
+    - Inputs:
+        - `json_input` (Required): The JSON string to be processed. This input is crucial as it provides the raw data from which innermost values are extracted, directly influencing the output list and its string representation. Type should be `STRING`.
+    - Outputs:
+        - `values`: A string representation of the list containing the innermost values extracted from the JSON input. Type should be `STRING`.
+        - `values_list`: The actual list of innermost values extracted from the JSON input. Type should be `LIST`.

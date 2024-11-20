@@ -1,6 +1,0 @@
-- `JWFloatAbsolute`: The JWFloatAbsolute node calculates the absolute value of a given float number, effectively removing any negative sign to ensure the result is non-negative.
-    - Parameters:
-        - `value`: The input float number whose absolute value is to be calculated. This parameter allows the node to handle both positive and negative numbers by converting them to their non-negative counterpart. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The non-negative absolute value of the input float number. Type should be `FLOAT`.

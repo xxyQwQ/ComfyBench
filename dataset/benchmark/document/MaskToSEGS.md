@@ -1,0 +1,10 @@
+- `MaskToSEGS`: The MaskToSEGS node is designed to transform a given mask into a structured edge graphic signal (SEGS) format, optionally incorporating various preprocessing steps such as combining, cropping, bounding box filling, size filtering, and contour filling. This node is part of the ImpactPack's operation category, facilitating the manipulation and analysis of mask data for further processing or visualization.
+    - Inputs:
+        - `mask` (Required): The mask input is the primary data that the node transforms into the SEGS format. It represents the area of interest within an image for further processing or analysis. Type should be `MASK`.
+        - `combined` (Required): Indicates whether to combine the input mask with other processing steps or keep it separate, affecting the final SEGS output. Type should be `BOOLEAN`.
+        - `crop_factor` (Required): Determines the factor by which the mask is cropped, influencing the size and focus area of the resulting SEGS. Type should be `FLOAT`.
+        - `bbox_fill` (Required): Controls whether bounding boxes are filled, impacting the visual representation of the SEGS. Type should be `BOOLEAN`.
+        - `drop_size` (Required): Specifies the minimum size of areas to be included in the SEGS, filtering out smaller regions. Type should be `INT`.
+        - `contour_fill` (Required): Determines whether contours within the mask are filled, affecting the detail level of the SEGS. Type should be `BOOLEAN`.
+    - Outputs:
+        - `segs`: unknown Type should be `SEGS`.

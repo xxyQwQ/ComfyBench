@@ -1,0 +1,9 @@
+- `LayerUtility_ GradientImage`: This node generates a gradient image based on specified dimensions, angle, and color range. It abstracts the complexity of creating smooth transitions between colors over a defined area, providing a versatile tool for generating backgrounds or layer effects in image processing tasks.
+    - Inputs:
+        - `width` (Required): Specifies the width of the gradient image to be generated. It determines the horizontal dimension of the resulting image. Type should be `INT`.
+        - `height` (Required): Specifies the height of the gradient image to be generated. It determines the vertical dimension of the resulting image. Type should be `INT`.
+        - `angle` (Required): Defines the angle of the gradient direction. This affects how the color transition appears across the image. Type should be `INT`.
+        - `start_color` (Required): The starting color of the gradient. It marks the beginning of the color transition. Type should be `STRING`.
+        - `end_color` (Required): The ending color of the gradient. It marks the end of the color transition. Type should be `STRING`.
+    - Outputs:
+        - `image`: The generated gradient image as a result of the specified parameters. Type should be `IMAGE`.

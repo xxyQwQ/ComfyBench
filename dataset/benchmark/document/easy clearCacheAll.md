@@ -1,0 +1,4 @@
+- `easy clearCacheAll`: The `clearCacheAll` node is designed to clear the entire cache, disregarding any specific keys or conditions. It serves as a utility for resetting or refreshing the cache state within the system, ensuring that all cached data is removed to prevent stale or outdated information from being used.
+    - Inputs:
+        - `anything` (Required): This parameter acts as a placeholder and does not influence the operation of clearing the cache. It symbolizes that the function can be triggered without any specific input related to cache content. Type should be `*`.
+    - Outputs:

@@ -1,0 +1,11 @@
+- `CreateVoronoiMask`: The CreateVoronoiMask node is designed to generate dynamic Voronoi diagram-based masks. It utilizes parameters such as the number of points, line width, and speed to create evolving masks over a series of frames, allowing for the creation of complex and visually interesting patterns that can be used in various graphical applications.
+    - Inputs:
+        - `frames` (Required): Specifies the number of frames over which the Voronoi mask will evolve, creating a dynamic sequence of masks. Type should be `INT`.
+        - `num_points` (Required): Determines the number of points used to generate the Voronoi diagram, directly affecting the complexity and appearance of the resulting mask. Type should be `INT`.
+        - `line_width` (Required): Controls the thickness of the lines in the Voronoi diagram, influencing the visual style of the mask. Type should be `INT`.
+        - `speed` (Required): Adjusts the rate at which the points in the Voronoi diagram move, affecting the dynamic evolution of the mask over the frames. Type should be `FLOAT`.
+        - `frame_width` (Required): Sets the width of the frame for the mask, defining the horizontal dimension of the output. Type should be `INT`.
+        - `frame_height` (Required): Sets the height of the frame for the mask, defining the vertical dimension of the output. Type should be `INT`.
+    - Outputs:
+        - `mask`: The output is a tensor representing the generated Voronoi mask, suitable for use in graphical applications. Type should be `MASK`.
+        - `mask_inverted`: The output is a tensor representing the inverted Voronoi mask, providing an alternative visual pattern for use in graphical applications. Type should be `MASK`.

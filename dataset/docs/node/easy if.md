@@ -1,8 +1,0 @@
-- `easy if`: The 'easy if' node likely serves as a conditional logic gate within a pipeline, enabling the execution of different paths or operations based on specified conditions. This functionality is essential for creating dynamic and adaptable workflows that can respond to varying inputs or states.
-    - Parameters:
-    - Inputs:
-        - `any`: Serves as a generic input that can be of any type, acting as the data or condition to be evaluated. Type should be `*`.
-        - `if`: Defines the condition under which a certain path or operation should be executed. Type should be `*`.
-        - `else`: Specifies an alternative path or operation to execute if the 'if' condition is not met. Type should be `*`.
-    - Outputs:
-        - `?`: The output can vary based on the evaluation of the 'if' condition, leading to different possible outcomes. Type should be `*`.

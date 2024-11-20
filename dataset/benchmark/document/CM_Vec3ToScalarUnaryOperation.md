@@ -1,0 +1,6 @@
+- `CM_Vec3ToScalarUnaryOperation`: This node performs a unary operation that transforms a 3-dimensional vector into a scalar value, based on a specified operation. It abstracts complex mathematical operations into a simple interface, allowing for the transformation of vector data into scalar form.
+    - Inputs:
+        - `op` (Required): Specifies the unary operation to be performed on the 3-dimensional vector. This operation determines how the vector is transformed into a scalar value. Type should be `COMBO[STRING]`.
+        - `a` (Required): The 3-dimensional vector to be transformed into a scalar value through the specified unary operation. Type should be `VEC3`.
+    - Outputs:
+        - `float`: The scalar result of applying the specified unary operation on the input 3-dimensional vector. Type should be `FLOAT`.

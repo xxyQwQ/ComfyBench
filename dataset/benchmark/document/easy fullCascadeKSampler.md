@@ -1,0 +1,21 @@
+- `easy fullCascadeKSampler`: The `easy fullCascadeKSampler` node is designed to facilitate complex sampling processes by employing a full cascade approach. This method enhances the generation of images or patterns by systematically applying a series of samplers, each building upon the output of the previous one, to achieve refined and high-quality results.
+    - Inputs:
+        - `pipe` (Required): The `pipe` parameter represents the pipeline through which data flows, serving as the conduit for input and output data during the sampling process. It is crucial for orchestrating the sequence of operations and ensuring that the data is appropriately processed at each stage. Type should be `PIPE_LINE`.
+        - `encode_vae_name` (Required): Specifies the name of the VAE encoder to be used in the sampling process, allowing for customization of the encoding phase. Type should be `COMBO[STRING]`.
+        - `decode_vae_name` (Required): Specifies the name of the VAE decoder to be used in the sampling process, enabling customization of the decoding phase. Type should be `COMBO[STRING]`.
+        - `steps` (Required): Defines the number of steps to be taken in the sampling process, affecting the detail and quality of the generated output. Type should be `INT`.
+        - `cfg` (Required): The conditioning factor, guiding the sampling process in generating outputs that align with specified attributes or characteristics. Type should be `FLOAT`.
+        - `sampler_name` (Required): The name of the sampler to be used, providing flexibility in choosing the sampling strategy. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Specifies the scheduler to be used in the sampling process, affecting the progression of sampling steps. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): The denoising factor applied during the sampling process, affecting the clarity and quality of the generated output. Type should be `FLOAT`.
+        - `image_output` (Required): Determines how the output image is handled, whether it is displayed, saved, or both. Type should be `COMBO[STRING]`.
+        - `link_id` (Required): A unique identifier for the link in the sampling process, facilitating tracking and management of the generated output. Type should be `INT`.
+        - `save_prefix` (Required): The prefix for saved files, allowing for organized storage of generated outputs. Type should be `STRING`.
+        - `seed` (Required): The seed value for the random number generator, ensuring reproducibility of the sampling process. Type should be `INT`.
+        - `image_to_latent_c` (Optional): Optional parameter for providing an image to be converted into a latent representation, enhancing the control over the generation process. Type should be `IMAGE`.
+        - `latent_c` (Optional): Optional parameter for providing a latent representation directly, offering an advanced level of control over the generation process. Type should be `LATENT`.
+        - `model_c` (Optional): Optional parameter for specifying a custom model to be used in the sampling process, providing flexibility in adapting the node to various generation tasks. Type should be `MODEL`.
+    - Outputs:
+        - `pipe`: The output `pipe` carries the final generated data, having passed through the full cascade of samplers, embodying the refined and high-quality results of the complex sampling process. Type should be `PIPE_LINE`.
+        - `model_b`: The model used in the final step of the sampling process, potentially modified or selected based on the sampling strategy. Type should be `MODEL`.
+        - `latent_b`: The latent space representation of the generated data from the final step of the sampling process, offering insights into the underlying structure and characteristics of the output. Type should be `LATENT`.

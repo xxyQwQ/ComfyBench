@@ -1,0 +1,5 @@
+- `ExtendImageList`: The ExtendImageList node is designed to extend an existing list of images with additional images. It focuses on aggregating multiple image resources into a single, comprehensive collection, facilitating operations that require bulk image data management.
+    - Inputs:
+        - `inputs_len` (Required): The 'inputs_len' parameter is crucial for defining the starting point of the collection before new images are added. It represents the initial count of images to be extended, setting the foundation for the extension process. Type should be `INT`.
+    - Outputs:
+        - `image`: The 'image' parameter represents the resultant collection of images after the extension process. It encompasses both the original and newly added images, providing a unified collection for further processing. Type should be `IMAGE`.

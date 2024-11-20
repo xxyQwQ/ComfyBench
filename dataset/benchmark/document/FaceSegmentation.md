@@ -1,0 +1,17 @@
+- `FaceSegmentation`: The FaceSegmentation node is designed to process images by segmenting faces based on provided parameters. It utilizes advanced image processing techniques to refine the segmentation mask through expansion, tapering, and blurring, ultimately extracting and modifying the face segment within the image for further analysis or visualization.
+    - Inputs:
+        - `analysis_models` (Required): A collection of models used for analyzing the image, crucial for determining the initial segmentation mask before refinement. Type should be `ANALYSIS_MODELS`.
+        - `image` (Required): The input image to be processed, serving as the basis for face segmentation. Type should be `IMAGE`.
+        - `area` (Required): Specifies the area of interest within the image for segmentation, guiding the initial mask creation. This parameter allows selection from predefined areas such as the face, eyes, or mouth, influencing the focus of the segmentation process. Type should be `COMBO[STRING]`.
+        - `grow` (Required): Determines how much to expand the segmentation mask, allowing for more inclusive face coverage. Type should be `INT`.
+        - `grow_tapered` (Required): Indicates whether the mask expansion should taper off, providing a more natural transition at the edges. Type should be `BOOLEAN`.
+        - `blur` (Required): The intensity of blur applied to the segmentation mask, enhancing the mask's smoothness and blending. Type should be `INT`.
+    - Outputs:
+        - `mask`: The refined segmentation mask after processing. Type should be `MASK`.
+        - `image`: The original image modified by the segmentation mask, highlighting the segmented area. Type should be `IMAGE`.
+        - `seg_mask`: A mask representing the precise segment of the face extracted from the image. Type should be `MASK`.
+        - `seg_image`: The extracted segment of the face from the original image. Type should be `IMAGE`.
+        - `x`: The minimum x-coordinate of the face segment within the image. Type should be `INT`.
+        - `y`: The minimum y-coordinate of the face segment within the image. Type should be `INT`.
+        - `width`: The width of the face segment extracted from the image. Type should be `INT`.
+        - `height`: The height of the face segment extracted from the image. Type should be `INT`.

@@ -1,7 +1,0 @@
-- `JWFloatMax`: This node calculates the maximum value between two floating-point numbers. It is designed to compare and return the larger of two float values, providing a simple yet essential operation for numerical data processing.
-    - Parameters:
-        - `a`: The first floating-point number to be compared. It plays a crucial role in determining the maximum value when compared with the second number. Type should be `FLOAT`.
-        - `b`: The second floating-point number to be compared. It is essential for determining the maximum value in conjunction with the first number. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The maximum value between the two input floating-point numbers. Type should be `FLOAT`.

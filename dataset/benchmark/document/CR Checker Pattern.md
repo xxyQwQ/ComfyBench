@@ -1,0 +1,14 @@
+- `CR Checker Pattern`: This node is designed to generate checkerboard patterns, allowing users to create visually appealing designs or backgrounds by specifying pattern parameters. It abstracts the complexity of generating such patterns programmatically, offering a simple interface for customization.
+    - Inputs:
+        - `mode` (Required): Specifies the mode of the checkerboard pattern generation, affecting the overall appearance and style of the output. Type should be `COMBO[STRING]`.
+        - `width` (Required): Determines the width of the generated checkerboard pattern, directly influencing the size of the output image. Type should be `INT`.
+        - `height` (Required): Sets the height of the generated checkerboard pattern, directly influencing the size of the output image. Type should be `INT`.
+        - `color_1` (Required): Defines the first color used in the checkerboard pattern, contributing to the visual aesthetics of the design. Type should be `COMBO[STRING]`.
+        - `color_2` (Required): Specifies the second color used in the checkerboard pattern, complementing the first color to create the checkerboard effect. Type should be `COMBO[STRING]`.
+        - `grid_frequency` (Required): Controls the frequency of the grid within the checkerboard pattern, affecting the density of the checkers. Type should be `INT`.
+        - `step` (Required): Adjusts the step size between each checker in the pattern, allowing for customization of the checker spacing. Type should be `INT`.
+        - `color1_hex` (Optional): Provides an alternative way to specify the first color using hexadecimal color codes. Type should be `STRING`.
+        - `color2_hex` (Optional): Provides an alternative way to specify the second color using hexadecimal color codes. Type should be `STRING`.
+    - Outputs:
+        - `IMAGE`: The generated checkerboard pattern image, ready for use or further processing. Type should be `IMAGE`.
+        - `show_help`: A link to additional documentation or help related to the checkerboard pattern generation. Type should be `STRING`.

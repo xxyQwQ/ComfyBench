@@ -1,0 +1,5 @@
+- `SeargeCustomPromptMode`: This node is designed to customize the prompting mode within a user interface, allowing for dynamic adjustments to how prompts are presented and interacted with by the user. It facilitates the integration of custom prompting strategies into the UI, enhancing user experience by tailoring prompt interactions.
+    - Inputs:
+        - `data` (Optional): An optional data stream that can be provided to customize the prompting mode further. It allows for the integration of additional data into the prompting process, enhancing its flexibility and adaptability. Type should be `SRG_DATA_STREAM`.
+    - Outputs:
+        - `data`: Returns a data stream that includes the customized prompting settings, enabling dynamic adjustments to the UI's prompt interactions based on the provided input. Type should be `SRG_DATA_STREAM`.

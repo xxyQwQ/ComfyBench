@@ -1,8 +1,0 @@
-- `Image Blend`: The Image Blend node is designed to seamlessly blend two images together based on a specified blend percentage. This node allows for the creation of composite images by adjusting the degree of visibility of each input image in the final output.
-    - Parameters:
-        - `blend_percentage`: A float value that determines the blending ratio between 'image_a' and 'image_b'. A higher percentage increases the visibility of 'image_b' in the output. Type should be `FLOAT`.
-    - Inputs:
-        - `image_a`: The first image to be blended. It serves as one of the primary components in the blending process. Type should be `IMAGE`.
-        - `image_b`: The second image to be blended with the first. It contributes to the final composite image alongside 'image_a'. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The resulting image after blending 'image_a' and 'image_b' according to the specified blend percentage. Type should be `IMAGE`.

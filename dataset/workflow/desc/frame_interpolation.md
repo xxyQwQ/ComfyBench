@@ -1,1 +1,0 @@
-This workflow uses the RIFE VFI node to interpolate frames. Given the input video, the workflow will interpolate the frames with a certain multiplier and combine them into a new video. In this example, the input video contains 8 frames per second, and we interpolate it by 3x, so the output video will have 24 frames per second.

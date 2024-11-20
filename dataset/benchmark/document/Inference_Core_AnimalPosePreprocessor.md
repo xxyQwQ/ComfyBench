@@ -1,0 +1,9 @@
+- `Inference_Core_AnimalPosePreprocessor`: This node is designed to preprocess images for animal pose estimation, utilizing different model formats (TorchScript, ONNX) to detect and analyze animal poses within images. It supports dynamic selection of detection classes and handles both detection and pose estimation processes, adapting to the model's input requirements and optimizing for performance.
+    - Inputs:
+        - `image` (Required): The original image to be processed for animal pose estimation. It serves as the primary input for model inference, crucial for both detection and pose estimation phases. Type should be `IMAGE`.
+        - `bbox_detector` (Optional): The detection model used to identify animal bounding boxes in the image. This model can be either a TorchScript or ONNX model, depending on the implementation. Type should be `COMBO[STRING]`.
+        - `pose_estimator` (Optional): The pose estimation model used to analyze the detected animal poses within the bounding boxes. This model also varies in format, supporting both TorchScript and ONNX. Type should be `COMBO[STRING]`.
+        - `resolution` (Optional): The resolution to which the input image is resized before processing. This affects the detection and pose estimation accuracy and performance. Type should be `INT`.
+    - Outputs:
+        - `image`: The image annotated with detected animal poses, highlighting the key points and poses of animals detected within the original image. Type should be `IMAGE`.
+        - `pose_keypoint`: A structured representation of detected animal poses, including keypoints and their scores, formatted for further processing or visualization. Type should be `POSE_KEYPOINT`.

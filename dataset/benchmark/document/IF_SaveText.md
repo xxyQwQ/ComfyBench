@@ -1,0 +1,13 @@
+- `IF_SaveText`: The IF_SaveText node is designed for processing and optionally saving text data related to interactions, such as questions, responses, and negative feedback, into various file formats. It encapsulates the functionality to generate unique identifiers for each interaction, format the interaction data, and save it to a file in a specified format and mode, enhancing data management and retrieval for further analysis or record-keeping.
+    - Inputs:
+        - `question_input` (Required): The question part of the interaction, serving as a key input for generating the interaction record. Type should be `STRING`.
+        - `response_input` (Required): The response to the question, which is crucial for documenting the interaction. Type should be `STRING`.
+        - `negative_input` (Required): Negative feedback or input related to the interaction, providing additional context. Type should be `STRING`.
+        - `save_file` (Optional): A boolean flag indicating whether to save the interaction data to a file. Type should be `BOOLEAN`.
+        - `file_format` (Optional): Specifies the format of the file (csv, txt, json) in which the interaction data will be saved. Type should be `COMBO[STRING]`.
+        - `save_mode` (Optional): Determines how the file is saved: create a new file, overwrite an existing file, or append to an existing file. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `Question`: Returns the question part of the interaction. Type should be `STRING`.
+        - `Response`: Returns the response part of the interaction. Type should be `STRING`.
+        - `Negative`: Returns the negative feedback or input related to the interaction. Type should be `STRING`.
+        - `Turn`: Returns a formatted string containing the interaction's unique identifier, question, response, and negative input. Type should be `STRING`.

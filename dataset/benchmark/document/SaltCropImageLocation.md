@@ -1,0 +1,11 @@
+- `SaltCropImageLocation`: This node specializes in identifying and extracting specific image locations for cropping within a batch processing environment. It facilitates precise, location-based cropping operations on multiple images, enhancing the efficiency and accuracy of batch image manipulation tasks.
+    - Inputs:
+        - `images` (Required): The collection of images to be processed for location-based cropping. This parameter is crucial for determining the specific areas within each image that need to be cropped, based on the provided location data. Type should be `IMAGE`.
+        - `top` (Required): Specifies the top boundary for the cropping operation. It defines the starting vertical point from which the image will be cropped. Type should be `INT`.
+        - `left` (Required): Specifies the left boundary for the cropping operation. It defines the starting horizontal point from which the image will be cropped. Type should be `INT`.
+        - `right` (Required): Specifies the right boundary for the cropping operation, determining the end horizontal point for the crop. Type should be `INT`.
+        - `bottom` (Required): Specifies the bottom boundary for the cropping operation, determining the end vertical point for the crop. Type should be `INT`.
+        - `crop_data_batch` (Optional): Optional parameter that includes pre-defined cropping data for batch processing. When provided, it can override manual boundary settings for more automated cropping. Type should be `CROP_DATA_BATCH`.
+    - Outputs:
+        - `images`: The resulting images after the cropping operation has been applied, reflecting the specified location-based adjustments. Type should be `IMAGE`.
+        - `crop_data_batch`: A batch of crop data corresponding to each processed image, detailing the specific crop locations and dimensions applied. Type should be `CROP_DATA_BATCH`.

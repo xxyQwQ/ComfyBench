@@ -1,9 +1,0 @@
-- `Inference_Core_PixelPerfectResolution`: This node is designed to compute the optimal resolution for image generation tasks, ensuring pixel-perfect accuracy by adjusting the image size based on target dimensions and a specified resizing mode. It focuses on achieving the highest fidelity in visual output, tailored to the requirements of the target resolution.
-    - Parameters:
-        - `image_gen_width`: The target width for the image, guiding the computation towards achieving this dimension. Type should be `INT`.
-        - `image_gen_height`: The target height for the image, guiding the computation towards achieving this dimension. Type should be `INT`.
-        - `resize_mode`: Specifies the mode of resizing (e.g., inner fit, outer fit) to determine how the image should be scaled to meet the target dimensions. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `original_image`: The original image as a numpy array, which serves as the basis for computing the optimal resolution. Type should be `IMAGE`.
-    - Outputs:
-        - `RESOLUTION (INT)`: The computed optimal dimension (as an integer) for the image, ensuring pixel-perfect resolution. Type should be `INT`.

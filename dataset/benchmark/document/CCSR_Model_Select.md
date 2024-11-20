@@ -1,0 +1,5 @@
+- `CCSR_Model_Select`: This node is designed to select and load a specific checkpoint for the CCSR model based on the provided checkpoint name. It initializes or updates the CCSR model in the system with the selected checkpoint, ensuring the model is ready for subsequent image processing tasks.
+    - Inputs:
+        - `ckpt_name` (Required): The name of the checkpoint to load for the CCSR model. This parameter is crucial for identifying which specific model checkpoint to initialize or update the CCSR model with. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `ccsr_model`: The loaded CCSR model along with its data type, ready for use in image processing tasks. The dictionary contains the model itself and its data type, providing detailed information necessary for image processing applications. Type should be `CCSRMODEL`.

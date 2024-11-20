@@ -1,0 +1,9 @@
+- `FizzFrame`: The FizzFrame node is designed for creating and managing frames within a narrative or sequence, allowing for the dynamic generation of content based on positive and negative textual inputs. It leverages conditioning and pooling techniques to encode textual information, facilitating the creation of nuanced and contextually relevant frames.
+    - Inputs:
+        - `frame` (Required): Specifies the identifier for the frame being created or manipulated. It serves as a key to organize and access frames within the sequence. Type should be `INT`.
+        - `previous_frame` (Required): An optional reference to a previous frame, allowing for the inheritance of certain attributes and ensuring continuity within the sequence. Type should be `FIZZFRAME`.
+        - `positive_text` (Required): The primary textual content intended to convey a positive aspect or sentiment within the frame. It forms the basis of the frame's positive conditioning. Type should be `STRING`.
+        - `negative_text` (Optional): Optional textual content intended to convey a negative aspect or sentiment within the frame. It complements the positive text to provide a balanced perspective. Type should be `STRING`.
+    - Outputs:
+        - `fizzframe`: The newly created or updated frame, encapsulating the positive and negative conditioning along with any inherited or specified attributes. Type should be `FIZZFRAME`.
+        - `conditioning`: The conditioning information derived from the textual inputs, including both the condition and pooled output for positive and negative texts. Type should be `CONDITIONING`.

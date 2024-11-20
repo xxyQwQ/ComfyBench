@@ -1,0 +1,14 @@
+- `LayerMask_ SegmentAnythingUltra`: This node specializes in segmenting various objects within an image, leveraging advanced algorithms to accurately distinguish and isolate different elements. It's designed to enhance layer-based editing by providing precise mask generation for any object, facilitating complex image manipulation tasks.
+    - Inputs:
+        - `image` (Required): The input image to be segmented. This parameter is crucial as it directly influences the segmentation accuracy and the quality of the generated mask. Type should be `IMAGE`.
+        - `sam_model` (Required): Specifies the SAM model used for segmentation, impacting the segmentation's effectiveness and accuracy. Type should be `COMBO[STRING]`.
+        - `grounding_dino_model` (Required): Defines the DINO model used for object detection within the image, crucial for identifying objects to segment. Type should be `COMBO[STRING]`.
+        - `threshold` (Required): The confidence threshold for object detection, determining which objects are considered for segmentation. Type should be `FLOAT`.
+        - `detail_range` (Required): A parameter influencing the level of detail in the segmentation process, affecting the mask's precision around object edges. Type should be `INT`.
+        - `black_point` (Required): Sets the black point for histogram remapping, affecting the contrast and detail of the segmented mask. Type should be `FLOAT`.
+        - `white_point` (Required): Defines the white point for histogram remapping, adjusting the brightness and detail visibility in the mask. Type should be `FLOAT`.
+        - `process_detail` (Required): A boolean indicating whether to apply detailed processing to the mask, enhancing edge definition and overall mask quality. Type should be `BOOLEAN`.
+        - `prompt` (Required): The text prompt used for guiding the object detection process, influencing the specificity and accuracy of detected objects. Type should be `STRING`.
+    - Outputs:
+        - `image`: The segmented image with applied mask, showcasing the isolated objects against the original background. This output is crucial for visualizing the segmentation results and for further processing or editing. Type should be `IMAGE`.
+        - `mask`: The output mask generated from the input image, representing the segmented areas. This mask is essential for further image editing and manipulation, providing a clear distinction between different objects within the image. Type should be `MASK`.

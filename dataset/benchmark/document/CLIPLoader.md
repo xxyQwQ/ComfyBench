@@ -1,0 +1,6 @@
+- `CLIPLoader`: The CLIPLoader node is designed for loading CLIP models, supporting various types including stable diffusion, stable cascade, SD3, and stable audio. It abstracts the complexities of loading and configuring CLIP models based on the specified type, facilitating their use in downstream tasks.
+    - Inputs:
+        - `clip_name` (Required): Specifies the name of the CLIP model to be loaded. This name is used to locate the model file within a predefined directory structure. Type should be `COMBO[STRING]`.
+        - `type` (Required): Determines the specific type of CLIP model to load, such as stable diffusion, stable cascade, SD3, or stable audio. This affects how the model is initialized and configured. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `clip`: The loaded CLIP model, ready for use in various applications such as image generation or text-to-image tasks. Type should be `CLIP`.

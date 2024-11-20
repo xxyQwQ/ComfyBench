@@ -1,0 +1,5 @@
+- `DummyLatentOut`: Provides a simple pass-through for latent data, facilitating the visualization of workflow outputs in the UI without necessitating data persistence on disk.
+    - Inputs:
+        - `latent` (Required): The latent data to be passed through. This input is essential for the node's operation as it directly influences the output by being returned unchanged. Type should be `LATENT`.
+    - Outputs:
+        - `latent`: The unchanged latent data received as input, enabling direct visualization in the UI. Type should be `LATENT`.

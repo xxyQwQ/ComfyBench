@@ -1,0 +1,11 @@
+- `easy rangeInt`: The 'build_range' node offers a versatile mechanism for generating a sequence of numbers, which can be either integers or floats, based on a comprehensive set of parameters including start, stop, step, and the number of steps. It supports different modes of operation and end conditions, making it highly adaptable for creating custom numerical ranges for a variety of applications.
+    - Inputs:
+        - `range_mode` (Required): Determines the mode of range generation, either by specifying a step size or a fixed number of steps, which influences how the sequence is constructed. Type should be `COMBO[STRING]`.
+        - `start` (Required): Specifies the starting value of the range, setting the initial point for the sequence generation. Type should be `INT`.
+        - `stop` (Required): Defines the ending value of the range, determining where the sequence will stop. Type should be `INT`.
+        - `step` (Required): Indicates the increment between consecutive values in the range when 'range_mode' is set to 'step', allowing for control over the spacing of the sequence. Type should be `INT`.
+        - `num_steps` (Required): Specifies the total number of steps in the range when 'range_mode' is set to 'num_steps', controlling the length of the sequence. Type should be `INT`.
+        - `end_mode` (Required): Determines whether the ending value ('stop') is included in or excluded from the generated range, affecting the final sequence. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `range`: The generated sequence of numbers based on the input parameters, which can be tailored to include either a specific number of steps or a specific step size. Type should be `INT`.
+        - `range_sizes`: The size of the generated range, providing information on the total number of elements within the sequence. Type should be `INT`.

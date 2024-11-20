@@ -1,7 +1,0 @@
-- `PreviewDetailerHookProvider`: This node provides a mechanism to enhance and detail previews by applying a specific quality setting to images. It utilizes a unique identifier to manage and track the processing of images, ensuring that each image is enhanced according to the specified quality level.
-    - Parameters:
-        - `quality`: Specifies the quality level for image processing, affecting the clarity and detail of the output image. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `detailer_hook`: Represents a hook that enhances image previews by applying a specified quality setting. Type should be `DETAILER_HOOK`.
-        - `upscaler_hook`: Represents a hook that can be used for upscaling images, although in this context it returns the same hook as for detailing. Type should be `UPSCALER_HOOK`.

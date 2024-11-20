@@ -1,7 +1,0 @@
-- `Float to String`: The FLOATtoSTRING node is designed to convert floating-point numbers into their string representation, optionally formatting the output with commas for readability. This node serves as a utility for transforming numerical data into a text format that can be easily displayed or processed further.
-    - Parameters:
-        - `float_`: The floating-point number to be converted into a string. This parameter is central to the node's operation, determining the numerical value that will be transformed. Type should be `FLOAT`.
-        - `use_commas`: A flag indicating whether to format the resulting string with commas for thousands, millions, etc., enhancing readability. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `string`: The string representation of the input floating-point number, formatted according to the 'use_commas' parameter. Type should be `STRING`.

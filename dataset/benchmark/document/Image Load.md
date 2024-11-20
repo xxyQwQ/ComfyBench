@@ -1,0 +1,9 @@
+- `Image Load`: The Image Load node is designed to load images from a specified path, supporting both local and remote sources. It processes the images to convert them into a format suitable for further analysis or manipulation, optionally handling RGBA conversion and providing filename information. This node is essential for preparing image data for downstream tasks in image processing pipelines.
+    - Inputs:
+        - `image_path` (Required): Specifies the path to the image to be loaded. This can be a local file path or a URL to an image online. The node handles different sources and formats, ensuring the image is accessible for processing. Type should be `STRING`.
+        - `RGBA` (Required): Determines whether the loaded image should be converted to RGBA format. This is useful for maintaining transparency information in images that support it. Type should be `COMBO[STRING]`.
+        - `filename_text_extension` (Optional): Controls whether the returned filename includes the file extension. This can be useful for subsequent processing steps that may require the filename with or without its extension. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The processed image data, converted to a tensor format suitable for further analysis or manipulation. Type should be `IMAGE`.
+        - `mask`: A mask tensor representing the alpha channel of the image, useful for operations that require knowledge of transparent areas. Type should be `MASK`.
+        - `filename_text`: The filename of the loaded image, optionally including the file extension based on the input parameter. Type should be `STRING`.

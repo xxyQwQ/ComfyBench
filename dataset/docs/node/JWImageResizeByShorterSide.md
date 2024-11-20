@@ -1,8 +1,0 @@
-- `JWImageResizeByShorterSide`: This node resizes an image by adjusting its shorter side to a specified size while maintaining the aspect ratio, using various interpolation methods for the resizing process.
-    - Parameters:
-        - `size`: The target size for the shorter side of the image, ensuring the aspect ratio is preserved during resizing. Type should be `INT`.
-        - `interpolation_mode`: Specifies the method used for interpolating the pixels in the resized image, affecting the visual quality of the output. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The image tensor to be resized. It's crucial for defining the visual content that will undergo resizing. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The resized image tensor, with its shorter side adjusted to the specified size while maintaining the original aspect ratio. Type should be `IMAGE`.

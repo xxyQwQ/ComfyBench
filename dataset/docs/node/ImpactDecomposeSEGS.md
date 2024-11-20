@@ -1,7 +1,0 @@
-- `ImpactDecomposeSEGS`: The ImpactDecomposeSEGS node is designed to decompose a given SEGS data structure into its constituent elements. This operation facilitates the manipulation and analysis of the segmented data by breaking it down into more manageable parts.
-    - Parameters:
-    - Inputs:
-        - `segs`: Represents the SEGS data structure to be decomposed. This input is crucial for the operation as it provides the segmented data that will be broken down into its constituent elements. Type should be `SEGS`.
-    - Outputs:
-        - `segs_header`: Represents the header information of the decomposed SEGS data structure. Type should be `SEGS_HEADER`.
-        - `seg_elt`: Represents the individual elements of the decomposed SEGS data structure. This output is a list, allowing for the representation of multiple segmented elements. Type should be `SEG_ELT`.

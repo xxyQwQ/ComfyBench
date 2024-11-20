@@ -1,0 +1,43 @@
+- `ttN pipeKSampler_v2`: The `ttN_pipeKSampler_v2` node is designed for advanced image sampling and processing within a pipeline. It integrates various functionalities such as LoRA adjustments, noise management, step configuration, and optional model enhancements to facilitate customized image generation and manipulation. This node emphasizes flexibility in image output options and the ability to refine results through denoising and upscale methods, catering to diverse requirements in image synthesis workflows.
+    - Inputs:
+        - `pipe` (Required): Represents the pipeline configuration and state, serving as the foundation for the sampling process. Type should be `PIPE_LINE`.
+        - `lora_name` (Required): Specifies the LoRA model to be applied for adjustments, enhancing the control over model behavior and output quality. Type should be `COMBO[STRING]`.
+        - `lora_strength` (Required): Determines the intensity of the LoRA adjustments, allowing for fine-tuning of the model's influence on the generated images. Type should be `FLOAT`.
+        - `upscale_method` (Required): Defines the method used for upscaling images, offering options to enhance image resolution. Type should be `COMBO[STRING]`.
+        - `upscale_model_name` (Required): Specifies the model used for upscaling, enabling high-quality image enlargement. Type should be `COMBO[STRING]`.
+        - `factor` (Required): Sets the scaling factor for upscaling, determining the increase in image size. Type should be `FLOAT`.
+        - `rescale` (Required): Controls how images are rescaled, providing various options for adjusting image dimensions. Type should be `COMBO[STRING]`.
+        - `percent` (Required): Determines the percentage for image rescaling, allowing for flexible size adjustment. Type should be `INT`.
+        - `width` (Required): Specifies the target width for image resizing, enabling precise dimension control. Type should be `INT`.
+        - `height` (Required): Sets the target height for image resizing, facilitating specific size requirements. Type should be `INT`.
+        - `longer_side` (Required): Defines the target size for the longer side of the image, ensuring aspect ratio maintenance during resizing. Type should be `INT`.
+        - `crop` (Required): Determines the cropping method, offering strategies for image composition adjustment. Type should be `COMBO[STRING]`.
+        - `steps` (Required): unknown Type should be `INT`.
+        - `cfg` (Required): unknown Type should be `FLOAT`.
+        - `sampler_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): unknown Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Controls the denoising level applied to images, affecting clarity and detail preservation. Type should be `FLOAT`.
+        - `image_output` (Required): unknown Type should be `COMBO[STRING]`.
+        - `save_prefix` (Required): unknown Type should be `STRING`.
+        - `file_type` (Required): unknown Type should be `COMBO[STRING]`.
+        - `embed_workflow` (Required): unknown Type should be `BOOLEAN`.
+        - `seed` (Optional): Sets the seed for random number generation, ensuring reproducibility in the sampling process. Type should be `INT`.
+        - `optional_model` (Optional): Allows for the specification of an alternative model for sampling, providing customization options. Type should be `MODEL`.
+        - `optional_positive` (Optional): Specifies optional positive conditioning to influence the image generation towards desired attributes. Type should be `CONDITIONING`.
+        - `optional_negative` (Optional): Specifies optional negative conditioning to steer the image generation away from certain attributes. Type should be `CONDITIONING`.
+        - `optional_latent` (Optional): Allows for the input of a latent image representation, offering advanced customization in the generation process. Type should be `LATENT`.
+        - `optional_vae` (Optional): Specifies an optional VAE model for use in the image generation process, enabling further customization. Type should be `VAE`.
+        - `optional_clip` (Optional): Allows for the specification of an optional CLIP model, providing additional control over image relevance to text descriptions. Type should be `CLIP`.
+        - `input_image_override` (Optional): Enables the overriding of the input image, allowing for direct manipulation of the image generation process. Type should be `IMAGE`.
+        - `adv_xyPlot` (Optional): Specifies an advanced XY plot for visualization or analysis, integrating additional data dimensions into the process. Type should be `ADV_XYPLOT`.
+    - Outputs:
+        - `pipe`: Outputs the updated pipeline configuration after processing, reflecting changes made during sampling. Type should be `PIPE_LINE`.
+        - `model`: Returns the model used in the sampling process, including any adjustments or selections made. Type should be `MODEL`.
+        - `positive`: Outputs the positive conditioning applied, influencing the generation towards desired outcomes. Type should be `CONDITIONING`.
+        - `negative`: Outputs the negative conditioning applied, steering the generation away from certain attributes. Type should be `CONDITIONING`.
+        - `latent`: Returns the latent representation of the generated image, providing a basis for further manipulation or analysis. Type should be `LATENT`.
+        - `vae`: Outputs the VAE model used in the process, if any, highlighting its role in image reconstruction. Type should be `VAE`.
+        - `clip`: Returns the CLIP model applied, if any, underscoring its influence on aligning images with textual descriptions. Type should be `CLIP`.
+        - `images`: Outputs the final generated images, showcasing the results of the sampling and processing. Type should be `IMAGE`.
+        - `seed`: Returns the seed value used in the process, ensuring traceability of the generation. Type should be `INT`.
+        - `plot_image`: Provides a visual representation or plot related to the sampling process, offering insights into the generation. Type should be `IMAGE`.

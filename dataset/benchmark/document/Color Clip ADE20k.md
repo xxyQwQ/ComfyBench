@@ -1,0 +1,8 @@
+- `Color Clip ADE20k`: The Color Clip ADE20k node is designed to modify the color palette of an image based on the ADE20K dataset, allowing for the clipping of image colors to a specific class color from the dataset. It extends the functionality of a base color clipping operation by incorporating ADE20K-specific color mappings, enabling targeted color transformations for image processing tasks.
+    - Inputs:
+        - `image` (Required): The input image to be processed. This image will undergo color clipping based on the specified class name and target color operations. Type should be `IMAGE`.
+        - `target` (Required): Specifies the target operation for the color clipping, such as converting to black, white, or maintaining the color. Type should be `COMBO[STRING]`.
+        - `complement` (Required): Defines the complementary operation for the color clipping, providing additional control over the color transformation process. Type should be `COMBO[STRING]`.
+        - `class_name` (Required): The name of the class from the ADE20K dataset whose color will be used for clipping. This determines the specific color to which the image's colors will be clipped. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The processed image with colors clipped according to the specified class color from the ADE20K dataset. Type should be `IMAGE`.

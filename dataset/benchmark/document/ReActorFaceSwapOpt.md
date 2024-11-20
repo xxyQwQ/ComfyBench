@@ -1,0 +1,16 @@
+- `ReActorFaceSwapOpt`: The ReActorFaceSwapOpt node offers an enhanced face swapping functionality with additional options for customization. It leverages advanced techniques to swap faces in images, providing users with the ability to fine-tune the process for improved results.
+    - Inputs:
+        - `enabled` (Required): Indicates if the face swapping functionality is currently enabled, controlling whether the operation should proceed. Type should be `BOOLEAN`.
+        - `input_image` (Required): The image that will undergo the face swapping process, serving as the canvas for the operation. Type should be `IMAGE`.
+        - `swap_model` (Required): Specifies the model used for the face swapping process, affecting the accuracy and quality of the swap. Type should be `COMBO[STRING]`.
+        - `facedetection` (Required): Defines the method or model used for detecting faces within the images, crucial for identifying target faces for swapping. Type should be `COMBO[STRING]`.
+        - `face_restore_model` (Required): The model used for restoring or enhancing the quality of faces post-swap, contributing to more realistic outcomes. Type should be `COMBO[STRING]`.
+        - `face_restore_visibility` (Required): Controls the visibility level of the restored faces, allowing for fine-tuning of the final appearance. Type should be `FLOAT`.
+        - `codeformer_weight` (Required): Determines the weight of the CodeFormer model in the face restoration process, influencing the balance between original and enhanced features. Type should be `FLOAT`.
+        - `source_image` (Optional): The source image providing the face to be swapped into the target image, key to the face swapping operation. Type should be `IMAGE`.
+        - `face_model` (Optional): Specifies the face model used for the swapping process, impacting the swap's accuracy and compatibility with different face types. Type should be `FACE_MODEL`.
+        - `options` (Optional): A collection of additional options that can be configured to customize the face swapping process. Type should be `OPTIONS`.
+        - `face_boost` (Optional): Indicates whether an additional face enhancement feature is enabled, aiming to improve the quality of the swapped face. Type should be `FACE_BOOST`.
+    - Outputs:
+        - `image`: The final image after the face swapping operation, showcasing the swapped and potentially enhanced face. Type should be `IMAGE`.
+        - `face_model`: The face model used during the swapping process, potentially including modifications or enhancements applied. Type should be `FACE_MODEL`.

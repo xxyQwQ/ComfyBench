@@ -1,0 +1,14 @@
+- `CR Cycle Models`: This node is designed to cycle through different models sequentially or maintain a single model based on the specified mode. It facilitates dynamic model switching during animation sequences, enhancing the versatility and creativity of the animation process.
+    - Inputs:
+        - `mode` (Required): Specifies the cycling mode, such as 'Off' for no cycling or 'Sequential' for cycling through models based on the current frame and interval settings. Type should be `COMBO[STRING]`.
+        - `model` (Required): The initial model to be used before any cycling occurs. It serves as the default model when the cycling mode is set to 'Off'. Type should be `MODEL`.
+        - `clip` (Required): The initial CLIP model to be used alongside the main model, providing additional capabilities or enhancements. Type should be `CLIP`.
+        - `model_list` (Required): A list of models to cycle through, each defined by its parameters including model alias and checkpoint name. Type should be `MODEL_LIST`.
+        - `frame_interval` (Required): The interval between frames at which the model cycling occurs, determining the frequency of model switches. Type should be `INT`.
+        - `loops` (Required): The number of times the model list is repeated, extending the sequence of models available for cycling. Type should be `INT`.
+        - `current_frame` (Required): The current frame number in the animation sequence, used to determine the active model based on the cycling mode and frame interval. Type should be `INT`.
+    - Outputs:
+        - `MODEL`: The current model after cycling, which may be different from the initial model depending on the cycling mode and frame progress. Type should be `MODEL`.
+        - `CLIP`: The current CLIP model after cycling, which may be different from the initial CLIP model depending on the cycling mode and frame progress. Type should be `CLIP`.
+        - `VAE`: The current VAE model after cycling, which may be different from the initial VAE model depending on the cycling mode and frame progress. Type should be `VAE`.
+        - `show_help`: A help URL providing additional information about the cycling process. Type should be `STRING`.

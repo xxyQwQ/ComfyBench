@@ -1,0 +1,14 @@
+- `ADE_IterationOptsFreeInit`: This node is designed to create iteration options for the AnimateDiff process, allowing users to customize the iteration behavior through various settings such as iteration count, batch offset, and seed offset. It encapsulates the functionality to generate and configure iteration options dynamically, facilitating the customization of the animation diffusion process.
+    - Inputs:
+        - `iterations` (Required): Specifies the number of iterations for the AnimateDiff process, directly influencing the depth and detail of the animation generation. Type should be `INT`.
+        - `filter` (Required): Defines a filter to be applied during the iteration process, affecting the selection or modification of data. Type should be `COMBO[STRING]`.
+        - `d_s` (Required): Specifies the spatial distance parameter, influencing the spatial aspects of the animation. Type should be `FLOAT`.
+        - `d_t` (Required): Specifies the temporal distance parameter, affecting the temporal progression of the animation. Type should be `FLOAT`.
+        - `n_butterworth` (Required): Determines the order of the Butterworth filter applied in the process, impacting the smoothness of the animation. Type should be `INT`.
+        - `sigma_step` (Required): Sets the step size for sigma adjustments, influencing the detail and quality of the animation. Type should be `INT`.
+        - `apply_to_ist_iter` (Required): unknown Type should be `BOOLEAN`.
+        - `init_type` (Required): Specifies the initialization type for the iteration process, influencing the starting conditions of the animation. Type should be `COMBO[STRING]`.
+        - `iter_batch_offset` (Optional): Determines the starting batch offset for iterations, enabling control over the batch processing sequence in the animation generation. Type should be `INT`.
+        - `iter_seed_offset` (Optional): Sets the seed offset for iterations, allowing for varied randomness in the animation generation process. Type should be `INT`.
+    - Outputs:
+        - `iteration_opts`: The generated iteration options, encapsulating settings such as iteration count, batch offset, and seed offset for the AnimateDiff process. Type should be `ITERATION_OPTS`.

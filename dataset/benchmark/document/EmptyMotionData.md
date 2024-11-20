@@ -1,0 +1,5 @@
+- `EmptyMotionData`: The EmptyMotionData node is designed to generate a template for motion data with specified frame lengths. It primarily serves the purpose of creating a base structure for motion data that can be further processed or manipulated, providing a standardized format for initializing motion-related tasks within the MotionDiff framework.
+    - Inputs:
+        - `frames` (Required): Specifies the number of frames for the generated motion data. This parameter directly influences the shape of the motion tensor, thereby determining the temporal length of the motion data. Type should be `INT`.
+    - Outputs:
+        - `motion_data`: Outputs a dictionary containing tensors for motion, motion mask, and motion length, establishing a foundational structure for motion data with zeroed motion values and appropriate masking. Type should be `MOTION_DATA`.

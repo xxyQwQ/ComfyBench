@@ -1,0 +1,17 @@
+- `CR Prompt Scheduler`: The CR Prompt Scheduler node is designed to manage and schedule animation prompts based on predefined rules and formats. It dynamically adjusts prompts and their attributes according to the current frame and specified scheduling mode, facilitating the creation of complex animations.
+    - Inputs:
+        - `mode` (Required): Specifies the scheduling mode, which determines how prompts are selected and managed throughout the animation. Type should be `COMBO[STRING]`.
+        - `current_frame` (Required): Indicates the current frame of the animation, used to determine the appropriate prompt and its attributes based on the schedule. Type should be `INT`.
+        - `default_prompt` (Required): The default prompt to use when the scheduler is disabled or no other prompts are applicable. Type should be `STRING`.
+        - `schedule_format` (Required): Defines the format of the schedule, allowing for compatibility with different scheduling syntaxes. Type should be `COMBO[STRING]`.
+        - `interpolate_prompt` (Required): Determines whether to interpolate between prompts when transitioning from one keyframe to another. Type should be `COMBO[STRING]`.
+        - `schedule` (Optional): The actual schedule data, containing the prompts and their corresponding frames. Type should be `SCHEDULE`.
+        - `schedule_alias` (Optional): A unique identifier for the schedule, used to manage and reference different scheduling configurations. Type should be `STRING`.
+        - `keyframe_list` (Optional): A list of keyframes specifying the frames and associated prompts for animation. Type should be `STRING`.
+        - `prepend_text` (Optional): Text to prepend to the current and next prompts, enhancing the prompt's context or detail. Type should be `STRING`.
+        - `append_text` (Optional): Text to append to the current and next prompts, adding additional context or detail. Type should be `STRING`.
+    - Outputs:
+        - `current_prompt`: The prompt to be used for the current frame. Type should be `STRING`.
+        - `next_prompt`: The prompt to be used for the next frame. Type should be `STRING`.
+        - `weight`: A weight value indicating the blend ratio between the current and next prompts. Type should be `FLOAT`.
+        - `show_help`: A link to further documentation or help regarding the scheduler. Type should be `STRING`.

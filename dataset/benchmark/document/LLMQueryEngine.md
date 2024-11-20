@@ -1,0 +1,8 @@
+- `LLMQueryEngine`: The LLMQueryEngine node is designed to facilitate querying large language models (LLMs) by assembling and sending structured queries based on user input and predefined message components. It abstracts the complexity of interacting with LLMs, enabling users to obtain responses to queries efficiently.
+    - Inputs:
+        - `llm_model` (Required): Specifies the large language model to be used for the query, including any necessary model configurations. Type should be `LLM_MODEL`.
+        - `llm_index` (Required): Represents the index or interface through which the query will be executed, potentially encapsulating specific querying mechanisms or optimizations. Type should be `LLM_INDEX`.
+        - `query` (Optional): The user's query input, which will be included in the final assembled query sent to the LLM. Type should be `STRING`.
+        - `llm_message` (Optional): A list of pre-defined messages or prompts that can be included in the query to guide the LLM's response generation. Type should be `LIST`.
+    - Outputs:
+        - `results`: The output from the LLM in response to the assembled query. Type should be `STRING`.

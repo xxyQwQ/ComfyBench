@@ -1,0 +1,8 @@
+- `SaltThresholdSchedule`: This node applies a threshold to a schedule list, modifying each value based on a specified fade type and strength, starting from an optional index. It's designed to create dynamic adjustments in scheduling sequences, allowing for the implementation of fade-in, fade-out, or both effects to enhance the temporal dynamics of a schedule.
+    - Inputs:
+        - `float_schedule` (Required): The list of schedule values to be modified. It serves as the base for applying the threshold adjustments, determining the sequence of values that will undergo fading effects. Type should be `LIST`.
+        - `max_frames` (Required): Specifies the maximum number of frames for the schedule, defining the temporal limit for the application of the threshold. Type should be `INT`.
+        - `output_mode` (Required): Determines the format of the output schedule list, allowing for different representations such as 'prompt_schedule', 'float_list', 'int_list', or 'raw'. Type should be `COMBO[STRING]`.
+        - `schedule_values` (Required): A string representing scheduled values in a JSON format, which are used to generate the sequence with applied thresholds. Type should be `STRING`.
+    - Outputs:
+        - `value_schedule_list`: The modified schedule list after applying the specified threshold, showcasing the dynamic adjustments made to the original sequence. Type should be `*`.

@@ -1,0 +1,12 @@
+- `CreateShapeMaskOnPath`: This node is designed to generate shape-based masks along a specified path, enabling the creation of dynamic and complex mask patterns that can be applied to images or animations. It leverages shape parameters and path coordinates to craft masks that follow a designated trajectory, offering a versatile tool for creative and technical image manipulation tasks.
+    - Inputs:
+        - `shape` (Required): Defines the type of shape to be used for the mask, such as circle, square, or triangle. This choice dictates the geometric form of the mask, contributing to its visual style. Type should be `COMBO[STRING]`.
+        - `coordinates` (Required): Specifies the center locations for the shape masks along the path. This parameter is crucial for determining the trajectory of the mask creation, impacting the overall design and flow of the generated masks. Type should be `STRING`.
+        - `frame_width` (Required): Defines the width of the frame for the mask. This parameter sets the boundary within which the mask is created, influencing the scale and visibility of the shape within the frame. Type should be `INT`.
+        - `frame_height` (Required): Sets the height of the frame for the mask, establishing the vertical boundary and scale of the shape within the generated mask. Type should be `INT`.
+        - `shape_width` (Required): Determines the width of the shape used in the mask. This parameter affects the size of the shape, allowing for customization of the mask's appearance. Type should be `INT`.
+        - `shape_height` (Required): Specifies the height of the shape used in the mask, influencing the vertical dimension of the shape and thus the mask's overall appearance. Type should be `INT`.
+        - `size_multiplier` (Optional): A multiplier that adjusts the size of the shape, offering additional control over the mask's scale beyond the basic shape dimensions. Type should be `FLOAT`.
+    - Outputs:
+        - `mask`: The primary output, a mask or a batch of masks, created based on the specified shape and path parameters. Type should be `MASK`.
+        - `mask_inverted`: An inverted version of the primary mask, providing an alternative masking option where the shape's area is transparent and the surrounding area is opaque. Type should be `MASK`.

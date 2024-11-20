@@ -1,6 +1,0 @@
-- `PhotoMakerLoader`: The PhotoMakerLoader node is designed to load a specific photomaker model by name, facilitating the integration and utilization of photomaker capabilities within a broader system.
-    - Parameters:
-        - `photomaker_model_name`: Specifies the name of the photomaker model to be loaded. This parameter is crucial for identifying and retrieving the correct model from a predefined list of available models. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `photomaker`: Returns an instance of the photomaker model loaded with the specified model's state. This enables the application of photomaker functionalities to input data. Type should be `PHOTOMAKER`.

@@ -1,0 +1,14 @@
+- `CR 8 Channel In`: The CR 8 Channel In node is designed to facilitate the input of data across eight distinct channels within a pipeline, enabling complex data handling and manipulation for advanced processing tasks.
+    - Inputs:
+        - `pipe` (Optional): The 'pipe' parameter represents the pipeline through which data is inputted into the node, serving as the conduit for the eight distinct channels of data that are to be processed. Type should be `*`.
+        - `ch1` (Optional): Represents one of the eight channels through which data can be inputted into the node, allowing for complex data handling and manipulation. Type should be `*`.
+        - `ch2` (Optional): Represents one of the eight channels through which data can be inputted into the node, allowing for complex data handling and manipulation. Type should be `*`.
+        - `ch3` (Optional): Represents one of the eight channels through which data can be inputted into the node, allowing for complex data handling and manipulation. Type should be `*`.
+        - `ch4` (Optional): Represents one of the eight channels through which data can be inputted into the node, allowing for complex data handling and manipulation. Type should be `*`.
+        - `ch5` (Optional): Represents one of the eight channels through which data can be inputted into the node, allowing for complex data handling and manipulation. Type should be `*`.
+        - `ch6` (Optional): Represents one of the eight channels through which data can be inputted into the node, allowing for complex data handling and manipulation. Type should be `*`.
+        - `ch7` (Optional): Represents one of the eight channels through which data can be inputted into the node, allowing for complex data handling and manipulation. Type should be `*`.
+        - `ch8` (Optional): Represents one of the eight channels through which data can be inputted into the node, allowing for complex data handling and manipulation. Type should be `*`.
+    - Outputs:
+        - `pipe`: This output type signifies the continuation of the pipeline, carrying forward the data processed within the node to subsequent stages. Type should be `PIPE_LINE`.
+        - `show_help`: Provides a link to helpful documentation or further information regarding the node's functionality. Type should be `STRING`.

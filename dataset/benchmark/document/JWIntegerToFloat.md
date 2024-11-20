@@ -1,0 +1,5 @@
+- `JWIntegerToFloat`: The JWIntegerToFloat node is designed to convert an integer input into its floating-point representation. This transformation allows for the preservation of numerical data in a format that can accommodate decimals, facilitating operations that require fractional values.
+    - Inputs:
+        - `value` (Required): The integer value to be converted into a floating-point number. This input is crucial for the operation as it determines the exact numerical data that will undergo the conversion process. Type should be `INT`.
+    - Outputs:
+        - `float`: The floating-point representation of the input integer. This output is significant as it enables the use of the converted value in contexts that require floating-point precision. Type should be `FLOAT`.

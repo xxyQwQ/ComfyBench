@@ -1,0 +1,5 @@
+- `LLMAgentResponseImageScrape`: This node is designed to extract and process images from a given text response, identifying and converting any embedded image paths into a tensor representation suitable for further image processing or analysis.
+    - Inputs:
+        - `response_string` (Required): The response string is the primary input for this node, containing the text from which images will be scraped. It plays a crucial role in determining which images are extracted and processed, directly affecting the node's output. Type should be `STRING`.
+    - Outputs:
+        - `image`: The output is a tensor representation of all the images found and processed from the input text. This tensor can be used for further image processing or analysis tasks. Type should be `IMAGE`.

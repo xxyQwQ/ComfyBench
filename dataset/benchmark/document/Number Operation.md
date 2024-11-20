@@ -1,0 +1,9 @@
+- `Number Operation`: The `Number Operation` node performs a variety of mathematical operations on two input numbers, including basic arithmetic (addition, subtraction, multiplication, division, etc.), comparison operations (greater than, less than, equals, etc.), and specific checks (divisibility, odd/even, prime). It abstracts complex conditional logic into simple, configurable operations, facilitating mathematical computations and comparisons within workflows.
+    - Inputs:
+        - `number_a` (Required): The first number involved in the operation. It serves as the primary operand for arithmetic operations or the base for comparison and specific checks. Type should be `NUMBER`.
+        - `number_b` (Required): The second number involved in the operation. It acts as the secondary operand for arithmetic operations or the comparator for comparison and specific checks. Type should be `NUMBER`.
+        - `operation` (Required): Specifies the mathematical operation to perform on `number_a` and `number_b`. This includes a wide range of arithmetic, comparison, and specific checks. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `number`: The primary outcome of the specified operation on the input numbers, potentially in its original data type. Type should be `NUMBER`.
+        - `float`: The outcome of the operation represented as a floating-point number, providing precision for division operations. Type should be `FLOAT`.
+        - `int`: The outcome of the operation converted into an integer, suitable for operations resulting in whole numbers. Type should be `INT`.

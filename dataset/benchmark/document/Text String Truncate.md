@@ -1,0 +1,11 @@
+- `Text String Truncate`: This node is designed to truncate a given string or multiple strings to a specified length, with options to truncate from the beginning or end, and by characters or words. It provides flexibility in text manipulation, allowing for precise control over the content length and format.
+    - Inputs:
+        - `text` (Required): The primary text string to be truncated. This parameter is essential for defining the content that needs adjustment in length. Type should be `STRING`.
+        - `truncate_by` (Required): Specifies the unit of truncation, either by characters or words, influencing how the text is shortened. Type should be `COMBO[STRING]`.
+        - `truncate_from` (Required): Determines the direction from which the text will be truncated, either from the beginning or the end. Type should be `COMBO[STRING]`.
+        - `truncate_to` (Required): Defines the length to which the text should be truncated. This can be a positive or negative integer, affecting the truncation behavior. Type should be `INT`.
+        - `text_b` (Optional): An optional second text string to be truncated, allowing for simultaneous processing of multiple texts. Type should be `STRING`.
+        - `text_c` (Optional): An optional third text string to be truncated, further extending the node's capability to handle multiple texts at once. Type should be `STRING`.
+        - `text_d` (Optional): An optional fourth text string to be truncated, enabling the node to process up to four texts concurrently. Type should be `STRING`.
+    - Outputs:
+        - `string`: The truncated versions of the input texts, adjusted according to the specified parameters. Each output represents a text string that has been truncated based on the provided criteria. Type should be `STRING`.

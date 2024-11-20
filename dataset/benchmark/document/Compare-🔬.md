@@ -1,0 +1,7 @@
+- `Compare-🔬`: The Compare node is designed to evaluate the relationship between two inputs based on a specified comparison operation (e.g., equality, inequality, greater than, less than). It abstracts the logic of comparison into a simple interface, allowing users to dynamically assess the conditions between inputs and derive a boolean result indicative of the comparison's outcome.
+    - Inputs:
+        - `a` (Required): The first input to be compared. It plays a crucial role in determining the outcome of the comparison operation. Type should be `*`.
+        - `b` (Required): The second input to be compared against the first. Its value is essential in evaluating the comparison operation. Type should be `*`.
+        - `comparison` (Required): Specifies the type of comparison to perform between the two inputs (e.g., '==', '!=', '<', '>', '<=', '>='). This parameter dictates the logic applied in the comparison. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `B`: unknown Type should be `BOOLEAN`.

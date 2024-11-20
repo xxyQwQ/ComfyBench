@@ -1,8 +1,0 @@
-- `easy imageSwitch`: The `easy imageSwitch` node provides a mechanism to switch between two images based on a boolean condition. It enables conditional image selection within a workflow, allowing for dynamic content generation based on specified criteria.
-    - Parameters:
-        - `boolean`: A boolean value determining which image to output. If true, `image_b` is selected; otherwise, `image_a` is chosen. Type should be `BOOLEAN`.
-    - Inputs:
-        - `image_a`: The first image option to choose from. It serves as the default or 'false' condition output. Type should be `IMAGE`.
-        - `image_b`: The second image option to choose from. It is selected when the boolean condition is true. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is either `image_a` or `image_b`, depending on the boolean condition. Type should be `IMAGE`.

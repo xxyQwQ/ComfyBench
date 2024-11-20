@@ -1,0 +1,19 @@
+- `LayerUtility_ SimpleTextImage`: This node is designed to generate images with text overlay, allowing for the creation of simple text-based images. It utilizes text wrapping and font customization to place text onto images, making it suitable for creating labels, annotations, or decorative text elements within a graphical context.
+    - Inputs:
+        - `text` (Required): Specifies the text to be overlaid on the image. It plays a crucial role in determining the content of the generated image. Type should be `STRING`.
+        - `font_file` (Required): Determines the font used for the text, affecting the visual appearance of the text in the image. Type should be `COMBO[STRING]`.
+        - `align` (Required): Specifies the alignment of the text within the image, such as 'center', 'left', or 'right'. Type should be `COMBO[STRING]`.
+        - `char_per_line` (Required): Controls the number of characters per line, influencing text wrapping and layout. Type should be `INT`.
+        - `leading` (Required): Adjusts the space between lines of text, impacting the readability and aesthetic of the text. Type should be `INT`.
+        - `font_size` (Required): Sets the size of the font, directly affecting how the text appears on the image. Type should be `INT`.
+        - `text_color` (Required): Specifies the color of the text, allowing for customization of the text's visual style. Type should be `STRING`.
+        - `stroke_width` (Required): Defines the width of the text's stroke, enhancing text legibility or stylistic appearance. Type should be `INT`.
+        - `stroke_color` (Required): Determines the color of the text's stroke, used to add contrast or decorative effects to the text. Type should be `STRING`.
+        - `x_offset` (Required): Adjusts the horizontal position of the text within the image, enabling precise placement. Type should be `INT`.
+        - `y_offset` (Required): Adjusts the vertical position of the text within the image, enabling precise placement. Type should be `INT`.
+        - `width` (Required): Sets the width of the generated image. Type should be `INT`.
+        - `height` (Required): Sets the height of the generated image. Type should be `INT`.
+        - `size_as` (Optional): unknown Type should be `*`.
+    - Outputs:
+        - `image`: The generated image with the specified text overlaid. Type should be `IMAGE`.
+        - `mask`: A mask image indicating areas affected by the text overlay, useful for further image processing steps. Type should be `MASK`.

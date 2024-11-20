@@ -1,0 +1,8 @@
+- `BatchValueSchedule`: The BatchValueSchedule node is designed to process a batch of text inputs, applying a scheduling algorithm to generate a sequence of values based on the text's key frames over a specified number of frames. It supports batch processing for efficiency and can optionally print the output for debugging purposes.
+    - Inputs:
+        - `text` (Required): The text input containing key frames for value generation. It supports multiline input and plays a crucial role in determining the sequence of generated values. Type should be `STRING`.
+        - `max_frames` (Required): Specifies the maximum number of frames for which values will be generated. It defines the length of the output sequence. Type should be `INT`.
+        - `print_output` (Required): A boolean flag that, when set to True, enables printing of the output for debugging purposes. Type should be `BOOLEAN`.
+    - Outputs:
+        - `float`: The first element of the output tuple, representing the generated values as floating-point numbers. Type should be `FLOAT`.
+        - `int`: The second element of the output tuple, representing the generated values converted to integers. Type should be `INT`.

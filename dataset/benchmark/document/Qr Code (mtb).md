@@ -1,0 +1,11 @@
+- `Qr Code (mtb)`: This node generates QR codes based on provided parameters such as URL, size, error correction level, and color inversion. It's designed for creating customizable QR codes that can be further adjusted in terms of dimensions, error resilience, and aesthetic preferences.
+    - Inputs:
+        - `url` (Required): The URL to be encoded into the QR code. This is the primary content of the QR code. Type should be `STRING`.
+        - `width` (Required): The width of the generated QR code image in pixels. This determines the size of the QR code on the horizontal axis. Type should be `INT`.
+        - `height` (Required): The height of the generated QR code image in pixels. This determines the size of the QR code on the vertical axis. Type should be `INT`.
+        - `error_correct` (Required): The level of error correction applied to the QR code, which can be one of 'L', 'M', 'Q', 'H'. Higher levels increase the QR code's resilience to damage. Type should be `COMBO[STRING]`.
+        - `box_size` (Required): The size of each box in the QR code grid, affecting the granularity of the QR code. Type should be `INT`.
+        - `border` (Required): The width of the border around the QR code, measured in boxes, not pixels. Type should be `INT`.
+        - `invert` (Required): A boolean indicating whether the QR code's colors should be inverted, swapping the foreground and background colors. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The generated QR code as an image tensor, ready for further processing or saving. Type should be `IMAGE`.

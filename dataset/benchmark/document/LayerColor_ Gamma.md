@@ -1,0 +1,6 @@
+- `LayerColor_ Gamma`: The Gamma node is designed for color correction by applying gamma correction to images. It adjusts the luminance of the images based on the gamma value provided, enhancing the visual quality of images by making them appear more natural or stylized according to the gamma setting.
+    - Inputs:
+        - `image` (Required): The input image(s) to which gamma correction will be applied. This parameter is crucial for defining the visual content that will undergo the adjustment process. Type should be `IMAGE`.
+        - `gamma` (Required): The gamma value determines the intensity of the luminance adjustment. A higher gamma value darkens the image, while a lower value brightens it, playing a key role in achieving the desired visual effect. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output image(s) after applying gamma correction, showcasing the adjusted luminance levels. Type should be `IMAGE`.

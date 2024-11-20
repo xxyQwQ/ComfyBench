@@ -1,0 +1,7 @@
+- `Inference_Core_DepthAnythingPreprocessor`: The Inference_Core_DepthAnythingPreprocessor node is designed to preprocess images for depth estimation tasks, utilizing different models based on the context (e.g., indoor vs. outdoor environments or specific model checkpoints). It abstracts the complexity of model selection and preprocessing steps, providing a streamlined interface for depth estimation.
+    - Inputs:
+        - `image` (Required): The input image to be processed for depth estimation. This image is the primary input on which the depth estimation model operates. Type should be `IMAGE`.
+        - `ckpt_name` (Optional): The name of the checkpoint file for the depth estimation model. This parameter allows for the selection of different pretrained models to tailor the depth estimation process to specific requirements. Type should be `COMBO[STRING]`.
+        - `resolution` (Optional): Specifies the resolution at which the depth estimation should be performed, affecting the quality and detail of the output depth map. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is an image representing the estimated depth map of the input image, providing a visual representation of depth information. Type should be `IMAGE`.

@@ -1,0 +1,18 @@
+- `Prompt With Style`: The PromptWithStyle node is designed to process textual prompts by applying specific styles, removing or replacing certain syntax, and incorporating user-defined styles. It aims to enhance the expressiveness and specificity of prompts through stylistic modifications and the integration of dynamic elements based on input parameters.
+    - Inputs:
+        - `positive_prompt` (Required): Represents the positive aspect of the textual content to which styles and modifications will be applied. It is crucial for generating the enhanced positive output prompt. Type should be `STRING`.
+        - `negative_prompt` (Required): Represents the negative aspect of the textual content to which styles and modifications will be applied. It is essential for generating the enhanced negative output prompt. Type should be `STRING`.
+        - `style` (Required): Specifies the style to be applied to both positive and negative prompts. It determines the stylistic adjustments and enhancements made to the prompts. Type should be `COMBO[STRING]`.
+        - `ratio_selected` (Required): Determines the aspect ratio for image generation, influencing the dimensions of the output images. Type should be `COMBO[STRING]`.
+        - `batch_size` (Required): Specifies the number of samples to be processed in a single batch, affecting the node's execution efficiency. Type should be `INT`.
+        - `seed` (Required): Influences the randomness involved in processing the prompts, such as in wildcard replacement or random syntax processing. It ensures reproducibility and consistency across different executions. Type should be `INT`.
+    - Outputs:
+        - `samples`: The generated samples based on the processed prompts and applied styles. Type should be `LATENT`.
+        - `positive_prompt_text_g`: The enhanced positive prompt text after processing and applying styles. Type should be `STRING`.
+        - `negative_prompt_text_g`: The enhanced negative prompt text after processing and applying styles. Type should be `STRING`.
+        - `positive_style_text_l`: The text representing the applied positive style after processing. Type should be `STRING`.
+        - `negative_style_text_l`: The text representing the applied negative style after processing. Type should be `STRING`.
+        - `width`: The width dimension of the generated samples. Type should be `INT`.
+        - `height`: The height dimension of the generated samples. Type should be `INT`.
+        - `refiner_width`: The width dimension for the refined samples. Type should be `INT`.
+        - `refiner_height`: The height dimension for the refined samples. Type should be `INT`.

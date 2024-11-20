@@ -1,0 +1,10 @@
+- `CR Set Value on String`: This node is designed to conditionally set a string value based on the presence of a specified substring within another string. It facilitates conditional logic in text processing, allowing users to dynamically alter text outputs based on specific criteria.
+    - Inputs:
+        - `text` (Required): The primary string to be evaluated for the presence of the 'test_string'. Its presence or absence determines which value ('value_if_true' or 'value_if_false') is returned. Type should be `STRING`.
+        - `test_string` (Optional): The substring to be searched for within 'text'. If found, 'value_if_true' is returned; otherwise, 'value_if_false' is returned. Type should be `STRING`.
+        - `value_if_true` (Optional): The string value to return if 'test_string' is found within 'text'. Type should be `STRING`.
+        - `value_if_false` (Optional): The string value to return if 'test_string' is not found within 'text'. Type should be `STRING`.
+    - Outputs:
+        - `STRING`: The output string, determined by whether 'test_string' was found within 'text'. Type should be `*`.
+        - `BOOLEAN`: A boolean value indicating whether 'test_string' was found within 'text'. Type should be `BOOLEAN`.
+        - `show_help`: A URL to the help documentation for this node. Type should be `STRING`.

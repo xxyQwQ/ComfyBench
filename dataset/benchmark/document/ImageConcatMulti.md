@@ -1,0 +1,8 @@
+- `ImageConcatMulti`: The ImageConcatMulti node is designed to concatenate multiple images into a single image. It allows for the dynamic specification of the number of input images, the direction of concatenation, and whether to match the sizes of the images being concatenated. This functionality is useful for creating composite images or arranging multiple images in a specific layout.
+    - Inputs:
+        - `inputcount` (Required): Specifies the number of images to concatenate. This allows for dynamic adjustment of the node's inputs based on user requirements. Type should be `INT`.
+        - `image_i` (Required): Represents any of the images to be concatenated, allowing for a flexible number of image inputs beyond the first two specified. This accommodates the dynamic input count specified by the user. Type should be `IMAGE`.
+        - `direction` (Required): Determines the direction in which the images will be concatenated (right, down, left, up). This affects the final layout of the concatenated image. Type should be `COMBO[STRING]`.
+        - `match_image_size` (Required): Indicates whether the sizes of the images should be matched before concatenation. This ensures uniformity in the dimensions of the resulting image. Type should be `BOOLEAN`.
+    - Outputs:
+        - `images`: The resulting image after concatenation of the input images. This composite image reflects the specified direction and size matching settings. Type should be `IMAGE`.

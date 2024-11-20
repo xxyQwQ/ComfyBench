@@ -1,6 +1,0 @@
-- `Sampler Selector`: The Sampler Selector node is designed to dynamically choose and configure a sampling strategy for image generation tasks. It allows for the selection of different sampling algorithms based on input parameters, optimizing the image generation process for various scenarios and preferences.
-    - Parameters:
-        - `sampler_name`: Specifies the name of the sampler to be used, influencing the selection of the sampling algorithm for the image generation task. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `sampler_name`: Returns the identifier of the configured sampler object, ready for use in image generation tasks. Type should be `COMBO[STRING]`.

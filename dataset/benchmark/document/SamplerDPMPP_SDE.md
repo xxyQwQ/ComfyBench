@@ -1,0 +1,8 @@
+- `SamplerDPMPP_SDE`: This node is designed to generate a sampler for the DPM++ SDE (Stochastic Differential Equation) model. It adapts to both CPU and GPU execution environments, optimizing the sampler's implementation based on the available hardware.
+    - Inputs:
+        - `eta` (Required): Specifies the step size for the SDE solver, influencing the granularity of the sampling process. Type should be `FLOAT`.
+        - `s_noise` (Required): Determines the level of noise to be applied during the sampling process, affecting the diversity of the generated samples. Type should be `FLOAT`.
+        - `r` (Required): Controls the ratio of noise reduction in the sampling process, impacting the clarity and quality of the generated samples. Type should be `FLOAT`.
+        - `noise_device` (Required): Selects the execution environment (CPU or GPU) for the sampler, optimizing performance based on available hardware. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `sampler`: The generated sampler configured with the specified parameters, ready for use in sampling operations. Type should be `SAMPLER`.

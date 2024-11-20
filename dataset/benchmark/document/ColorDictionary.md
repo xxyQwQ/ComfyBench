@@ -1,0 +1,5 @@
+- `ColorDictionary`: The ColorDictionary node provides a predefined dictionary of color names to RGB values, allowing users to retrieve a subset of these colors based on a specified number. It simplifies the process of accessing common colors for various applications by offering a default set of colors and the ability to specify how many colors are needed.
+    - Inputs:
+        - `number_of_colors` (Required): Specifies the number of colors to retrieve from the predefined color dictionary. It determines the size of the returned dictionary, allowing for flexible customization of the color selection. Type should be `INT`.
+    - Outputs:
+        - `color_dict`: Returns a dictionary mapping color names to their corresponding RGB values, limited to the specified number of colors. Type should be `COLOR_DICT`.

@@ -1,0 +1,15 @@
+- `CompositionStylerAdvanced`: The CompositionStylerAdvanced node dynamically subclasses from SDXLPromptStylerAdvanced to provide advanced styling capabilities for text prompts based on composition. It utilizes a predefined set of menus to apply specific stylistic transformations to both positive and negative text prompts, enhancing their thematic and aesthetic qualities.
+    - Inputs:
+        - `text_positive_g` (Required): The global positive text prompt to be styled, offering a broader context for the styling process. Type should be `STRING`.
+        - `text_positive_l` (Required): The local positive text prompt to be styled, focusing on more specific or detailed aspects of the composition. Type should be `STRING`.
+        - `text_negative` (Required): unknown Type should be `STRING`.
+        - `composition` (Required): The selection from the composition menu to apply specific stylistic transformations. Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Controls where the negative styling is applied, with options to target global, local, or both aspects. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag to enable or disable logging of the prompt styling process. This aids in debugging and understanding the transformations applied. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The styled global positive text prompt, transformed according to the selected composition styles. Type should be `STRING`.
+        - `text_positive_l`: The styled local positive text prompt, reflecting detailed composition-based stylistic enhancements. Type should be `STRING`.
+        - `text_positive`: The combined styled positive text prompt, integrating both global and local transformations. Type should be `STRING`.
+        - `text_negative_g`: The styled global negative text prompt, modified according to the negative styling direction. Type should be `STRING`.
+        - `text_negative_l`: The styled local negative text prompt, showcasing specific negative stylistic changes. Type should be `STRING`.
+        - `text_negative`: The combined styled negative text prompt, incorporating both global and local negative transformations. Type should be `STRING`.

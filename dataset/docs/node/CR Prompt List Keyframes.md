@@ -1,8 +1,0 @@
-- `CR Prompt List Keyframes`: This node is designed to generate a list of keyframes based on a given list of prompts, each associated with specific animation parameters such as transition type, speed, and profile. It aims to facilitate the creation of detailed animation sequences by converting textual prompts into structured keyframe data.
-    - Parameters:
-        - `keyframe_format`: Specifies the format in which the keyframes are to be generated, influencing the structure and compatibility of the output with different animation tools. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `prompt_list`: A list of tuples, each containing a prompt and its associated animation parameters. This list is essential for generating the keyframe list, as it dictates the content and timing of each keyframe in the animation sequence. Type should be `PROMPT_LIST`.
-    - Outputs:
-        - `keyframe_list`: The generated list of keyframes, structured according to the specified format, ready for use in animation sequences. Type should be `STRING`.
-        - `show_help`: A URL providing additional information and guidance on how to use the node effectively. Type should be `STRING`.

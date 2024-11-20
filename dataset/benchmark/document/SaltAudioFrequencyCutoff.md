@@ -1,0 +1,7 @@
+- `SaltAudioFrequencyCutoff`: This node applies a frequency cutoff to an audio file, using a specified filter type and cutoff frequency. It leverages FFmpeg to modify the audio signal, either attenuating or completely removing frequencies beyond the specified cutoff point, depending on the filter type used.
+    - Inputs:
+        - `audio` (Required): The raw audio data to be processed. This input is crucial as it represents the audio signal that will undergo the frequency cutoff operation. Type should be `AUDIO`.
+        - `filter_type` (Required): Specifies the type of filter to apply for the frequency cutoff, such as low-pass or high-pass, which determines how frequencies above or below the cutoff point are affected. Type should be `COMBO[STRING]`.
+        - `cutoff_frequency` (Required): The frequency threshold at which the audio signal will be cut off. Frequencies beyond this point will be attenuated or removed, depending on the filter type. Type should be `INT`.
+    - Outputs:
+        - `audio`: The modified audio data after the frequency cutoff has been applied, with certain frequencies attenuated or removed based on the filter type and cutoff frequency. Type should be `AUDIO`.

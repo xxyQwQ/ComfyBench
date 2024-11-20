@@ -1,0 +1,10 @@
+- `IPAdapterCombineEmbeds`: The IPAdapterCombineEmbeds node is designed to merge multiple embedding vectors into a single, unified representation. This process enhances the ability to manipulate and generate images by combining various aspects of input embeddings, thereby enabling more complex and nuanced image synthesis.
+    - Inputs:
+        - `embed1` (Required): The 'embed1' parameter represents the primary embedding vector to be combined with others. It serves as the foundational vector for the combination process, influencing the final, unified embedding output. Type should be `EMBEDS`.
+        - `method` (Required): The 'method' parameter specifies the technique used to combine the embedding vectors, such as 'concat', 'add', 'subtract', 'average', 'norm average', 'max', or 'min'. This choice determines how the embeddings are merged, affecting the characteristics of the resulting vector. Type should be `COMBO[STRING]`.
+        - `embed2` (Optional): The 'embed2' parameter represents an optional additional embedding vector to be combined with 'embed1'. It contributes to the diversity and richness of the final embedding output. Type should be `EMBEDS`.
+        - `embed3` (Optional): The 'embed3' parameter is another optional embedding vector that can be combined with 'embed1' and potentially 'embed2', further enriching the final embedding output. Type should be `EMBEDS`.
+        - `embed4` (Optional): The 'embed4' parameter provides an option to include yet another embedding vector in the combination process, adding to the complexity and detail of the resulting unified embedding. Type should be `EMBEDS`.
+        - `embed5` (Optional): The 'embed5' parameter allows for the inclusion of a fifth embedding vector, maximizing the potential for creating a highly nuanced and detailed final embedding output. Type should be `EMBEDS`.
+    - Outputs:
+        - `embeds`: The output 'embeds' represents the unified embedding vector resulting from the combination of input embeddings according to the specified method. This combined embedding can be used for advanced image manipulation and generation tasks. Type should be `EMBEDS`.

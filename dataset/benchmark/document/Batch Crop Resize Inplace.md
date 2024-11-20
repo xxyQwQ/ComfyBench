@@ -1,0 +1,11 @@
+- `Batch Crop Resize Inplace`: This node is designed to perform in-place cropping and resizing operations on a batch of images. It aims to modify the dimensions of each image in the batch according to specified parameters, optimizing the images for further processing or analysis.
+    - Inputs:
+        - `image_directory` (Required): Specifies the directory containing the images to be processed. This parameter is crucial for locating and loading the images for subsequent cropping and resizing operations. Type should be `STRING`.
+        - `subdirectories` (Required): Indicates whether to include subdirectories within the specified image directory for processing. This parameter allows for more comprehensive image selection. Type should be `COMBO[STRING]`.
+        - `replace_original` (Required): Determines whether the original images should be replaced with the processed versions. This parameter affects how the output images are saved. Type should be `COMBO[STRING]`.
+        - `replace_suffix` (Required): Specifies the suffix to be added to the filenames of processed images when not replacing the original images. This parameter helps in identifying the modified images. Type should be `STRING`.
+        - `upscale_method` (Required): Defines the method to be used for upscaling the images during the resizing process. This parameter influences the quality and dimensions of the output images. Type should be `COMBO[STRING]`.
+        - `crop` (Required): Specifies the cropping method to be applied to the images. This parameter determines how the images are cropped before resizing. Type should be `COMBO[STRING]`.
+        - `crop_amount` (Required): Determines the proportion of the image to be cropped. This parameter directly influences the final dimensions of the images, playing a key role in the resizing process. Type should be `FLOAT`.
+    - Outputs:
+        - `job_done`: The output is a string message indicating the completion of the processing job, including the number of images processed. This provides a summary of the operation's outcome. Type should be `STRING`.

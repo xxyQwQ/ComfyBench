@@ -1,6 +1,0 @@
-- `String to Float`: The String2Float node is designed to convert string representations of numbers into their floating-point numerical equivalents. This functionality is crucial for parsing and processing numerical data that is initially received or stored as text.
-    - Parameters:
-        - `inStr`: The 'inStr' parameter accepts a string input that represents a numerical value. This input is crucial for the conversion process, enabling the transformation of text-based numbers into floating-point numbers. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `float`: The output is a floating-point number derived from the input string, providing a numerical representation of the text-based input. Type should be `FLOAT`.

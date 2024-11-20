@@ -1,104 +1,134 @@
 import os
+import sys
 import time
+import json
 import argparse
 
-from utils.comfy import execute_workflow
+from utils import console
+from utils.comfy import execute_prompt
+from agent.cot import CoTPipeline
+from agent.rag import RAGPipeline
+from agent.cotsc import CoTSCPipeline
+from agent.comfy import ComfyPipeline
+from agent.fewshot import FewShotPipeline
+from agent.zeroshot import ZeroShotPipeline
+from agent.variant.comfy_no_adapt import ComfyNoAdaptPipeline
+from agent.variant.comfy_no_refine import ComfyNoRefinePipeline
+from agent.variant.comfy_no_combine import ComfyNoCombinePipeline
+from agent.variant.comfy_no_retrieve import ComfyNoRetrievePipeline
+from agent.variant.rag_json_representation import RAGJsonRepresentationPipeline
+from agent.variant.rag_list_representation import RAGListRepresentationPipeline
 
-from agent.zero_shot_agent.pipeline import ZeroShotAgentPipeline
-from agent.few_shot_agent.pipeline import FewShotAgentPipeline
-from agent.cot_agent.pipeline import CoTAgentPipeline
-from agent.rag_agent.pipeline import RAGAgentPipeline
-from agent.gen_agent.pipeline import GenAgentPipeline
-from agent.json_gen_agent.pipeline import JsonGenAgentPipeline
-from agent.list_gen_agent.pipeline import ListGenAgentPipeline
-from agent.code_gen_agent.pipeline import CodeGenAgentPipeline
-from agent.single_gen_agent.pipeline import SingleGenAgentPipeline
 
+def main():
+    # parse argument
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--instruction', type=str, required=True)
+    parser.add_argument('--agent_name', type=str, required=True)
+    parser.add_argument('--save_path', type=str, default=None)
+    parser.add_argument('--num_examples', type=int, default=3)
+    parser.add_argument('--num_trajectories', type=int, default=3)
+    parser.add_argument('--num_references', type=int, default=5)
+    parser.add_argument('--step_limitation', type=int, default=5)
+    parser.add_argument('--debug_limitation', type=int, default=1)
+    args = parser.parse_args()
 
-def main(args):
-    # Setup checkpoint
     if args.save_path is None:
-        args.save_path = f'./checkpoint/{time.strftime('%Y-%m-%d-%H-%M-%S')}'
+        timestamp = time.strftime('%Y-%m-%d-%H-%M-%S')
+        args.save_path = f'./cache/pipeline_record/{timestamp}'
     os.makedirs(args.save_path, exist_ok=True)
+    with open(f'{args.save_path}/instruction.txt', 'w') as file:
+        file.write(args.instruction)
+    sys.stdout = console.Logger(f'{args.save_path}/logging.txt')
 
-    # Create pipeline
-    if args.agent_name == 'zero_shot_agent':
-        pipeline = ZeroShotAgentPipeline(
-            save_path=args.save_path
+    # create pipeline
+    print(' Program Status '.center(80, '-'))
+    print('creating pipeline...')
+    print()
+
+    if args.agent_name == 'zeroshot':
+        pipeline = ZeroShotPipeline()
+    elif args.agent_name == 'fewshot':
+        pipeline = FewShotPipeline(
+            num_examples=args.num_examples
         )
-    elif args.agent_name == 'few_shot_agent':
-        pipeline = FewShotAgentPipeline(
-            save_path=args.save_path
+    elif args.agent_name == 'cot':
+        pipeline = CoTPipeline(
+            num_examples=args.num_examples
         )
-    elif args.agent_name == 'cot_agent':
-        pipeline = CoTAgentPipeline(
-            save_path=args.save_path
+    elif args.agent_name == 'cotsc':
+        pipeline = CoTSCPipeline(
+            num_examples=args.num_examples,
+            num_trajectories=args.num_trajectories
         )
-    elif args.agent_name == 'rag_agent':
-        pipeline = RAGAgentPipeline(
-            save_path=args.save_path,
-            num_refs=args.num_refs
+    elif args.agent_name == 'rag':
+        pipeline = RAGPipeline(
+            num_references=args.num_references
         )
-    elif args.agent_name == 'gen_agent':
-        pipeline = GenAgentPipeline(
-            save_path=args.save_path,
-            num_steps=args.num_steps,
-            num_refs=args.num_refs,
-            num_fixes=args.num_fixes
+    elif args.agent_name == 'comfy':
+        pipeline = ComfyPipeline(
+            num_references=args.num_references,
+            step_limitation=args.step_limitation,
+            debug_limitation=args.debug_limitation
         )
-    elif args.agent_name == 'json_gen_agent':
-        pipeline = JsonGenAgentPipeline(
-            save_path=args.save_path,
-            num_steps=args.num_steps,
-            num_refs=args.num_refs,
-            num_fixes=args.num_fixes
+    elif args.agent_name == 'rag_json_representation':
+        pipeline = RAGJsonRepresentationPipeline(
+            num_references=args.num_references
         )
-    elif args.agent_name == 'list_gen_agent':
-        pipeline = ListGenAgentPipeline(
-            save_path=args.save_path,
-            num_steps=args.num_steps,
-            num_refs=args.num_refs,
-            num_fixes=args.num_fixes
+    elif args.agent_name == 'rag_list_representation':
+        pipeline = RAGListRepresentationPipeline(
+            num_references=args.num_references
         )
-    elif args.agent_name == 'code_gen_agent':
-        pipeline = CodeGenAgentPipeline(
-            save_path=args.save_path,
-            num_steps=args.num_steps,
-            num_refs=args.num_refs,
-            num_fixes=args.num_fixes
+    elif args.agent_name == 'comfy_no_combine':
+        pipeline = ComfyNoCombinePipeline(
+            num_references=args.num_references,
+            step_limitation=args.step_limitation
         )
-    elif args.agent_name == 'single_gen_agent':
-        pipeline = SingleGenAgentPipeline(
-            save_path=args.save_path,
-            num_steps=args.num_steps,
-            num_refs=args.num_refs,
-            num_fixes=args.num_fixes
+    elif args.agent_name == 'comfy_no_adapt':
+        pipeline = ComfyNoAdaptPipeline(
+            num_references=args.num_references,
+            step_limitation=args.step_limitation
+        )
+    elif args.agent_name == 'comfy_no_retrieve':
+        pipeline = ComfyNoRetrievePipeline(
+            num_references=args.num_references,
+            step_limitation=args.step_limitation
+        )
+    elif args.agent_name == 'comfy_no_refine':
+        pipeline = ComfyNoRefinePipeline(
+            num_references=args.num_references,
+            step_limitation=args.step_limitation
         )
 
-    # Generate workflow
-    workflow = pipeline(args.query_text)
-    if workflow is None:
-        print('failed to generate workflow')
+    # generate workflow
+    print(' Program Status '.center(80, '-'))
+    print('generating workflow...')
+    print()
+    try:
+        prompt = pipeline(args.instruction)
+        with open(f'{args.save_path}/workflow.json', 'w') as file:
+            json.dump(prompt, file, indent=4)
+    except Exception as error:
+        print(' Program Status '.center(80, '-'))
+        print(f'failed to generate workflow: {error}')
+        print()
         return
 
-    # Execute workflow
-    status, outputs = execute_workflow(workflow)
-    print(f'execution status: {status}')
-    os.makedirs(f'{args.save_path}/output', exist_ok=True)
-    for filename, output in outputs.items():
-        print(f'save file: {args.save_path}/output/{filename}')
-        with open(f'{args.save_path}/output/{filename}', 'wb') as output_file:
-            output_file.write(output)
+    # execute workflow
+    print(' Program Status '.center(80, '-'))
+    print('executing workflow...')
+    print()
+    try:
+        _, outputs = execute_prompt(prompt)
+        for name, data in outputs.items():
+            with open(f'{args.save_path}/{name}', 'wb') as file:
+                file.write(data)
+    except Exception as error:
+        print(' Program Status '.center(80, '-'))
+        print(f'failed to execute workflow: {error}')
+        print()
+        return
 
 
 if __name__ == '__main__':
-    # Parse arguments
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--query_text', type=str, required=True)
-    parser.add_argument('--agent_name', type=str, required=True)
-    parser.add_argument('--save_path', type=str, default=None)
-    parser.add_argument('--num_steps', type=int, default=5)
-    parser.add_argument('--num_refs', type=int, default=5)
-    parser.add_argument('--num_fixes', type=int, default=1)
-    args = parser.parse_args()
-    main(args)
+    main()

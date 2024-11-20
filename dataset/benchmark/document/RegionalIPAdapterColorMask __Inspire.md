@@ -1,0 +1,18 @@
+- `RegionalIPAdapterColorMask __Inspire`: This node is designed to adapt image processing inputs regionally by applying a color mask. It allows for the selective application of image embeddings and weights based on specified color regions within an image, facilitating targeted image manipulation and enhancement.
+    - Inputs:
+        - `color_mask` (Required): The color mask image used to define regions for applying the image processing. It serves as a spatial filter to apply different processing techniques to specific areas of an image. Type should be `IMAGE`.
+        - `mask_color` (Required): The specific color value used to identify the regions of interest within the color mask. This color defines which parts of the image will be subject to the specified image processing operations. Type should be `STRING`.
+        - `image` (Required): The image to which the regional adaptation and processing will be applied, using the defined color mask to target specific areas. Type should be `IMAGE`.
+        - `weight` (Required): A scalar value that adjusts the intensity or influence of the applied embeddings on the selected regions. It modulates how strongly the specified image features are applied. Type should be `FLOAT`.
+        - `noise` (Required): A scalar value representing the amount of noise to be applied within the specified regions, affecting the texture and overall appearance. Type should be `FLOAT`.
+        - `weight_type` (Required): Specifies the method of applying weights to the embeddings, such as linear scaling or channel-specific penalties, offering control over the modification intensity. Type should be `COMBO[STRING]`.
+        - `start_at` (Required): Defines the starting point of the effect's intensity gradient, allowing for gradual application of the image processing from a certain threshold. Type should be `FLOAT`.
+        - `end_at` (Required): Sets the endpoint for the effect's intensity gradient, enabling a smooth transition of the image processing effect across the specified region. Type should be `FLOAT`.
+        - `unfold_batch` (Required): A boolean flag that determines whether the batch of images should be processed individually or as a group, affecting the computational efficiency and result granularity. Type should be `BOOLEAN`.
+        - `faceid_v2` (Optional): A boolean flag indicating whether to use an advanced face identification method for more precise region targeting within the image. Type should be `BOOLEAN`.
+        - `weight_v2` (Optional): An optional scalar value that provides an alternative weighting mechanism for the applied embeddings, offering additional control over the intensity of the image processing. Type should be `FLOAT`.
+        - `combine_embeds` (Optional): Specifies the method for combining multiple embeddings, such as concatenation or averaging, to achieve the desired effect within the targeted regions. Type should be `COMBO[STRING]`.
+        - `neg_image` (Optional): An optional image representing negative features or styles to be subtracted from the specified regions, allowing for more nuanced image manipulations. Type should be `IMAGE`.
+    - Outputs:
+        - `regional_ipadapter`: The adapted image processing conditions tailored to the specified regions, ready for further image synthesis or manipulation tasks. Type should be `REGIONAL_IPADAPTER`.
+        - `mask`: The generated mask based on the specified color, indicating the regions of the image that were targeted for processing. Type should be `MASK`.

@@ -1,0 +1,9 @@
+- `FreeU`: The FreeU node is designed to enhance the functionality of neural network models by applying a dynamic scaling technique to the model's hidden layers. This process involves adjusting the scaling of specific layers based on predefined criteria, potentially improving the model's performance or efficiency. Additionally, the node incorporates a mechanism to handle operations on devices that do not support certain functions, gracefully degrading to CPU processing when necessary.
+    - Inputs:
+        - `model` (Required): The model to be enhanced with the FreeU node's dynamic scaling technique. It affects the node's execution by determining which layers are scaled and how, ultimately influencing the model's performance. Type should be `MODEL`.
+        - `b1` (Required): A scaling factor for the model's hidden layers, contributing to the dynamic adjustment of the model's architecture for improved performance. Type should be `FLOAT`.
+        - `b2` (Required): Another scaling factor for the model's hidden layers, working alongside b1 to fine-tune the model's scaling for optimal performance. Type should be `FLOAT`.
+        - `s1` (Required): A parameter influencing the scaling process within the FreeU node, affecting the model's efficiency and output quality. Type should be `FLOAT`.
+        - `s2` (Required): Complements s1 as part of the FreeU node's scaling mechanism, further refining the model's performance through dynamic layer adjustment. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The enhanced model, after applying the FreeU node's dynamic scaling technique. This output reflects the adjustments made to the model's architecture for improved performance or efficiency. Type should be `MODEL`.

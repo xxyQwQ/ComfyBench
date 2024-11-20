@@ -1,0 +1,9 @@
+- `easy XYInputs_ PromptSR`: The PromptSR node specializes in processing textual prompts by adjusting or generating new prompts based on specified sentiments, positive or negative. It leverages search text, replacement text, and conditions to dynamically create or modify prompts, aiming for a more targeted and nuanced prompt engineering approach.
+    - Inputs:
+        - `target_prompt` (Required): Determines the sentiment direction for prompt adjustment or generation, influencing the outcome towards either positive or negative sentiment. Type should be `COMBO[STRING]`.
+        - `search_txt` (Required): Text used for searching within prompts, enabling specific themes or content to be targeted for refinement or generation. Type should be `STRING`.
+        - `replace_all_text` (Required): A boolean flag indicating whether all instances of the search text should be replaced in the prompt. Type should be `BOOLEAN`.
+        - `replace_count` (Required): Specifies the number of replacements to be made, allowing for controlled modifications of the prompt. Type should be `INT`.
+        - `replace_i` (Required): Dynamic inputs for replacement text, where 'i' can range from 1 to the value specified by 'replace_count', facilitating specific text replacements. Type should be `STRING`.
+    - Outputs:
+        - `X or Y`: Generates a prompt categorized under 'X' or 'Y', based on the sentiment direction specified by the target prompt, with detailed modifications reflecting the input conditions. Type should be `X_Y`.

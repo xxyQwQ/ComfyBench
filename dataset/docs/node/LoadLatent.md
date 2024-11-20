@@ -1,6 +1,0 @@
-- `LoadLatent`: The LoadLatent node is designed for loading latent representations from files with a '.latent' extension. It adjusts the latent tensor based on its version and prepares it for further processing or generation tasks.
-    - Parameters:
-        - `latent`: Specifies the name of the latent file to be loaded. This file should be located in a predefined input directory and have a '.latent' extension. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `latent`: Provides the loaded and adjusted latent tensor, ready for further processing or generation tasks. Type should be `LATENT`.

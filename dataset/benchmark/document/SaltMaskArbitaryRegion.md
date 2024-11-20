@@ -1,0 +1,7 @@
+- `SaltMaskArbitaryRegion`: This node applies a filter to mask arbitrary regions within given masks based on specified size and threshold parameters. It enables the customization of mask regions for various applications, such as image segmentation or object isolation.
+    - Inputs:
+        - `masks` (Required): The input masks on which the arbitrary region filtering is applied. This parameter is crucial for defining the areas to be processed. Type should be `MASK`.
+        - `size` (Required): Specifies the size parameter for the arbitrary region filter, affecting the scale of the regions to be filtered within the masks. Type should be `INT`.
+        - `threshold` (Required): Determines the threshold for the arbitrary region filtering, influencing which parts of the mask are considered for processing. Type should be `INT`.
+    - Outputs:
+        - `MASKS`: The output is a modified mask where arbitrary regions have been filtered according to the specified size and threshold. Type should be `MASK`.

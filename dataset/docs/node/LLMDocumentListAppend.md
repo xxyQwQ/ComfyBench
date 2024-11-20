@@ -1,8 +1,0 @@
-- `LLMDocumentListAppend`: This node is designed to append a list of documents to an existing list of documents, optionally updating their metadata with additional information. It facilitates the dynamic expansion of document collections, allowing for the aggregation of data from multiple sources.
-    - Parameters:
-        - `extra_info`: A JSON string containing additional metadata to be merged into the metadata of the documents being appended. This allows for the enrichment of document data. Type should be `STRING`.
-    - Inputs:
-        - `llm_documents`: Represents the initial list of documents to which new documents will be appended. It plays a crucial role in the node's operation by serving as the base collection for aggregation. Type should be `DOCUMENT`.
-        - `append_llm_documents`: The list of new documents to be appended to the existing list. This parameter is essential for expanding the document collection with new entries. Type should be `DOCUMENT`.
-    - Outputs:
-        - `documents`: The updated list of documents after appending the new documents and optionally updating their metadata. Type should be `DOCUMENT`.

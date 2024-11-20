@@ -1,0 +1,11 @@
+- `CR Switch Model and CLIP`: This node is designed to switch between two sets of models and CLIPs based on a given input. It facilitates dynamic selection within a workflow, allowing users to choose between alternative processing paths or resources.
+    - Inputs:
+        - `Input` (Required): Determines which set of model and CLIP to use, enabling the selection between two predefined options. Type should be `INT`.
+        - `model1` (Required): The first model option that can be selected. Type should be `MODEL`.
+        - `clip1` (Required): The first CLIP option that can be selected alongside the first model. Type should be `CLIP`.
+        - `model2` (Required): The second model option that can be selected. Type should be `MODEL`.
+        - `clip2` (Required): The second CLIP option that can be selected alongside the second model. Type should be `CLIP`.
+    - Outputs:
+        - `MODEL`: The selected model based on the input choice. Type should be `MODEL`.
+        - `CLIP`: The selected CLIP based on the input choice. Type should be `CLIP`.
+        - `show_help`: Provides a link to further documentation or help related to this node. Type should be `STRING`.

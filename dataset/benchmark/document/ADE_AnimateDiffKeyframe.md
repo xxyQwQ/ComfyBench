@@ -1,0 +1,10 @@
+- `ADE_AnimateDiffKeyframe`: This node is designed to facilitate the creation and manipulation of keyframes within the AnimateDiff framework. It allows for the dynamic adjustment of animation parameters such as scale, effect intensity, and camera control at specific points in the animation timeline, enhancing the customization and precision of animation effects.
+    - Inputs:
+        - `start_percent` (Required): Specifies the percentage point along the animation timeline at which the keyframe is to be applied, enabling precise control over when animation adjustments occur. Type should be `FLOAT`.
+        - `prev_ad_keyframes` (Optional): An optional list of previously defined keyframes that the current keyframe will be added to, allowing for the accumulation and sequencing of animation effects. Type should be `AD_KEYFRAMES`.
+        - `scale_multival` (Optional): Determines the scaling factor to be applied at the keyframe, affecting the size of animated elements. Type should be `MULTIVAL`.
+        - `effect_multival` (Optional): Controls the intensity of visual effects applied at the keyframe, such as brightness or contrast adjustments. Type should be `MULTIVAL`.
+        - `inherit_missing` (Optional): A boolean flag indicating whether the keyframe should inherit unspecified parameters from preceding keyframes, ensuring continuity in animation effects. Type should be `BOOLEAN`.
+        - `guarantee_steps` (Optional): Specifies the minimum number of steps for which the keyframe's effects are guaranteed to be applied, ensuring consistent animation outcomes. Type should be `INT`.
+    - Outputs:
+        - `ad_keyframes`: Returns an updated list of keyframes, including the newly added keyframe, facilitating the sequential application of animation effects. Type should be `AD_KEYFRAMES`.

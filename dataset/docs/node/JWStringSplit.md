@@ -1,8 +1,0 @@
-- `JWStringSplit`: The JWStringSplit node is designed to split a given string into two parts based on a specified delimiter, with an option to perform the split from the right. It abstracts the complexity of string manipulation, providing a straightforward way to divide strings for further processing.
-    - Parameters:
-        - `source`: The 'source' parameter is the string to be split. It plays a crucial role in determining the input string that will be divided into two parts based on the specified delimiter. Type should be `STRING`.
-        - `split_by`: The 'split_by' parameter specifies the delimiter used to split the 'source' string. Its value directly influences how the input string is divided. Type should be `STRING`.
-    - Inputs:
-        - `from_right`: The 'from_right' parameter determines whether the split should occur from the right side of the 'source' string. When set to 'true', the split is performed from the right; otherwise, it defaults to a left-side split. Type should be `['false', 'true']`.
-    - Outputs:
-        - `string`: The output is a tuple containing two strings, representing the parts of the original string after the split operation. This correction reflects the accurate output type, addressing the feedback. Type should be `STRING`.

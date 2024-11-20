@@ -1,0 +1,10 @@
+- `LDSRUpscale`: The LDSRUpscale node is designed to upscale images using a specified model, with options for pre and post downscaling, and a choice of downsample methods. It allows for detailed control over the upscaling process, including the number of steps and downscale factors, to enhance image resolution effectively.
+    - Inputs:
+        - `upscale_model` (Required): Specifies the model to be used for upscaling the images. This choice determines the upscaling technique and quality. Type should be `UPSCALE_MODEL`.
+        - `images` (Required): A collection of images to be upscaled. This input allows the node to process multiple images in a single operation. Type should be `IMAGE`.
+        - `steps` (Required): Defines the number of steps to be used in the upscaling process, affecting the detail and quality of the output. Type should be `COMBO[STRING]`.
+        - `pre_downscale` (Required): Optional pre-processing step to downscale images before upscaling, which can affect the upscaling quality and performance. Type should be `COMBO[STRING]`.
+        - `post_downscale` (Required): Optional post-processing step to adjust the size of the upscaled images, allowing for size customization or restoration to original dimensions. Type should be `COMBO[STRING]`.
+        - `downsample_method` (Required): The method used for downsampling during pre and post downscale steps, influencing the quality of the downscaled images. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `images`: The upscaled images, enhanced in resolution and detail through the specified upscaling process. Type should be `IMAGE`.

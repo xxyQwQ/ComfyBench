@@ -1,0 +1,18 @@
+- `InstantID Pose Prepare Pipe (JPS)`: The InstantIDPosePrepare_Pipe node is designed for preparing image settings specifically tailored for pose estimation in the context of Instant ID generation. It processes various image preparation parameters such as resizing, cropping, padding, and interpolation to optimize images for subsequent pose analysis.
+    - Inputs:
+        - `imageprepare_settings` (Required): Specifies the settings for preparing an image, including resizing, cropping, padding, and interpolation, crucial for optimizing the image for pose estimation. Type should be `BASIC_PIPE`.
+    - Outputs:
+        - `resize_to`: The target size to which the image should be resized. Type should be `INT`.
+        - `offset_width`: The width offset applied to the image. Type should be `INT`.
+        - `offset_height`: The height offset applied to the image. Type should be `INT`.
+        - `crop_left`: The amount of cropping from the left side of the image. Type should be `INT`.
+        - `crop_right`: The amount of cropping from the right side of the image. Type should be `INT`.
+        - `crop_top`: The amount of cropping from the top of the image. Type should be `INT`.
+        - `crop_bottom`: The amount of cropping from the bottom of the image. Type should be `INT`.
+        - `padding_left`: The amount of padding added to the left side of the image. Type should be `INT`.
+        - `padding_right`: The amount of padding added to the right side of the image. Type should be `INT`.
+        - `padding_top`: The amount of padding added to the top of the image. Type should be `INT`.
+        - `padding_bottom`: The amount of padding added to the bottom of the image. Type should be `INT`.
+        - `interpolation`: The interpolation method used for resizing the image. Type should be `COMBO[STRING]`.
+        - `sharpening`: The level of sharpening applied to the image. Type should be `FLOAT`.
+        - `flip`: Specifies if the image should be flipped and along which axis. Type should be `COMBO[STRING]`.

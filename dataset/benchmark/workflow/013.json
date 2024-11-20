@@ -1,0 +1,96 @@
+{
+    "33": {
+        "inputs": {
+            "image": "bedroom.jpg",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "84": {
+        "inputs": {
+            "device_mode": "Prefer GPU",
+            "image": [
+                "33",
+                0
+            ],
+            "mask": [
+                "114",
+                0
+            ]
+        },
+        "class_type": "LaMaInpaint",
+        "_meta": {
+            "title": "LaMa Remove Object"
+        }
+    },
+    "101": {
+        "inputs": {
+            "prompt": "chair",
+            "threshold": 0.2,
+            "sam_model": [
+                "103",
+                0
+            ],
+            "grounding_dino_model": [
+                "102",
+                0
+            ],
+            "image": [
+                "33",
+                0
+            ]
+        },
+        "class_type": "GroundingDinoSAMSegment (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoSAMSegment (segment anything)"
+        }
+    },
+    "102": {
+        "inputs": {
+            "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+        },
+        "class_type": "GroundingDinoModelLoader (segment anything)",
+        "_meta": {
+            "title": "GroundingDinoModelLoader (segment anything)"
+        }
+    },
+    "103": {
+        "inputs": {
+            "model_name": "sam_vit_l (1.25GB)"
+        },
+        "class_type": "SAMModelLoader (segment anything)",
+        "_meta": {
+            "title": "SAMModelLoader (segment anything)"
+        }
+    },
+    "113": {
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "84",
+                0
+            ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+            "title": "Save Image"
+        }
+    },
+    "114": {
+        "inputs": {
+            "expand": 5,
+            "tapered_corners": true,
+            "mask": [
+                "101",
+                1
+            ]
+        },
+        "class_type": "GrowMask",
+        "_meta": {
+            "title": "GrowMask"
+        }
+    }
+}

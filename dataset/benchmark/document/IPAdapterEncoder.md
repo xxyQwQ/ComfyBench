@@ -1,0 +1,10 @@
+- `IPAdapterEncoder`: The IPAdapterEncoder node is designed to encode images with specific adaptations, leveraging additional parameters such as weight and mask to fine-tune the encoding process. It aims to enhance image processing tasks by integrating clip vision capabilities and custom adaptations.
+    - Inputs:
+        - `ipadapter` (Required): Represents the IPAdapter instance to be used for encoding, determining the specific adaptation techniques applied to the image. Type should be `IPADAPTER`.
+        - `image` (Required): The image to be encoded, serving as the primary input for the adaptation process. Type should be `IMAGE`.
+        - `weight` (Required): A weight factor that influences the encoding process, allowing for fine-tuning of the adaptation effects on the image. Type should be `FLOAT`.
+        - `mask` (Optional): An optional mask that can be applied to the image, enabling selective encoding of certain image regions. Type should be `MASK`.
+        - `clip_vision` (Optional): An optional parameter to incorporate clip vision features into the encoding, enhancing the adaptation with vision-based insights. Type should be `CLIP_VISION`.
+    - Outputs:
+        - `pos_embed`: The positive embedding result of the encoding process. Type should be `EMBEDS`.
+        - `neg_embed`: The negative embedding result of the encoding process. Type should be `EMBEDS`.

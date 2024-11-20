@@ -1,0 +1,15 @@
+- `LayerMask_ MaskBoxDetect`: The node 'LayerMask: MaskBoxDetect' is designed to analyze and process image masks to detect and adjust bounding boxes. It supports various detection modes, including minimum bounding rectangle, maximum inscribed rectangle, and mask area detection. Additionally, it allows for adjustments in scale and position, providing flexibility in handling mask-based spatial data for image editing or analysis tasks.
+    - Inputs:
+        - `mask` (Required): The 'mask' parameter represents the input image mask for which the bounding box needs to be detected. It plays a crucial role in determining the area of interest within the image. Type should be `MASK`.
+        - `detect` (Required): The 'detect' parameter specifies the method to be used for bounding box detection, offering options like minimum bounding rectangle, maximum inscribed rectangle, or mask area detection. This choice affects the algorithm's approach to analyzing the mask. Type should be `COMBO[STRING]`.
+        - `x_adjust` (Required): The 'x_adjust' parameter allows for horizontal adjustment of the detected bounding box, enabling fine-tuning of its position relative to the original mask. Type should be `INT`.
+        - `y_adjust` (Required): The 'y_adjust' parameter enables vertical adjustment of the detected bounding box, allowing for precise positioning adjustments. Type should be `INT`.
+        - `scale_adjust` (Required): The 'scale_adjust' parameter modifies the scale of the detected bounding box, offering the ability to resize it according to specific requirements. Type should be `FLOAT`.
+    - Outputs:
+        - `box_preview`: An image with the detected bounding box drawn over the original mask, providing a visual preview of the detection result. Type should be `IMAGE`.
+        - `x_percent`: The horizontal center position of the detected bounding box, expressed as a percentage of the mask's width. Type should be `FLOAT`.
+        - `y_percent`: The vertical center position of the detected bounding box, expressed as a percentage of the mask's height. Type should be `FLOAT`.
+        - `width`: The width of the detected bounding box. Type should be `INT`.
+        - `height`: The height of the detected bounding box. Type should be `INT`.
+        - `x`: The x-coordinate of the top-left corner of the detected bounding box. Type should be `INT`.
+        - `y`: The y-coordinate of the top-left corner of the detected bounding box. Type should be `INT`.

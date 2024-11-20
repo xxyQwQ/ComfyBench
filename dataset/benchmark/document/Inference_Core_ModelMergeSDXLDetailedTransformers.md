@@ -1,0 +1,48 @@
+- `Inference_Core_ModelMergeSDXLDetailedTransformers`: This node specializes in merging two SDXL transformer models, incorporating detailed configuration options for transformer blocks within the model architecture. It enables precise adjustments and fine-tuning of transformer parameters across various sections of the input, middle, and output blocks, facilitating enhanced model integration and performance optimization.
+    - Inputs:
+        - `model1` (Required): One of the models to be merged, serving as a primary component in the merging process. Type should be `MODEL`.
+        - `model2` (Required): The second model to be merged, serving as the secondary component in the merging process. Type should be `MODEL`.
+        - `time_embed.` (Required): A parameter for adjusting the time embedding layers' weights in the merging process, affecting the temporal dynamics of the merged model. Type should be `FLOAT`.
+        - `label_emb.` (Required): A parameter for adjusting the label embedding layers' weights in the merging process, influencing how labels are represented in the merged model. Type should be `FLOAT`.
+        - `input_blocks.i.j.` (Required): unknown Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.norm1` (Required): unknown Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.attn1.to_q` (Required): unknown Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.attn1.to_k` (Required): unknown Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.attn1.to_v` (Required): unknown Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.attn1.to_out` (Required): unknown Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.ff.net` (Required): unknown Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.norm2` (Required): unknown Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.attn2.to_q` (Required): Adjusts the weights for the query transformation in the second attention mechanism of transformer blocks within input blocks. The indices i, j, and k represent the input block number, the sub-block within the input block (if applicable), and the transformer block number, respectively, allowing for precise control over specific components of the model architecture. Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.attn2.to_k` (Required): unknown Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.attn2.to_v` (Required): unknown Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.attn2.to_out` (Required): unknown Type should be `FLOAT`.
+        - `input_blocks.i.j.transformer_blocks.k.norm3` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.norm1` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.attn1.to_q` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.attn1.to_k` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.attn1.to_v` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.attn1.to_out` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.ff.net` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.norm2` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.attn2.to_q` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.attn2.to_k` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.attn2.to_v` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.attn2.to_out` (Required): unknown Type should be `FLOAT`.
+        - `middle_block.i.transformer_blocks.j.norm3` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.norm1` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.attn1.to_q` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.attn1.to_k` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.attn1.to_v` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.attn1.to_out` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.ff.net` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.norm2` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.attn2.to_q` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.attn2.to_k` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.attn2.to_v` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.attn2.to_out` (Required): unknown Type should be `FLOAT`.
+        - `output_blocks.i.j.transformer_blocks.k.norm3` (Required): unknown Type should be `FLOAT`.
+        - `out.` (Required): unknown Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The merged model, optimized through detailed transformer parameter adjustments for improved performance and integration. Type should be `MODEL`.

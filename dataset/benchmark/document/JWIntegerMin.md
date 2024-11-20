@@ -1,0 +1,6 @@
+- `JWIntegerMin`: The JWIntegerMin node is designed to compute the minimum of two integer values. It abstracts the process of comparing two integers and returning the smallest one, simplifying operations that require minimum value determination.
+    - Inputs:
+        - `a` (Required): The first integer value to be compared. It plays a crucial role in determining the minimum value when compared with the second integer. Type should be `INT`.
+        - `b` (Required): The second integer value to be compared. It is essential in the comparison process to identify the minimum value between the two integers. Type should be `INT`.
+    - Outputs:
+        - `int`: The output is the minimum value obtained from comparing the two input integers. Type should be `INT`.

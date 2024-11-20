@@ -1,0 +1,15 @@
+- `CR Simple Text Watermark`: The CR Simple Text Watermark node is designed to overlay text onto images in a subtle manner, typically for the purpose of copyright or identification. It allows for the customization of text appearance and positioning, ensuring the watermark blends seamlessly with the underlying image while maintaining readability.
+    - Inputs:
+        - `image` (Required): The image onto which the watermark text will be applied. This is the primary canvas for the watermark operation. Type should be `IMAGE`.
+        - `text` (Required): The text to be used as the watermark. This allows for customization of the watermark content. Type should be `STRING`.
+        - `align` (Required): Controls the alignment of the watermark text within the image, aiding in precise placement. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): Adjusts the opacity of the watermark text, ensuring it does not overpower the main content of the image. Type should be `FLOAT`.
+        - `font_name` (Required): Specifies the font used for the watermark text, enabling customization of the text appearance. Type should be `COMBO[STRING]`.
+        - `font_size` (Required): Determines the size of the font used for the watermark text, affecting its visibility and integration with the image. Type should be `INT`.
+        - `font_color` (Required): Defines the color of the watermark text, allowing for visual customization to match or contrast with the image. Type should be `COMBO[STRING]`.
+        - `x_margin` (Required): The horizontal margin from the edge of the image to the start of the watermark text, providing control over its positioning. Type should be `INT`.
+        - `y_margin` (Required): The vertical margin from the edge of the image to the start of the watermark text, providing control over its positioning. Type should be `INT`.
+        - `font_color_hex` (Optional): An optional hexadecimal color code for the watermark text, offering an alternative method for defining text color. Type should be `STRING`.
+    - Outputs:
+        - `IMAGE`: Outputs the image with the applied watermark text. Type should be `IMAGE`.
+        - `show_help`: Provides additional information or guidance related to the watermarking process. Type should be `STRING`.

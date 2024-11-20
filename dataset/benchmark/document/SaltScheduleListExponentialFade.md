@@ -1,0 +1,8 @@
+- `SaltScheduleListExponentialFade`: This node applies an exponential fade effect to a schedule list based on the specified fade type and strength, optionally starting from a given index. It's designed to modify the intensity or presence of elements in a schedule over time, creating smooth transitions either into, out of, or both into and out of a sequence of values.
+    - Inputs:
+        - `schedule_list` (Required): The list of values to apply the exponential fade effect to. It represents the sequence of elements whose intensity will be modified over time. Type should be `LIST`.
+        - `fade_type` (Required): Specifies the type of fade to apply: 'in' for a gradual increase, 'out' for a gradual decrease, or 'in-and-out' for an increase followed by a decrease. Type should be `COMBO[STRING]`.
+        - `strength` (Required): Determines the curve's steepness of the fade effect. Higher values result in a steeper curve. Type should be `FLOAT`.
+        - `start_index` (Optional): The index in the schedule list from which to start applying the fade effect. Allows for partial application of the fade. Type should be `INT`.
+    - Outputs:
+        - `schedule_list`: The modified schedule list after applying the exponential fade effect, with values adjusted according to the specified fade type and strength. Type should be `LIST`.

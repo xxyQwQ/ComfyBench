@@ -1,0 +1,13 @@
+- `LayerUtility_ LayerMaskTransform`: The LayerMaskTransform node is designed to apply various transformations to image masks, including scaling, mirroring, rotating, and adjusting aspect ratios. It enables the customization of image masks for further processing or visualization, supporting a range of transformation methods to fit different requirements.
+    - Inputs:
+        - `mask` (Required): The input mask to be transformed. It serves as the primary subject for all subsequent transformations, determining the base image mask that will undergo scaling, mirroring, rotating, and aspect ratio adjustments. Type should be `MASK`.
+        - `x` (Required): The horizontal offset to apply when positioning the transformed mask onto the original canvas. It affects the final placement of the mask, allowing for precise control over its location. Type should be `INT`.
+        - `y` (Required): The vertical offset to apply when positioning the transformed mask onto the original canvas. Similar to the 'x' parameter, it enables fine-tuning of the mask's placement on the canvas. Type should be `INT`.
+        - `mirror` (Required): Specifies the mirroring mode to apply to the mask, which can be horizontal, vertical, or none. This transformation flips the mask along the specified axis, altering its orientation. Type should be `COMBO[STRING]`.
+        - `scale` (Required): The scaling factor to apply to the mask, allowing for size adjustments. This parameter directly influences the overall dimensions of the transformed mask. Type should be `FLOAT`.
+        - `aspect_ratio` (Required): The aspect ratio to maintain during the scaling process. Adjusting this parameter alters the shape of the mask, enabling custom aspect ratio transformations. Type should be `FLOAT`.
+        - `rotate` (Required): The degree of rotation to apply to the mask. This parameter controls the angular adjustment of the mask, enabling it to be rotated to a specific orientation. Type should be `FLOAT`.
+        - `transform_method` (Required): The method used for transforming the mask, including scaling and rotating. It determines the algorithm applied for the transformation, affecting the quality and appearance of the output. Type should be `COMBO[STRING]`.
+        - `anti_aliasing` (Required): The level of anti-aliasing to apply during the transformation process. Higher values result in smoother edges but may increase processing time. Type should be `INT`.
+    - Outputs:
+        - `mask`: The transformed mask, resulting from the applied transformations such as scaling, mirroring, rotating, and aspect ratio adjustments. It represents the final output of the node, ready for further use or visualization. Type should be `MASK`.

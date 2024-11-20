@@ -1,0 +1,15 @@
+- `LayerStyle_ DropShadow`: The DropShadow node applies a drop shadow effect to an image layer, enhancing its visual depth by simulating a shadow cast behind it. This node processes input images to add shadows based on specified parameters such as distance, direction, color, and blur, effectively creating a more dynamic and visually appealing composition.
+    - Inputs:
+        - `background_image` (Required): The background image over which the drop shadow effect will be applied. It serves as the canvas for the shadow and layer composition. Type should be `IMAGE`.
+        - `layer_image` (Required): The image layer to which the drop shadow effect will be applied. This layer will appear to cast a shadow on the background image. Type should be `IMAGE`.
+        - `invert_mask` (Required): A boolean flag to indicate whether the mask should be inverted. This affects how the shadow is applied relative to the mask, allowing for more control over the shadow's appearance. Type should be `BOOLEAN`.
+        - `blend_mode` (Required): Specifies the blending mode to be used when applying the shadow, affecting how the shadow merges with the layer. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): The opacity level of the drop shadow, determining how transparent the shadow appears over the background. Type should be `INT`.
+        - `distance_x` (Required): The horizontal distance to offset the shadow from the layer, simulating the direction of light. Type should be `INT`.
+        - `distance_y` (Required): The vertical distance to offset the shadow from the layer, further contributing to the illusion of depth. Type should be `INT`.
+        - `grow` (Required): The amount by which the shadow expands beyond the original boundaries of the layer, making the shadow appear larger or smaller. Type should be `INT`.
+        - `blur` (Required): The blur radius for the shadow, determining how sharp or soft the shadow edges are. Type should be `INT`.
+        - `shadow_color` (Required): The color of the drop shadow, allowing customization to match the aesthetic of the composition. Type should be `STRING`.
+        - `layer_mask` (Optional): An optional mask that defines the area of the layer image where the drop shadow effect should be applied. It helps in fine-tuning the shadow effect by restricting it to specific parts of the layer image. Type should be `MASK`.
+    - Outputs:
+        - `image`: The resulting image after applying the drop shadow effect, combining the background, layer, and the generated shadow into a single image. Type should be `IMAGE`.

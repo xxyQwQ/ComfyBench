@@ -1,8 +1,0 @@
-- `ShufflePreprocessor`: The ShufflePreprocessor node is designed to preprocess images by applying a content shuffle detection algorithm. This preprocessing step is crucial for tasks that require the identification or manipulation of shuffled content within images, enhancing the model's ability to recognize and handle such patterns effectively.
-    - Parameters:
-        - `resolution`: Specifies the resolution to which the input image is resized before processing. This parameter can influence the detection accuracy and performance. Type should be `INT`.
-        - `seed`: A seed value for random number generation, ensuring reproducibility of the shuffle detection process. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed. It is the primary data on which the content shuffle detection algorithm is applied. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed image after applying the content shuffle detection algorithm. It represents the detected shuffled content within the original image. Type should be `IMAGE`.

@@ -1,6 +1,0 @@
-- `CM_NumberToFloat`: The CM_NumberToFloat node is designed for converting numerical values from a generic number type, which can be an integer or a float, into a floating-point representation. This conversion facilitates operations that require floating-point precision and is essential in mathematical computations where such precision is necessary.
-    - Parameters:
-    - Inputs:
-        - `a`: The input 'a' represents the numerical value to be converted into a floating-point number. This parameter is crucial for the conversion process, affecting the node's execution by determining the output's precision and value. Type should be `NUMBER`.
-    - Outputs:
-        - `float`: The output is a floating-point representation of the input numerical value, providing the necessary precision for further mathematical operations. Type should be `FLOAT`.

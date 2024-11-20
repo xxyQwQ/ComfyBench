@@ -1,0 +1,18 @@
+- `VHS_LoadVideo`: The VHS_LoadVideo node is designed to facilitate the loading of video files into a processing pipeline, handling tasks such as decoding video data, extracting frames, and optionally applying transformations like resizing or frame rate adjustment. It serves as a foundational component within the Video Helper Suite, enabling subsequent video analysis, manipulation, or enhancement operations.
+    - Inputs:
+        - `video` (Required): Specifies the path to the video file to be loaded. It is crucial for locating and accessing the video data for processing. Type should be `COMBO[STRING]`.
+        - `force_rate` (Required): Determines the frame rate to which the video should be adjusted during loading. This parameter allows for standardizing the frame rate across different videos. Type should be `INT`.
+        - `force_size` (Required): Indicates the desired resolution to which video frames should be resized. This can be essential for ensuring consistency in frame dimensions across various processing steps. Type should be `COMBO[STRING]`.
+        - `custom_width` (Required): Specifies the custom width for resizing video frames. This parameter works in conjunction with custom_height to define the new dimensions. Type should be `INT`.
+        - `custom_height` (Required): Specifies the custom height for resizing video frames, used together with custom_width to set the target frame size. Type should be `INT`.
+        - `frame_load_cap` (Required): Limits the number of frames to be loaded from the video, useful for processing long videos or for sampling purposes. Type should be `INT`.
+        - `skip_first_frames` (Required): Skips a specified number of frames at the beginning of the video. This can be useful for bypassing non-relevant content or intros. Type should be `INT`.
+        - `select_every_nth` (Required): Loads every Nth frame from the video, allowing for temporal downsampling and reducing the total number of frames processed. Type should be `INT`.
+        - `meta_batch` (Optional): Defines a batch processing context for the video, enabling efficient handling of video frames in groups. Type should be `VHS_BatchManager`.
+        - `vae` (Optional): Optionally specifies a variational autoencoder model for processing the video frames, potentially for tasks like dimensionality reduction or feature extraction. Type should be `VAE`.
+    - Outputs:
+        - `IMAGE`: The processed video frames, potentially resized or otherwise transformed, ready for further processing. Type should be `IMAGE`.
+        - `frame_count`: The total number of frames loaded from the video, after applying any specified filters or limits. Type should be `INT`.
+        - `audio`: The extracted audio track from the video, if applicable and requested. Type should be `VHS_AUDIO`.
+        - `video_info`: Metadata about the video and the loading process, including original and loaded frame rates, dimensions, and duration. Type should be `VHS_VIDEOINFO`.
+        - `LATENT`: The representation of video frames in a latent space, if a variational autoencoder (VAE) is used during the loading process. Type should be `LATENT`.

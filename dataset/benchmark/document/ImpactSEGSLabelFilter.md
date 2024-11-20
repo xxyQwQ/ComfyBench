@@ -1,0 +1,8 @@
+- `ImpactSEGSLabelFilter`: The ImpactSEGSLabelFilter node is designed to filter segments (SEGS) based on specified labels, allowing for the selective processing of image segments. It supports custom label lists, including special groupings like 'eyes' or 'eyebrows', to fine-tune the segments that are included or excluded from further processing.
+    - Inputs:
+        - `segs` (Required): The 'segs' parameter represents the segments to be filtered. It is crucial for determining which segments of the image are subject to processing based on the labels provided. Type should be `SEGS`.
+        - `preset` (Required): The 'preset' parameter allows for the selection of predefined label sets or custom labels for filtering. It plays a key role in defining the scope of segments to be processed. Type should be `COMBO[STRING]`.
+        - `labels` (Required): The 'labels' parameter specifies the list of labels based on which the segments are filtered. It directly influences which segments are included or excluded, enabling targeted segment processing. Type should be `STRING`.
+    - Outputs:
+        - `filtered_SEGS`: This output contains the segments that match the specified labels, ready for further processing. Type should be `SEGS`.
+        - `remained_SEGS`: This output includes the segments that did not match the specified labels, potentially for alternative processing or exclusion. Type should be `SEGS`.

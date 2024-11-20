@@ -1,7 +1,0 @@
-- `ImageFilterMin`: The ImageFilterMin node applies a minimum filter to images, effectively enhancing dark areas and potentially reducing noise. This filter selects the minimum pixel value in a neighborhood defined by the filter size, making it useful for image processing tasks where reducing high-frequency noise or emphasizing darker regions is desired.
-    - Parameters:
-        - `size`: Defines the size of the neighborhood around each pixel to consider for the minimum filter. A larger size can lead to more pronounced smoothing and noise reduction effects. Type should be `INT`.
-    - Inputs:
-        - `images`: Specifies the images to be processed. This parameter is crucial as it determines the input on which the minimum filter will be applied, directly affecting the output. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed images after applying the minimum filter, which emphasizes darker areas and reduces noise. Type should be `IMAGE`.

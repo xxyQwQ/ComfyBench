@@ -1,0 +1,10 @@
+- `SaltCLIPTextEncodeSequence`: The SaltCLIPTextEncodeSequence node is designed for generating a sequence of conditioning data based on textual descriptions over a specified frame count. It leverages CLIP models to encode text into a format suitable for guiding generative models, with additional parameters to control the normalization and interpretation of token weights. This node is particularly useful for applications requiring dynamic content generation over time, such as animations or video content creation.
+    - Inputs:
+        - `clip` (Required): The CLIP model used for text encoding. It plays a crucial role in converting textual descriptions into a format that can be understood by generative models. Type should be `CLIP`.
+        - `token_normalization` (Required): Specifies the method for normalizing tokens, which can affect the encoding process and the resulting conditioning data. Options include none, mean, length, and length+mean, allowing for flexibility in handling token data. Type should be `COMBO[STRING]`.
+        - `weight_interpretation` (Required): Determines how weights are interpreted during the encoding process, with options like comfy, A1111, compel, and comfy++. This parameter influences the generation of conditioning data by adjusting the significance of different tokens. Type should be `COMBO[STRING]`.
+        - `frame_count` (Required): The number of frames for which conditioning data is generated. This parameter sets the length of the sequence, enabling the creation of dynamic content over time. Type should be `INT`.
+        - `text` (Required): Textual descriptions provided as input, which are encoded into conditioning data. Supports multiline input and dynamic prompts, allowing for detailed and varied content generation. Type should be `STRING`.
+    - Outputs:
+        - `conditioning_sequence`: The generated sequence of conditioning data, suitable for guiding generative models over the specified frame count. Type should be `CONDITIONING`.
+        - `frame_count`: The number of frames for which conditioning data has been generated, confirming the length of the output sequence. Type should be `INT`.

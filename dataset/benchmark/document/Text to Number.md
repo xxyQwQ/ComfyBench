@@ -1,0 +1,5 @@
+- `Text to Number`: The 'Text to Number' node is designed to convert textual representations of numbers into their numerical form. This node is essential for processing and interpreting text-based data that includes numerical information, facilitating the transition from textual to numerical analysis.
+    - Inputs:
+        - `text` (Required): The 'text' parameter accepts a string representation of a number, which can be either an integer or a floating-point number. This parameter is crucial for the node's operation as it determines the numerical value that will be extracted and converted. Type should be `STRING`.
+    - Outputs:
+        - `number`: The output is the numerical representation of the input text, provided as either an integer or a floating-point number, depending on the format of the input text. Type should be `NUMBER`.

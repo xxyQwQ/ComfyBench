@@ -1,7 +1,0 @@
-- `Get Contour from list`: This node is designed to retrieve a specific contour from a list of contours based on a given index. It abstracts the process of accessing contours within a collection, facilitating the extraction of individual contour data for further processing or analysis.
-    - Parameters:
-        - `index`: Specifies the position of the contour to be retrieved from the list. It determines which contour is selected for output, allowing for targeted extraction based on order. Type should be `INT`.
-    - Inputs:
-        - `contours`: Represents the list of contours from which a specific contour is to be retrieved. It is crucial for selecting the desired contour for further operations. Type should be `CV_CONTOURS`.
-    - Outputs:
-        - `cv_contour`: The output is a single contour selected from the input list based on the specified index. It enables focused analysis or manipulation of a specific contour. Type should be `CV_CONTOUR`.

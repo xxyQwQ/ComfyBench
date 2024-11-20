@@ -1,0 +1,9 @@
+- `Draw Contour(s)`: The DrawContours node is designed for visualizing contours on images by drawing them over the input image. It allows for selective contour visualization and customization of the contour appearance, such as color and thickness, enhancing the interpretability of contour-based analyses in computer vision tasks.
+    - Inputs:
+        - `image` (Required): The input image on which contours will be drawn. It serves as the background for contour visualization. Type should be `IMAGE`.
+        - `contours` (Required): A collection of contours to be drawn on the image. Each contour is defined by a series of points. Type should be `CV_CONTOURS`.
+        - `index_to_draw` (Required): Specifies which contour from the contours list to draw. A value of -1 indicates that all contours should be drawn. Type should be `INT`.
+        - `thickness` (Required): The thickness of the contour lines. A negative value fills the contour. Type should be `INT`.
+        - `color` (Required): The color of the contour lines in RGB format. Type should be `COLOR`.
+    - Outputs:
+        - `image`: The output image with the specified contours drawn over it. Type should be `IMAGE`.

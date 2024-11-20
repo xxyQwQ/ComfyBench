@@ -1,0 +1,8 @@
+- `MaskFromList+`: The MaskFromList+ node generates a mask based on a list of values, allowing for the creation of custom masks with specified dimensions and values. It supports both numerical and string inputs for mask values, providing flexibility in defining the mask's content.
+    - Inputs:
+        - `width` (Required): Specifies the width of the generated mask. It determines the horizontal dimension of the mask. Type should be `INT`.
+        - `height` (Required): Specifies the height of the generated mask. It determines the vertical dimension of the mask. Type should be `INT`.
+        - `values` (Optional): A list of numerical values (integers or floats) or a single numerical value used to populate the mask. This input allows for the customization of the mask's intensity or transparency. Type should be `INT,FLOAT`.
+        - `str_values` (Optional): A string representation of numerical values, separated by commas, used to populate the mask. This provides an alternative method for defining the mask's content. Type should be `STRING`.
+    - Outputs:
+        - `mask`: The output is a mask created from the provided list of values, with the specified dimensions and value intensities. Type should be `MASK`.

@@ -1,0 +1,10 @@
+- `CosWave`: The CosWave node generates a cosine wave based on various parameters such as phase, amplitude, and translations. It abstracts the mathematical complexity involved in creating a cosine wave, providing a simple interface for generating these waves for various applications.
+    - Inputs:
+        - `phase` (Required): The 'phase' parameter adjusts the phase shift of the cosine wave, affecting its starting position on the x-axis. This allows for fine-tuning the wave's alignment with other elements or waves. Type should be `FLOAT`.
+        - `amplitude` (Required): The 'amplitude' parameter controls the height of the cosine wave, determining how far it extends above and below its central axis. This is crucial for adjusting the wave's intensity or impact. Type should be `FLOAT`.
+        - `x_translation` (Required): The 'x_translation' parameter shifts the entire wave along the x-axis, allowing for precise positioning of the wave in relation to other graphical or wave elements. Type should be `FLOAT`.
+        - `y_translation` (Required): The 'y_translation' parameter shifts the wave vertically, enabling the adjustment of the wave's baseline position on the y-axis. Type should be `FLOAT`.
+        - `current_frame` (Required): The 'current_frame' parameter specifies the current frame or point in time for which the wave's value is being calculated, enabling the generation of dynamic, moving waves. Type should be `INT`.
+    - Outputs:
+        - `float`: The first element of the output tuple, representing the calculated wave value as a float. Type should be `FLOAT`.
+        - `int`: The second element of the output tuple, providing the integer representation of the wave's calculated value. Type should be `INT`.

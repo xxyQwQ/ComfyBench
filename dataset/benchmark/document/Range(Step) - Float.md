@@ -1,0 +1,9 @@
+- `Range(Step) - Float`: This node generates a sequence of floating-point numbers within a specified range, allowing for precise control over the start, stop, and step values. It is designed to facilitate operations that require iterating over a range of floats with specific increments, making it ideal for scenarios where uniform spacing between values is necessary.
+    - Inputs:
+        - `start` (Required): Specifies the starting value of the range. It sets the lower bound for the sequence of generated numbers. Type should be `FLOAT`.
+        - `stop` (Required): Defines the ending value of the range. It sets the upper limit for the sequence of generated numbers. Type should be `FLOAT`.
+        - `step` (Required): Determines the increment between each number in the range. This value controls the spacing between consecutive numbers in the generated sequence. Type should be `FLOAT`.
+        - `end_mode` (Required): Indicates whether the stop value is inclusive or exclusive in the range. This parameter affects whether the final number in the sequence reaches or excludes the stop value. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `range`: The generated sequence of floating-point numbers within the specified range. Type should be `FLOAT`.
+        - `range_sizes`: The size of each generated range, indicating the number of elements in each sequence. Type should be `INT`.

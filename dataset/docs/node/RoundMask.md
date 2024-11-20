@@ -1,6 +1,0 @@
-- `RoundMask`: The RoundMask node is designed to convert a mask or a batch of masks into binary masks, effectively rounding the values to the nearest binary values (0 or 1). This operation is crucial for tasks that require clear, distinct mask boundaries without gradations.
-    - Parameters:
-    - Inputs:
-        - `mask`: The input mask or batch of masks to be rounded to binary values. This is essential for achieving clear and distinct mask boundaries in various image processing tasks. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The output is a binary mask or a batch of binary masks, where each pixel value is rounded to the nearest binary value (0 or 1), ensuring clear and distinct boundaries. Type should be `MASK`.

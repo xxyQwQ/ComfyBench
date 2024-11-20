@@ -1,0 +1,5 @@
+- `String Input [Dream]`: The String Input node is designed to capture and return a single-line string input from the user. It serves as a basic interface component within a larger system, allowing for the collection of textual data in a straightforward and user-friendly manner.
+    - Inputs:
+        - `value` (Required): Specifies the default value of the string input, which can be pre-populated or left empty. This parameter enables the initial configuration of the input field, catering to various use cases by providing a customizable starting point. Type should be `STRING`.
+    - Outputs:
+        - `STRING`: Returns the user-provided string input, facilitating the transfer of textual data within the system. Type should be `STRING`.

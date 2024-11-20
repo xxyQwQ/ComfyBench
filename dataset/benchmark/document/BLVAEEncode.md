@@ -1,0 +1,11 @@
+- `BLVAEEncode`: The BLVAEEncode node is designed for encoding images into a latent space representation using a Variational Autoencoder (VAE). It supports both standard and tiled encoding modes, and offers functionality for storing or loading the encoded latent representations. This node is essential for tasks that require manipulation or analysis of images in their latent form, such as image generation or modification.
+    - Inputs:
+        - `vae` (Required): Specifies the Variational Autoencoder (VAE) model to be used for encoding the images into latent space. This parameter is crucial for determining the characteristics of the latent representation. Type should be `VAE`.
+        - `tiled` (Required): A boolean flag indicating whether the encoding should be performed in a tiled manner. Tiled encoding can be beneficial for handling large images by processing them in smaller, manageable tiles. Type should be `BOOLEAN`.
+        - `tile_size` (Required): Defines the size of the tiles (in pixels) to be used when tiled encoding is enabled. This parameter allows for flexibility in managing the granularity of the encoding process. Type should be `INT`.
+        - `store_or_load_latent` (Required): A boolean flag that determines whether the encoded latent representation should be stored or loaded. This functionality is useful for workflows that require persistence of latent data. Type should be `BOOLEAN`.
+        - `remove_latent_on_load` (Required): A boolean flag that indicates whether the latent representation should be removed from storage upon loading. This can help manage storage space efficiently. Type should be `BOOLEAN`.
+        - `delete_workflow_latent` (Required): A boolean flag that specifies whether the latent representation associated with a workflow should be deleted. This parameter is useful for cleaning up data that is no longer needed. Type should be `BOOLEAN`.
+        - `image` (Optional): The image to be encoded into latent space. This parameter is optional and allows for direct encoding of provided images. Type should be `IMAGE`.
+    - Outputs:
+        - `latent`: The encoded latent representation of the input image. This output is essential for subsequent manipulation or analysis in the latent space. Type should be `LATENT`.

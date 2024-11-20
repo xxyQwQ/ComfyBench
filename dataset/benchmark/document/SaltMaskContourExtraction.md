@@ -1,0 +1,6 @@
+- `SaltMaskContourExtraction`: This node is designed for extracting contours from mask regions using multiple threshold values. It applies a series of thresholds to identify and draw contours around regions of interest within the masks, effectively highlighting their boundaries.
+    - Inputs:
+        - `masks` (Required): The input masks for which contours are to be extracted. These masks serve as the primary data on which the contour extraction process is applied. Type should be `MASK`.
+        - `thresholds` (Optional): A list of threshold values used to identify contours within the masks. Each threshold value defines a specific level of intensity for which contours are detected and drawn, allowing for a multi-faceted analysis of the mask regions. Type should be `INT`.
+    - Outputs:
+        - `MASKS`: The output consists of tensors representing the extracted contours from the input masks. These tensors highlight the boundaries of regions within the masks, based on the specified threshold values. Type should be `MASK`.

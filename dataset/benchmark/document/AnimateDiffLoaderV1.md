@@ -1,0 +1,11 @@
+- `AnimateDiffLoaderV1`: This node is responsible for loading the AnimateDiff model version 1, facilitating the initialization and setup of the model for animation and image manipulation tasks. It is marked as deprecated, indicating that newer versions or methods are recommended for use. The node is deprecated, suggesting a transition to more current methodologies or versions for optimal performance.
+    - Inputs:
+        - `model` (Required): Specifies the model to be loaded for animation and image manipulation tasks, central to the node's operation. Type should be `MODEL`.
+        - `latents` (Required): Defines the latent space parameters for the model, crucial for initializing the model's state. Type should be `LATENT`.
+        - `model_name` (Required): Determines the specific AnimateDiff model version 1 to be loaded, affecting the animation and image manipulation capabilities. Type should be `COMBO[STRING]`.
+        - `unlimited_area_hack` (Required): A boolean flag to enable or disable the unlimited area hack, altering the model's behavior in processing images. Type should be `BOOLEAN`.
+        - `beta_schedule` (Required): Specifies the beta schedule for the model, impacting the model's training or inference behavior. Type should be `COMBO[STRING]`.
+        - `deprecation_warning` (Optional): Provides a deprecation warning, indicating that this node is outdated and newer versions are recommended. Type should be `ADEWARN`.
+    - Outputs:
+        - `model`: The loaded AnimateDiff model, ready for animation and image manipulation tasks. Type should be `MODEL`.
+        - `latent`: The initialized latent space parameters of the loaded model, essential for the model's operation. Type should be `LATENT`.

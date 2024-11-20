@@ -1,0 +1,8 @@
+- `SaltScheduledBinaryComparison`: This node performs scheduled binary comparisons on a batch of images, applying a dynamic thresholding technique that can optionally incorporate a margin of error (epsilon) to determine the binary outcome. It is designed to process images in batches, adjusting the comparison threshold per image based on a provided schedule, thereby enabling complex, time-varying binary image transformations.
+    - Inputs:
+        - `images` (Required): The batch of images to be processed. This parameter is crucial for defining the input data on which the binary comparison and thresholding operations will be performed. Type should be `IMAGE`.
+        - `comparison_schedule` (Required): A schedule of comparison threshold values to be applied to each image in the batch. This parameter allows for dynamic adjustment of the thresholding criteria over the batch. Type should be `LIST`.
+        - `epsilon_schedule` (Optional): An optional schedule of epsilon values providing a margin of error for the comparison, enabling a more flexible thresholding operation. Type should be `LIST`.
+        - `use_epsilon` (Optional): A flag to determine whether the epsilon margin of error should be used in the comparison, offering a toggle between strict and flexible thresholding. Type should be `BOOLEAN`.
+    - Outputs:
+        - `images`: The resulting batch of images after applying the scheduled binary comparison and thresholding operations, represented as binary outcomes. Type should be `IMAGE`.

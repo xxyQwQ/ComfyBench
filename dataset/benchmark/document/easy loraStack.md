@@ -1,0 +1,12 @@
+- `easy loraStack`: The `loraStack` node is designed to facilitate the dynamic integration and management of LoRA (Low-Rank Adaptation) layers into models. It allows for the customization of model behavior through the manipulation of LoRA parameters, enabling users to adjust the strength and impact of these layers on the model's output. This node supports the configuration of multiple LoRA layers, making it versatile for experiments with model adaptability and fine-tuning.
+    - Inputs:
+        - `toggle` (Required): A boolean toggle that enables or disables the LoRA stack functionality. When enabled, it allows the node to process and apply the specified LoRA configurations. Type should be `BOOLEAN`.
+        - `mode` (Required): Specifies the mode of operation for the LoRA stack, such as 'simple' or 'advanced', determining how LoRA parameters are applied and managed. Type should be `COMBO[STRING]`.
+        - `num_loras` (Required): Defines the number of LoRA layers to be configured and managed by the node, allowing for dynamic adjustment based on user requirements. Type should be `INT`.
+        - `optional_lora_stack` (Optional): An optional parameter that allows for the specification of an existing LoRA stack configuration to be used or extended by the node. Type should be `LORA_STACK`.
+        - `lora_i_name` (Optional): Specifies the name of the i-th LoRA layer, enabling identification and configuration of individual layers within the stack. Type should be `COMBO[STRING]`.
+        - `lora_i_strength` (Optional): Defines the overall strength of the i-th LoRA layer, affecting its influence on the model's output. Type should be `FLOAT`.
+        - `lora_i_model_strength` (Optional): Sets the model-specific strength for the i-th LoRA layer, allowing for fine-tuned control over its impact on the model. Type should be `FLOAT`.
+        - `lora_i_clip_strength` (Optional): Determines the clip-specific strength for the i-th LoRA layer, adjusting its effect on the clip model. Type should be `FLOAT`.
+    - Outputs:
+        - `lora_stack`: The output of the node, which is a configured LoRA stack ready to be applied to a model. It encapsulates the LoRA layers and their parameters as specified through the node's inputs. Type should be `LORA_STACK`.

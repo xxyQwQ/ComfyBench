@@ -1,0 +1,6 @@
+- `LayerUtility_ ColorPicker`: The ColorPicker node provides functionality for selecting colors and converting them between different formats, such as hexadecimal and decimal color codes. It allows users to input a color in a specified format and convert it to another, facilitating easy integration and manipulation of color data within a design or visualization workflow.
+    - Inputs:
+        - `color` (Required): Specifies the color to be converted or selected. It serves as the primary input for the node, determining the base color for conversion or selection. Type should be `COLOR`.
+        - `mode` (Required): Determines the output format of the color conversion, allowing users to choose between hexadecimal ('HEX') and decimal ('DEC') representations. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `value`: The converted or selected color value, outputted in the format specified by the 'mode' input. Type should be `STRING`.

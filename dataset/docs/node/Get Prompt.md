@@ -1,5 +1,0 @@
-- `Get Prompt`: The Get Prompt node is designed to process and modify a given prompt structure for API interactions, specifically by removing unnecessary elements and adjusting it according to the specified mode of output (e.g., printing to console or saving to a file). This node plays a crucial role in preparing the prompt for execution or review, ensuring that only relevant data is retained and appropriately formatted.
-    - Parameters:
-        - `api_prompt`: Specifies the mode of output for the processed prompt, such as printing to the console or saving to a file. This choice dictates how the final prompt structure is handled, influencing the node's execution flow and the presentation of the prompt data. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:

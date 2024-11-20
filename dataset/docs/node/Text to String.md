@@ -1,6 +1,0 @@
-- `Text to String`: The `WAS_Text_To_String` node is designed to process and transform input text through token parsing, enabling the manipulation and formatting of text data. It supports multiple text inputs, allowing for the flexible handling and transformation of text strings.
-    - Parameters:
-        - `text`: The primary text input to be processed and transformed. It serves as the main source of textual data for the node. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The processed and transformed version of the primary text input. Type should be `STRING`.

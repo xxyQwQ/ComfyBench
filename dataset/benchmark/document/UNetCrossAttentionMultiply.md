@@ -1,0 +1,9 @@
+- `UNetCrossAttentionMultiply`: The UNetCrossAttentionMultiply node is designed to modify the attention mechanism within a given model by applying specific multipliers to the query (q), key (k), value (v), and output (out) components of the attention mechanism. This node aims to experiment with and potentially enhance the model's attention-driven interactions by fine-tuning these fundamental elements.
+    - Inputs:
+        - `model` (Required): The model parameter represents the neural network model to which the attention modification will be applied. It is crucial for defining the base architecture that will undergo attention adjustments. Type should be `MODEL`.
+        - `q` (Required): The q parameter serves as a multiplier for the query component of the attention mechanism, influencing how the model attends to different parts of the input. Type should be `FLOAT`.
+        - `k` (Required): The k parameter acts as a multiplier for the key component, affecting the model's ability to match queries with relevant information. Type should be `FLOAT`.
+        - `v` (Required): The v parameter modifies the value component, impacting the information that is ultimately retrieved by the attention mechanism. Type should be `FLOAT`.
+        - `out` (Required): The out parameter adjusts the output of the attention mechanism, potentially altering the model's focus and the significance of different inputs. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: Returns the modified model with adjusted attention mechanism parameters, reflecting the applied multipliers to the query, key, value, and output components. Type should be `MODEL`.

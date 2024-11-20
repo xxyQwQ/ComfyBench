@@ -1,0 +1,7 @@
+- `SeedSelector`: The SeedSelector node is designed to select a seed value for procedural generation tasks, allowing users to switch between random and fixed seed modes. This flexibility enables both reproducibility of results with a fixed seed and the generation of varied outcomes with random seeds.
+    - Inputs:
+        - `mode` (Required): Determines whether the seed selection is random or fixed, impacting the reproducibility and variability of the generated outcomes. Type should be `BOOLEAN`.
+        - `seed` (Required): The seed value used when mode is set to random, influencing the procedural generation process. Type should be `INT`.
+        - `fixed_seed` (Required): The seed value used when mode is set to fixed, ensuring reproducibility of the generated outcomes. Type should be `INT`.
+    - Outputs:
+        - `seed`: The selected seed value, either fixed or randomly determined based on the mode, used for procedural generation. Type should be `INT`.

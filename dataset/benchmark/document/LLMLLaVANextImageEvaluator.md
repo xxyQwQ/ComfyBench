@@ -1,0 +1,11 @@
+- `LLMLLaVANextImageEvaluator`: This node is designed to evaluate images using the LLaVA Next V1 model, providing detailed assessments and generating keywords, lists, and documents based on the image content. It aims to facilitate a deeper understanding and categorization of images through advanced image analysis techniques.
+    - Inputs:
+        - `lnv1_model` (Required): Specifies the LLaVA Next V1 model to be used for image evaluation, determining the analytical capabilities and accuracy of the assessment. Type should be `LLAVA_NEXT_V1_MODEL`.
+        - `images` (Required): The images to be evaluated, serving as the primary input for analysis and categorization by the node. Type should be `IMAGE`.
+        - `max_tokens` (Required): Defines the maximum number of tokens to be used in the evaluation, affecting the depth and detail of the analysis. Type should be `INT`.
+        - `prompt_format` (Required): Determines the format of the prompt used in the evaluation, guiding the model's analysis and output generation. Type should be `STRING`.
+        - `prompt` (Required): The specific prompt to guide the evaluation, directly influencing the focus and nature of the analysis. Type should be `STRING`.
+    - Outputs:
+        - `strings`: A string representation of the evaluation results, providing a concise summary or keywords. Type should be `STRING`.
+        - `list`: A list of structured data or keywords extracted from the image, offering detailed insights. Type should be `LIST`.
+        - `documents`: Generated documents that encapsulate the evaluation findings, providing comprehensive details and context. Type should be `DOCUMENT`.

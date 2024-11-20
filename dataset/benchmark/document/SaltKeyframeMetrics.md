@@ -1,0 +1,14 @@
+- `SaltKeyframeMetrics`: The SaltKeyframeMetrics node is designed to compute and visualize key metrics of a keyframe schedule, such as minimum, maximum, sum, average, absolute sum, and absolute average values, along with the duration of the schedule. It aims to provide a comprehensive overview of the schedule's characteristics through numerical analysis and graphical representation, facilitating the evaluation and adjustment of keyframe-based animations or effects.
+    - Inputs:
+        - `schedule_list` (Required): The list of keyframe values to be analyzed. It is crucial for determining the metrics and visual representation of the schedule. Type should be `LIST`.
+        - `start_frame` (Optional): The starting frame index for the analysis, allowing for partial evaluation of the schedule. Type should be `INT`.
+        - `end_frame` (Optional): The ending frame index for the analysis. If set to -1 or beyond the schedule list length, it defaults to the length of the schedule list. Type should be `INT`.
+        - `frame_rate` (Optional): The frame rate used to calculate the duration of the schedule, enhancing the accuracy of temporal metrics. Type should be `FLOAT`.
+    - Outputs:
+        - `value_min`: The minimum value among the keyframe values within the specified range. Type should be `FLOAT`.
+        - `value_max`: The maximum value among the keyframe values within the specified range. Type should be `FLOAT`.
+        - `value_sum`: The sum of all keyframe values within the specified range. Type should be `FLOAT`.
+        - `value_avg`: The average of the keyframe values within the specified range. Type should be `FLOAT`.
+        - `abs_sum`: The sum of the absolute values of the keyframe values within the specified range, providing insight into the overall activity level regardless of direction. Type should be `FLOAT`.
+        - `abs_avg`: The average of the absolute values of the keyframe values within the specified range, offering a measure of the general intensity. Type should be `FLOAT`.
+        - `duration`: The total duration of the specified range of keyframes, calculated based on the frame rate. Type should be `FLOAT`.

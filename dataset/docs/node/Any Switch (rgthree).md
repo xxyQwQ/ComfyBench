@@ -1,6 +1,0 @@
-- `Any Switch (rgthree)`: The Any Switch node is designed to select and output the first non-empty item from a set of optional inputs. It abstracts the complexity of handling various types of inputs by evaluating them to find the first one that is not considered 'empty' or 'none', making it versatile for different data types and scenarios.
-    - Parameters:
-    - Inputs:
-        - `any_i`: Represents an optional input that can be of any type. The node sequentially evaluates these inputs, starting from the first, and selects the first non-empty one, directly affecting the output. This naming convention applies to all inputs from 'any_01' to 'any_05', indicating their order in the selection process. Type should be `*`.
-    - Outputs:
-        - `*`: Outputs the first non-empty input encountered among the optional inputs. This output is versatile, accommodating any data type provided to the node. Type should be `*`.

@@ -1,0 +1,7 @@
+- `SaltScheduleSplit`: This node is designed to divide a given schedule list into two parts based on a specified index, facilitating the manipulation of schedule sequences by separating them into distinct segments.
+    - Inputs:
+        - `schedule_list` (Required): The list of scheduled items to be split. This parameter is crucial for determining the point of division within the schedule. Type should be `LIST`.
+        - `split_index` (Required): The index at which the schedule list is to be split. This index determines the boundary between the two resulting lists, playing a key role in the segmentation process. Type should be `INT`.
+    - Outputs:
+        - `schedule_list_a`: The first part of the schedule list, containing all items before the split index. Type should be `LIST`.
+        - `schedule_list_b`: The second part of the schedule list, containing all items from the split index onwards. Type should be `LIST`.

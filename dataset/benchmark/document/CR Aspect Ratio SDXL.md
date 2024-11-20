@@ -1,0 +1,13 @@
+- `CR Aspect Ratio SDXL`: This node dynamically adjusts the aspect ratio of images, supporting a variety of predefined aspect ratios for different media formats such as cinema, portrait, and landscape. It caters specifically to the requirements of SDXL models, facilitating the resizing and reshaping of images according to the selected aspect ratio.
+    - Inputs:
+        - `width` (Required): The 'width' parameter specifies the initial width of the image before aspect ratio adjustments. It's essential for calculating the new dimensions based on the selected aspect ratio. Type should be `INT`.
+        - `height` (Required): The 'height' parameter specifies the initial height of the image before aspect ratio adjustments. It's crucial for determining the new dimensions in line with the chosen aspect ratio. Type should be `INT`.
+        - `aspect_ratio` (Required): This parameter allows selection from a range of predefined aspect ratios, influencing the final dimensions of the image to match specific media formats. Type should be `COMBO[STRING]`.
+        - `swap_dimensions` (Required): When enabled, this parameter swaps the width and height of the image, effectively rotating it 90 degrees. Type should be `COMBO[STRING]`.
+        - `upscale_factor1` (Required): This parameter specifies the first factor by which the image's dimensions are upscaled after adjusting the aspect ratio. Type should be `FLOAT`.
+        - `upscale_factor2` (Required): This parameter specifies the second factor by which the image's dimensions are upscaled, offering additional control over the final image size. Type should be `FLOAT`.
+        - `batch_size` (Required): Defines the number of images processed in a batch, affecting the computation and memory usage. Type should be `INT`.
+    - Outputs:
+        - `INT`: The adjusted width of the image after applying the aspect ratio changes. Type should be `INT`.
+        - `FLOAT`: The adjusted height of the image after applying the aspect ratio changes. Type should be `FLOAT`.
+        - `show_help`: A URL providing additional information and guidance on using the aspect ratio node. Type should be `STRING`.

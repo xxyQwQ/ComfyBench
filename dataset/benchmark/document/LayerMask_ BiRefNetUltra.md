@@ -1,0 +1,14 @@
+- `LayerMask_ BiRefNetUltra`: The BiRefNetUltra node is designed for advanced image processing, specifically focusing on background removal and refinement of layer masks. It leverages the BiRefNet architecture to achieve high-quality segmentation and mask generation, catering to applications requiring precise foreground-background separation.
+    - Inputs:
+        - `image` (Required): The primary image input for processing, which the node uses to generate and refine masks based on the background and foreground segmentation. Type should be `IMAGE`.
+        - `detail_method` (Required): Specifies the method used for enhancing the detail of the mask, including options like 'VITMatte', 'VITMatte(local)', 'PyMatting', and 'GuidedFilter', to adjust the mask's precision and quality. Type should be `COMBO[STRING]`.
+        - `detail_erode` (Required): Determines the erosion level applied to the mask, affecting the mask's edge by reducing its size to remove small, unwanted foreground elements. Type should be `INT`.
+        - `detail_dilate` (Required): Determines the dilation level applied to the mask, affecting the mask's edge by expanding its size to include additional foreground elements that might have been missed. Type should be `INT`.
+        - `black_point` (Required): Sets the black point for histogram remapping, influencing the darkest areas of the mask to refine shadow details and contrast. Type should be `FLOAT`.
+        - `white_point` (Required): Sets the white point for histogram remapping, influencing the brightest areas of the mask to enhance highlights and details. Type should be `FLOAT`.
+        - `process_detail` (Required): A boolean flag that indicates whether to apply detailed processing to the mask, affecting the overall quality and precision of the mask refinement. Type should be `BOOLEAN`.
+        - `device` (Required): Specifies the computing device ('cuda' or 'cpu') used for processing, affecting performance and efficiency. Type should be `COMBO[STRING]`.
+        - `max_megapixels` (Required): Limits the maximum size of the image in megapixels to optimize processing time and resource usage, affecting the resolution of the processed image and mask. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The processed image with refined foreground-background separation, suitable for further use or visualization. Type should be `IMAGE`.
+        - `mask`: The generated mask that highlights the foreground by separating it from the background, ready for use in compositing or further processing. Type should be `MASK`.

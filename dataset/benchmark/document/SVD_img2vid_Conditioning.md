@@ -1,0 +1,15 @@
+- `SVD_img2vid_Conditioning`: This node is designed for generating conditioning data for video generation tasks, specifically tailored for use with SVD_img2vid models. It takes various inputs including initial images, video parameters, and a VAE model to produce conditioning data that can be used to guide the generation of video frames.
+    - Inputs:
+        - `clip_vision` (Required): Represents the CLIP vision model used for encoding visual features from the initial image, playing a crucial role in understanding the content and context of the image for video generation. Type should be `CLIP_VISION`.
+        - `init_image` (Required): The initial image from which the video will be generated, serving as the starting point for the video generation process. Type should be `IMAGE`.
+        - `vae` (Required): A Variational Autoencoder (VAE) model used for encoding the initial image into a latent space, facilitating the generation of coherent and continuous video frames. Type should be `VAE`.
+        - `width` (Required): The desired width of the video frames to be generated, allowing for customization of the video's resolution. Type should be `INT`.
+        - `height` (Required): The desired height of the video frames, enabling control over the video's aspect ratio and resolution. Type should be `INT`.
+        - `video_frames` (Required): Specifies the number of frames to be generated for the video, determining the video's length. Type should be `INT`.
+        - `motion_bucket_id` (Required): An identifier for categorizing the type of motion to be applied in the video generation, aiding in the creation of dynamic and engaging videos. Type should be `INT`.
+        - `fps` (Required): The frames per second (fps) rate for the video, influencing the smoothness and realism of the generated video. Type should be `INT`.
+        - `augmentation_level` (Required): A parameter controlling the level of augmentation applied to the initial image, affecting the diversity and variability of the generated video frames. Type should be `FLOAT`.
+    - Outputs:
+        - `positive`: The positive conditioning data, consisting of encoded features and parameters for guiding the video generation process in a desired direction. Type should be `CONDITIONING`.
+        - `negative`: The negative conditioning data, providing a contrast to the positive conditioning, which can be used to avoid certain patterns or features in the generated video. Type should be `CONDITIONING`.
+        - `latent`: Latent representations generated for each frame of the video, serving as a foundational component for the video generation process. Type should be `LATENT`.

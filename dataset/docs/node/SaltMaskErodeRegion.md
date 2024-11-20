@@ -1,7 +1,0 @@
-- `SaltMaskErodeRegion`: This node applies an erosion filter to mask regions, effectively shrinking the masked areas based on the specified number of iterations. It's designed to refine mask boundaries by eroding away the edges of masked regions.
-    - Parameters:
-        - `iterations`: Specifies the number of times the erosion operation is applied to each mask, allowing for adjustable intensity of the effect. Type should be `INT`.
-    - Inputs:
-        - `masks`: The input masks to be eroded. This parameter is crucial for defining the areas to be processed and refined by the erosion operation. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The output masks after applying the erosion filter, showcasing the refined and reduced masked regions. Type should be `MASK`.

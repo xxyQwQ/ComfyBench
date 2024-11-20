@@ -1,8 +1,0 @@
-- `If ANY execute A else B`: This node conditionally executes one of two possible outputs based on a boolean input. It serves as a logical branch, allowing for dynamic flow control within a node-based execution environment.
-    - Parameters:
-    - Inputs:
-        - `ANY`: A boolean input that determines which of the two possible outputs to execute. Its value dictates the flow of execution, enabling conditional logic within the node's operation. Type should be `*`.
-        - `IF_TRUE`: The output to be executed if the ANY input is True. This parameter represents the action taken when the condition is met. Type should be `*`.
-        - `IF_FALSE`: The output to be executed if the ANY input is False. This parameter represents the alternative action taken when the condition is not met. Type should be `*`.
-    - Outputs:
-        - `?`: The result of executing either IF_TRUE or IF_FALSE, depending on the evaluation of ANY. The exact nature of this output is dynamic, reflecting the conditional execution logic of the node. Type should be `*`.

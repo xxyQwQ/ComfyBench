@@ -1,0 +1,10 @@
+- `SawtoothWave`: The SawtoothWave node is designed for generating and manipulating sawtooth waveforms, which are characterized by a linear rise and sharp fall. This node facilitates the creation of these periodic functions, allowing for their use in various applications that require such wave patterns.
+    - Inputs:
+        - `phase` (Required): Defines the period of the sawtooth wave, affecting its repetition rate. Type should be `FLOAT`.
+        - `step_increment` (Required): Determines the incremental steps in the sawtooth wave's progression. Type should be `FLOAT`.
+        - `x_translation` (Required): Adjusts the horizontal positioning of the sawtooth wave. Type should be `FLOAT`.
+        - `start_value` (Required): Sets the starting value of the sawtooth wave, establishing its initial position. Type should be `FLOAT`.
+        - `current_frame` (Required): Indicates the current point in time for the wave's calculation, crucial for its dynamic progression. Type should be `INT`.
+    - Outputs:
+        - `float`: The calculated wave value as a floating-point number. Type should be `FLOAT`.
+        - `int`: The integer representation of the calculated wave value. Type should be `INT`.

@@ -1,0 +1,9 @@
+- `VHS_SplitMasks`: The VHS_SplitMasks node is designed for dividing a batch of masks into two groups based on a specified index. This functionality is essential for managing and manipulating mask data in video processing tasks, allowing for flexible dataset segmentation and targeted processing of mask subsets.
+    - Inputs:
+        - `mask` (Required): The 'mask' parameter represents the batch of masks to be split. It is crucial for determining how the masks are divided into two groups, affecting the node's execution and the composition of the output groups. Type should be `MASK`.
+        - `split_index` (Required): The 'split_index' parameter specifies the index at which the batch of masks is divided. It plays a pivotal role in determining the boundary between the two output groups, influencing the distribution of masks in the segmentation process. Type should be `INT`.
+    - Outputs:
+        - `MASK_A`: The first group of masks obtained after splitting the original batch at the specified index. Type should be `MASK`.
+        - `A_count`: The count of masks in the first group after the split. Type should be `INT`.
+        - `MASK_B`: The second group of masks obtained after splitting the original batch at the specified index. Type should be `MASK`.
+        - `B_count`: The count of masks in the second group after the split. Type should be `INT`.

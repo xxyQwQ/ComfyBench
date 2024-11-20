@@ -1,0 +1,20 @@
+- `LLMOpenAIModelOpts`: The LLMOpenAIModelOpts node is designed to configure and customize the options for language models and their embedding counterparts. It allows for the adjustment of various parameters such as temperature, retries, and embedding dimensions, enabling fine-tuning of the model's behavior and performance.
+    - Inputs:
+        - `llm_model` (Required): The 'llm_model' parameter is a dictionary containing the language model and embedding model to be configured. It is crucial for specifying the models whose options are to be set, affecting the overall execution and results of the node. Type should be `LLM_MODEL`.
+        - `model_temperature` (Optional): Specifies the temperature setting for the language model, influencing its creativity and randomness. Type should be `FLOAT`.
+        - `model_max_tokens` (Optional): Defines the maximum number of tokens the language model can generate, affecting the length of the output. Type should be `INT`.
+        - `model_api_max_retries` (Optional): Determines the number of times the API will retry a request in case of failure, ensuring reliability. Type should be `INT`.
+        - `model_api_timeout` (Optional): Sets the timeout duration for API requests, impacting the response time. Type should be `INT`.
+        - `model_reuse_anyscale_client` (Optional): Indicates whether to reuse the Anyscale client across requests, optimizing resource usage. Type should be `BOOLEAN`.
+        - `multimodal_max_new_tokens` (Optional): Specifies the maximum number of new tokens for multimodal inputs, affecting the output length. Type should be `INT`.
+        - `multimodal_image_detail` (Optional): Determines the level of detail for images in multimodal inputs, influencing the model's focus. Type should be `COMBO[STRING]`.
+        - `embed_batch_size` (Optional): Sets the batch size for embedding model operations, affecting performance and resource utilization. Type should be `INT`.
+        - `embed_dimensions` (Optional): Specifies the dimensionality of the embeddings, influencing the detail level of the generated embeddings. Type should be `INT`.
+        - `embed_api_max_retries` (Optional): Determines the number of times the embedding API will retry in case of failure, ensuring reliability. Type should be `INT`.
+        - `embed_api_timeout` (Optional): Sets the timeout duration for embedding API requests, impacting the response time. Type should be `INT`.
+        - `embed_reuse_anyscale_client` (Optional): Indicates whether to reuse the Anyscale client for embedding operations, optimizing resource usage. Type should be `BOOLEAN`.
+        - `model_additional_kwargs` (Optional): Allows for the specification of additional keyword arguments for the model, enabling further customization. Type should be `STRING`.
+        - `embed_additional_kwargs` (Optional): Allows for the specification of additional keyword arguments for the embedding model, enabling further customization. Type should be `STRING`.
+        - `model_system_prompt` (Optional): unknown Type should be `STRING`.
+    - Outputs:
+        - `model`: The 'model' output is a dictionary reflecting the updated configurations of the language model and embedding model. It encapsulates the adjustments made to the models' options, influencing their operational characteristics and output. Type should be `LLM_MODEL`.

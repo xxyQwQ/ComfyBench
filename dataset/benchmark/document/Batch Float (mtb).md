@@ -1,0 +1,9 @@
+- `Batch Float (mtb)`: Generates a batch of float values with interpolation, offering customization through various parameters such as interpolation mode, count, and range. This node is essential for creating sequences of floats based on specified mathematical easing functions, enabling precise control over the generation of float batches for simulations, animations, or data analysis.
+    - Inputs:
+        - `mode` (Required): Specifies the interpolation mode for generating float values, with options like 'Single' or 'Steps' to define how values are interpolated. Type should be `COMBO[STRING]`.
+        - `count` (Required): Determines the number of float values to generate, allowing for control over the size of the output batch. Type should be `INT`.
+        - `min` (Required): Sets the minimum value in the range of generated floats, providing a lower bound for interpolation. Type should be `FLOAT`.
+        - `max` (Required): Defines the maximum value in the range of generated floats, setting an upper limit for interpolation. Type should be `FLOAT`.
+        - `easing` (Required): Selects the easing function to apply during interpolation, such as 'Linear', 'Sine In/Out', or 'Elastic In', affecting the distribution of generated values. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `floats`: The generated batch of interpolated float values, ready for further processing or analysis. Type should be `FLOATS`.

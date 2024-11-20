@@ -1,0 +1,8 @@
+- `LayerMask_ PixelSpread`: The PixelSpread node is designed to apply a pixel spreading effect to images, potentially using a mask to guide the effect. It can adjust the spread based on the mask's properties, allowing for dynamic image manipulation that can enhance visual effects or achieve specific artistic styles.
+    - Inputs:
+        - `image` (Required): The primary image to which the pixel spread effect will be applied. It serves as the canvas for the effect, determining the overall visual outcome. Type should be `IMAGE`.
+        - `invert_mask` (Required): A boolean flag indicating whether the mask should be inverted before applying the pixel spread effect, affecting which parts of the image are manipulated. Type should be `BOOLEAN`.
+        - `mask_grow` (Required): An integer specifying the amount by which to grow the mask before applying the pixel spread, influencing the extent of the effect. Type should be `INT`.
+        - `mask` (Optional): An optional mask image that guides the pixel spread effect, allowing for selective application of the effect to specific areas of the image. The presence or absence of the mask can significantly alter the node's behavior, enabling more precise control over which parts of the image are affected by the pixel spread, thus directly impacting the visual outcome. Type should be `MASK`.
+    - Outputs:
+        - `image`: The processed image with the pixel spread effect applied, showcasing the visual transformation. Type should be `IMAGE`.

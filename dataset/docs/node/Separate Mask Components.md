@@ -1,7 +1,0 @@
-- `Separate Mask Components`: This node is designed to process a given mask by separating it into multiple contiguous components, effectively breaking down a complex mask into simpler, individual parts. It returns these separated components along with a mapping that can be utilized in subsequent operations, particularly useful in batch processing scenarios.
-    - Parameters:
-    - Inputs:
-        - `mask`: The mask input is a crucial component for the operation of this node, as it represents the complex mask that needs to be broken down into simpler, contiguous components. The processing of this mask determines the output of separated mask components and their mapping. Type should be `IMAGE`.
-    - Outputs:
-        - `mask`: The output masks represent the separated contiguous components derived from the original complex mask input. Type should be `IMAGE`.
-        - `mask_mappings`: The mask mappings provide a reference to the original mask from which each separated component was derived, facilitating further processing or analysis. Type should be `MASK_MAPPING`.

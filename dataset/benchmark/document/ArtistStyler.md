@@ -1,0 +1,9 @@
+- `ArtistStyler`: The ArtistStyler node dynamically applies artistic styling to text prompts based on a selection of styles defined in a dataset. It allows users to enhance their text inputs with predefined artistic styles, enabling a more creative and tailored text generation process.
+    - Inputs:
+        - `text_positive` (Required): A positive text input that the user wishes to apply artistic styling to. This input is crucial for defining the base content that will be enhanced with the selected artistic style. Type should be `STRING`.
+        - `text_negative` (Required): A negative text input that the user wishes to apply artistic styling to. This input complements the positive text, offering a nuanced approach to text styling by also considering elements to be stylistically negated or downplayed. Type should be `STRING`.
+        - `artist` (Required): Specifies the artistic style to apply to the text inputs. This selection is central to the customization of the text, enabling the application of a specific artistic flair. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean indicating whether to log the prompt styling process. Enabling this option provides transparency and insight into the styling decisions made by the node. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive`: The artistically styled positive text output, reflecting the application of the selected artistic style to the original positive input. Type should be `STRING`.
+        - `text_negative`: The artistically styled negative text output, reflecting the application of the selected artistic style to the original negative input. Type should be `STRING`.

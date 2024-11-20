@@ -1,0 +1,7 @@
+- `RemapFromInsideParabolas`: This node is designed to perform a remapping operation from the perspective of inside two parabolas, transforming an image based on specified width and height parameters. It utilizes a source mask defined by two parabolas to apply a unique geometric transformation, aiming to adjust the image's representation for specific visualization or processing needs.
+    - Inputs:
+        - `src_mask_with_i_parabolas` (Required): Defines the source mask that contains two parabolas, which is crucial for determining the geometric transformation applied to the image. Type should be `MASK`.
+        - `width` (Required): Specifies the desired width of the output image after remapping, affecting the scale and aspect ratio of the transformation. Type should be `INT`.
+        - `height` (Required): Determines the height of the output image, influencing the vertical scale and aspect ratio post-transformation. Type should be `INT`.
+    - Outputs:
+        - `remap`: The result of the remapping operation, providing a transformed image based on the input parameters and the geometric characteristics of the source mask. Type should be `REMAP`.

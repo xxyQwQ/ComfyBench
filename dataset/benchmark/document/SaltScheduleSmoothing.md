@@ -1,0 +1,6 @@
+- `SaltScheduleSmoothing`: Provides a method to smooth a given schedule list by applying a smoothing factor to each element, effectively filtering out rapid changes and creating a more gradual transition between values.
+    - Inputs:
+        - `schedule_list` (Required): The list of schedule values to be smoothed. This list represents a sequence of numerical values that will undergo smoothing to reduce abrupt changes. Type should be `LIST`.
+        - `smoothing_factor` (Required): A factor determining the degree of smoothing applied to the schedule list. A higher value results in a smoother transition between schedule values. Type should be `FLOAT`.
+    - Outputs:
+        - `schedule_list`: The smoothed list of schedule values, where each value has been adjusted according to the smoothing factor to create a gradual transition. Type should be `LIST`.

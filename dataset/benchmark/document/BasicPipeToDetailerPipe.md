@@ -1,0 +1,12 @@
+- `BasicPipeToDetailerPipe`: This node is designed to transform a basic pipeline configuration into a more detailed pipeline configuration, enhancing its capabilities and allowing for more complex operations.
+    - Inputs:
+        - `basic_pipe` (Required): The basic pipeline configuration to be transformed into a detailed pipeline configuration. It serves as the foundation for the enhancement process. Type should be `BASIC_PIPE`.
+        - `bbox_detector` (Required): A bounding box detector component to be included in the detailed pipeline configuration. Type should be `BBOX_DETECTOR`.
+        - `wildcard` (Required): A wildcard string that allows for dynamic customization of the detailed pipeline configuration. Type should be `STRING`.
+        - `Select to add LoRA` (Required): Allows the selection of a LoRA component to be added to the detailed pipeline configuration, enhancing its functionality. Type should be `COMBO[STRING]`.
+        - `Select to add Wildcard` (Required): Enables the selection of an additional wildcard component to be added to the detailed pipeline configuration for further customization. Type should be `COMBO[STRING]`.
+        - `sam_model_opt` (Optional): An optional SAM model component that can be included in the detailed pipeline configuration for enhanced modeling capabilities. Type should be `SAM_MODEL`.
+        - `segm_detector_opt` (Optional): An optional segmentation detector component that can be included in the detailed pipeline configuration for improved segmentation capabilities. Type should be `SEGM_DETECTOR`.
+        - `detailer_hook` (Optional): An optional hook component that can be included in the detailed pipeline configuration for customized processing and enhancements. Type should be `DETAILER_HOOK`.
+    - Outputs:
+        - `detailer_pipe`: The resulting detailed pipeline configuration, which includes the basic pipeline components along with the specified enhancements. Type should be `DETAILER_PIPE`.

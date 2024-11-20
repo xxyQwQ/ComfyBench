@@ -1,6 +1,0 @@
-- `Color (hexadecimal)`: This node is designed to convert a hexadecimal color code into a specific color format. It validates the input hexadecimal code and returns the corresponding color, ensuring the input is in a valid hexadecimal format before proceeding with the conversion.
-    - Parameters:
-        - `hex`: The hexadecimal code representing a color. This parameter is crucial for determining the exact color to be converted. The node validates this code to ensure it is in a proper hexadecimal format before proceeding. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `color`: The color obtained from the input hexadecimal code. This output is the direct result of converting the validated hexadecimal code into its corresponding color format. Type should be `COLOR`.

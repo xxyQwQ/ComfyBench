@@ -1,0 +1,5 @@
+- `SamplerEulerCFGpp`: The SamplerEulerCFGpp node provides a mechanism to select between two versions of a sampler based on the Euler method for generating samples, offering a choice between a regular and an alternative configuration.
+    - Inputs:
+        - `version` (Required): Determines the version of the Euler method-based sampler to be used, allowing selection between a 'regular' and an 'alternative' configuration. This choice affects the underlying sampling algorithm and its behavior. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `sampler`: Outputs a sampler configured according to the selected version, capable of generating samples using the Euler method. Type should be `SAMPLER`.

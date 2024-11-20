@@ -1,0 +1,4 @@
+- `Get Models`: The Get Models node is designed to facilitate the retrieval and organization of various model-related files within a specified output directory. It supports a flexible selection mechanism, allowing users to specify which types of model files (e.g., checkpoints, configurations, embeddings) they wish to dump, either individually or collectively, into a structured JSON file. This functionality aids in managing and cataloging model assets for easier access and reference.
+    - Inputs:
+        - `dump` (Required): Specifies the type of model-related files to retrieve. It allows for a broad selection, including options like 'all models' for a comprehensive dump or specific categories such as 'checkpoints' or 'embeddings', tailoring the output to user needs. Type should be `COMBO[STRING]`.
+    - Outputs:

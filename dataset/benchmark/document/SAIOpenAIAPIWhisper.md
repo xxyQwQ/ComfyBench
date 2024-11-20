@@ -1,0 +1,17 @@
+- `SAIOpenAIAPIWhisper`: The SAIOpenAIAPIWhisper node is designed to transcribe audio files using OpenAI's Whisper model through an API. It abstracts the complexity of audio processing and transcription, providing an easy-to-use interface for converting speech in audio files into text.
+    - Inputs:
+        - `file_path` (Required): The path to the audio file to be transcribed. This is crucial for locating and processing the audio file for transcription. Type should be `STRING`.
+        - `openai_key` (Required): The API key for accessing OpenAI's Whisper model. This key is essential for authenticating and authorizing the transcription request. Type should be `STRING`.
+        - `model` (Optional): Specifies the Whisper model version to use for transcription. This allows for flexibility in choosing the model that best fits the transcription needs. Type should be `COMBO[STRING]`.
+        - `mode` (Optional): Defines the operation mode, such as transcribing. It determines how the audio file will be processed. Type should be `COMBO[STRING]`.
+        - `language` (Optional): The language of the audio to be transcribed. This helps in optimizing the transcription accuracy by informing the model of the language context. Type should be `STRING`.
+        - `response_format` (Optional): The format in which the transcription results are returned, e.g., text. It specifies the desired output format for the transcription. Type should be `COMBO[STRING]`.
+        - `temperature` (Optional): Controls the creativity of the transcription. A higher temperature can result in more varied transcriptions. Type should be `FLOAT`.
+        - `timestamp_granularities` (Optional): Specifies the granularity of timestamps in the transcription, such as by segment. This affects how detailed the timestamp information in the transcription will be. Type should be `COMBO[STRING]`.
+        - `max_frames` (Optional): The maximum number of frames to process, which can limit the scope of transcription for longer audio files. Type should be `INT`.
+        - `seek_seconds` (Optional): The number of seconds to skip from the beginning of the audio file. This allows for starting the transcription at a specific point in the audio. Type should be `FLOAT`.
+        - `prompt` (Optional): An optional prompt to guide the transcription process. This can influence the context or focus of the transcription. Type should be `STRING`.
+    - Outputs:
+        - `transcription_result`: The transcribed text of the audio file, providing a textual representation of the spoken content. Type should be `STRING`.
+        - `audio_path`: The path to the processed audio file, useful for further analysis or processing. Type should be `STRING`.
+        - `frames_count`: The total number of frames processed during the transcription, indicating the scope of the transcription. Type should be `INT`.

@@ -1,7 +1,0 @@
-- `IG Folder`: The IG Folder node is designed to construct directory paths based on a specified parent directory and folder name. It abstracts the complexity of path manipulation, providing a straightforward way to generate paths for input or output operations within a file system.
-    - Parameters:
-        - `folder_parent`: Specifies the parent directory type, which can be either an input or output folder, influencing the base path for the resulting directory path. Type should be `COMBO[STRING]`.
-        - `folder_name`: Defines the name of the folder to be appended to the parent directory path, allowing for dynamic directory creation. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: Returns the fully constructed directory path as a string, ready for use in file system operations. Type should be `STRING`.

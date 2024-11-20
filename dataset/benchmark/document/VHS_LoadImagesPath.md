@@ -1,0 +1,11 @@
+- `VHS_LoadImagesPath`: This node is designed for loading a batch of images from a specified directory path. It streamlines the process of importing multiple images into the workflow, facilitating batch processing and manipulation of image data within the video helper suite.
+    - Inputs:
+        - `directory` (Required): The directory path from which images are to be loaded. This parameter is crucial for specifying the source of the images, thereby enabling the node to retrieve and process the image files located at the given path. Type should be `STRING`.
+        - `image_load_cap` (Optional): Limits the number of images to be loaded from the directory, allowing for control over the batch size for processing. Type should be `INT`.
+        - `skip_first_images` (Optional): Skips a specified number of images from the beginning of the directory, useful for starting the loading process from a certain point. Type should be `INT`.
+        - `select_every_nth` (Optional): Loads every nth image from the directory, providing a means to sample the images at a specified interval. Type should be `INT`.
+        - `meta_batch` (Optional): A reference to a batch manager object that handles meta information about the batch processing, such as tracking the progress and managing resources. Type should be `VHS_BatchManager`.
+    - Outputs:
+        - `IMAGE`: A batch of images loaded from the specified directory path. This output is essential for subsequent image processing or analysis tasks, providing a collection of images ready for manipulation or examination. Type should be `IMAGE`.
+        - `MASK`: A batch of masks corresponding to the loaded images, used for image segmentation or editing tasks. Type should be `MASK`.
+        - `frame_count`: The total number of frames (images) loaded from the directory, indicating the size of the batch processed. Type should be `INT`.

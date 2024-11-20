@@ -1,0 +1,9 @@
+- `Bounded Image Blend`: This node is designed to blend two images within specified bounds, allowing for precise control over the blending process. It supports adjusting the blend factor and feathering to achieve smooth transitions between the images.
+    - Inputs:
+        - `target` (Required): The target image onto which the source image will be blended. It serves as the base layer in the blending operation. Type should be `IMAGE`.
+        - `target_bounds` (Required): Specifies the bounds within which the source image will be blended onto the target. This allows for localized blending within the target image. Type should be `IMAGE_BOUNDS`.
+        - `source` (Required): The source image to be blended onto the target. It overlays the target within the specified bounds. Type should be `IMAGE`.
+        - `blend_factor` (Required): Determines the intensity of the source image's influence in the blend. A higher value results in the source image being more prominent. Type should be `FLOAT`.
+        - `feathering` (Required): Applies a smoothing effect to the edges of the blended area, creating a more seamless transition between the source and target images. Type should be `INT`.
+    - Outputs:
+        - `image`: The result of blending the source image onto the target within the specified bounds, incorporating the blend factor and feathering for smooth transitions. Type should be `IMAGE`.

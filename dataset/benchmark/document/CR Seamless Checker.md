@@ -1,0 +1,7 @@
+- `CR Seamless Checker`: The CR Seamless Checker node is designed to evaluate and ensure the seamless integration of various components within a system, focusing on compatibility and smooth operation across different modules or elements. It aims to identify and address potential discrepancies or conflicts that might disrupt the seamless functionality of the system.
+    - Inputs:
+        - `image` (Required): The 'image' input represents the visual content to be checked for seamless integration, playing a crucial role in the evaluation process. Type should be `IMAGE`.
+        - `rescale_factor` (Required): The 'rescale_factor' input determines the scaling factor to be applied to the image, affecting the node's execution and results. Type should be `FLOAT`.
+        - `grid_options` (Required): The 'grid_options' input specifies the configuration for grid generation, influencing the seamless checker's operation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `show_help`: The 'show_help' output provides guidance or suggestions based on the seamless integration evaluation of the image. Type should be `STRING`.

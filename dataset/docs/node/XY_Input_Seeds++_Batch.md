@@ -1,6 +1,0 @@
-- `XY Input Seeds++ Batch`: This node is designed to generate a sequence of values representing a batch of seeds, which can be used to control the initialization or variation of processes in a batched manner. It allows for the specification of the batch size and outputs a structured representation of seed values for batch processing.
-    - Parameters:
-        - `batch_count`: Specifies the number of seeds to generate for the batch. This count directly influences the size of the output seed sequence, enabling control over the batch size for processing. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `X or Y`: Outputs a tuple containing the type of batch ('Seeds++ Batch') and a list of integers representing the seed values for each batch entry. Type should be `XY`.

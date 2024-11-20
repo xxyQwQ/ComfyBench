@@ -1,0 +1,6 @@
+- `AddAgentToList`: The `AddAgentToList` node is designed to add a specified agent to an existing list of agents, facilitating dynamic management of agent collections within a chat or agent-based system.
+    - Inputs:
+        - `agent` (Required): The `agent` parameter represents the individual agent to be added to the list. It is crucial for expanding the agent list dynamically. Type should be `AGENT`.
+        - `agents` (Required): The `agents` parameter is the current list of agents to which the new agent will be added. It serves as the foundation for dynamically managing agent collections. Type should be `AGENTS`.
+    - Outputs:
+        - `agents`: Returns the updated list of agents after adding the specified agent, reflecting the new state of the agent collection. Type should be `AGENTS`.

@@ -1,6 +1,0 @@
-- `ClipVisionClamp`: The ClipVisionClamp node is designed to process and pass through CLIP_VISION data without modification, serving as a straightforward conduit for CLIP_VISION data within a pipeline.
-    - Parameters:
-    - Inputs:
-        - `clip_vision`: This parameter represents the CLIP_VISION data to be passed through the node. It is essential for the node's operation as it directly handles the input without any alteration, ensuring the integrity of the CLIP_VISION data is maintained throughout the process. Type should be `CLIP_VISION`.
-    - Outputs:
-        - `clip_vision`: Outputs the unmodified CLIP_VISION data received as input, ensuring the data's integrity and consistency for further processing or utilization in subsequent nodes. Type should be `CLIP_VISION`.

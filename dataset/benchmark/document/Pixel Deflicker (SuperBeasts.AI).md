@@ -1,0 +1,8 @@
+- `Pixel Deflicker (SuperBeasts.AI)`: The Pixel Deflicker node is designed to reduce flickering in sequences of images, enhancing visual consistency across frames. It employs a blend of temporal smoothing and adaptive blending techniques to mitigate rapid brightness variations, resulting in smoother transitions and improved image quality.
+    - Inputs:
+        - `images` (Required): A batch of images to be processed for flicker reduction. This input is crucial for identifying and mitigating flickering effects across the sequence. Type should be `IMAGE`.
+        - `window_size` (Required): Specifies the size of the window used for temporal smoothing, affecting the extent of flicker reduction across frames. Type should be `INT`.
+        - `blending_strength` (Required): Controls the intensity of blending between original and smoothed frames, allowing for fine-tuning of the flicker mitigation effect. Type should be `FLOAT`.
+        - `batch_size` (Required): Determines the number of images processed at a time, impacting the node's execution efficiency. Type should be `INT`.
+    - Outputs:
+        - `image`: The output tensor containing the batch of images after flicker reduction, showcasing enhanced visual consistency. Type should be `IMAGE`.

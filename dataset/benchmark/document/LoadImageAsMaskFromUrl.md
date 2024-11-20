@@ -1,0 +1,6 @@
+- `LoadImageAsMaskFromUrl`: This node is designed to load images from URLs and convert them into masks based on a specified channel. It supports selecting from alpha, red, green, or blue channels to create the mask, making it versatile for various image processing tasks where masking based on color channels is required.
+    - Inputs:
+        - `image` (Required): A string containing the URL(s) of the image(s) to be loaded. If multiple URLs are provided, they should be separated by newlines. This parameter is essential for fetching the images from which masks will be created. Type should be `STRING`.
+        - `channel` (Required): Specifies the color channel ('alpha', 'red', 'green', 'blue') to be used for creating the mask. This choice determines which part of the image data will be converted into a mask, affecting the outcome significantly. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `masks`: The output is a tensor of masks created from the specified channel of the input images. These masks are suitable for further image processing tasks, such as compositing or inpainting. Type should be `MASK`.

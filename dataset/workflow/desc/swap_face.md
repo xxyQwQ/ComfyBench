@@ -1,1 +1,0 @@
-This workflow uses the integrated ReActorFaceSwap node to swap faces. Given an input image and a source image, the workflow will replace the face in the input image with the face in the source image, then the output image will be upscaled to a higher resolution. In this example, we replace the face in `target.jpg` with the face in `source.jpg`.

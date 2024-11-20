@@ -1,0 +1,7 @@
+- `Upscale Model Switch`: This node facilitates the dynamic selection between two upscale models based on a boolean condition, enabling the choice of an appropriate model for image upscaling within a workflow. It exemplifies conditional logic in model selection, optimizing the upscaling process for varying requirements.
+    - Inputs:
+        - `upscale_model_a` (Required): Specifies the first upscale model option for enhancing image resolution, playing a pivotal role in the conditional selection process. Type should be `UPSCALE_MODEL`.
+        - `upscale_model_b` (Required): Defines the second upscale model option, offering an alternative for conditional selection based on the boolean input, thus affecting the upscaling outcome. Type should be `UPSCALE_MODEL`.
+        - `boolean` (Required): A boolean condition that determines which upscale model (A or B) is selected for the upscaling process, directly influencing the node's execution path and the quality of the output image. Type should be `BOOLEAN`.
+    - Outputs:
+        - `upscale_model`: The selected upscale model based on the boolean condition, ready for use in the image upscaling process. Type should be `UPSCALE_MODEL`.

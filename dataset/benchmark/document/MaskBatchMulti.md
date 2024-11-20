@@ -1,0 +1,6 @@
+- `MaskBatchMulti`: The `MaskBatchMulti` node is designed to create a batch of images by combining multiple masks. It allows for dynamic input count adjustment, enabling the combination of a variable number of masks into a single batch. This functionality is particularly useful in scenarios where the aggregation of mask data is required for further image processing or analysis.
+    - Inputs:
+        - `inputcount` (Required): Specifies the number of input masks to be combined into a single batch. This parameter allows for dynamic adjustment of the node's input capacity, facilitating the aggregation of varying numbers of masks. Type should be `INT`.
+        - `mask_i` (Required): Represents a mask to be included in the batch, where 'i' can range from 1 to the number specified by 'inputcount'. Each mask contributes to the aggregated batch, enabling complex mask combinations for advanced image processing tasks. Type should be `MASK`.
+    - Outputs:
+        - `masks`: The combined batch of masks resulting from the aggregation of the input masks. This output is useful for downstream image processing tasks that require batched mask data. Type should be `MASK`.

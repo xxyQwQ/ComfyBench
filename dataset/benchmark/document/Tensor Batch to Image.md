@@ -1,0 +1,6 @@
+- `Tensor Batch to Image`: This node is designed to convert a batch of tensor images into a single tensor image based on a specified index. It facilitates the selection of a specific image from a batch for further processing or visualization.
+    - Inputs:
+        - `images_batch` (Required): A batch of images represented as tensors. This input is crucial for selecting a specific image from the batch for conversion. Type should be `IMAGE`.
+        - `batch_image_number` (Required): The index of the image within the batch to be converted into a tensor image. This parameter determines which image from the batch is selected for output. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a single tensor image selected from the input batch based on the specified index. Type should be `IMAGE`.

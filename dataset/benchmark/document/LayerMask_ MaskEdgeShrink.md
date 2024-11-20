@@ -1,0 +1,10 @@
+- `LayerMask_ MaskEdgeShrink`: The MaskEdgeShrink node is designed to process image masks by shrinking their edges, optionally inverting the masks, and applying a level of softness to the edge transitions. It allows for detailed control over the edge modification process, including the ability to preserve certain edge details while reducing others, making it suitable for creating stylized or more precise mask boundaries in image editing and compositing tasks.
+    - Inputs:
+        - `mask` (Required): The input mask to be processed. It serves as the primary data for edge modification, determining the areas of the image where edge shrinking will be applied. Type should be `MASK`.
+        - `invert_mask` (Required): A boolean flag indicating whether the input mask should be inverted before processing. Inversion can be useful for operations targeting the area outside the original mask. Type should be `BOOLEAN`.
+        - `shrink_level` (Required): Specifies the intensity of the edge shrinking operation. Higher values result in more significant edge reduction. Type should be `INT`.
+        - `soft` (Required): Determines the softness of the edge transitions after shrinking, allowing for smoother or more abrupt changes at the mask edges. Type should be `INT`.
+        - `edge_shrink` (Required): Controls the amount of edge that is specifically targeted for shrinking, enabling precise manipulation of edge width. Type should be `INT`.
+        - `edge_reserve` (Required): Defines the extent to which original edge details are preserved during the shrinking process, allowing for a balance between edge reduction and detail retention. Type should be `INT`.
+    - Outputs:
+        - `mask`: The processed mask with shrunken edges, returned as a tensor. This output reflects the modifications applied to the original mask, including any inversion, softening, and detail preservation specified. Type should be `MASK`.

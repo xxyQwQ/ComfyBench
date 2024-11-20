@@ -1,0 +1,15 @@
+- `SD3TextConditioningWithOptionsOnePrompt`: The SD3TextConditioningWithOptionsOnePrompt node is designed to enhance text prompts for image generation by applying style-based modifications and conditioning. It leverages specific styles to modify positive and negative prompts, integrates seed-based variations for style selection, and utilizes advanced text encoding techniques to refine the conditioning process for improved image generation outcomes.
+    - Inputs:
+        - `positive_prompt` (Required): Represents the base positive prompt that will be modified according to the selected style and further processed to enhance its effectiveness in guiding the image generation process. Type should be `STRING`.
+        - `negative_prompt` (Required): Serves as the base negative prompt that undergoes style-based modifications and processing to refine its role in the image generation process. Type should be `STRING`.
+        - `clip` (Required): Specifies the CLIP model to be used for encoding the prompts, playing a crucial role in the conditioning process. Type should be `CLIP`.
+        - `option_positive_clip_l` (Required): Option to apply specific CLIP model settings for the positive prompt's local features. Type should be `COMBO[STRING]`.
+        - `option_positive_clip_g` (Required): Option to apply specific CLIP model settings for the positive prompt's global features. Type should be `COMBO[STRING]`.
+        - `option_positive_t5xxl` (Required): Option to apply specific T5-XXL model settings for the positive prompt. Type should be `COMBO[STRING]`.
+        - `option_negative_clip_l` (Required): Option to apply specific CLIP model settings for the negative prompt's local features. Type should be `COMBO[STRING]`.
+        - `option_negative_clip_g` (Required): Option to apply specific CLIP model settings for the negative prompt's global features. Type should be `COMBO[STRING]`.
+        - `option_negative_t5xxl` (Required): Option to apply specific T5-XXL model settings for the negative prompt. Type should be `COMBO[STRING]`.
+        - `padding_character` (Required): Defines the character used for padding in the text encoding process, affecting the alignment and spacing within the encoded prompts. Type should be `STRING`.
+    - Outputs:
+        - `positive_conditioning`: The modified positive prompt, enhanced with style-based modifications and advanced encoding techniques for improved image generation. Type should be `CONDITIONING`.
+        - `negative_conditioning`: The enhanced negative prompt, similarly modified with style-based adjustments and encoding to refine the image generation process. Type should be `CONDITIONING`.

@@ -1,0 +1,19 @@
+- `RenderSMPLMesh`: This node is designed to render 3D meshes of human figures based on the SMPL model. It focuses on generating visual representations from SMPL parameters, enabling the visualization of human poses and shapes in a 3D environment.
+    - Inputs:
+        - `smpl` (Required): The SMPL model parameters required for rendering the 3D mesh. This input is crucial for determining the pose and shape of the human figure to be visualized. Type should be `SMPL`.
+        - `draw_platform` (Required): Specifies whether to draw a platform in the rendered image, affecting the visual context of the 3D mesh. Type should be `BOOLEAN`.
+        - `depth_only` (Required): Determines if only the depth map should be rendered, omitting the visual representation of the 3D mesh. Type should be `BOOLEAN`.
+        - `yfov` (Required): The field of view in the y-axis for the camera, influencing the perspective from which the mesh is rendered. Type should be `FLOAT`.
+        - `move_x` (Required): Horizontal movement of the camera, allowing for lateral adjustments in the rendering perspective. Type should be `FLOAT`.
+        - `move_y` (Required): Vertical movement of the camera, enabling adjustments in the vertical positioning of the rendering perspective. Type should be `FLOAT`.
+        - `move_z` (Required): Depth movement of the camera, affecting the distance between the camera and the 3D mesh. Type should be `FLOAT`.
+        - `rotate_x` (Required): Rotation of the camera around the x-axis, altering the tilt of the rendered image. Type should be `FLOAT`.
+        - `rotate_y` (Required): Rotation of the camera around the y-axis, changing the yaw of the rendered perspective. Type should be `FLOAT`.
+        - `rotate_z` (Required): Rotation of the camera around the z-axis, modifying the roll of the rendering perspective. Type should be `FLOAT`.
+        - `background_hex_color` (Required): The background color of the rendered image, specified as a hexadecimal color code. Type should be `STRING`.
+        - `frame_width` (Required): The width of the frame for the rendered image, defining the horizontal resolution. Type should be `INT`.
+        - `frame_height` (Required): The height of the frame for the rendered image, defining the vertical resolution. Type should be `INT`.
+        - `normals` (Optional): Indicates whether normals should be included in the rendering, affecting the visual texture and lighting of the 3D mesh. Type should be `BOOLEAN`.
+    - Outputs:
+        - `IMAGE`: The output is a visual representation (image) of the 3D mesh rendered from the SMPL parameters. This image showcases the human figure in various poses and shapes. Type should be `IMAGE`.
+        - `DEPTH_MAP`: The depth map of the rendered 3D mesh, providing spatial depth information for each pixel in the image. Type should be `IMAGE`.

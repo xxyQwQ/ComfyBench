@@ -1,7 +1,0 @@
-- `SaltAudioLDM2LoadModel`: This node is designed to load a specific audio model from a predefined set of models tailored for audio processing tasks. It facilitates the initialization of audio models with optimized settings for audio latent diffusion tasks, ensuring that the model is ready for further audio processing or generation tasks.
-    - Parameters:
-        - `model`: Specifies the model to be loaded, chosen from a predefined list of audio latent diffusion models. This selection determines the specific audio processing capabilities and characteristics of the loaded model. Type should be `COMBO[STRING]`.
-        - `device`: Determines the computing device ('cuda' or 'cpu') on which the model will be loaded, affecting performance and efficiency. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `audioldm2_model`: The loaded audio latent diffusion model, ready for use in audio processing or generation tasks. Type should be `AUDIOLDM_MODEL`.

@@ -1,0 +1,10 @@
+- `AutoNegativePrompt`: The AutoNegativePrompt node is designed to automatically generate a negative prompt based on a given positive prompt and various parameters. It utilizes dynamic logic to adjust the negativity of the prompt, potentially enhancing it based on the input parameters and the specified base model. This functionality is aimed at creating prompts that can be used to guide or restrict generative models in producing content by specifying what should be avoided.
+    - Inputs:
+        - `postive_prompt` (Required): unknown Type should be `STRING`.
+        - `base_negative` (Optional): The base negative prompt to be enhanced or modified based on the other parameters. Acts as a foundational negative context. Type should be `STRING`.
+        - `enhancenegative` (Optional): A boolean flag that, when enabled, enhances the base negative prompt by incorporating additional negative elements. Type should be `INT`.
+        - `insanitylevel` (Optional): Determines the level of randomness or 'insanity' in the generated negative prompt, affecting its variability and unpredictability. Type should be `INT`.
+        - `base_model` (Optional): Specifies the base model to influence the style and approach of the negative prompt generation, with options like 'SD1.5', 'SDXL', and 'Stable Cascade'. Type should be `COMBO[STRING]`.
+        - `seed` (Optional): A seed value for random number generation, ensuring reproducibility of the generated negative prompt. Type should be `INT`.
+    - Outputs:
+        - `negative_prompt`: The dynamically generated negative prompt, crafted based on the input positive prompt and other parameters. Type should be `STRING`.

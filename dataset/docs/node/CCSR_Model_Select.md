@@ -1,6 +1,0 @@
-- `CCSR_Model_Select`: The CCSR_Model_Select node is designed to select and load a specific checkpoint for the CCSR model based on the provided checkpoint name. It facilitates the initialization of the CCSR model with pre-trained weights for further processing or inference tasks.
-    - Parameters:
-        - `ckpt_name`: The name of the checkpoint to load. This parameter is crucial for identifying and retrieving the specific pre-trained model weights from the available checkpoints. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `ccsr_model`: The path to the loaded CCSR model checkpoint. This output is essential for subsequent nodes that require the model's checkpoint path for initialization or further processing. Type should be `CCSRMODEL`.

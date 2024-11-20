@@ -1,9 +1,0 @@
-- `Lerp`: The Lerp node linearly interpolates between two values based on a given strength and the current frame within a specified number of images. It's designed to smoothly transition or blend values across a sequence, making it useful for animations or gradual changes.
-    - Parameters:
-        - `num_Images`: Specifies the total number of images in the sequence. It determines the interpolation step size, affecting the smoothness of the transition. Type should be `FLOAT`.
-        - `strength`: Defines the interpolation strength. It influences the range of output values, affecting how significantly the output changes across frames. Type should be `FLOAT`.
-        - `current_frame`: Indicates the current frame number in the sequence. It's used to calculate the specific interpolation value for that frame, determining the output at each step. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The floating-point result of the linear interpolation, representing the interpolated value at the current frame. Type should be `FLOAT`.
-        - `int`: The integer representation of the interpolated value, providing a discretized output for scenarios requiring whole numbers. Type should be `INT`.

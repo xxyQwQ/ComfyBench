@@ -1,6 +1,0 @@
-- `easy ckptNames`: This node is designed to facilitate the selection and management of checkpoint names within a pipeline, allowing users to easily specify and retrieve the names of various checkpoints for use in model loading or other operations that require specific checkpoint identification.
-    - Parameters:
-        - `ckpt_name`: Specifies the name of the checkpoint to be selected or managed. This parameter is crucial for identifying which checkpoint is to be used in subsequent operations, impacting the node's execution and results. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `ckpt_name`: Returns the specified checkpoint name, enabling its use in further processing or model loading operations. Type should be `*`.

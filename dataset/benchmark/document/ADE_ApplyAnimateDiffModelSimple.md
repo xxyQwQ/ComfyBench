@@ -1,0 +1,9 @@
+- `ADE_ApplyAnimateDiffModelSimple`: This node is designed to apply a motion model to animate images or sequences, offering a simplified interface for integrating motion effects. It abstracts the complexities involved in the animation process, making it accessible for users to apply predefined motion models to their content.
+    - Inputs:
+        - `motion_model` (Required): Specifies the motion model to be applied. It is crucial for defining the animation behavior and effects on the target content. Type should be `MOTION_MODEL_ADE`.
+        - `motion_lora` (Optional): Optional parameter for incorporating motion Lora adjustments, enhancing the animation with additional motion effects. Type should be `MOTION_LORA`.
+        - `scale_multival` (Optional): Optional parameter for scaling effects, providing flexibility in the intensity of the applied motion. Type should be `MULTIVAL`.
+        - `effect_multival` (Optional): Optional parameter for effect adjustments, enabling customization of the visual impact of the motion. Type should be `MULTIVAL`.
+        - `ad_keyframes` (Optional): Optional parameter for specifying keyframes, allowing for more controlled and precise animation effects. Type should be `AD_KEYFRAMES`.
+    - Outputs:
+        - `m_models`: Outputs the modified motion models after applying the specified motion effects, keyframes, and adjustments. Type should be `M_MODELS`.

@@ -1,0 +1,10 @@
+- `MaskFix+`: The MaskFix node is designed to correct or adjust masks within images, focusing on refining mask boundaries, shapes, or overall mask integrity. It aims to enhance the quality and accuracy of masks used in image processing tasks, ensuring they accurately represent the intended areas or objects.
+    - Inputs:
+        - `mask` (Required): The 'mask' parameter is the primary input for the MaskFix node, representing the mask to be corrected or adjusted. It plays a crucial role in determining the areas of the image that require refinement. Type should be `MASK`.
+        - `erode_dilate` (Required): Specifies the degree to which the mask should be eroded or dilated, affecting the mask's boundaries and overall shape. Type should be `INT`.
+        - `fill_holes` (Required): Determines whether and to what extent holes within the mask should be filled, enhancing mask integrity. Type should be `INT`.
+        - `remove_isolated_pixels` (Required): Controls the removal of isolated pixels, improving the mask's overall appearance and accuracy. Type should be `INT`.
+        - `smooth` (Required): Adjusts the smoothness of the mask's edges, refining its boundaries for a more precise representation. Type should be `INT`.
+        - `blur` (Required): Defines the level of blur applied to the mask, aiding in softening edges and improving visual quality. Type should be `INT`.
+    - Outputs:
+        - `mask`: The output is a refined or adjusted mask, improved in terms of boundary definition, shape, and overall integrity. Type should be `MASK`.

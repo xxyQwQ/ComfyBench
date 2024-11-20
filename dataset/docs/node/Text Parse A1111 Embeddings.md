@@ -1,6 +1,0 @@
-- `Text Parse A1111 Embeddings`: This node is designed to parse and replace specific text patterns with corresponding embeddings names, facilitating the integration of pre-defined embeddings into text inputs. It scans the text for known embeddings identifiers and substitutes them with a standardized format, enhancing the text's compatibility with further processing steps that utilize these embeddings.
-    - Parameters:
-        - `text`: The input text to be scanned for known embeddings patterns. This parameter is crucial as it determines the content that will be processed and potentially transformed by replacing identified patterns with their corresponding embeddings names. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The processed text with specific patterns replaced by their corresponding embeddings names, ready for further processing or analysis. Type should be `STRING`.

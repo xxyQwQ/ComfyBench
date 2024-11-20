@@ -1,0 +1,9 @@
+- `MosaicExpandImage`: The MosaicExpandImage node is designed to expand an image by adding mosaic borders around it. These borders are created by cropping sections from the original image, generating a mosaic from these sections, and then pasting these mosaics around the original image to achieve the desired expanded size.
+    - Inputs:
+        - `image` (Required): The original image to be expanded. It serves as the central piece around which the mosaic borders are created and added. Type should be `IMAGE`.
+        - `left` (Required): The number of mosaic strips to add to the left side of the image, determining the width of the left expansion. Type should be `INT`.
+        - `top` (Required): The number of mosaic strips to add to the top of the image, determining the height of the top expansion. Type should be `INT`.
+        - `right` (Required): The number of mosaic strips to add to the right side of the image, determining the width of the right expansion. Type should be `INT`.
+        - `bottom` (Required): The number of mosaic strips to add to the bottom of the image, determining the height of the bottom expansion. Type should be `INT`.
+    - Outputs:
+        - `result_img`: The expanded image with mosaic borders added around the original image. Type should be `IMAGE`.

@@ -1,0 +1,8 @@
+- `MaskOuterBlur`: The MaskOuterBlur node is designed to selectively apply a blur effect to the outer regions of an image, utilizing a mask to distinguish between areas to be blurred and those to remain sharp. This technique is aimed at enhancing focus on specific parts of an image or creating a depth-of-field effect, making it particularly useful for image editing and post-processing applications.
+    - Inputs:
+        - `src` (Required): The source image to which the blur effect will be applied. It serves as the primary input for determining the areas to be blurred based on the mask. Type should be `IMAGE`.
+        - `mask` (Required): The mask used to differentiate between the areas of the image to be blurred and those to remain sharp. It plays a crucial role in guiding the selective blurring process. Type should be `IMAGE`.
+        - `kernel_size` (Required): Specifies the size of the blur kernel. A larger kernel size results in a more pronounced blur effect. Type should be `INT`.
+        - `paste_src` (Required): A boolean flag indicating whether the original source image should be pasted over the blurred areas, preserving detail in the non-blurred regions. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output image after applying the selective blur effect, showcasing the enhanced focus or depth-of-field effect. Type should be `IMAGE`.

@@ -1,8 +1,0 @@
-- `DF_Tangent`: The DF_Tangent node calculates the tangent or arctangent of a given value, with the option to specify the angle measurement unit (degrees or radians). This functionality allows for the transformation and analysis of angular data within mathematical and trigonometric computations.
-    - Parameters:
-        - `value`: The numerical value for which the tangent or arctangent is to be calculated. This input is crucial for determining the specific angle or its tangent value. Type should be `FLOAT`.
-        - `type_`: Specifies the angle measurement unit for the input value, either as radians (RAD) or degrees (DEG), affecting how the value is interpreted and processed. Type should be `COMBO[STRING]`.
-        - `arcTan`: A boolean flag that determines whether to calculate the arctangent (True) or tangent (False) of the input value, allowing for flexibility in trigonometric calculations. Type should be `COMBO[BOOLEAN]`.
-    - Inputs:
-    - Outputs:
-        - `float`: The calculated tangent or arctangent of the input value, provided as a floating-point number. Type should be `FLOAT`.

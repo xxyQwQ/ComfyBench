@@ -1,0 +1,12 @@
+- `SUPIR_first_stage`: The SUPIR_first_stage node is designed for the initial processing of images using the SUPIR model to address compression artifacts and other noise, often resulting in a slightly blurred image. This step is crucial for preparing the image for further enhancement or manipulation by reducing noise and refining details.
+    - Inputs:
+        - `SUPIR_VAE` (Required): Specifies the SUPIR VAE model used for encoding and decoding in the denoising process. Type should be `SUPIRVAE`.
+        - `image` (Required): The input image to be processed, targeted for noise reduction and detail refinement. Type should be `IMAGE`.
+        - `use_tiled_vae` (Required): Indicates whether to use a tiled approach for the VAE processing, affecting performance and outcome. Type should be `BOOLEAN`.
+        - `encoder_tile_size` (Required): The tile size for the encoder, influencing the granularity of processing. Type should be `INT`.
+        - `decoder_tile_size` (Required): The tile size for the decoder, affecting the output image resolution and detail. Type should be `INT`.
+        - `encoder_dtype` (Required): Defines the data type for the encoder, impacting processing precision and efficiency. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `SUPIR_VAE`: Returns the processed SUPIR VAE model, ready for further stages of image generation. Type should be `SUPIRVAE`.
+        - `denoised_image`: The output image after initial denoising, typically slightly blurred as part of the process. Type should be `IMAGE`.
+        - `denoised_latents`: The latent representations of the denoised image, useful for further processing steps. Type should be `LATENT`.

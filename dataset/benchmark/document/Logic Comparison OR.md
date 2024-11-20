@@ -1,0 +1,6 @@
+- `Logic Comparison OR`: This node performs a logical OR operation on two boolean inputs, returning true if at least one of the inputs is true, and false otherwise. It abstracts the basic logical OR functionality into a node for use within logical operations or decision-making processes.
+    - Inputs:
+        - `boolean_a` (Required): The first boolean input for the OR operation. Its value influences the result by potentially making the overall result true if it is true. Type should be `BOOLEAN`.
+        - `boolean_b` (Required): The second boolean input for the OR operation. Similar to the first input, its true value can make the overall result true, contributing to the logical OR condition. Type should be `BOOLEAN`.
+    - Outputs:
+        - `boolean`: The result of the logical OR operation, indicating whether at least one of the inputs is true. Type should be `BOOLEAN`.

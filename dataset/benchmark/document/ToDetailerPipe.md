@@ -1,0 +1,16 @@
+- `ToDetailerPipe`: The ToDetailerPipe node is designed to transform various model components and configurations into a detailed pipeline format. It focuses on enhancing the specificity and impact of model outputs by incorporating additional conditioning and refinement processes.
+    - Inputs:
+        - `model` (Required): The 'model' parameter represents the core model to be included in the detailer pipeline, serving as the foundation for further enhancements and conditioning. Type should be `MODEL`.
+        - `clip` (Required): The 'clip' parameter specifies the CLIP model to be used in conjunction with the main model for enhanced content understanding and generation. Type should be `CLIP`.
+        - `vae` (Required): The 'vae' parameter involves a Variational Autoencoder (VAE) model, which is used for generating or modifying content within the pipeline. Type should be `VAE`.
+        - `positive` (Required): The 'positive' parameter is used for positive conditioning, influencing the model to generate content that aligns with specified positive attributes. Type should be `CONDITIONING`.
+        - `negative` (Required): The 'negative' parameter is used for negative conditioning, guiding the model to avoid generating content with specified negative attributes. Type should be `CONDITIONING`.
+        - `bbox_detector` (Required): The 'bbox_detector' parameter specifies the bounding box detector model used for identifying specific areas within images for focused processing or analysis. Type should be `BBOX_DETECTOR`.
+        - `wildcard` (Required): The 'wildcard' parameter allows for the inclusion of dynamic, user-defined text inputs that can influence the pipeline's processing and output generation. Type should be `STRING`.
+        - `Select to add LoRA` (Required): This parameter enables the selection of LoRA (Low-Rank Adaptation) techniques to be added to the text, enhancing the model's adaptability and performance on specific tasks. Type should be `COMBO[STRING]`.
+        - `Select to add Wildcard` (Required): This parameter allows for the selection of predefined wildcard options to be added to the text, introducing variability and customization into the pipeline's output. Type should be `COMBO[STRING]`.
+        - `sam_model_opt` (Optional): The 'sam_model_opt' parameter specifies an optional SAM (Sharpness-Aware Minimization) model to enhance the detailer pipeline's ability to generate sharp and clear images. Type should be `SAM_MODEL`.
+        - `segm_detector_opt` (Optional): The 'segm_detector_opt' parameter specifies an optional segmentation detector model used for identifying and segmenting specific parts of images for detailed processing. Type should be `SEGM_DETECTOR`.
+        - `detailer_hook` (Optional): The 'detailer_hook' parameter allows for the inclusion of custom processing hooks within the detailer pipeline, enabling tailored modifications or enhancements to the pipeline's operation. Type should be `DETAILER_HOOK`.
+    - Outputs:
+        - `detailer_pipe`: The output 'detailer_pipe' represents the comprehensive pipeline configuration, including all model components and settings specified through the input parameters. Type should be `DETAILER_PIPE`.

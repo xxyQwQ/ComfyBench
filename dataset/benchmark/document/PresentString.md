@@ -1,0 +1,5 @@
+- `PresentString`: The PresentString node is designed to display a given string within a user interface context, effectively parsing and presenting the input text as is.
+    - Inputs:
+        - `text` (Required): The 'text' parameter is the primary input for the PresentString node, requiring a string to be displayed. Its role is crucial as it directly influences the content that will be presented to the user. Type should be `STRING`.
+    - Outputs:
+        - `string`: unknown Type should be `STRING`.

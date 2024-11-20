@@ -1,0 +1,8 @@
+- `JoinStringMulti`: The JoinStringMulti node dynamically combines multiple input strings into a single string or a list of strings, based on user-defined parameters such as the number of inputs and a delimiter. It allows for flexible string manipulation within a flow, accommodating a variable number of string inputs.
+    - Inputs:
+        - `inputcount` (Required): Specifies the number of input strings to be combined. This allows the node to dynamically adjust to the desired number of inputs. Type should be `INT`.
+        - `string_i` (Required): Represents an input string to be combined. This serves as a generic placeholder for any string input beyond the first, facilitating the concatenation process with variable input counts. Type should be `STRING`.
+        - `delimiter` (Required): The delimiter used to separate the input strings in the final combined string. Type should be `STRING`.
+        - `return_list` (Required): Determines whether the output should be a single concatenated string or a list of the individual input strings. Type should be `BOOLEAN`.
+    - Outputs:
+        - `string`: The result of combining the input strings, either as a single concatenated string or a list of strings, depending on the return_list parameter. Type should be `STRING`.

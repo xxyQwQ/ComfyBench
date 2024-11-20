@@ -1,0 +1,25 @@
+- `Efficient Loader`: The Efficient Loader node is designed to streamline the process of loading and initializing models, VAEs, and other dependencies for generative tasks. It efficiently manages resources by selectively caching and reusing components, and supports customization through parameters like checkpoint names, LoRA configurations, and batch sizes. This node aims to optimize the setup phase for generative workflows, reducing overhead and facilitating quicker iterations.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the checkpoint name for the model to be loaded, serving as a key identifier for retrieving model parameters and configurations. Type should be `COMBO[STRING]`.
+        - `vae_name` (Required): Identifies the VAE to be used in the generative process, crucial for defining the visual encoding and decoding mechanisms. Type should be `COMBO[STRING]`.
+        - `clip_skip` (Required): Specifies the intervals at which CLIP layers are skipped, optimizing the model's performance for specific tasks. Type should be `INT`.
+        - `lora_name` (Required): Specifies the name of the LoRA model to be loaded, if applicable, enabling dynamic adjustments to model parameters without full retraining. Type should be `COMBO[STRING]`.
+        - `lora_model_strength` (Required): Defines the strength of the LoRA model adjustments, allowing for fine-tuning of the model's behavior. Type should be `FLOAT`.
+        - `lora_clip_strength` (Required): Determines the strength of the CLIP adjustments when LoRA is applied, affecting the text-image alignment. Type should be `FLOAT`.
+        - `positive` (Required): The positive conditioning text, guiding the generative model towards desired attributes in the output. Type should be `STRING`.
+        - `negative` (Required): The negative conditioning text, instructing the generative model to avoid certain attributes in the output. Type should be `STRING`.
+        - `token_normalization` (Required): Defines the method for normalizing tokens, affecting how text inputs are processed and interpreted by the model. Type should be `COMBO[STRING]`.
+        - `weight_interpretation` (Required): Determines how weights are interpreted, allowing for customization of the model's learning and adaptation processes. Type should be `COMBO[STRING]`.
+        - `empty_latent_width` (Required): Specifies the width of the empty latent space, setting the dimensions for the initial generative canvas. Type should be `INT`.
+        - `empty_latent_height` (Required): Specifies the height of the empty latent space, setting the dimensions for the initial generative canvas. Type should be `INT`.
+        - `batch_size` (Required): Determines the number of samples to be processed in parallel, directly impacting memory usage and computational efficiency. Type should be `INT`.
+        - `lora_stack` (Optional): A stack of LoRA models to be applied, enabling complex model adjustments through multiple layers. Type should be `LORA_STACK`.
+        - `cnet_stack` (Optional): A stack of ControlNet models to be applied, facilitating advanced control over the generative process. Type should be `CONTROL_NET_STACK`.
+    - Outputs:
+        - `MODEL`: The main model loaded and prepared for generative tasks, including any applied modifications like LoRA. Type should be `MODEL`.
+        - `CONDITIONING+`: Processed positive conditioning information, ready for use in guiding the generative process. Type should be `CONDITIONING`.
+        - `CONDITIONING-`: Processed negative conditioning information, ready for use in avoiding undesired attributes. Type should be `CONDITIONING`.
+        - `LATENT`: An empty latent space tensor, prepared based on specified dimensions, serving as a starting point for generation. Type should be `LATENT`.
+        - `VAE`: The loaded VAE model, essential for encoding and decoding visual information in the generative process. Type should be `VAE`.
+        - `CLIP`: The CLIP model loaded and configured based on the specified skip intervals, facilitating text-image alignment. Type should be `CLIP`.
+        - `DEPENDENCIES`: A collection of dependencies including model names, configurations, and parameters, ensuring all necessary components are loaded. Type should be `DEPENDENCIES`.

@@ -1,0 +1,9 @@
+- `LayerUtility_ ImageChannelSplit`: The ImageChannelSplit node is designed to split an input image into its constituent channels based on a specified color mode. It facilitates the manipulation of individual color channels for advanced image processing tasks, enabling users to work with each channel separately for detailed analysis or modification.
+    - Inputs:
+        - `image` (Required): The input image to be split into its constituent channels. This parameter is crucial for the operation as it determines the source image for channel separation. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the color mode for channel splitting. This parameter affects how the input image is processed and determines the output channel format. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `channel_1`: The first channel of the split image, which varies depending on the specified mode. Type should be `IMAGE`.
+        - `channel_2`: The second channel of the split image, which varies depending on the specified mode. Type should be `IMAGE`.
+        - `channel_3`: The third channel of the split image, which varies depending on the specified mode. Type should be `IMAGE`.
+        - `channel_4`: The fourth channel of the split image, applicable in modes that support four channels. Type should be `IMAGE`.

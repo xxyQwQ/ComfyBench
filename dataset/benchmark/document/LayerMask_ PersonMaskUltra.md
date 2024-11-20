@@ -1,0 +1,17 @@
+- `LayerMask_ PersonMaskUltra`: This node specializes in generating a mask for person objects within an image, utilizing options to focus on specific parts such as face, hair, body, clothes, and accessories. It offers customization through settings like confidence levels and detail range, enabling precise segmentation for complex image editing tasks.
+    - Inputs:
+        - `images` (Required): The input images for which person masks are to be generated, serving as the primary data for segmentation. Type should be `IMAGE`.
+        - `face` (Required): A boolean flag to include or exclude the face in the generated person mask. Type should be `BOOLEAN`.
+        - `hair` (Required): A boolean flag to include or exclude hair in the generated person mask. Type should be `BOOLEAN`.
+        - `body` (Required): A boolean flag to include or exclude the body in the generated person mask. Type should be `BOOLEAN`.
+        - `clothes` (Required): A boolean flag to include or exclude clothes in the generated person mask. Type should be `BOOLEAN`.
+        - `accessories` (Required): A boolean flag to include or exclude accessories in the generated person mask. Type should be `BOOLEAN`.
+        - `background` (Required): A boolean flag to include or exclude the background in the generated person mask. Type should be `BOOLEAN`.
+        - `confidence` (Required): A float value indicating the confidence threshold for mask generation. Type should be `FLOAT`.
+        - `detail_range` (Required): An integer specifying the range of detail to be considered in the mask generation process. Type should be `INT`.
+        - `black_point` (Required): A float value defining the black point for mask adjustment. Type should be `FLOAT`.
+        - `white_point` (Required): A float value defining the white point for mask adjustment. Type should be `FLOAT`.
+        - `process_detail` (Required): A boolean flag to enable or disable detailed processing of the mask. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output is the original image overlaid with the generated mask, highlighting the segmented person. Type should be `IMAGE`.
+        - `mask`: The output is a binary mask of the person, with the specified parts (face, hair, etc.) segmented. Type should be `MASK`.

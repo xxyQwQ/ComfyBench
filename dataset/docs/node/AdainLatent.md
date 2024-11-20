@@ -1,8 +1,0 @@
-- `AdainLatent`: AdainLatent is designed to perform adaptive instance normalization on latent representations by aligning the mean and standard deviation of a target latent space with those of a reference latent space, modulated by a specified factor. This process facilitates the transfer of style characteristics from the reference to the target latents, enabling style manipulation and consistency in generative models.
-    - Parameters:
-        - `factor`: A modulation factor that controls the extent to which the style characteristics from the reference are applied to the target latents. It allows for fine-tuning the balance between preserving the original content and applying the new style. Type should be `FLOAT`.
-    - Inputs:
-        - `latents`: The target latent representations to be normalized. This input is crucial for determining the base content or structure upon which style characteristics from the reference will be imposed. Type should be `LATENT`.
-        - `reference`: The reference latent representations providing the style characteristics to be transferred. This input is essential for defining the style attributes to be applied to the target latents. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The modified latent representations after applying adaptive instance normalization, reflecting the style characteristics of the reference with the original content of the target latents. Type should be `LATENT`.

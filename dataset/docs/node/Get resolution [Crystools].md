@@ -1,7 +1,0 @@
-- `Get resolution [Crystools]`: This node is designed to determine the resolution of an image, providing a straightforward way to extract and utilize image dimensions within a workflow. It abstracts the complexity of handling image data structures, offering a simple interface to retrieve width and height information.
-    - Parameters:
-    - Inputs:
-        - `image`: The image for which the resolution is to be determined. It plays a crucial role in the node's operation by serving as the primary data from which dimensions are extracted. Type should be `IMAGE`.
-    - Outputs:
-        - `width`: The width of the image in pixels. Type should be `INT`.
-        - `height`: The height of the image in pixels. Type should be `INT`.

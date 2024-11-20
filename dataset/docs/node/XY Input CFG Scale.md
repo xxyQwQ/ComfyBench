@@ -1,8 +1,0 @@
-- `XY Input CFG Scale`: The node 'XY Input: CFG Scale' is designed to process and generate configuration scale (CFG Scale) values for XY plotting purposes within an efficiency-focused context. It aims to facilitate the visualization and analysis of CFG Scale values by generating a range of floating-point numbers based on input parameters, ensuring these values adhere to specified bounds. This node is integral for tasks that require precise CFG Scale adjustments and visual representation, contributing to the optimization and efficiency analysis of various processes.
-    - Parameters:
-        - `batch_count`: Specifies the number of CFG Scale values to generate. It influences the node's execution by determining the size of the output array of CFG Scale values. Type should be `INT`.
-        - `first_cfg`: Defines the starting point of the CFG Scale range. It affects the lower bound of the generated CFG Scale values, ensuring the output starts from this specified value. Type should be `FLOAT`.
-        - `last_cfg`: Sets the ending point of the CFG Scale range. It impacts the upper bound of the generated CFG Scale values, ensuring the output ends at this specified value. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `X or Y`: unknown Type should be `XY`.

@@ -1,8 +1,0 @@
-- `DifferenceChecker`: The DifferenceChecker node is designed to compute the absolute difference between two images, scaled by a specified multiplier. This functionality is useful for highlighting differences or changes between two images, which can be applied in various image processing and analysis tasks.
-    - Parameters:
-        - `multiplier`: A scaling factor applied to the computed differences, allowing for adjustment of the difference intensity. Type should be `FLOAT`.
-    - Inputs:
-        - `images1`: The first set of images to compare. This input is crucial for determining the baseline for comparison. Type should be `IMAGE`.
-        - `images2`: The second set of images to compare against the first set. This input is essential for identifying the differences from the baseline. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is an image or a set of images representing the scaled absolute difference between the input images. Type should be `IMAGE`.

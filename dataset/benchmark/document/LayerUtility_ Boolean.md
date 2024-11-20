@@ -1,0 +1,6 @@
+- `LayerUtility_ Boolean`: The Boolean node is designed to encapsulate and convert a boolean value into a boolean and string representation. It serves as a fundamental utility within data processing pipelines, allowing for the straightforward manipulation and interpretation of boolean logic.
+    - Inputs:
+        - `bool_value` (Required): Determines the boolean value to be processed by the node. It is crucial for defining the logical state that will be converted and represented in both boolean and string formats. Type should be `BOOLEAN`.
+    - Outputs:
+        - `boolean`: The boolean representation of the input value. Type should be `BOOLEAN`.
+        - `string`: The string representation of the boolean input value. Type should be `STRING`.

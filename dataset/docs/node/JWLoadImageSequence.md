@@ -1,9 +1,0 @@
-- `JWLoadImageSequence`: This node is designed for batch loading of image sequences with a specified stop index, enabling the efficient handling and processing of multiple images at once by allowing users to define a specific range within the sequence.
-    - Parameters:
-        - `path_pattern`: Specifies the pattern or path used to locate and load the images in the sequence, playing a crucial role in identifying the files to be processed. Type should be `STRING`.
-        - `start_index`: Defines the starting index for loading the image sequence, determining the initial image to be included in the processing. Type should be `INT`.
-        - `frame_count`: Indicates the number of frames to be loaded from the starting index, controlling the length of the image sequence to be processed. Type should be `INT`.
-    - Inputs:
-        - `ignore_missing_images`: Determines whether to ignore missing images within the specified range, allowing for flexible handling of incomplete sequences. Type should be `['false', 'true']`.
-    - Outputs:
-        - `image`: The output is a batch of images loaded based on the specified criteria, ready for further processing or analysis. Type should be `IMAGE`.

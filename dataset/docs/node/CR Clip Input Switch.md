@@ -1,9 +1,0 @@
-- `CR Clip Input Switch`: This node allows for the dynamic selection between two clip inputs based on a specified integer input. It is designed to facilitate conditional logic within workflows, enabling the choice of clip to be used in subsequent operations.
-    - Parameters:
-        - `Input`: Determines which clip input to select. An input of 1 selects the first clip, while an input of 2 selects the second clip. Type should be `INT`.
-    - Inputs:
-        - `clip1`: The first clip option that can be selected based on the input value. Type should be `CLIP`.
-        - `clip2`: The second clip option that can be selected based on the input value. Type should be `CLIP`.
-    - Outputs:
-        - `CLIP`: The selected clip based on the input value. Type should be `CLIP`.
-        - `show_help`: A URL providing additional help and documentation for using the node. Type should be `STRING`.

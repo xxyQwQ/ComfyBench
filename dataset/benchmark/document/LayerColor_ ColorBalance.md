@@ -1,0 +1,8 @@
+- `LayerColor_ ColorBalance`: The ColorBalance node is designed to adjust the color balance of images by modifying the cyan-red, magenta-green, and yellow-blue channels. It allows for fine-tuning of color hues to achieve a desired visual effect, enhancing or correcting the color composition of images.
+    - Inputs:
+        - `image` (Required): The input image or images to be processed for color balance adjustment. This parameter is crucial for defining the visual content that will undergo color correction. Type should be `IMAGE`.
+        - `cyan_red` (Required): Adjusts the balance between cyan and red hues in the image, affecting the overall color temperature. Type should be `FLOAT`.
+        - `magenta_green` (Required): Adjusts the balance between magenta and green hues, influencing the color harmony and contrast. Type should be `FLOAT`.
+        - `yellow_blue` (Required): Modifies the balance between yellow and blue hues, impacting the image's warmth or coolness. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output image or images after applying the color balance adjustments, reflecting the changes in color hues. Type should be `IMAGE`.

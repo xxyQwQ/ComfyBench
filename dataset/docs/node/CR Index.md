@@ -1,8 +1,0 @@
-- `CR Index`: The CR Index node is designed to manage and manipulate index values within a workflow, offering functionalities such as printing the current index to the console and providing a help link for further information.
-    - Parameters:
-        - `index`: Specifies the current index value. It is crucial for determining the position or order of elements in a sequence. Type should be `INT`.
-        - `print_to_console`: Determines whether the current index value should be printed to the console, aiding in debugging or monitoring the workflow. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `INT`: Returns the current index value after any modifications. Type should be `INT`.
-        - `show_help`: Provides a URL to a help page for further information on the CR Index node. Type should be `STRING`.

@@ -1,0 +1,7 @@
+- `SaltAudioBandpassFilter`: The SaltAudioBandpassFilter node applies a bandpass filter to an audio input, allowing frequencies within a specified range to pass through while attenuating frequencies outside this range. This process is useful for isolating specific frequency bands or reducing noise.
+    - Inputs:
+        - `audio` (Required): The raw audio data to be processed. This input is crucial for defining the audio content that will undergo bandpass filtering. Type should be `AUDIO`.
+        - `low_cutoff_frequency` (Required): The lower frequency limit of the bandpass filter. Frequencies below this threshold will be attenuated, helping to isolate the desired frequency band. Type should be `INT`.
+        - `high_cutoff_frequency` (Required): The upper frequency limit of the bandpass filter. Frequencies above this threshold will be attenuated, further refining the isolation of the desired frequency band. Type should be `INT`.
+    - Outputs:
+        - `audio`: The processed audio data after the bandpass filter has been applied, with specified frequencies allowed to pass and others attenuated. Type should be `AUDIO`.

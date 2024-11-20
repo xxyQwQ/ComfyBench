@@ -1,0 +1,9 @@
+- `SaltSaveTextFile`: This node is designed to save textual content to a file or multiple files within a newly created directory. It supports specifying file names, extensions, and content, handling both single and multiple content inputs. The node ensures the creation of a unique directory for file storage, validating file extensions against supported types, and provides error handling for file creation and saving processes.
+    - Inputs:
+        - `filename_prefix` (Required): Specifies the prefix for the file name(s) to be saved. This prefix is used as the base name for the file or files, with indexes appended for multiple contents. Type should be `STRING`.
+        - `file_extension` (Required): Defines the file extension for the saved file(s). This extension indicates the file type and is validated against a list of supported types to ensure compatibility. Type should be `COMBO[STRING]`.
+        - `file_content` (Optional): The content to be saved into a single file. This parameter allows for saving a specific piece of text content directly to a file. Type should be `STRING`.
+        - `file_contents_input` (Optional): A list of text contents to be saved into multiple files. Each content in the list is saved to a separate file, with filenames generated based on the filename prefix and index. Type should be `LIST`.
+    - Outputs:
+        - `file_paths`: A list of paths to the saved files. This includes the complete path for each file created during the node's execution. Type should be `LIST`.
+        - `directory_path`: The path to the directory where all files are saved. This directory is uniquely generated for each execution of the node. Type should be `STRING`.

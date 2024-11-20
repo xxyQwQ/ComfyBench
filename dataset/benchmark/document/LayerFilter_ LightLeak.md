@@ -1,0 +1,10 @@
+- `LayerFilter_ LightLeak`: The LightLeak node applies a light leak effect to images, simulating the accidental exposure of film to light, enhancing the visual appeal with a vintage or artistic flair. It allows customization of the light leak's appearance, including its position, hue, saturation, and opacity, to achieve a variety of visual effects.
+    - Inputs:
+        - `image` (Required): The input image to which the light leak effect will be applied. This is the primary canvas for the effect. Type should be `IMAGE`.
+        - `light` (Required): Specifies the type of light leak effect to apply, which can be a specific light pattern or a random selection from a predefined set. Type should be `COMBO[STRING]`.
+        - `corner` (Required): Determines the corner of the image where the light leak effect will be primarily applied, allowing for directional control of the effect. Type should be `COMBO[STRING]`.
+        - `hue` (Required): Adjusts the hue of the light leak effect, enabling color customization to match or contrast with the image. Type should be `INT`.
+        - `saturation` (Required): Modifies the saturation of the light leak effect, allowing for more vivid or subdued color intensity. Type should be `INT`.
+        - `opacity` (Required): Controls the opacity of the light leak effect, affecting its prominence and blend with the image. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image with the applied light leak effect, showcasing the enhanced visual appeal. Type should be `IMAGE`.

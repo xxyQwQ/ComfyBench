@@ -1,0 +1,16 @@
+- `SDXL Prompt Styler (JPS)`: The SDXL Prompt Styler node is designed to enhance and stylize text prompts for image generation tasks. It processes and combines user-defined positive and negative prompts with predefined templates, incorporating additional stylistic elements such as artist and movie references, to create more detailed and focused prompts for generating images.
+    - Inputs:
+        - `text_positive_g` (Required): The primary positive prompt to be stylized and enhanced. It serves as the main subject or theme for the image generation. Type should be `STRING`.
+        - `text_positive_l` (Required): A secondary positive prompt that can be combined with the primary prompt for additional detail or emphasis in the image generation process. Type should be `STRING`.
+        - `text_negative` (Required): A negative prompt that specifies undesired elements or themes to be excluded from the generated image. Type should be `STRING`.
+        - `artist` (Required): An artist's name to infuse the generated image with a style reminiscent of that artist's work. Type should be `COMBO[STRING]`.
+        - `movie` (Required): A movie reference to imbue the generated image with thematic elements or stylistic cues associated with that movie. Type should be `COMBO[STRING]`.
+        - `style` (Required): A general stylistic direction or theme to apply to the generated image, enhancing its aesthetic appeal. Type should be `COMBO[STRING]`.
+        - `fooocus_enhance` (Required): An optional parameter to further enhance the focus on certain elements within the generated image. Type should be `COMBO[STRING]`.
+        - `fooocus_negative` (Required): An optional parameter to specify elements that should be de-emphasized or excluded from the focus of the generated image. Type should be `COMBO[STRING]`.
+        - `universal_negative` (Required): A global negative prompt to exclude certain themes or elements from all generated images, regardless of other specified prompts. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `text_positive_g`: unknown Type should be `STRING`.
+        - `text_positive_l`: unknown Type should be `STRING`.
+        - `text_positive`: unknown Type should be `STRING`.
+        - `text_negative`: unknown Type should be `STRING`.

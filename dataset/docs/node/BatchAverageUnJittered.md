@@ -1,7 +1,0 @@
-- `BatchAverageUnJittered`: This node is designed to process a batch of images by applying an averaging or median operation to reduce jittering effects. It operates on sub-batches of images, applying the specified operation to create a smoother, more stable output image.
-    - Parameters:
-        - `operation`: Specifies the operation ('mean' or 'median') to be applied across the images. This choice affects the method of jitter reduction and the final appearance of the output image. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: The batch of images to be processed. This input is crucial for determining the set of images on which the averaging or median operation will be applied. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed batch of images after applying the specified averaging or median operation to reduce jittering effects. Type should be `IMAGE`.

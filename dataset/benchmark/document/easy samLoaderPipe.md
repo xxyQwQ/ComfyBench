@@ -1,0 +1,12 @@
+- `easy samLoaderPipe`: The 'easy samLoaderPipe' node is designed to load and configure the SAM (Semantic Attention Model) for use in image processing pipelines. It facilitates the integration of SAM into custom workflows, enabling advanced image manipulation techniques such as semantic segmentation and attention-based image editing.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the SAM model to be loaded. This parameter is crucial for determining which specific SAM model will be utilized in the processing pipeline. Type should be `COMBO[STRING]`.
+        - `device_mode` (Required): Determines the hardware (CPU/GPU) preference for running the SAM model, allowing for optimized performance based on the available resources. Type should be `COMBO[STRING]`.
+        - `sam_detection_hint` (Required): Guides the SAM model in focusing on specific areas or patterns within the image, enhancing the effectiveness of semantic segmentation. Type should be `COMBO[STRING]`.
+        - `sam_dilation` (Required): Adjusts the dilation of the detected semantic areas, enabling finer control over the segmentation boundaries. Type should be `INT`.
+        - `sam_threshold` (Required): Sets the confidence threshold for semantic detection, filtering out less certain areas to improve segmentation accuracy. Type should be `FLOAT`.
+        - `sam_bbox_expansion` (Required): Controls the expansion of bounding boxes around detected areas, useful for ensuring complete coverage of relevant segments. Type should be `INT`.
+        - `sam_mask_hint_threshold` (Required): Determines the threshold for mask hints, influencing how strongly the model should consider these hints in segmentation. Type should be `FLOAT`.
+        - `sam_mask_hint_use_negative` (Required): Configures the model's handling of negative mask hints, affecting the exclusion of certain areas from the segmentation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `sam_pipe`: Outputs a configured SAM pipeline, ready for integration into further image processing stages. Type should be `PIPE_LINE`.

@@ -1,6 +1,0 @@
-- `ControlNetClamp`: The ControlNetClamp node is designed to pass through control network data without modification, acting as a 'clamp' that ensures the integrity and unaltered state of control network information within a data processing pipeline.
-    - Parameters:
-    - Inputs:
-        - `control_net_clamp`: Represents the control network data to be passed through unmodified, emphasizing the node's role in preserving the original state of control network information. Type should be `CONTROL_NET`.
-    - Outputs:
-        - `control_net`: Outputs the unmodified control network data, maintaining the integrity of the original input. Type should be `CONTROL_NET`.

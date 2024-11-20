@@ -1,0 +1,7 @@
+- `VividSharpen`: The VividSharpen node enhances the sharpness and clarity of images by applying a vivid sharpening effect. It utilizes a combination of Gaussian blur inversion and blending techniques to accentuate details and edges, making the image appear more vivid and defined.
+    - Inputs:
+        - `images` (Required): Specifies the images to be sharpened. This is the primary input for the sharpening process. Type should be `IMAGE`.
+        - `radius` (Required): Determines the radius of the Gaussian blur used in the sharpening process. A larger radius results in a more pronounced sharpening effect. Type should be `FLOAT`.
+        - `strength` (Required): Controls the intensity of the sharpening effect. A higher strength value leads to a more vivid and pronounced sharpening. Type should be `FLOAT`.
+    - Outputs:
+        - `images`: The sharpened images, enhanced with vivid sharpness and clarity. Type should be `IMAGE`.

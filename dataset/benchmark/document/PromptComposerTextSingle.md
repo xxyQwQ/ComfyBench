@@ -1,0 +1,8 @@
+- `PromptComposerTextSingle`: The PromptComposerTextSingle node is designed for composing single text prompts with optional additional text and weight adjustments. It allows for the dynamic creation of prompts based on input text, optional text, and their respective weights, facilitating customized prompt generation for various applications.
+    - Inputs:
+        - `text` (Required): The primary text input for the prompt. This text is the main focus of the prompt composition. Type should be `STRING`.
+        - `weight` (Required): A weight applied to the primary text to adjust its influence or importance in the final prompt composition. Type should be `FLOAT`.
+        - `active` (Required): A boolean flag indicating whether the prompt composition should be active. If false, the composition may be bypassed or altered. Type should be `BOOLEAN`.
+        - `text_in_opt` (Optional): An optional text input that, if provided, is prepended to the main text to form the prompt. It allows for the inclusion of additional context or information. Type should be `STRING`.
+    - Outputs:
+        - `text_out`: The output text resulting from the composition of the input texts and their weights, formatted as a single string. Type should be `STRING`.

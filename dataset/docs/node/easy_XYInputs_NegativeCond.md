@@ -1,6 +1,0 @@
-- `easy XYInputs NegativeCond`: The easy XYInputs: NegativeCond node is designed to process negative conditioning inputs for XY plotting. It dynamically generates values and conditions based on the specified negative inputs, facilitating the creation of plots that visually represent negative conditions.
-    - Parameters:
-    - Inputs:
-        - `negative_i`: Specifies a negative condition to be considered in the XY plot. It plays a role in determining the plot's representation of negative conditions, where 'i' can range from 1 to 4, representing up to four negative conditions. Type should be `C`.
-    - Outputs:
-        - `X or Y`: Outputs the processed XY values and conditions, encapsulating the negative conditions into a format suitable for plotting. Type should be `X_Y`.

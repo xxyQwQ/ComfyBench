@@ -1,0 +1,5 @@
+- `ImpactMakeImageList`: The `ImpactMakeImageList` node is designed to aggregate multiple image inputs into a single list. This functionality is essential for scenarios where handling a collection of images as a unified entity is required, facilitating operations that span across multiple images.
+    - Inputs:
+        - `image1` (Required): The primary image input for the node. It serves as the initial element in the resulting image list, setting the stage for additional images to be appended. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: A list of images aggregated from the input. This output is crucial for subsequent operations that require processing multiple images simultaneously. Type should be `IMAGE`.

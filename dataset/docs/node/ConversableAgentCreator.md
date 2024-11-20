@@ -1,8 +1,0 @@
-- `ConversableAgentCreator`: This node is designed to facilitate the creation of conversable agents, which are AI entities capable of engaging in dialogue based on predefined system messages and optionally leveraging large language models (LLMs) for generating responses.
-    - Parameters:
-        - `name`: Specifies the name of the conversable agent, serving as its identifier. Type should be `STRING`.
-        - `system_message`: Defines the initial system message that sets the context or instructions for the conversable agent, guiding its interaction behavior. Type should be `STRING`.
-    - Inputs:
-        - `llm_model`: An optional parameter that allows the integration of a large language model (LLM) to enhance the agent's conversational capabilities by generating dynamic responses. Type should be `LLM_MODEL`.
-    - Outputs:
-        - `agent`: The created conversable agent, ready for interaction and capable of processing and responding to user inputs. Type should be `AGENT`.

@@ -1,9 +1,0 @@
-- `ImpactFrom_SEG_ELT_crop_region`: This node is designed to extract the bounding box coordinates from a given crop region of a segmented element. It serves as a utility within the ImpactPack to facilitate operations that require precise location information of a segment within an image.
-    - Parameters:
-    - Inputs:
-        - `crop_region`: Specifies the crop region from which to extract the bounding box coordinates. This parameter is crucial for determining the exact area of interest within the segmented element. Type should be `SEG_ELT_crop_region`.
-    - Outputs:
-        - `left`: The left coordinate of the bounding box extracted from the crop region. Type should be `INT`.
-        - `top`: The top coordinate of the bounding box extracted from the crop region. Type should be `INT`.
-        - `right`: The right coordinate of the bounding box extracted from the crop region. Type should be `INT`.
-        - `bottom`: The bottom coordinate of the bounding box extracted from the crop region. Type should be `INT`.

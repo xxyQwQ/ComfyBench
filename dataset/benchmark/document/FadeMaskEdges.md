@@ -1,0 +1,10 @@
+- `FadeMaskEdges`: This node is designed for refining the edges of masks in images, specifically targeting the enhancement of edge blending and smooth transitions. It focuses on premultiplying and alpha blending the edges of a subject to prevent the intrusion of outer pixels, which is particularly useful for stylized subjects or images requiring precise edge manipulation.
+    - Inputs:
+        - `binary_image` (Required): Represents the mask image to be processed, where the edge modifications will be applied. Type should be `IMAGE`.
+        - `edge_size` (Required): Defines the size of the edge to be faded, impacting the extent of the edge modification. Type should be `FLOAT`.
+        - `edge_tightness` (Required): Controls the rate at which the edge fades to black, affecting the sharpness of the edge transition. Type should be `FLOAT`.
+        - `edge_exponent` (Required): Determines the nature of the fade, potentially softening small lines for a smoother transition. Type should be `FLOAT`.
+        - `smoothing_diameter` (Required): Specifies the diameter for optional smoothing applied after edge processing, to further refine the edge appearance. Type should be `INT`.
+        - `paste_original_blacks` (Required): A boolean flag indicating whether to paste original black values back into the image, preserving dark regions. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The processed image with enhanced and smoothly blended edges. Type should be `IMAGE`.

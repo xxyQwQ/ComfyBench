@@ -1,9 +1,0 @@
-- `InRange (hsv)`: The InRangeHSV node is designed to filter an image based on a specified hue, saturation, and value (HSV) range. It allows for the selection of pixels within inclusive bounds of HSV values, enabling the isolation of specific colors or color ranges within an image.
-    - Parameters:
-        - `hue_mode`: Specifies the method to apply for hue filtering, allowing for different strategies such as ignoring, splitting, or selecting the largest/smallest hue interval. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `rgb_image`: The input RGB image to be converted to HSV and filtered based on the specified HSV values. This parameter is essential for defining the scope of the color filtering operation. Type should be `IMAGE`.
-        - `color_a`: One of the two color bounds in HSV format to define the filtering range. This parameter, in conjunction with color_b, determines the specific color range to be isolated. Type should be `HSV_COLOR`.
-        - `color_b`: The second of the two color bounds in HSV format to define the filtering range. Works together with color_a to specify the exact color range to be filtered. Type should be `HSV_COLOR`.
-    - Outputs:
-        - `image`: The output image after applying the HSV range filtering, highlighting the pixels within the specified HSV range and effectively isolating the desired color range. Type should be `IMAGE`.

@@ -1,8 +1,0 @@
-- `TEEDPreprocessor`: The TEEDPreprocessor node is designed for preprocessing images to extract soft-edge lines using the TEED (TEDDetector) model. It enhances the input image by applying a specialized line extraction technique, making it suitable for further processing or analysis.
-    - Parameters:
-        - `safe_steps`: Defines the number of safe steps to take during the line extraction process, affecting the robustness and sensitivity of the detection. Type should be `INT`.
-        - `resolution`: Specifies the resolution at which the image should be processed, impacting the detail level of the extracted lines. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for soft-edge line extraction. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is an image that has undergone line extraction to highlight soft edges, making it more suitable for tasks requiring detailed line information. Type should be `IMAGE`.

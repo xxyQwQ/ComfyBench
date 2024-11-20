@@ -1,0 +1,6 @@
+- `CustomSigmas`: The CustomSigmas node is designed to transform a list of float values into a tensor of sigmas, facilitating the manipulation and application of noise levels in generative models. It abstracts the process of converting numerical lists into a structured format that models can interpret for noise injection or adjustment.
+    - Inputs:
+        - `sigmas_string` (Required): A string of comma-separated values representing sigma levels, which are converted into a tensor. This input is essential for defining the noise characteristics to be applied in generative processes. Type should be `STRING`.
+        - `interpolate_to_steps` (Required): An integer specifying the number of steps to which the sigma values should be interpolated. This parameter adjusts the length of the sigma tensor to match the desired number of steps in the generative process. Type should be `INT`.
+    - Outputs:
+        - `SIGMAS`: A tensor of sigma values derived from the input list of floats, ready for use in noise application or adjustment within generative models. Type should be `SIGMAS`.

@@ -1,0 +1,54 @@
+{
+    "10": {
+        "_meta": {
+            "title": "RIFE VFI (recommend rife47 and rife49)"
+        },
+        "class_type": "RIFE VFI",
+        "inputs": {
+            "ckpt_name": "rife47.pth",
+            "clear_cache_after_n_frames": 10,
+            "ensemble": true,
+            "fast_mode": true,
+            "frames": [
+                "7",
+                0
+            ],
+            "multiplier": 3,
+            "scale_factor": 1
+        }
+    },
+    "3": {
+        "_meta": {
+            "title": "Video Combine \ud83c\udfa5\ud83c\udd65\ud83c\udd57\ud83c\udd62"
+        },
+        "class_type": "VHS_VideoCombine",
+        "inputs": {
+            "filename_prefix": "AnimateDiff",
+            "format": "image/gif",
+            "frame_rate": 24,
+            "images": [
+                "10",
+                0
+            ],
+            "loop_count": 0,
+            "pingpong": false,
+            "save_output": true
+        }
+    },
+    "7": {
+        "_meta": {
+            "title": "Load Video (Upload) \ud83c\udfa5\ud83c\udd65\ud83c\udd57\ud83c\udd62"
+        },
+        "class_type": "VHS_LoadVideo",
+        "inputs": {
+            "custom_height": 512,
+            "custom_width": 512,
+            "force_rate": 0,
+            "force_size": "Disabled",
+            "frame_load_cap": 0,
+            "select_every_nth": 1,
+            "skip_first_frames": 0,
+            "video": "play_guitar.gif"
+        }
+    }
+}

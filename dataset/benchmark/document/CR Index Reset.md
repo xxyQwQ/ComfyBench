@@ -1,0 +1,8 @@
+- `CR Index Reset`: This node is designed to reset an index to a specified value, providing a simple way to control and reset counters or indices within a workflow.
+    - Inputs:
+        - `index` (Required): The current value of the index. It is a required input that determines the starting point before the reset. Type should be `INT`.
+        - `reset_to` (Required): The value to which the index will be reset. This allows for flexible resetting of the index to any specified value within the allowed range. Type should be `INT`.
+    - Outputs:
+        - `index`: The reset value of the index, which is the same as the 'reset_to' input value. Type should be `INT`.
+        - `reset_to`: Echoes back the 'reset_to' input value, confirming the value to which the index was reset. Type should be `INT`.
+        - `show_help`: Provides a URL to the help documentation for this node. Type should be `STRING`.

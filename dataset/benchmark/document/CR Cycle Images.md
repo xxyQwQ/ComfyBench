@@ -1,0 +1,10 @@
+- `CR Cycle Images`: This node is designed to cycle through a sequence of images based on specified parameters, allowing for the creation of animations or slideshows. It supports looping through the images multiple times and selecting images in a sequential order, providing a dynamic visual experience.
+    - Inputs:
+        - `mode` (Required): Specifies the cycling mode, which determines how images are selected during the animation. 'Sequential' mode cycles through images in the order they are provided. Type should be `COMBO[STRING]`.
+        - `image_list` (Required): A list of images to be cycled through. Each item in the list represents an image and its associated parameters, enabling complex animations. Type should be `IMAGE_LIST`.
+        - `frame_interval` (Required): The interval between frames, which controls the speed of the animation. A lower value results in a faster animation. Type should be `INT`.
+        - `loops` (Required): Determines how many times the sequence of images is repeated, allowing for continuous animations. Type should be `INT`.
+        - `current_frame` (Required): The current frame number in the animation sequence. It is used to calculate which image to display at any given time. Type should be `INT`.
+    - Outputs:
+        - `IMAGE`: The current image to be displayed based on the cycling logic. It changes over time as the animation progresses. Type should be `IMAGE`.
+        - `show_help`: A URL to a help page providing additional information and guidance on using the node. Type should be `STRING`.

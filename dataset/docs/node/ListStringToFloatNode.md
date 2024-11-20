@@ -1,6 +1,0 @@
-- `ListStringToFloatNode`: The ListStringToFloatNode is designed to convert a string representation of a list into a float by performing a specified operation on the list elements, such as summing them. It handles both direct float values and lists of floats encapsulated as strings, providing a versatile tool for numerical data processing within a string-based input format.
-    - Parameters:
-        - `input_data`: Represents the string input that is either a direct float value or a string representation of a list of floats. This input is crucial for the node's operation as it determines the type of conversion and calculation to be performed. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `output_float`: The result of the conversion and calculation performed on the input data, provided as a single float value. Type should be `FLOAT`.

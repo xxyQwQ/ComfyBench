@@ -1,0 +1,6 @@
+- `Concat Images (mtb)`: The Concat Images node is designed to merge multiple images into a single batch, allowing for efficient processing and manipulation of image collections. It provides flexibility in handling size mismatches through customizable strategies.
+    - Inputs:
+        - `reverse` (Required): Determines the order in which images are concatenated. When set to True, images are concatenated in reverse order. Type should be `BOOLEAN`.
+        - `on_mismatch` (Optional): Specifies the strategy to adopt when there is a size mismatch between images being concatenated. Options include 'Error', 'Smallest', and 'Largest', with 'Smallest' being the default. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The output is a single batched tensor containing all the concatenated images, ready for further processing. Type should be `IMAGE`.

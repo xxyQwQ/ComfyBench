@@ -1,7 +1,0 @@
-- `StringConstantMultiline`: The StringConstantMultiline node is designed for handling multiline string inputs, allowing for the manipulation of text by optionally stripping newline characters. This node facilitates the processing of text data that spans multiple lines, making it suitable for applications requiring text normalization or preprocessing.
-    - Parameters:
-        - `string`: The 'string' parameter accepts a multiline string input, serving as the primary text data for processing. It enables the node to perform operations such as newline stripping based on the provided text. Type should be `STRING`.
-        - `strip_newlines`: The 'strip_newlines' parameter determines whether newline characters in the input text should be removed, allowing for flexible text manipulation based on the user's needs. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `string`: Outputs the processed string, which may have newline characters removed based on the 'strip_newlines' parameter, making it suitable for further text-based operations or analyses. Type should be `STRING`.

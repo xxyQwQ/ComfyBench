@@ -1,7 +1,0 @@
-- `Logic Comparison XOR`: This node performs an exclusive logical XOR operation on two boolean inputs, returning true if exactly one of the inputs is true, and false otherwise. It abstracts the concept of non-equivalence or exclusive disjunction in boolean logic, providing a straightforward way to compare two boolean values for exclusivity.
-    - Parameters:
-        - `boolean_a`: The first boolean value to compare. It plays a crucial role in determining the result of the XOR operation by its exclusivity with the second boolean value. Type should be `BOOLEAN`.
-        - `boolean_b`: The second boolean value to compare. It is essential in the XOR operation, working in conjunction with the first boolean value to determine exclusivity. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `boolean`: The result of the XOR operation, indicating whether exactly one of the input boolean values is true. Type should be `BOOLEAN`.

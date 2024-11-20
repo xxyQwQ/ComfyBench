@@ -1,7 +1,0 @@
-- `CM_SDXLResolution`: This node is designed to convert a string representation of a resolution into its numerical width and height components. It serves as a utility within the math/graphics category, facilitating the manipulation and analysis of image resolutions by breaking down their string format into distinct numerical values.
-    - Parameters:
-        - `resolution`: The 'resolution' parameter takes a string input representing an image resolution in the format 'widthxheight'. It is crucial for determining the output numerical values of width and height, effectively translating textual resolution data into a form that can be directly utilized in image processing tasks. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `width`: The 'width' output represents the numerical width component of the input resolution string. Type should be `INT`.
-        - `height`: The 'height' output represents the numerical height component of the input resolution string. Type should be `INT`.

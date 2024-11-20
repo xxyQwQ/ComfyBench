@@ -1,0 +1,9 @@
+- `DF_Logic_node`: The LogicNode facilitates the execution of basic logical operations such as comparisons (greater than, less than, equal to) and boolean operations (AND, OR, XOR) between input values. It abstractly supports decision-making processes by evaluating conditions and determining outcomes based on the specified logic.
+    - Inputs:
+        - `Operation` (Required): Specifies the logical operation to be performed, including comparisons and boolean operations, which dictates the logic applied between CompareValue_A and CompareValue_B. Type should be `COMBO[STRING]`.
+        - `CompareValue_A` (Required): The primary value for comparison or logical operation. Type should be `*`.
+        - `CompareValue_B` (Optional): The secondary value for comparison or logical operation, used in conjunction with CompareValue_A to evaluate the specified Operation. Type should be `*`.
+        - `OnTrue` (Optional): The value to return if the logical operation evaluates to true. Type should be `*`.
+        - `OnFalse` (Optional): The value to return if the logical operation evaluates to false. Type should be `*`.
+    - Outputs:
+        - `*`: The result of the logical operation, which can be either the OnTrue or OnFalse value based on the operation's outcome. Type should be `*`.

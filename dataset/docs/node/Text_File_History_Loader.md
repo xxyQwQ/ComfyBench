@@ -1,8 +1,0 @@
-- `Text File History Loader`: The Text File History Loader node is designed to read and process text files, filtering out comments and empty lines, and maintaining a history of processed files. It aims to provide a streamlined way to load and manipulate text data for further processing or analysis.
-    - Parameters:
-        - `file`: Specifies the path to the text file to be processed. It plays a crucial role in determining the source of the text data for the node. Type should be `COMBO[STRING]`.
-        - `dictionary_name`: Defines the key under which the processed lines will be stored in the output dictionary. This allows for customizable naming based on either the filename or a user-defined string. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: Returns the processed text as a single string with lines joined by newline characters, excluding comments and empty lines. Type should be `STRING`.
-        - `dict`: Provides a dictionary where the key is defined by `dictionary_name` and the value is a list of processed lines from the text file. Type should be `DICT`.

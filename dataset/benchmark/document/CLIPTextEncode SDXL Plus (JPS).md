@@ -1,0 +1,11 @@
+- `CLIPTextEncode SDXL Plus (JPS)`: This node is designed to encode text inputs using the CLIP model tailored for the SDXL architecture, enhancing text-based inputs for further processing or generation tasks. It focuses on refining and conditioning the input text to align with aesthetic or specific dimensional requirements, leveraging the advanced capabilities of the CLIP model to interpret and encode textual information in a way that's optimized for high-resolution image synthesis and manipulation.
+    - Inputs:
+        - `width` (Required): Specifies the width of the output image, influencing the spatial dimensions of the conditioned output. Type should be `INT`.
+        - `height` (Required): Specifies the height of the output image, influencing the spatial dimensions of the conditioned output. Type should be `INT`.
+        - `res_factor` (Required): Specifies the factor by which the resolution of the output is adjusted, influencing the overall quality and detail of the conditioned output. Type should be `INT`.
+        - `text_pos` (Required): The positive text input to be encoded, serving as a key component of the conditioning process to promote certain qualities or themes. Type should be `STRING`.
+        - `text_neg` (Required): The negative text input to be encoded, used to demote or reduce the presence of certain qualities or themes in the conditioning process. Type should be `STRING`.
+        - `clip` (Required): The CLIP model instance used for text tokenization and encoding, central to the node's functionality. Type should be `CLIP`.
+    - Outputs:
+        - `cond_pos`: The conditioned positive output, including encoded text information tailored to promote specified qualities or themes. Type should be `CONDITIONING`.
+        - `cond_neg`: The conditioned negative output, including encoded text information tailored to reduce or demote specified qualities or themes. Type should be `CONDITIONING`.

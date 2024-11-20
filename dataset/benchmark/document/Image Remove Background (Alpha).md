@@ -1,0 +1,8 @@
+- `Image Remove Background (Alpha)`: This node specializes in removing the background from images, utilizing various techniques to distinguish between foreground and background elements. It offers flexibility in handling different scenarios through parameters like mode, threshold, and smoothing, aiming to produce images with transparent backgrounds or altered backgrounds according to the specified requirements.
+    - Inputs:
+        - `images` (Required): The input image or images to process. This parameter is crucial as it serves as the base for background removal operations, determining the node's execution path and the quality of the output. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the operation mode, such as removing the background or altering it. This parameter influences the approach taken for processing the image, affecting the outcome significantly. Type should be `COMBO[STRING]`.
+        - `threshold` (Required): A value used to differentiate between the background and foreground, playing a key role in determining which parts of the image are retained or removed. Type should be `INT`.
+        - `threshold_tolerance` (Required): Defines the tolerance level for the threshold, allowing for finer control over the differentiation between background and foreground. This parameter helps in adjusting the sensitivity of the background removal process. Type should be `INT`.
+    - Outputs:
+        - `images`: The processed image or images with the background removed or altered, depending on the mode and parameters used. This output is essential for applications requiring images with transparent or customized backgrounds. Type should be `IMAGE`.

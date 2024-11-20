@@ -1,0 +1,17 @@
+- `BatchPromptSchedule`: The BatchPromptSchedule node is designed to process animation prompts by cleaning up input text, splitting it into positive and negative prompts based on predefined weights, and then applying a series of transformations to interpolate and condition these prompts for animation sequences. This node facilitates the generation of dynamic, frame-specific animation content by leveraging prompt scheduling techniques to adjust the influence of various prompts over the course of an animation.
+    - Inputs:
+        - `text` (Required): The text parameter includes the input text for animation prompts, which is processed to remove whitespace and newlines before being split into positive and negative prompts. Type should be `STRING`.
+        - `clip` (Required): The clip parameter represents the animation clip to which the prompt scheduling and conditioning will be applied. It is essential for aligning the generated prompts with the specific frames and dynamics of the animation. Type should be `CLIP`.
+        - `max_frames` (Required): This parameter specifies the maximum number of frames for the animation, used to determine the scheduling and interpolation of prompts across the animation sequence. Type should be `INT`.
+        - `print_output` (Required): A boolean parameter indicating whether to print the output of the prompt processing for debugging or informational purposes. Type should be `BOOLEAN`.
+        - `pre_text` (Optional): Pre-text to be added before each prompt, used to modify or enhance the original prompt text before processing. Type should be `STRING`.
+        - `app_text` (Optional): Appended text to be added after each prompt, serving to further customize or refine the prompt text. Type should be `STRING`.
+        - `start_frame` (Optional): Specifies the starting frame number for the animation, used in conjunction with end_frame to define the range of frames affected by the prompt scheduling. Type should be `INT`.
+        - `end_frame` (Optional): Defines the ending frame number for the animation, setting the boundary for prompt processing and application. Type should be `INT`.
+        - `pw_a` (Optional): Parameter weight A, part of a set of weights used to adjust the influence of various prompts or conditions within the animation. Type should be `FLOAT`.
+        - `pw_b` (Optional): Parameter weight B, another weight in the set for fine-tuning the prompt conditioning and scheduling. Type should be `FLOAT`.
+        - `pw_c` (Optional): Parameter weight C, used alongside other weights to customize the prompt's impact on the animation. Type should be `FLOAT`.
+        - `pw_d` (Optional): Parameter weight D, the last of the set of weights for adjusting prompt influence, contributing to the dynamic generation of animation content. Type should be `FLOAT`.
+    - Outputs:
+        - `POS`: The output 'POS' represents the conditioned positive prompts, ready for use in generating or influencing animation frames. Type should be `CONDITIONING`.
+        - `NEG`: The output 'NEG' represents the conditioned negative prompts, similarly prepared for influencing animation frames in contrast to the positive prompts. Type should be `CONDITIONING`.

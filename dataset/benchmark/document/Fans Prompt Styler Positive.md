@@ -1,0 +1,6 @@
+- `Fans Prompt Styler Positive`: This node is designed to modify and enhance text prompts based on a selection of positive styles. It allows for the dynamic integration of stylistic elements into user-defined prompts, aiming to tailor the output text to specific aesthetic or thematic preferences.
+    - Inputs:
+        - `style` (Required): The 'style' parameter allows users to select a specific style from a predefined list to apply to their prompt. This choice determines the stylistic transformation that the prompt will undergo, impacting the overall tone and presentation of the output. Type should be `COMBO[STRING]`.
+        - `prompt` (Required): The 'prompt' parameter accepts a user-defined text input that serves as the base content for stylistic enhancement. This input is crucial as it forms the foundation upon which the selected style is applied, directly influencing the final output. Type should be `STRING`.
+    - Outputs:
+        - `result`: The 'result' output is the transformed prompt text, incorporating the selected style to modify the original input according to the user's aesthetic or thematic preferences. Type should be `STRING`.

@@ -1,0 +1,15 @@
+- `LayerUtility_ ImageScaleRestore`: This node is designed to adjust the scale of images to a specified size or restore them to their original dimensions. It supports various resizing methods and can handle images with or without associated masks, making it versatile for different image processing tasks.
+    - Inputs:
+        - `image` (Required): The image to be scaled or restored. It is central to the node's operation as it directly influences the output image's dimensions and quality. Type should be `IMAGE`.
+        - `scale` (Required): Determines the scaling factor or the target size for the image resizing. It plays a crucial role in defining the new dimensions of the image. Type should be `FLOAT`.
+        - `method` (Required): Specifies the algorithm used for resizing the image, affecting the quality and characteristics of the output. Type should be `COMBO[STRING]`.
+        - `scale_by_longest_side` (Required): A flag indicating whether to scale the image by its longest side, ensuring aspect ratio preservation. Type should be `BOOLEAN`.
+        - `longest_side` (Required): Specifies the target length of the longest side of the image when scaled, relevant only if 'scale_by_longest_side' is True. Type should be `INT`.
+        - `mask` (Optional): An optional mask that will be resized in tandem with the image, useful for maintaining consistency between the image and its mask. Type should be `MASK`.
+        - `original_size` (Optional): The original dimensions of the image, used when restoring the image to its initial size or to scale the image to a specific size. Type should be `BOX`.
+    - Outputs:
+        - `image`: The scaled or restored image, reflecting the specified dimensions and resizing method. Type should be `IMAGE`.
+        - `mask`: The resized mask corresponding to the output image, if an input mask was provided. Type should be `MASK`.
+        - `original_size`: The original dimensions of the image, useful for reference or further processing. Type should be `BOX`.
+        - `width`: The width of the output image after scaling, providing specific detail on the image's dimensions. Type should be `INT`.
+        - `height`: The height of the output image after scaling, offering precise information on the image's size. Type should be `INT`.

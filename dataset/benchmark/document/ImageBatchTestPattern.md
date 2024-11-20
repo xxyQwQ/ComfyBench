@@ -1,0 +1,12 @@
+- `ImageBatchTestPattern`: The ImageBatchTestPattern node is designed to generate a batch of images, each containing a unique sequential number displayed in a randomly colored font. This functionality is useful for creating test patterns in image batches, where each image is customized with specific text, font, and size settings, and positioned according to given coordinates.
+    - Inputs:
+        - `batch_size` (Required): Specifies the number of images to generate in the batch, affecting the output batch size. Type should be `INT`.
+        - `start_from` (Required): The starting sequential number for the first image in the batch, setting the initial point for the sequence. Type should be `INT`.
+        - `text_x` (Required): The x-coordinate for the position of the text within the images, determining where the text appears horizontally. Type should be `INT`.
+        - `text_y` (Required): The y-coordinate for the position of the text within the images, determining where the text appears vertically. Type should be `INT`.
+        - `width` (Required): The width of the generated images, defining the horizontal dimension of each image in the batch. Type should be `INT`.
+        - `height` (Required): The height of the generated images, defining the vertical dimension of each image in the batch. Type should be `INT`.
+        - `font` (Required): The name of the font to use for the text in the images, influencing the visual style of the numbers. Type should be `COMBO[STRING]`.
+        - `font_size` (Required): Determines the size of the font used for the text, directly impacting the appearance of the numbers in the images. Type should be `INT`.
+    - Outputs:
+        - `image`: A tensor representing the batch of generated images, each normalized and containing a unique sequential number in a randomly colored font. Type should be `IMAGE`.

@@ -1,0 +1,7 @@
+- `MaskFromBatch+`: The MaskFromBatch+ node is designed for extracting a specific segment from a batch of masks based on the provided start index and length. It enables selective focus on particular portions of mask data for further processing or analysis.
+    - Inputs:
+        - `mask` (Required): The 'mask' parameter represents the batch of masks from which a segment will be extracted. It is crucial for specifying the data subset to be operated on. Type should be `MASK`.
+        - `start` (Required): The 'start' parameter determines the starting index from which the mask segment will be extracted, allowing for precise control over the selection of the data subset. Type should be `INT`.
+        - `length` (Required): The 'length' parameter specifies the number of masks to be extracted from the batch, enabling the extraction of a specific range of data for focused analysis or processing. Type should be `INT`.
+    - Outputs:
+        - `mask`: Returns a segment of the mask batch, extracted based on the specified start index and length, facilitating targeted manipulation or examination of mask data. Type should be `MASK`.

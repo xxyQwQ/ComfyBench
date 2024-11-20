@@ -1,0 +1,6 @@
+- `Seed String`: The Seed String node is designed to convert a numerical seed value into its string representation. This transformation facilitates the use of the seed in contexts where a string format is required, enhancing compatibility and ease of integration with various systems or processes.
+    - Inputs:
+        - `seed` (Required): The seed parameter is a numerical value that serves as the input for conversion into a string. This seed is crucial for ensuring consistent results across different executions or for seeding random number generators in a predictable manner. Type should be `INT`.
+    - Outputs:
+        - `seed`: The original numerical seed value, unchanged and passed through from the input. Type should be `INT`.
+        - `seed_string`: The string representation of the input seed, enabling its use in string-based contexts or systems. Type should be `STRING`.

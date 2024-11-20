@@ -1,0 +1,6 @@
+- `SaltMergeJSON`: The SaltMergeJSON node is designed to merge two JSON strings into a single JSON string, effectively combining their contents. This node is particularly useful in scenarios where integrating data from multiple JSON sources is required.
+    - Inputs:
+        - `json_input1` (Required): The first JSON string to be merged. It plays a crucial role in the merging process as it forms the base onto which the second JSON string's contents are added. Type should be `STRING`.
+        - `json_input2` (Required): The second JSON string to be merged with the first. Its contents are added to those of the first JSON string, contributing to the creation of the merged JSON output. Type should be `STRING`.
+    - Outputs:
+        - `json_output`: The resulting JSON string after merging the contents of the two input JSON strings. It represents the combined data structure. Type should be `STRING`.

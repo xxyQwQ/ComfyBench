@@ -1,0 +1,6 @@
+- `RAFTEstimate`: The RAFTEstimate node is designed to estimate the optical flow between two images using the RAFT algorithm. It abstracts the complexities of optical flow computation, providing a straightforward way to obtain motion vectors that describe the apparent motion of objects between consecutive images.
+    - Inputs:
+        - `image_a` (Required): The first image in a sequence for which the optical flow is to be calculated. It serves as the reference frame against which movements are measured. Type should be `IMAGE`.
+        - `image_b` (Required): The second image in the sequence, following 'image_a'. It is compared against the first image to estimate the motion vectors. Type should be `IMAGE`.
+    - Outputs:
+        - `raft_flow`: The estimated optical flow represented as a tensor. It encapsulates the motion vectors between the two input images. Type should be `RAFT_FLOW`.

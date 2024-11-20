@@ -1,0 +1,14 @@
+- `ADE_AdjustWeightIndivAttnMult`: This node is designed to adjust the weights of individual attention components in a model by applying multiplication factors. It allows for fine-tuning of the attention mechanism's parameters, such as query, key, value, and output weights and biases, to potentially enhance model performance or adapt it to specific tasks.
+    - Inputs:
+        - `pe_MULT` (Required): Specifies the multiplication factor for positional encoding weights, influencing how much the positional information contributes to the model's attention mechanism. Type should be `FLOAT`.
+        - `attn_MULT` (Required): Determines the overall multiplication factor for the attention weights, affecting the model's focus on different parts of the input. Type should be `FLOAT`.
+        - `attn_q_MULT` (Required): Applies a multiplication factor to the query weights of the attention mechanism, adjusting its querying capabilities. Type should be `FLOAT`.
+        - `attn_k_MULT` (Required): Sets the multiplication factor for the key weights, influencing the model's ability to match queries to relevant information. Type should be `FLOAT`.
+        - `attn_v_MULT` (Required): Controls the multiplication factor for the value weights, affecting how input information is summarized. Type should be `FLOAT`.
+        - `attn_out_weight_MULT` (Required): Adjusts the output weights of the attention mechanism through a multiplication factor, impacting the final attention output. Type should be `FLOAT`.
+        - `attn_out_bias_MULT` (Required): Modifies the bias of the attention output with a multiplication factor, potentially altering the attention mechanism's output bias. Type should be `FLOAT`.
+        - `other_MULT` (Required): Applies a multiplication factor to other unspecified model weights, offering a generic way to adjust model parameters. Type should be `FLOAT`.
+        - `print_adjustment` (Required): A flag to enable or disable printing of the adjustment details, useful for debugging or monitoring the adjustment process. Type should be `BOOLEAN`.
+        - `prev_weight_adjust` (Optional): Allows for chaining adjustments by taking a previous weight adjustment group as input, enabling cumulative adjustments. Type should be `WEIGHT_ADJUST`.
+    - Outputs:
+        - `weight_adjust`: Returns an updated weight adjustment group, incorporating the specified multiplicative adjustments to the model's attention mechanism and potentially other weights. Type should be `WEIGHT_ADJUST`.

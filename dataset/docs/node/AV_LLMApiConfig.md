@@ -1,8 +1,0 @@
-- `AV_LLMApiConfig`: The AV_LLMApiConfig node is designed to generate configuration settings for language model APIs, specifically focusing on model selection, token limits, and temperature settings. It abstracts the complexity of configuring language models for use in various applications, providing a streamlined interface for specifying essential parameters.
-    - Parameters:
-        - `model`: Specifies the language model to be used, allowing selection from a predefined list of GPT and Claude models. The choice of model directly influences the behavior and capabilities of the generated language model configuration. Type should be `COMBO[STRING]`.
-        - `max_token`: Defines the maximum number of tokens the language model can generate or process in a single request, setting a limit on the output's length. Type should be `INT`.
-        - `temperature`: Controls the creativity or randomness of the language model's responses, with higher values leading to more varied outputs. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `llm_config`: The generated configuration for the language model, encapsulating model choice, token limits, and temperature settings. Type should be `LLM_CONFIG`.

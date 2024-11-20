@@ -1,0 +1,12 @@
+- `LayerMask_ BlendIf Mask`: The `BlendIfMask` node provides functionality for blending images based on specific color channel thresholds, allowing for complex masking operations that can dynamically adjust the visibility of layers or effects based on the underlying color values.
+    - Inputs:
+        - `image` (Required): The primary image to be processed, serving as the base for the blend if operation. Type should be `IMAGE`.
+        - `invert_mask` (Required): Determines whether the mask should be inverted, affecting how the blend conditions are applied. Type should be `BOOLEAN`.
+        - `blend_if` (Required): Specifies the color channel (gray, red, green, blue) to be used for the blend if condition, dictating how the blending is controlled. Type should be `COMBO[STRING]`.
+        - `black_point` (Required): The threshold below which pixels are fully transparent in the blending operation, allowing for fine-tuning of dark areas. Type should be `INT`.
+        - `black_range` (Required): Defines the range over which the transparency effect fades from fully transparent to fully opaque, offering control over the blend transition in dark areas. Type should be `INT`.
+        - `white_point` (Required): The threshold above which pixels are fully opaque, enabling precise control over bright areas in the blend. Type should be `INT`.
+        - `white_range` (Required): Determines the range over which the opacity effect transitions from fully opaque to fully transparent, facilitating smooth blending in bright areas. Type should be `INT`.
+        - `mask` (Optional): An optional mask that can be applied to further refine the blending operation, providing additional control over which parts of the image are affected. Type should be `MASK`.
+    - Outputs:
+        - `mask`: The resulting mask after applying the blend if conditions, which can be used to selectively apply effects or layer visibility. Type should be `MASK`.

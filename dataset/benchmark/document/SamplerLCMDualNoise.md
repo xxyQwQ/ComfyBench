@@ -1,0 +1,8 @@
+- `SamplerLCMDualNoise`: The SamplerLCMDualNoise node provides a mechanism for generating samples using a dual noise approach within a custom sampling framework. It leverages a combination of weights, normalization steps, and the option to reuse or parallelize noise generation to enhance the sampling process.
+    - Inputs:
+        - `weight` (Required): Specifies the blending weight between two noise-induced samples, influencing the balance and variation in the sampling output. Type should be `FLOAT`.
+        - `normalize_steps` (Required): Determines the number of normalization steps to apply, affecting the smoothness and quality of the generated samples. Type should be `INT`.
+        - `reuse_lcm_noise` (Required): Controls whether the same noise is reused across sampling steps, impacting the diversity and consistency of samples. Type should be `BOOLEAN`.
+        - `parallel` (Required): Enables parallel processing of noise generation, potentially speeding up the sampling process. Type should be `BOOLEAN`.
+    - Outputs:
+        - `sampler`: Produces a sampler configured with dual noise characteristics for generating samples. Type should be `SAMPLER`.

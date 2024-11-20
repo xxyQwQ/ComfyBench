@@ -1,0 +1,16 @@
+- `SeargeImageSaving`: This node is designed for the purpose of saving images during various stages of image generation and processing. It handles the intricacies of saving original, high-resolution, and upscaled images based on specific conditions and settings, ensuring that the images are stored correctly and efficiently.
+    - Inputs:
+        - `save_parameters_file` (Required): Determines whether the parameters file should be saved, impacting the node's operation by enabling or disabling the saving of parameter configurations. Type should be `BOOLEAN`.
+        - `save_folder` (Required): Specifies the folder where images and related files should be saved, influencing the node's behavior in terms of organizing saved outputs. Type should be `COMBO[STRING]`.
+        - `save_generated_image` (Required): Controls the saving of generated images, playing a crucial role in the node's operation by dictating whether or not these images are persisted. Type should be `BOOLEAN`.
+        - `embed_workflow_in_generated` (Required): Determines whether the workflow information should be embedded in generated images, affecting the node's functionality by enabling or disabling the embedding of workflow metadata. Type should be `BOOLEAN`.
+        - `generated_image_name` (Required): Specifies the name for generated images, influencing how saved images are named and organized. Type should be `STRING`.
+        - `save_high_res_image` (Required): Determines the saving of high-resolution images, affecting the node's functionality by enabling or disabling the saving of these images. Type should be `BOOLEAN`.
+        - `embed_workflow_in_high_res` (Required): Decides if workflow information should be embedded in high-resolution images, impacting the node's behavior by enabling or disabling the embedding of workflow metadata in high-res images. Type should be `BOOLEAN`.
+        - `high_res_image_name` (Required): Specifies the name for high-resolution images, influencing how these images are named and organized upon saving. Type should be `STRING`.
+        - `save_upscaled_image` (Required): Controls the saving of upscaled images, impacting the node's behavior by dictating the saving process of upscaled images. Type should be `BOOLEAN`.
+        - `embed_workflow_in_upscaled` (Required): Determines whether workflow information should be embedded in upscaled images, affecting the node's functionality by enabling or disabling the embedding of workflow metadata in upscaled images. Type should be `BOOLEAN`.
+        - `upscaled_image_name` (Required): Specifies the name for upscaled images, influencing how these images are named and organized. Type should be `STRING`.
+        - `data` (Optional): An optional parameter that allows passing additional data through the node, potentially affecting its operation based on the provided data. Type should be `SRG_DATA_STREAM`.
+    - Outputs:
+        - `data`: Returns the modified data with image saving settings applied, facilitating further processing or utilization downstream. Type should be `SRG_DATA_STREAM`.

@@ -1,0 +1,10 @@
+- `CtrlNet CannyEdge Settings (JPS)`: This node is designed to configure settings for the Canny Edge detection process within a pipeline, allowing users to specify parameters such as edge detection strength, start and end thresholds, and high and low threshold values.
+    - Inputs:
+        - `cannyedge_from` (Required): Specifies the source of the image for Canny Edge detection, allowing selection from predefined sources such as 'Source Image', 'Support Image', or 'Support Direct'. Type should be `COMBO[STRING]`.
+        - `cannyedge_strength` (Required): Determines the intensity of the edge detection process, with a range allowing for fine-tuning of the edge detection's sensitivity. Type should be `FLOAT`.
+        - `cannyedge_start` (Required): Sets the starting threshold for edge detection, enabling control over the minimum edge strength that will be considered. Type should be `FLOAT`.
+        - `cannyedge_end` (Required): Defines the ending threshold for edge detection, allowing users to limit the maximum edge strength that will be detected. Type should be `FLOAT`.
+        - `cannyedge_low` (Required): Specifies the low threshold value for the hysteresis procedure in Canny Edge detection, influencing the detection of weaker edges. Type should be `INT`.
+        - `cannyedge_high` (Required): Sets the high threshold value for the hysteresis procedure in Canny Edge detection, affecting the detection of stronger edges. Type should be `INT`.
+    - Outputs:
+        - `cannyedge_settings`: Outputs the configured settings for Canny Edge detection as a tuple, ready to be used in the detection process. Type should be `BASIC_PIPE`.

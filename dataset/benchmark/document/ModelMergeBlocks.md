@@ -1,0 +1,9 @@
+- `ModelMergeBlocks`: ModelMergeBlocks is designed for advanced model merging operations, allowing for the integration of two models with customizable blending ratios for different parts of the models. This node facilitates the creation of hybrid models by selectively merging components from two source models based on specified parameters.
+    - Inputs:
+        - `model1` (Required): The first model to be merged. It serves as the base model onto which patches from the second model are applied. Type should be `MODEL`.
+        - `model2` (Required): The second model from which patches are extracted and applied to the first model, based on the specified blending ratios. Type should be `MODEL`.
+        - `input` (Required): Specifies the blending ratio for the input layer of the models. It determines how much of the second model's input layer is merged into the first model. Type should be `FLOAT`.
+        - `middle` (Required): Defines the blending ratio for the middle layers of the models. This parameter controls the integration level of the models' middle layers. Type should be `FLOAT`.
+        - `out` (Required): Determines the blending ratio for the output layer of the models. It affects the final output by adjusting the contribution of the second model's output layer. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The resulting merged model, which is a hybrid of the two input models with patches applied according to the specified blending ratios. Type should be `MODEL`.

@@ -1,0 +1,5 @@
+- `CheckpointHash`: The CheckpointHash node is designed to generate a hash value for a given checkpoint file. It identifies the file within a specified directory, computes its hash, and updates a prompt dictionary with the hash and checkpoint name. This functionality is crucial for ensuring the integrity and uniqueness of checkpoint files in machine learning workflows.
+    - Inputs:
+        - `ckpt_name` (Required): The name of the checkpoint file for which the hash is to be generated. This parameter is essential for locating the file within the directory and computing its hash. Type should be `STRING`.
+    - Outputs:
+        - `ckpt_hash`: The computed hash value of the checkpoint file, ensuring its integrity and uniqueness. Type should be `STRING`.

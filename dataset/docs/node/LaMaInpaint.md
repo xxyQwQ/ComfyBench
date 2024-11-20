@@ -1,8 +1,0 @@
-- `LaMaInpaint`: The LaMaInpaint node is designed for object removal and image inpainting tasks, leveraging deep learning models to fill in missing or unwanted areas of an image with plausible textures and details. It processes images and corresponding masks to generate inpainted images, seamlessly blending the inpainted regions with the original image content.
-    - Parameters:
-        - `device_mode`: Specifies the device (CPU or GPU) on which the inpainting operation is performed, allowing for flexibility in resource utilization. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The input image tensor that needs inpainting. It represents the visual data where certain regions are marked for removal or restoration. Type should be `IMAGE`.
-        - `mask`: The mask tensor indicating the areas to be inpainted. Pixels with non-zero values in the mask are treated as regions needing inpainting. Type should be `MASK`.
-    - Outputs:
-        - `image`: The output tensor containing the inpainted image, where the specified regions have been filled in with generated content matching the surrounding areas. Type should be `IMAGE`.

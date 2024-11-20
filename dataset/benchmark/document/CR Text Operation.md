@@ -1,0 +1,7 @@
+- `CR Text Operation`: This node performs various text manipulation operations such as changing case, reversing, trimming, or removing spaces from the input text based on the specified operation.
+    - Inputs:
+        - `text` (Required): The text to be manipulated. It is the primary input on which all operations are performed, affecting the node's execution and results. Type should be `STRING`.
+        - `operation` (Required): Specifies the text manipulation operation to be applied to the input text, such as uppercase, lowercase, capitalize, invert case, reverse, trim, or remove spaces. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `STRING`: The manipulated text after applying the specified operation. Type should be `*`.
+        - `show_help`: A URL providing help and additional information about the text operation node. Type should be `STRING`.

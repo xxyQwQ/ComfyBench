@@ -1,9 +1,0 @@
-- `SaltMaskBilateralFilter`: The SaltMaskBilateralFilter node applies a bilateral filter to mask regions to smooth them while preserving edges, enhancing the quality of mask regions by reducing noise and maintaining structural integrity.
-    - Parameters:
-        - `diameter`: Specifies the diameter of each pixel neighborhood that is used during filtering. Type should be `INT`.
-        - `sigmaColor`: Represents the filter sigma in the color space, controlling how much colors in the neighborhood will be mixed together. Type should be `FLOAT`.
-        - `sigmaSpace`: Determines the filter sigma in the coordinate space, affecting the spatial closeness of pixels to be considered during filtering. Type should be `FLOAT`.
-    - Inputs:
-        - `masks`: The input masks to be processed with the bilateral filter, aiming to smooth the mask regions while preserving their edges. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The output tensor of regions after applying the bilateral filter, where each region has been smoothed while preserving edges. Type should be `MASK`.

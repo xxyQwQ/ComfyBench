@@ -1,0 +1,14 @@
+- `Revision Settings (JPS)`: The Revision Settings (JPS) node is designed to configure and apply various revision settings for image processing tasks. It allows for the adjustment of parameters such as strength and noise augmentation for revisions, as well as crop and offset settings, providing a flexible tool for fine-tuning image revisions.
+    - Inputs:
+        - `rev1_strength` (Required): Defines the strength of the first revision. It influences the intensity of the applied adjustments, affecting the overall impact on the image. Type should be `FLOAT`.
+        - `rev2_strength` (Required): Specifies the strength of the second revision. This parameter controls the intensity of adjustments for the second revision, impacting the final image outcome. Type should be `FLOAT`.
+        - `rev1_noiseaug` (Required): Determines the level of noise augmentation for the first revision. It adds noise to the image, simulating various effects or enhancing realism. Type should be `FLOAT`.
+        - `rev2_noiseaug` (Required): Sets the noise augmentation level for the second revision, adding noise to simulate effects or enhance the image's realism. Type should be `FLOAT`.
+        - `rev1_crop` (Required): Specifies the cropping area for the first revision. It defines how the image is cropped, affecting the composition and focus area. Type should be `COMBO[STRING]`.
+        - `rev1_offset` (Required): Defines the offset for the first revision's crop. It adjusts the crop's position, allowing for precise control over the image's framing. Type should be `INT`.
+        - `rev2_crop` (Required): Indicates the cropping area for the second revision. This parameter determines the cropping strategy, influencing the image's composition and focus. Type should be `COMBO[STRING]`.
+        - `rev2_offset` (Required): Sets the offset for the second revision's crop, adjusting its position for targeted framing and composition adjustments. Type should be `INT`.
+        - `crop_intpol` (Required): Specifies the interpolation method for cropping. It affects the quality and appearance of the cropped area, offering various options for different effects. Type should be `COMBO[STRING]`.
+        - `crop_res` (Required): Defines the resolution for cropping. It determines the size of the cropped area, impacting the detail and scale of the final image. Type should be `INT`.
+    - Outputs:
+        - `revision_settings`: Outputs the configured revision settings as a tuple, ready for application in image processing tasks. Type should be `BASIC_PIPE`.

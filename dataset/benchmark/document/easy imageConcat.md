@@ -1,0 +1,8 @@
+- `easy imageConcat`: The `easy imageConcat` node is designed to concatenate two images either horizontally or vertically, with an option to match their sizes for seamless integration. This functionality is essential for tasks requiring the combination of images in a specific orientation, such as creating panoramic views or composite images.
+    - Inputs:
+        - `image1` (Required): The first image to be concatenated. It serves as the base image to which the second image will be attached. Type should be `IMAGE`.
+        - `image2` (Required): The second image to be concatenated to the first one. This image can be resized to match the first image's dimensions if required. Type should be `IMAGE`.
+        - `direction` (Required): Specifies the direction of concatenation ('right', 'down', 'left', 'up'), determining how the second image is attached to the first. Type should be `COMBO[STRING]`.
+        - `match_image_size` (Required): A boolean flag indicating whether the second image should be resized to match the first image's dimensions before concatenation. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The resulting image after concatenating the two input images according to the specified direction and size matching option. Type should be `IMAGE`.

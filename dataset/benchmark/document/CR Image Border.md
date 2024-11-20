@@ -1,0 +1,14 @@
+- `CR Image Border`: This node is designed to add customizable borders around images. It allows for the adjustment of border thickness on all sides and the specification of border color, including the option to use a hex color code. Additionally, it supports the creation of feathered borders, providing a soft, blurred edge effect around the image.
+    - Inputs:
+        - `image` (Required): The input image or images to which the border will be applied. This parameter is crucial for defining the visual content that will be enhanced with a border. Type should be `IMAGE`.
+        - `top_thickness` (Required): Specifies the thickness of the border at the top edge of the image. This parameter allows for the customization of the border's appearance by adjusting its size. Type should be `INT`.
+        - `bottom_thickness` (Required): Specifies the thickness of the border at the bottom edge of the image. This parameter enables the user to customize the border's appearance by adjusting its size. Type should be `INT`.
+        - `left_thickness` (Required): Specifies the thickness of the border at the left edge of the image. This parameter allows for the customization of the border's appearance by adjusting its size. Type should be `INT`.
+        - `right_thickness` (Required): Specifies the thickness of the border at the right edge of the image. This parameter enables the user to customize the border's appearance by adjusting its size. Type should be `INT`.
+        - `border_color` (Required): Defines the color of the border. This parameter allows for the customization of the border's appearance by choosing a specific color. Type should be `COMBO[STRING]`.
+        - `outline_thickness` (Required): Determines the thickness of the outline around the image, separate from the main border. This allows for an additional layer of customization. Type should be `INT`.
+        - `outline_color` (Required): Specifies the color of the outline. This parameter works in conjunction with outline thickness to enhance the visual appeal of the image. Type should be `COMBO[STRING]`.
+        - `border_color_hex` (Optional): An optional hex code to specify the border color, providing an alternative method for defining the border's color. Type should be `STRING`.
+    - Outputs:
+        - `image`: The output image with the applied borders. This includes any adjustments made to border thickness, color, feathering, and outline. Type should be `IMAGE`.
+        - `show_help`: A URL providing additional information and guidance on using the CR Image Border node. Type should be `STRING`.

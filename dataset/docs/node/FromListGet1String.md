@@ -1,7 +1,0 @@
-- `FromListGet1String`: This node is designed to retrieve a single string element from a list based on a specified index. It allows for flexible access to list elements, including support for negative indexing to access elements from the end of the list.
-    - Parameters:
-        - `list`: The list from which a string element is to be retrieved. It is essential for specifying the source list. Type should be `STRING`.
-        - `index`: The index at which the string element is to be retrieved from the list. Supports negative indexing for reverse access. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `string`: The string element retrieved from the specified index of the list. Type should be `STRING`.

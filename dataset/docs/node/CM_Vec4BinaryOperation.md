@@ -1,8 +1,0 @@
-- `CM_Vec4BinaryOperation`: The node CM_Vec4BinaryOperation performs binary operations on two 4-dimensional vectors (Vec4), resulting in a new Vec4 that represents the outcome of the operation. It abstracts complex vector arithmetic into simple, high-level operations, facilitating mathematical manipulations in vector space.
-    - Parameters:
-        - `op`: Specifies the binary operation to be performed on the vectors. It determines how the two Vec4 inputs will be combined to produce the output Vec4. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `a`: The first 4-dimensional vector (Vec4) input for the binary operation. Acts as one of the operands in the vector arithmetic. Type should be `VEC4`.
-        - `b`: The second 4-dimensional vector (Vec4) input for the binary operation. Acts as the other operand in the vector arithmetic. Type should be `VEC4`.
-    - Outputs:
-        - `vec4`: The result of the binary operation on the two Vec4 inputs, returned as a new Vec4. Type should be `VEC4`.

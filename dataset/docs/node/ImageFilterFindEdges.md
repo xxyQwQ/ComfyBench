@@ -1,6 +1,0 @@
-- `ImageFilterFindEdges`: The ImageFilterFindEdges node applies an edge detection filter to a set of images, highlighting the edges within each image. This process enhances the visual distinction of boundaries and lines, making it easier to identify shapes and features.
-    - Parameters:
-    - Inputs:
-        - `images`: The 'images' parameter represents the collection of images to which the edge detection filter will be applied. It is crucial for defining the input data that will undergo transformation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a set of images that have undergone edge detection filtering, with enhanced visibility of edges and lines. Type should be `IMAGE`.

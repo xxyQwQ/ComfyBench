@@ -1,0 +1,14 @@
+- `GLIGENTextBoxApplyBatchCoords`: The GLIGENTextBoxApplyBatchCoords node is designed for scheduling the positions of GLIGEN text boxes within a batch, specifically tailored for use with AnimateDiff-Evolved. It facilitates the integration of text box positioning with the Spline Editor node, enabling dynamic text placement in generated images. This node processes batched coordinates and text inputs to compute positioning parameters, enhancing the visual storytelling capabilities of GLIGEN-generated content.
+    - Inputs:
+        - `conditioning_to` (Required): The target for applying the conditioning, typically a sequence of conditioning layers or parameters. Type should be `CONDITIONING`.
+        - `latents` (Required): Used to determine the batch size for processing, indicating the number of latent representations to be positioned. Type should be `LATENT`.
+        - `clip` (Required): A standard text encoder used for encoding the text inputs, ensuring compatibility with the main prompt processing. Type should be `CLIP`.
+        - `gligen_textbox_model` (Required): Connects to the GLIGEN Loader, enabling the application of GLIGEN-specific text box positioning logic. Type should be `GLIGEN`.
+        - `coordinates` (Required): Accepts a JSON string of points for text box positioning, directly compatible with the Spline Editor node. Type should be `STRING`.
+        - `text` (Required): Specifies the text content for which positions are being set within the GLIGEN bounding box. Type should be `STRING`.
+        - `width` (Required): Defines the width of the GLIGEN bounding box for text placement. Type should be `INT`.
+        - `height` (Required): Specifies the height of the GLIGEN bounding box for text placement. Type should be `INT`.
+        - `size_multiplier` (Optional): A factor that scales the size of the GLIGEN bounding box, affecting the overall dimensions of the text placement area. Type should be `FLOAT`.
+    - Outputs:
+        - `conditioning`: Provides the conditioning parameters for the clip text encoder and sampler, facilitating the integration of positioned text into the generation process. Type should be `CONDITIONING`.
+        - `coord_preview`: An optional output offering a visual preview of the text box coordinates and bounding boxes. Type should be `IMAGE`.

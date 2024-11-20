@@ -1,0 +1,6 @@
+- `ConditioningCombine`: The ConditioningCombine node is designed to merge two conditioning inputs into a single, combined conditioning output. This functionality is essential for scenarios where multiple conditioning contexts need to be applied simultaneously to a generative model.
+    - Inputs:
+        - `conditioning_1` (Required): Represents the first conditioning vector to be merged into the combined conditioning output. Type should be `CONDITIONING`.
+        - `conditioning_2` (Required): Represents the second conditioning vector to be merged into the combined conditioning output. Type should be `CONDITIONING`.
+    - Outputs:
+        - `conditioning`: The combined conditioning output, which encapsulates the merged context of the two input conditionings. Type should be `CONDITIONING`.

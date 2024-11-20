@@ -1,0 +1,19 @@
+- `ADE_CameraPoseAdvanced`: The ADE_CameraPoseAdvanced node is designed for creating advanced camera control poses for animations. It allows for the combination of multiple motion types and strengths to generate complex camera movements, enhancing the dynamic visual storytelling in animated sequences.
+    - Inputs:
+        - `motion_type1` (Required): Specifies the first type of camera motion to apply, influencing the overall camera movement and its visual impact on the animation. Type should be `COMBO[STRING]`.
+        - `strength1` (Required): Specifies the strength multiplier for the first motion type, adjusting the intensity of the camera's movement. Type should be `FLOAT`.
+        - `motion_type2` (Required): Defines the second type of camera motion, contributing to the complexity and depth of the camera's path. Type should be `COMBO[STRING]`.
+        - `strength2` (Required): Defines the strength multiplier for the second motion type, modifying the impact of the camera's path. Type should be `FLOAT`.
+        - `motion_type3` (Required): Indicates the third type of camera motion, adding another layer of movement to the camera's trajectory. Type should be `COMBO[STRING]`.
+        - `strength3` (Required): Indicates the strength multiplier for the third motion type, altering the camera's movement intensity. Type should be `FLOAT`.
+        - `motion_type4` (Required): Specifies the fourth type of camera motion, further enriching the camera's movement and its effect on the scene. Type should be `COMBO[STRING]`.
+        - `strength4` (Required): Specifies the strength multiplier for the fourth motion type, affecting the depth of the camera's trajectory. Type should be `FLOAT`.
+        - `motion_type5` (Required): Defines the fifth type of camera motion, enhancing the animation with additional movement nuances. Type should be `COMBO[STRING]`.
+        - `strength5` (Required): Defines the strength multiplier for the fifth motion type, influencing the nuance of the camera's movement. Type should be `FLOAT`.
+        - `motion_type6` (Required): Indicates the sixth type of camera motion, completing the set of movements for sophisticated camera control. Type should be `COMBO[STRING]`.
+        - `strength6` (Required): Indicates the strength multiplier for the sixth motion type, fine-tuning the complexity of the camera's control. Type should be `FLOAT`.
+        - `speed` (Required): Controls the speed of the camera movement, affecting how quickly or slowly the camera transitions between poses. Type should be `FLOAT`.
+        - `frame_length` (Required): Determines the number of frames over which the camera movement is applied, defining the duration of the motion. Type should be `INT`.
+        - `prev_poses` (Optional): Optional. Previous camera poses that can be combined with the new motion for seamless transitions in animations. Type should be `CAMERACTRL_POSES`.
+    - Outputs:
+        - `cameractrl_poses`: The resulting camera control poses, representing the combined effect of the specified motions and parameters on the camera's path through the animation. Type should be `CAMERACTRL_POSES`.

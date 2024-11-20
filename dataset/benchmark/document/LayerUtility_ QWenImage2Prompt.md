@@ -1,0 +1,6 @@
+- `LayerUtility_ QWenImage2Prompt`: This node integrates a chat model to generate text prompts based on an input image and a question. It utilizes an image-to-text conversion process to facilitate interactions with the chat model, aiming to produce descriptive or query-responsive text outputs.
+    - Inputs:
+        - `image` (Required): The input image for which the text prompt will be generated. It serves as the visual context for the chat model to interpret and describe. Type should be `IMAGE`.
+        - `question` (Required): An optional question to guide the generation of the text prompt, allowing for more specific or directed outputs from the chat model. Type should be `STRING`.
+    - Outputs:
+        - `text`: The generated text prompt that describes or answers the question about the input image. Type should be `STRING`.

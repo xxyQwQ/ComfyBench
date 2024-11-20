@@ -1,7 +1,0 @@
-- `LLMEpubReader`: The LLMEpubReader node specializes in reading and converting Epub book files into a structured document format, facilitating the processing and analysis of digital book content.
-    - Parameters:
-        - `path`: Specifies the file system path to the Epub book file to be read. This path is essential for locating and accessing the file for processing. Type should be `STRING`.
-        - `extra_info`: Provides additional, optional information that can be used to influence the reading process or to pass extra parameters specific to the Epub file being processed. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `documents`: Returns the content of the Epub book file as a structured document, making it accessible for further processing and analysis. Type should be `DOCUMENT`.

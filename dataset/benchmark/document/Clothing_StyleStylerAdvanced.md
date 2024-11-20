@@ -1,0 +1,15 @@
+- `Clothing_StyleStylerAdvanced`: This node specializes in applying advanced styling techniques to text prompts related to clothing style, utilizing a selection of predefined templates to enhance or modify the original text based on user-selected styling options. It allows for detailed customization through various styling parameters, enabling users to fine-tune the appearance and tone of their text prompts.
+    - Inputs:
+        - `text_positive_g` (Required): The global positive text prompt to be styled, focusing on clothing style. It serves as the base content for global styling modifications. Type should be `STRING`.
+        - `text_positive_l` (Required): The local positive text prompt to be styled, focusing on clothing style. It serves as the base content for local styling modifications. Type should be `STRING`.
+        - `text_negative` (Required): The negative text prompt to be styled, focusing on clothing style. It serves as the base content for styling modifications. Type should be `STRING`.
+        - `clothing_style` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Specifies the scope of the negative prompt styling, allowing selection between global, local, or both. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag to enable or disable logging of the prompt transformation process, providing insights into the styling effects. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The styled version of the global positive text prompt, reflecting the applied clothing style modifications. Type should be `STRING`.
+        - `text_positive_l`: The styled version of the local positive text prompt, reflecting the applied clothing style modifications. Type should be `STRING`.
+        - `text_positive`: The combined styled version of the positive text prompt, integrating both global and local modifications. Type should be `STRING`.
+        - `text_negative_g`: The styled version of the global negative text prompt, reflecting the applied clothing style modifications. Type should be `STRING`.
+        - `text_negative_l`: The styled version of the local negative text prompt, reflecting the applied clothing style modifications. Type should be `STRING`.
+        - `text_negative`: The combined styled version of the negative text prompt, integrating both global and local modifications. Type should be `STRING`.

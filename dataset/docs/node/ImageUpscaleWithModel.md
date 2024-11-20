@@ -1,7 +1,0 @@
-- `ImageUpscaleWithModel`: This node is designed to upscale images using a specified upscale model, adjusting the process dynamically to manage memory constraints and optimize for performance. It employs a tiling strategy to handle large images in segments, ensuring efficient use of resources while maintaining high-quality upscaling.
-    - Parameters:
-    - Inputs:
-        - `upscale_model`: The upscale model to be used for upscaling the image. It determines the upscaling algorithm and its parameters, playing a crucial role in the quality and characteristics of the output image. Type should be `UPSCALE_MODEL`.
-        - `image`: The input image to be upscaled. This image is processed and upscaled according to the specifications of the provided upscale model. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The upscaled image, processed and enhanced by the upscale model. It is returned as a tensor with adjustments to its dimensions and pixel values to reflect the upscaling. Type should be `IMAGE`.

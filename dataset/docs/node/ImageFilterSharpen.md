@@ -1,6 +1,0 @@
-- `ImageFilterSharpen`: The ImageFilterSharpen node applies a sharpen filter to images, enhancing their details and making them appear more crisp and defined.
-    - Parameters:
-    - Inputs:
-        - `images`: The images to be processed with the sharpen filter. This input is crucial for defining the visual content that will undergo enhancement to appear more defined and crisp. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The processed images after applying the sharpen filter, resulting in enhanced sharpness and detail. Type should be `IMAGE`.

@@ -1,0 +1,12 @@
+- `Automatic CFG - Preset Loader`: This node is designed to dynamically adjust the configuration of generative models by applying predefined or custom presets. It enhances model performance and flexibility by allowing users to modify model behavior based on specific presets, which can include adjustments to conditional and unconditional generation parameters, attention mechanisms, and other model-specific settings.
+    - Inputs:
+        - `model` (Required): The generative model to which the preset configurations will be applied. This parameter is crucial as it determines the base model that will be modified according to the selected preset. Type should be `MODEL`.
+        - `preset` (Required): The name of the preset to be applied to the model. Presets define a set of parameters and modifications that tailor the model's behavior for specific tasks or performance characteristics. Type should be `COMBO[STRING]`.
+        - `uncond_sigma_end` (Required): Specifies the end value for the unconditional sigma parameter, allowing for fine-tuning of the model's unconditional generation capabilities. Type should be `FLOAT`.
+        - `use_uncond_sigma_end_from_preset` (Required): A boolean flag indicating whether to use the unconditional sigma end value specified in the preset or the value provided directly to the node. Type should be `BOOLEAN`.
+        - `automatic_cfg` (Required): Determines the mode of automatic configuration to be applied, which can range from preset-defined settings to custom configurations aimed at optimizing model performance. Type should be `COMBO[STRING]`.
+        - `join_global_parameters` (Optional): Optional parameters that can be globally applied to the model, enhancing its capabilities or modifying its behavior in conjunction with the selected preset. Type should be `ATTNMOD`.
+    - Outputs:
+        - `Model`: unknown Type should be `MODEL`.
+        - `Preset name`: unknown Type should be `STRING`.
+        - `Parameters as string`: A detailed string representation of the applied preset parameters, providing insight into the modifications made to the model. Type should be `STRING`.

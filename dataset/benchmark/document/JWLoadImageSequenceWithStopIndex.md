@@ -1,0 +1,9 @@
+- `JWLoadImageSequenceWithStopIndex`: This node is designed to batch load a sequence of images based on a specified start and stop index, with options to include or exclude the stop index and to ignore missing images. It facilitates the dynamic loading of image sequences from a filesystem, allowing for flexible data handling in image processing workflows.
+    - Inputs:
+        - `path_pattern` (Required): Specifies the pattern or path for locating the images to be loaded, using placeholders for indices. Type should be `STRING`.
+        - `start_index` (Required): Defines the starting index for the sequence of images to be loaded. Type should be `INT`.
+        - `stop_index` (Required): Sets the ending index for the image sequence loading, determining the range of images to include. Type should be `INT`.
+        - `inclusive` (Required): Determines whether the stop index is included in the loading sequence, allowing for inclusive or exclusive range selection. Type should be `['false', 'true']`.
+        - `ignore_missing_images` (Required): Controls whether to ignore missing images within the specified range, enabling robust handling of incomplete sequences. Type should be `['false', 'true']`.
+    - Outputs:
+        - `image`: Returns the loaded sequence of images as a tensor, ready for further processing or analysis. Type should be `IMAGE`.

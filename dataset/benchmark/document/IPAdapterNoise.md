@@ -1,0 +1,8 @@
+- `IPAdapterNoise`: The IPAdapterNoise node specializes in adding noise to images, offering customizable noise types, strengths, and blur levels. It can optionally work with existing images to enhance or modify their appearance with noise, providing a versatile tool for image processing tasks that require noise injection for effects or testing purposes.
+    - Inputs:
+        - `type` (Required): Specifies the type of noise to be added to the image, affecting the visual characteristics of the noise applied. Type should be `COMBO[STRING]`.
+        - `strength` (Required): Determines the intensity of the noise added to the image, allowing for control over how pronounced the noise effect will be. Type should be `FLOAT`.
+        - `blur` (Required): Applies a Gaussian blur to the noise, with the ability to adjust the level of blur for a smoother or more subtle noise effect. Type should be `INT`.
+        - `image_optional` (Optional): An optional parameter that allows for the addition of noise to an existing image, enhancing or altering its appearance with noise. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The output is a modified image tensor with applied noise, potentially blurred, reflecting the specified noise characteristics. Type should be `IMAGE`.

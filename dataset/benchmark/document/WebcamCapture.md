@@ -1,0 +1,8 @@
+- `WebcamCapture`: The WebcamCapture node is designed to capture images from a webcam, allowing for the specification of image dimensions and the option to capture based on a queue. It extends the functionality of loading images by integrating webcam support, making it suitable for real-time image processing applications.
+    - Inputs:
+        - `image` (Required): Specifies the source from the webcam for image capture. It is essential for initiating the capture process. Type should be `WEBCAM`.
+        - `width` (Required): Determines the width of the captured image. A value of 0 indicates no resizing, allowing for customization of the image dimensions. Type should be `INT`.
+        - `height` (Required): Sets the height of the captured image. Similar to width, a value of 0 means the image will not be resized, providing flexibility in image size. Type should be `INT`.
+        - `capture_on_queue` (Required): Controls whether the image capture is triggered based on a queue. When enabled, it allows for more controlled and efficient image capturing. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The captured image from the webcam. This output can be directly used for further processing or visualization. Type should be `IMAGE`.

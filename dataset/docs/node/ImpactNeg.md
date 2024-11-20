@@ -1,6 +1,0 @@
-- `ImpactNeg`: The ImpactNeg node is designed to invert the truth value of a given boolean input. It serves as a logical NOT operation, transforming true to false and vice versa, thus enabling conditional logic flows within a node network.
-    - Parameters:
-        - `value`: The 'value' parameter represents the boolean input to be negated. Its inversion facilitates the execution of conditional logic based on the negated result. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `boolean`: The output is the negated boolean value of the input, enabling further conditional logic operations based on the result. Type should be `BOOLEAN`.

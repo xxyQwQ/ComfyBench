@@ -1,8 +1,0 @@
-- `SolidMask`: The SolidMask node generates a uniform mask with a specified value across its entire area. It's designed to create masks of specific dimensions and intensity, useful in various image processing and masking tasks.
-    - Parameters:
-        - `value`: Specifies the intensity value of the mask, affecting its overall appearance and utility in subsequent operations. Type should be `FLOAT`.
-        - `width`: Determines the width of the generated mask, directly influencing its size and aspect ratio. Type should be `INT`.
-        - `height`: Sets the height of the generated mask, affecting its size and aspect ratio. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `mask`: Outputs a uniform mask with the specified dimensions and value. Type should be `MASK`.

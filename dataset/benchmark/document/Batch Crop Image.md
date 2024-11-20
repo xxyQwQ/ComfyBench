@@ -1,0 +1,6 @@
+- `Batch Crop Image`: The BatchCropImage node is designed for processing a batch of images by cropping them based on a specified amount. It operates on a directory of images, applying a uniform crop operation to each image to reduce their dimensions by a certain percentage, thereby preparing the images for further processing or analysis.
+    - Inputs:
+        - `image_directory` (Required): Specifies the directory containing the images to be processed. It is crucial for locating and accessing the batch of images for cropping. Type should be `STRING`.
+        - `crop_amount` (Required): Determines the percentage of the image to be cropped from each side. This parameter directly influences the final size of the cropped images, affecting both their width and height. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The cropped images are returned as a list, with each element representing a cropped version of the original images found in the specified directory. Type should be `IMAGE`.

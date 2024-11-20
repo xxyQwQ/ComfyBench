@@ -1,0 +1,10 @@
+- `FindThreshold`: The FindThreshold node is designed to dynamically determine an optimal threshold value for image processing tasks. It systematically searches through a specified range of threshold values, applying each to the source image and evaluating the result based on a user-defined condition. This approach allows for adaptive thresholding, enabling the selection of a threshold that best meets the criteria for a given image or set of images.
+    - Inputs:
+        - `src` (Required): The source image on which thresholding operations are to be performed. It serves as the primary input for the threshold search process. Type should be `IMAGE`.
+        - `start_at` (Required): Specifies the starting point of the threshold value range to be considered in the search process. Type should be `INT`.
+        - `end_at` (Required): Defines the end point of the threshold value range for the search, allowing the node to limit its evaluation to a specific range. Type should be `INT`.
+        - `thresh_type` (Required): Determines the type of thresholding to be applied during the search process, influencing how the threshold values are evaluated against the source image. Type should be `COMBO[STRING]`.
+        - `downscale_factor` (Required): A factor by which the source image is downscaled before thresholding, optimizing the search process by reducing computational load. Type should be `INT`.
+        - `condition` (Required): A user-defined condition (expressed as a string of Python code) that evaluates the effectiveness of each threshold value applied, guiding the selection of the optimal threshold. Type should be `STRING`.
+    - Outputs:
+        - `image`: The output image after applying the optimal threshold found through the search process. Type should be `IMAGE`.

@@ -1,0 +1,6 @@
+- `Conditioning Switch (JPS)`: The Conditioning Switch node is designed to select and output one of several conditioning inputs based on a specified selection index. It facilitates dynamic control over which conditioning data is passed forward in a processing pipeline, allowing for flexible manipulation of conditioning contexts within generative models or other computational frameworks.
+    - Inputs:
+        - `select` (Required): The 'select' parameter determines which conditioning input to output, based on its numerical index. It is essential for controlling the flow of different conditioning contexts through the node. Type should be `INT`.
+        - `con_i` (Optional): Represents a series of optional conditioning inputs (con_1 to con_5), where 'i' can range from 1 to 5. These inputs allow for dynamic selection of conditioning data based on the 'select' parameter, enabling varied contextual inputs for processing. Type should be `CONDITIONING`.
+    - Outputs:
+        - `con_out`: The output conditioning data selected based on the 'select' parameter. It enables dynamic switching between different conditioning contexts. Type should be `CONDITIONING`.

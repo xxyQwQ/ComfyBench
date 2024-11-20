@@ -1,0 +1,7 @@
+- `CR Simple Text Scheduler`: This node is designed to manage and schedule text animations within a user interface, allowing for dynamic text updates based on predefined schedules or conditions.
+    - Inputs:
+        - `schedule` (Required): The 'schedule' parameter specifies the text and timing for each animation frame, serving as the blueprint for dynamic text updates. Type should be `STRING`.
+        - `current_frame` (Required): The 'current_frame' parameter indicates the current frame number in the animation sequence, determining which part of the schedule to execute. Type should be `INT`.
+    - Outputs:
+        - `STRING`: This output represents the text scheduled for the current frame, ready for display or further processing. Type should be `STRING`.
+        - `show_help`: Provides a URL to documentation or help related to the scheduling process, offering guidance on how to use the scheduler effectively. Type should be `STRING`.

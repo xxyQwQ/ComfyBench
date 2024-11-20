@@ -1,7 +1,0 @@
-- `easy fooocusInpaintLoader`: The `fooocusInpaintLoader` node is designed to facilitate the loading and application of inpainting models and patches within the ComfyUI framework. It primarily focuses on integrating inpainting capabilities into the model processing pipeline, enabling the enhancement or correction of images by applying learned inpainting patterns.
-    - Parameters:
-        - `head`: The `head` parameter represents the inpainting model head that is to be loaded. It plays a crucial role in determining the inpainting behavior and the quality of the output images. Type should be `COMBO[STRING]`.
-        - `patch`: The `patch` parameter refers to the specific inpainting patch to be applied. This patch modifies the model's behavior, allowing for targeted inpainting based on the provided patch information. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `patch`: The output is a tuple containing the inpainting head model and the LoRA patch, ready to be applied to the model for inpainting tasks. Type should be `INPAINT_PATCH`.

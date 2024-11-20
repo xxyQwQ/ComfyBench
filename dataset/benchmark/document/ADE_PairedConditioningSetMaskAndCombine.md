@@ -1,0 +1,14 @@
+- `ADE_PairedConditioningSetMaskAndCombine`: This node specializes in the advanced manipulation of paired conditioning data for generative models, focusing on the application and combination of masks and additional conditioning layers. It enables the enhancement or modification of existing conditioning through the application of masks, strength adjustments, and the integration of new conditioning elements, thereby facilitating more precise control over the generative process.
+    - Inputs:
+        - `positive` (Required): The original positive conditioning data to be enhanced or modified. Type should be `CONDITIONING`.
+        - `negative` (Required): The original negative conditioning data to be enhanced or modified. Type should be `CONDITIONING`.
+        - `positive_ADD` (Required): The additional positive conditioning data to be combined with the original. Type should be `CONDITIONING`.
+        - `negative_ADD` (Required): The additional negative conditioning data to be combined with the original. Type should be `CONDITIONING`.
+        - `strength` (Required): A parameter defining the intensity of the mask or conditioning modification. Type should be `FLOAT`.
+        - `set_cond_area` (Required): Specifies the area of conditioning to which the mask or modifications are applied. Type should be `COMBO[STRING]`.
+        - `opt_mask` (Optional): An optional mask to apply to the conditioning data for selective modification. Type should be `MASK`.
+        - `opt_lora_hook` (Optional): An optional parameter allowing the application of Lora hooks to the conditioning data, providing an additional layer of transformation or control. Type should be `LORA_HOOK`.
+        - `opt_timesteps` (Optional): Optional timesteps for conditioning, allowing for temporal adjustments. Type should be `TIMESTEPS_COND`.
+    - Outputs:
+        - `positive`: The enhanced or modified positive conditioning data after applying masks, strength adjustments, and combining with additional conditioning. Type should be `CONDITIONING`.
+        - `negative`: The enhanced or modified negative conditioning data after applying masks, strength adjustments, and combining with additional conditioning. Type should be `CONDITIONING`.

@@ -1,0 +1,8 @@
+- `WAV Curve [Dream]`: The WAV Curve node dynamically generates animation curves based on the amplitude of audio data from a WAV file, allowing animations to be synchronized with audio. It scales the amplitude value for a given frame, providing both float and integer outputs for versatile use in animation scripting.
+    - Inputs:
+        - `frame_counter` (Required): The frame counter is essential for determining the current point in the animation timeline, affecting which part of the WAV file's amplitude is used to generate the curve. Type should be `FRAME_COUNTER`.
+        - `wav_path` (Required): Specifies the path to the WAV file whose audio data is used to generate the animation curve. A default path is provided, but can be customized. Type should be `STRING`.
+        - `scale` (Required): A multiplier for the amplitude value extracted from the WAV file, allowing for adjustment of the animation curve's intensity. Type should be `FLOAT`.
+    - Outputs:
+        - `FLOAT`: The scaled amplitude value from the WAV file as a floating-point number, suitable for precise animation adjustments. Type should be `FLOAT`.
+        - `INT`: The scaled amplitude value from the WAV file, rounded to the nearest integer, for discrete animation steps. Type should be `INT`.

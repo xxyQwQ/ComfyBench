@@ -1,6 +1,0 @@
-- `ConvertAgentAsTool`: This node is designed to transform conversational agents into tools that can be utilized within a broader system. It encapsulates the functionality of an agent, allowing it to be invoked as a callable tool with a specific interface, thereby extending the agent's capabilities to new contexts.
-    - Parameters:
-    - Inputs:
-        - `agent`: The conversational agent to be transformed into a tool. This agent's conversational abilities are repurposed to function within a tool interface, enabling its integration into larger workflows. Type should be `AGENT`.
-    - Outputs:
-        - `tool`: The transformed conversational agent, now structured as a callable tool. This tool retains the agent's conversational capabilities, repackaged for direct invocation within system workflows. Type should be `TOOL`.

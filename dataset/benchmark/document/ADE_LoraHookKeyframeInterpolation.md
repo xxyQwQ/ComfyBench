@@ -1,0 +1,12 @@
+- `ADE_LoraHookKeyframeInterpolation`: This node is designed to create interpolated LoRA hook keyframes for animation conditioning, allowing for the dynamic adjustment of model behavior over a sequence of frames. It leverages interpolation techniques to generate a series of keyframes based on specified start and end percentages, strengths, and intervals, facilitating smooth transitions and precise control over the animation process.
+    - Inputs:
+        - `start_percent` (Required): Defines the starting percentage of the animation sequence where the first keyframe is to be applied, influencing the initial point of model behavior adjustment. Type should be `FLOAT`.
+        - `end_percent` (Required): Specifies the ending percentage of the animation sequence, marking where the last keyframe's effect concludes, thus delineating the span of the interpolation. Type should be `FLOAT`.
+        - `strength_start` (Required): Sets the initial strength value for the first keyframe, determining the starting intensity of the model's behavior modification. Type should be `FLOAT`.
+        - `strength_end` (Required): Determines the final strength value for the last keyframe, defining the ending intensity of the model's behavior adjustment. Type should be `FLOAT`.
+        - `interpolation` (Required): Chooses the method of interpolation for generating intermediate strength values between keyframes, affecting the smoothness and progression of the animation. Type should be `COMBO[STRING]`.
+        - `intervals` (Required): Specifies the number of intervals (or keyframes) to generate between the start and end points, impacting the granularity of the animation conditioning. Type should be `INT`.
+        - `print_keyframes` (Required): A flag to enable or disable printing of the generated keyframes for debugging or verification purposes. Type should be `BOOLEAN`.
+        - `prev_hook_kf` (Optional): An optional parameter allowing for the inclusion of previously defined LoRA hook keyframes, enabling the extension or modification of an existing keyframe sequence. Type should be `LORA_HOOK_KEYFRAMES`.
+    - Outputs:
+        - `HOOK_KF`: The resulting sequence of interpolated LoRA hook keyframes, ready for use in animation conditioning. Type should be `LORA_HOOK_KEYFRAMES`.

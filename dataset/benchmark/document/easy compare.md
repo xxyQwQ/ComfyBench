@@ -1,0 +1,7 @@
+- `easy compare`: The 'easy compare' node provides a straightforward way to compare two values based on a specified comparison operation. It abstracts the complexity of various comparison operations into a simple interface, enabling users to easily integrate logical comparison functionality within their workflows.
+    - Inputs:
+        - `a` (Required): The first value to be compared. It plays a crucial role in the comparison operation, serving as the baseline for the comparison. Type should be `*`.
+        - `b` (Required): The second value to be compared against the first. Its comparison to the first value determines the outcome of the operation. Type should be `*`.
+        - `comparison` (Required): Specifies the type of comparison operation to be performed between the two values. This determines how the values are evaluated against each other. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `boolean`: The result of the comparison operation, indicating whether the specified condition between the two values is met. Type should be `BOOLEAN`.

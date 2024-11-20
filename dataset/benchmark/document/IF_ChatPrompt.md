@@ -1,0 +1,31 @@
+- `IF_ChatPrompt`: The IF_ChatPrompt node is designed to facilitate interactive chat experiences by generating responses based on user inputs and a variety of parameters. It supports customization of the chat experience through different engines, models, and prompts, and includes features for managing conversation history and context.
+    - Inputs:
+        - `prompt` (Required): The initial prompt or question to start the conversation. It sets the context for the chatbot's response. Type should be `STRING`.
+        - `base_ip` (Required): The IP address of the server where the chat engine is hosted. It's crucial for establishing a connection to the engine. Type should be `STRING`.
+        - `port` (Required): The port number on the server to connect to the chat engine. It specifies the exact entry point for communication. Type should be `STRING`.
+        - `engine` (Required): Specifies the chat engine to use for generating responses. It allows for selection among various pre-defined engines, enabling flexibility in response generation. Type should be `COMBO[STRING]`.
+        - `selected_model` (Required): The specific model selected for generating responses. This parameter allows for further customization of the chat experience. Type should be `[]`.
+        - `assistant` (Required): Defines the assistant's persona or role in the conversation, allowing for tailored responses based on the selected assistant. Type should be `COMBO[STRING]`.
+        - `context` (Optional): The current context or state of the conversation. It's essential for generating coherent and contextually relevant responses. Type should be `STRING`.
+        - `images` (Optional): An image to be included in the chat context, allowing for responses that can incorporate visual elements. Type should be `IMAGE`.
+        - `max_tokens` (Optional): The maximum number of tokens to generate for the response. It controls the length of the chatbot's replies. Type should be `INT`.
+        - `temperature` (Optional): Controls the randomness of the response generation, affecting the creativity and variability of the replies. Type should be `FLOAT`.
+        - `top_k` (Optional): Limits the number of highest probability vocabulary tokens considered for each step, influencing the response's diversity. Type should be `INT`.
+        - `top_p` (Optional): Nucleus sampling parameter that controls the cumulative probability cutoff, shaping the response's unpredictability. Type should be `FLOAT`.
+        - `repeat_penalty` (Optional): Adjusts the likelihood of repeating the same line, aiming to reduce redundancy in responses. Type should be `FLOAT`.
+        - `stop` (Optional): A set of tokens that signal the end of a response, helping to delineate the chatbot's replies. Type should be `STRING`.
+        - `seed` (Optional): A seed for the random number generator, ensuring reproducibility of responses under the same conditions. Type should be `INT`.
+        - `random` (Optional): Toggles between using a fixed seed or temperature for randomness, affecting the consistency of responses. Type should be `BOOLEAN`.
+        - `embellish_prompt` (Optional): A prompt modifier that adds embellishment to the initial prompt, enhancing the creativity of the response. Type should be `COMBO[STRING]`.
+        - `style_prompt` (Optional): A prompt modifier that applies a specific style to the response, allowing for stylistic customization. Type should be `COMBO[STRING]`.
+        - `neg_prompt` (Optional): A prompt modifier that specifies content to avoid in the response, helping to tailor the chatbot's output. Type should be `COMBO[STRING]`.
+        - `clear_history` (Optional): Controls whether to clear the chat history, affecting the continuity of the conversation. Type should be `BOOLEAN`.
+        - `history_steps` (Optional): Specifies the number of recent messages to retain in the chat history, influencing the context available for generating responses. Type should be `INT`.
+        - `keep_alive` (Optional): Determines whether to keep the model loaded between requests, impacting response time and resource usage. Type should be `BOOLEAN`.
+        - `text_cleanup` (Optional): unknown Type should be `BOOLEAN`.
+        - `mode` (Optional): unknown Type should be `BOOLEAN`.
+    - Outputs:
+        - `Question`: The original question or prompt provided to the chatbot. Type should be `STRING`.
+        - `Response`: The generated response from the chatbot based on the input prompt and parameters. Type should be `STRING`.
+        - `Negative`: A generated response that specifically avoids the content outlined in the neg_prompt parameter. Type should be `STRING`.
+        - `Context`: The updated context of the conversation after the response, including any modifications made during processing. Type should be `STRING`.

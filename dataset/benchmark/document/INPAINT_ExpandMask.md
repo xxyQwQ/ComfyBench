@@ -1,0 +1,7 @@
+- `INPAINT_ExpandMask`: The ExpandMask node is designed for modifying the input mask by expanding its boundaries and applying a blur effect, making it suitable for inpainting tasks where adjusting the mask size and softness can help in achieving better results.
+    - Inputs:
+        - `mask` (Required): The 'mask' parameter represents the input mask to be expanded and blurred. It is crucial for defining the area to be inpainted. Type should be `MASK`.
+        - `grow` (Required): The 'grow' parameter specifies the amount by which the mask's boundaries should be expanded. It plays a key role in determining the new size of the mask. Type should be `INT`.
+        - `blur` (Required): The 'blur' parameter controls the intensity of the blur effect applied to the expanded mask, affecting the softness of its edges. Type should be `INT`.
+    - Outputs:
+        - `mask`: The output is a modified mask with expanded boundaries and applied blur, ready for inpainting tasks. Type should be `MASK`.

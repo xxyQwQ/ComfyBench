@@ -1,8 +1,0 @@
-- `CondPassThrough`: The CondPassThrough node is designed to facilitate the direct passage of positive and negative conditioning data. It serves as a workaround to enable bypassing inputs in scenarios where the Set node's limitations would otherwise prevent such an operation.
-    - Parameters:
-    - Inputs:
-        - `positive`: Represents the positive conditioning data to be passed through. It plays a crucial role in maintaining the integrity of the data flow, especially in bypass scenarios. Type should be `CONDITIONING`.
-        - `negative`: Represents the negative conditioning data to be passed through. It ensures that negative conditioning data can also be seamlessly integrated into the workflow without alteration. Type should be `CONDITIONING`.
-    - Outputs:
-        - `positive`: Outputs the unmodified positive conditioning data, ensuring its availability for subsequent processing steps. Type should be `CONDITIONING`.
-        - `negative`: Outputs the unmodified negative conditioning data, maintaining its original form for further use. Type should be `CONDITIONING`.

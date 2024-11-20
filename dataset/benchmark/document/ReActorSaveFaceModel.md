@@ -1,0 +1,8 @@
+- `ReActorSaveFaceModel`: This node is designed to save a face model after processing an image or a set of images. It involves analyzing faces within the provided images, selecting a specific face based on an index, and saving the analyzed face model to a specified location. The node supports operations such as building a face model from an image, selecting a face from the model, and saving the selected face model for future use.
+    - Inputs:
+        - `save_mode` (Required): Indicates whether the face model should be saved. This affects the node's operation by either proceeding with saving the model or skipping this step. Type should be `BOOLEAN`.
+        - `face_model_name` (Required): The name under which the face model will be saved. This name is used to create the file name for the saved model. Type should be `STRING`.
+        - `select_face_index` (Required): The index of the face to select from the analyzed faces in the image. This allows for specific face selection within a group of detected faces. Type should be `INT`.
+        - `image` (Optional): The image from which the face model will be built. This is optional if a pre-analyzed face model is provided. Type should be `IMAGE`.
+        - `face_model` (Optional): A pre-analyzed face model that can be saved directly without further analysis. This is optional if an image is provided for analysis. Type should be `FACE_MODEL`.
+    - Outputs:

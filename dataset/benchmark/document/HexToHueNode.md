@@ -1,0 +1,9 @@
+- `HexToHueNode`: The HexToHueNode is designed to convert hexadecimal color values to their corresponding hue values, providing both the hue in degrees and normalized hue as outputs. It serves as a utility for color manipulation, enabling the transformation of color specifications from a web-friendly format to a format that can be used for more detailed color analysis and adjustments.
+    - Inputs:
+        - `color_hex` (Required): The hexadecimal representation of a color, which the node converts into hue values. This input is essential for determining the specific color's hue characteristics. Type should be `STRING`.
+    - Outputs:
+        - `string_hex`: The original hexadecimal color value inputted to the node. Type should be `STRING`.
+        - `float_hue_degrees`: The hue of the color in degrees, providing a measure of the color's position on the color wheel. Type should be `FLOAT`.
+        - `float_hue_norm`: The normalized hue value, scaled between -0.5 and 0.5, offering a standardized measure of hue. Type should be `FLOAT`.
+        - `string_hue_degrees`: The hue value in degrees, represented as a string. Type should be `STRING`.
+        - `string_hue_norm`: The normalized hue value, represented as a string, for ease of use in contexts where a string format is preferred. Type should be `STRING`.

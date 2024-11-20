@@ -1,0 +1,12 @@
+- `LayerUtility_ LoadPSD`: This node is designed to load and process Photoshop (PSD) files, extracting individual layers, including hidden ones if specified, and converting them into a format suitable for further image processing or analysis. It supports selective layer extraction based on layer visibility, name, or index, and provides functionality to handle cases where the specified layer is not found by either defaulting to the top layer or generating a placeholder image.
+    - Inputs:
+        - `image` (Required): Specifies the PSD file to be loaded. This is the primary input for the node, determining which PSD file's layers are to be processed and extracted. Type should be `COMBO[STRING]`.
+        - `file_path` (Required): The path to the PSD file to be loaded. If provided, this path is used to locate the PSD file; otherwise, a default path is used. Type should be `STRING`.
+        - `include_hidden_layer` (Required): A boolean flag that determines whether hidden layers within the PSD file should be included in the processing and output. Type should be `BOOLEAN`.
+        - `find_layer_by` (Required): Determines the method of layer selection, either by the layer's name or its index within the PSD file. Type should be `COMBO[STRING]`.
+        - `layer_index` (Required): An integer specifying the index of the layer to be extracted. Used when 'find_layer_by' is set to 'layer_index'. Type should be `INT`.
+        - `layer_name` (Required): The name of the layer to be extracted. Used when 'find_layer_by' is set to 'layer_name'. Type should be `STRING`.
+    - Outputs:
+        - `flat_image`: The flattened version of the PSD file, converted to a standard image format. Type should be `IMAGE`.
+        - `layer_image`: The extracted layer specified by the user, converted into a tensor format suitable for image processing tasks. Type should be `IMAGE`.
+        - `all_layers`: A collection of all processed layers from the PSD file, each converted into a tensor format. Type should be `IMAGE`.

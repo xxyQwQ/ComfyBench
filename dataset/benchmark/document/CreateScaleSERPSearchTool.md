@@ -1,0 +1,11 @@
+- `CreateScaleSERPSearchTool`: This node facilitates the creation of a search tool powered by ScaleSERP, designed to perform search engine queries optimized for comprehensive, accurate, and trusted results. It is particularly useful for answering questions related to current events, leveraging a variety of parameters such as search type, location, and device preferences to tailor the search results.
+    - Inputs:
+        - `api_key` (Required): The API key required to authenticate requests with the ScaleSERP service. It is crucial for enabling the search functionality of the tool. Type should be `STRING`.
+        - `function_name` (Required): The name assigned to the created search tool. It serves as an identifier and is used to reference the tool within the system. Type should be `STRING`.
+        - `search_type` (Required): Specifies the type of search to be performed, influencing the nature of the results returned. It allows for customization of the search to fit specific needs or contexts. Type should be `COMBO[STRING]`.
+        - `location` (Optional): An optional parameter that specifies the geographical location for the search, enabling localized search results. Type should be `STRING`.
+        - `device` (Optional): Defines the type of device the search is optimized for, such as desktop, mobile, or tablet, affecting the format and relevance of the search results. Type should be `COMBO[STRING]`.
+        - `mobile_type` (Optional): Specifies the type of mobile device for the search when the device is set to mobile, further customizing the search experience. Type should be `COMBO[STRING]`.
+        - `tablet_type` (Optional): Specifies the type of tablet device for the search when the device is set to tablet, further customizing the search experience. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `tool`: The search tool created, encapsulating the functionality to perform searches using ScaleSERP with the specified parameters. Type should be `TOOL`.

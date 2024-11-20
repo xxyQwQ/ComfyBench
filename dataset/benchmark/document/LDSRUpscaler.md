@@ -1,0 +1,10 @@
+- `LDSRUpscaler`: The LDSRUpscaler node is designed to upscale images using the LDSR model, providing a high-level interface for enhancing image resolution through deep learning techniques. It abstracts the complexities of the underlying LDSR model operations, offering a simplified method for users to improve image quality with options for pre and post downscaling and different downsample methods.
+    - Inputs:
+        - `model` (Required): Specifies the LDSR model to be used for upscaling. This model determines the upscaling technique and quality. Type should be `COMBO[STRING]`.
+        - `images` (Required): The images to be upscaled. This input allows for batch processing of multiple images, enhancing their resolution. Type should be `IMAGE`.
+        - `steps` (Required): Defines the number of steps for the upscaling process, affecting the quality and computation time of the upscaling. Type should be `COMBO[STRING]`.
+        - `pre_downscale` (Required): Optional pre-processing step to downscale images before upscaling, which can affect the final image quality and processing time. Type should be `COMBO[STRING]`.
+        - `post_downscale` (Required): Optional post-processing step to adjust the size of the upscaled images, allowing for customization of the output resolution. Type should be `COMBO[STRING]`.
+        - `downsample_method` (Required): The method used for downsampling during the pre and post downscale steps, influencing the quality of the downscaled images. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `images`: The upscaled images, enhanced in resolution through the LDSR upscaling process. Type should be `IMAGE`.

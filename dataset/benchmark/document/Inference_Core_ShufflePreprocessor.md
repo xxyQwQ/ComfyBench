@@ -1,0 +1,7 @@
+- `Inference_Core_ShufflePreprocessor`: The Inference_Core_ShufflePreprocessor node is designed to preprocess images by applying a content shuffle operation. This operation aims to detect and potentially rearrange elements within an image to enhance or modify its content for further processing steps, particularly in tasks that require content manipulation or augmentation.
+    - Inputs:
+        - `image` (Required): The image to be processed. It is the primary input for the content shuffle operation, serving as the basis for detection and rearrangement of elements within the image. Type should be `IMAGE`.
+        - `resolution` (Required): Specifies the resolution to which the image should be resized before processing. This affects the granularity of the shuffle operation, with higher resolutions allowing for more detailed manipulations. Type should be `INT`.
+        - `seed` (Required): A seed for the random number generator used in the shuffle operation. This allows for reproducibility of the shuffle effect across different runs. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed image after the content shuffle operation has been applied. This output is ready for further processing or analysis. Type should be `IMAGE`.

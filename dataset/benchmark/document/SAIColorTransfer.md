@@ -1,0 +1,7 @@
+- `SAIColorTransfer`: The SAIColorTransfer node is designed for applying color transfer techniques between images. It enables the modification of the color scheme of target images to match the color characteristics of source images, supporting various modes of color transfer.
+    - Inputs:
+        - `target_images` (Required): Target images are the images whose color schemes are to be modified. They serve as the canvas for the color transfer process. Type should be `IMAGE`.
+        - `source_images` (Required): Source images provide the color scheme to be transferred to the target images. They act as the reference for the desired color characteristics. Type should be `IMAGE`.
+        - `mode` (Required): Specifies the color transfer mode to be used, such as 'pdf_regrain', 'mean_transfer', or 'lab_transfer', each offering a different approach to color adaptation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `images`: The modified images with the color scheme of the source images applied to the target images. Type should be `IMAGE`.

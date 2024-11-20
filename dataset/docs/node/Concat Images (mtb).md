@@ -1,6 +1,0 @@
-- `Concat Images (mtb)`: The Concat Images node is designed to merge multiple tensor representations of images into a single batch tensor. This operation is essential for processing multiple images simultaneously, optimizing computational efficiency and facilitating batch operations in image processing workflows.
-    - Parameters:
-        - `reverse`: Determines the order in which images are concatenated. When set to True, images are concatenated in reverse order; otherwise, they are concatenated in the order they are received. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `image`: The output is a single tensor that combines all input images into one batch, preserving the original image data while adjusting the batch size to accommodate all images. Type should be `IMAGE`.

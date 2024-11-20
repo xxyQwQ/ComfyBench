@@ -1,6 +1,0 @@
-- `easy XYInputs Seeds++ Batch`: This node is designed to generate a batch of seed values for plotting or other batch processing tasks, where each seed represents a unique starting point for the generation process. It allows for the specification of the batch size, providing flexibility in how many seeds are generated and used.
-    - Parameters:
-        - `batch_count`: Specifies the number of seeds to generate in the batch. This parameter allows the user to control the scale of the batch operation, affecting the total number of unique starting points available for generation. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `X or Y`: Outputs a dictionary containing the axis label and the batch of seed values, ready for use in plotting or further processing. Type should be `X_Y`.

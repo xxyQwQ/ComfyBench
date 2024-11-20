@@ -1,6 +1,0 @@
-- `CombineRegionalPrompts`: The CombineRegionalPrompts node is designed to aggregate multiple regional prompts into a single collection. This functionality is crucial for scenarios where inputs from various regional prompts need to be consolidated for further processing or analysis.
-    - Parameters:
-    - Inputs:
-        - `regional_prompts1`: This parameter represents the collection of regional prompts to be combined. It is essential for the node's operation as it aggregates these prompts into a single output, enabling further processing of the combined data. Type should be `REGIONAL_PROMPTS`.
-    - Outputs:
-        - `regional_prompts`: unknown Type should be `REGIONAL_PROMPTS`.

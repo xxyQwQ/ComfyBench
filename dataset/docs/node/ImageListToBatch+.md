@@ -1,6 +1,0 @@
-- `ImageListToBatch+`: The ImageListToBatch node is designed to transform a list of images into a batched tensor format, ensuring that all images conform to a uniform size through cropping and resizing operations. This process facilitates batch processing of images for neural network models, enhancing computational efficiency and consistency.
-    - Parameters:
-    - Inputs:
-        - `image`: The 'image' parameter represents a list of images to be batched together. It is crucial for batch processing, as it allows for the transformation of individual images into a uniform tensor format, enabling efficient processing by neural network models. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a batched tensor of images, where individual images have been resized and cropped to match a uniform size, suitable for further processing or model inference. Type should be `IMAGE`.

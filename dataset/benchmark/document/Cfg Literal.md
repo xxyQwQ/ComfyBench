@@ -1,0 +1,5 @@
+- `Cfg Literal`: The Cfg Literal node is designed to provide a configurable floating-point value within a specified range. It serves as a utility within the ImageSaverTools/utils category, allowing for the dynamic adjustment of parameters that require precise numerical inputs.
+    - Inputs:
+        - `float` (Required): Specifies the floating-point value to be returned by the node. This parameter allows for the dynamic configuration of values within a defined range, influencing the node's output based on the specified numerical input. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: The floating-point value specified by the input parameter. This output is used to dynamically configure other nodes or parameters within the system. Type should be `FLOAT`.

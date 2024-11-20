@@ -1,0 +1,5 @@
+- `ACN_SparseCtrlSpreadMethodNode`: This node is designed to generate a SparseSpreadMethod instance based on a specified spread strategy. It abstracts the complexity of creating spread patterns for sparse control in advanced control networks, facilitating the customization of spread behaviors for enhanced control and manipulation of network outputs.
+    - Inputs:
+        - `spread` (Required): Defines the spread strategy to be used for generating the SparseSpreadMethod. This parameter is crucial for determining the pattern and distribution of control points within the network, affecting the overall behavior and output of the control network. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `sparse_method`: Returns an instance of SparseSpreadMethod configured according to the specified spread strategy. This output is essential for integrating custom spread behaviors into advanced control networks. Type should be `SPARSE_METHOD`.

@@ -1,0 +1,23 @@
+- `CR Page Layout`: The CR Page Layout node is designed for arranging visual elements within a specified page layout. It enables the creation of structured and aesthetically pleasing page designs by allowing users to define the layout parameters, including dimensions, template, and color scheme, as well as to place images and panels according to custom or predefined layouts.
+    - Inputs:
+        - `layout_options` (Required): Specifies the layout options for the page, such as including headers, footers, or neither, allowing for further customization of the page structure. Type should be `COMBO[STRING]`.
+        - `image_panel` (Required): The primary image or panel to be used as the base for the layout, serving as the central visual element around which other components are arranged. Type should be `IMAGE`.
+        - `header_height` (Required): Defines the height of the header area, allowing for customization of the space allocated for header content. Type should be `INT`.
+        - `header_text` (Required): Specifies the text to be included in the header, enabling the addition of titles or other header information. Type should be `STRING`.
+        - `header_align` (Required): Determines the alignment of the header text, influencing the text's positioning within the header area. Type should be `COMBO[STRING]`.
+        - `footer_height` (Required): Sets the height of the footer area, providing control over the space allocated for footer content. Type should be `INT`.
+        - `footer_text` (Required): Specifies the text to be included in the footer, enabling the addition of descriptive or supplementary information at the bottom of the page. Type should be `STRING`.
+        - `footer_align` (Required): Determines the alignment of the footer text, affecting its positioning within the footer area. Type should be `COMBO[STRING]`.
+        - `font_name` (Required): Selects the font to be used for text elements within the layout, allowing for stylistic consistency or variation. Type should be `COMBO[STRING]`.
+        - `font_color` (Required): Defines the color of the text, enabling customization to match the overall design theme or to highlight specific text elements. Type should be `COMBO[STRING]`.
+        - `header_font_size` (Required): Specifies the font size for the header text, allowing for visual emphasis or subtlety depending on the design needs. Type should be `INT`.
+        - `footer_font_size` (Required): Sets the font size for the footer text, enabling customization to ensure readability and design coherence. Type should be `INT`.
+        - `border_thickness` (Required): Defines the thickness of the border surrounding the layout, offering an additional layer of design customization. Type should be `INT`.
+        - `border_color` (Required): Determines the color of the border surrounding the layout, providing a visual frame for the page content. Type should be `COMBO[STRING]`.
+        - `background_color` (Required): Specifies the background color of the layout, setting the overall tone and atmosphere of the design. Type should be `COMBO[STRING]`.
+        - `font_color_hex` (Optional): Provides an alternative method to specify the text color using hexadecimal color codes, offering precise color customization. Type should be `STRING`.
+        - `border_color_hex` (Optional): Allows for the specification of border color using hexadecimal color codes, enabling precise color matching and customization. Type should be `STRING`.
+        - `bg_color_hex` (Optional): Offers an alternative method to specify the background color using hexadecimal color codes, allowing for precise color customization. Type should be `STRING`.
+    - Outputs:
+        - `image`: The final image resulting from the applied layout, showcasing the arranged visual elements according to the specified parameters. Type should be `IMAGE`.
+        - `show_help`: A string output that provides help or guidance related to the use of the node, including parameter explanations or layout tips. Type should be `STRING`.

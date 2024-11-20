@@ -1,0 +1,15 @@
+- `SMPLShapeParameters`: The SMPLShapeParameters node is designed to adjust the shape parameters of an SMPL model based on various anthropometric measurements. It encapsulates the functionality to modify an SMPL model's dimensions, such as size, thickness, and proportions of body parts, to achieve a desired appearance or match specific physical characteristics.
+    - Inputs:
+        - `smpl` (Required): The SMPL model to be modified. This parameter is crucial as it serves as the base model whose shape parameters will be adjusted according to the provided measurements. Type should be `SMPL`.
+        - `size` (Required): Represents the overall size of the SMPL model, affecting its scale. Type should be `FLOAT`.
+        - `thickness` (Required): Controls the thickness of the SMPL model, influencing its volume and bulk. Type should be `FLOAT`.
+        - `upper_body_height` (Required): Adjusts the height of the upper body, altering the torso length. Type should be `FLOAT`.
+        - `lower_body_height` (Required): Modifies the height of the lower body, affecting the leg length. Type should be `FLOAT`.
+        - `muscle_mass` (Required): Determines the muscle mass of the SMPL model, impacting its muscular definition. Type should be `FLOAT`.
+        - `legs` (Required): Adjusts the proportions of the legs, influencing their shape and length. Type should be `FLOAT`.
+        - `chest` (Required): Modifies the chest size, affecting the breadth and appearance of the torso. Type should be `FLOAT`.
+        - `waist_height` (Required): Controls the height of the waist, influencing the body's overall proportions. Type should be `FLOAT`.
+        - `waist_width` (Required): Adjusts the width of the waist, affecting the model's silhouette. Type should be `FLOAT`.
+        - `arms` (Required): Modifies the length and shape of the arms, influencing their appearance and proportion. Type should be `FLOAT`.
+    - Outputs:
+        - `smpl`: The modified SMPL model with updated shape parameters reflecting the input measurements. Type should be `SMPL`.

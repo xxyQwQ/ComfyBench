@@ -1,0 +1,8 @@
+- `LayerUtility_ NumberCalculator`: The NumberCalculator node performs basic arithmetic operations between two input values based on a specified operator. It supports a variety of operations including addition, subtraction, multiplication, division, exponentiation, integer division, and modulo. This node is designed to facilitate mathematical calculations within data processing pipelines, allowing for dynamic computation based on input parameters.
+    - Inputs:
+        - `a` (Required): The first operand in the arithmetic operation. It plays a crucial role in determining the outcome of the computation. Type should be `*`.
+        - `b` (Required): The second operand in the arithmetic operation. It is used in conjunction with the first operand to perform the specified mathematical function. Type should be `*`.
+        - `operator` (Required): Specifies the arithmetic operation to be performed on the operands. The operator can be one of the following: '+', '-', '*', '/', '**', '//', '%'. This choice dictates the nature of the calculation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `int`: The integer part of the result from the arithmetic operation. Type should be `INT`.
+        - `float`: The floating-point representation of the result from the arithmetic operation. Type should be `FLOAT`.

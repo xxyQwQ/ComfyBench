@@ -1,0 +1,10 @@
+- `Inference_Core_OpenposePreprocessor`: The OpenPose Preprocessor node is designed for estimating human poses from images. It leverages the OpenPose model to detect and annotate various keypoints of the human body, face, and hands, providing a comprehensive pose estimation.
+    - Inputs:
+        - `image` (Required): The input image for pose estimation, serving as the primary data source for analysis. Type should be `IMAGE`.
+        - `detect_hand` (Optional): Determines whether hand keypoints should be detected, enhancing the detail of the pose estimation. Type should be `COMBO[STRING]`.
+        - `detect_body` (Optional): Controls the detection of body keypoints, forming the core of the pose estimation. Type should be `COMBO[STRING]`.
+        - `detect_face` (Optional): Specifies if face keypoints should be identified, adding facial expressions to the pose analysis. Type should be `COMBO[STRING]`.
+        - `resolution` (Optional): Specifies the resolution for the pose estimation process, affecting the precision and scale of the output. Type should be `INT`.
+    - Outputs:
+        - `image`: Returns the pose image, visually representing the estimated poses. Type should be `IMAGE`.
+        - `pose_keypoint`: Delivers the pose keypoints data, encapsulating detailed information about the estimated poses. Type should be `POSE_KEYPOINT`.

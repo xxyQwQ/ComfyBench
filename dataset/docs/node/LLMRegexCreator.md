@@ -1,8 +1,0 @@
-- `LLMRegexCreator`: The LLMRegexCreator node is designed to generate regular expression (regex) patterns based on a given description and optional additional directions. It utilizes a language model to interpret the requirements and produce a well-formed regex pattern that accurately matches the specified criteria.
-    - Parameters:
-        - `description`: The primary description of the regex pattern to be created. This description is the basis for the regex generation, guiding the language model in crafting the pattern. Type should be `STRING`.
-        - `extra_directions`: Optional additional instructions or constraints to guide the language model in generating the regex pattern. These directions can refine the output by providing more context or specific requirements. Type should be `STRING`.
-    - Inputs:
-        - `llm_model`: Specifies the language model to use for generating the regex pattern. It is crucial for interpreting the description and extra directions to create the regex. Type should be `LLM_MODEL`.
-    - Outputs:
-        - `regex_pattern`: The generated regex pattern based on the provided description and optional extra directions. Type should be `STRING`.

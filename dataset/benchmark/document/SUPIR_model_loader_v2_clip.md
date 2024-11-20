@@ -1,0 +1,13 @@
+- `SUPIR_model_loader_v2_clip`: This node is designed for loading and integrating multiple models, specifically CLIP models and the SUPIR model, into a unified framework. It handles the complexities of loading state dictionaries, adjusting data types, and configuring models for use within a larger system, ensuring that each component is correctly initialized and ready for operation.
+    - Inputs:
+        - `model` (Required): The primary model to be loaded, serving as the central component of the node's functionality. Type should be `MODEL`.
+        - `clip_l` (Required): A CLIP model designated for local features, contributing to the nuanced understanding and processing of visual content. Type should be `CLIP`.
+        - `clip_g` (Required): A CLIP model designated for global features, enhancing the node's ability to interpret and process visual information on a broader scale. Type should be `CLIP`.
+        - `vae` (Required): The Variational Autoencoder (VAE) model, essential for generating and manipulating latent representations of images. Type should be `VAE`.
+        - `supir_model` (Required): The SUPIR model to be loaded, specialized in processing or enhancing images in specific ways. Type should be `COMBO[STRING]`.
+        - `fp8_unet` (Required): A flag indicating whether to cast the U-Net weights to a lower precision format to save VRAM, with a slight impact on quality. Type should be `BOOLEAN`.
+        - `diffusion_dtype` (Required): Specifies the data type for diffusion operations, with options to optimize performance or memory usage. Type should be `COMBO[STRING]`.
+        - `high_vram` (Optional): A flag to enable high VRAM mode, which may speed up model loading times by using Accelerate to load weights to GPU. Type should be `BOOLEAN`.
+    - Outputs:
+        - `SUPIR_model`: The loaded SUPIR model, ready for integration and use within the system. Type should be `SUPIRMODEL`.
+        - `SUPIR_VAE`: The loaded SUPIR VAE model, prepared for generating and manipulating latent representations in conjunction with the SUPIR model. Type should be `SUPIRVAE`.

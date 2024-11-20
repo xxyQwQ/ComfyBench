@@ -1,0 +1,15 @@
+- `IPAdapterEmbeds`: This node is designed for embedding generation within the IPAdapter framework. It focuses on creating embeddings from given inputs, which can then be utilized in various image processing and enhancement tasks, emphasizing the adaptability and enhancement of images through embedding manipulation.
+    - Inputs:
+        - `model` (Required): unknown Type should be `MODEL`.
+        - `ipadapter` (Required): Specifies the IPAdapter to be used for embedding generation, indicating the specific adapter configuration. Type should be `IPADAPTER`.
+        - `pos_embed` (Required): unknown Type should be `EMBEDS`.
+        - `weight` (Required): A floating-point value that adjusts the influence of the embedding in the overall processing, allowing for fine-tuning of the embedding's impact. Type should be `FLOAT`.
+        - `weight_type` (Required): unknown Type should be `COMBO[STRING]`.
+        - `start_at` (Required): unknown Type should be `FLOAT`.
+        - `end_at` (Required): unknown Type should be `FLOAT`.
+        - `embeds_scaling` (Required): unknown Type should be `COMBO[STRING]`.
+        - `neg_embed` (Optional): unknown Type should be `EMBEDS`.
+        - `attn_mask` (Optional): unknown Type should be `MASK`.
+        - `clip_vision` (Optional): An optional parameter that allows for the inclusion of CLIP vision features, enhancing the embedding's adaptability to various contexts. Type should be `CLIP_VISION`.
+    - Outputs:
+        - `model`: The output model enhanced with generated embeddings, showcasing the adaptability and enhancement capabilities of the IPAdapter framework. Type should be `MODEL`.

@@ -1,9 +1,0 @@
-- `SaltLayerExtractor`: The SaltLayerExtractor node is designed for extracting specific layer data from a set of animation layers, focusing on parallax motion scheduling. It processes input layers to generate schedules for zoom, x, and y values, facilitating the creation of dynamic, multi-dimensional animations.
-    - Parameters:
-        - `layer_index`: An index specifying which layer's data to extract from the provided list of animation layers. This allows for targeted extraction of animation data, enabling precise control over the scheduling of parallax motion. Type should be `INT`.
-    - Inputs:
-        - `float_layers`: A list of animation layers, where each layer contains frame data for zoom, x, and y values. This input is crucial for determining the specific layer's data to be extracted and scheduled. Type should be `LIST`.
-    - Outputs:
-        - `zoom_schedule_lsit`: unknown Type should be `LIST`.
-        - `x_schedule_list`: A list of x-coordinate values extracted from the specified animation layer, used for scheduling horizontal movement in parallax motion. Type should be `LIST`.
-        - `y_schedule_list`: A list of y-coordinate values extracted from the specified animation layer, used for scheduling vertical movement in parallax motion. Type should be `LIST`.

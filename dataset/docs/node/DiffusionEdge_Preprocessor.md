@@ -1,9 +1,0 @@
-- `DiffusionEdge_Preprocessor`: The DiffusionEdge_Preprocessor node is designed for preprocessing images to extract edge maps using a diffusion-based edge detection model. It supports environment-specific model loading and adjustable patch processing for optimized performance.
-    - Parameters:
-        - `environment`: Specifies the environment context ('indoor', 'urban', 'natural') for the edge detection model, influencing the model's behavior and output. Type should be `COMBO[STRING]`.
-        - `patch_batch_size`: Determines the batch size for processing image patches, affecting the speed and VRAM usage of the edge detection operation. Type should be `INT`.
-        - `resolution`: The resolution to which the input image is resized before edge detection, affecting the detail level of the output. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for edge detection. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is an image representing the detected edges within the input image, suitable for further processing or visualization. Type should be `IMAGE`.

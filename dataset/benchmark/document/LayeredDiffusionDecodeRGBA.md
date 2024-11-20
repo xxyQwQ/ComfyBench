@@ -1,0 +1,8 @@
+- `LayeredDiffusionDecodeRGBA`: The LayeredDiffusionDecodeRGBA node is designed to decode the alpha channel value from a given pixel value, transforming an RGB image input into an RGBA image output. This process involves adding an alpha channel to the existing RGB channels, thereby enabling the representation of transparency in the resulting image.
+    - Inputs:
+        - `samples` (Required): The latent representation of the image to be decoded. It plays a crucial role in reconstructing the image with the added alpha channel for transparency. Type should be `LATENT`.
+        - `images` (Required): The initial RGB images that are to be transformed into RGBA format by adding an alpha channel. Type should be `IMAGE`.
+        - `sd_version` (Required): Specifies the version of the Stable Diffusion model used for decoding, affecting the decoding process and the final image quality. Type should be `COMBO[STRING]`.
+        - `sub_batch_size` (Required): Determines the size of sub-batches for processing, impacting the efficiency and speed of the decoding operation. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image in RGBA format, where the alpha channel has been decoded and added to the original RGB image. Type should be `IMAGE`.

@@ -1,8 +1,0 @@
-- `easy imageInterrogator`: The `easy imageInterrogator` node is designed to generate descriptive prompts based on input images, utilizing different modes to adjust the interrogation process according to the desired level of detail or speed. This functionality aids in creating textual representations of visual content, which can be used for further image generation or analysis tasks.
-    - Parameters:
-        - `mode`: The `mode` parameter allows users to specify the interrogation process's detail level or speed, offering options like 'fast', 'classic', 'best', and 'negative'. This choice influences the prompt's quality and generation time. Type should be `COMBO[STRING]`.
-        - `use_lowvram`: The `use_lowvram` parameter enables the node to operate in a low VRAM mode, optimizing resource usage for systems with limited graphics memory. This can affect the interrogation process's efficiency and results. Type should be `BOOLEAN`.
-    - Inputs:
-        - `image`: The `image` parameter is the visual content that the node will analyze to generate a descriptive prompt. It is central to the node's operation, as the output depends on the interpretation of this image. Type should be `IMAGE`.
-    - Outputs:
-        - `prompt`: The output `prompt` is a textual description generated from the input image, reflecting the visual content's interpretation through the specified interrogation mode. Type should be `STRING`.

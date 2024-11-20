@@ -1,0 +1,16 @@
+- `PromptSchedule`: The PromptSchedule node sequences user-formatted prompts, evaluates expressions within these prompts, and applies a scheduling mechanism to generate a batch of conditionings. This process involves sequencing the current and next prompts along with their conditioning strengths, ultimately producing a tailored output that incorporates the scheduled prompt adjustments.
+    - Inputs:
+        - `text` (Required): Represents the user's formatted prompt, serving as the primary input for generating conditionings. It is crucial for defining the content and structure of the desired output. Type should be `STRING`.
+        - `clip` (Required): A model or mechanism used for conditioning, influencing the generation process based on the input prompts. Type should be `CLIP`.
+        - `max_frames` (Required): Specifies the maximum number of frames to be considered for the scheduling process, affecting the temporal scope of the generated outputs. Type should be `INT`.
+        - `current_frame` (Required): Indicates the current frame in the sequence, used to determine the specific point of evaluation within the scheduling process. Type should be `INT`.
+        - `print_output` (Required): unknown Type should be `BOOLEAN`.
+        - `pre_text` (Optional): Optional pre-text added before the main prompt text, used to prepend additional context or instructions. Type should be `STRING`.
+        - `app_text` (Optional): Optional appended text added after the main prompt text, used to append additional context or instructions. Type should be `STRING`.
+        - `pw_a` (Optional): A weight parameter influencing the scheduling process, part of a set of parameters (pw_a, pw_b, pw_c, pw_d) for fine-tuning the output. Type should be `FLOAT`.
+        - `pw_b` (Optional): A weight parameter influencing the scheduling process, part of a set of parameters (pw_a, pw_b, pw_c, pw_d) for fine-tuning the output. Type should be `FLOAT`.
+        - `pw_c` (Optional): A weight parameter influencing the scheduling process, part of a set of parameters (pw_a, pw_b, pw_c, pw_d) for fine-tuning the output. Type should be `FLOAT`.
+        - `pw_d` (Optional): A weight parameter influencing the scheduling process, part of a set of parameters (pw_a, pw_b, pw_c, pw_d) for fine-tuning the output. Type should be `FLOAT`.
+    - Outputs:
+        - `POS`: The positive conditioning output, reflecting the applied prompt schedule and targeted adjustments. Type should be `CONDITIONING`.
+        - `NEG`: The negative conditioning output, reflecting the applied prompt schedule and targeted counteractions. Type should be `CONDITIONING`.

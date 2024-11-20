@@ -1,6 +1,0 @@
-- `FromListGetModels`: The node is designed to extract a single model from a list of models based on a specified index. It enables selective retrieval of models from a collection, facilitating operations that require individual model processing.
-    - Parameters:
-    - Inputs:
-        - `list`: The list of models from which a single model is to be retrieved. This parameter is crucial for specifying the source collection of models. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The model extracted from the specified index of the input list. This output is significant for subsequent operations that require a specific model. Type should be `MODEL`.

@@ -1,7 +1,0 @@
-- `JWFloatAdd`: The JWFloatAdd node performs addition of two floating-point numbers, providing a simple yet essential arithmetic operation for numerical computations.
-    - Parameters:
-        - `a`: Represents the first floating-point number to be added. It plays a crucial role in determining the result of the addition operation. Type should be `FLOAT`.
-        - `b`: Represents the second floating-point number to be added. It affects the outcome of the addition operation alongside the first number. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The result of adding the two input floating-point numbers. It encapsulates the outcome of the arithmetic operation. Type should be `FLOAT`.

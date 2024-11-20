@@ -1,0 +1,11 @@
+- `Multi Text Merge`: The Multi Text Merge node is designed to concatenate multiple text inputs into a single string, using a specified delimiter to separate each input. It allows for the flexible combination of up to six text strings, making it useful for generating composite text outputs from various sources.
+    - Inputs:
+        - `delimiter` (Required): Specifies the string used to separate each text input in the concatenated output. This parameter allows for customization of the output format, enabling the use of different separators such as commas, spaces, or custom strings. Type should be `STRING`.
+        - `s1` (Optional): The first optional text input to be concatenated. It supports multiline input and is forced to be included in the node's UI. Type should be `STRING`.
+        - `s2` (Optional): The second optional text input to be concatenated. It supports multiline input and is forced to be included in the node's UI. Type should be `STRING`.
+        - `s3` (Optional): The third optional text input to be concatenated. It supports multiline input and is forced to be included in the node's UI. Type should be `STRING`.
+        - `s4` (Optional): The fourth optional text input to be concatenated. It supports multiline input and is forced to be included in the node's UI. Type should be `STRING`.
+        - `s5` (Optional): The fifth optional text input to be concatenated. It supports multiline input and is forced to be included in the node's UI. Type should be `STRING`.
+        - `s6` (Optional): The sixth optional text input to be concatenated. It supports multiline input and is forced to be included in the node's UI. Type should be `STRING`.
+    - Outputs:
+        - `string`: The concatenated result of the input texts, separated by the specified delimiter. Type should be `STRING`.

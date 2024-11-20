@@ -1,9 +1,0 @@
-- `CR Text Blacklist`: This node is designed to filter and replace specific words in a given text with alternative text or an empty string, based on a user-defined blacklist. It's particularly useful for content moderation or customizing text output by removing unwanted words.
-    - Parameters:
-        - `text`: The input text to be processed. Words found in this text that match the blacklist will be replaced. Type should be `STRING`.
-        - `blacklist_words`: A list of words to be filtered out from the input text. Each word should be separated by a newline. Type should be `STRING`.
-        - `replacement_text`: The text to replace each blacklisted word with. If left empty, blacklisted words will be removed entirely. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `STRING`: The modified text after blacklisted words have been replaced or removed. Type should be `*`.
-        - `show_help`: A URL to a help page providing additional information and guidance on using the CR Text Blacklist node. Type should be `STRING`.

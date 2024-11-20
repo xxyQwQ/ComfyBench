@@ -1,9 +1,0 @@
-- `SaltAudioFrequencyBoost`: This node is designed to enhance the audio experience by selectively boosting the frequency of an audio signal. It allows for precise adjustments to the audio's frequency spectrum, enhancing specific frequency bands to achieve desired audio characteristics.
-    - Parameters:
-        - `frequency`: Specifies the center frequency to boost, allowing for targeted enhancement within the audio spectrum. Type should be `INT`.
-        - `bandwidth`: Defines the width of the frequency band around the center frequency that will be boosted, determining the range of frequencies affected. Type should be `FLOAT`.
-        - `gain_dB`: The amount of gain to apply to the specified frequency band, measured in decibels (dB), which controls the intensity of the boost. Type should be `FLOAT`.
-    - Inputs:
-        - `audio`: The raw audio data to be processed. This input is crucial for defining the audio content that will undergo frequency enhancement. Type should be `AUDIO`.
-    - Outputs:
-        - `audio`: The audio data after the frequency boost has been applied, reflecting the enhancements made to the specified frequency band. Type should be `AUDIO`.

@@ -1,0 +1,15 @@
+- `CR Module Output`: The CR Module Output node is designed to serve as the endpoint for a module within a pipeline, facilitating the organized output of data processed through the module. It abstracts the complexity of data handling at the end of a module, ensuring a streamlined and efficient data flow out of the module.
+    - Inputs:
+        - `pipe` (Required): Accepts a pipeline object that encapsulates all the data processed within the module. This object is the primary input for the node, enabling the organized output of processed data. Type should be `PIPE_LINE`.
+        - `model` (Optional): unknown Type should be `MODEL`.
+        - `pos` (Optional): unknown Type should be `CONDITIONING`.
+        - `neg` (Optional): unknown Type should be `CONDITIONING`.
+        - `latent` (Optional): unknown Type should be `LATENT`.
+        - `vae` (Optional): unknown Type should be `VAE`.
+        - `clip` (Optional): unknown Type should be `CLIP`.
+        - `controlnet` (Optional): unknown Type should be `CONTROL_NET`.
+        - `image` (Optional): unknown Type should be `IMAGE`.
+        - `seed` (Optional): unknown Type should be `INT`.
+    - Outputs:
+        - `pipe`: Outputs the same pipeline object that was input, potentially with modifications or additions made during the module's processing. Type should be `PIPE_LINE`.
+        - `show_help`: Provides a URL to the documentation or help page related to this node, offering users guidance on its usage and functionalities. Type should be `STRING`.

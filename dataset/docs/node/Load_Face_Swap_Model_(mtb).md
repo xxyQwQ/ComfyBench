@@ -1,6 +1,0 @@
-- `Load Face Swap Model (mtb)`: This node is responsible for loading a faceswap model from a specified path, ensuring the model is available for face swapping operations. It dynamically lists available models based on the files present in a designated directory, offering flexibility in model selection.
-    - Parameters:
-        - `faceswap_model`: Specifies the name of the faceswap model to load. The selection is dynamically generated based on the available model files in the insightface directory, allowing for a flexible and up-to-date choice of models. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `faceswap_model`: Returns an instance of the faceswap model, ready for use in face swapping operations. This enables the application of the model to input images for generating swapped face images. Type should be `FACESWAP_MODEL`.

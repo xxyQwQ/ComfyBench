@@ -1,7 +1,0 @@
-- `ADE_CameraManualPoseAppend`: The ADE_CameraManualPoseAppend node is designed for manually appending camera control poses, enabling the customization and extension of camera movements within animations. This node facilitates the integration of user-defined camera poses, enhancing the dynamic visual storytelling capabilities in animation projects.
-    - Parameters:
-    - Inputs:
-        - `poses_first`: Specifies the initial set of camera control poses to be appended. It plays a crucial role in determining the starting point of the camera's movement. Type should be `CAMERACTRL_POSES`.
-        - `poses_last`: Defines the final set of camera control poses to be appended. It determines the ending point of the camera's movement, allowing for a seamless transition between camera states. Type should be `CAMERACTRL_POSES`.
-    - Outputs:
-        - `cameractrl_poses`: Outputs the combined set of camera control poses, representing the seamless integration of the initial and final poses for dynamic camera movement in animations. Type should be `CAMERACTRL_POSES`.

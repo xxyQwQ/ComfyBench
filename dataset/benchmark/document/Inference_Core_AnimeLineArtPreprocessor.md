@@ -1,0 +1,6 @@
+- `Inference_Core_AnimeLineArtPreprocessor`: This node specializes in preprocessing images to extract anime-style line art, utilizing a dedicated model for detecting and enhancing line art features in anime images. It's designed to work within a ControlNet preprocessing pipeline, focusing on the transformation of input images into a format optimized for further anime-related image processing tasks.
+    - Inputs:
+        - `image` (Required): The input image to be processed for anime line art extraction. This image serves as the primary data for the line art detection model, determining the quality and characteristics of the output. Type should be `IMAGE`.
+        - `resolution` (Optional): Specifies the resolution for the output line art image, affecting the level of detail and clarity in the extracted line art. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed image with anime-style line art extracted, ready for use in subsequent processing stages. Type should be `IMAGE`.

@@ -1,6 +1,0 @@
-- `ImageEffectsGrayscale`: This node applies a grayscale effect to a batch of images, converting each image in the batch to grayscale by averaging the color channels.
-    - Parameters:
-    - Inputs:
-        - `images`: The batch of images to be converted to grayscale. This input is crucial for the grayscale conversion process, affecting the node's execution by determining the images that will undergo the transformation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The batch of images after the grayscale effect has been applied, with each image converted to grayscale. Type should be `IMAGE`.

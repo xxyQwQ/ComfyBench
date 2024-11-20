@@ -1,0 +1,4 @@
+- `easy showAnything`: This node is designed to display any given input in a user-friendly manner, regardless of its original data type. It abstracts the complexity of data types, making it easier for users to visualize and understand the data presented within the ComfyUI environment.
+    - Inputs:
+        - `anything` (Optional): Accepts any data type as input, allowing for a wide range of data to be displayed. This flexibility ensures that users can visualize virtually any piece of data without concern for compatibility issues. Type should be `*`.
+    - Outputs:

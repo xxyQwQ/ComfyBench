@@ -1,0 +1,13 @@
+- `Conditioning Grid (string) Advanced`: This node enhances the functionality of ConditioningGridCond by incorporating an advanced text encoding step for each text input using AdvancedCLIPTextEncode. It automates the process of encoding text inputs into conditionings and then applies these conditionings to a grid's AreaConditioners, facilitating a more nuanced and customizable conditioning process for grid-based operations.
+    - Inputs:
+        - `clip` (Required): The CLIP model used for encoding the text inputs. It plays a crucial role in determining the quality and relevance of the generated conditionings. Type should be `CLIP`.
+        - `base` (Required): The base text input that is encoded and used as the foundational conditioning for the grid. It sets the initial context or theme for the grid's content. Type should be `STRING`.
+        - `columns` (Required): Specifies the number of columns in the grid. This determines the grid's horizontal dimension and how many conditionings are applied across it. Type should be `INT`.
+        - `rows` (Required): Specifies the number of rows in the grid. This determines the grid's vertical dimension and how many conditionings are applied along it. Type should be `INT`.
+        - `width` (Required): The width of each grid cell. This affects the spatial resolution of the conditionings applied within the grid. Type should be `INT`.
+        - `height` (Required): The height of each grid cell. This affects the spatial resolution of the conditionings applied within the grid. Type should be `INT`.
+        - `strength` (Required): Determines the intensity or influence of the conditioning on the grid. It modulates how strongly the encoded texts affect the grid's output. Type should be `FLOAT`.
+        - `token_normalization` (Required): Specifies the method for normalizing the tokens in the text encoding process, affecting the conditioning's consistency and balance. Type should be `COMBO[STRING]`.
+        - `weight_interpretation` (Required): Defines how the weights are interpreted in the text encoding process, influencing the emphasis and distribution of the conditioning across the grid. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `conditioning`: The resulting conditioning that combines the encoded base text and grid-specific conditionings, ready for further processing or application. Type should be `CONDITIONING`.

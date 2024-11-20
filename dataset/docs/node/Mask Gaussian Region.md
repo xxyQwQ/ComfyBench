@@ -1,7 +1,0 @@
-- `Mask Gaussian Region`: This node applies a Gaussian blur to specified regions within given masks, effectively smoothing the edges and transitions within the mask areas. It's designed to create softer, more natural-looking mask boundaries by utilizing a Gaussian filter.
-    - Parameters:
-        - `radius`: Defines the radius of the Gaussian blur. A larger radius results in a smoother, more blurred mask region. Type should be `FLOAT`.
-    - Inputs:
-        - `masks`: The input masks to which the Gaussian blur will be applied. These masks define the regions that will be smoothed. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The output masks after applying the Gaussian blur to the specified regions. These masks will have smoother transitions and edges. Type should be `MASK`.

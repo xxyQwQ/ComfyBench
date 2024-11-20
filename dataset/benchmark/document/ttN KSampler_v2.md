@@ -1,0 +1,41 @@
+- `ttN KSampler_v2`: The ttN KSampler_v2 node is designed for advanced sampling in generative models, offering a flexible interface to control the sampling process. It integrates various sampling and scheduling strategies, noise control mechanisms, and optional conditioning inputs to generate or refine images based on latent representations. This node is tailored for customization and experimentation in image generation workflows, enabling users to fine-tune the balance between fidelity and diversity in the generated outputs.
+    - Inputs:
+        - `model` (Required): Specifies the generative model used for sampling, central to the generation process. Type should be `MODEL`.
+        - `positive` (Required): Optional positive conditioning to guide the generation towards desired attributes or content. Type should be `CONDITIONING`.
+        - `negative` (Required): Optional negative conditioning to steer the generation away from undesired attributes or content. Type should be `CONDITIONING`.
+        - `latent` (Required): unknown Type should be `LATENT`.
+        - `vae` (Required): unknown Type should be `VAE`.
+        - `lora_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `lora_strength` (Required): unknown Type should be `FLOAT`.
+        - `upscale_method` (Required): unknown Type should be `COMBO[STRING]`.
+        - `upscale_model_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `factor` (Required): unknown Type should be `FLOAT`.
+        - `rescale` (Required): unknown Type should be `COMBO[STRING]`.
+        - `percent` (Required): unknown Type should be `INT`.
+        - `width` (Required): unknown Type should be `INT`.
+        - `height` (Required): unknown Type should be `INT`.
+        - `longer_side` (Required): unknown Type should be `INT`.
+        - `crop` (Required): unknown Type should be `COMBO[STRING]`.
+        - `steps` (Required): unknown Type should be `INT`.
+        - `cfg` (Required): Sets the conditioning-free guidance (CFG) scale, adjusting the influence of conditional inputs on the generation. Type should be `FLOAT`.
+        - `sampler_name` (Required): Selects the specific sampling algorithm to be used, allowing for customization of the sampling behavior. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Chooses the scheduling algorithm for controlling the sampling process, impacting the progression of noise reduction. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): Determines the level of denoising applied to the final output, affecting the clarity and quality of the generated image. Type should be `FLOAT`.
+        - `image_output` (Required): unknown Type should be `COMBO[STRING]`.
+        - `save_prefix` (Required): unknown Type should be `STRING`.
+        - `file_type` (Required): unknown Type should be `COMBO[STRING]`.
+        - `embed_workflow` (Required): unknown Type should be `BOOLEAN`.
+        - `clip` (Optional): unknown Type should be `CLIP`.
+        - `seed` (Optional): unknown Type should be `INT`.
+        - `input_image_override` (Optional): unknown Type should be `IMAGE`.
+        - `adv_xyPlot` (Optional): unknown Type should be `ADV_XYPLOT`.
+    - Outputs:
+        - `model`: The generative model used for sampling, central to the generation process. Type should be `MODEL`.
+        - `positive`: The positive conditioning applied to guide the generation towards desired attributes or content. Type should be `CONDITIONING`.
+        - `negative`: The negative conditioning applied to steer the generation away from undesired attributes or content. Type should be `CONDITIONING`.
+        - `latent`: The latent representation used or generated during the sampling process. Type should be `LATENT`.
+        - `vae`: The optional variational autoencoder (VAE) model used in the generation process, enhancing the diversity of outputs. Type should be `VAE`.
+        - `clip`: The optional CLIP model included to guide the generation process based on textual descriptions. Type should be `CLIP`.
+        - `images`: The generated or refined images based on the provided inputs and settings, showcasing the capabilities of the sampling process. Type should be `IMAGE`.
+        - `seed`: The seed used for noise generation, ensuring reproducibility of the randomness. Type should be `INT`.
+        - `plot_image`: Visual representation of the generation process or outcomes, if applicable. Type should be `IMAGE`.

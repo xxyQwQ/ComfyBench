@@ -1,0 +1,12 @@
+- `CR Image Grid Panel`: This node is designed to create a visually organized grid panel of images, applying customizable borders, outlines, and arranging them into a specified number of columns. It aims to enhance the presentation of multiple images by structuring them in a coherent layout, making it easier to view and compare them side by side.
+    - Inputs:
+        - `images` (Required): A list of images to be arranged in a grid. These images are processed to apply borders and outlines, contributing to the overall aesthetic of the grid. Type should be `IMAGE`.
+        - `border_thickness` (Required): Specifies the thickness of the border around each image, playing a crucial role in the visual separation and emphasis of individual images within the grid. Type should be `INT`.
+        - `border_color` (Required): Determines the color of the border around each image, allowing for customization of the grid's appearance to match thematic or aesthetic preferences. Type should be `COMBO[STRING]`.
+        - `outline_thickness` (Required): Defines the thickness of the outline around the entire grid, enhancing the grid's visual prominence and separation from the background. Type should be `INT`.
+        - `outline_color` (Required): Sets the color of the outline around the entire grid, contributing to the visual identity and thematic consistency of the presentation. Type should be `COMBO[STRING]`.
+        - `max_columns` (Required): The maximum number of columns in the grid, dictating the layout and organization of images within the panel. Type should be `INT`.
+        - `border_color_hex` (Optional): Specifies the hexadecimal color code for the border, offering an alternative way to define the border color, especially for custom colors not predefined in the node. Type should be `STRING`.
+    - Outputs:
+        - `image`: The final processed image of the grid panel, ready for display or further use. Type should be `IMAGE`.
+        - `show_help`: A URL providing additional information and guidance on using the node. Type should be `STRING`.

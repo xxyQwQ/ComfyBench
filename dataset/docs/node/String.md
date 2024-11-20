@@ -1,6 +1,0 @@
-- `String`: The String node is designed to process and return string values, allowing for basic manipulation and handling of text data within a logic-based framework.
-    - Parameters:
-        - `value`: Represents the string value to be processed by the node. It is the primary input through which users can supply text data for manipulation or evaluation. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `STRING`: Outputs the processed or unchanged string value, depending on the node's implementation and the input provided. Type should be `STRING`.

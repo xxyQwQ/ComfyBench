@@ -1,8 +1,0 @@
-- `RemapFromQuadrilateral (homography)`: The RemapFromQuadrilateral node is designed to transform an image by remapping it from a specified quadrilateral shape to a rectangular shape using homography. This process involves calculating a homography matrix based on the source image's quadrilateral points and the destination rectangle's dimensions, allowing for perspective correction or transformation of the image.
-    - Parameters:
-        - `width`: Defines the width of the destination rectangle. This parameter influences the scale and aspect ratio of the transformed image. Type should be `INT`.
-        - `height`: Defines the height of the destination rectangle. Along with width, it determines the size and shape of the output image after transformation. Type should be `INT`.
-    - Inputs:
-        - `src_mask_with_i_points`: Specifies the source image mask with four points defining the quadrilateral to be transformed. This input is crucial for determining the quadrilateral's corners for the homography calculation. Type should be `MASK`.
-    - Outputs:
-        - `remap`: The output is the transformed image data, remapped from the specified quadrilateral to a rectangular shape, based on the calculated homography matrix. This transformation allows for perspective correction or other adjustments to the image's appearance. Type should be `REMAP`.

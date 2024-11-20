@@ -1,0 +1,15 @@
+- `easy sv3dLoader`: The `sv3DLoader` node is designed for loading and managing 3D model files specifically formatted for Stable Diffusion, facilitating the integration of 3D assets into generative AI workflows. It emphasizes ease of use and compatibility with a specific subset of 3D model files, aiming to streamline the process of incorporating 3D models into creative projects.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the checkpoint name for loading the model, serving as a key identifier for selecting the appropriate 3D model files. Type should be `COMBO[STRING]`.
+        - `vae_name` (Required): Defines the VAE model name to be used in conjunction with the 3D models, ensuring compatibility and optimal performance within the generative workflow. Type should be `COMBO[STRING]`.
+        - `init_image` (Required): An initial image to start the generation process, providing a visual context or basis for further 3D model integration. Type should be `IMAGE`.
+        - `empty_latent_width` (Required): Sets the width for the latent space representation, defining the dimensions for the generated or manipulated 3D model output. Type should be `INT`.
+        - `empty_latent_height` (Required): Sets the height for the latent space representation, similar to 'empty_latent_width', it defines the vertical dimension for the 3D model output. Type should be `INT`.
+        - `batch_size` (Required): Determines the number of instances to process in a single batch, affecting the efficiency and speed of the 3D model loading operation. Type should be `INT`.
+        - `interp_easing` (Required): Specifies the interpolation easing type to apply during the 3D model loading process, affecting the transition smoothness between models. Type should be `COMBO[STRING]`.
+        - `easing_mode` (Required): Defines the mode of easing to be applied, such as azimuth or elevation, providing control over the specific aspect of 3D model manipulation. Type should be `COMBO[STRING]`.
+        - `scheduler` (Optional): An optional scheduler for managing the loading and processing tasks, offering advanced control over the execution flow. Type should be `STRING`.
+    - Outputs:
+        - `pipe`: The pipeline configuration resulting from the loaded 3D models, ready for further processing or generation tasks. Type should be `PIPE_LINE`.
+        - `model`: The specific 3D model loaded and prepared for integration into the generative workflow, encapsulated within the pipeline. Type should be `MODEL`.
+        - `interp_log`: A log of the interpolation and easing operations applied during the model loading process, providing insights into the manipulation effects. Type should be `STRING`.

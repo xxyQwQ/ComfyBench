@@ -1,0 +1,9 @@
+- `LLMOpenAIModel`: The LLMOpenAIModel node is designed to interface with OpenAI's language models, facilitating the loading and utilization of these models for various language processing tasks. It abstracts the complexities involved in interacting with OpenAI's API, providing a streamlined way to leverage their advanced natural language understanding and generation capabilities.
+    - Inputs:
+        - `model` (Required): Specifies the name of the OpenAI model to be loaded. This parameter is crucial for determining which specific language model is utilized for processing, affecting the node's behavior and the quality of its outputs. Type should be `COMBO[STRING]`.
+        - `api_key` (Required): The API key required to authenticate with OpenAI's services. This key enables the node to access OpenAI's language models, making it essential for the operation of the node. Type should be `STRING`.
+        - `embedding_model` (Required): Defines the model used for embedding purposes, which is part of OpenAI's suite. This parameter influences how text inputs are converted into embeddings, affecting tasks such as similarity searches or contextual analysis. Type should be `COMBO[STRING]`.
+        - `multimodal` (Optional): A boolean flag indicating whether the multimodal capabilities of the model should be enabled. This affects whether the model can process and understand inputs that include both text and other modalities, such as images. Type should be `BOOLEAN`.
+    - Outputs:
+        - `llm_model`: The loaded language model from OpenAI, ready for language processing tasks. Type should be `LLM_MODEL`.
+        - `embed_model_only`: The embedding model loaded alongside the main language model, used for generating embeddings from text inputs. Type should be `LLM_EMBED_MODEL`.

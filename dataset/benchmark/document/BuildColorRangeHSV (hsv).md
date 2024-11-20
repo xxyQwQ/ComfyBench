@@ -1,0 +1,8 @@
+- `BuildColorRangeHSV (hsv)`: This node is designed to establish a range of HSV (Hue, Saturation, Value) colors based on provided lower and upper bounds. It adjusts these bounds to ensure they are within acceptable limits and determines the optimal hue mode for color range construction.
+    - Inputs:
+        - `samples` (Required): Specifies the HSV samples from which the color range is derived, influencing the determination of lower and upper bounds. Type should be `HSV_SAMPLES`.
+        - `percentage_modifier` (Required): A modifier that affects the interpolation of the HSV color range, influencing how the bounds are adjusted. Type should be `INT`.
+        - `interval_type` (Required): Determines the method used for calculating the color range, affecting the selection of lower and upper bounds and the hue mode. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `hsv_color`: The resulting HSV color range, including both lower and upper bounds, after adjustments. Type should be `HSV_COLOR`.
+        - `combo[string]`: The determined optimal hue mode for the color range construction, based on the adjusted bounds. Type should be `COMBO[STRING]`.

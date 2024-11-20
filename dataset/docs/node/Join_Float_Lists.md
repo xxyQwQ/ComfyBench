@@ -1,7 +1,0 @@
-- `Join Float Lists`: This node is designed to merge two lists of floating-point numbers into a single list, maintaining the order of elements as they appear in the input lists. It facilitates operations that require the concatenation of numerical data, such as combining datasets or aggregating results from different sources.
-    - Parameters:
-        - `In1`: Represents the first list of floating-point numbers to be joined. Its elements are combined with those of 'In2' to form a single, concatenated list. Type should be `FLOAT`.
-        - `In2`: Denotes the second list of floating-point numbers to be merged with 'In1'. The order of elements in 'In2' follows those of 'In1' in the concatenated output list. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `Joined`: The concatenated list of floating-point numbers derived from 'In1' and 'In2'. This output preserves the order of elements as they appear in the input lists. Type should be `FLOAT`.

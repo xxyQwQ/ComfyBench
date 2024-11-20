@@ -1,0 +1,10 @@
+- `VHS_MergeImages`: The VHS_MergeImages node is designed for combining two sets of images into a single set, allowing for flexible manipulation of image batches within the Video Helper Suite. It supports various strategies for merging, including matching dimensions by selecting the larger or smaller set, or explicitly choosing one set's dimensions to match. Additionally, it offers scaling and cropping options to ensure the merged images meet specific requirements.
+    - Inputs:
+        - `images_A` (Required): The first set of images to be merged. This set can either serve as the template for merging or be adjusted to match the dimensions of the second set, depending on the chosen merge strategy. Type should be `IMAGE`.
+        - `images_B` (Required): The second set of images to be merged with the first. Depending on the merge strategy, these images may be scaled or cropped to match the dimensions of the first set. Type should be `IMAGE`.
+        - `merge_strategy` (Required): Determines how the dimensions of the two image sets are matched during the merge process. Options include matching to the first set, the second set, the smaller or larger dimensions among them. Type should be `COMBO[STRING]`.
+        - `scale_method` (Required): Specifies the scaling algorithm to be used when adjusting the dimensions of one image set to match the other. Options include nearest-exact, bilinear, area, bicubic, and bislerp. Type should be `COMBO[STRING]`.
+        - `crop` (Required): Defines the cropping method to be applied if necessary during the scaling process. Options are 'disabled' for no cropping or 'center' for center-based cropping. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `IMAGE`: The resulting set of merged images. Type should be `IMAGE`.
+        - `count`: The total number of images in the merged set. Type should be `INT`.

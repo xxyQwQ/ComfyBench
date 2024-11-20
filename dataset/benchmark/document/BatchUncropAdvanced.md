@@ -1,0 +1,14 @@
+- `BatchUncropAdvanced`: The `BatchUncropAdvanced` node is designed for the advanced uncropping of images in a batch processing context. It integrates functionalities such as handling multiple images, applying border blending, rescaling crops, and utilizing combined or square masks to refine the uncropping process. This node aims to restore the original dimensions of cropped images while maintaining high fidelity to the original content, especially in scenarios where precise alignment and blending are crucial.
+    - Inputs:
+        - `original_images` (Required): Specifies the original images before cropping. This input is crucial for the uncrop operation as it provides the reference for restoring the images to their original state. Type should be `IMAGE`.
+        - `cropped_images` (Required): Contains the images that have been cropped. These images are used alongside the original images to perform the uncropping process. Type should be `IMAGE`.
+        - `cropped_masks` (Required): Represents the masks of the cropped areas. These masks are essential for identifying the regions within the original images that need to be restored or blended during the uncropping. Type should be `MASK`.
+        - `combined_crop_mask` (Required): A single mask that combines all cropped areas. This mask is used to efficiently handle multiple cropped regions in a batch processing scenario. Type should be `MASK`.
+        - `bboxes` (Required): The bounding boxes that define the cropped areas within the original images. These are used to accurately place the cropped images back into their original context. Type should be `BBOX`.
+        - `border_blending` (Required): Controls the blending of the borders during the uncropping process to ensure a seamless transition between the cropped and original image areas. Type should be `FLOAT`.
+        - `crop_rescale` (Required): Determines whether the cropped images should be rescaled to their original size during the uncropping process. Type should be `FLOAT`.
+        - `use_combined_mask` (Required): Indicates whether the combined crop mask should be used for the uncropping process, allowing for more complex uncropping scenarios. Type should be `BOOLEAN`.
+        - `use_square_mask` (Required): Specifies whether a square mask should be used for uncropping, which can be beneficial in certain contexts for maintaining uniformity. Type should be `BOOLEAN`.
+        - `combined_bounding_box` (Optional): An optional parameter that defines a single bounding box encompassing all cropped areas, used for more advanced uncropping scenarios. Type should be `BBOX`.
+    - Outputs:
+        - `image`: The output images after the uncropping process, showcasing the result of the operation with restored or blended areas. Type should be `IMAGE`.

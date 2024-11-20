@@ -1,0 +1,8 @@
+- `CreateGradientMask`: This node is designed to generate a series of gradient masks based on specified dimensions and frame count. It allows for the creation of dynamic, time-offset gradients that can be inverted, offering flexibility in mask generation for various visual effects.
+    - Inputs:
+        - `invert` (Required): Determines whether the generated gradient mask should be inverted. Inverting the mask swaps the gradient direction, enabling more creative control over the visual output. Type should be `BOOLEAN`.
+        - `frames` (Required): Specifies the number of frames (or images) to generate, each with a slightly offset gradient to create a dynamic, time-evolving effect. Type should be `INT`.
+        - `width` (Required): Sets the width of the gradient mask, defining the horizontal dimension of the generated images. Type should be `INT`.
+        - `height` (Required): Sets the height of the gradient mask, defining the vertical dimension of the generated images. Type should be `INT`.
+    - Outputs:
+        - `mask`: Outputs a tensor representing the generated gradient mask(s), which can be used directly in image processing or visual effects pipelines. Type should be `MASK`.

@@ -1,0 +1,9 @@
+- `ConditioningBlend`: The ConditioningBlend node specializes in blending two conditioning inputs using specified blending modes and strengths. It allows for the dynamic combination of conditioning contexts, enabling more nuanced control over the generation process.
+    - Inputs:
+        - `conditioning_a` (Required): The first conditioning input to be blended. It plays a crucial role in determining the base of the blend. Type should be `CONDITIONING`.
+        - `conditioning_b` (Required): The second conditioning input to be blended. It contributes to the blend by providing an additional layer of context. Type should be `CONDITIONING`.
+        - `blending_mode` (Required): Specifies the method used for blending the two conditioning inputs. The choice of mode affects the blending behavior and outcome. Type should be `COMBO[STRING]`.
+        - `blending_strength` (Required): Controls the strength of the blend between the two conditioning inputs, allowing for fine-tuning of the blend's intensity. Type should be `FLOAT`.
+        - `seed` (Required): A seed for random number generation, ensuring reproducibility of the blend when desired. Type should be `INT`.
+    - Outputs:
+        - `conditioning`: The result of blending the two conditioning inputs, ready for use in further processing or generation tasks. Type should be `CONDITIONING`.

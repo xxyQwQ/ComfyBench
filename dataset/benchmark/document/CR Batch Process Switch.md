@@ -1,0 +1,8 @@
+- `CR Batch Process Switch`: The CR Batch Process Switch node is designed to selectively process images or image batches based on a specified input type. It facilitates the dynamic handling of either single images or batches of images, providing a flexible approach to image processing workflows.
+    - Inputs:
+        - `Input` (Required): Determines whether a single image or a batch of images is processed, affecting the node's execution path and the resulting output. Type should be `COMBO[STRING]`.
+        - `image` (Optional): The single image to be processed if 'Input' is set to 'image'. Type should be `IMAGE`.
+        - `image_batch` (Optional): The batch of images to be processed if 'Input' is set to 'image batch'. Type should be `IMAGE`.
+    - Outputs:
+        - `IMAGE`: The processed image or image batch, depending on the input type selected. Type should be `IMAGE`.
+        - `show_help`: A URL providing additional help and documentation related to the node's functionality. Type should be `STRING`.

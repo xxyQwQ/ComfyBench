@@ -1,0 +1,15 @@
+- `SV3D_BatchSchedule`: The SV3D_BatchSchedule node is designed to facilitate the scheduling of azimuth and elevation conditions for SV3D, a video model. It allows for the dynamic adjustment of these conditions over the course of a video, enhancing the model's ability to generate more precise and contextually appropriate visual content.
+    - Inputs:
+        - `clip_vision` (Required): Specifies the CLIP vision model to be used for conditioning the SV3D model, affecting the visual content generated. Type should be `CLIP_VISION`.
+        - `init_image` (Required): Initial image to start the video generation process, setting the visual context for the SV3D model. Type should be `IMAGE`.
+        - `vae` (Required): The VAE model used for encoding and decoding images within the SV3D framework, crucial for the video generation process. Type should be `VAE`.
+        - `width` (Required): Defines the width of the generated video frames, allowing for customization of the video's resolution. Type should be `INT`.
+        - `height` (Required): Sets the height of the generated video frames, enabling control over the video's aspect ratio and resolution. Type should be `INT`.
+        - `batch_size` (Required): Determines the number of video frames to be processed in a single batch, impacting the efficiency of video generation. Type should be `INT`.
+        - `interpolation` (Required): Specifies the interpolation method for transitioning between different azimuth and elevation points, affecting the smoothness of the video. Type should be `COMBO[STRING]`.
+        - `azimuth_points_string` (Required): A string defining key points for azimuth adjustment throughout the video, guiding the directional focus of the generated content. Type should be `STRING`.
+        - `elevation_points_string` (Required): A string detailing key points for elevation changes over the video, influencing the vertical angle of the generated visuals. Type should be `STRING`.
+    - Outputs:
+        - `positive`: The positive conditioning output, influencing the generation towards desired visual attributes. Type should be `CONDITIONING`.
+        - `negative`: The negative conditioning output, steering the generation away from undesired visual aspects. Type should be `CONDITIONING`.
+        - `latent`: The latent representation of the video, encapsulating the high-dimensional space that the model navigates during generation. Type should be `LATENT`.

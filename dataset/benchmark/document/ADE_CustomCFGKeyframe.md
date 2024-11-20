@@ -1,0 +1,8 @@
+- `ADE_CustomCFGKeyframe`: The ADE_CustomCFGKeyframe node is designed for creating and managing custom configuration keyframes within the Animate Diff framework. It allows for the specification of various animation parameters at different points in the animation timeline, enabling precise control over the animation's behavior and appearance.
+    - Inputs:
+        - `cfg_multival` (Required): Defines the configuration value(s) for the keyframe, which can influence various aspects of the animation process. It's crucial for tailoring the animation's characteristics at specific timeline segments. Type should be `MULTIVAL`.
+        - `start_percent` (Required): Specifies the starting point of the keyframe within the animation timeline as a percentage, allowing for precise timing control. Type should be `FLOAT`.
+        - `guarantee_steps` (Required): Determines the minimum number of steps for which the keyframe's configuration will be applied, ensuring a certain duration of effect. Type should be `INT`.
+        - `prev_custom_cfg` (Optional): Allows for the chaining of custom configuration keyframes by specifying a previous custom configuration group, enabling complex animation sequences. Type should be `CUSTOM_CFG`.
+    - Outputs:
+        - `custom_cfg`: Outputs a custom configuration object that encapsulates the defined keyframe, ready for integration into the animation pipeline. Type should be `CUSTOM_CFG`.

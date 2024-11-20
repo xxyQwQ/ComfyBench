@@ -1,0 +1,8 @@
+- `LLMAnthropic`: The LLMAnthropic node integrates Anthropic's conversational AI models into the SaltAI Language Toolkit, enabling users to leverage advanced natural language processing capabilities for generating human-like text responses. This node is designed to facilitate seamless interaction with Anthropic's AI, providing a bridge for developers to incorporate sophisticated conversational AI features into their applications.
+    - Inputs:
+        - `model` (Required): Specifies the Anthropic model to be used for generating responses. This selection determines the conversational capabilities and nuances of the AI's output. Type should be `COMBO[STRING]`.
+        - `anthropic_api_key` (Required): The API key required for accessing Anthropic's models. This key is essential for authenticating and enabling the interaction with Anthropic's AI services. Type should be `STRING`.
+        - `embedding_model` (Required): Defines the embedding model to be used in conjunction with the main model. This affects the quality and relevance of the AI's responses by enhancing its understanding of the input context. Type should be `COMBO[STRING]`.
+        - `openai_api_key` (Required): The API key for OpenAI, used when the embedding model requires access to OpenAI's services. This key facilitates the integration with OpenAI's ecosystem, broadening the AI's capabilities. Type should be `STRING`.
+    - Outputs:
+        - `llm_model`: The loaded Anthropic model, ready for generating responses. This output signifies the successful initialization and readiness of the AI model for interaction. Type should be `LLM_MODEL`.

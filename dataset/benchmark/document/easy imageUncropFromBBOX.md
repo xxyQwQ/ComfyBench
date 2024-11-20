@@ -1,0 +1,10 @@
+- `easy imageUncropFromBBOX`: The `imageUncropFromBBOX` node is designed to reverse the cropping process of an image by using bounding box information. It restores the cropped image back to its original dimensions, optionally blending borders and adjusting for square masks, making it useful for tasks that require the original context of the image for further processing or visualization.
+    - Inputs:
+        - `original_image` (Required): The original image before any cropping was applied. It serves as the reference for uncropping the cropped image back to its original dimensions. Type should be `IMAGE`.
+        - `crop_image` (Required): The cropped version of the original image that needs to be uncropped. This image will be adjusted based on the bounding box and other parameters to match the original image's dimensions. Type should be `IMAGE`.
+        - `bbox` (Required): The bounding box information used to crop the original image. This data is essential for accurately uncropping the image. Type should be `BBOX`.
+        - `border_blending` (Required): A float value that determines the intensity of border blending when uncropping the image. It helps in smoothing the transition between the cropped and uncropped areas. Type should be `FLOAT`.
+        - `use_square_mask` (Required): A boolean flag indicating whether a square mask should be applied during the uncropping process. This affects the shape of the uncropped area. Type should be `BOOLEAN`.
+        - `optional_mask` (Optional): An optional mask that can be applied to the uncropped image for additional processing or visualization purposes. Type should be `MASK`.
+    - Outputs:
+        - `image`: The uncropped image, restored to its original dimensions with optional border blending and mask adjustments. Type should be `IMAGE`.

@@ -1,8 +1,0 @@
-- `GetSAMEmbedding`: This node is designed to generate a SAM embedding from an image using a specified SAM model. It adjusts the model to the appropriate device based on the execution mode and processes the image to produce its embedding, which is crucial for further image manipulation or analysis tasks.
-    - Parameters:
-        - `device_mode`: Specifies the device (AUTO, Prefer GPU, CPU) on which the SAM model should run. This affects the performance and efficiency of the embedding generation. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `sam_model`: The SAM model to be used for generating the embedding. It determines the architecture and weights for processing the image. Type should be `AV_SAM_MODEL`.
-        - `image`: The image to be processed. This is the input image from which the SAM embedding will be generated. Type should be `IMAGE`.
-    - Outputs:
-        - `sam_embedding`: The generated SAM embedding of the input image. This embedding is used for further processing or analysis within the image manipulation pipeline. Type should be `SAM_EMBEDDING`.

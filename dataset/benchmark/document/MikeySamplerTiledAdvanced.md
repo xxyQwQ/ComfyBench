@@ -1,0 +1,26 @@
+- `MikeySamplerTiledAdvanced`: The MikeySamplerTiledAdvanced node is designed for advanced sampling in a tiled manner, optimizing the generation process by handling complex patterns and structures efficiently. It extends the capabilities of basic sampling methods by incorporating advanced techniques to improve the quality and coherence of the generated tiles.
+    - Inputs:
+        - `base_model` (Required): The 'base_model' parameter specifies the foundational model used for generating the initial set of tiles. It is crucial for defining the starting point of the generation process. Type should be `MODEL`.
+        - `refiner_model` (Required): The 'refiner_model' parameter indicates the model used to refine the initially generated tiles, enhancing their quality and coherence. It plays a key role in the advanced sampling process. Type should be `MODEL`.
+        - `samples` (Required): The 'samples' parameter represents the latent representations to be used as input for tile generation. It is essential for the node's ability to produce diverse and complex tile patterns. Type should be `LATENT`.
+        - `vae` (Required): The 'vae' parameter specifies the variational autoencoder used in the process, crucial for encoding and decoding the latent representations. Type should be `VAE`.
+        - `positive_cond_base` (Required): The 'positive_cond_base' parameter specifies the positive conditioning for the base model, influencing the generation of initial tiles. Type should be `CONDITIONING`.
+        - `negative_cond_base` (Required): The 'negative_cond_base' parameter specifies the negative conditioning for the base model, influencing the generation of initial tiles. Type should be `CONDITIONING`.
+        - `positive_cond_refiner` (Required): The 'positive_cond_refiner' parameter specifies the positive conditioning for the refiner model, enhancing the refinement process of the tiles. Type should be `CONDITIONING`.
+        - `negative_cond_refiner` (Required): The 'negative_cond_refiner' parameter specifies the negative conditioning for the refiner model, enhancing the refinement process of the tiles. Type should be `CONDITIONING`.
+        - `model_name` (Required): The 'model_name' parameter specifies the name of the model used for upscaling, crucial for selecting the appropriate model for the generation process. Type should be `COMBO[STRING]`.
+        - `seed` (Required): The 'seed' parameter ensures the reproducibility of the generation process. By setting a specific seed value, users can achieve consistent results across multiple runs, facilitating comparisons and iterations. Type should be `INT`.
+        - `denoise_image` (Required): The 'denoise_image' parameter controls the level of denoising applied to the image, affecting the clarity and quality of the generated tiles. Type should be `FLOAT`.
+        - `steps` (Required): The 'steps' parameter determines the number of steps in the generation process, affecting the detail and quality of the output. Type should be `INT`.
+        - `smooth_step` (Required): The 'smooth_step' parameter controls the smoothness of the transition between steps, affecting the coherence of the generated tiles. Type should be `INT`.
+        - `cfg` (Required): The 'cfg' parameter specifies the configuration for the generation process, affecting the style and characteristics of the generated tiles. Type should be `FLOAT`.
+        - `sampler_name` (Required): The 'sampler_name' parameter specifies the sampling method used, affecting the diversity and quality of the generated tiles. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The 'scheduler' parameter specifies the scheduling method used, affecting the efficiency and quality of the generation process. Type should be `COMBO[STRING]`.
+        - `upscale_by` (Required): The 'upscale_by' parameter controls the upscaling factor, affecting the resolution and detail of the final image. Type should be `FLOAT`.
+        - `tiler_denoise` (Required): The 'tiler_denoise' parameter controls the level of denoising applied by the tiler, affecting the clarity and quality of the tiled image. Type should be `FLOAT`.
+        - `tiler_model` (Required): The 'tiler_model' parameter specifies which model ('base' or 'refiner') is used by the tiler, affecting the refinement process of the tiles. Type should be `COMBO[STRING]`.
+        - `use_complexity_score` (Required): The 'use_complexity_score' parameter indicates whether a complexity score is used to adjust the start step, affecting the detail and quality of the generated tiles. Type should be `COMBO[STRING]`.
+        - `image_optional` (Optional): The 'image_optional' parameter allows for an optional image input that, if provided, replaces the 'samples' input, offering flexibility in the generation process. Type should be `IMAGE`.
+    - Outputs:
+        - `tiled_image`: The 'tiled_image' output is the result of the initial tiling process, providing a composite image made up of individual tiles. Type should be `IMAGE`.
+        - `upscaled_image`: The 'upscaled_image' output is the result of the refinement and upscaling process, delivering a high-resolution image composed of the refined tiles. Type should be `IMAGE`.

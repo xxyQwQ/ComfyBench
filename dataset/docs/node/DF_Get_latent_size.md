@@ -1,8 +1,0 @@
-- `DF_Get_latent_size`: The node `DF_Get_latent_size` is designed to calculate and return the dimensions of a latent representation, either in its original size or scaled. It abstracts the complexity of handling latent data structures to provide straightforward access to their size attributes.
-    - Parameters:
-        - `original`: This boolean parameter dictates whether the original size of the latent is returned or if it is scaled. It affects the calculation by potentially altering the dimensions returned. Type should be `COMBO[BOOLEAN]`.
-    - Inputs:
-        - `latent`: The latent input represents the data structure for which the size is being calculated. It is crucial for determining the dimensions based on the latent's current state. Type should be `LATENT`.
-    - Outputs:
-        - `WIDTH`: Represents the width dimension of the latent's size. Type should be `INT`.
-        - `HEIGHT`: Represents the height dimension of the latent's size. Type should be `INT`.

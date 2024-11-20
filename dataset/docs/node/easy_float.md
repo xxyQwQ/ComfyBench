@@ -1,6 +1,0 @@
-- `easy float`: The `easy float` node is designed to simplify the process of working with floating-point numbers within a user interface, providing a straightforward way to input and adjust float values through parameters with predefined constraints such as default values, minimum and maximum limits, and step sizes.
-    - Parameters:
-        - `value`: Represents a floating-point number that can be adjusted within specified limits. This parameter is crucial for defining numerical values with precision, allowing for fine-tuning of settings or configurations in various applications. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: Outputs a floating-point number, reflecting the adjusted value based on the input parameters. Type should be `FLOAT`.

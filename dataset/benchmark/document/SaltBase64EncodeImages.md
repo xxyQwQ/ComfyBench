@@ -1,0 +1,8 @@
+- `SaltBase64EncodeImages`: The `SaltBase64EncodeImages` node is designed to convert a collection of images, either passed directly as tensors or specified via file paths or URLs, into their Base64-encoded string representations. This process involves resizing the images to specified dimensions and encoding them, facilitating their use in environments where binary image data needs to be embedded or transmitted in text form.
+    - Inputs:
+        - `width` (Required): Specifies the desired width to which the images should be resized. This parameter plays a crucial role in determining the final dimensions of the encoded images, affecting their appearance and size. Type should be `INT`.
+        - `height` (Required): Determines the desired height for the image resizing process. Similar to width, it significantly influences the encoded images' dimensions and visual quality. Type should be `INT`.
+        - `images` (Optional): An optional tensor containing images to be encoded. When provided, it bypasses the need for loading images from paths or URLs, directly converting the tensor images to Base64 strings. Type should be `IMAGE`.
+        - `paths_or_urls` (Optional): A string containing either file paths or URLs, separated by newlines, from which images will be loaded, resized, and encoded. This allows for flexible sourcing of images from local storage or the web. Type should be `STRING`.
+    - Outputs:
+        - `base64_images`: A list of strings, each representing a Base64-encoded image. This output facilitates the embedding or transmission of images in environments where binary data is not supported. Type should be `LIST`.

@@ -1,0 +1,16 @@
+- `BatchCropFromMaskAdvanced`: This node is designed for advanced cropping operations on batches of images based on their associated masks. It calculates the optimal bounding box for each mask, applies smoothing to the bounding box sizes, and adjusts the crop size dynamically to ensure consistency across the batch. This process is aimed at enhancing the focus on relevant image areas while maintaining important aspects of the image composition.
+    - Inputs:
+        - `original_images` (Required): The batch of original images that will be cropped according to the calculated bounding boxes derived from their corresponding masks. Type should be `IMAGE`.
+        - `masks` (Required): A batch of masks used to determine the areas of interest within the corresponding images. These masks guide the cropping process by identifying non-zero regions that signify important content. Type should be `MASK`.
+        - `crop_size_mult` (Required): A multiplier applied to the size of the bounding boxes to adjust the final crop size, allowing for flexibility in the cropping process. Type should be `FLOAT`.
+        - `bbox_smooth_alpha` (Required): A smoothing factor applied to the bounding box sizes to mitigate abrupt changes and ensure a smoother transition between crop sizes. Type should be `FLOAT`.
+    - Outputs:
+        - `original_images`: The original images provided as input, returned without modification. Type should be `IMAGE`.
+        - `cropped_images`: The images after being cropped according to the calculated bounding boxes and applied adjustments. Type should be `IMAGE`.
+        - `cropped_masks`: The masks after being cropped to match the dimensions of the cropped images. Type should be `MASK`.
+        - `combined_crop_image`: A single image created by combining the cropped images, optimized for certain use cases. Type should be `IMAGE`.
+        - `combined_crop_masks`: A single mask created by combining the cropped masks, corresponding to the combined cropped image. Type should be `MASK`.
+        - `bboxes`: The bounding boxes calculated for each mask, used to determine the crop areas. Type should be `BBOX`.
+        - `combined_bounding_box`: The combined bounding box calculated from all masks, used for creating the combined cropped image and mask. Type should be `BBOX`.
+        - `bbox_width`: The width of the largest bounding box calculated across all masks, adjusted for crop size and smoothing. Type should be `INT`.
+        - `bbox_height`: The height of the largest bounding box calculated across all masks, adjusted for crop size and smoothing. Type should be `INT`.

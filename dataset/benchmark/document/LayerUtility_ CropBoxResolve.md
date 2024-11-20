@@ -1,0 +1,8 @@
+- `LayerUtility_ CropBoxResolve`: The CropBoxResolve node is designed to calculate the dimensions of a new, adjusted bounding box based on the coordinates of an existing crop box. It transforms the original coordinates into a format suitable for further image processing tasks, such as cropping or resizing.
+    - Inputs:
+        - `crop_box` (Required): The 'crop_box' parameter represents the original bounding box coordinates. It is essential for determining the starting point and size of the area to be processed, affecting the output dimensions directly. Type should be `BOX`.
+    - Outputs:
+        - `x`: The 'x' output represents the starting x-coordinate of the new bounding box. Type should be `INT`.
+        - `y`: The 'y' output represents the starting y-coordinate of the new bounding box. Type should be `INT`.
+        - `width`: The 'width' output specifies the width of the new bounding box. Type should be `INT`.
+        - `height`: The 'height' output specifies the height of the new bounding box. Type should be `INT`.

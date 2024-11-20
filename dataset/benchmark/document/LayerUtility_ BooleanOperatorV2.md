@@ -1,0 +1,10 @@
+- `LayerUtility_ BooleanOperatorV2`: This node performs a variety of boolean operations between two values, supporting both direct value inputs and string representations of numbers. It can execute standard comparisons, logical operations, and even min/max calculations, making it versatile for conditional logic and decision-making processes within data flows.
+    - Inputs:
+        - `a_value` (Required): A string representation of the first value, which will be converted to a number if possible. It serves as the primary operand for the boolean operation. Type should be `STRING`.
+        - `b_value` (Required): A string representation of the second value, which will be converted to a number if possible. It acts as the secondary operand for the boolean operation. Type should be `STRING`.
+        - `operator` (Required): Specifies the boolean operation to perform, such as comparison, logical operation, or min/max calculation. Type should be `COMBO[STRING]`.
+        - `a` (Optional): An optional direct numeric input for the first value, providing an alternative to 'a_value' if a direct number is preferred. Type should be `*`.
+        - `b` (Optional): An optional direct numeric input for the second value, providing an alternative to 'b_value' if a direct number is preferred. Type should be `*`.
+    - Outputs:
+        - `output`: The boolean result of the specified operation. Type should be `BOOLEAN`.
+        - `string`: The string representation of the boolean result, facilitating easy integration and readability in various contexts. Type should be `STRING`.

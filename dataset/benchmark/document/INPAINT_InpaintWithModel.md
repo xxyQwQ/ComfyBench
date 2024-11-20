@@ -1,0 +1,9 @@
+- `INPAINT_InpaintWithModel`: This node is designed to perform inpainting on images using a specified inpainting model. It takes an image and a mask as inputs, along with the inpainting model, and applies the model to the specified areas of the image to fill in or correct missing or undesired parts. The node supports optional upscaling of the inpainted image for enhanced detail and resolution.
+    - Inputs:
+        - `inpaint_model` (Required): The inpainting model to be used for the inpainting process. This model dictates the inpainting technique and its underlying architecture, affecting the quality and style of the inpainting results. Type should be `INPAINT_MODEL`.
+        - `image` (Required): The image to be inpainted, provided as a tensor. This is the target image where the inpainting will be applied. Type should be `IMAGE`.
+        - `mask` (Required): A tensor representing the mask that indicates the areas of the image to be inpainted. The mask guides the inpainting process by specifying which parts of the image need correction or filling. Type should be `MASK`.
+        - `seed` (Required): An integer seed for random number generation, ensuring reproducibility of the inpainting results. Type should be `INT`.
+        - `optional_upscale_model` (Optional): An optional model for upscaling the inpainted image. This allows for enhancing the resolution and detail of the inpainted areas, improving the overall quality of the output. Type should be `UPSCALE_MODEL`.
+    - Outputs:
+        - `image`: The inpainted image, returned as a tensor. This output represents the final result of the inpainting process, with the specified areas corrected or filled in. Type should be `IMAGE`.

@@ -1,0 +1,7 @@
+- `easy prompt`: The `easy prompt` node is designed to facilitate the generation of text prompts by allowing users to input multiple strings and optionally combine them into a structured prompt. This node simplifies the process of creating complex or structured text inputs for further processing or generation tasks.
+    - Inputs:
+        - `prompt` (Required): Accepts a string input to be used as part of a prompt, providing flexibility in generating text-based inputs. Type should be `STRING`.
+        - `main` (Required): Serves as the primary input for prompt generation, enabling the combination of multiple text elements. Type should be `COMBO[STRING]`.
+        - `lighting` (Required): Takes a string input to incorporate lighting conditions into the prompt, further expanding the possibilities for prompt customization. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `prompt`: Outputs a structured prompt, aggregating the input strings into a cohesive format. Type should be `STRING`.

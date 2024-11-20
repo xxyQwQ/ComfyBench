@@ -1,0 +1,8 @@
+- `SaltAudioSimpleEcho`: The SaltAudioSimpleEcho node applies an echo effect to audio inputs, allowing for the creation of layered audio experiences by repeating the audio signal multiple times with a specified delay and decay factor.
+    - Inputs:
+        - `audio` (Required): The raw audio data to which the echo effect will be applied. This is the primary input for the echo processing. Type should be `AUDIO`.
+        - `times` (Required): Specifies the number of times the audio will be echoed, affecting the density of the echo effect. Type should be `INT`.
+        - `delay_ms` (Required): The delay in milliseconds between each echo, determining the temporal spacing of the echoes. Type should be `INT`.
+        - `decay_factor` (Required): The factor by which the volume of each successive echo decreases, controlling the fade-out effect of the echoes. Type should be `FLOAT`.
+    - Outputs:
+        - `audio`: The processed audio data with the echo effect applied. Type should be `AUDIO`.

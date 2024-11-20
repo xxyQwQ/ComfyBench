@@ -1,7 +1,0 @@
-- `AlignYourStepsScheduler`: The AlignYourStepsScheduler node is designed to adjust the noise levels (sigmas) for a given model type over a specified number of steps, ensuring that the diffusion process is aligned with the model's requirements. It dynamically interpolates or selects predefined noise levels to match the step count, facilitating a tailored diffusion process.
-    - Parameters:
-        - `model_type`: Specifies the model type for which the noise levels are to be adjusted, affecting the selection or interpolation of noise levels. Type should be `COMBO[STRING]`.
-        - `steps`: Determines the number of steps for the diffusion process, influencing the interpolation or selection of noise levels. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `sigmas`: A tensor of noise levels (sigmas) adjusted to align with the specified steps and model type. Type should be `SIGMAS`.

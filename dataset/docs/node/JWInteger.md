@@ -1,6 +1,0 @@
-- `JWInteger`: The JWInteger node is designed to encapsulate an integer value, allowing for the straightforward representation and manipulation of integer data within a computational graph.
-    - Parameters:
-        - `value`: Specifies the integer value to be encapsulated by the node. This parameter is fundamental for defining the node's behavior and output, as it directly represents the data the node operates on. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `int`: Outputs the encapsulated integer value, making it available for further processing or use within the computational graph. Type should be `INT`.

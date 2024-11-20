@@ -1,6 +1,0 @@
-- `Float To Floats (mtb)`: Provides a conversion utility to transform a single float value into a list of floats, facilitating compatibility with other extensions that use a list format for float representation.
-    - Parameters:
-        - `float`: A single float value to be converted into a list of floats. This input is essential for ensuring compatibility with other extensions that expect float values in list format. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `floats`: A list of floats derived from the single input float value, enabling compatibility with other extensions. Type should be `FLOATS`.

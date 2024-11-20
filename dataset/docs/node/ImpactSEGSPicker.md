@@ -1,8 +1,0 @@
-- `ImpactSEGSPicker`: The ImpactSEGSPicker node is designed to select and refine segmentation elements based on user-defined criteria, enhancing the precision of image segmentation outputs. It allows for the customization of segmentation results by applying selection logic to identify and retain only the relevant segments, potentially incorporating fallback options for image processing.
-    - Parameters:
-        - `picks`: Specifies the indices of the segmentation elements to be selected, allowing for the customization of the output by retaining only the desired segments. Type should be `STRING`.
-    - Inputs:
-        - `segs`: The input segmentation elements to be processed and refined based on the selection criteria. Type should be `SEGS`.
-        - `fallback_image_opt`: An optional fallback image to be used for segment processing in cases where the original segment data is insufficient. Type should be `IMAGE`.
-    - Outputs:
-        - `segs`: The refined set of segmentation elements after applying the selection and processing logic. Type should be `SEGS`.

@@ -1,0 +1,12 @@
+- `ADE_AnimateDiffCombine`: This node is designed for combining multiple animation sequences or frames into a single, cohesive animation. It focuses on integrating various elements of animation to create a unified and seamless experience.
+    - Inputs:
+        - `images` (Required): The images input consists of a sequence of frames that are to be combined into a single animation. It plays a crucial role in determining the content and visual flow of the final animation output. Type should be `IMAGE`.
+        - `frame_rate` (Required): Specifies the playback speed of the combined animation in frames per second. This parameter influences the temporal aspect of the animation, affecting how smoothly it plays. Type should be `INT`.
+        - `loop_count` (Required): Determines the number of times the animation will loop. This affects the duration and replayability of the final animation. Type should be `INT`.
+        - `filename_prefix` (Required): A prefix for the filename under which the animation will be saved. It aids in organizing and identifying the output files. Type should be `STRING`.
+        - `format` (Required): Defines the file format of the output animation. This choice impacts compatibility and quality. Type should be `COMBO[STRING]`.
+        - `pingpong` (Required): A boolean indicating whether the animation should play forwards and then backwards, creating a seamless loop effect. Type should be `BOOLEAN`.
+        - `save_image` (Required): Controls whether the final animation is saved to disk. This parameter is essential for persisting the output for later use. Type should be `BOOLEAN`.
+        - `deprecation_warning` (Optional): Provides a warning that this node is deprecated and suggests using an alternative node for similar functionality. Type should be `ADEWARN`.
+    - Outputs:
+        - `gif`: The output is a GIF animation combining the input frames according to the specified parameters. Type should be `GIF`.

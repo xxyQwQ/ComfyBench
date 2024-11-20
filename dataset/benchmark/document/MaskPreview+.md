@@ -1,0 +1,4 @@
+- `MaskPreview+`: The MaskPreview node is designed for generating a preview image from a given mask. It reshapes and expands the mask to fit the image format, then saves the resulting image with a specified prefix, optionally incorporating additional PNG metadata and a prompt.
+    - Inputs:
+        - `mask` (Required): The mask input is the primary data used for generating the preview image. It dictates the shape and content of the output image. Type should be `MASK`.
+    - Outputs:

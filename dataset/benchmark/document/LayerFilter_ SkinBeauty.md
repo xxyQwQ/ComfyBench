@@ -1,0 +1,9 @@
+- `LayerFilter_ SkinBeauty`: The SkinBeauty node enhances the visual quality of skin in images by applying smoothing, adjusting brightness, and improving overall skin texture. It utilizes advanced image processing techniques to selectively blur, adjust thresholds, and manage opacity to achieve a more aesthetically pleasing and natural-looking skin appearance.
+    - Inputs:
+        - `image` (Required): The input image or images to be processed for skin beauty enhancement. This is the primary data on which the skin beauty effects will be applied. Type should be `IMAGE`.
+        - `smooth` (Required): Determines the degree of skin smoothing applied to the image. Higher values result in smoother skin. Type should be `INT`.
+        - `threshold` (Required): Adjusts the brightness threshold for highlighting effects. This parameter helps in enhancing the skin's high points by making them brighter or more subdued. Type should be `INT`.
+        - `opacity` (Required): Controls the opacity of the applied skin beauty effects, allowing for fine-tuning of the final image's look by blending the processed layer with the original. Type should be `INT`.
+    - Outputs:
+        - `image`: The processed image with enhanced skin beauty effects applied. Type should be `IMAGE`.
+        - `beauty_mask`: A mask that highlights the areas of the image where skin beauty effects have been applied. Type should be `MASK`.

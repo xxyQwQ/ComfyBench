@@ -1,0 +1,7 @@
+- `Mask To Image (mtb)`: This node transforms a mask into an RGB image, expanding the mask's single channel into a three-channel RGB format, effectively converting binary or grayscale mask data into a visual, color image representation.
+    - Inputs:
+        - `mask` (Required): The mask input represents the binary or grayscale mask data that will be converted into an RGB image. This transformation allows for the visualization of the mask as a color image, enhancing interpretability. Type should be `MASK`.
+        - `color` (Required): The color input specifies the color to be applied to the non-transparent parts of the mask, contributing to the visual representation of the output image. Type should be `COLOR`.
+        - `background` (Required): The background input defines the color used for the background of the output image, allowing for customization of the image's backdrop. Type should be `COLOR`.
+    - Outputs:
+        - `image`: The output is an RGB image generated from the input mask, where the mask's data is expanded across three channels to form a visual representation. Type should be `IMAGE`.

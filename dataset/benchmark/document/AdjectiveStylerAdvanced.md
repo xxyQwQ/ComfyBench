@@ -1,0 +1,15 @@
+- `AdjectiveStylerAdvanced`: The AdjectiveStylerAdvanced node dynamically applies stylistic transformations to text inputs based on a selection of adjectives, enhancing or altering the tone, mood, or descriptive quality of the text. It leverages a collection of predefined templates to modify text inputs according to user-selected stylistic preferences, aiming to achieve a specific aesthetic or thematic effect.
+    - Inputs:
+        - `text_positive_g` (Required): The global positive text to be styled, affecting the overall positive tone or content of the input. Type should be `STRING`.
+        - `text_positive_l` (Required): The local positive text to be styled, targeting specific positive aspects or details within the input. Type should be `STRING`.
+        - `text_negative` (Required): The negative text to be styled, focusing on altering or enhancing negative elements or tones within the input. Type should be `STRING`.
+        - `adjective` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Determines the scope of negative text transformation, allowing customization of which parts of the text (global, local, or both) are to be styled. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag to enable or disable logging of the prompt styling process, providing insights into the selections and transformations applied. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The styled global positive text, reflecting the applied stylistic transformations. Type should be `STRING`.
+        - `text_positive_l`: The styled local positive text, showcasing the specific stylistic enhancements made. Type should be `STRING`.
+        - `text_positive`: A composite of styled positive text, combining global and local transformations for a cohesive effect. Type should be `STRING`.
+        - `text_negative_g`: The styled global negative text, indicating the stylistic changes applied to the overall negative tone or content. Type should be `STRING`.
+        - `text_negative_l`: The styled local negative text, highlighting the stylistic alterations made to specific negative details or aspects. Type should be `STRING`.
+        - `text_negative`: The fully styled negative text, incorporating both global and local stylistic transformations. Type should be `STRING`.

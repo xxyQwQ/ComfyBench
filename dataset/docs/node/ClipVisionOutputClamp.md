@@ -1,6 +1,0 @@
-- `ClipVisionOutputClamp`: The ClipVisionOutputClamp node is designed to pass through CLIP vision output data without modification, serving as a utility for ensuring data consistency and integrity within a pipeline that processes CLIP vision outputs.
-    - Parameters:
-    - Inputs:
-        - `clip_vision_output`: This parameter represents the CLIP vision output data that is to be passed through the node. It is crucial for maintaining the integrity and consistency of the data as it moves through the processing pipeline. Type should be `CLIP_VISION_OUTPUT`.
-    - Outputs:
-        - `clip_vision_output`: This output is the unaltered CLIP vision output data, passed through from the input, ensuring data consistency and integrity within the pipeline. Type should be `CLIP_VISION_OUTPUT`.

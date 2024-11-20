@@ -1,0 +1,15 @@
+- `StableZero123_BatchSchedule`: This node is designed to manage and schedule batch operations for the StableZero123 model, optimizing the processing of multiple inputs in a batched manner for efficiency and performance.
+    - Inputs:
+        - `clip_vision` (Required): Represents the CLIP vision model input, used to provide visual context or features for processing. Type should be `CLIP_VISION`.
+        - `init_image` (Required): Initial image input for the model to process or modify. Type should be `IMAGE`.
+        - `vae` (Required): The variational autoencoder used for encoding or decoding images in the model's processing pipeline. Type should be `VAE`.
+        - `width` (Required): Specifies the width of the output image, allowing for customization of the image dimensions. Type should be `INT`.
+        - `height` (Required): Specifies the height of the output image, allowing for customization of the image dimensions. Type should be `INT`.
+        - `batch_size` (Required): Determines the number of images processed in a single batch, affecting efficiency and performance. Type should be `INT`.
+        - `interpolation` (Required): Defines the interpolation method used in image processing, affecting the smoothness and quality of the output. Type should be `COMBO[STRING]`.
+        - `azimuth_points_string` (Required): A string defining azimuth points for 3D model orientation, used in scheduling the model's view direction. Type should be `STRING`.
+        - `elevation_points_string` (Required): A string defining elevation points for 3D model orientation, used in scheduling the model's view direction. Type should be `STRING`.
+    - Outputs:
+        - `positive`: The positive conditioning output from the model, used for enhancing certain features or aspects in the generated content. Type should be `CONDITIONING`.
+        - `negative`: The negative conditioning output from the model, used for suppressing certain features or aspects in the generated content. Type should be `CONDITIONING`.
+        - `latent`: Represents the latent space encoding of the input, capturing the essential features for further processing or generation. Type should be `LATENT`.

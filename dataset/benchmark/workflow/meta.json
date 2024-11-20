@@ -1,0 +1,102 @@
+{
+    "001": {
+        "name": "text_to_image",
+        "function": "This workflow implements a basic text-to-image generation pipeline using Stable Diffusion. It requires both positive (desired traits) and negative (undesired traits) text prompts to generate an image. In this specific case, the workflow will output a high-resolution photo of a cat wearing a spacesuit inside a spaceship, avoiding blurry or illustration-like effects.",
+        "principle": "The workflow begins by loading the \"dreamshaper_8.safetensors\" Stable Diffusion model. It generates a blank latent space as the starting point for the image generation. The positive prompt (\"a photo of a cat wearing a spacesuit inside a spaceship\") and negative prompt (\"blurry, illustration\") are encoded into conditioning by the CLIPTextEncode node. The KSampler node then uses these conditionings to guide the generative process over 20 sampling steps, applying denoising to the latent space. The resulting latent code is subsequently decoded into an image using the VAE and saved to disk."
+    },
+    "002": {
+        "name": "text_to_video",
+        "function": "This workflow follows a text-to-video paradigm, where it generates a video from a given text prompt. It first creates an initial image based on the text description and then uses that image as the starting frame to generate a video with motion and transformation using a Stable Video Diffusion model. The output is a 3-second video at 8 frames per second, depicting beautiful scenery with mountains, rivers, and clouds.",
+        "principle": "The workflow first loads two models: a Stable Diffusion model for generating the initial image from the text (\"sd_xl_base_1.0.safetensors\") and a Stable Video Diffusion model (\"svd_xt_1_1.safetensors\") for video generation. It uses the text description to create conditioning, generating an initial 1024x576 image. The image is decoded from latent space via a VAE. The video-specific node (\"SVD_img2vid_Conditioning\") then applies continuity and motion to this image, producing conditioned latent representations for video generation. The final video is created by sampling the latent space over multiple frames and combining them into an MP4 video using the specified frame rate and format."
+    },
+    "003": {
+        "name": "image_to_video",
+        "function": "This workflow follows an image-to-video paradigm. It requires an input image (in this case, \"play_guitar.jpg\") and generates a 4-second video at 6 frames per second (24 video frames in total) based on that image. The workflow outputs the generated video.",
+        "principle": "The workflow uses the \"svd_xt_1_1.safetensors\" Stable Video Diffusion model to generate a video from the input image \"play_guitar.jpg\". The \"SVD_img2vid_Conditioning\" node creates the necessary conditioning for video generation, including the number of frames, resolution, and motion characteristics. A KSamplerAdvanced node adds noise and performs generative sampling over multiple steps to create diverse video frames. These frames are then decoded back into images via a VAE, and finally, the \"VHS_VideoCombine\" node compiles these images into a 4-second video at 8 frames per second."
+    },
+    "004": {
+        "name": "image_content_cloning",
+        "function": "This workflow follows an image-to-image paradigm for content cloning, where the input image is used as the primary reference to generate a new image with similar style, color, and objects. In this example, it creates an image of a beautiful renaissance girl based on the input image \"woman_portrait.jpg\".",
+        "principle": "The workflow applies the IPAdapter model to the input image. The IPAdapter takes a vision model (CLIP Vision) representation of the image and combines it with the textual conditioning to influence the generated image. The IPAdapter ensures that the structure, style, and colors of the input image are preserved in the new image while reflecting the textual prompt \"beautiful renaissance girl, detailed\". Negative conditioning with descriptors like \"blurry, horror\" helps steer away from undesirable features. The workflow uses the Stable Diffusion model \"dreamshaper_8.safetensors\" to synthesize the final image."
+    },
+    "005": {
+        "name": "image_style_cloning",
+        "function": "This workflow is designed to perform image-to-image style transfer. It requires a reference image (in this case, \"budapest.jpg\") and a text prompt. The workflow encodes the reference image's style and integrates it into the generated image to match both the style of the reference image and the content of the text prompt. The output is expected to be a stylized image of an old European city.",
+        "principle": "The workflow uses the unCLIP model from the \"sd21-unclip-l.ckpt\" checkpoint to encode the provided reference image with the CLIP vision model. This encoded output is then combined with the conditioning from the text prompt (\"a beautiful photograph of an old European city\"). The encoded vision output influences the style of the generated image. The KSampler node processes the latent image using this combined conditioning to direct the image sampling, preserving the visual style of the input image while adhering to the text prompt. Finally, the result is decoded into an image and saved."
+    },
+    "006": {
+        "name": "image_pose_cloning",
+        "function": "This workflow is image-to-image pose cloning. It takes an input reference image of a person and extracts their pose, then generates a new image with a different subject (following a text prompt) but in the same pose. In this case, it generates a man dancing in the street following the pose of a dancing woman from the reference image \"woman_dance.jpg\".",
+        "principle": "The workflow uses the DWPose Estimator to extract the pose keypoints (based on body detection) from the input reference image \"woman_dance.jpg\". The extracted pose is then applied to a ControlNet model condition, which is combined with a text prompt (describing the new subject) to guide the generation of the final image. By using this combination, the model is conditioned to generate an image that keeps the pose from the reference but follows the characteristics described in the text prompt."
+    },
+    "007": {
+        "name": "image_area_composition",
+        "function": "This workflow leverages the image-to-image generation paradigm by using area-specific conditioning to place multiple objects in specific locations within the image. It requires text prompts for different objects (in this case, Godzilla and a Caribbean beach) and outputs a combined image where each object is positioned in its designated area.",
+        "principle": "The workflow encodes two separate textual descriptions, one for Godzilla rising near a Caribbean beach, and another for a high-quality photo of a Caribbean beach using a CLIP model. These conditionings are then spatially set on specific areas: Godzilla on the right and the beach on the left. The ConditioningSetArea nodes define the exact portions of the image where each object will appear, and the ConditioningCombine node merges these spatial conditionings, ensuring they overlap and cover the full image. A KSampler node first performs a denoised image generation pass, followed by a second refinement pass that focuses on detailed areas, to create the final image."
+    },
+    "008": {
+        "name": "image_screen_extension",
+        "function": "This workflow follows an image-to-image outpainting paradigm. It extends an input image, \"iceberg.jpg\", by padding 256 pixels to the left and right sides and then generates the extended regions using a generative model. The output is an iceberg image with newly generated left and right expansions.",
+        "principle": "The workflow first pads the input image by 256 pixels on both left and right sides using the \"ImagePadForOutpaint\" node, preparing the image for outpainting. The padded image is then encoded into a latent representation using a VAE model, considering the padded regions. The generative model \"dreamshaper_8Inpainting\" is used to sample from the latent space and generate the new parts of the image, guided by the conditioning text prompt \"an image of iceberg\" and avoiding undesired elements specified in the negative prompt. The result is decoded back into an extended image."
+    },
+    "009": {
+        "name": "image_super_resolution",
+        "function": "This workflow upscales the input image \"titled_book.png\" by 2x, resulting in a high-resolution version of the original image. It enhances the image quality while maintaining visual details.",
+        "principle": "The workflow first loads the \"4x-UltraSharp.pth\" upscale model, which upscales the image by 4x. To achieve a final 2x upscale factor, the workflow subsequently reduces the image scale by 0.5x using bilinear interpolation, ensuring that the output image retains the characteristics of a smoothly upscaled 2x image."
+    },
+    "010": {
+        "name": "video_frame_interpolation",
+        "function": "This workflow performs video frame interpolation using the RIFE VFI model. It takes an input video such as \"play_guitar.gif\", increases the frame rate by generating intermediate frames (interpolating) with a multiplier (in this case, 3x), and produces a smoother video with a higher frame rate (from 8 to 24 frames per second). The final output is saved as a new video or animated GIF.",
+        "principle": "The workflow first loads the input video using \"VHS_LoadVideo\", which extracts the individual frames. The \"RIFE VFI\" node is then used to interpolate the frames by generating additional frames between the existing ones. In this scenario, the multiplier is set to 3x, effectively tripling the frame count and enabling a smoother video playback at 24 frames per second. Finally, the interpolated frames are combined into a video or GIF format using \"VHS_VideoCombine\"."
+    },
+    "011": {
+        "name": "image_text_overlay",
+        "function": "This workflow generates a blank black image (512x512) and overlays a white text (\"Hello, world!\") at the center of the image.",
+        "principle": "The workflow first creates a black image using the \"EmptyImage\" node. Then, it uses the \"CR Overlay Text\" node to overlay the white text \"Hello, world!\" onto the center of this image. This involves setting parameters such as font size, font color, and text alignment to customize the appearance of the text."
+    },
+    "012": {
+        "name": "object_scene_enhancement",
+        "function": "This workflow follows an image-to-image paradigm to remove the background from an input image, integrate the main object into a new scene (urban roadside at night), and adjust the lighting, shadows, and highlights to harmonize the object with the new environment. The input is an image with a subject (e.g., \"titled_book.png\"), and the output is an enhanced image where the subject appears naturally within the described nighttime urban scene.",
+        "principle": "The background of the input image is first removed using the \"easy_imageRemBg\" node. The object is resized and placed within a blank latent image. A new scene is described (\"Urban roadside night view\") and encoded using a CLIP model as conditioning input. The workflow then applies an IPAdapter model and an IC-Light Unet model to refine the lighting and integrate realistic highlights and shadows into the composited scene. Finally, detail transfer is applied to enhance the texture of the object so that it fits seamlessly with the new background."
+    },
+    "013": {
+        "name": "remove_any_object",
+        "function": "This workflow is designed for object removal in images. It requires an input image and a text prompt specifying the object to be removed. The output will be the image with the selected object removed and the area inpainted seamlessly.",
+        "principle": "The workflow first uses the GroundingDINO model and SAM (Segment Anything Model) to segment the object specified in the prompt from the input image (\"bedroom.jpg\") and generate a mask of the object (in this case, a chair). The workflow then expands the mask slightly using the \"GrowMask\" node for a better inpainting result. Finally, the LaMa object removal model is applied to remove the masked object and inpaint the area where the object was located, blending it into the surrounding environment."
+    },
+    "014": {
+        "name": "replace_any_object",
+        "function": "This workflow follows an image-to-image inpainting paradigm for object replacement. It requires an input image, a text prompt specifying the object to be replaced, and another text prompt describing the new object. The workflow uses a segmentation model to identify and mask the old object and then inpaints the mask region with the new object. In this example, the input image shows a standing cat, which the workflow replaces with a dog.",
+        "principle": "The workflow first loads the input image \"cat_stand.jpg\" and uses the GroundingDino and SAM models to segment the object (in this case, a cat) based on the specified text prompt. The workflow generates a mask of the segmented object. It then expands this mask using the \"GrowMask\" node to ensure the transition areas are smoothly inpainted. The VAE encoder converts the image to a latent space representation. The text prompt \"a dog\" is encoded through CLIP to guide the inpainting process, where the masked region is sampled twice with noise to maintain consistency. This process ensures that the specified object is replaced by the new object while preserving the natural aesthetics of the image."
+    },
+    "015": {
+        "name": "scribble_image_repaint",
+        "function": "This workflow follows a sketch-to-image paradigm, where it takes a scribble image (\"simple_graffiti.png\") along with a text prompt (\"a bird, open wings\") and generates a detailed, high-quality image based on both the scribble and the prompt.",
+        "principle": "The workflow first loads and inverts the input scribble image. The inverted image is then used by a \"control_v11p_sd15_scribble_fp16\" ControlNet model to extract and applied to the scribble, controlling and guiding the image generation process. A pre-trained model (\"dreamshaper_8.safetensors\") processes the positive conditioning generated by the combination of the text prompt and the ControlNet's output, along with negative conditioning from undesired traits such as \"horror\" and \"lowres.\" The latent space image is generated using a KSampler and further decoded by the VAE to form the final image. The model synthesizes a highly detailed image while adhering closely to both the shape of the scribble and the desired features implied by the text prompt."
+    },
+    "016": {
+        "name": "subtle_image_repaint",
+        "function": "This workflow is an image-to-image editing pipeline that repaints an image with subtle modifications. It allows for adjusting details such as expressions, ornaments, or painting styles while keeping the main structure of the image intact. It requires an input image, a source prompt describing the original image, and a destination prompt describing the desired changes. In this case, it adds a pair of sunglasses to the girl in the original image.",
+        "principle": "The workflow extracts both line art and depth map features using the \"LineArtPreprocessor\" and \"Zoe-DepthMapPreprocessor\" to guide the ControlNet models. It loads two ControlNets: one based on depth and one on line art, and applies these networks in combination with conditioning from the source and destination prompts to modulate the latent image. The BNK_Unsampler is used with no added noise to maintain the original structure of the image but to refine it based on the destination prompt. The KSamplerAdvanced node then further processes the latent representation without introducing additional noise to ensure minimal deviation from the original image, resulting in a subtly repainted image."
+    },
+    "017": {
+        "name": "creative_image_repaint",
+        "function": "This workflow follows an image-to-image paradigm and is designed to repaint and modify a given image based on a prompt. It specifically focuses on modifying shapes, colors, and themes of the image. In this case, the input image \"letter_r.jpg\" undergoes transformation into a bright-colored logo for a game app, as described by the prompt.",
+        "principle": "The workflow utilizes ControlNet with a \"LineArtPreprocessor\" to extract the line art from the input image, which serves as the basis for controlling the generative process. The positive conditioning is driven by the prompt for a \"bright-colored logo for a game app\", while the negative conditioning discourages undesirable features like watermarking, blurriness, and distortions. The model \"majicmixRealistic_v7.safetensors\" then generates the repainted image based on the guidance of the control net and the provided conditioning."
+    },
+    "018": {
+        "name": "character_face_swap",
+        "function": "This workflow performs a face swap operation between two images: a target image \"target.jpg\" and a source image \"source.jpg\". After swapping the face from the source image to the target image, the resulting image is upscaled to a higher resolution.",
+        "principle": "The face swap is executed using the \"ReActorFaceSwap\" node, which replaces the face in the target image with the face from the source image. It utilizes advanced detection, alignment, and blending techniques for realistic results. The face swap process uses the \"inswapper_128.onnx\" model for swapping and applies the \"codeformer-v0.1.0.pth\" for face restoration. After the face is swapped, the resulting image is enhanced using the \"4x-UltraSharp.pth\" upscale model, making the final output image clearer and higher in resolution."
+    },
+    "019": {
+        "name": "character_face_refinement",
+        "function": "This workflow performs image-to-image character face enhancement. Given an input image, it detects the face and refines it, generating a high-quality output with improved facial details while preserving the context of the original image.",
+        "principle": "The workflow first loads an input image (\"woman_portrait.jpg\") and applies a face detection model (\"bbox/face_yolov8m.pt\") along with a SAM model (\"sam_vit_b_01ec64.pth\") to locate the face in the image. The \"FaceDetailer\" node is then used to refine facial features utilizing the \"majicmixRealistic_v7.safetensors\" model. It integrates text conditioning to apply specific aesthetics (\"1girl\" as positive, \"lowres, zombie, horror, nsfw\" as negatives) and uses inpainting to enhance facial details, leading to a smoothly upscaled result with high fidelity in the face area. The final image is saved with the improved face region."
+    },
+    "020": {
+        "name": "character_portrait_conversion",
+        "function": "This workflow generates a refined, nature or fantasy-themed character portrait through an image-to-image process. It requires an input image (in this case, \"woman_portrait.jpg\"), applies pose and depth map-based conditioning to guide the transformation, and performs a subtle face swap to further enhance the result. It outputs a detailed portrait incorporating natural elements, such as plants, in a high-quality, realistic style.",
+        "principle": "The workflow utilizes the \"majicmixRealistic_v7.safetensors\" model for the base image generation, with additional refinement using the \"more_details.safetensors\" LoRA model. The input image \"woman_portrait.jpg\" is preprocessed to extract a pose estimation and depth map, which are applied as conditioning through ControlNets (\"openpose\" and \"depth\"). The final image is further polished with a face swap operation using an advanced face-swapping model to subtly adjust and enhance facial details, while the overall appearance is influenced by a natural, plant-inspired theme from the text conditioning."
+    }
+}

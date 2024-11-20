@@ -1,6 +1,0 @@
-- `FlatLatentsIntoSingleGrid`: The FlatLatentsIntoSingleGrid node is designed to transform a batch of latent representations into a single, flat grid layout. This operation is useful for visualizing and processing multiple latent samples collectively, as it rearranges them spatially into a unified structure.
-    - Parameters:
-    - Inputs:
-        - `latents`: The 'latents' input represents a batch of latent samples to be arranged into a grid. This input is crucial for determining the structure and size of the resulting grid, affecting how the latent samples are spatially organized. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The output is a single latent representation in the form of a grid, containing the rearranged batch of input latents. This consolidated form facilitates further operations or visualizations on the batch as a whole. Type should be `LATENT`.

@@ -1,9 +1,0 @@
-- `Uncrop (mtb)`: The Uncrop (mtb) node is designed to reverse the cropping process on images, restoring them to their original dimensions or to a specified larger context. This node is essential for operations where the spatial context of an image needs to be preserved or reconstructed after it has been cropped for analysis or processing.
-    - Parameters:
-        - `border_blending`: A parameter that controls the blending of the borders between the cropped image and the original image to ensure a seamless transition. Type should be `FLOAT`.
-    - Inputs:
-        - `image`: The original image that will serve as the background for the uncropping process. It defines the spatial context into which the cropped image will be placed. Type should be `IMAGE`.
-        - `crop_image`: The cropped image to be integrated back into the original image's context. This image is essential for the node's operation as it contains the content that needs to be restored. Type should be `IMAGE`.
-        - `bbox`: The bounding box specifying where the cropped image should be placed within the original image. This parameter is crucial for positioning the cropped content accurately. Type should be `BBOX`.
-    - Outputs:
-        - `image`: The image after the uncropping process has been applied, showing the cropped content seamlessly integrated into the original image's context. Type should be `IMAGE`.

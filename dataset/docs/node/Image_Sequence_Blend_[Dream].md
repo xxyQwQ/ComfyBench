@@ -1,9 +1,0 @@
-- `Image Sequence Blend [Dream]`: This node blends animation sequences by applying fade-in and fade-out effects between frames over specified iterations, enhancing the visual transition and continuity within the sequence.
-    - Parameters:
-        - `fade_in`: Specifies the intensity of the fade-in effect at the beginning of each frame transition, influencing the smoothness of the sequence's visual flow. Type should be `FLOAT`.
-        - `fade_out`: Determines the intensity of the fade-out effect at the end of each frame transition, contributing to the seamless integration of consecutive frames. Type should be `FLOAT`.
-        - `iterations`: Controls the number of times the blending process is applied, affecting the overall smoothness and continuity of the animation sequence. Type should be `INT`.
-    - Inputs:
-        - `sequence`: The animation sequence to be blended, serving as the primary input for the blending process. Type should be `ANIMATION_SEQUENCE`.
-    - Outputs:
-        - `sequence`: The resulting animation sequence after applying the blend processing, featuring enhanced visual transitions between frames. Type should be `ANIMATION_SEQUENCE`.

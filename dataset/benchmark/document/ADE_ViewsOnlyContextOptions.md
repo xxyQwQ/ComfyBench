@@ -1,0 +1,8 @@
+- `ADE_ViewsOnlyContextOptions`: This node is designed to create context options specifically tailored for viewing animations, incorporating parameters such as start percentage and guarantee steps to customize the animation's initiation and progression.
+    - Inputs:
+        - `view_opts_req` (Required): Specifies the required view options to tailor the context for viewing animations, ensuring the animation's parameters are set according to the provided view options. Type should be `VIEW_OPTS`.
+        - `start_percent` (Optional): Determines the starting point of the animation as a percentage, allowing for precise control over where the animation begins. Type should be `FLOAT`.
+        - `guarantee_steps` (Optional): Specifies the minimum number of steps guaranteed in the animation, ensuring a certain length and progression. Type should be `INT`.
+        - `prev_context` (Optional): Allows for the inclusion of previous context options, enabling the chaining or layering of context configurations for complex animations. Type should be `CONTEXT_OPTIONS`.
+    - Outputs:
+        - `CONTEXT_OPTS`: Provides the modified context options group, enriched with the newly created context options for viewing animations. Type should be `CONTEXT_OPTIONS`.

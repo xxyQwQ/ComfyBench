@@ -1,0 +1,237 @@
+{
+    "11": {
+        "_meta": {
+            "title": "Load VAE"
+        },
+        "class_type": "VAELoader",
+        "inputs": {
+            "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+        }
+    },
+    "17": {
+        "_meta": {
+            "title": "CLIP Text Encode (Positive)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "Godzilla raising from the water, near a Caribbean beach\n\nhigh resolution, high quality, detailed, 4k"
+        }
+    },
+    "18": {
+        "_meta": {
+            "title": "CLIP Text Encode (Positive)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "a photo of a Caribbean beach\n\nhigh resolution, high quality, detailed, 4k"
+        }
+    },
+    "25": {
+        "_meta": {
+            "title": "Conditioning (Set Area)"
+        },
+        "class_type": "ConditioningSetArea",
+        "inputs": {
+            "conditioning": [
+                "17",
+                0
+            ],
+            "height": 512,
+            "strength": 1,
+            "width": 384,
+            "x": 384,
+            "y": 0
+        }
+    },
+    "26": {
+        "_meta": {
+            "title": "Conditioning (Combine)"
+        },
+        "class_type": "ConditioningCombine",
+        "inputs": {
+            "conditioning_1": [
+                "25",
+                0
+            ],
+            "conditioning_2": [
+                "37",
+                0
+            ]
+        }
+    },
+    "3": {
+        "_meta": {
+            "title": "KSampler"
+        },
+        "class_type": "KSampler",
+        "inputs": {
+            "cfg": 6,
+            "denoise": 1,
+            "latent_image": [
+                "5",
+                0
+            ],
+            "model": [
+                "4",
+                0
+            ],
+            "negative": [
+                "7",
+                0
+            ],
+            "positive": [
+                "26",
+                0
+            ],
+            "sampler_name": "ddpm",
+            "scheduler": "karras",
+            "seed": 381979438476462,
+            "steps": 18
+        }
+    },
+    "30": {
+        "_meta": {
+            "title": "KSampler"
+        },
+        "class_type": "KSampler",
+        "inputs": {
+            "cfg": 8,
+            "denoise": 0.35000000000000003,
+            "latent_image": [
+                "3",
+                0
+            ],
+            "model": [
+                "4",
+                0
+            ],
+            "negative": [
+                "7",
+                0
+            ],
+            "positive": [
+                "17",
+                0
+            ],
+            "sampler_name": "dpmpp_2m",
+            "scheduler": "karras",
+            "seed": 613509121902569,
+            "steps": 15
+        }
+    },
+    "31": {
+        "_meta": {
+            "title": "VAE Decode"
+        },
+        "class_type": "VAEDecode",
+        "inputs": {
+            "samples": [
+                "30",
+                0
+            ],
+            "vae": [
+                "11",
+                0
+            ]
+        }
+    },
+    "32": {
+        "_meta": {
+            "title": "Save Image"
+        },
+        "class_type": "SaveImage",
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "31",
+                0
+            ]
+        }
+    },
+    "33": {
+        "_meta": {
+            "title": "Preview Image"
+        },
+        "class_type": "PreviewImage",
+        "inputs": {
+            "images": [
+                "8",
+                0
+            ]
+        }
+    },
+    "37": {
+        "_meta": {
+            "title": "Conditioning (Set Area)"
+        },
+        "class_type": "ConditioningSetArea",
+        "inputs": {
+            "conditioning": [
+                "18",
+                0
+            ],
+            "height": 512,
+            "strength": 1,
+            "width": 512,
+            "x": 0,
+            "y": 0
+        }
+    },
+    "4": {
+        "_meta": {
+            "title": "Load Checkpoint"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "inputs": {
+            "ckpt_name": "majicmixRealistic_v7.safetensors"
+        }
+    },
+    "5": {
+        "_meta": {
+            "title": "Empty Latent Image"
+        },
+        "class_type": "EmptyLatentImage",
+        "inputs": {
+            "batch_size": 1,
+            "height": 512,
+            "width": 768
+        }
+    },
+    "7": {
+        "_meta": {
+            "title": "CLIP Text Encode (Negative)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "blurry, illustration, distorted, cropped"
+        }
+    },
+    "8": {
+        "_meta": {
+            "title": "VAE Decode"
+        },
+        "class_type": "VAEDecode",
+        "inputs": {
+            "samples": [
+                "3",
+                0
+            ],
+            "vae": [
+                "11",
+                0
+            ]
+        }
+    }
+}

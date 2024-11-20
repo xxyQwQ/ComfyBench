@@ -1,0 +1,8 @@
+- `SDXL Prompt Handling Plus (JPS)`: This node is designed to enhance the process of handling and refining text prompts for generative models, incorporating advanced techniques to manipulate and optimize prompts for improved clarity, creativity, or specificity in generated outputs. It aims to provide a more nuanced and effective approach to prompt engineering, leveraging additional parameters and methods to fine-tune the interaction with the generative model.
+    - Inputs:
+        - `handling` (Required): Specifies the method for handling and combining the positive and negative prompts, offering various strategies to tailor the prompt processing according to specific needs. Type should be `COMBO[STRING]`.
+        - `pos_g` (Required): Represents the global positive prompt input that the node will process, playing a crucial role in guiding the generative model towards producing desired outcomes. Type should be `STRING`.
+        - `pos_l` (Required): Serves as the local positive prompt input, providing additional context or emphasis to refine the output further. Type should be `STRING`.
+    - Outputs:
+        - `pos_g`: The processed global positive prompt, optimized for clarity and effectiveness in guiding the generative model. Type should be `STRING`.
+        - `pos_l`: The refined local positive prompt, tailored to add specific context or emphasis to the generated output. Type should be `STRING`.

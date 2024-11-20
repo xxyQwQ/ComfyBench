@@ -1,0 +1,12 @@
+- `Inference_Core_ModelMergeBlockNumber`: This node specializes in merging two models by blending their components based on specified blending ratios for different parts of the models. It allows for fine-tuned control over how elements from each model are combined, facilitating the creation of hybrid models that leverage strengths from both inputs.
+    - Inputs:
+        - `model1` (Required): The first model to be merged. It serves as the base model onto which elements from the second model are blended. Type should be `MODEL`.
+        - `model2` (Required): The second model to be merged. Elements from this model are blended into the first model based on the specified ratios. Type should be `MODEL`.
+        - `time_embed.` (Required): Specifies the blending ratio for the time embedding components of the models. Type should be `FLOAT`.
+        - `label_emb.` (Required): Specifies the blending ratio for the label embedding components of the models. Type should be `FLOAT`.
+        - `input_blocks.i.` (Required): Specifies the blending ratio for the i-th input block of the models. The index i ranges from 0 to 11. Type should be `FLOAT`.
+        - `middle_block.i.` (Required): Specifies the blending ratio for the i-th middle block of the models. The index i ranges from 0 to 2. Type should be `FLOAT`.
+        - `output_blocks.i.` (Required): Specifies the blending ratio for the i-th output block of the models. The index i ranges from 0 to 11. Type should be `FLOAT`.
+        - `out.` (Required): Specifies the blending ratio for the output components of the models. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The merged model, which is a hybrid of the two input models with components blended according to the specified ratios. Type should be `MODEL`.

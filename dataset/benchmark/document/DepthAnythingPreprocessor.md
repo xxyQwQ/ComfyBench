@@ -1,0 +1,7 @@
+- `DepthAnythingPreprocessor`: The DepthAnythingPreprocessor node is designed to preprocess images for depth estimation tasks by utilizing different pretrained models based on the checkpoint name provided. It abstracts the complexity of model selection and preprocessing steps, offering a streamlined way to generate depth maps from input images.
+    - Inputs:
+        - `image` (Required): The input image to be processed for depth estimation. This image is transformed and fed into the selected model to generate a depth map. Type should be `IMAGE`.
+        - `ckpt_name` (Optional): Specifies the pretrained model checkpoint to use for depth estimation. The choice of checkpoint affects the model's performance and accuracy. Type should be `COMBO[STRING]`.
+        - `resolution` (Optional): The resolution to which the input image is resized before processing. This parameter can influence the detail level of the resulting depth map. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is a depth map of the input image, providing a pixel-wise estimation of depth. Type should be `IMAGE`.

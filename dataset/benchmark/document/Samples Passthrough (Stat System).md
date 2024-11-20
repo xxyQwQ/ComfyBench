@@ -1,0 +1,5 @@
+- `Samples Passthrough (Stat System)`: This node is designed to pass through sample data without modification, primarily serving as a placeholder or intermediary within a statistical analysis or processing pipeline. Its main function is to facilitate the flow of data between nodes in a system that requires the preservation of sample integrity for further analysis or processing.
+    - Inputs:
+        - `samples` (Required): The 'samples' parameter represents the data that will be passed through the node without alteration. It is crucial for maintaining the integrity and continuity of data across different stages of a processing pipeline. Type should be `LATENT`.
+    - Outputs:
+        - `samples`: The output of this node is identical to its input, ensuring that the sample data is preserved without any modifications for subsequent processing or analysis. Type should be `LATENT`.

@@ -1,0 +1,11 @@
+- `LoraSyntaxProcessor`: The LoraSyntaxProcessor node is designed to interpret and process specific syntax within text inputs related to LoRA (Low-Rank Adaptation) configurations. It dynamically modifies model and clip parameters based on the LoRA specifications found within the text, enabling customized model behavior and output generation.
+    - Inputs:
+        - `model` (Required): The model parameter represents the deep learning model to which LoRA configurations will be applied. It plays a crucial role in the node's operation by being dynamically modified based on the LoRA specifications extracted from the input text. Type should be `MODEL`.
+        - `clip` (Required): The clip parameter refers to a specific component or aspect of the model that is targeted for modification through LoRA configurations. It is essential for applying the LoRA adjustments to the correct part of the model. Type should be `CLIP`.
+        - `text` (Required): The text input contains the specific LoRA syntax that will be parsed and processed to extract LoRA configurations. This syntax directs how the model and clip parameters are to be modified. Type should be `STRING`.
+        - `seed` (Required): The seed parameter is used for initializing random number generators, ensuring that any randomness in the LoRA processing is reproducible. Type should be `INT`.
+    - Outputs:
+        - `model`: The modified deep learning model after applying the LoRA configurations extracted from the input text. Type should be `MODEL`.
+        - `clip`: The modified clip component of the model after LoRA adjustments have been applied. Type should be `CLIP`.
+        - `text`: The input text with all LoRA syntax removed, leaving only the original content for further processing or use. Type should be `STRING`.
+        - `unprocessed_text`: The original text input before any LoRA syntax processing, providing a reference to the initial state of the text. Type should be `STRING`.

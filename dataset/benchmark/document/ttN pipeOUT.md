@@ -1,0 +1,13 @@
+- `ttN pipeOUT`: The ttN pipeOUT node is designed for the final stage of a pipeline in the tinyterra legacy system, where it extracts and returns various components of a given pipeline such as models, conditioning data, latent representations, and more. This node serves as a crucial endpoint for retrieving processed data from the pipeline.
+    - Inputs:
+        - `pipe` (Required): The 'pipe' parameter represents the pipeline from which data is to be extracted. It is essential for the operation of the node, as it contains all the information needed for the output. Type should be `PIPE_LINE`.
+    - Outputs:
+        - `model`: Returns the model component extracted from the pipeline. Type should be `MODEL`.
+        - `pos`: Returns the positive conditioning data extracted from the pipeline. Type should be `CONDITIONING`.
+        - `neg`: Returns the negative conditioning data extracted from the pipeline. Type should be `CONDITIONING`.
+        - `latent`: Returns the latent representation data extracted from the pipeline. Type should be `LATENT`.
+        - `vae`: Returns the VAE component extracted from the pipeline. Type should be `VAE`.
+        - `clip`: Returns the CLIP component extracted from the pipeline. Type should be `CLIP`.
+        - `image`: Returns the image data extracted from the pipeline. Type should be `IMAGE`.
+        - `seed`: Returns the seed used in the pipeline's process. Type should be `INT`.
+        - `pipe`: Returns the entire pipeline, allowing for further manipulation or analysis. Type should be `PIPE_LINE`.

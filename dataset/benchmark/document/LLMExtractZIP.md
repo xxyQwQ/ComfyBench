@@ -1,0 +1,6 @@
+- `LLMExtractZIP`: The LLMExtractZIP node is designed to extract files from a ZIP archive, with the option to filter the extracted files based on their extensions. It ensures that only desired files are extracted and handles the creation of necessary directories, providing detailed logging of the extraction process.
+    - Inputs:
+        - `path` (Required): Defines the destination path where the extracted files will be saved. This parameter is essential for directing the output of the extraction process, ensuring that files are organized and stored in the intended location. Type should be `STRING`.
+        - `filter_extensions` (Required): Specifies the file extensions to include in the extraction process, allowing for selective extraction of files. This parameter plays a crucial role in filtering out unwanted files, enhancing the node's efficiency and relevance to the user's needs. Type should be `STRING`.
+    - Outputs:
+        - `extraction_path`: The path to the directory where the files have been extracted. This output is crucial for users to locate and access the extracted files easily. Type should be `STRING`.

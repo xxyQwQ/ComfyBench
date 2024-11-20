@@ -1,0 +1,7 @@
+- `SaltListClamp`: The SaltListClamp node is designed to adjust the values in a schedule list so that they fall within a specified minimum and maximum range. This process, known as clamping, ensures that all values in the list adhere to defined boundaries, enhancing the control over the data's range for further processing or visualization.
+    - Inputs:
+        - `schedule_list` (Required): The list of numerical values to be clamped. It serves as the primary data input for the node, determining the values that will be adjusted to fall within the specified range. Type should be `LIST`.
+        - `min_value` (Required): The minimum allowable value in the clamped list. This parameter sets the lower boundary for the values, ensuring none fall below it. Type should be `FLOAT`.
+        - `max_value` (Required): The maximum allowable value in the clamped list. This parameter sets the upper boundary for the values, ensuring none exceed it. Type should be `FLOAT`.
+    - Outputs:
+        - `schedule_list`: The list of clamped values, adjusted to ensure that each element falls within the specified minimum and maximum range. Type should be `LIST`.

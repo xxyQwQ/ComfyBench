@@ -1,8 +1,0 @@
-- `CM_Vec4ScalarOperation`: Performs scalar operations on 4-dimensional vectors, allowing for the manipulation of vector components with a scalar value. This node abstracts mathematical operations such as multiplication or division, facilitating vector transformations in a 4D space.
-    - Parameters:
-        - `op`: Specifies the scalar operation to be performed on the vector, such as multiplication or division, influencing the resulting vector transformation. Type should be `COMBO[STRING]`.
-        - `b`: The scalar value to be applied to the vector, acting as the secondary operand in the operation. Type should be `FLOAT`.
-    - Inputs:
-        - `a`: The 4-dimensional vector to be transformed, serving as the primary operand in the scalar operation. Type should be `VEC4`.
-    - Outputs:
-        - `vec4`: The transformed 4-dimensional vector resulting from the specified scalar operation. Type should be `VEC4`.

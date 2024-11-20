@@ -1,0 +1,18 @@
+- `VHS_LoadVideoPath`: This node is designed to load video files from a specified path, applying various preprocessing steps such as resizing, frame rate adjustment, and optional VAE encoding. It facilitates the extraction and manipulation of video data for further processing or analysis within the Video Helper Suite.
+    - Inputs:
+        - `video` (Required): The path to the video file to be loaded. It is crucial for locating and accessing the video data for processing. Type should be `STRING`.
+        - `force_rate` (Required): Specifies the target frame rate to which the video should be adjusted. This parameter is essential for standardizing the frame rate across different videos. Type should be `INT`.
+        - `force_size` (Required): Defines the target resolution for the video. This parameter is key in resizing the video to a specific dimension. Type should be `COMBO[STRING]`.
+        - `custom_width` (Required): The custom width to which the video should be resized. This allows for precise control over the video's width dimension. Type should be `INT`.
+        - `custom_height` (Required): The custom height to which the video should be resized. This allows for precise control over the video's height dimension. Type should be `INT`.
+        - `frame_load_cap` (Required): Limits the number of frames to be loaded from the video. This parameter helps in managing memory usage by restricting the frame count. Type should be `INT`.
+        - `skip_first_frames` (Required): The number of initial frames to skip. This is useful for bypassing unneeded content at the beginning of the video. Type should be `INT`.
+        - `select_every_nth` (Required): Determines the interval at which frames are selected. By choosing every nth frame, it reduces the total number of frames processed and can help in focusing on specific segments of the video. Type should be `INT`.
+        - `meta_batch` (Optional): unknown Type should be `VHS_BatchManager`.
+        - `vae` (Optional): unknown Type should be `VAE`.
+    - Outputs:
+        - `IMAGE`: The processed frames of the video, potentially resized and adjusted according to the specified frame rate and dimensions. Type should be `IMAGE`.
+        - `frame_count`: The total number of frames loaded and processed from the video. Type should be `INT`.
+        - `audio`: The extracted audio track from the video, adjusted according to the specified frame selection parameters. Type should be `VHS_AUDIO`.
+        - `video_info`: Metadata about the video, including both source and loaded properties such as frame rate, duration, and dimensions. Type should be `VHS_VIDEOINFO`.
+        - `LATENT`: The optional VAE-encoded representation of the video frames, if a VAE model is applied. Type should be `LATENT`.

@@ -1,0 +1,6 @@
+- `LLMDocxReader`: The LLMDocxReader node specializes in reading Microsoft Word (.docx) files and converting them into a format suitable for further processing or analysis within the llama_index ecosystem. It leverages the capabilities of the DocxReader class to parse and extract document content, facilitating the integration of Word documents into data pipelines.
+    - Inputs:
+        - `path` (Required): Specifies the file system path to the .docx file to be read. This path is essential for locating and accessing the file for content extraction. Type should be `STRING`.
+        - `extra_info` (Optional): Provides additional, optional information in a string format that can be used to influence the reading process or to append extra metadata to the resulting document. Type should be `STRING`.
+    - Outputs:
+        - `documents`: The output is a document object that encapsulates the content and structure of the read .docx file, ready for further processing within the llama_index ecosystem. Type should be `DOCUMENT`.

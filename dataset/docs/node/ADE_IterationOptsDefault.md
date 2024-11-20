@@ -1,8 +1,0 @@
-- `ADE_IterationOptsDefault`: This node provides the default iteration options for the AnimateDiff process, allowing users to configure the iteration parameters for their animation generation tasks.
-    - Parameters:
-        - `iterations`: Specifies the number of iterations to perform, affecting the depth of the animation generation process. Type should be `INT`.
-        - `iter_batch_offset`: Determines the starting offset for batch processing within the iterations, enabling fine-tuned control over the animation generation sequence. Type should be `INT`.
-        - `iter_seed_offset`: Sets the seed offset for iterations, offering a way to influence the randomness and variation in the generated animations. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `iteration_opts`: Outputs the configured iteration options, encapsulating the settings for the animation generation process. Type should be `ITERATION_OPTS`.

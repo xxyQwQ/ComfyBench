@@ -1,0 +1,24 @@
+- `easy pixArtLoader`: The pixArtLoader node is designed to facilitate the loading and integration of PixArt models into a broader AI-driven art generation framework. It abstracts the complexities involved in initializing and configuring PixArt models, making it easier for users to leverage these models for creative and generative tasks.
+    - Inputs:
+        - `ckpt_name` (Required): Specifies the checkpoint name for the PixArt model to be loaded. This parameter is crucial for identifying the specific model version and its associated weights for initialization. Type should be `COMBO[STRING]`.
+        - `model_name` (Required): Determines the PixArt model to be used for the art generation process. This selection influences the style and characteristics of the generated artwork. Type should be `COMBO[STRING]`.
+        - `vae_name` (Required): Identifies the VAE (Variational Autoencoder) model associated with the PixArt model. This is important for the preprocessing and postprocessing stages of the art generation pipeline. Type should be `COMBO[STRING]`.
+        - `t5_type` (Required): unknown Type should be `COMBO[STRING]`.
+        - `clip_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `padding` (Required): unknown Type should be `INT`.
+        - `t5_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `device` (Required): unknown Type should be `COMBO[STRING]`.
+        - `dtype` (Required): unknown Type should be `COMBO[STRING]`.
+        - `lora_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `lora_model_strength` (Required): unknown Type should be `FLOAT`.
+        - `ratio` (Required): unknown Type should be `COMBO[STRING]`.
+        - `empty_latent_width` (Required): unknown Type should be `INT`.
+        - `empty_latent_height` (Required): unknown Type should be `INT`.
+        - `positive` (Required): unknown Type should be `STRING`.
+        - `negative` (Required): unknown Type should be `STRING`.
+        - `batch_size` (Required): unknown Type should be `INT`.
+        - `optional_lora_stack` (Optional): unknown Type should be `LORA_STACK`.
+    - Outputs:
+        - `pipe`: Returns the pipeline component configured with the PixArt model for art generation. Type should be `PIPE_LINE`.
+        - `model`: Returns the loaded PixArt model instance. Type should be `MODEL`.
+        - `vae`: Returns the VAE model associated with the PixArt model, used in the art generation process. Type should be `VAE`.

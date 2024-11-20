@@ -1,0 +1,10 @@
+- `Filter Contour`: The Filter Contour node is designed to process and filter contours based on a custom fitness function. It evaluates each contour in the context of an image and an auxiliary contour, allowing for dynamic selection and manipulation of contours according to specific criteria.
+    - Inputs:
+        - `contours` (Required): A list of contours to be filtered. The fitness function evaluates each contour to determine its suitability. Type should be `CV_CONTOURS`.
+        - `fitness` (Required): A custom lambda function that defines the criteria for filtering contours. It is applied to each contour to compute a fitness score. Type should be `STRING`.
+        - `select` (Required): A selection mode that determines how the filtered contours are returned. It influences the output based on the fitness scores of the contours. Type should be `COMBO[STRING]`.
+        - `image` (Optional): The image in which the contours are found. It provides context for evaluating the fitness of each contour. Type should be `IMAGE`.
+        - `aux_contour` (Optional): An auxiliary contour that can be used as additional context in the fitness function for filtering contours. Type should be `CV_CONTOUR`.
+    - Outputs:
+        - `cv_contour`: The primary contour selected based on the fitness function. Type should be `CV_CONTOUR`.
+        - `cv_contours`: The filtered contours selected based on the fitness function. Type should be `CV_CONTOURS`.

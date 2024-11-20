@@ -1,0 +1,17 @@
+- `CR_Aspect Ratio For Print`: This node is designed to adjust the aspect ratio of images specifically for print purposes. It modifies image dimensions to fit standard print sizes, ensuring that the output is optimized for physical media.
+    - Inputs:
+        - `width` (Required): Specifies the initial width of the image. This value is adjusted based on the selected aspect ratio and other parameters to fit standard print sizes. Type should be `INT`.
+        - `height` (Required): Specifies the initial height of the image. Similar to 'width', this value is adjusted to match the desired aspect ratio for print. Type should be `INT`.
+        - `aspect_ratio` (Required): Defines the target aspect ratio for the image, selected from a predefined list of standard print sizes. This choice determines the final dimensions of the image. Type should be `COMBO[STRING]`.
+        - `swap_dimensions` (Required): Allows for the swapping of width and height dimensions, accommodating different orientation needs without altering the aspect ratio. Type should be `COMBO[STRING]`.
+        - `upscale_factor` (Required): A multiplier for scaling the image's dimensions up, allowing for higher resolution prints. Type should be `FLOAT`.
+        - `prescale_factor` (Required): A multiplier for scaling the image's dimensions before applying the aspect ratio adjustments. This can be used for initial size adjustments. Type should be `FLOAT`.
+        - `batch_size` (Required): Determines the number of images processed in a single batch, allowing for efficient bulk processing of images. Type should be `INT`.
+    - Outputs:
+        - `width`: The adjusted width of the image, optimized for the selected print aspect ratio. Type should be `INT`.
+        - `height`: The adjusted height of the image, reflecting the chosen aspect ratio for print purposes. Type should be `INT`.
+        - `upscale_factor`: The factor by which the image's dimensions have been scaled up, applicable if an upscale was performed. Type should be `FLOAT`.
+        - `prescale_factor`: The factor by which the image's dimensions were scaled before aspect ratio adjustments, applicable if a prescale was performed. Type should be `FLOAT`.
+        - `batch_size`: The number of images processed, reflecting the input batch size. Type should be `INT`.
+        - `empty_latent`: A tensor placeholder for the processed images, structured to accommodate the adjusted dimensions. Type should be `LATENT`.
+        - `show_help`: Provides a link to additional help and documentation regarding aspect ratio adjustments for print. Type should be `STRING`.

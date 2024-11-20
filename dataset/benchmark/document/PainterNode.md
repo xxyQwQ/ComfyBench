@@ -1,0 +1,8 @@
+- `PainterNode`: The PainterNode is designed to facilitate image processing and manipulation within a custom node environment. It enables the dynamic updating of images based on user input, supports asynchronous communication with a server for image updates, and manages node-specific settings for personalized image processing workflows.
+    - Inputs:
+        - `image` (Required): The primary image input for processing. It serves as the base for any transformations or updates applied by the node. Type should be `COMBO[STRING]`.
+        - `images` (Optional): An optional list of images to be processed or updated. These images can be used for batch processing or as additional inputs for the node's operations. Type should be `IMAGE`.
+        - `update_node` (Optional): A flag indicating whether the node should update its internal state based on the provided images. This affects how images are processed and integrated into the node's workflow. Type should be `COMBO[BOOLEAN]`.
+    - Outputs:
+        - `image`: The processed image after applying the node's operations, ready for further use or display. Type should be `IMAGE`.
+        - `mask`: An optional mask generated during the image processing, which can be used for further image manipulation or analysis. Type should be `MASK`.

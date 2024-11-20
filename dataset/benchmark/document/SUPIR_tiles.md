@@ -1,0 +1,9 @@
+- `SUPIR_tiles`: This node is designed for generating a preview of image tiles, facilitating the visualization of how an image is segmented into smaller, manageable pieces for processing or analysis. It primarily serves in the context of image processing pipelines where handling images in tiles is advantageous for performance or algorithmic reasons.
+    - Inputs:
+        - `image` (Required): The input image to be tiled. This parameter is crucial for determining how the image will be segmented into tiles, affecting the visualization output. Type should be `IMAGE`.
+        - `tile_size` (Required): Specifies the dimensions of each tile. This parameter directly influences the granularity of the tiling process, impacting both the number of tiles generated and their respective sizes. Type should be `INT`.
+        - `tile_stride` (Required): Defines the stride for tiling the image. This parameter determines the overlap between tiles, affecting the total number of tiles generated and their arrangement. Type should be `INT`.
+    - Outputs:
+        - `image_tiles`: A collection of image tiles derived from the input image. This output is significant for visualizing the segmentation and for further processing or analysis of individual tiles. Type should be `IMAGE`.
+        - `tile_size`: The dimension of each tile, as specified in the input. This output is crucial for understanding the scale at which the image was segmented. Type should be `INT`.
+        - `tile_stride`: The stride used for tiling the image, as specified in the input. This output provides insight into the overlap and arrangement of the generated tiles. Type should be `INT`.

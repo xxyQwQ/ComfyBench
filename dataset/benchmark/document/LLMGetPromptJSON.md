@@ -1,0 +1,9 @@
+- `LLMGetPromptJSON`: The LLMGetPromptJSON node is designed to transform a given prompt into a structured JSON format, optionally parsing and including various input types such as integers, floats, and booleans. This functionality facilitates the dynamic generation of prompts tailored to specific requirements, enhancing the flexibility and precision of language model interactions.
+    - Inputs:
+        - `optional_order_input` (Optional): An optional parameter that allows for the specification of the order in which inputs are processed. This can affect the final structure and content of the generated JSON prompt. Type should be `*`.
+        - `parse_to_inputs` (Optional): A boolean flag that, when set to true, triggers the parsing of the prompt into distinct inputs based on specified inclusion criteria (integers, floats, booleans). Type should be `BOOLEAN`.
+        - `include_int` (Optional): Determines whether integers found within the prompt should be included in the parsed inputs, contributing to the structured JSON output. Type should be `BOOLEAN`.
+        - `include_float` (Optional): Specifies whether floating-point numbers within the prompt are included in the parsed inputs, affecting the composition of the JSON structure. Type should be `BOOLEAN`.
+        - `include_boolean` (Optional): Indicates whether boolean values within the prompt should be parsed and included in the JSON output, influencing the prompt's final structure. Type should be `BOOLEAN`.
+    - Outputs:
+        - `prompt_json`: The resulting JSON-formatted prompt, structured according to the specified input parameters and parsing options. Type should be `STRING`.

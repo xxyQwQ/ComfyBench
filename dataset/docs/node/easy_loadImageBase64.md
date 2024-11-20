@@ -1,9 +1,0 @@
-- `easy loadImageBase64`: The node `easy loadImageBase64` is designed to load images encoded in Base64 format, converting them into a format suitable for further image processing or manipulation within the ComfyUI framework. It serves as a bridge between encoded image data and the internal image representation used in image processing pipelines, facilitating the integration of externally sourced images.
-    - Parameters:
-        - `base64_data`: The `base64_data` parameter is the Base64 encoded string of the image data. It is essential for decoding the image back into a usable format for processing and manipulation within the node. Type should be `STRING`.
-        - `image_output`: The `image_output` parameter specifies how the loaded image should be handled, such as displaying, hiding, or saving the image. Type should be `COMBO[STRING]`.
-        - `save_prefix`: The `save_prefix` parameter determines the prefix for the filename when saving the processed image. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `image`: The `image` output is the processed image in a tensor format, ready for further manipulation or analysis within the ComfyUI framework. Type should be `IMAGE`.
-        - `mask`: The `mask` output provides an optional mask tensor if the image contains transparency information, useful for further image processing steps. Type should be `MASK`.

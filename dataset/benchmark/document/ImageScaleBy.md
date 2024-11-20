@@ -1,0 +1,7 @@
+- `ImageScaleBy`: The ImageScaleBy node is designed for upscaling images by a specified scale factor using various interpolation methods. It allows for the adjustment of the image size in a flexible manner, catering to different upscaling needs.
+    - Inputs:
+        - `image` (Required): The input image to be upscaled. This parameter is crucial as it provides the base image that will undergo the upscaling process. Type should be `IMAGE`.
+        - `upscale_method` (Required): Specifies the interpolation method to be used for upscaling. The choice of method can affect the quality and characteristics of the upscaled image. Type should be `COMBO[STRING]`.
+        - `scale_by` (Required): The factor by which the image will be upscaled. This determines the increase in size of the output image relative to the input image. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The upscaled image, which is larger than the input image according to the specified scale factor and interpolation method. Type should be `IMAGE`.

@@ -1,7 +1,0 @@
-- `Inference_Core_RescaleClassifierFreeGuidanceTest`: This node applies a custom patch to a given model, enhancing its inference capabilities by rescaling the classifier-free guidance process. It adjusts the balance between conditioned and unconditioned generation through a specified multiplier, aiming to improve the model's output quality.
-    - Parameters:
-        - `multiplier`: A scalar value that adjusts the balance between conditioned and unconditioned generation, influencing the final output quality of the model. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The model to be patched, which will have its classifier-free guidance process rescaled for improved inference performance. Type should be `MODEL`.
-    - Outputs:
-        - `model`: The patched model with an adjusted classifier-free guidance process for enhanced inference performance. Type should be `MODEL`.

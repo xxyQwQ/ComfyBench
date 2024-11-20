@@ -1,0 +1,10 @@
+- `ConstrainImage_pysssss`: This node is designed to adjust the dimensions of an image to fit within specified maximum and minimum sizes, ensuring the image's aspect ratio is preserved. It can optionally crop the image if it exceeds the maximum dimensions.
+    - Inputs:
+        - `images` (Required): The images to be constrained. This parameter is crucial as it directly influences the node's core functionality of resizing and potentially cropping images to meet the specified size constraints. Type should be `IMAGE`.
+        - `max_width` (Required): Specifies the maximum width the image can have after processing. It plays a key role in determining if and how the image needs to be resized. Type should be `INT`.
+        - `max_height` (Required): Defines the maximum height the image can have after processing, influencing the resizing logic to ensure the image fits within the specified dimensions. Type should be `INT`.
+        - `min_width` (Required): Sets the minimum width the image should have, ensuring the image is not resized below this width. Type should be `INT`.
+        - `min_height` (Required): Determines the minimum height the image should have, preventing the image from being resized below this height. Type should be `INT`.
+        - `crop_if_required` (Required): A flag indicating whether the image should be cropped if it exceeds the maximum dimensions, affecting the final output by potentially altering the image's composition. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The processed images, resized and optionally cropped to fit within the specified constraints. Type should be `IMAGE`.

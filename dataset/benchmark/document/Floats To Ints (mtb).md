@@ -1,0 +1,6 @@
+- `Floats To Ints (mtb)`: Provides a conversion utility specifically designed for frame interpolation by converting a list of float values into integers. This node is essential for scenarios requiring integer representations of floating-point numbers, such as pixel values in image processing or discrete steps in animations.
+    - Inputs:
+        - `floats` (Required): Accepts a list of floating-point numbers to be converted into integers. This input is crucial for the conversion process, enabling the node to process and transform each float value into its integer counterpart. Type should be `FLOATS`.
+    - Outputs:
+        - `ints`: Outputs a list of integers, each derived from the corresponding float input. This is useful for applications that require integer values for further processing or analysis. Type should be `INTS`.
+        - `int`: Additionally provides a single integer value, typically representing a specific or aggregated result derived from the input floats. Type should be `INT`.

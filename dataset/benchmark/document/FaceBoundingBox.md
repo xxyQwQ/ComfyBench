@@ -1,0 +1,13 @@
+- `FaceBoundingBox`: The FaceBoundingBox node is designed to detect and extract bounding boxes around faces in images. It utilizes analysis models to identify the location and dimensions of faces, applying optional padding and selecting specific faces based on an index. This functionality is crucial for tasks that require precise face detection and cropping, such as facial recognition or analysis applications.
+    - Inputs:
+        - `analysis_models` (Required): Specifies the models used for face detection and analysis. It's crucial for determining the accuracy and efficiency of face detection within images. Type should be `ANALYSIS_MODELS`.
+        - `image` (Required): The input image or images in which faces need to be detected. It serves as the primary data for face detection. Type should be `IMAGE`.
+        - `padding` (Required): An optional parameter that adds a fixed padding to the detected face bounding boxes, allowing for more context around the faces. Type should be `INT`.
+        - `padding_percent` (Required): Similar to padding, but adds a percentage-based padding around the detected face bounding boxes, offering flexible context inclusion. Type should be `FLOAT`.
+        - `index` (Required): Specifies the index of the face to focus on when multiple faces are detected. A negative index indicates no specific focus, utilizing all detected faces. Type should be `INT`.
+    - Outputs:
+        - `IMAGE`: The cropped images of detected faces, potentially adjusted by padding and index selection. Type should be `IMAGE`.
+        - `x`: The x-coordinate of the top-left corner of each face bounding box. Type should be `INT`.
+        - `y`: The y-coordinate of the top-left corner of each face bounding box. Type should be `INT`.
+        - `width`: The width of each face bounding box. Type should be `INT`.
+        - `height`: The height of each face bounding box. Type should be `INT`.

@@ -1,0 +1,9 @@
+- `Filter Z (mtb)`: The MTB_FilterZ node applies a depth-based filtering to an image, allowing for selective visibility based on depth values. It supports operations such as converting specified depth regions to black or adjusting their transparency, with options for thresholding and inversion.
+    - Inputs:
+        - `image` (Required): The input image to be filtered based on depth values. It plays a crucial role in determining the final output by providing the visual content to be manipulated. Type should be `IMAGE`.
+        - `depth` (Required): The depth map associated with the input image, used to determine which parts of the image are affected by the filtering process. Type should be `IMAGE`.
+        - `to_black` (Required): A boolean flag that determines whether the filtered areas are turned to black or made transparent. Type should be `BOOLEAN`.
+        - `threshold` (Required): A float value that sets the depth threshold for filtering, controlling which parts of the image are affected based on their depth values. Type should be `FLOAT`.
+        - `invert` (Required): A boolean flag that inverts the filtering effect, changing which parts of the image are affected based on the threshold. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The filtered image, which has been modified based on the depth map and filtering parameters. Type should be `IMAGE`.

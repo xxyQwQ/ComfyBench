@@ -1,7 +1,0 @@
-- `MaskBlur+`: The MaskBlur node applies a Gaussian blur to a given mask, allowing for the softening of edges and the creation of a smoother mask. This operation is particularly useful in graphics and image processing tasks where the harshness of a binary mask needs to be mitigated.
-    - Parameters:
-        - `amount`: Specifies the intensity of the blur effect. A higher value results in a more pronounced blur, affecting the mask's smoothness and the transition between masked and unmasked areas. Type should be `FLOAT`.
-    - Inputs:
-        - `mask`: The mask to be blurred. This input is crucial for defining the area within the image where the blur effect will be applied. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The output is a blurred version of the input mask, with softened edges and transitions, suitable for further image processing or visualization tasks. Type should be `MASK`.

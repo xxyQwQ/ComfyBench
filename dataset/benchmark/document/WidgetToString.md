@@ -1,0 +1,7 @@
+- `WidgetToString`: The get_widget_value node is designed to select a specific widget within a node and output its value as a string. It enables dynamic access to widget data based on node ID and widget name, with an option to return all widget values from a node if required. This functionality is crucial for customizing user interactions and data retrieval within a workflow.
+    - Inputs:
+        - `id` (Required): Specifies the unique identifier of the node whose widget's value is to be retrieved, essential for pinpointing the exact node within a workflow. Type should be `INT`.
+        - `widget_name` (Required): The name of the widget whose value is to be extracted as a string, critical for identifying the specific widget within the node. Type should be `STRING`.
+        - `return_all` (Required): A boolean flag that determines whether the node should return the values of all widgets as a string, offering flexibility in the amount of information extracted. Type should be `BOOLEAN`.
+    - Outputs:
+        - `string`: The extracted widget value(s) converted to a string, essential for presenting or further processing the widget data in text form. Type should be `STRING`.

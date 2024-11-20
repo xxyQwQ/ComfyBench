@@ -1,9 +1,0 @@
-- `ADE_MultivalScaledMask`: The ADE_MultivalScaledMask node is designed to apply scaling to a given mask based on specified minimum and maximum float values, with the option to choose between absolute or relative scaling methods. This functionality allows for dynamic adjustment of mask values, facilitating various image processing and animation effects within the ComfyUI-AnimateDiff-Evolved framework.
-    - Parameters:
-        - `min_float_val`: Specifies the minimum value for scaling the mask. It sets the lower bound for the mask's value transformation, playing a crucial role in the scaling process. Type should be `FLOAT`.
-        - `max_float_val`: Defines the maximum value for scaling the mask. It establishes the upper limit for the mask's value transformation, significantly impacting the scaling outcome. Type should be `FLOAT`.
-        - `scaling`: Determines the scaling method to be applied to the mask, either absolute or relative. This choice dictates how the mask values are adjusted, influencing the final effect on the mask. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `mask`: The input mask to be scaled. This tensor represents the target data for scaling operations, serving as the primary subject of the node's functionality. Its values are dynamically adjusted based on the scaling parameters, directly influencing the intensity and distribution of the scaled effects applied. Type should be `MASK`.
-    - Outputs:
-        - `multival`: The scaled mask after applying the specified scaling method. This output reflects the transformation of the input mask based on the provided scaling parameters. Type should be `MULTIVAL`.

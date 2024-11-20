@@ -1,0 +1,8 @@
+- `ADE_CombineLoraHooksFour`: This node is designed to aggregate and combine up to four LoRA hooks into a single, unified LoRA hook group. It facilitates the integration of multiple LoRA hook modifications, allowing for more complex and nuanced adjustments to model behavior within the Animate Diff framework.
+    - Inputs:
+        - `lora_hook_A` (Optional): Represents the first LoRA hook group to be combined. It plays a crucial role in the aggregation process, contributing to the overall modifications applied. Type should be `LORA_HOOK`.
+        - `lora_hook_B` (Optional): Serves as the second LoRA hook group for combination. Its inclusion allows for the layering of modifications, enhancing the model's adaptability. Type should be `LORA_HOOK`.
+        - `lora_hook_C` (Optional): The third LoRA hook group in the combination process. It adds another layer of customization, further refining the model's behavior. Type should be `LORA_HOOK`.
+        - `lora_hook_D` (Optional): Represents the fourth and final LoRA hook group to be combined. It completes the set of modifications, enabling a comprehensive adjustment to the model. Type should be `LORA_HOOK`.
+    - Outputs:
+        - `lora_hook`: The result of combining up to four LoRA hooks into a single, unified group. This consolidated hook group allows for enhanced and more complex model conditioning. Type should be `LORA_HOOK`.

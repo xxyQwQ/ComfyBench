@@ -1,0 +1,7 @@
+- `ImageScaleToTotalPixels`: The ImageScaleToTotalPixels node is designed for resizing images to a specified total number of pixels while maintaining the aspect ratio. It provides various methods for upscaling the image to achieve the desired pixel count.
+    - Inputs:
+        - `image` (Required): The input image to be upscaled to the specified total number of pixels. Type should be `IMAGE`.
+        - `upscale_method` (Required): The method used for upscaling the image. It affects the quality and characteristics of the upscaled image. Type should be `COMBO[STRING]`.
+        - `megapixels` (Required): The target size of the image in megapixels. This determines the total number of pixels in the upscaled image. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The upscaled image with the specified total number of pixels, maintaining the original aspect ratio. Type should be `IMAGE`.

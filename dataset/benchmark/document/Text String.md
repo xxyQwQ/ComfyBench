@@ -1,0 +1,8 @@
+- `Text String`: The `WAS_Text_String` node is designed to process and manipulate text strings, allowing for the parsing and optional combination of up to four separate text inputs into parsed text outputs. This node is part of the WAS Suite's text manipulation toolkit, focusing on the transformation and interpretation of textual data.
+    - Inputs:
+        - `text` (Required): The primary text input for processing. It undergoes token parsing to transform the text based on predefined tokens. Type should be `STRING`.
+        - `text_b` (Optional): An optional secondary text input for processing alongside the primary text. It also undergoes token parsing. Type should be `STRING`.
+        - `text_c` (Optional): An optional third text input for processing. Similar to the other inputs, it is parsed for tokens. Type should be `STRING`.
+        - `text_d` (Optional): An optional fourth text input for processing. It undergoes token parsing like the other inputs. Type should be `STRING`.
+    - Outputs:
+        - `string`: The processed versions of the primary and optional text inputs after token parsing, returned as separate outputs. Type should be `STRING`.

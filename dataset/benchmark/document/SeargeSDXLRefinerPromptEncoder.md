@@ -1,0 +1,12 @@
+- `SeargeSDXLRefinerPromptEncoder`: This node specializes in refining the encoding of prompts for the SDXL model by applying specific aesthetic and dimensional adjustments to both positive and negative prompts. It leverages a refiner encoder to enhance the quality and relevance of the prompts based on given aesthetic scores and dimensions, aiming to optimize the generation process.
+    - Inputs:
+        - `refiner_clip` (Required): The CLIP model used for refining the encoding of prompts, central to adjusting the prompt's quality and relevance. Type should be `CLIP`.
+        - `pos_r` (Required): Positive text prompt for refinement, influencing the encoding process with a focus on enhancing positive aspects. Type should be `STRING`.
+        - `neg_r` (Required): Negative text prompt for refinement, influencing the encoding process with a focus on enhancing negative aspects. Type should be `STRING`.
+        - `pos_ascore` (Required): The aesthetic score assigned to the positive prompt, influencing its refinement. Type should be `FLOAT`.
+        - `neg_ascore` (Required): The aesthetic score assigned to the negative prompt, influencing its refinement. Type should be `FLOAT`.
+        - `refiner_width` (Required): The width dimension for the refined encoding, used to adjust the spatial characteristics of the prompt. Type should be `INT`.
+        - `refiner_height` (Required): The height dimension for the refined encoding, used to adjust the spatial characteristics of the prompt. Type should be `INT`.
+    - Outputs:
+        - `refiner_positive`: The refined encoding of the positive prompt, enhanced for better quality and relevance. Type should be `CONDITIONING`.
+        - `refiner_negative`: The refined encoding of the negative prompt, enhanced for better quality and relevance. Type should be `CONDITIONING`.

@@ -1,0 +1,9 @@
+- `Image Crop Square Location`: This node specializes in cropping a square region from an image based on specified coordinates and size. It adjusts the crop area to ensure it remains within the image's boundaries and optionally resizes the cropped region to maintain a dimension that is a multiple of 8, facilitating compatibility with certain image processing operations.
+    - Inputs:
+        - `image` (Required): The input image to be cropped. This parameter is crucial as it defines the base from which the square region will be extracted. Type should be `IMAGE`.
+        - `x` (Required): The x-coordinate of the center point of the square crop. It influences the horizontal positioning of the crop area within the image. Type should be `INT`.
+        - `y` (Required): The y-coordinate of the center point of the square crop. It affects the vertical positioning of the crop area within the image. Type should be `INT`.
+        - `size` (Required): The size of the square to be cropped from the image. This parameter determines the dimensions of the resulting cropped area. Type should be `INT`.
+    - Outputs:
+        - `image`: The cropped square region of the image, resized to ensure its dimensions are multiples of 8. Type should be `IMAGE`.
+        - `crop_data`: The original crop data detailing the dimensions and coordinates of the crop. Type should be `CROP_DATA`.

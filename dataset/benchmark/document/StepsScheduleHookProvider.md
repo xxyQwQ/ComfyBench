@@ -1,0 +1,6 @@
+- `StepsScheduleHookProvider`: The StepsScheduleHookProvider node is designed to generate hooks that adjust the number of steps in a generative process based on a simple schedule. This allows for dynamic modification of the iteration steps during the generation process, aiming to optimize or alter the progression of the generative task.
+    - Inputs:
+        - `schedule_for_iteration` (Required): Specifies the scheduling strategy to be used for iteration adjustments. The choice of schedule affects how the number of steps is dynamically adjusted during the generation process. Type should be `COMBO[STRING]`.
+        - `target_steps` (Required): Defines the target number of steps to aim for at the end of the generation process. This parameter directly influences the adjustment of steps in the generative task, aiming to reach the specified target. Type should be `INT`.
+    - Outputs:
+        - `pk_hook`: Returns a hook configured to adjust the number of steps in the generative process according to the specified schedule and target steps. Type should be `PK_HOOK`.

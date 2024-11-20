@@ -1,6 +1,0 @@
-- `easy controlnetNames`: This node is designed to list available control net names, facilitating the selection process for users by providing a straightforward way to access and choose from the existing control nets within the system.
-    - Parameters:
-        - `controlnet_name`: Specifies the name of the control net to be listed. This parameter is crucial for identifying and selecting the appropriate control net from the available options. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `controlnet_name`: Returns the name of the selected control net, making it easier for users to identify and use the desired control net in their operations. Type should be `*`.

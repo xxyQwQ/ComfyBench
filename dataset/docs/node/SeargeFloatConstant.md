@@ -1,6 +1,0 @@
-- `SeargeFloatConstant`: The SeargeFloatConstant node is designed to provide a constant floating-point value as specified by the user. It serves as a simple utility to inject fixed numerical values into a data flow or computation process.
-    - Parameters:
-        - `value`: Specifies the constant floating-point value to be returned by the node. This allows for the injection of a predetermined numerical value into the workflow. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `value`: The constant floating-point value specified by the user, serving as the node's output. Type should be `FLOAT`.

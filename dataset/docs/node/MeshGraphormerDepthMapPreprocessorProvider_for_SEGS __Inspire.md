@@ -1,5 +1,0 @@
-- `MeshGraphormerDepthMapPreprocessorProvider_for_SEGS __Inspire`: This node provides a specialized preprocessor for depth map generation using the MeshGraphormer framework, tailored for SEGS applications. It encapsulates the complexity of depth map preprocessing, ensuring compatibility and optimal preprocessing for SEGS-based projects.
-    - Parameters:
-    - Inputs:
-    - Outputs:
-        - `segs_preprocessor`: The processed output suitable for SEGS applications, ensuring that the depth map is optimized for further processing or analysis within the SEGS framework. Type should be `SEGS_PREPROCESSOR`.

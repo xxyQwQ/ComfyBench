@@ -1,8 +1,0 @@
-- `Fans Prompt Styler Negative`: This node specializes in applying stylistic transformations to prompts based on predefined styles and structural positioning, enhancing the expressiveness and specificity of negative prompts.
-    - Parameters:
-        - `style`: Specifies the stylistic transformation to apply to the prompt, chosen from a predefined list of styles. It determines the thematic or stylistic overlay that will modify the original prompt. Type should be `COMBO[STRING]`.
-        - `structure`: Determines the placement of the stylistic transformation in relation to the original prompt, either at the beginning or the end, affecting the prompt's overall structure and emphasis. Type should be `COMBO[STRING]`.
-        - `prompt`: The original text prompt to which the stylistic and structural transformations will be applied, serving as the base content for modification. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `result`: The transformed prompt, incorporating the selected style and structural positioning to convey a negative sentiment or theme. Type should be `STRING`.

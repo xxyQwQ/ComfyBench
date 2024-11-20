@@ -1,0 +1,5 @@
+- `Mask Invert`: The Mask Invert node is designed to invert the values of a given mask, effectively flipping the masked and unmasked regions. This operation is commonly used in image processing and computer vision tasks to reverse the areas of interest in a mask.
+    - Inputs:
+        - `masks` (Required): The input mask to be inverted. This mask serves as the primary data for inversion, determining the areas that will be flipped in the output. Type should be `MASK`.
+    - Outputs:
+        - `MASKS`: The inverted mask, where the originally masked regions are now unmasked and vice versa, suitable for further processing or visualization. Type should be `MASK`.

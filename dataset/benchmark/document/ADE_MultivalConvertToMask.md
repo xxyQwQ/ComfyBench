@@ -1,0 +1,5 @@
+- `ADE_MultivalConvertToMask`: The ADE_MultivalConvertToMask node is designed to transform multivalued inputs into mask format, accommodating both single float values and tensors. This conversion facilitates the use of multivalued data as masks in various processing pipelines, ensuring compatibility and extending the utility of input data by converting it into a standardized mask format.
+    - Inputs:
+        - `multival` (Required): The 'multival' input accepts either a single float value or a tensor, representing the multivalued data to be converted into a mask. This flexibility allows for a wide range of data types to be seamlessly integrated into mask-based workflows. Type should be `MULTIVAL`.
+    - Outputs:
+        - `mask`: The output is a mask, either directly utilizing the input tensor if already in an appropriate format, or creating a new mask with the specified value if a float is provided. This ensures that the output is always in a mask format, ready for further processing. Type should be `MASK`.

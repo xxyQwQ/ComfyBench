@@ -1,7 +1,0 @@
-- `ImageBatchMulti`: Facilitates the creation of a batch of images by combining multiple input images into a single batch. This node allows for dynamic adjustment of the number of input images, supporting a flexible and scalable approach to batch image processing.
-    - Parameters:
-        - `inputcount`: Specifies the number of images to be included in the batch, allowing for dynamic adjustment of the batch size. Type should be `INT`.
-    - Inputs:
-        - `image_i`: Represents any image to be included in the batch, starting from 'image_1' to 'image_{inputcount}'. Each 'image_i' is dynamically added based on the 'inputcount', contributing to the combined batch of images. Type should be `IMAGE`.
-    - Outputs:
-        - `images`: The combined batch of images resulting from the aggregation of individual input images. Type should be `IMAGE`.

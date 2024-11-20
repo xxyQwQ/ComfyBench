@@ -1,0 +1,6 @@
+- `SAMLoader`: The SAMLoader node is designed to dynamically load and manage different types of SAM (Spatial Attention Model) models, including ESAM (Efficient SAM) and various Vision Transformer (ViT) models. It handles model initialization, device allocation (CPU or GPU), and ensures the necessary dependencies and extensions are installed for specific model types.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the SAM model to be loaded. This can include 'ESAM' for Efficient SAM models or names indicating different Vision Transformer models like 'vit_h', 'vit_l', 'vit_b'. Type should be `COMBO[STRING]`.
+        - `device_mode` (Required): Determines the device (CPU or GPU) on which the model will be loaded and run, with support for automatic device selection based on the model's requirements and system capabilities. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `sam_model`: Returns the loaded SAM model, ready for further operations such as inference. The model is wrapped in a SAMWrapper or ESAMWrapper, depending on the model type, to facilitate device management and prediction. Type should be `SAM_MODEL`.

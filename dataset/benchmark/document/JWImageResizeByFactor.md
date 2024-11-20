@@ -1,0 +1,7 @@
+- `JWImageResizeByFactor`: This node resizes an image by a specified factor, allowing for flexible image scaling with various interpolation modes to maintain image quality.
+    - Inputs:
+        - `image` (Required): The input image to be resized. This parameter is crucial as it provides the source image for the resizing operation. Type should be `IMAGE`.
+        - `factor` (Required): Specifies the scaling factor for resizing the image. A factor greater than 1 enlarges the image, while a factor less than 1 shrinks it. Type should be `FLOAT`.
+        - `interpolation_mode` (Required): Determines the method used for interpolating between pixel values during the resize operation, affecting the quality and appearance of the output image. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The resized image, scaled by the specified factor and using the chosen interpolation mode. Type should be `IMAGE`.

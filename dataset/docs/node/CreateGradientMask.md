@@ -1,9 +1,0 @@
-- `CreateGradientMask`: The CreateGradientMask node is designed to generate a sequence of gradient masks based on specified dimensions and frame count. It allows for the creation of dynamic, time-varying masks that transition from black to white, with an option to invert the gradient.
-    - Parameters:
-        - `invert`: Determines whether the generated gradient mask should be inverted. An inverted mask transitions from white to black instead of the default black to white. Type should be `BOOLEAN`.
-        - `frames`: Specifies the number of frames or images in the batch for which gradient masks are to be generated. This affects the dynamic aspect of the mask, creating a time-varying effect. Type should be `INT`.
-        - `width`: Sets the width of the gradient mask. This dimension directly influences the horizontal resolution of the generated mask. Type should be `INT`.
-        - `height`: Sets the height of the gradient mask. This dimension directly influences the vertical resolution of the generated mask. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `mask`: The output is a tensor representing the generated gradient mask(s). If the invert option is enabled, the gradient is reversed. Type should be `MASK`.

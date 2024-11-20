@@ -1,8 +1,0 @@
-- `RandomInt`: The `RandomInt` node generates a random integer within a specified range. It abstracts the complexity of random number generation, providing a simple interface for obtaining integers for various applications, such as random sampling or stochastic processes.
-    - Parameters:
-        - `min`: Specifies the minimum value in the range from which the random integer will be generated. It sets the lower bound for the random number generation. Type should be `INT`.
-        - `max`: Defines the maximum value in the range for the random integer generation. It establishes the upper limit, ensuring the generated number does not exceed this value. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `int`: The generated random integer within the specified range. Type should be `INT`.
-        - `string`: A string representation of the generated random integer, facilitating its use in contexts requiring textual data. Type should be `STRING`.

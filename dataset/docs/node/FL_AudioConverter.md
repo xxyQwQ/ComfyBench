@@ -1,7 +1,0 @@
-- `FL_AudioConverter`: The FL_AudioConverter node is designed to transform audio data into a format that simulates the characteristics of VHS audio quality. It processes audio inputs by adjusting their sample rate and converting them into a byte stream that represents the audio in a VHS-like quality.
-    - Parameters:
-        - `sample_rate`: The 'sample_rate' input specifies the sample rate of the audio data. It plays a significant role in the conversion process by determining the resolution of the audio output. Type should be `INT`.
-    - Inputs:
-        - `audio`: The 'audio' input represents the raw audio data that will be processed and converted into VHS audio quality. It is crucial for defining the audio content that will undergo transformation. Type should be `AUDIO`.
-    - Outputs:
-        - `audio`: The output is a lambda function that, when called, returns the audio data bytes simulating VHS audio quality. Type should be `VHS_AUDIO`.

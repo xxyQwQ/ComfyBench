@@ -1,0 +1,6 @@
+- `Styles Loader (mtb)`: The MTB_StylesLoader node is designed to manage and provide access to various styles for conditioning, enabling the selection and application of predefined styles to modify or enhance content generation processes.
+    - Inputs:
+        - `style_name` (Required): Specifies the name of the style to be loaded. This parameter is crucial for identifying and retrieving the specific style's attributes from a collection of available styles. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `positive`: Returns the positive aspect of the selected style, which is part of the style's characteristics. Type should be `STRING`.
+        - `negative`: Returns the negative aspect of the selected style, which is another part of the style's characteristics. Type should be `STRING`.

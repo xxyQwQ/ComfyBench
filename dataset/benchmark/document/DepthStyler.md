@@ -1,0 +1,9 @@
+- `DepthStyler`: SDXLPromptStyler is designed to stylize text prompts by applying various predefined styles, allowing for the customization of positive and negative aspects of prompts. It supports dynamic selection of styles through menus, enabling users to tailor the prompt's tone and content for specific generative tasks.
+    - Inputs:
+        - `text_positive` (Required): The positive prompt text to be styled. It serves as the base content for customization, aiming to enhance or specify desired elements in the generated output. Type should be `STRING`.
+        - `text_negative` (Required): The negative prompt text to be styled. It guides the model to avoid certain elements or themes, serving as a counterbalance to the positive prompt. Type should be `STRING`.
+        - `depth` (Required): unknown Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag to enable or disable logging of the prompt transformations and selections. Useful for debugging or tracking how changes to the prompt affect the styling process. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive`: The styled positive prompt text, modified according to the selected styles to emphasize or specify desired elements. Type should be `STRING`.
+        - `text_negative`: The styled negative prompt text, adjusted to ensure certain elements or themes are avoided in the generated output. Type should be `STRING`.

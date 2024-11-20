@@ -1,0 +1,6 @@
+- `RegionalCFG __Inspire`: The RegionalCFG node in the Inspire Pack is designed to apply conditional generative filtering based on regional inputs. It modifies a given model's behavior to incorporate regional conditioning, allowing for localized adjustments in the generation process. This is achieved by applying a mask to conditionally influence the model's output, enabling fine-grained control over specific regions of interest.
+    - Inputs:
+        - `model` (Required): The model parameter represents the generative model to be modified with regional conditioning. It is crucial for defining the base generative process that will be adjusted according to the regional mask. Type should be `MODEL`.
+        - `mask` (Required): The mask parameter is used to specify the regions of interest within the generative process. It plays a key role in localizing the effects of conditioning, allowing for targeted modifications in the model's output. Type should be `MASK`.
+    - Outputs:
+        - `model`: The output is a modified version of the input model, now equipped with the ability to perform regional conditioning. This enables localized adjustments in the generation process, based on the provided mask. Type should be `MODEL`.

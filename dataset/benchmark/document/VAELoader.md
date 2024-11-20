@@ -1,0 +1,5 @@
+- `VAELoader`: The VAELoader node is designed to load a Variational Autoencoder (VAE) model, supporting both standard and TAESD-specific VAE models. It dynamically selects the appropriate loading mechanism based on the VAE name provided, facilitating the use of different VAE architectures within the same framework.
+    - Inputs:
+        - `vae_name` (Required): Specifies the name of the VAE to be loaded. The choice of VAE determines the loading mechanism and the subsequent model configuration that is applied. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `vae`: Returns the loaded VAE model, ready for use in encoding or decoding operations within the framework. Type should be `VAE`.

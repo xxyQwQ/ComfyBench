@@ -1,7 +1,0 @@
-- `CM_Vec4ToScalarUnaryOperation`: This node performs unary operations on a 4-dimensional vector (Vec4) to produce a scalar value. It supports a variety of operations that can transform a Vec4 into a single floating-point number, emphasizing the node's ability to abstract and reduce vectorial data into a simpler form.
-    - Parameters:
-        - `op`: Specifies the unary operation to be performed on the Vec4. The choice of operation determines how the vector is transformed into a scalar value. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `a`: The Vec4 on which the unary operation is to be performed. This vector serves as the input for the transformation process. Type should be `VEC4`.
-    - Outputs:
-        - `float`: The resulting scalar value obtained from applying the specified unary operation on the Vec4 input. Type should be `FLOAT`.

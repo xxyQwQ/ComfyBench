@@ -1,9 +1,0 @@
-- `CR Index Multiply`: This node multiplies a given index by a specified factor, potentially altering the flow or behavior of subsequent operations based on the new index value. It's designed to dynamically adjust indices within a workflow, facilitating flexible data manipulation or access patterns.
-    - Parameters:
-        - `index`: The 'index' parameter represents the starting point or current state of an index that will be multiplied. It's crucial for determining the base value that will be adjusted by the multiplication, affecting the node's execution and results. Type should be `INT`.
-        - `factor`: The 'factor' parameter specifies the multiplier applied to the index. It defines how much the index will be scaled, playing a key role in the calculation and the resulting modified index value. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `index`: The modified index after multiplication, reflecting the new position or state as a result of the operation. Type should be `INT`.
-        - `factor`: The factor used in the multiplication, returned unchanged. Type should be `INT`.
-        - `show_help`: A URL providing additional help or documentation related to the index multiplication operation. Type should be `STRING`.

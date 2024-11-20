@@ -1,6 +1,0 @@
-- `SeargeUpscaleModelLoader`: The SeargeUpscaleModelLoader node is designed to load upscale models by name, facilitating the dynamic selection and utilization of different upscaling algorithms or models within a system. It abstracts the complexities of model loading, ensuring that the appropriate upscale model is readily available for image enhancement tasks.
-    - Parameters:
-    - Inputs:
-        - `upscaler_name`: Specifies the name of the upscaler model to be loaded. This parameter is crucial for identifying and retrieving the correct model from a predefined collection of upscale models. Type should be `UPSCALER_NAME`.
-    - Outputs:
-        - `upscale_model`: Returns the loaded upscale model, ready for use in upscaling tasks. This output is essential for subsequent image processing stages that require a specific upscaling model. Type should be `UPSCALE_MODEL`.

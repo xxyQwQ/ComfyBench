@@ -1,0 +1,6 @@
+- `SaltExportCaptions`: The `SaltExportCaptions` node is designed for exporting pairs of images and their corresponding captions to a specified folder. It ensures that each image is saved alongside its caption in a text file, facilitating organized storage and retrieval of visual-textual data.
+    - Inputs:
+        - `images` (Required): A list of images to be exported. Each image is processed and saved in the specified folder along with its caption. Type should be `IMAGE`.
+        - `captions` (Required): A list of text captions corresponding to the images. Each caption is saved in a text file named after its image. Type should be `LIST`.
+        - `folder` (Required): The name of the folder where the images and captions will be exported. If the folder does not exist, it will be created. Type should be `STRING`.
+    - Outputs:

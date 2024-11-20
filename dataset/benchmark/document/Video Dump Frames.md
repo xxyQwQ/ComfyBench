@@ -1,0 +1,10 @@
+- `Video Dump Frames`: This node is designed to extract frames from a video file and save them as individual image files in a specified output directory. It leverages ffmpeg for frame extraction, providing options for naming conventions, output formats, and handling of video paths through token parsing. The node emphasizes flexibility in output customization and ensures compatibility with various video formats through ffmpeg integration.
+    - Inputs:
+        - `video_path` (Required): Specifies the path to the video file from which frames will be extracted. This path is crucial as it determines the source video for frame dumping. Type should be `STRING`.
+        - `output_path` (Required): Defines the destination directory where the extracted frames will be saved as image files. It supports token parsing for dynamic path resolution. Type should be `STRING`.
+        - `prefix` (Required): A prefix added to the filename of each extracted frame, allowing for customizable naming conventions. Type should be `STRING`.
+        - `filenumber_digits` (Required): Specifies the number of digits to use for the frame numbering in the filenames, allowing for uniform filename lengths. Type should be `INT`.
+        - `extension` (Required): Determines the file format (e.g., png, jpg) of the extracted frames, enabling output format customization. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `output_path`: Returns the absolute path to the directory where the extracted frames have been saved. Type should be `STRING`.
+        - `processed_count`: Indicates the number of frames successfully extracted and saved from the video. Type should be `NUMBER`.

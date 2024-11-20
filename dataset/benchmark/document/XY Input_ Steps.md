@@ -1,0 +1,14 @@
+- `XY Input_ Steps`: The node is designed to generate a sequence of values based on specified step parameters within a given range, tailored for batch processing or iterative operations. It abstracts the complexity of generating step sequences, facilitating efficient data manipulation and visualization in XY plots.
+    - Inputs:
+        - `target_parameter` (Required): Specifies the parameter to target for generating step values, influencing the sequence generation process. Type should be `COMBO[STRING]`.
+        - `batch_count` (Required): Determines the number of values to generate, directly affecting the length of the output sequence. Type should be `INT`.
+        - `first_step` (Required): The starting value of the step sequence, setting the initial point for generation. Type should be `INT`.
+        - `last_step` (Required): The ending value of the step sequence, defining the final point in the generated sequence. Type should be `INT`.
+        - `first_start_step` (Required): Defines the initial step value for the start_at_step parameter, influencing the starting point of the sequence. Type should be `INT`.
+        - `last_start_step` (Required): Specifies the final step value for the start_at_step parameter, affecting the sequence's commencement point. Type should be `INT`.
+        - `first_end_step` (Required): Sets the beginning step value for the end_at_step parameter, impacting the sequence's termination point. Type should be `INT`.
+        - `last_end_step` (Required): Determines the concluding step value for the end_at_step parameter, defining the end point of the sequence. Type should be `INT`.
+        - `first_refine_step` (Required): Indicates the initial step value for the refine_at_step parameter, affecting the refinement start point of the sequence. Type should be `INT`.
+        - `last_refine_step` (Required): Specifies the last step value for the refine_at_step parameter, influencing the refinement end point of the sequence. Type should be `INT`.
+    - Outputs:
+        - `X or Y`: A tuple containing the type of step sequence generated (X or Y) and the sequence itself, facilitating further processing or visualization. Type should be `XY`.

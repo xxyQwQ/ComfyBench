@@ -1,0 +1,11 @@
+- `Bounded Image Crop with Mask`: This node is designed to crop images based on specified masks, adjusting the cropping boundaries with additional padding parameters. It ensures that the cropping operation is sensitive to the presence and shape of objects within the images as defined by the masks, allowing for dynamic and context-aware image processing.
+    - Inputs:
+        - `image` (Required): The input image or batch of images to be cropped. This parameter is crucial as it defines the visual content that will be processed and cropped according to the mask and padding parameters. Type should be `IMAGE`.
+        - `mask` (Required): The mask or batch of masks used to determine the cropping boundaries around the objects of interest within the images. This parameter is essential for identifying the relevant areas to be retained after cropping. Type should be `MASK`.
+        - `padding_left` (Required): Specifies the amount of padding to add to the left boundary of the crop. This affects the horizontal positioning and width of the cropped area. Type should be `INT`.
+        - `padding_right` (Required): Specifies the amount of padding to add to the right boundary of the crop. This affects the horizontal positioning and width of the cropped area. Type should be `INT`.
+        - `padding_top` (Required): Specifies the amount of padding to add to the top boundary of the crop. This affects the vertical positioning and height of the cropped area. Type should be `INT`.
+        - `padding_bottom` (Required): Specifies the amount of padding to add to the bottom boundary of the crop. This affects the vertical positioning and height of the cropped area. Type should be `INT`.
+    - Outputs:
+        - `image`: The output consists of a batch of cropped images, each adjusted according to its corresponding mask and the specified padding parameters. Type should be `IMAGE`.
+        - `image_bounds`: The boundaries used for each crop are returned, providing insight into the cropping process. Type should be `IMAGE_BOUNDS`.

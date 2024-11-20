@@ -1,0 +1,18 @@
+- `DrawText+`: The DrawText+ node is designed to render text onto images with customizable options such as font, size, color, and alignment. It supports adding shadows to text, adjusting text position with offsets, and can work with existing images or create new ones based on text dimensions.
+    - Inputs:
+        - `text` (Required): The text to be rendered. It can span multiple lines and affects the overall size and layout of the resulting image. Type should be `STRING`.
+        - `font` (Required): Specifies the font type used for rendering the text. The choice of font impacts the text's appearance and style. Type should be `COMBO[STRING]`.
+        - `size` (Required): Determines the font size for the text, directly influencing its visibility and fit within the image. Type should be `INT`.
+        - `color` (Required): The color of the text, defined in a format that specifies its appearance on the image. Type should be `STRING`.
+        - `background_color` (Required): The background color of the image, which can be transparent or any solid color, setting the scene for the text. Type should be `STRING`.
+        - `shadow_distance` (Required): The distance of the shadow from the text, enabling a depth effect. A value of 0 means no shadow. Type should be `INT`.
+        - `shadow_blur` (Required): The blur radius for the text shadow, contributing to the softness and spread of the shadow effect. Type should be `INT`.
+        - `shadow_color` (Required): Color of the shadow, enhancing the text's readability or aesthetic appeal against the background. Type should be `STRING`.
+        - `horizontal_align` (Required): Alignment of the text horizontally within the image, affecting its placement relative to the image's width. Type should be `COMBO[STRING]`.
+        - `vertical_align` (Required): Vertical alignment of the text within the image, impacting its position relative to the image's height. Type should be `COMBO[STRING]`.
+        - `offset_x` (Required): Horizontal offset for the text position, allowing fine-tuning of its exact location on the image. Type should be `INT`.
+        - `offset_y` (Required): Vertical offset for the text position, enabling precise adjustment of its placement. Type should be `INT`.
+        - `img_composite` (Optional): An optional existing image to render the text onto. If not provided, a new image is created based on text dimensions. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The final image with the rendered text and applied customizations, including background and shadow effects if specified. Type should be `IMAGE`.
+        - `mask`: A mask representing the alpha channel of the final image, useful for further image processing or compositing. Type should be `MASK`.

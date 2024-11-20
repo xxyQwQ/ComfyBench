@@ -1,0 +1,7 @@
+- `CacheBackendDataNumberKeyList __Inspire`: This node is designed to update a cache with data associated with a numeric key and a tag, supporting batch operations. It facilitates the storage and retrieval of backend data in a structured manner, allowing for efficient data management within the InspirePack backend framework.
+    - Inputs:
+        - `key` (Required): The numeric key associated with the data to be cached. It serves as a unique identifier for the data within the cache. Type should be `INT`.
+        - `tag` (Required): A short description or identifier for the data being cached. The tag helps in categorizing or describing the nature of the data for easier retrieval. Type should be `STRING`.
+        - `data` (Required): The actual data to be cached. This parameter allows for the storage of any type of data, making the node versatile in its application. Type should be `*`.
+    - Outputs:
+        - `data opt`: Returns the data that was passed in for caching, facilitating a confirmation of what data was processed. Type should be `*`.

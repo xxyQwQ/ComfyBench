@@ -1,0 +1,12 @@
+- `XY Plot`: The XY Plot node is designed to generate and manipulate XY plots based on various parameters and conditions. It supports operations such as flipping axes, adjusting label orientations, caching models, and handling unique identifiers for plot generation. This node is versatile in processing and visualizing data in a structured XY plot format, accommodating different types of plot inputs and configurations.
+    - Inputs:
+        - `grid_spacing` (Required): Specifies the spacing between grid lines in the plot, affecting the plot's granularity and visual density. Type should be `INT`.
+        - `XY_flip` (Required): A boolean parameter that determines whether the X and Y axes should be flipped, altering the plot's orientation. Type should be `COMBO[STRING]`.
+        - `Y_label_orientation` (Required): Controls the orientation of Y-axis labels, enhancing readability based on the plot's layout and presentation. Type should be `COMBO[STRING]`.
+        - `cache_models` (Required): Indicates whether to cache model data for efficiency, reducing load times for repeated plot generations. Type should be `COMBO[STRING]`.
+        - `ksampler_output_image` (Required): The output image from the ksampler, which is used as a reference or base for the XY plot. Type should be `COMBO[STRING]`.
+        - `dependencies` (Optional): Optional dependencies required for the plot generation, such as additional data sources or configurations. Type should be `DEPENDENCIES`.
+        - `X` (Optional): The X-axis values or data points for the plot, which can be a tuple unpacked if connected. Type should be `XY`.
+        - `Y` (Optional): The Y-axis values or data points for the plot, similar to X, can be a tuple unpacked if connected. Type should be `XY`.
+    - Outputs:
+        - `SCRIPT`: Returns a dictionary containing the script configuration for the XY plot, including plot parameters and data points. Type should be `SCRIPT`.

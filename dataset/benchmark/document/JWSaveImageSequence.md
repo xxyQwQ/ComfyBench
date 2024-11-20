@@ -1,0 +1,7 @@
+- `JWSaveImageSequence`: The JWSaveImageSequence node is designed for batch saving of image sequences to a specified path, allowing for customization of file naming, indexing, and the option to overwrite existing files. It facilitates the organized output of image data, supporting additional metadata and prompt information for each image saved.
+    - Inputs:
+        - `images` (Required): A tensor of images to be saved. This collection represents the sequence of images that will be saved in the batch operation. Type should be `IMAGE`.
+        - `path_pattern` (Required): A string pattern that defines the file naming convention and path for saving each image in the sequence. It supports formatting to include indices. Type should be `STRING`.
+        - `start_index` (Required): The starting index for naming the saved image files, which is used in conjunction with the path pattern to generate file names. Type should be `INT`.
+        - `overwrite` (Required): A string indicating whether existing files at the target save locations should be overwritten. Accepts 'true' or 'false' as values. Type should be `['false', 'true']`.
+    - Outputs:

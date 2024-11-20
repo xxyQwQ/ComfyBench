@@ -1,0 +1,12 @@
+- `ttN advPlot combo`: The node ttN_advPlot_combo is designed for generating advanced plot text outputs based on a combination of input parameters such as node identifiers, widget types, and mode selections. It dynamically constructs plot text by mapping values to specified labels and formatting them for display, supporting customization of plot elements through various configurations including range and selection modes.
+    - Inputs:
+        - `node` (Required): Specifies the node identifier used in the plot text, essential for linking the plot elements to their respective nodes. Type should be `COMBO[STRING]`.
+        - `widget` (Required): Defines the widget type associated with the plot values, playing a crucial role in how values are presented and interacted with in the plot. Type should be `COMBO[STRING]`.
+        - `mode` (Required): Determines the mode of value selection for plotting, such as 'all', 'range', or 'select', affecting how values are gathered and displayed. Type should be `COMBO[STRING]`.
+        - `start_from` (Required): Specifies the starting point for 'range' mode, indicating the beginning of the value range to be plotted. Type should be `COMBO[STRING]`.
+        - `end_with` (Required): Defines the end point for 'range' mode, marking the conclusion of the value range to be plotted. Type should be `COMBO[STRING]`.
+        - `select` (Required): Indicates the widget used for 'select' mode, allowing specific values to be chosen for plotting. Type should be `COMBO[STRING]`.
+        - `selection` (Required): Contains the selected values for plotting in 'select' mode, serving as a direct input of plot data. Type should be `STRING`.
+        - `label_type` (Required): Determines the labeling scheme for the plot elements, influencing the textual representation and organization of plot data. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `plot_text`: The generated plot text, encapsulating the formatted plot elements based on the input parameters. Type should be `STRING`.

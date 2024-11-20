@@ -1,0 +1,6 @@
+- `Anything Everywhere3`: The Anything Everywhere3 node is designed to accept a wide range of inputs without strict type requirements, facilitating the processing of diverse data types. It emphasizes flexibility and inclusivity in data handling, allowing for the simultaneous processing of multiple inputs.
+    - Inputs:
+        - `anything` (Optional): This parameter can accept any data type, enabling the node to handle a variety of inputs. It's part of the node's design to process diverse data types simultaneously. Type should be `*`.
+        - `anything2` (Optional): Similar to 'anything', this parameter can accept any data type, contributing to the node's capability to process multiple diverse inputs at once. Type should be `*`.
+        - `anything3` (Optional): This parameter also accepts any data type, further emphasizing the node's flexibility and capacity to handle a wide range of inputs simultaneously. Type should be `*`.
+    - Outputs:

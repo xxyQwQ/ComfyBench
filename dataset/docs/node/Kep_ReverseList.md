@@ -1,6 +1,0 @@
-- `Kep_ReverseList`: The Kep_ReverseList node is designed for reversing the order of elements in a list. It takes a list as input and returns a new list with the elements in reverse order, maintaining the original data types of the elements.
-    - Parameters:
-    - Inputs:
-        - `In`: The input list to be reversed. This parameter is essential for the operation as it determines the sequence of elements that will be reversed. Type should be `*`.
-    - Outputs:
-        - `Reversed`: The output list with its elements in reverse order compared to the input list. Type should be `*`.

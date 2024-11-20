@@ -1,7 +1,0 @@
-- `Inference_Core_ImageGenResolutionFromLatent`: This node is designed to calculate the generation resolution for images based on the latent space representation. It extracts the height and width from the latent samples and scales them to determine the optimal resolution for image generation.
-    - Parameters:
-    - Inputs:
-        - `latent`: The latent representation from which the image's generation resolution is derived. It affects the output by determining the base dimensions that are scaled to compute the final image resolution. Type should be `LATENT`.
-    - Outputs:
-        - `IMAGE_GEN_WIDTH (INT)`: unknown Type should be `INT`.
-        - `IMAGE_GEN_HEIGHT (INT)`: unknown Type should be `INT`.

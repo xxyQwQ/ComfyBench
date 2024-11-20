@@ -1,7 +1,0 @@
-- `ColorizeDepthmap`: The ColorizeDepthmap node is designed to transform depth maps into colorized images. It leverages color mapping techniques to visually represent the depth information contained within a depth map, enhancing interpretability and visual appeal. This process involves adjusting the color intensity based on the depth values, providing a more intuitive understanding of depth variations in the visualized data.
-    - Parameters:
-        - `colorize_method`: The colormap name to use for colorizing the depth map. It specifies the color scheme applied to represent different depth values. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `image`: The depth map to be colorized. It is the primary input that contains depth information which will be visually enhanced through colorization. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The colorized depth map, where depth information is represented through color variations. This output provides a visually enhanced version of the original depth data, making it easier to interpret. Type should be `IMAGE`.

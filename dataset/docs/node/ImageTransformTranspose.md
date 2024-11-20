@@ -1,7 +1,0 @@
-- `ImageTransformTranspose`: The ImageTransformTranspose node abstracts complex image manipulation tasks, enabling the application of various geometric transformations to a batch of images. This facilitates easy integration into image processing pipelines, enhancing the flexibility and efficiency of image manipulation.
-    - Parameters:
-        - `method`: The 'method' parameter determines the geometric transformation to be applied, influencing the node's processing and the transformation outcome. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: The 'images' parameter represents the batch of images to be transformed, serving as the crucial input data for the node's operation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The transformed images, reflecting the applied geometric transformation. Type should be `IMAGE`.

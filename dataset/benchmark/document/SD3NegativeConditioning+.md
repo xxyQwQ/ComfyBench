@@ -1,0 +1,6 @@
+- `SD3NegativeConditioning+`: This node specializes in modifying the conditioning input for generative models by applying a negative conditioning technique. It zeroes out the initial conditioning and then selectively applies conditioning within a specified timestep range, effectively allowing for more controlled and nuanced generation outcomes.
+    - Inputs:
+        - `conditioning` (Required): The conditioning input represents the initial set of conditions or parameters that guide the generative model's output. Modifying this input allows for targeted adjustments to the generation process. Type should be `CONDITIONING`.
+        - `end` (Required): Specifies the end of the timestep range within which conditioning is applied. A value of 0 indicates no conditioning, while values greater than 0 adjust the extent of conditioning applied, influencing the generative model's output. Type should be `FLOAT`.
+    - Outputs:
+        - `conditioning`: The modified conditioning output, which has been adjusted within the specified timestep range to influence the generative model's behavior. Type should be `CONDITIONING`.

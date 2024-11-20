@@ -1,0 +1,6 @@
+- `ImageToDevice+`: The ImageToDevice node is designed for transferring images to a specified computing device, such as GPU or CPU, within a deep learning environment. It supports dynamic device selection based on user input, enabling optimized computation by leveraging the appropriate hardware resources.
+    - Inputs:
+        - `image` (Required): The image to be transferred to the specified device. It plays a crucial role in ensuring that the image is processed on the correct hardware, affecting performance and efficiency. Type should be `IMAGE`.
+        - `device` (Required): Specifies the target device for the image transfer. It can be set to 'auto', 'cpu', or 'gpu', allowing for flexible execution across different hardware configurations. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `image`: The image after being transferred to the specified device, ready for further processing or analysis. Type should be `IMAGE`.

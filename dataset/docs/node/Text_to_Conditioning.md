@@ -1,7 +1,0 @@
-- `Text to Conditioning`: The 'Text to Conditioning' node is designed to convert textual input into a conditioning format suitable for further processing or generation tasks. It leverages an encoding mechanism to transform the input text and associated CLIP model information into a structured conditioning output.
-    - Parameters:
-        - `text`: The 'text' parameter is the textual input that needs to be converted into a conditioning format. Its content directly affects the resulting conditioning output, making it a key component of the node's functionality. Type should be `STRING`.
-    - Inputs:
-        - `clip`: The 'clip' parameter represents the CLIP model information required for encoding the text. It plays a crucial role in the text-to-conditioning conversion process, influencing the encoding outcome. Type should be `CLIP`.
-    - Outputs:
-        - `conditioning`: The output is a conditioning format derived from the encoded text and CLIP model information, ready for use in subsequent processing or generation tasks. Type should be `CONDITIONING`.

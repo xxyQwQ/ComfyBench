@@ -1,0 +1,8 @@
+- `Merge Latent Batch Gridwise`: This node is designed to merge a batch of latent representations into a single grid layout, utilizing specified rows and columns to organize the batch elements spatially. It aims to facilitate the visualization or further processing of batches by structuring them in a grid format, making it easier to handle and interpret the collective data.
+    - Inputs:
+        - `batch` (Required): The batch of latent representations to be merged into a grid. It is the primary input that dictates the content and structure of the output grid. Type should be `LATENT`.
+        - `mask` (Required): A mask image used to determine the dimensions of the grid cells. Although it is primarily for fetching sizes, it plays a crucial role in defining the spatial layout of the merged grid. Type should be `IMAGE`.
+        - `rows` (Required): Specifies the number of rows in the grid. It determines the vertical dimension of the grid layout. Type should be `INT`.
+        - `columns` (Required): Specifies the number of columns in the grid. It determines the horizontal dimension of the grid layout. Type should be `INT`.
+    - Outputs:
+        - `latent`: The merged latent representations arranged in a grid format. This output facilitates the collective handling and visualization of the batch. Type should be `LATENT`.

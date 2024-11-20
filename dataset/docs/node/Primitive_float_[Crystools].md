@@ -1,6 +1,0 @@
-- `Primitive float [Crystools]`: This node provides a simple interface for working with floating-point numbers, allowing users to input and receive floats. It's designed to facilitate operations that require floating-point precision within the Crystools ecosystem.
-    - Parameters:
-        - `float`: Represents the floating-point number to be processed. It's essential for operations requiring decimal precision. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The processed floating-point number, returned as is from the input. Type should be `FLOAT`.

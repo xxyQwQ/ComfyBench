@@ -1,0 +1,7 @@
+- `Image Tile Offset (mtb)`: The Image Tile Offset (mtb) node is designed to adjust the positioning of tiles within an image, allowing for the customization of tile offsets. This functionality is crucial for tasks that require precise alignment of image segments, such as in image stitching or texture mapping.
+    - Inputs:
+        - `image` (Required): The input image to be processed for tile offset adjustment. This parameter is essential for defining the base image on which the tile offset operation will be performed. Type should be `IMAGE`.
+        - `tilesX` (Required): Specifies the number of horizontal tiles into which the image is divided. This parameter is crucial for determining the horizontal segmentation of the image for tile adjustment. Type should be `INT`.
+        - `tilesY` (Required): Specifies the number of vertical tiles into which the image is divided. This parameter is crucial for determining the vertical segmentation of the image for tile adjustment. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image after applying the tile offset adjustments. This image reflects the changes made to the tile positioning, showcasing the alignment modifications. Type should be `IMAGE`.

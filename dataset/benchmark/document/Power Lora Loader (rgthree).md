@@ -1,0 +1,7 @@
+- `Power Lora Loader (rgthree)`: The Power Lora Loader node is designed to enhance models and clips by dynamically adding multiple Lora modifications. It offers a flexible interface for integrating Loras into existing structures, thereby extending their capabilities and performance.
+    - Inputs:
+        - `model` (Required): The 'model' parameter represents the model to which Loras will be added. It is essential for defining the base structure that will be enhanced with additional features. Type should be `MODEL`.
+        - `clip` (Required): The 'clip' parameter signifies the clip to be modified with Loras. It plays a crucial role in specifying the target for enhancements, ensuring the modifications are applied correctly. Type should be `CLIP`.
+    - Outputs:
+        - `MODEL`: Returns the modified model with Loras applied, reflecting the enhancements made. Type should be `MODEL`.
+        - `CLIP`: Returns the enhanced clip with Loras integrated, showcasing the modifications. Type should be `CLIP`.

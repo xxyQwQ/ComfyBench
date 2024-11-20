@@ -1,0 +1,17 @@
+- `easy XYInputs_ ControlNet`: This node is designed to facilitate the application of control net parameters over a range of values, enabling dynamic adjustments to image processing based on control net strength and positioning. It aims to provide a versatile tool for experimenting with different control net configurations, enhancing the ability to fine-tune image generation or modification tasks.
+    - Inputs:
+        - `control_net_name` (Required): Specifies the name of the control net to be applied. This parameter is crucial for identifying which control net configuration to use during the operation. Type should be `COMBO[STRING]`.
+        - `image` (Required): The image to which the control net adjustments will be applied. This parameter is central to the node's functionality, serving as the base for subsequent control net manipulations. Type should be `IMAGE`.
+        - `target_parameter` (Required): Determines the specific control net parameter to vary, such as strength or positioning, guiding the node's processing and output generation. Type should be `COMBO[STRING]`.
+        - `batch_count` (Required): Defines the number of variations to generate, allowing for a range of control net adjustments to be explored in a single operation. Type should be `INT`.
+        - `first_strength` (Required): Sets the starting strength value for the control net, marking the beginning of the range for strength adjustments. Type should be `FLOAT`.
+        - `last_strength` (Required): Sets the ending strength value for the control net, marking the end of the range for strength adjustments. Type should be `FLOAT`.
+        - `first_start_percent` (Required): Specifies the starting percentage for the control net's application, defining the initial point of effect along the image's axis. Type should be `FLOAT`.
+        - `last_start_percent` (Required): Specifies the ending percentage for the control net's application, defining the final point of effect along the image's axis. Type should be `FLOAT`.
+        - `first_end_percent` (Required): Determines the starting end percentage for the control net's effect, establishing the initial boundary of the control net's influence. Type should be `FLOAT`.
+        - `last_end_percent` (Required): Determines the ending end percentage for the control net's effect, establishing the final boundary of the control net's influence. Type should be `FLOAT`.
+        - `strength` (Required): The strength of the control net effect to be applied, influencing the intensity of the control net's impact on the image. Type should be `FLOAT`.
+        - `start_percent` (Required): The starting percentage of the control net's application, indicating the initial point of the control net's effect on the image. Type should be `FLOAT`.
+        - `end_percent` (Required): The ending percentage of the control net's application, indicating the final point of the control net's effect on the image. Type should be `FLOAT`.
+    - Outputs:
+        - `X or Y`: Outputs a range of values or configurations based on the specified control net parameters, facilitating exploration and fine-tuning of image processing tasks. Type should be `X_Y`.

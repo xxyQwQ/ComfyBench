@@ -1,0 +1,7 @@
+- `MotionCLIPTextEncode`: The MotionCLIPTextEncode node is designed to encode textual descriptions into a format suitable for motion generation tasks, leveraging a CLIP model and motion data to produce motion conditioning. This process facilitates the creation of motion sequences that are aligned with the given textual descriptions.
+    - Inputs:
+        - `md_clip` (Required): The md_clip parameter represents a CLIP model tailored for motion data, crucial for interpreting and encoding the textual description in the context of motion. Type should be `MD_CLIP`.
+        - `motion_data` (Required): The motion_data parameter contains the motion information necessary for the encoding process, providing the context in which the text is to be interpreted. Type should be `MOTION_DATA`.
+        - `text` (Required): The text parameter is the textual description to be encoded, serving as the input for generating motion-aligned sequences. Type should be `STRING`.
+    - Outputs:
+        - `md_conditioning`: The output is motion conditioning data, which is used to guide the generation of motion sequences that correspond to the input text. Type should be `MD_CONDITIONING`.

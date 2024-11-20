@@ -1,0 +1,15 @@
+- `Banana_StylesStylerAdvanced`: This node specializes in applying advanced styling options to text prompts based on a selection of styles related to 'Banana Styles'. It dynamically generates styling options from a predefined dataset, allowing users to enhance or modify text prompts with specific aesthetic or thematic characteristics associated with 'Banana Styles'.
+    - Inputs:
+        - `text_positive_g` (Required): The global positive aspect of the text prompt to be styled, serving as part of the base content for styling. Type should be `STRING`.
+        - `text_positive_l` (Required): The local positive aspect of the text prompt to be styled, complementing the global positive text to refine the styling process. Type should be `STRING`.
+        - `text_negative` (Required): The negative aspect of the text prompt to be styled, working alongside the positive text to ensure balanced application of 'Banana Styles' characteristics. Type should be `STRING`.
+        - `banana_styles` (Required): Specifies the particular 'Banana Styles' to apply, allowing for customization of the styling process based on user selection. Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Specifies the scope of negative styling application, whether to global, local, or both aspects of the text prompt. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag that, when enabled, logs the input and output prompts along with the selected 'Banana Styles' for debugging or review purposes. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The styled global positive text prompt, enhanced with 'Banana Styles' characteristics. Type should be `STRING`.
+        - `text_positive_l`: The styled local positive text prompt, similarly enhanced with 'Banana Styles' characteristics. Type should be `STRING`.
+        - `text_positive`: The combined styled positive text prompt, incorporating both global and local enhancements. Type should be `STRING`.
+        - `text_negative_g`: The styled global negative text prompt, reflecting 'Banana Styles' thematic adjustments. Type should be `STRING`.
+        - `text_negative_l`: The styled local negative text prompt, also reflecting 'Banana Styles' thematic adjustments. Type should be `STRING`.
+        - `text_negative`: The combined styled negative text prompt, incorporating both global and local adjustments. Type should be `STRING`.

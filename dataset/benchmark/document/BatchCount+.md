@@ -1,0 +1,5 @@
+- `BatchCount+`: The `BatchCount` node is designed to calculate the total number of elements within a given batch. It supports various data structures such as tensors, dictionaries, and lists, adapting its counting mechanism based on the structure's characteristics to accurately determine the batch size.
+    - Inputs:
+        - `batch` (Required): The `batch` parameter is the primary input for the node, representing the data collection whose size is to be determined. It plays a crucial role in the node's functionality by allowing it to adapt its counting mechanism to the input's structure. Type should be `*`.
+    - Outputs:
+        - `int`: This output represents the total count of elements within the input batch, providing a single integer value as the result. Type should be `INT`.

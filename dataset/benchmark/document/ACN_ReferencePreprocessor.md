@@ -1,0 +1,7 @@
+- `ACN_ReferencePreprocessor`: The ACN_ReferencePreprocessor node is designed to preprocess reference inputs for the Advanced ControlNet, transforming them into a format suitable for further manipulation and application within the network. It emphasizes the importance of preparing reference data in a way that aligns with the network's requirements for optimal performance.
+    - Inputs:
+        - `image` (Required): The image parameter is the visual data to be processed, serving as a foundational input for the preprocessing operation. It is essential for aligning the input image with the network's requirements. Type should be `IMAGE`.
+        - `vae` (Required): The vae parameter represents the variational autoencoder used in the preprocessing step. It is crucial for encoding the image into a latent space representation, facilitating its compatibility with the network. Type should be `VAE`.
+        - `latent_size` (Required): The latent_size parameter specifies the dimensions of the latent space into which the image is encoded. It plays a key role in ensuring that the processed image matches the expected input size for the network. Type should be `LATENT`.
+    - Outputs:
+        - `proc_IMAGE`: This output is a specialized latent representation, not a typical image, intended for direct use with an Apply Advanced ControlNet node. It underscores the unique handling of reference data within the system. Type should be `IMAGE`.

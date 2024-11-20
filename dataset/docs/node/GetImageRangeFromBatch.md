@@ -1,8 +1,0 @@
-- `GetImageRangeFromBatch`: This node is designed to extract a specific range of images from a given batch based on a starting index and the number of frames desired. It facilitates selective processing or viewing of subsets within larger image collections.
-    - Parameters:
-        - `start_index`: The index at which to start the selection of images. This parameter determines the beginning of the image range to be extracted. Type should be `INT`.
-        - `num_frames`: The number of images to include in the selected range, starting from the start_index. This defines the size of the output batch. Type should be `INT`.
-    - Inputs:
-        - `images`: The collection of images from which a range will be selected. This parameter is crucial for defining the subset of images to be processed. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The selected range of images from the input batch, returned as a new batch of images. Type should be `IMAGE`.

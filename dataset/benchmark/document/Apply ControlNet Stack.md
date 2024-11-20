@@ -1,0 +1,8 @@
+- `Apply ControlNet Stack`: The Apply ControlNet Stack node is designed to enhance the conditioning of positive and negative prompts by applying a stack of control networks. This process allows for the dynamic adjustment of the prompts based on specified control networks, images, and strength parameters, thereby refining the conditioning for more targeted and effective generation outcomes.
+    - Inputs:
+        - `positive` (Required): The positive prompt to be conditioned. It serves as the initial input for the control network stack application, influencing the generation towards desired attributes or themes. Type should be `CONDITIONING`.
+        - `negative` (Required): The negative prompt to be conditioned. It acts as a counterpart to the positive prompt, guiding the generation away from undesired attributes or themes. Type should be `CONDITIONING`.
+        - `cnet_stack` (Optional): An optional stack of control networks and associated parameters that are applied sequentially to the positive and negative prompts. This stack enables complex, layered adjustments to the conditioning. Type should be `CONTROL_NET_STACK`.
+    - Outputs:
+        - `CONDITIONING+`: The conditioned positive prompt after the application of the control network stack. Type should be `CONDITIONING`.
+        - `CONDITIONING-`: The conditioned negative prompt after the application of the control network stack. Type should be `CONDITIONING`.

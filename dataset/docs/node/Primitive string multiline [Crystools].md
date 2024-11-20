@@ -1,6 +1,0 @@
-- `Primitive string multiline [Crystools]`: This node is designed to handle multiline string inputs, providing a straightforward way to work with longer text segments within the Crystools framework. It abstracts the complexity of managing multiline strings, making it easier for users to input and process textual data that spans multiple lines.
-    - Parameters:
-        - `string`: The multiline string input for the node. It allows users to input text that spans across multiple lines, facilitating the handling and processing of longer textual data. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The output of this node is the multiline string that was input, allowing for further processing or utilization within a workflow. Type should be `STRING`.

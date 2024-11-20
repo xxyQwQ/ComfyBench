@@ -1,0 +1,9 @@
+- `RemapReverseBarrelDistortion`: This node is designed to apply a reverse barrel distortion effect to images. It utilizes parameters to adjust the distortion effect, allowing for the correction of barrel distortion or the application of reverse effects based on the specified parameters.
+    - Inputs:
+        - `a` (Required): Coefficient 'a' influences the primary distortion effect, playing a crucial role in the barrel distortion correction or application. Type should be `FLOAT`.
+        - `b` (Required): Coefficient 'b' serves to adjust the distortion effect further, complementing the primary coefficient 'a' in fine-tuning the distortion. Type should be `FLOAT`.
+        - `c` (Required): Coefficient 'c' is used alongside 'a' and 'b' to refine the distortion effect, offering additional control over the distortion characteristics. Type should be `FLOAT`.
+        - `use_inverse_variant` (Required): This boolean parameter determines whether to use an inverse variant of the distortion formula, affecting the overall distortion effect. Type should be `BOOLEAN`.
+        - `d` (Optional): An optional coefficient that can be used to extend the distortion effect, providing even finer control over the distortion characteristics. Type should be `FLOAT`.
+    - Outputs:
+        - `remap`: The output is a remapped image with the reverse barrel distortion applied, based on the input parameters. Type should be `REMAP`.

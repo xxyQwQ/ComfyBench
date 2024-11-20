@@ -1,0 +1,11 @@
+- `CR Gradient Float`: The CR_GradientFloat node is designed for creating smooth transitions between two float values over a specified number of frames, based on a given gradient profile. It calculates the interpolated float value for any given frame within the animation sequence, facilitating dynamic visual effects.
+    - Inputs:
+        - `start_value` (Required): The starting float value of the gradient transition, marking the beginning of the interpolation. Type should be `FLOAT`.
+        - `end_value` (Required): The ending float value of the gradient transition, marking the end of the interpolation. Type should be `FLOAT`.
+        - `start_frame` (Required): The frame number at which the gradient transition begins. Type should be `INT`.
+        - `frame_duration` (Required): The total number of frames over which the gradient transition occurs. Type should be `INT`.
+        - `current_frame` (Required): The current frame number for which the interpolated value is being calculated. Type should be `INT`.
+        - `gradient_profile` (Required): A profile defining the nature of the gradient transition, influencing the interpolation calculation. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `FLOAT`: The interpolated float value for the current frame, based on the gradient transition. Type should be `FLOAT`.
+        - `show_help`: A URL to a help page providing additional information and guidance on using the gradient interpolation node. Type should be `STRING`.

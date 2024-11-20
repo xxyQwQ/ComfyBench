@@ -1,0 +1,10 @@
+- `Smooth Event Curve [Dream]`: The Smooth Event Curve node is designed to generate a smoothly transitioning curve based on a frame counter, facilitating the creation of animations with smooth starts and ends. It calculates values within a specified range and time frame, applying a smoothing algorithm to ensure a gradual transition.
+    - Inputs:
+        - `frame_counter` (Required): The frame counter is essential for determining the current time in seconds, which is used to calculate the position on the curve. It affects the node's execution by dictating the timing of the curve's progression. Type should be `FRAME_COUNTER`.
+        - `max_value` (Required): Specifies the maximum value the curve can reach, playing a crucial role in defining the curve's amplitude. Type should be `FLOAT`.
+        - `min_value` (Required): Defines the minimum value of the curve, setting the baseline from which the curve can start. Type should be `FLOAT`.
+        - `width_seconds` (Required): Determines the width of the curve in seconds, affecting the duration of the smooth transition. Type should be `FLOAT`.
+        - `center_seconds` (Required): Sets the center point of the curve in seconds, around which the smooth transition is centered. Type should be `FLOAT`.
+    - Outputs:
+        - `FLOAT`: The floating-point result of the curve calculation, representing the smoothed value at the current frame. Type should be `FLOAT`.
+        - `INT`: An integer representation of the curve's calculated value, providing a discretized output for applications requiring integer values. Type should be `INT`.

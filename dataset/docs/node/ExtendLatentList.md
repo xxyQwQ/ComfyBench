@@ -1,6 +1,0 @@
-- `ExtendLatentList`: The ExtendLatentList node is designed to extend a list of latent representations. It facilitates the aggregation of additional latent vectors into an existing collection, enabling the expansion of latent datasets for further processing or analysis.
-    - Parameters:
-        - `inputs_len`: The 'inputs_len' parameter represents the initial set of latent vectors to be extended. It plays a crucial role in determining the base collection to which new latent vectors will be appended, affecting the node's execution and the resulting extended list. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `latent`: The 'latent' output parameter represents the extended list of latent vectors. It signifies the augmented collection of latent representations after the addition of new vectors. Type should be `LATENT`.

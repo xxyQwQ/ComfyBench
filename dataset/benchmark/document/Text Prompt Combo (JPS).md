@@ -1,0 +1,7 @@
+- `Text Prompt Combo (JPS)`: The Text Prompt Combo node is designed to accept two distinct text inputs, typically representing positive and negative prompt texts, and returns them as is. This node facilitates the combination or juxtaposition of different textual inputs for further processing or generation tasks.
+    - Inputs:
+        - `pos` (Required): Represents the positive prompt text, allowing for multiline input and dynamic prompt generation. It plays a crucial role in defining the positive aspect of the content to be generated or processed. Type should be `STRING`.
+        - `neg` (Required): Represents the negative prompt text, also allowing for multiline input and dynamic prompt generation. It is essential for specifying the negative aspect or elements to be excluded in the content generation or processing. Type should be `STRING`.
+    - Outputs:
+        - `pos`: Returns the positive prompt text as provided in the input, facilitating further content generation or processing tasks. Type should be `STRING`.
+        - `neg`: Returns the negative prompt text as provided in the input, enabling the exclusion or negation of certain elements in content generation or processing. Type should be `STRING`.

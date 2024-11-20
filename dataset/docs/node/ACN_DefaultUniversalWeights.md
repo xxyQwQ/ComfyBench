@@ -1,6 +1,0 @@
-- `ACN_DefaultUniversalWeights`: This node is designed to generate a default set of universal weights for advanced control networks. It focuses on providing a baseline weight configuration that can be applied across various scenarios, ensuring a consistent starting point for further customization and optimization.
-    - Parameters:
-    - Inputs:
-    - Outputs:
-        - `CN_WEIGHTS`: The generated universal control network weights, ready for application within advanced control network configurations. Type should be `CONTROL_NET_WEIGHTS`.
-        - `TK_SHORTCUT`: A timestep keyframe group that incorporates the generated control weights, facilitating their integration into the network's temporal dynamics. Type should be `TIMESTEP_KEYFRAME`.

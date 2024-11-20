@@ -1,8 +1,0 @@
-- `Big Latent Switch [Dream]`: The Big Latent Switch node is designed to dynamically select between multiple latent inputs based on a specified condition. It facilitates the flexible manipulation of latent representations in a computational graph, allowing for the conditional routing of data through different processing paths.
-    - Parameters:
-        - `select`: Specifies the index of the latent input to be selected. This parameter determines which of the multiple latent inputs will be actively passed through the node. Type should be `INT`.
-        - `on_missing`: Defines the behavior of the switch when the selected input is missing. It can either proceed to the next available input or revert to the previous one, ensuring continuous operation. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `input_i`: Represents one of the multiple latent inputs that can be selected by the switch. The node can handle an arbitrary number of these inputs, dynamically choosing among them based on the 'select' parameter. Type should be `LATENT`.
-    - Outputs:
-        - `selected`: The output of the Big Latent Switch node, which is the latent representation selected based on the specified condition. Type should be `LATENT`.

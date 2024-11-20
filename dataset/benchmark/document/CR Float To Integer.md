@@ -1,0 +1,6 @@
+- `CR Float To Integer`: The node is designed to convert floating-point numbers to integers, providing a straightforward way to perform numerical type conversion within a workflow. Additionally, it offers a link to further documentation or help regarding its usage.
+    - Inputs:
+        - `_float` (Required): This parameter accepts a floating-point number as input, which is then converted to an integer. The conversion process is essential for scenarios where integer values are required from floating-point inputs. Type should be `FLOAT`.
+    - Outputs:
+        - `INT`: The integer result obtained from converting the input floating-point number. Type should be `INT`.
+        - `show_help`: A URL string pointing to additional documentation or help related to the node's functionality. Type should be `STRING`.

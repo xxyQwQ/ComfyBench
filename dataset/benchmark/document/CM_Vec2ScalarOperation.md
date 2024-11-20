@@ -1,0 +1,7 @@
+- `CM_Vec2ScalarOperation`: This node performs a scalar operation on a 2-dimensional vector, applying a specified operation (such as multiplication or division) between the vector and a scalar value. It abstracts complex vector arithmetic into simple, reusable logic.
+    - Inputs:
+        - `op` (Required): Specifies the scalar operation to perform on the vector, such as multiplication or division, affecting the overall transformation of the vector. Type should be `COMBO[STRING]`.
+        - `a` (Required): The 2-dimensional vector to be operated on, serving as the primary operand in the scalar operation. Type should be `VEC2`.
+        - `b` (Required): The scalar value to be used in the operation, acting as the secondary operand that modifies the vector. Type should be `FLOAT`.
+    - Outputs:
+        - `vec2`: The resulting 2-dimensional vector after applying the specified scalar operation. Type should be `VEC2`.

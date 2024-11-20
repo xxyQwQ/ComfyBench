@@ -1,0 +1,6 @@
+- `SaltSaveAudio`: The SaltSaveAudio node is designed for saving audio content to a file in various formats. It allows specifying the filename prefix and the audio format, supporting a range of common audio file types. This functionality is essential for audio processing workflows that require the output to be stored persistently.
+    - Inputs:
+        - `audio` (Required): The raw audio data to be saved. This is the primary content that the node operates on, determining the actual audio that will be written to the file. Type should be `AUDIO`.
+        - `filename_prefix` (Required): A prefix for the filename under which the audio will be saved. This allows for easy identification and organization of saved audio files. Type should be `STRING`.
+        - `format` (Required): The format in which the audio should be saved. This node supports saving in 'wav', 'mp3', and 'flac' formats, affecting the compatibility and quality of the saved audio file. Type should be `COMBO[STRING]`.
+    - Outputs:

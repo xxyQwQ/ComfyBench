@@ -1,0 +1,10 @@
+- `SUPIR_conditioner`: The SUPIR_conditioner node is designed to condition the generation process in the SUPIR model, utilizing positive and negative prompts along with optional captions to influence the generated output. It plays a crucial role in refining and directing the model's output towards the desired thematic or stylistic outcomes.
+    - Inputs:
+        - `SUPIR_model` (Required): The SUPIR model instance to be conditioned. It is central to the operation as it provides the necessary context and parameters for conditioning. Type should be `SUPIRMODEL`.
+        - `latents` (Required): Latent representations that are to be conditioned. These play a key role in determining the final output by providing a base that is modified according to the prompts and captions. Type should be `LATENT`.
+        - `positive_prompt` (Required): A positive prompt guiding the model towards desired features or themes in the output. It significantly influences the conditioning process by highlighting what to include. Type should be `STRING`.
+        - `negative_prompt` (Required): A negative prompt indicating what features or themes to avoid in the model's output. It helps in steering the generation away from undesired elements. Type should be `STRING`.
+        - `captions` (Optional): Optional captions that can be added to the positive prompt for more specific conditioning. When provided, they enhance the contextual understanding of the desired output. Type should be `STRING`.
+    - Outputs:
+        - `positive`: Conditioned latent representations with the influence of positive prompts. These are ready for further processing or generation steps. Type should be `SUPIR_cond_pos`.
+        - `negative`: Conditioned latent representations influenced by negative prompts, serving as a contrast to the positive conditioning. Type should be `SUPIR_cond_neg`.

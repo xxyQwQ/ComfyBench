@@ -1,9 +1,0 @@
-- `SaltThresholdSchedule`: The SaltThresholdSchedule node is designed to apply a fading effect to a schedule list based on specified parameters, such as fade type and strength. This node enables dynamic adjustment of schedule values to create smooth transitions or emphasize certain parts of the schedule through fading in, fading out, or both.
-    - Parameters:
-        - `max_frames`: Specifies the maximum number of frames for the schedule. This parameter limits the length of the output schedule list. Type should be `INT`.
-        - `output_mode`: Defines the format of the output schedule list, such as 'prompt_schedule', 'float_list', 'int_list', or 'raw'. This parameter determines how the modified schedule values are presented. Type should be `COMBO[STRING]`.
-        - `schedule_values`: A string detailing specific schedule values and their corresponding descriptions or settings. This parameter allows for the customization of schedule values based on textual descriptions. Type should be `STRING`.
-    - Inputs:
-        - `float_schedule`: The list of schedule values to be modified with a fading effect. This parameter is crucial for determining the base values that the fading effect will be applied to. Type should be `LIST`.
-    - Outputs:
-        - `value_schedule_list`: The modified schedule list after applying the specified fading effect, showcasing the dynamic transitions between values. Type should be `*`.

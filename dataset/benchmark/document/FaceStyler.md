@@ -1,0 +1,9 @@
+- `FaceStyler`: The FaceStyler node is designed to apply specific styling effects to facial features within images, leveraging a collection of predefined styles to enhance or alter the appearance of faces according to user-selected options.
+    - Inputs:
+        - `text_positive` (Required): Specifies the positive textual content that influences the styling process, contributing to the generation of styled facial features within the image. Type should be `STRING`.
+        - `text_negative` (Required): Specifies the negative textual content that influences the styling process, counteracting certain styles or features in the generation of styled facial images. Type should be `STRING`.
+        - `face` (Required): The input image containing the face(s) to be styled, serving as the direct subject for the application of styling effects. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag that, when enabled, logs the styling choices and textual content inputs for debugging or informational purposes. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive`: The output text reflecting the positive styling effects applied. Type should be `STRING`.
+        - `text_negative`: The output text reflecting the negative styling effects applied. Type should be `STRING`.

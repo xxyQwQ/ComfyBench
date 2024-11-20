@@ -1,0 +1,7 @@
+- `LayerUtility_ CheckMask`: The CheckMask node is designed to evaluate the effectiveness of a given mask by determining if the area of the mask that meets certain criteria (e.g., white point value) exceeds a specified percentage. This functionality is crucial for filtering out ineffective masks in image processing workflows, ensuring that subsequent operations are performed on valid data.
+    - Inputs:
+        - `mask` (Required): The mask input is the primary data on which the node operates, used to determine if the mask is effective based on its white point value and area coverage. Type should be `MASK`.
+        - `white_point` (Required): The white point parameter sets the threshold value for considering a pixel as part of the effective area of the mask, playing a critical role in the mask's evaluation. Type should be `INT`.
+        - `area_percent` (Required): The area percent parameter specifies the minimum percentage of the mask that must be considered effective, based on the white point criteria, for the mask to be deemed valid. Type should be `INT`.
+    - Outputs:
+        - `bool`: Indicates whether the mask is considered effective based on the white point and area percentage criteria. Type should be `BOOLEAN`.

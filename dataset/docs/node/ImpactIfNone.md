@@ -1,8 +1,0 @@
-- `ImpactIfNone`: The ImpactIfNone node is designed to evaluate if a given input is None and conditionally execute logic based on that evaluation. It serves as a decision-making node within a workflow, allowing for the branching of logic depending on whether an input value is present or absent.
-    - Parameters:
-    - Inputs:
-        - `signal`: The 'signal' parameter is the value to be checked for None. Its presence or absence determines the flow of execution within the node, influencing subsequent operations. Type should be `*`.
-        - `any_input`: The 'any_input' parameter is required to accommodate any type of input, ensuring flexibility in the node's application across different scenarios. Type should be `*`.
-    - Outputs:
-        - `signal_opt`: The 'signal_opt' parameter either passes through the 'signal' value if it is not None, or it returns a fallback value, effectively allowing the node to conditionally substitute a value. Type should be `*`.
-        - `bool`: The 'bool' output indicates the result of the None check, providing a boolean value that represents whether the 'signal' was None or not. Type should be `BOOLEAN`.

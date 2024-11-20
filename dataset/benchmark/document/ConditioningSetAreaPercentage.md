@@ -1,0 +1,10 @@
+- `ConditioningSetAreaPercentage`: This node specializes in adjusting the conditioning of generative models by setting a specific area of interest in terms of percentage values for width, height, and position (x, y), along with a strength parameter to modulate the effect. It allows for fine-tuning the focus and intensity of the conditioning within a given area, enhancing the model's ability to generate or modify content with precision.
+    - Inputs:
+        - `conditioning` (Required): The conditioning input represents the current state of conditioning to be modified. It is crucial for determining the context and area of focus for the generative model's output. Type should be `CONDITIONING`.
+        - `width` (Required): Specifies the width of the area of interest as a percentage of the total width, allowing for precise control over the horizontal span of the conditioning effect. Type should be `FLOAT`.
+        - `height` (Required): Defines the height of the area of interest as a percentage of the total height, enabling precise vertical focus within the conditioning effect. Type should be `FLOAT`.
+        - `x` (Required): Determines the horizontal starting point of the area of interest as a percentage of the total width, setting the left boundary of the conditioning effect. Type should be `FLOAT`.
+        - `y` (Required): Sets the vertical starting point of the area of interest as a percentage of the total height, establishing the top boundary of the conditioning effect. Type should be `FLOAT`.
+        - `strength` (Required): Controls the intensity of the conditioning effect within the specified area, allowing for modulation from subtle to strong influences. Type should be `FLOAT`.
+    - Outputs:
+        - `conditioning`: The modified conditioning output, reflecting the adjustments made to the area of interest and strength parameters. Type should be `CONDITIONING`.

@@ -1,7 +1,0 @@
-- `CR String To Boolean`: The CR String To Boolean node is designed to convert a string input into a boolean output based on predefined string values representing true or false. It also provides a link to further documentation or help related to its functionality.
-    - Parameters:
-        - `text`: The 'text' parameter accepts a string input that is evaluated to determine its boolean value. The conversion is based on specific string values representing true or false, making it crucial for controlling the node's output. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `BOOLEAN`: The BOOLEAN output represents the boolean value derived from the input string, indicating either true or false based on the input's content. Type should be `BOOLEAN`.
-        - `show_help`: The 'show_help' output provides a URL to further documentation or help related to the node's functionality. Type should be `STRING`.

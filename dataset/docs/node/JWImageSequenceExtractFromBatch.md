@@ -1,9 +1,0 @@
-- `JWImageSequenceExtractFromBatch`: This node is designed to extract a sequence of images from a batch based on specified start and stop indices, optionally including the stop index in the extraction. It enables selective retrieval of image sequences from larger collections, facilitating operations on specific subsets of image data.
-    - Parameters:
-        - `i_start`: The start index for the sequence extraction, determining the first image in the sequence to be included. Type should be `INT`.
-        - `i_stop`: The stop index for the sequence extraction, determining the last image in the sequence to potentially be included. Type should be `INT`.
-    - Inputs:
-        - `images`: The batch of images from which a sequence is to be extracted. This parameter is crucial for defining the source of the images to be processed. Type should be `IMAGE`.
-        - `inclusive`: A flag indicating whether the stop index should be included in the extraction, allowing for flexible endpoint inclusion. Type should be `['false', 'true']`.
-    - Outputs:
-        - `image`: The extracted sequence of images as a tensor, representing a subset of the original batch based on the specified indices. Type should be `IMAGE`.

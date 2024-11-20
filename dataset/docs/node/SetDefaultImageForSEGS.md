@@ -1,8 +1,0 @@
-- `SetDefaultImageForSEGS`: The SetDefaultImageForSEGS node is designed to integrate a default image into the SEGS (Segmentation Elements) data structure. This operation is crucial for scenarios where specific segments within SEGS lack associated images, ensuring that all segments have a visual representation, either original or default, to maintain consistency and facilitate further processing or visualization.
-    - Parameters:
-        - `override`: The 'override' parameter determines whether the default image should replace existing images for all segments within SEGS, ensuring uniformity or preserving original images where they exist. Type should be `BOOLEAN`.
-    - Inputs:
-        - `segs`: The 'segs' parameter represents the SEGS (Segmentation Elements) data structure that is to be processed. It is essential for specifying the segments that may require the integration of a default image, based on their current image association status. Type should be `SEGS`.
-        - `image`: The 'image' parameter serves as the default image to be integrated into segments within SEGS that lack an associated image. This ensures that all segments have a visual representation, enhancing consistency across the data structure. Type should be `IMAGE`.
-    - Outputs:
-        - `segs`: This output consists of the SEGS data structure after the integration of the default image into segments lacking an associated image, ensuring that each segment has a visual representation. Type should be `SEGS`.

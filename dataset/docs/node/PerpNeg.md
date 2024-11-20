@@ -1,8 +1,0 @@
-- `PerpNeg`: The PerpNeg node is designed to adjust the conditioning of a model by applying a perpendicular negative guidance technique. This technique modifies the input conditioning vectors to enhance the generation of content that diverges from undesired directions, effectively guiding the model towards more desirable outputs.
-    - Parameters:
-        - `neg_scale`: The neg_scale parameter controls the intensity of the negative guidance applied, allowing for fine-tuning of the perpendicular negative effect on the model's output. Type should be `FLOAT`.
-    - Inputs:
-        - `model`: The model parameter represents the generative model to which the perpendicular negative guidance will be applied. It is crucial for determining the base behavior and capabilities of the node. Type should be `MODEL`.
-        - `empty_conditioning`: The empty_conditioning parameter is used to provide a baseline or neutral conditioning context, against which positive and negative deviations are calculated and adjusted. Type should be `CONDITIONING`.
-    - Outputs:
-        - `model`: The output is a modified version of the input model, adjusted with perpendicular negative guidance to influence its generation process towards desired outcomes. Type should be `MODEL`.

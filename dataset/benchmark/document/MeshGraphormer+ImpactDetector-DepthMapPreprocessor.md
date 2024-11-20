@@ -1,0 +1,16 @@
+- `MeshGraphormer+ImpactDetector-DepthMapPreprocessor`: This node integrates an external impact detector with the MeshGraphormer model to preprocess images for depth map and mask generation. It enhances the depth map preprocessing by incorporating detection of specific features (e.g., hands) in the images, refining the depth map and mask outputs based on detected regions.
+    - Inputs:
+        - `image` (Required): The input image to be processed for depth map and mask generation, serving as the primary data for the node's operations. Type should be `IMAGE`.
+        - `bbox_detector` (Required): Specifies the bounding box detector to be used for identifying regions of interest within the images, crucial for the subsequent depth map and mask generation. Type should be `BBOX_DETECTOR`.
+        - `bbox_threshold` (Optional): The threshold value for bounding box detection, controlling the sensitivity of the external impact detector in identifying regions of interest. Type should be `FLOAT`.
+        - `bbox_dilation` (Optional): The dilation factor applied to bounding boxes, adjusting the area around detected features for depth map generation. Type should be `INT`.
+        - `bbox_crop_factor` (Optional): The factor by which the bounding box is cropped, focusing the depth map generation on more precise areas of interest. Type should be `FLOAT`.
+        - `drop_size` (Optional): The minimum size of detected features to be considered, filtering out smaller detections to focus on significant regions. Type should be `INT`.
+        - `mask_bbox_padding` (Optional): The padding added around the bounding box when generating masks, allowing for more flexible mask creation around detected features. Type should be `INT`.
+        - `mask_type` (Optional): Defines the method used for mask generation, whether based on depth information, tight bounding boxes, or the original detection method. Type should be `COMBO[STRING]`.
+        - `mask_expand` (Optional): The expansion factor for masks, adjusting the area covered by the mask beyond the detected features. Type should be `INT`.
+        - `rand_seed` (Optional): The random seed used for deterministic operations within the model, ensuring consistent results across runs. Type should be `INT`.
+        - `resolution` (Optional): Specifies the resolution at which the depth map and mask are generated, impacting the detail and quality of the output. Type should be `INT`.
+    - Outputs:
+        - `IMAGE`: The generated depth maps corresponding to the input images, refined based on detected features and regions of interest. Type should be `IMAGE`.
+        - `INPAINTING_MASK`: The masks indicating the areas of interest within the images, generated based on the depth map preprocessing and feature detection. Type should be `MASK`.

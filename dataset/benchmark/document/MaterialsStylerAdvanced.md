@@ -1,0 +1,15 @@
+- `MaterialsStylerAdvanced`: The MaterialsStylerAdvanced node is designed to apply advanced styling options to text prompts, focusing on material aspects. It dynamically adjusts the text based on a selection of material-related styles, enhancing the prompt's descriptive quality with more nuanced and specific material characteristics.
+    - Inputs:
+        - `text_positive_g` (Required): The global positive aspect of the text to be styled, contributing to the overall thematic direction. Type should be `STRING`.
+        - `text_positive_l` (Required): The local positive aspect of the text, offering detailed enhancements within the global context. Type should be `STRING`.
+        - `text_negative` (Required): The negative aspect of the text to be styled. It serves to balance or contrast the positive aspects, contributing to a more nuanced and comprehensive styled output. Type should be `STRING`.
+        - `materials` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Determines how the negative styling is applied, whether globally, locally, or both, affecting the styling outcome. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A boolean flag that, when enabled, logs the choices made during the styling process along with the original and styled text, aiding in debugging and refinement. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The styled version of the global positive text, reflecting the chosen material characteristics. Type should be `STRING`.
+        - `text_positive_l`: The styled version of the local positive text, detailed according to the selected material nuances. Type should be `STRING`.
+        - `text_positive`: The combined styled version of both global and local positive texts, offering a comprehensive enhancement. Type should be `STRING`.
+        - `text_negative_g`: The styled version of the global negative text, adjusted based on the styling preferences. Type should be `STRING`.
+        - `text_negative_l`: The styled version of the local negative text, providing detailed contrast to the positive aspects. Type should be `STRING`.
+        - `text_negative`: The combined styled version of both global and local negative texts, contributing to a balanced and nuanced output. Type should be `STRING`.

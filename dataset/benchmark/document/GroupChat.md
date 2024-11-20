@@ -1,0 +1,12 @@
+- `GroupChat`: The GroupChat node facilitates the creation and management of a group chat session among multiple agents. It orchestrates the interaction, ensuring that messages are exchanged according to specified rules and configurations, thereby enabling a simulated group conversation environment.
+    - Inputs:
+        - `group_manager` (Required): Represents the configuration and management settings for the group chat, acting as the central control unit. Type should be `GROUP_MANAGER`.
+        - `init_message` (Required): The initial message to start the group chat session, setting the context for the conversation. Type should be `STRING`.
+        - `send_introductions` (Required): Controls whether introductory messages are sent at the beginning of the chat, setting the tone for the conversation. Type should be `BOOLEAN`.
+        - `summary_method` (Required): Determines the method used to summarize the chat session, affecting how the conversation's content is condensed. Type should be `COMBO[STRING]`.
+        - `max_turns` (Required): Specifies the maximum number of turns the chat session can have, controlling the length of the conversation. Type should be `INT`.
+        - `clear_history` (Required): Specifies whether the chat history should be cleared before starting a new session, influencing the continuity of the conversation. Type should be `BOOLEAN`.
+        - `agents` (Optional): A list of agents participating in the group chat. It's crucial for defining the participants of the conversation. Type should be `AGENTS`.
+    - Outputs:
+        - `chat_history`: The compiled history of messages exchanged during the group chat session. Type should be `STRING`.
+        - `summary`: A summary of the group chat session, providing an overview of the conversation's content. Type should be `STRING`.

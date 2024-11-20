@@ -1,7 +1,0 @@
-- `JWMaskSequenceApplyToLatent`: This node applies a mask sequence to a latent representation, modifying the latent samples by incorporating the mask sequence into their structure. It's designed to integrate specific mask patterns into the latent space, enabling targeted modifications or enhancements.
-    - Parameters:
-    - Inputs:
-        - `samples`: The latent representation to which the mask sequence will be applied. This parameter is crucial for determining the base structure that will be modified by the mask. Type should be `LATENT`.
-        - `mask_sequence`: The mask sequence to be applied to the latent samples. This parameter defines the specific modifications or enhancements to be made to the latent structure. Type should be `MASK_SEQUENCE`.
-    - Outputs:
-        - `latent`: The modified latent representation after applying the mask sequence. This output reflects the integration of the mask pattern into the original latent samples. Type should be `LATENT`.

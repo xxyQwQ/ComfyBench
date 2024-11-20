@@ -1,6 +1,0 @@
-- `List of any [Crystools]`: This node is designed to aggregate multiple inputs of any type into a single list, facilitating the handling of diverse data types within a unified structure. It emphasizes flexibility and inclusiveness in data aggregation, allowing for a broad range of input types.
-    - Parameters:
-    - Inputs:
-        - `any_i`: Represents an optional input of any type to be included in the list. Its inclusion enhances the node's versatility in data aggregation, allowing for a dynamic number of inputs. Type should be `*`.
-    - Outputs:
-        - `any_list`: Outputs a list containing all provided inputs, encapsulating a diverse range of data types in a unified structure. Type should be `COMBO[STRING]`.

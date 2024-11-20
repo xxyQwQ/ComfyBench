@@ -1,0 +1,15 @@
+- `LayerStyle_ InnerGlow`: The InnerGlow node applies an inner glow effect to images, enhancing visuals by adding a soft light from within the subject. This effect can be used to create depth or highlight elements in a composition, contributing to the overall aesthetic appeal.
+    - Inputs:
+        - `background_image` (Required): The 'background_image' input serves as the base layer onto which the inner glow effect is applied, providing the context and foundation for the effect. Type should be `IMAGE`.
+        - `layer_image` (Required): The 'layer_image' input specifies the target layer within the background image to which the inner glow effect will be applied, allowing for precise control over the effect's placement. Type should be `IMAGE`.
+        - `invert_mask` (Required): The 'invert_mask' input determines whether the mask applied to the layer image should be inverted, affecting how the inner glow effect interacts with the image's transparency. Type should be `BOOLEAN`.
+        - `blend_mode` (Required): The 'blend_mode' input allows for the selection of blending modes that determine how the inner glow effect combines with the underlying images, offering various visual outcomes. Type should be `COMBO[STRING]`.
+        - `opacity` (Required): The 'opacity' input controls the transparency level of the inner glow effect, enabling fine-tuning of its visual impact on the final image. Type should be `INT`.
+        - `brightness` (Required): The 'brightness' input adjusts the intensity of the inner glow effect, influencing the overall luminosity and visibility of the effect. Type should be `INT`.
+        - `glow_range` (Required): The 'glow_range' input specifies the spread of the inner glow effect, determining how far the effect extends from the edges of the layer image. Type should be `INT`.
+        - `blur` (Required): The 'blur' input defines the level of blur applied to the inner glow effect, contributing to the softness and diffusion of the light. Type should be `INT`.
+        - `light_color` (Required): The 'light_color' input sets the color of the light at the center of the inner glow effect, allowing for customization of the effect's hue. Type should be `STRING`.
+        - `glow_color` (Required): The 'glow_color' input determines the color of the outer edge of the inner glow effect, enabling the creation of a gradient or solid color glow. Type should be `STRING`.
+        - `layer_mask` (Optional): The 'layer_mask' input (optional) provides an additional masking layer to further refine where the inner glow effect is applied, enhancing the precision of the effect's application. Type should be `MASK`.
+    - Outputs:
+        - `image`: The output 'image' showcases the enhanced visual appeal of the background image with the applied inner glow effect, reflecting the successful integration of the effect. Type should be `IMAGE`.

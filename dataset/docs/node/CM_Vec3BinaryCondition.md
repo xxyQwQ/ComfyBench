@@ -1,8 +1,0 @@
-- `CM_Vec3BinaryCondition`: This node performs a binary condition operation on two 3-dimensional vectors (Vec3), evaluating the condition specified by the operation and returning a boolean result. It abstracts complex vector comparison logic into a simple interface, allowing for easy integration of vector-based conditions into larger computational workflows.
-    - Parameters:
-        - `op`: Specifies the binary condition operation to be performed on the vectors. The choice of operation determines how the two vectors are compared. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `a`: The first 3-dimensional vector (Vec3) to be compared. Type should be `VEC3`.
-        - `b`: The second 3-dimensional vector (Vec3) to be compared. Type should be `VEC3`.
-    - Outputs:
-        - `bool`: The result of the binary condition operation, indicating whether the specified condition holds true for the given vectors. Type should be `BOOL`.

@@ -1,0 +1,8 @@
+- `BilateralFilterImage`: The BilateralFilterImage node applies a bilateral filter to images, a process that reduces noise while preserving edges. This technique is particularly useful for creating smoother images without blurring important features, making it ideal for enhancing image quality in a nuanced manner.
+    - Inputs:
+        - `images` (Required): The images to be filtered. This input is crucial for defining the visual content that will undergo the bilateral filtering process. Type should be `IMAGE`.
+        - `size` (Required): Specifies the diameter of the pixel neighborhood used for the filter. A larger size can lead to more significant smoothing and noise reduction. Type should be `INT`.
+        - `sigma_color` (Required): Controls the filter's sensitivity to color differences. Higher values allow more colors to be mixed within the pixel neighborhood. Type should be `FLOAT`.
+        - `sigma_space` (Required): Determines the spatial extent of the filter. Higher values mean that farther pixels will influence each other as long as their colors are close enough. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The filtered image, which has undergone bilateral filtering to reduce noise while preserving edges. Type should be `IMAGE`.

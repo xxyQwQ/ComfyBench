@@ -1,8 +1,0 @@
-- `Multiply Int Int (JPS)`: Performs multiplication of two integer inputs and provides the result in both integer and floating-point formats.
-    - Parameters:
-        - `int_a`: Represents the first integer input for multiplication. Its value influences the multiplication result directly. Type should be `INT`.
-        - `int_b`: Represents the second integer input for multiplication. Its value influences the multiplication result directly. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `int_multiply`: The result of multiplying the two integer inputs, returned as an integer. Type should be `INT`.
-        - `float_multiply`: The result of multiplying the two integer inputs, returned as a floating-point number. Type should be `FLOAT`.

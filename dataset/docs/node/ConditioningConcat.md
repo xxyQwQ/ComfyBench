@@ -1,7 +1,0 @@
-- `ConditioningConcat`: The ConditioningConcat node is designed to concatenate conditioning vectors, specifically merging the 'conditioning_from' vector into each vector within the 'conditioning_to' array. This operation is fundamental in scenarios where the conditioning context needs to be expanded or modified by incorporating additional information.
-    - Parameters:
-    - Inputs:
-        - `conditioning_to`: Represents the primary set of conditioning vectors to which the 'conditioning_from' vector will be concatenated. This parameter is crucial for defining the base context that will be enhanced. Type should be `CONDITIONING`.
-        - `conditioning_from`: Specifies the conditioning vector(s) to be concatenated to each vector in 'conditioning_to'. This parameter is essential for introducing new or supplementary conditioning information into the existing context. Type should be `CONDITIONING`.
-    - Outputs:
-        - `conditioning`: Outputs a modified list of conditioning vectors, each expanded by the concatenation of 'conditioning_from' to 'conditioning_to'. Type should be `CONDITIONING`.

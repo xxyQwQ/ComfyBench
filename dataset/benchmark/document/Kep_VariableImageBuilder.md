@@ -1,0 +1,11 @@
+- `Kep_VariableImageBuilder`: The VariableImageBuilder node is designed for generating a batch of images with specified RGBA color values and dimensions. It allows for the creation of uniform color images, which can be used for various purposes such as placeholders, backgrounds, or testing.
+    - Inputs:
+        - `r` (Required): Specifies the red component of the RGBA color for the image. It influences the overall color of the generated images. Type should be `INT`.
+        - `g` (Required): Specifies the green component of the RGBA color for the image. It affects the overall color of the generated images. Type should be `INT`.
+        - `b` (Required): Specifies the blue component of the RGBA color for the image. It impacts the overall color of the generated images. Type should be `INT`.
+        - `a` (Required): Specifies the alpha (transparency) component of the RGBA color for the image. It determines the opacity of the generated images. Type should be `INT`.
+        - `width` (Required): Determines the width of the generated images. It defines the horizontal dimension of the images. Type should be `INT`.
+        - `height` (Required): Determines the height of the generated images. It defines the vertical dimension of the images. Type should be `INT`.
+        - `batch_size` (Required): Specifies the number of images to generate in a batch. It controls the total output volume of images. Type should be `INT`.
+    - Outputs:
+        - `Image`: The output is a batch of images with the specified RGBA color values and dimensions. Type should be `IMAGE`.

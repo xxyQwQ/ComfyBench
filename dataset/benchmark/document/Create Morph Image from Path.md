@@ -1,0 +1,15 @@
+- `Create Morph Image from Path`: This node is designed to generate a morphing animation between a sequence of images stored in a specified directory. It creates a GIF animation that smoothly transitions from one image to another over a given number of frames, allowing for customization of the transition speed, loop count, and output size. The node aims to facilitate the creation of dynamic visual content by automating the morphing process.
+    - Inputs:
+        - `transition_frames` (Required): Specifies the number of frames to be used for transitioning between each pair of images, affecting the smoothness of the morphing animation. Type should be `INT`.
+        - `still_image_delay_ms` (Required): Determines the delay in milliseconds for each still image before transitioning, allowing for a pause on each image in the sequence. Type should be `FLOAT`.
+        - `duration_ms` (Required): Sets the duration in milliseconds for each frame in the animation, controlling the speed of the morphing effect. Type should be `FLOAT`.
+        - `loops` (Required): Defines how many times the animation will loop, with 0 indicating an infinite loop. Type should be `INT`.
+        - `max_size` (Required): Limits the maximum size of the images in the animation, ensuring the output file remains within a manageable size. Type should be `INT`.
+        - `input_path` (Required): The directory path where the input images are stored, serving as the source for the morphing animation. Type should be `STRING`.
+        - `input_pattern` (Required): A pattern to match filenames within the input directory, allowing for selective inclusion of images in the animation. Type should be `STRING`.
+        - `output_path` (Required): The directory path where the generated GIF animation will be saved. Type should be `STRING`.
+        - `filename` (Required): The name of the output file, without the extension, allowing for customization of the output filename. Type should be `STRING`.
+        - `filetype` (Required): Specifies the file type of the output animation, typically set to 'GIF' for compatibility with most viewers. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `filepath_text`: The absolute path to the saved output file, providing a direct link to the generated animation. Type should be `STRING`.
+        - `filename_text`: The name of the saved output file, including its extension, offering a clear identifier for the generated animation. Type should be `STRING`.

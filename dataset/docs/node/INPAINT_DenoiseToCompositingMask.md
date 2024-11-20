@@ -1,8 +1,0 @@
-- `INPAINT_DenoiseToCompositingMask`: This node is designed to transform a noisy mask into a cleaner, more usable mask for compositing purposes. It adjusts the mask based on provided offset and threshold parameters to enhance its quality for further image processing tasks.
-    - Parameters:
-        - `offset`: The offset parameter allows for adjusting the starting point of the mask's intensity, aiding in the denoising process by setting a baseline for what is considered noise. Type should be `FLOAT`.
-        - `threshold`: The threshold parameter defines the upper limit of mask intensity to be considered in the denoising process, helping to isolate the significant parts of the mask from noise. Type should be `FLOAT`.
-    - Inputs:
-        - `mask`: The mask input is a key component for denoising, serving as the primary data that the node will process to produce a cleaner mask. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The output is a denoised mask, optimized for compositing tasks by adjusting its values within a specified range. Type should be `MASK`.

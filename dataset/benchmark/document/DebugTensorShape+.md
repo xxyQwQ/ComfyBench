@@ -1,0 +1,4 @@
+- `DebugTensorShape+`: The DebugTensorShape node is designed for debugging purposes, specifically to inspect and print the shapes of tensors within a data structure. It recursively traverses through nested tensors, including those within dictionaries and lists, to collect and display their shapes, aiding in the understanding of data flow and structure in tensor-based computations.
+    - Inputs:
+        - `tensor` (Required): The 'tensor' parameter is the primary input for the DebugTensorShape node. Its purpose is to enable the inspection of tensor shapes within complex data structures, facilitating debugging and analysis. Type should be `*`.
+    - Outputs:

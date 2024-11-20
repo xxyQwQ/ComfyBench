@@ -1,7 +1,0 @@
-- `ImageBatchFork`: The ImageBatchFork node is designed to split a batch of images into two separate batches based on a specified priority. This functionality is useful for processing or handling images in batches where the division of the batch is critical to the workflow or algorithm.
-    - Parameters:
-        - `priority`: The 'priority' parameter dictates which of the two resulting batches should potentially contain an extra image when the original batch size is odd. This affects the distribution of images between the two batches. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: The 'images' parameter represents the batch of images to be split. It is crucial for determining the structure of the output batches. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output consists of two separate batches of images, divided according to the specified priority. Type should be `IMAGE`.

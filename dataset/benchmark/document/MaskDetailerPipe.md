@@ -1,0 +1,34 @@
+- `MaskDetailerPipe`: The MaskDetailerPipe node is designed to enhance and refine the details of masks within images, leveraging advanced image processing techniques to improve the visual quality and accuracy of the masks. It operates within a pipeline to apply detailed adjustments and refinements to mask elements, aiming to achieve a higher level of clarity and definition in the output images.
+    - Inputs:
+        - `image` (Required): The primary image input for mask detailing, serving as the basis for enhancement and refinement operations. Type should be `IMAGE`.
+        - `mask` (Required): The mask input that specifies the areas within the image to be detailed and refined, playing a crucial role in the detailing process. Type should be `MASK`.
+        - `basic_pipe` (Required): A tuple containing the models and configurations used for the initial processing and enhancement of the image and mask. Type should be `BASIC_PIPE`.
+        - `guide_size` (Required): Specifies the target size for guiding the detail enhancement process, affecting the scale and precision of the detailing. Type should be `FLOAT`.
+        - `guide_size_for` (Required): Determines the specific application or context for the guide size, influencing how the detailing is optimized. Type should be `BOOLEAN`.
+        - `max_size` (Required): The maximum size limit for the image processing, ensuring that the detailing does not exceed computational constraints. Type should be `FLOAT`.
+        - `mask_mode` (Required): Indicates whether the detailing should focus only on masked areas or include the whole image. Type should be `BOOLEAN`.
+        - `seed` (Required): The seed value for random number generation, ensuring reproducibility of the detailing process. Type should be `INT`.
+        - `steps` (Required): The number of steps to execute in the detailing process, defining the depth of detail enhancement. Type should be `INT`.
+        - `cfg` (Required): Configuration settings for the detailing process, influencing the behavior and outcome of the enhancement. Type should be `FLOAT`.
+        - `sampler_name` (Required): The name of the sampler used in the detailing process, affecting the pattern and quality of detail added. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler used to manage the progression of steps in the detailing process, optimizing the enhancement workflow. Type should be `COMBO[STRING]`.
+        - `denoise` (Required): The level of denoising applied during the detailing process, affecting the smoothness of the output. Type should be `FLOAT`.
+        - `feather` (Required): The feathering amount applied to the edges of the mask, softening transitions for a more natural look. Type should be `INT`.
+        - `crop_factor` (Required): The factor by which the image is cropped around the mask, affecting the focus area of the detailing. Type should be `FLOAT`.
+        - `drop_size` (Required): The minimum size of details to be dropped, controlling the level of detail refinement. Type should be `INT`.
+        - `refiner_ratio` (Required): The ratio of refinement applied to the detailing process, adjusting the intensity of enhancements. Type should be `FLOAT`.
+        - `batch_size` (Required): The number of images processed in a batch, relevant for batch processing scenarios. Type should be `INT`.
+        - `cycle` (Required): The number of cycles the detailing process is repeated, affecting the depth of enhancement. Type should be `INT`.
+        - `refiner_basic_pipe_opt` (Optional): An optional tuple for refinement settings, similar to basic_pipe but for the refinement stage. Type should be `BASIC_PIPE`.
+        - `detailer_hook` (Optional): A hook for custom detailing operations, allowing for additional processing steps. Type should be `DETAILER_HOOK`.
+        - `inpaint_model` (Optional): Indicates whether an inpainting model is used for filling masked areas. Type should be `BOOLEAN`.
+        - `noise_mask_feather` (Optional): The feathering applied to the noise mask, affecting the blending of noise in detailed areas. Type should be `INT`.
+        - `bbox_fill` (Optional): Determines if bounding boxes are filled, affecting the handling of segmented areas. Type should be `BOOLEAN`.
+        - `contour_fill` (Optional): Indicates whether contours are filled, affecting the detailing of edges and boundaries. Type should be `BOOLEAN`.
+        - `scheduler_func_opt` (Optional): An optional scheduler function for advanced control over the detailing process. Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `image`: The enhanced image with refined mask details, showcasing improved visual quality and accuracy. Type should be `IMAGE`.
+        - `cropped_refined`: A cropped and further refined version of the mask, focusing on specific areas for detailed enhancement. Type should be `IMAGE`.
+        - `cropped_enhanced_alpha`: The alpha channel of the cropped and enhanced image, providing transparency information for further processing. Type should be `IMAGE`.
+        - `basic_pipe`: The tuple of models and configurations returned after processing, potentially updated from the input state. Type should be `BASIC_PIPE`.
+        - `refiner_basic_pipe_opt`: An optional tuple similar to basic_pipe, but specifically for the refinement process, indicating any changes or additional configurations used. Type should be `BASIC_PIPE`.

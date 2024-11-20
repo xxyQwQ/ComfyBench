@@ -1,9 +1,0 @@
-- `ADE_BatchedContextOptions`: This node is designed to create and manage batched context options for Animate Diff operations. It allows for the customization of context length, start percentage, and guaranteed steps, with the option to inherit and modify previous context settings. This facilitates the efficient handling of context in batched processing scenarios, optimizing the animation and diffing processes by adjusting context parameters dynamically.
-    - Parameters:
-        - `context_length`: Specifies the length of the context to be used in the batched processing. This parameter is crucial for defining the scope of the context over which the animation and diff operations are applied, directly influencing the granularity and precision of the process. Type should be `INT`.
-        - `start_percent`: Determines the starting point of the context as a percentage of the total length. This allows for fine-tuning the initial position of the context window, enabling more precise control over the animation and diffing operations. Type should be `FLOAT`.
-        - `guarantee_steps`: Defines the minimum number of steps guaranteed within the context. This parameter ensures that a certain level of detail and smoothness is maintained in the animation and diffing processes, regardless of the context length or start position. Type should be `INT`.
-    - Inputs:
-        - `prev_context`: Allows for the inheritance and modification of previously defined context options. This facilitates the reuse and adaptation of context settings, promoting efficiency and consistency across batched processing tasks. Type should be `CONTEXT_OPTIONS`.
-    - Outputs:
-        - `CONTEXT_OPTS`: The modified or newly created batched context options, ready to be utilized in subsequent Animate Diff operations. This encapsulates all the specified parameters, providing a tailored context setup for optimized batch processing. Type should be `CONTEXT_OPTIONS`.

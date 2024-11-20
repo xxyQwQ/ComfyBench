@@ -1,0 +1,7 @@
+- `OffsetImage`: The OffsetImage node is designed to shift an image by a specified percentage of its width and height, effectively creating a seamless tiling effect. This operation is useful for generating patterns or textures that can be tiled without visible seams.
+    - Inputs:
+        - `pixels` (Required): The input image to be offset. This parameter is crucial for determining the base image that will undergo the offset operation. Type should be `IMAGE`.
+        - `x_percent` (Required): The percentage of the image's width by which the image should be horizontally shifted. This parameter allows for horizontal adjustment of the image's position. Type should be `FLOAT`.
+        - `y_percent` (Required): The percentage of the image's height by which the image should be vertically shifted. This parameter allows for vertical adjustment of the image's position. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output is the modified image after being offset both horizontally and vertically according to the specified percentages. Type should be `IMAGE`.

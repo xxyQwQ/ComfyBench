@@ -1,0 +1,18 @@
+- `ttN pipeEncodeConcat`: The ttN pipeEncodeConcat node is designed for advanced text processing within a pipeline, focusing on encoding and concatenating text inputs based on specific conditioning. It leverages token normalization and weight interpretation to refine the input text, aiming to enhance the overall quality and relevance of the generated content.
+    - Inputs:
+        - `pipe` (Required): Represents the pipeline configuration and state, serving as the foundational context for the node's operations. Type should be `PIPE_LINE`.
+        - `toggle` (Required): A boolean toggle that influences the node's processing behavior, although its specific role is not detailed in the provided context. Type should be `COMBO[BOOLEAN]`.
+        - `positive` (Optional): Specifies the positive text input to be encoded and concatenated. It plays a crucial role in guiding the node's output towards desired attributes or themes. Type should be `STRING`.
+        - `positive_token_normalization` (Optional): Controls the normalization process for tokens in the positive text, affecting the encoding's sensitivity to token variations. Type should be `COMBO[STRING]`.
+        - `positive_weight_interpretation` (Optional): Adjusts the weight interpretation for the positive text, impacting the emphasis placed on different aspects of the input during encoding. Type should be `COMBO[STRING]`.
+        - `negative` (Optional): Defines the negative text input for encoding and concatenation. This input helps in steering the output away from undesired attributes or themes. Type should be `STRING`.
+        - `negative_token_normalization` (Optional): Manages the normalization of tokens in the negative text, influencing how the encoding perceives token differences. Type should be `COMBO[STRING]`.
+        - `negative_weight_interpretation` (Optional): Modifies the weight interpretation for the negative text, altering the focus on various elements of the input during encoding. Type should be `COMBO[STRING]`.
+        - `optional_positive_from` (Optional): Optional input specifying an alternative source of positive conditioning, allowing for dynamic adjustment of the encoding process. Type should be `CONDITIONING`.
+        - `optional_negative_from` (Optional): Optional input indicating an alternative source of negative conditioning, enabling flexible modification of the encoding approach. Type should be `CONDITIONING`.
+        - `optional_clip` (Optional): An optional CLIP model parameter that can be used to further refine the encoding process, offering an additional layer of customization. Type should be `CLIP`.
+    - Outputs:
+        - `pipe`: The updated pipeline configuration after processing, reflecting changes made by the node. Type should be `PIPE_LINE`.
+        - `positive`: The enhanced positive conditioning output, resulting from the encoding and concatenation process. Type should be `CONDITIONING`.
+        - `negative`: The refined negative conditioning output, produced through the encoding and concatenation efforts. Type should be `CONDITIONING`.
+        - `clip`: The possibly modified CLIP model parameter, adjusted during the node's operation. Type should be `CLIP`.

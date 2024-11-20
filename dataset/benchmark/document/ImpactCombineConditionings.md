@@ -1,0 +1,5 @@
+- `ImpactCombineConditionings`: The ImpactCombineConditionings node is designed to merge multiple conditioning inputs into a single, unified conditioning output. This process facilitates the combination of various conditioning elements, enhancing the flexibility and capability of conditioning-based operations within the ImpactPack suite.
+    - Inputs:
+        - `conditioning1` (Required): The primary conditioning input to be combined. It serves as the foundational element for the combination process, allowing for the integration of additional conditioning inputs to enrich the overall context. Type should be `CONDITIONING`.
+    - Outputs:
+        - `conditioning`: The result of combining the input conditionings. This unified conditioning encapsulates the merged context and attributes of the inputs, ready for further processing. Type should be `CONDITIONING`.

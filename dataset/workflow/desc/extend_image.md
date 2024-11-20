@@ -1,1 +1,0 @@
-This workflow utilizes image padding and VAE encoder to extend images. With the padding size specified, the workflow pads the input image and then encodes it into latent code using the VAE encoder. The latent code is then decoded into an extended image. In this example, we extend an image of icebergs by 256 pixels on both left and right sides.

@@ -1,8 +1,0 @@
-- `CustomT2IAdapterWeights`: This node is designed to load and configure weights for a custom Text-to-Image (T2I) Adapter within the Advanced ControlNet framework. It allows for the dynamic adjustment of weight parameters to fine-tune the control over the image generation process, incorporating options to flip weights for varied effects.
-    - Parameters:
-        - `weight_i`: unknown Type should be `FLOAT`.
-        - `flip_weights`: A boolean parameter that, when enabled, reverses the order of weights, potentially altering the image generation outcome for creative variations. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `CN_WEIGHTS`: Outputs the configured weights as a set, ready for application within the T2I Adapter for controlling image generation. Type should be `CONTROL_NET_WEIGHTS`.
-        - `TK_SHORTCUT`: Generates a keyframe group based on the configured weights, facilitating precise control over the image generation timeline. Type should be `TIMESTEP_KEYFRAME`.

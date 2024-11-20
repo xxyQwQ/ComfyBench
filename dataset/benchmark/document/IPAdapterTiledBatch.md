@@ -1,0 +1,19 @@
+- `IPAdapterTiledBatch`: The IPAdapterTiledBatch node is designed to apply image processing adaptations in a batched manner to tiled images, leveraging the capabilities of an underlying IPAdapterTiled class. It focuses on enhancing or modifying images through a series of transformations, with an emphasis on batch processing for efficiency and scalability.
+    - Inputs:
+        - `model` (Required): Specifies the model to which the image processing adaptations will be applied. It is central to the node's operation, determining the transformations that will be performed on the input images. Type should be `MODEL`.
+        - `ipadapter` (Required): Defines the specific IPAdapter to be used for the image processing adaptations. This parameter is crucial for determining the nature of the transformations applied to the images. Type should be `IPADAPTER`.
+        - `image` (Required): The input image to be processed. This parameter is essential for the node's functionality, serving as the primary data on which the adaptations are applied. Type should be `IMAGE`.
+        - `weight` (Required): Affects the intensity of the applied adaptations, allowing for fine-tuning of the transformation's impact on the image. Type should be `FLOAT`.
+        - `weight_type` (Required): Determines the method of weighting the adaptations, influencing how the transformations are applied based on the specified type. Type should be `COMBO[STRING]`.
+        - `start_at` (Required): Defines the starting point of the adaptation process, enabling control over when the transformations begin to take effect. Type should be `FLOAT`.
+        - `end_at` (Required): Specifies the endpoint of the adaptation process, allowing for precise control over the duration and extent of the transformations. Type should be `FLOAT`.
+        - `sharpening` (Required): Controls the level of image sharpening applied during the adaptation process, enhancing the clarity and detail of the transformed images. Type should be `FLOAT`.
+        - `embeds_scaling` (Required): Determines how the embeddings are scaled during the adaptation process, affecting the overall impact of the transformations on the image. Type should be `COMBO[STRING]`.
+        - `encode_batch_size` (Required): Specifies the batch size for encoding operations, optimizing the efficiency of the adaptation process by adjusting the volume of data processed at once. Type should be `INT`.
+        - `image_negative` (Optional): An optional negative image input that can be used for contrastive adaptations, enhancing the effectiveness of certain transformations. Type should be `IMAGE`.
+        - `attn_mask` (Optional): An optional attention mask that can be applied to focus or restrict the adaptations to specific areas of the image. Type should be `MASK`.
+        - `clip_vision` (Optional): An optional parameter that, when provided, integrates CLIP vision features into the adaptation process, enriching the transformations with additional visual context. Type should be `CLIP_VISION`.
+    - Outputs:
+        - `MODEL`: The model after the image processing adaptations have been applied, reflecting the changes made to the input images. Type should be `MODEL`.
+        - `tiles`: The processed tiles of the image, showcasing the results of the applied adaptations. Type should be `IMAGE`.
+        - `masks`: The masks used or generated during the adaptation process, indicating areas of focus or alteration. Type should be `MASK`.

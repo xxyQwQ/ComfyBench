@@ -1,0 +1,5 @@
+- `FromListGetFloats`: The `FromListGetFloats` node is designed to retrieve a specific float value from a list of floats based on the provided index. It enables random access within a list, including the ability to use negative indices for reverse access, thereby enhancing flexibility in data manipulation.
+    - Inputs:
+        - `list` (Required): The list of floats from which a specific value is to be retrieved. It is essential for specifying the data set to be accessed. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: The float value retrieved from the specified index in the list. Type should be `FLOAT`.

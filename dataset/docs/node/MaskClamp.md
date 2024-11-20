@@ -1,6 +1,0 @@
-- `MaskClamp`: The MaskClamp node is designed to pass through mask data without modification, serving as a placeholder or checkpoint within a data processing pipeline.
-    - Parameters:
-    - Inputs:
-        - `mask`: The mask input represents the mask data that will be passed through the node unchanged. It is essential for maintaining the integrity of mask information throughout the processing flow. Type should be `MASK`.
-    - Outputs:
-        - `mask`: Outputs the unchanged mask data, ensuring the continuity of mask information within the workflow. Type should be `MASK`.

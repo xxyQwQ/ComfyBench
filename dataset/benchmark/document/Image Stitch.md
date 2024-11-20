@@ -1,0 +1,8 @@
+- `Image Stitch`: The Image Stitch node is designed to seamlessly combine two images together along a specified edge (top, left, bottom, right) with an option for feathering to blend the images smoothly. This node is part of the WAS Suite's image transformation capabilities, enabling creative and technical image manipulation.
+    - Inputs:
+        - `image_a` (Required): The first image to be stitched. It serves as the base image to which the second image will be stitched. Type should be `IMAGE`.
+        - `image_b` (Required): The second image to be stitched to the first image. The stitching process combines this image with the first image along a specified edge. Type should be `IMAGE`.
+        - `stitch` (Required): Specifies the edge along which the second image will be stitched to the first image. Options include 'top', 'left', 'bottom', and 'right'. Type should be `COMBO[STRING]`.
+        - `feathering` (Required): Determines the amount of feathering applied to the edge where the images are stitched together, allowing for a smoother transition between the two images. Type should be `INT`.
+    - Outputs:
+        - `image`: The resulting image after stitching the two input images together along the specified edge with optional feathering. Type should be `IMAGE`.

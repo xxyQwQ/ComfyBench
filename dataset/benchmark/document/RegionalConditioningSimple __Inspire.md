@@ -1,0 +1,9 @@
+- `RegionalConditioningSimple __Inspire`: This node specializes in applying regional conditioning to an input based on a specified mask, strength, and textual prompt. It leverages CLIP text encoding and mask-based conditioning to enhance or modify specific regions of an input according to the given prompt, allowing for targeted adjustments or enhancements.
+    - Inputs:
+        - `clip` (Required): The CLIP model to be used for text encoding, which plays a crucial role in interpreting the prompt and applying the corresponding conditioning. Type should be `CLIP`.
+        - `mask` (Required): A mask that defines the region to apply the conditioning to, determining where the effects of the prompt will be localized. Type should be `MASK`.
+        - `strength` (Required): Defines the intensity of the applied conditioning, allowing for fine-tuning how strongly the prompt influences the specified region. Type should be `FLOAT`.
+        - `set_cond_area` (Required): Specifies how the conditioning area is determined, either using default settings or based on mask bounds, affecting the scope of the applied conditioning. Type should be `COMBO[STRING]`.
+        - `prompt` (Required): The textual prompt that guides the conditioning process, directly influencing the nature of the applied adjustments. Type should be `STRING`.
+    - Outputs:
+        - `conditioning`: The result of the conditioning process, tailored to the specified region, strength, and prompt, ready for further processing or application. Type should be `CONDITIONING`.

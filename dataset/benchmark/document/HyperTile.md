@@ -1,0 +1,9 @@
+- `HyperTile`: The HyperTile node is designed to enhance the processing of image data by dynamically adjusting the tile size of the input based on the model's channel configuration and the specified tile size. It aims to optimize the handling of image data for neural networks by applying a specialized tiling strategy that adapts to the model's characteristics and the computational constraints.
+    - Inputs:
+        - `model` (Required): The model parameter represents the neural network model that will be modified by the HyperTile node. It is crucial for determining the appropriate tiling strategy based on the model's channel configuration. Type should be `MODEL`.
+        - `tile_size` (Required): Specifies the base size of the tiles into which the input image is divided. This size is dynamically adjusted to optimize processing. Type should be `INT`.
+        - `swap_size` (Required): Determines the granularity of the swap operation in the tiling process, affecting the final tile configuration. Type should be `INT`.
+        - `max_depth` (Required): Defines the maximum depth for the tiling strategy, influencing how deeply the tiling adjustments can be applied. Type should be `INT`.
+        - `scale_depth` (Required): A boolean parameter that indicates whether the depth scaling factor should be applied to the tiling strategy, further customizing the tiling process. Type should be `BOOLEAN`.
+    - Outputs:
+        - `model`: The modified model with an adjusted attention mechanism to accommodate the new tiling strategy, enhancing the processing of image data. Type should be `MODEL`.

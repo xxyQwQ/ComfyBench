@@ -1,0 +1,6 @@
+- `WeightScheduleExtend`: The WeightScheduleExtend node is designed to extend and convert weight schedules or value lists, supporting various output types for flexible integration into different model architectures. It allows for the manipulation of input values to match specific requirements, facilitating the customization of model behavior over time.
+    - Inputs:
+        - `input_values_i` (Required): Represents the first set of input values for the operation, playing a crucial role in the extension or conversion process. Type should be `FLOAT`.
+        - `output_type` (Required): Specifies the desired output type of the operation, influencing the format of the extended or converted values. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `float`: The output of the operation, which can be a single float value or a collection of float values, depending on the specified output type. Type should be `FLOAT`.

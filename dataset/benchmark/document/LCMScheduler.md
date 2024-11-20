@@ -1,0 +1,7 @@
+- `LCMScheduler`: The LCMScheduler node is designed to compute and adjust the sigma values for a given model based on the specified number of steps and denoise factor. It aims to facilitate the customization of the sampling process in generative models by providing a tailored set of sigma values that can be used to control the level of noise introduced during the generation process.
+    - Inputs:
+        - `model` (Required): The 'model' parameter specifies the generative model for which the sigma values are to be calculated. It plays a crucial role in determining the specific characteristics of the noise to be introduced during the sampling process. Type should be `MODEL`.
+        - `steps` (Required): The 'steps' parameter defines the number of steps to be used in the sampling process. It directly influences the granularity of the noise adjustment, with a higher number of steps allowing for finer control over the generation. Type should be `INT`.
+        - `denoise` (Required): The 'denoise' parameter allows for adjusting the intensity of the noise introduced during the sampling process. A lower value results in a higher number of total steps, enabling more precise control over the noise characteristics. Type should be `FLOAT`.
+    - Outputs:
+        - `sigmas`: This output represents the calculated sigma values for the specified model and parameters. These values are crucial for controlling the noise level in the generative process, directly impacting the quality and characteristics of the generated output. Type should be `SIGMAS`.

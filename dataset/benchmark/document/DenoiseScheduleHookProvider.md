@@ -1,0 +1,6 @@
+- `DenoiseScheduleHookProvider`: The DenoiseScheduleHookProvider node is designed to create hooks that adjust denoising levels dynamically during the image generation process, based on a predefined schedule and target denoise value. It aims to enhance the quality of the generated images by fine-tuning the denoising parameter over the course of the generation.
+    - Inputs:
+        - `schedule_for_iteration` (Required): Specifies the schedule to be used for adjusting the denoising level during the image generation process. The choice of schedule affects how the target denoising level is approached over time. Type should be `COMBO[STRING]`.
+        - `target_denoise` (Required): The target denoising level to be achieved by the end of the image generation process. This value influences the final clarity and detail of the generated image. Type should be `FLOAT`.
+    - Outputs:
+        - `pk_hook`: The output is a hook that can be applied to the image generation process to dynamically adjust the denoising level according to the specified schedule. Type should be `PK_HOOK`.

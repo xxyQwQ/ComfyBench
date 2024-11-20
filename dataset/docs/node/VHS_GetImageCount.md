@@ -1,6 +1,0 @@
-- `VHS_GetImageCount`: The `VHS_GetImageCount` node is designed to count the number of images in a given batch. It serves as a utility within the Video Helper Suite to facilitate operations that require knowledge of batch size, such as splitting or merging batches.
-    - Parameters:
-    - Inputs:
-        - `images`: The `images` parameter represents the batch of images whose count is to be determined. It is crucial for calculating the total number of images present, which impacts subsequent operations that depend on batch size. Type should be `IMAGE`.
-    - Outputs:
-        - `count`: The `count` output represents the total number of images in the input batch. This information is essential for managing image batches and planning further processing steps. Type should be `INT`.

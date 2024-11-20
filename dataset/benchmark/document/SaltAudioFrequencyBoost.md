@@ -1,0 +1,8 @@
+- `SaltAudioFrequencyBoost`: This node applies a frequency-specific boost to an audio file using an equalization filter. It enhances or attenuates a specified frequency range of the audio signal, allowing for precise audio frequency manipulation.
+    - Inputs:
+        - `audio` (Required): The raw audio data to be processed. This input is crucial for applying the frequency boost effect to the audio content. Type should be `AUDIO`.
+        - `frequency` (Required): The center frequency to boost, around which the equalization filter is applied. This parameter determines the specific frequency range that will be enhanced or attenuated. Type should be `INT`.
+        - `bandwidth` (Required): Defines the width of the frequency range around the center frequency that will be affected by the boost. It allows for control over how broad or narrow the boosted frequency range is. Type should be `FLOAT`.
+        - `gain_dB` (Required): The amount of gain (in decibels) to apply to the specified frequency range. This determines the intensity of the boost effect. Type should be `FLOAT`.
+    - Outputs:
+        - `audio`: The modified audio data after the frequency boost has been applied. It reflects the changes made to the audio's frequency spectrum. Type should be `AUDIO`.

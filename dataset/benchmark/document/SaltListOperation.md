@@ -1,0 +1,9 @@
+- `SaltListOperation`: The SaltListOperation node is designed to perform specified numeric operations on schedule lists, enabling dynamic adjustments and manipulations of scheduling data. It abstracts the complexity of numeric list operations, providing a streamlined way to apply transformations like addition, subtraction, multiplication, or division to elements of scheduling lists.
+    - Inputs:
+        - `operation` (Required): Specifies the type of numeric operation to apply to the elements of the primary and secondary lists. This determines how the lists are combined or modified, impacting the final scheduling outcome. Type should be `COMBO[STRING]`.
+        - `output_type` (Required): Determines the data type of the output list after the operation is applied, allowing for customization of the result's format. Type should be `COMBO[STRING]`.
+        - `schedule_list_a` (Optional): The primary list of scheduled numeric values to be operated on. It serves as the base for applying operations in conjunction with another list or a single value, affecting the node's execution and the resulting list. Type should be `*`.
+        - `schedule_list_b` (Optional): The secondary list of scheduled numeric values or a single numeric value to be used in the operation with the primary list. Its role is to modify or influence the outcome of the operation applied to the primary list, enhancing the flexibility in scheduling adjustments. Type should be `*`.
+        - `expression` (Optional): A custom mathematical expression used for the 'custom_expression' operation, providing flexibility for complex operations beyond the predefined ones. Type should be `STRING`.
+    - Outputs:
+        - `schedule_list`: The resulting list after applying the specified operation to the input lists. It reflects the adjustments made to the scheduling data, showcasing the effect of the operation. Type should be `*`.

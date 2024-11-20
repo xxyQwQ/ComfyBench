@@ -1,0 +1,10 @@
+- `OneButtonPreset`: The OneButtonPreset node is designed to streamline the process of applying predefined settings to generate prompts, incorporating elements like insanity level, subject, artist, and various subject subtypes. It simplifies the customization and generation of prompts by utilizing a set of predefined or user-defined presets.
+    - Inputs:
+        - `OneButtonPreset` (Required): Specifies the selected preset to apply. This can be a predefined preset or a custom one defined by the user, influencing the overall theme and parameters of the generated prompt. Type should be `COMBO[STRING]`.
+        - `base_model` (Optional): Defines the base model to be used for prompt generation, affecting the style and structure of the output. Type should be `COMBO[STRING]`.
+        - `prompt_enhancer` (Optional): An optional modifier that applies additional transformations or enhancements to the prompt, further customizing the output. Type should be `COMBO[STRING]`.
+        - `preset_prefix` (Optional): A prefix added to the prompt, allowing for further customization and refinement of the generated content. Type should be `STRING`.
+        - `preset_suffix` (Optional): A suffix added to the prompt, used to append additional information or styling to the generated content. Type should be `STRING`.
+        - `seed` (Optional): Determines the randomness seed for generating prompts, ensuring reproducibility of results when the same seed is used. Type should be `INT`.
+    - Outputs:
+        - `prompt`: The generated prompt based on the applied preset, incorporating any specified customizations such as prefix, suffix, and enhancer. Type should be `STRING`.

@@ -1,9 +1,0 @@
-- `MaskOuterBlur`: The MaskOuterBlur node is designed for advanced image processing, specifically focusing on applying a blur effect to the outer regions of a mask within an image. It leverages both CPU and GPU capabilities for efficient execution, accommodating various kernel sizes and shapes to achieve the desired blurring effect. This node is particularly useful in scenarios where selective blurring is required to enhance the visual quality of images or to obscure certain parts for privacy or aesthetic reasons.
-    - Parameters:
-        - `kernel_size`: Specifies the size of the kernel used for the blurring operation. The kernel size affects the intensity and spread of the blur effect. Type should be `INT`.
-        - `paste_src`: An optional parameter that allows for the original source image to be pasted back onto the blurred image, enabling a combination of blurred and sharp regions within the same image. Type should be `BOOLEAN`.
-    - Inputs:
-        - `src`: The source image to be processed. It serves as the base for applying the mask and subsequent blurring effect, playing a crucial role in the overall transformation. Type should be `IMAGE`.
-        - `mask`: The mask that specifies the regions within the image to be blurred. This mask determines the areas where the blur effect will be applied, allowing for selective blurring of the image. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The resulting image after applying the blurring effect to the specified regions. This image combines blurred and potentially sharp regions, depending on the mask and paste_src parameters. Type should be `IMAGE`.

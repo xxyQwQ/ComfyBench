@@ -1,0 +1,6 @@
+- `CR Seed to Int`: The CR Seed to Int node is designed to convert a seed value into an integer, providing a straightforward mechanism for seed manipulation and conversion within custom node workflows. It also offers a link to further documentation, aiding users in understanding its application.
+    - Inputs:
+        - `seed` (Required): The seed parameter is crucial for the conversion process, serving as the input that is directly transformed into an integer. Its value dictates the outcome of the conversion. Type should be `SEED`.
+    - Outputs:
+        - `INT`: Represents the integer value obtained from the conversion of the seed input. Type should be `INT`.
+        - `show_help`: Provides a URL to detailed documentation about the CR Seed to Int node, assisting users in understanding its usage and functionalities. Type should be `STRING`.

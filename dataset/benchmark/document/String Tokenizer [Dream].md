@@ -1,0 +1,7 @@
+- `String Tokenizer [Dream]`: The String Tokenizer node is designed to split a given string into parts based on a specified separator and select one of these parts based on its index. This functionality is essential for parsing and manipulating text data, allowing for the extraction of specific segments of interest from larger text bodies.
+    - Inputs:
+        - `text` (Required): The primary text input that will be split into parts. This parameter is crucial for defining the text to be tokenized. Type should be `STRING`.
+        - `separator` (Required): Defines the character or string used to split the text into parts. Its role is pivotal in determining how the text is divided. Type should be `STRING`.
+        - `selected` (Required): Determines which part of the split text to return, based on its index. This parameter is key for selecting the specific segment of interest. Type should be `INT`.
+    - Outputs:
+        - `token`: The selected part of the text after splitting by the specified separator. This output is significant for text processing and manipulation tasks. Type should be `STRING`.

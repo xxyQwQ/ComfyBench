@@ -1,0 +1,9 @@
+- `AdjectiveStyler`: The AdjectiveStyler node dynamically customizes text prompts based on a selection of stylistic adjectives, allowing users to enhance or modify the tone and characteristics of their text inputs through a menu-driven interface.
+    - Inputs:
+        - `text_positive` (Required): Defines the initial positive text prompt to be styled. It serves as the base content that will be modified according to the selected stylistic adjectives. Type should be `STRING`.
+        - `text_negative` (Required): Defines the initial negative text prompt to be styled. It serves as the base content that will be modified according to the selected stylistic adjectives. Type should be `STRING`.
+        - `adjective` (Required): unknown Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): Controls whether the styling process and selections are logged, aiding in debugging or review of the styling choices made. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive`: The modified positive text prompt, styled according to the selected adjectives. Type should be `STRING`.
+        - `text_negative`: The modified negative text prompt, styled according to the selected adjectives. Type should be `STRING`.

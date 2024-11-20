@@ -1,0 +1,6 @@
+- `SaltJSONKeysToList`: This node is designed to extract the keys from a JSON object and provide them as both a list and a concatenated string. It serves the purpose of enabling users to easily access and manipulate the structure of JSON data by focusing on its keys.
+    - Inputs:
+        - `json_input` (Required): The JSON input as a string. It is required to be a valid JSON object (dictionary) for the operation to proceed. This input is crucial as it determines the keys that will be extracted and returned in the output. Type should be `STRING`.
+    - Outputs:
+        - `keys`: A list of keys extracted from the input JSON object. Type should be `LIST`.
+        - `keys_list`: A string representation of the keys extracted from the input JSON object, concatenated and separated by newlines. Type should be `STRING`.

@@ -1,0 +1,22 @@
+- `PixelTiledKSampleUpscalerProvider`: This node provides a mechanism for upscaling images using a tiled K-sample approach, leveraging multiple samples per tile to enhance image quality and detail. It integrates with external sampling extensions to facilitate the tiling process, optimizing performance and output quality for high-resolution image generation.
+    - Inputs:
+        - `scale_method` (Required): Specifies the method used for scaling the image, affecting the overall upscaling process and the quality of the output image. Type should be `COMBO[STRING]`.
+        - `model` (Required): Defines the model used for generating the samples, directly influencing the style and characteristics of the upscaled image. Type should be `MODEL`.
+        - `vae` (Required): The variational autoencoder used in conjunction with the model to improve image quality through latent space manipulation. Type should be `VAE`.
+        - `seed` (Required): Determines the random seed for sample generation, ensuring reproducibility of the results. Type should be `INT`.
+        - `steps` (Required): The number of steps to perform in the sampling process, impacting the detail and quality of the final image. Type should be `INT`.
+        - `cfg` (Required): Controls the conditioning factor, adjusting the influence of the guidance on the sampling process. Type should be `FLOAT`.
+        - `sampler_name` (Required): Identifies the specific sampler to be used, affecting the sampling strategy and final image characteristics. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): Specifies the scheduler for controlling the sampling process, optimizing the balance between quality and performance. Type should be `COMBO[STRING]`.
+        - `positive` (Required): A positive text prompt to guide the image generation towards desired attributes. Type should be `CONDITIONING`.
+        - `negative` (Required): A negative text prompt to steer the image generation away from undesired attributes. Type should be `CONDITIONING`.
+        - `denoise` (Required): The level of denoising applied to the samples, refining the clarity and quality of the upscaled image. Type should be `FLOAT`.
+        - `tile_width` (Required): The width of each tile in the tiling strategy, determining the granularity of the upscaling process. Type should be `INT`.
+        - `tile_height` (Required): The height of each tile, which, along with tile width, defines the tiling pattern and affects the upscaling precision. Type should be `INT`.
+        - `tiling_strategy` (Required): Describes the strategy for laying out tiles during the upscaling process, influencing the overall efficiency and quality of the output. Type should be `COMBO[STRING]`.
+        - `upscale_model_opt` (Optional): Optional upscale model to enhance the upscaling process with a specific algorithm or technique. Type should be `UPSCALE_MODEL`.
+        - `pk_hook_opt` (Optional): Optional post-processing hook to apply custom operations or adjustments after the upscaling process. Type should be `PK_HOOK`.
+        - `tile_cnet_opt` (Optional): Optional control network to influence the tiling process, potentially improving the coherence and quality of the upscaled image. Type should be `CONTROL_NET`.
+        - `tile_cnet_strength` (Optional): Determines the strength of the control network's influence on the tiling and upscaling process, allowing for fine-tuning of the output. Type should be `FLOAT`.
+    - Outputs:
+        - `upscaler`: The result of the upscaling process, encapsulating the enhanced image data ready for further processing or display. Type should be `UPSCALER`.

@@ -1,0 +1,8 @@
+- `CR SDXL Style Text`: The CR SDXL Style Text node is designed to generate stylized text prompts for creative applications, allowing users to specify positive and negative styles to influence the generated text. It provides a straightforward way to craft text prompts that align with specific stylistic preferences, enhancing the creative process.
+    - Inputs:
+        - `positive_style` (Required): Defines the desired style attributes to emphasize in the generated text, influencing the text generation towards positive stylistic elements. Type should be `STRING`.
+        - `negative_style` (Required): Specifies the style attributes to de-emphasize or avoid in the generated text, guiding the text generation away from these stylistic elements. Type should be `STRING`.
+    - Outputs:
+        - `positive_prompt_text_l`: The generated text prompt that emphasizes the positive style attributes. Type should be `STRING`.
+        - `negative_prompt_text_l`: The generated text prompt that de-emphasizes the negative style attributes. Type should be `STRING`.
+        - `show_help`: A URL to a help page providing additional information and guidance on using the CR SDXL Style Text node. Type should be `STRING`.

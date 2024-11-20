@@ -1,0 +1,33 @@
+- `DetailerForEachDebug`: The DetailerForEachDebug node is designed for debugging purposes within the ComfyUI Impact Pack. It extends the functionality of the DetailerForEach node by incorporating additional testing and debugging features to assist developers in identifying and resolving issues related to detail enhancement processes in images or segments.
+    - Inputs:
+        - `image` (Required): unknown Type should be `IMAGE`.
+        - `segs` (Required): Provides segmentation information for the images, used to guide the detailing process in a more targeted manner. Type should be `SEGS`.
+        - `model` (Required): unknown Type should be `MODEL`.
+        - `clip` (Required): unknown Type should be `CLIP`.
+        - `vae` (Required): unknown Type should be `VAE`.
+        - `guide_size` (Required): unknown Type should be `FLOAT`.
+        - `guide_size_for` (Required): unknown Type should be `BOOLEAN`.
+        - `max_size` (Required): unknown Type should be `FLOAT`.
+        - `seed` (Required): unknown Type should be `INT`.
+        - `steps` (Required): unknown Type should be `INT`.
+        - `cfg` (Required): unknown Type should be `FLOAT`.
+        - `sampler_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): unknown Type should be `COMBO[STRING]`.
+        - `positive` (Required): unknown Type should be `CONDITIONING`.
+        - `negative` (Required): unknown Type should be `CONDITIONING`.
+        - `denoise` (Required): unknown Type should be `FLOAT`.
+        - `feather` (Required): unknown Type should be `INT`.
+        - `noise_mask` (Required): unknown Type should be `BOOLEAN`.
+        - `force_inpaint` (Required): unknown Type should be `BOOLEAN`.
+        - `wildcard` (Required): unknown Type should be `STRING`.
+        - `cycle` (Required): unknown Type should be `INT`.
+        - `detailer_hook` (Optional): unknown Type should be `DETAILER_HOOK`.
+        - `inpaint_model` (Optional): unknown Type should be `BOOLEAN`.
+        - `noise_mask_feather` (Optional): unknown Type should be `INT`.
+        - `scheduler_func_opt` (Optional): unknown Type should be `SCHEDULER_FUNC`.
+    - Outputs:
+        - `image`: Returns the detailed image frames after the debugging process, showcasing the effects of the applied detailing enhancements. Type should be `IMAGE`.
+        - `cropped`: unknown Type should be `IMAGE`.
+        - `cropped_refined`: unknown Type should be `IMAGE`.
+        - `cropped_refined_alpha`: unknown Type should be `IMAGE`.
+        - `cnet_images`: unknown Type should be `IMAGE`.

@@ -1,7 +1,0 @@
-- `CfgScheduleHookProvider`: The CfgScheduleHookProvider node is designed to create configuration schedule hooks based on a specified iteration schedule and target configuration. It aims to dynamically adjust the configuration during the iteration process to achieve desired outcomes.
-    - Parameters:
-        - `schedule_for_iteration`: Specifies the iteration schedule to use for adjusting the configuration. It determines how the configuration changes over time. Type should be `COMBO[STRING]`.
-        - `target_cfg`: The target configuration value to reach by the end of the iteration process. It influences the adjustment of the configuration over time. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `pk_hook`: Produces a hook that can be used to adjust the configuration during the iteration process. Type should be `PK_HOOK`.

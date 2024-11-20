@@ -1,0 +1,25 @@
+- `PerfectionStylerAdvanced`: The PerfectionStylerAdvanced node dynamically enhances text prompts based on a predefined set of stylistic parameters, excluding specific styles like 'artist' and 'milehigh'. It allows for the customization of text prompts through a variety of stylistic filters such as camera, composition, depth, and more, aiming to refine and perfect the generated content.
+    - Inputs:
+        - `text_positive_g` (Required): The global positive text prompt to be styled, serving as the foundational content for stylistic enhancement. Type should be `STRING`.
+        - `text_positive_l` (Required): The local positive text prompt to be styled, allowing for finer control over the stylistic direction of the output. Type should be `STRING`.
+        - `text_negative` (Required): The negative text prompt to be styled, used to guide the generation away from undesired themes or styles. Type should be `STRING`.
+        - `camera` (Required): Applies camera-related stylistic enhancements to the text prompts. Type should be `COMBO[STRING]`.
+        - `composition` (Required): Applies composition-related stylistic enhancements to the text prompts. Type should be `COMBO[STRING]`.
+        - `depth` (Required): Applies depth-related stylistic enhancements to the text prompts. Type should be `COMBO[STRING]`.
+        - `environment` (Required): Applies environment-related stylistic enhancements to the text prompts. Type should be `COMBO[STRING]`.
+        - `filter` (Required): Applies filter-related stylistic enhancements to the text prompts. Type should be `COMBO[STRING]`.
+        - `focus` (Required): Applies focus-related stylistic enhancements to the text prompts. Type should be `COMBO[STRING]`.
+        - `lighting` (Required): Applies lighting-related stylistic enhancements to the text prompts. Type should be `COMBO[STRING]`.
+        - `mood` (Required): Applies mood-related stylistic enhancements to the text prompts. Type should be `COMBO[STRING]`.
+        - `subject` (Required): Applies subject-related stylistic enhancements to the text prompts. Type should be `COMBO[STRING]`.
+        - `theme` (Required): Applies theme-related stylistic enhancements to the text prompts. Type should be `COMBO[STRING]`.
+        - `timeofday` (Required): Applies time-of-day-related stylistic enhancements to the text prompts. Type should be `COMBO[STRING]`.
+        - `negative_prompt_to` (Required): Specifies the scope of the negative styling, whether it applies globally, locally, or both. Type should be `COMBO[STRING]`.
+        - `log_prompt` (Required): A flag to enable logging of the input and styled prompts, facilitating debugging and refinement of the styling process. Type should be `BOOLEAN`.
+    - Outputs:
+        - `text_positive_g`: The enhanced global positive text prompt, stylistically modified. Type should be `STRING`.
+        - `text_positive_l`: The enhanced local positive text prompt, stylistically modified. Type should be `STRING`.
+        - `text_positive`: The combined enhanced positive text prompt, integrating both global and local modifications. Type should be `STRING`.
+        - `text_negative_g`: The enhanced global negative text prompt, stylistically modified to guide generation away from undesired elements. Type should be `STRING`.
+        - `text_negative_l`: The enhanced local negative text prompt, providing finer control over the avoidance of certain elements. Type should be `STRING`.
+        - `text_negative`: The combined enhanced negative text prompt, integrating both global and local modifications. Type should be `STRING`.

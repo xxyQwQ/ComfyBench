@@ -1,9 +1,0 @@
-- `StableCascade_SuperResolutionControlnet`: This node is designed for generating super-resolution control inputs for a cascading image generation process, utilizing a VAE to encode images into latent representations that are then adjusted for different stages of image resolution enhancement.
-    - Parameters:
-    - Inputs:
-        - `image`: The input image to be processed and encoded into latent representations for super-resolution enhancement. Type should be `IMAGE`.
-        - `vae`: A variational autoencoder (VAE) model used to encode the input image into a latent space, facilitating the super-resolution process. Type should be `VAE`.
-    - Outputs:
-        - `controlnet_input`: The encoded latent representation of the input image, prepared for the control network of the super-resolution process. Type should be `IMAGE`.
-        - `stage_c`: A latent representation tailored for the initial stage of the super-resolution process. Type should be `LATENT`.
-        - `stage_b`: A latent representation tailored for the subsequent stage of the super-resolution process. Type should be `LATENT`.

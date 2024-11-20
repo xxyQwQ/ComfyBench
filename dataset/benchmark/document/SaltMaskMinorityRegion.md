@@ -1,0 +1,6 @@
+- `SaltMaskMinorityRegion`: This node is designed to identify and isolate minority regions within a given set of masks, applying a threshold to distinguish these areas. It focuses on highlighting less prevalent features in the mask data, potentially for further analysis or processing.
+    - Inputs:
+        - `masks` (Required): The masks input represents the collection of mask images to be processed, aiming to identify minority regions within each mask. Type should be `MASK`.
+        - `threshold` (Required): The threshold parameter determines the sensitivity of the minority region detection, influencing which areas are considered minority based on their pixel intensity. Type should be `INT`.
+    - Outputs:
+        - `MASKS`: The output is a tensor of masks, each corresponding to the isolated minority region within the original input masks. Type should be `MASK`.

@@ -1,0 +1,6 @@
+- `LatentBatch`: The LatentBatch node is designed to merge two sets of latent samples into a single batch, potentially resizing one set to match the dimensions of the other before concatenation. This operation facilitates the combination of different latent representations for further processing or generation tasks.
+    - Inputs:
+        - `samples1` (Required): The first set of latent samples to be merged. It plays a crucial role in determining the final shape of the merged batch. Type should be `LATENT`.
+        - `samples2` (Required): The second set of latent samples to be merged. If its dimensions differ from the first set, it is resized to ensure compatibility before merging. Type should be `LATENT`.
+    - Outputs:
+        - `latent`: The merged set of latent samples, now combined into a single batch for further processing. Type should be `LATENT`.

@@ -1,7 +1,0 @@
-- `Batch Load Images`: This node is designed to load a batch of images from a specified directory, optionally including images from subdirectories. It supports various image formats and converts them into a tensor format suitable for further processing or model input.
-    - Parameters:
-        - `image_directory`: Specifies the directory path where images are stored. This path is essential for locating and loading the images into the node. Type should be `STRING`.
-        - `subdirectories`: Determines whether to include images from subdirectories within the specified image directory. This allows for more comprehensive image loading. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:
-        - `image`: Outputs a list of images loaded and converted into tensor format, ready for further processing or as input to models. Type should be `IMAGE`.

@@ -1,0 +1,8 @@
+- `INPAINT_MaskedBlur`: The node applies a blurring effect to areas of an image specified by a mask, with adjustable intensity and falloff, blending the altered regions smoothly with the rest of the image. It's designed for inpainting tasks where selective blurring can help integrate edited areas more naturally.
+    - Inputs:
+        - `image` (Required): The input image to be processed. The mask defines areas to blur, allowing for selective focus or smoothing within the image. Type should be `IMAGE`.
+        - `mask` (Required): A binary mask indicating areas of the image to apply the blur. It works in tandem with the image to selectively target regions for blurring. Type should be `MASK`.
+        - `blur` (Required): Specifies the intensity of the blur to be applied. Higher values result in more pronounced blurring, affecting the visual softness of the masked areas. Type should be `INT`.
+        - `falloff` (Required): Determines the transition smoothness between blurred and unblurred areas, enabling a gradual blend that enhances the natural appearance of the image. Type should be `INT`.
+    - Outputs:
+        - `image`: The output is the modified image where specified areas have been blurred according to the mask and blur settings, seamlessly integrating edits. Type should be `IMAGE`.

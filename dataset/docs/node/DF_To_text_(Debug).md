@@ -1,7 +1,0 @@
-- `DF_To_text_(Debug)`: The `DF_To_text_(Debug)` node is designed for debugging purposes, allowing users to print and inspect any data passed to it. It converts the input data to a string representation, facilitating the examination of data structures, variables, or any other information during the node's execution. This node aids in identifying issues or verifying data processing steps within a workflow by providing a clear textual output of the input data.
-    - Parameters:
-    - Inputs:
-        - `ANY`: Accepts any type of data for debugging purposes. It allows users to inspect the content and structure of the data passed to the node, aiding in debugging and data verification tasks. Type should be `*`.
-    - Outputs:
-        - `SAME AS INPUT`: Returns the original input data unchanged, facilitating further processing or inspection in the workflow. Type should be `*`.
-        - `STRING`: Returns the string representation of the input data or the exception message if an error occurred during processing. Type should be `STRING`.

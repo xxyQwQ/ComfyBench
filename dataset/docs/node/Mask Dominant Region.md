@@ -1,7 +1,0 @@
-- `Mask Dominant Region`: This node is designed to identify and isolate the dominant region within a given set of masks based on a specified threshold. It effectively filters out less significant areas, focusing on the most prominent region as determined by pixel intensity and area size.
-    - Parameters:
-        - `threshold`: A value that determines the cutoff intensity for considering a region as dominant. It plays a key role in distinguishing between the significant and insignificant areas within the masks. Type should be `INT`.
-    - Inputs:
-        - `masks`: The input masks on which the dominant region detection is to be performed. This parameter is crucial for identifying the area of interest within the provided images. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The output consists of masks with the dominant region highlighted, effectively isolating the most significant area from the rest of the image. Type should be `MASK`.

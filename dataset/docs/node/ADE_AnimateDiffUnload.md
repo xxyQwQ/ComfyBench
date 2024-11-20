@@ -1,6 +1,0 @@
-- `ADE_AnimateDiffUnload`: This node is designed to unload or release resources associated with the AnimateDiff model from memory, ensuring efficient resource management and freeing up memory for subsequent tasks.
-    - Parameters:
-    - Inputs:
-        - `model`: Specifies the AnimateDiff model to be unloaded, allowing for the release of its resources from memory. Type should be `MODEL`.
-    - Outputs:
-        - `model`: Confirms the successful unloading of the specified AnimateDiff model, ensuring its resources are freed. Type should be `MODEL`.

@@ -1,6 +1,0 @@
-- `ImageFilterEmboss`: The ImageFilterEmboss node applies an emboss filter to images, creating a three-dimensional effect by emphasizing edges and textures.
-    - Parameters:
-    - Inputs:
-        - `images`: The images to apply the emboss filter on. This input is crucial for defining the visual content that will undergo the transformation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is the transformed image with an embossed effect, enhancing its textures and edges. Type should be `IMAGE`.

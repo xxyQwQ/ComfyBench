@@ -1,0 +1,10 @@
+- `DualCFGGuider`: The DualCFGGuider node is designed to enhance the sampling process by applying dual conditional guidance factors to a model. It allows for the specification of two distinct conditioning contexts and their respective guidance scales, enabling more nuanced control over the generation process.
+    - Inputs:
+        - `model` (Required): The model parameter specifies the generative model to which the dual conditional guidance will be applied, serving as the foundation for the generation process. Type should be `MODEL`.
+        - `cond1` (Required): The cond1 parameter represents the first conditioning context, providing a specific direction or theme for the generation. Type should be `CONDITIONING`.
+        - `cond2` (Required): The cond2 parameter represents the second conditioning context, offering an additional layer of thematic guidance. Type should be `CONDITIONING`.
+        - `negative` (Required): The negative parameter specifies a conditioning context intended to guide the model away from certain themes or content. Type should be `CONDITIONING`.
+        - `cfg_conds` (Required): The cfg_conds parameter sets the guidance scale for the first conditioning context, adjusting the influence it has on the generation. Type should be `FLOAT`.
+        - `cfg_cond2_negative` (Required): The cfg_cond2_negative parameter sets the guidance scale for the combination of the second conditioning context and the negative context, fine-tuning their impact on the output. Type should be `FLOAT`.
+    - Outputs:
+        - `guider`: The output is a configured guider object, ready to influence the generative model's sampling process with dual conditional guidance. Type should be `GUIDER`.

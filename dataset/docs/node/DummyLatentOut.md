@@ -1,6 +1,0 @@
-- `DummyLatentOut`: Provides a simple pass-through for latent data, facilitating the visualization of workflow outputs in the UI without necessitating data persistence.
-    - Parameters:
-    - Inputs:
-        - `latent`: Acts as a direct pass-through for the latent data, enabling the visualization of outputs without saving them. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: Echoes the input latent data, allowing for seamless integration into workflows that require visualization without data storage. Type should be `LATENT`.

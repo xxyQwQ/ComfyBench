@@ -1,0 +1,18 @@
+- `Make Resized Mask Batch (SuperBeasts.AI)`: This node is designed to process and combine multiple individual masks or mask batches into a single, resized mask batch. It adjusts the size of each mask to match specified dimensions, ensuring uniformity across the batch, and optionally reorders the masks based on a specified sequence. The node facilitates the creation of consistent mask batches for further image processing tasks.
+    - Inputs:
+        - `width` (Required): Specifies the target width for the resized masks. This parameter determines the final width of each mask in the batch, ensuring they are resized uniformly. Type should be `INT`.
+        - `height` (Required): Specifies the target height for the resized masks. This parameter affects the final height of each mask in the batch, ensuring they are resized to match the specified dimension. Type should be `INT`.
+        - `mask1` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+        - `mask2` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+        - `mask3` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+        - `mask4` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+        - `mask5` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+        - `mask6` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+        - `mask7` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+        - `mask8` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+        - `mask9` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+        - `mask10` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+        - `mask11` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+        - `mask12` (Optional): An optional individual mask to be included in the batch. Masks are resized and optionally reordered to create a uniform batch. Type should be `MASK`.
+    - Outputs:
+        - `mask`: The output is a single tensor representing a batch of resized masks, ready for further processing. Type should be `MASK`.

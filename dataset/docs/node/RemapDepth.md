@@ -1,9 +1,0 @@
-- `RemapDepth`: The RemapDepth node is designed to adjust the depth values of an image within a specified range and optionally clamp these values for normalization. It plays a crucial role in depth image processing by enabling the fine-tuning of depth perception and enhancing the visual quality of depth maps.
-    - Parameters:
-        - `min`: Specifies the minimum value in the remapped depth range, allowing for the adjustment of depth perception by setting a new lower bound. Type should be `FLOAT`.
-        - `max`: Defines the maximum value in the remapped depth range, enabling the customization of depth perception by establishing a new upper bound. Type should be `FLOAT`.
-        - `clamp`: A boolean flag that determines whether the remapped depth values should be clamped within the 0.0 to 1.0 range, ensuring the normalization of depth maps. Type should be `BOOLEAN`.
-    - Inputs:
-        - `image`: The input image whose depth values are to be remapped. This parameter is essential for defining the source depth map to be adjusted. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output image with remapped depth values, adjusted according to the specified min, max, and optionally clamped to normalize the depth map. Type should be `IMAGE`.

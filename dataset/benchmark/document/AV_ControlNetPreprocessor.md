@@ -1,0 +1,10 @@
+- `AV_ControlNetPreprocessor`: The AV_ControlNetPreprocessor node is designed for preparing images for further processing or analysis within the Art Venture framework, specifically by applying various preprocessing techniques to enhance or modify the images based on the selected preprocessor and resolution settings. It supports a range of preprocessing options, including segmentation, edge detection, and artistic style adjustments, tailored to the requirements of subsequent control net detection and application.
+    - Inputs:
+        - `image` (Required): The input image to be preprocessed. This is the primary data upon which preprocessing operations are performed, setting the stage for enhanced image analysis or manipulation. Type should be `IMAGE`.
+        - `preprocessor` (Required): Specifies the preprocessing technique to be applied to the input image. This selection determines how the image will be modified or enhanced, impacting the effectiveness of subsequent control net detection. Type should be `COMBO[STRING]`.
+        - `sd_version` (Required): Indicates the version of the Stable Diffusion model to be used, affecting the compatibility and performance of the preprocessing and control net detection processes. Type should be `COMBO[STRING]`.
+        - `resolution` (Optional): The target resolution for the preprocessed image. Adjusting this parameter can influence the detail level and quality of the preprocessing output. Type should be `INT`.
+        - `preprocessor_override` (Optional): Allows for overriding the default preprocessor choice, providing flexibility in experimenting with different preprocessing techniques. Type should be `STRING`.
+    - Outputs:
+        - `IMAGE`: The preprocessed image, ready for further analysis or processing within the Art Venture framework. Type should be `IMAGE`.
+        - `CNET_NAME`: The name of the detected control net, indicating the specific preprocessing technique applied to the input image. Type should be `STRING`.

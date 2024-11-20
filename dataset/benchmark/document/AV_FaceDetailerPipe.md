@@ -1,0 +1,39 @@
+- `AV_FaceDetailerPipe`: The AV_FaceDetailerPipe node enhances facial details in images within the ArtVenture Detailer category, leveraging an optional enabled flag to control its operation. It builds upon the FaceDetailerPipe's functionality, allowing for detailed customization and refinement of facial features in artwork or photographs.
+    - Inputs:
+        - `image` (Required): unknown Type should be `IMAGE`.
+        - `detailer_pipe` (Required): unknown Type should be `DETAILER_PIPE`.
+        - `guide_size` (Required): unknown Type should be `FLOAT`.
+        - `guide_size_for` (Required): unknown Type should be `BOOLEAN`.
+        - `max_size` (Required): unknown Type should be `FLOAT`.
+        - `seed` (Required): unknown Type should be `INT`.
+        - `steps` (Required): unknown Type should be `INT`.
+        - `cfg` (Required): unknown Type should be `FLOAT`.
+        - `sampler_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): unknown Type should be `COMBO[STRING]`.
+        - `denoise` (Required): unknown Type should be `FLOAT`.
+        - `feather` (Required): unknown Type should be `INT`.
+        - `noise_mask` (Required): unknown Type should be `BOOLEAN`.
+        - `force_inpaint` (Required): unknown Type should be `BOOLEAN`.
+        - `bbox_threshold` (Required): unknown Type should be `FLOAT`.
+        - `bbox_dilation` (Required): unknown Type should be `INT`.
+        - `bbox_crop_factor` (Required): unknown Type should be `FLOAT`.
+        - `sam_detection_hint` (Required): unknown Type should be `COMBO[STRING]`.
+        - `sam_dilation` (Required): unknown Type should be `INT`.
+        - `sam_threshold` (Required): unknown Type should be `FLOAT`.
+        - `sam_bbox_expansion` (Required): unknown Type should be `INT`.
+        - `sam_mask_hint_threshold` (Required): unknown Type should be `FLOAT`.
+        - `sam_mask_hint_use_negative` (Required): unknown Type should be `COMBO[STRING]`.
+        - `drop_size` (Required): unknown Type should be `INT`.
+        - `refiner_ratio` (Required): unknown Type should be `FLOAT`.
+        - `cycle` (Required): unknown Type should be `INT`.
+        - `inpaint_model` (Optional): unknown Type should be `BOOLEAN`.
+        - `noise_mask_feather` (Optional): unknown Type should be `INT`.
+        - `scheduler_func_opt` (Optional): unknown Type should be `SCHEDULER_FUNC`.
+        - `enabled` (Optional): A boolean flag that determines whether the face detailing process is activated. When enabled, the node performs facial detailing on the input image; when disabled, it bypasses the detailing process and returns the original image. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The output image, which may be the original or a version with enhanced facial details, depending on whether the detailing process was enabled. Type should be `IMAGE`.
+        - `cropped_refined`: unknown Type should be `IMAGE`.
+        - `cropped_enhanced_alpha`: unknown Type should be `IMAGE`.
+        - `mask`: unknown Type should be `MASK`.
+        - `detailer_pipe`: The detailer pipe configuration used for processing the image. This output is part of the node's mechanism to allow further customization or analysis. Type should be `DETAILER_PIPE`.
+        - `cnet_images`: unknown Type should be `IMAGE`.

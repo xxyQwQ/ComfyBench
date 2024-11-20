@@ -1,0 +1,8 @@
+- `CLIPEncodeMultipleAdvanced`: This node is designed for advanced text encoding using the CLIP model, capable of processing multiple inputs simultaneously. It extends the functionality of a standard CLIP text encoding by allowing for a customizable number of inputs, each potentially undergoing a unique encoding process based on token normalization and weight interpretation. The node is optimized for scenarios requiring batch processing of text inputs for conditioning generation models, making it a versatile tool in the generation of conditioned outputs.
+    - Inputs:
+        - `clip` (Required): The CLIP model used for encoding the text inputs. It plays a crucial role in determining the quality and relevance of the encoded vectors. Type should be `CLIP`.
+        - `token_normalization` (Required): A flag indicating whether or not to normalize the tokens during the encoding process. This affects the consistency and comparability of the encoded vectors. Type should be `COMBO[STRING]`.
+        - `weight_interpretation` (Required): A parameter that influences how the weights are interpreted during the encoding process, affecting the emphasis on different aspects of the input text. Type should be `COMBO[STRING]`.
+        - `inputs_len` (Required): Specifies the number of text inputs to be encoded. This allows for dynamic adjustment of batch sizes for encoding, accommodating a variable number of inputs. Type should be `INT`.
+    - Outputs:
+        - `conditioning`: A list of conditioning vectors generated from the input texts, tailored for use in generation models requiring conditioned inputs. Type should be `CONDITIONING`.

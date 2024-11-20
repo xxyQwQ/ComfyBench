@@ -1,0 +1,15 @@
+- `CR Simple Banner`: The CR Simple Banner node is designed to create visually appealing banners by combining images with customizable text, fonts, and colors. It allows for the creation of banners with specific aesthetic requirements, such as font size, color, and outline, as well as the inclusion of margin sizes for layout adjustments.
+    - Inputs:
+        - `image` (Required): The image parameter is the base image over which the banner text will be overlaid. It serves as the foundational visual element of the banner. Type should be `IMAGE`.
+        - `banner_text` (Required): The banner_text parameter specifies the text to be displayed on the banner. This text is customizable and is a key element in conveying the banner's message or theme. Type should be `STRING`.
+        - `font_name` (Required): The font_name parameter determines the typeface used for the banner text, allowing for stylistic customization to match the banner's design theme. Type should be `COMBO[STRING]`.
+        - `max_font_size` (Required): The max_font_size parameter sets the maximum size of the font for the banner text, enabling control over the text's visual impact and readability. Type should be `INT`.
+        - `font_color` (Required): The font_color parameter specifies the color of the banner text, contributing to the banner's overall aesthetic and theme. Type should be `COMBO[STRING]`.
+        - `outline_thickness` (Required): The outline_thickness parameter controls the thickness of the outline around the banner text, enhancing text visibility and adding a distinct visual effect. Type should be `INT`.
+        - `outline_color` (Required): The outline_color parameter defines the color of the text outline, which can be used to create contrast or complement the banner's color scheme. Type should be `COMBO[STRING]`.
+        - `margin_size` (Required): The margin_size parameter adjusts the spacing around the banner text, affecting the layout and overall composition of the banner. Type should be `INT`.
+        - `font_color_hex` (Optional): The font_color_hex parameter allows specifying the font color in hexadecimal format, offering precise control over the text color. Type should be `STRING`.
+        - `outline_color_hex` (Optional): The outline_color_hex parameter allows specifying the outline color in hexadecimal format, providing additional customization for the text outline. Type should be `STRING`.
+    - Outputs:
+        - `image`: The image output represents the final banner image with the applied text and styling, ready for use in various media formats. Type should be `IMAGE`.
+        - `show_help`: The show_help output provides guidance or additional information related to the banner creation process. Type should be `STRING`.

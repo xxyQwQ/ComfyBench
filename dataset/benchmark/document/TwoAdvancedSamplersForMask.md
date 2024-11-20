@@ -1,0 +1,12 @@
+- `TwoAdvancedSamplersForMask`: This node provides advanced sampling functionalities for image manipulation, specifically designed to work with masks. It enables the application of different sampling strategies to distinct regions of an image, as defined by a mask, allowing for precise control over the sampling process in areas of interest.
+    - Inputs:
+        - `seed` (Required): The seed for random number generation, ensuring reproducibility of the sampling process. Type should be `INT`.
+        - `steps` (Required): The total number of steps to perform in the advanced sampling process, affecting the granularity of the operation. Type should be `INT`.
+        - `denoise` (Required): A factor that influences the denoising process during sampling, impacting the clarity and quality of the sampled image. Type should be `FLOAT`.
+        - `samples` (Required): The initial latent images to be processed, serving as the starting point for the sampling operation. Type should be `LATENT`.
+        - `base_sampler` (Required): The sampler to apply to the region outside the mask, dictating the sampling behavior in non-masked areas. Type should be `KSAMPLER_ADVANCED`.
+        - `mask_sampler` (Required): The sampler to apply to the masked region, enabling specialized sampling within the mask boundaries. Type should be `KSAMPLER_ADVANCED`.
+        - `mask` (Required): The mask defining areas of interest for different sampling strategies, guiding the application of the base and mask samplers. Type should be `MASK`.
+        - `overlap_factor` (Required): A parameter controlling the extent of mask overlap, affecting the transition between sampled regions. Type should be `INT`.
+    - Outputs:
+        - `latent`: The modified latent image after applying advanced sampling techniques, reflecting changes in both masked and non-masked regions. Type should be `LATENT`.

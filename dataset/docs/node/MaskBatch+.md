@@ -1,7 +1,0 @@
-- `MaskBatch+`: The MaskBatch node is designed to combine two mask tensors into a single batched tensor. It ensures that the masks are compatible in size, potentially resizing one to match the other, before concatenating them along the batch dimension.
-    - Parameters:
-    - Inputs:
-        - `mask1`: The first mask tensor to be batched. It is one of the inputs that will be combined with another mask tensor to form a batched tensor. Type should be `MASK`.
-        - `mask2`: The second mask tensor to be batched alongside the first mask. This tensor may be resized to ensure compatibility with the first mask before they are concatenated. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The output is a batched tensor combining the input masks, potentially after resizing one to match the other's dimensions. Type should be `MASK`.

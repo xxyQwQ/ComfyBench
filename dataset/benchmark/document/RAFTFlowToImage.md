@@ -1,0 +1,5 @@
+- `RAFTFlowToImage`: The RAFTFlowToImage node is designed to convert optical flow data into images. This process involves transforming the flow data, which represents motion between two frames, into a visual format that can be easily interpreted or further processed.
+    - Inputs:
+        - `raft_flow` (Required): The 'raft_flow' input is a tensor representing the optical flow data. This data is crucial for generating the corresponding image representation of the motion captured between two frames. Type should be `RAFT_FLOW`.
+    - Outputs:
+        - `image`: The output is an image representation of the optical flow data. This image visualizes the motion between two frames in a format that can be easily interpreted or further processed. Type should be `IMAGE`.

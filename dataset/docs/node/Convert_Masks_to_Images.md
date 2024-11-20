@@ -1,6 +1,0 @@
-- `Convert Masks to Images`: This node is designed to convert mask data into image format, effectively transforming binary or grayscale mask representations into RGB images. It supports processing masks of various dimensions, including individual masks and batches of masks, by expanding their channels to match the RGB color space. This functionality is crucial for visualizing masks in a more interpretable form or preparing them for further image processing tasks.
-    - Parameters:
-    - Inputs:
-        - `masks`: The input masks to be converted into images. This parameter accepts masks of different dimensions, including individual masks and batches of masks, and transforms them into RGB images for visualization or further processing. Type should be `MASK`.
-    - Outputs:
-        - `IMAGES`: The output images converted from the input masks. These images are in RGB format, suitable for visualization or further image processing tasks. Type should be `IMAGE`.

@@ -1,7 +1,0 @@
-- `Latent Switch (JPS)`: The Latent Switch node is designed to select and output one of several provided latent representations based on a given selection index. It facilitates dynamic switching between different latent inputs, enabling flexible manipulation of latent spaces in generative models.
-    - Parameters:
-        - `select`: Determines which latent representation to output, based on its numerical index. This selection drives the node's core functionality by choosing among the available latent inputs. Type should be `INT`.
-    - Inputs:
-        - `latent_i`: One of the latent representation options that can be selected for output. The specific latent input to be used is determined by the 'select' parameter. Type should be `LATENT`.
-    - Outputs:
-        - `latent_out`: The selected latent representation based on the input selection index. Type should be `LATENT`.

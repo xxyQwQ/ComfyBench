@@ -1,0 +1,9 @@
+- `ImpactWildcardProcessor`: The ImpactWildcardProcessor node is designed to enhance text inputs by dynamically populating them with predefined or custom wildcards. It leverages a comprehensive system for wildcard management, including loading, normalization, and replacement, to inject variability and specificity into text. This node supports both fixed and randomized text generation modes, allowing for controlled or stochastic text transformations based on the provided wildcards.
+    - Inputs:
+        - `wildcard_text` (Required): The text containing wildcards that need to be populated or replaced. It serves as the template for generating the final text output. Type should be `STRING`.
+        - `populated_text` (Required): The text after wildcards have been populated. This represents the output of the wildcard processing, ready for further use or display. Type should be `STRING`.
+        - `mode` (Required): A boolean flag indicating the operation mode: 'Populate' to dynamically replace wildcards in the text, or 'Fixed' to use a predetermined set of replacements. Type should be `BOOLEAN`.
+        - `seed` (Required): An integer seed for random number generation, ensuring reproducibility of the wildcard replacement process when generating text. Type should be `INT`.
+        - `Select to add Wildcard` (Required): Allows selection of specific wildcards to add to the text, providing a way to customize the text generation process further. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `string`: The text after all applicable wildcards have been processed and replaced, reflecting the final output of the node's operation. Type should be `STRING`.

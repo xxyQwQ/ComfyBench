@@ -1,9 +1,0 @@
-- `CR Load Animation Frames`: This node is designed to load a sequence of animation frames from a specified directory, facilitating the processing and manipulation of animation data within a workflow.
-    - Parameters:
-        - `image_sequence_folder`: Specifies the directory containing the sequence of image folders to be loaded. Each folder represents a sequence of animation frames. Type should be `COMBO[STRING]`.
-        - `start_index`: The index of the first frame to load from the sequence, allowing for control over the starting point of the animation. Type should be `INT`.
-        - `max_frames`: The maximum number of frames to load from the sequence, enabling limitation on the amount of data processed. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `IMAGE`: The loaded sequence of animation frames, ready for further processing. Type should be `IMAGE`.
-        - `show_help`: A string providing additional help or instructions related to the node's operation. Type should be `STRING`.

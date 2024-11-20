@@ -1,7 +1,0 @@
-- `MaskFlip+`: The MaskFlip node is designed to flip a given mask along specified axes, allowing for the manipulation of mask orientation in image processing tasks.
-    - Parameters:
-        - `axis`: Specifies the axis or axes along which the mask will be flipped. This affects the direction of the flip, enabling horizontal, vertical, or both flips. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `mask`: The mask to be flipped. This parameter is crucial as it determines the input mask that will undergo the flipping operation. Type should be `MASK`.
-    - Outputs:
-        - `mask`: The flipped version of the input mask, altered according to the specified axis or axes. Type should be `MASK`.

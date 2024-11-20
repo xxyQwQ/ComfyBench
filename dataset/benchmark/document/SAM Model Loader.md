@@ -1,0 +1,5 @@
+- `SAM Model Loader`: The SAM Model Loader node is designed to facilitate the loading of SAM (Segment Anything Model) models, specifically tailored for image segmentation tasks. It supports loading different sizes of the SAM model, including ViT-H, ViT-L, and ViT-B, by downloading the model if it's not already present locally and then initializing it for use.
+    - Inputs:
+        - `model_size` (Required): Specifies the size of the SAM model to be loaded. The size can be 'ViT-H', 'ViT-L', or 'ViT-B', each corresponding to a different configuration of the model, affecting its performance and accuracy. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `sam_model`: The loaded SAM model, ready for use in image segmentation tasks. It is initialized based on the specified model size and can be directly utilized for processing images. Type should be `SAM_MODEL`.

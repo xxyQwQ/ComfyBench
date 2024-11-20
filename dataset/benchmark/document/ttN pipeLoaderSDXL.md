@@ -1,0 +1,43 @@
+- `ttN pipeLoaderSDXL`: The ttN pipeLoaderSDXL node is designed for loading and initializing the state of a pipeline specifically tailored for SDXL models within the tinyterra ecosystem. It plays a crucial role in setting up the pipeline's initial state, managing data flow, and ensuring that the pipeline is ready for subsequent operations, such as sampling and image generation.
+    - Inputs:
+        - `ckpt_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `vae_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `lora1_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `lora1_model_strength` (Required): unknown Type should be `FLOAT`.
+        - `lora1_clip_strength` (Required): unknown Type should be `FLOAT`.
+        - `lora2_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `lora2_model_strength` (Required): unknown Type should be `FLOAT`.
+        - `lora2_clip_strength` (Required): unknown Type should be `FLOAT`.
+        - `refiner_ckpt_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `refiner_vae_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `refiner_lora1_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `refiner_lora1_model_strength` (Required): unknown Type should be `FLOAT`.
+        - `refiner_lora1_clip_strength` (Required): unknown Type should be `FLOAT`.
+        - `refiner_lora2_name` (Required): unknown Type should be `COMBO[STRING]`.
+        - `refiner_lora2_model_strength` (Required): unknown Type should be `FLOAT`.
+        - `refiner_lora2_clip_strength` (Required): unknown Type should be `FLOAT`.
+        - `clip_skip` (Required): unknown Type should be `INT`.
+        - `positive` (Required): unknown Type should be `STRING`.
+        - `positive_token_normalization` (Required): unknown Type should be `COMBO[STRING]`.
+        - `positive_weight_interpretation` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative` (Required): unknown Type should be `STRING`.
+        - `negative_token_normalization` (Required): unknown Type should be `COMBO[STRING]`.
+        - `negative_weight_interpretation` (Required): unknown Type should be `COMBO[STRING]`.
+        - `empty_latent_width` (Required): unknown Type should be `INT`.
+        - `empty_latent_height` (Required): unknown Type should be `INT`.
+        - `batch_size` (Required): unknown Type should be `INT`.
+        - `seed` (Required): unknown Type should be `INT`.
+    - Outputs:
+        - `sdxl_pipe`: unknown Type should be `PIPE_LINE_SDXL`.
+        - `model`: unknown Type should be `MODEL`.
+        - `positive`: unknown Type should be `CONDITIONING`.
+        - `negative`: unknown Type should be `CONDITIONING`.
+        - `vae`: unknown Type should be `VAE`.
+        - `clip`: unknown Type should be `CLIP`.
+        - `refiner_model`: unknown Type should be `MODEL`.
+        - `refiner_positive`: unknown Type should be `CONDITIONING`.
+        - `refiner_negative`: unknown Type should be `CONDITIONING`.
+        - `refiner_vae`: unknown Type should be `VAE`.
+        - `refiner_clip`: unknown Type should be `CLIP`.
+        - `latent`: unknown Type should be `LATENT`.
+        - `seed`: unknown Type should be `INT`.

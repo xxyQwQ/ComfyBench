@@ -1,0 +1,12 @@
+- `ModelMergeSD2`: ModelMergeSD2 is designed for advanced model merging operations, specifically tailored to work with models that share the same block structures. It enables the precise blending of two models by adjusting the influence of each model's components across various blocks, such as input, middle, and output blocks, using specified blending ratios.
+    - Inputs:
+        - `model1` (Required): The first model to be merged. It serves as the base model onto which patches from the second model are applied, influencing the final merged model's behavior. Type should be `MODEL`.
+        - `model2` (Required): The second model to be merged. Key patches from this model are applied to the first model based on specified blending ratios, affecting the final outcome of the merged model. Type should be `MODEL`.
+        - `time_embed.` (Required): Specifies the blending ratio for the time embedding blocks, influencing how temporal aspects of the models are combined. Type should be `FLOAT`.
+        - `label_emb.` (Required): Determines the blending ratio for the label embedding blocks, affecting how label information from both models is merged. Type should be `FLOAT`.
+        - `input_blocks.i.` (Required): Controls the blending ratio for the ith input block, allowing for detailed customization of how input-related features are merged. The index i ranges from 0 to 11. Type should be `FLOAT`.
+        - `middle_block.i.` (Required): Specifies the blending ratio for the ith middle block, enabling precise control over the merging of the models' intermediate processing stages. The index i ranges from 0 to 2. Type should be `FLOAT`.
+        - `output_blocks.i.` (Required): Sets the blending ratio for the ith output block, dictating how the final output features of the models are combined. The index i ranges from 0 to 11. Type should be `FLOAT`.
+        - `out.` (Required): Defines the blending ratio for the output blocks, influencing the final output characteristics of the merged model. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The result of the merging process, a single model that integrates the specified blending ratios and modifications from both input models. Type should be `MODEL`.

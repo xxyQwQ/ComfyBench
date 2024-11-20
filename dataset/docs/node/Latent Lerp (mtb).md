@@ -1,8 +1,0 @@
-- `Latent Lerp (mtb)`: Performs linear interpolation between two latent vectors, blending them based on a specified ratio to create a new latent vector.
-    - Parameters:
-        - `t`: The interpolation ratio, determining the blend between the two latent vectors. Type should be `FLOAT`.
-    - Inputs:
-        - `A`: The first latent vector to be interpolated. Type should be `LATENT`.
-        - `B`: The second latent vector to be interpolated. Type should be `LATENT`.
-    - Outputs:
-        - `latent`: The resulting latent vector after interpolation. Type should be `LATENT`.

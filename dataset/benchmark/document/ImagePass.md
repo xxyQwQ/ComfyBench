@@ -1,0 +1,5 @@
+- `ImagePass`: The ImagePass node is designed to facilitate the unaltered passage of an image through a processing pipeline. It serves as a neutral conduit, ensuring that the input image is passed through without any modifications, alterations, or enhancements.
+    - Inputs:
+        - `image` (Required): The 'image' parameter is the primary input for the ImagePass node, representing the image to be passed through unmodified. It plays a crucial role in the node's operation by being the sole piece of data the node acts upon, ensuring the image's integrity is maintained throughout the process. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The output 'image' parameter is identical to the input image, signifying that the image has been passed through the node without any modifications. It underscores the node's purpose of providing a direct, unaltered conduit for image data. Type should be `IMAGE`.

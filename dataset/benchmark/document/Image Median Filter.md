@@ -1,0 +1,8 @@
+- `Image Median Filter`: The Image Median Filter node applies a median filter effect to images, enhancing their quality by reducing noise without significantly blurring the edges. It allows for customization of the filter's diameter and the sigma values for color and space, enabling fine-tuned adjustments to the filtering process.
+    - Inputs:
+        - `image` (Required): The input image or images to which the median filter will be applied. This parameter is crucial for defining the target of the filtering operation. Type should be `IMAGE`.
+        - `diameter` (Required): Specifies the diameter of the pixel neighborhood used during filtering. A larger diameter increases the area considered for calculating the median, affecting the level of detail and noise reduction. Type should be `INT`.
+        - `sigma_color` (Required): Controls the filter's sensitivity to color differences. A higher sigma value means that colors farther apart will influence each other more, leading to smoother color transitions. Type should be `FLOAT`.
+        - `sigma_space` (Required): Determines the spatial extent of the filter. A higher value allows pixels farther apart to influence each other, resulting in a smoother image but potentially blurring edges. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The output image or images after applying the median filter, showcasing reduced noise and potentially enhanced detail without significant edge blurring. Type should be `IMAGE`.

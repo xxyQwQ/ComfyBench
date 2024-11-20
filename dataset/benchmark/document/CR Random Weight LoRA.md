@@ -1,0 +1,12 @@
+- `CR Random Weight LoRA`: The CR_RandomWeightLoRA node is designed to manage and manipulate LoRA (Locally Reweighted Approximations) weights within a specified range, incorporating randomness and conditional logic based on the provided parameters. It facilitates the dynamic adjustment of LoRA weights, enabling more flexible and adaptive model behavior.
+    - Inputs:
+        - `stride` (Required): Defines the interval at which the LoRA weights are potentially randomized, affecting the frequency of weight adjustments. Type should be `INT`.
+        - `force_randomize_after_stride` (Required): Determines whether to force a re-randomization of weights after a specified number of strides, enhancing the variability of model behavior. Type should be `COMBO[STRING]`.
+        - `lora_name` (Required): Identifies the specific LoRA instance to be manipulated, serving as a key for tracking and adjusting its weight. Type should be `COMBO[STRING]`.
+        - `switch` (Required): Controls whether the LoRA weight adjustment is active ('On') or bypassed ('Off'), allowing for conditional execution. Type should be `COMBO[STRING]`.
+        - `weight_min` (Required): Sets the minimum boundary for the random weight selection, constraining the range of possible weights. Type should be `FLOAT`.
+        - `weight_max` (Required): Defines the maximum limit for the random weight selection, establishing the upper boundary of the weight range. Type should be `FLOAT`.
+        - `clip_weight` (Required): Specifies a clipping value for the LoRA weight, ensuring that the weight does not exceed this threshold. Type should be `FLOAT`.
+        - `lora_stack` (Optional): Optionally provides a stack of existing LoRA instances for integration or modification, allowing for cumulative adjustments. Type should be `LORA_STACK`.
+    - Outputs:
+        - `lora_stack`: Returns a stack of LoRA instances with their adjusted weights, ready for further processing or application. Type should be `LORA_STACK`.

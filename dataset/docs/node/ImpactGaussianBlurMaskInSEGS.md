@@ -1,8 +1,0 @@
-- `ImpactGaussianBlurMaskInSEGS`: This node applies a Gaussian blur to the masks within a collection of segmentation elements (SEGS), potentially enhancing the visual quality or aiding in the processing of these elements. It allows for the adjustment of the blur intensity and size, enabling fine-tuned control over the appearance of the segmentation masks.
-    - Parameters:
-        - `kernel_size`: Specifies the size of the Gaussian kernel used for blurring. A larger kernel size results in a more pronounced blur effect, allowing for greater control over the visual outcome. Type should be `INT`.
-        - `sigma`: Determines the standard deviation of the Gaussian kernel. This parameter influences the spread of the blur; a higher sigma value leads to a softer, more diffuse blur effect. Type should be `FLOAT`.
-    - Inputs:
-        - `segs`: The collection of segmentation elements (SEGS) to which the Gaussian blur will be applied. This parameter is crucial for specifying the input data that will undergo the blurring process. Type should be `SEGS`.
-    - Outputs:
-        - `segs`: The modified collection of segmentation elements (SEGS) with the masks blurred using the specified Gaussian parameters. This output reflects the visual alteration performed on the input data. Type should be `SEGS`.

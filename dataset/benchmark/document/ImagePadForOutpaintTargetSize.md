@@ -1,0 +1,11 @@
+- `ImagePadForOutpaintTargetSize`: This node is designed to adjust the dimensions of an image to meet a specified target size for outpainting purposes. It scales the image while maintaining its aspect ratio, calculates the necessary padding to reach the target dimensions, and optionally applies feathering to blend the edges smoothly. The node can also handle an associated mask, scaling and padding it in tandem with the image.
+    - Inputs:
+        - `image` (Required): The input image to be processed for outpainting, which will be scaled and padded to meet the target dimensions. Type should be `IMAGE`.
+        - `target_width` (Required): The desired width of the output image after padding. This parameter determines how much the input image needs to be scaled and padded horizontally. Type should be `INT`.
+        - `target_height` (Required): The desired height of the output image after padding. It influences the vertical scaling and padding required to achieve the target dimensions. Type should be `INT`.
+        - `feathering` (Required): Specifies the intensity of the edge feathering applied to the padded areas, enhancing the visual integration of the padded regions with the original image. Type should be `INT`.
+        - `upscale_method` (Required): The method used for upscaling the image during the scaling process, affecting the quality of the resized image. Type should be `COMBO[STRING]`.
+        - `mask` (Optional): An optional mask that, if provided, is scaled and padded in parallel with the image, maintaining the alignment between the image and its mask. Type should be `MASK`.
+    - Outputs:
+        - `image`: The scaled and padded image, adjusted to match the target dimensions while preserving the original aspect ratio. Type should be `IMAGE`.
+        - `mask`: The scaled and padded mask corresponding to the processed image, if a mask was provided. Type should be `MASK`.

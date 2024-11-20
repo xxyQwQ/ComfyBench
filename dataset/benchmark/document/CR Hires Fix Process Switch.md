@@ -1,0 +1,8 @@
+- `CR Hires Fix Process Switch`: The CR_HiResFixProcessSwitch node is designed to selectively process high-resolution images or upscale latent representations based on the input provided. It facilitates the choice between two distinct processing paths, either focusing on image upscaling or latent space manipulation, thereby enabling a flexible approach to enhancing image quality or detail.
+    - Inputs:
+        - `Input` (Required): Determines the processing path to be taken by the node, choosing between latent upscaling and image upscaling based on the input value. Type should be `COMBO[STRING]`.
+        - `latent_upscale` (Optional): The latent representation to be upscaled if the 'Input' is set to 'latent_upscale'. This input directly influences the node's execution by determining the manipulation of the latent space, thereby affecting the detail and quality of the generated output. Type should be `LATENT`.
+        - `image_upscale` (Optional): The high-resolution image to be processed if the 'Input' is set to 'image_upscale'. This input determines the node's focus on enhancing the image's resolution or detail, directly impacting the visual quality of the output. Type should be `LATENT`.
+    - Outputs:
+        - `LATENT`: The output of the node, which can be either the upscaled latent representation or the processed high-resolution image, based on the input path chosen. Type should be `LATENT`.
+        - `STRING`: A URL to a help page providing additional information and guidance on using the CR_HiResFixProcessSwitch node. Type should be `STRING`.

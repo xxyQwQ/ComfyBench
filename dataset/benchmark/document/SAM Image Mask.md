@@ -1,0 +1,8 @@
+- `SAM Image Mask`: This node applies the SAM (Segment Anything Model) to an input image, generating a mask based on specified points and labels. It leverages a SAM model and parameters to perform segmentation, producing both a modified image and a corresponding mask.
+    - Inputs:
+        - `sam_model` (Required): The SAM model to be used for image segmentation. It plays a crucial role in determining the accuracy and quality of the segmentation output. Type should be `SAM_MODEL`.
+        - `sam_parameters` (Required): A dictionary containing parameters such as points and labels for the SAM model to use during segmentation. These parameters guide the model in identifying and segmenting the relevant parts of the image. Type should be `SAM_PARAMETERS`.
+        - `image` (Required): The input image to be segmented. This image is processed and modified by the SAM model based on the provided parameters. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The modified image after applying the SAM model and segmentation process. Type should be `IMAGE`.
+        - `mask`: The generated mask corresponding to the segmented parts of the input image. Type should be `MASK`.

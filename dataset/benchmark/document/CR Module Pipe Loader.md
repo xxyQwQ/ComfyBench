@@ -1,0 +1,14 @@
+- `CR Module Pipe Loader`: The CR Module Pipe Loader node is designed to aggregate various types of inputs, such as models, conditioning data, latent vectors, and images, into a unified pipeline format. It facilitates the modular assembly of components for generative AI applications, allowing for flexible and dynamic construction of processing pipelines.
+    - Inputs:
+        - `model` (Optional): Represents a model component to be included in the pipeline. It's crucial for defining the generative model that will be used in the pipeline. Type should be `MODEL`.
+        - `pos` (Optional): Specifies positive conditioning data to guide the generative process. It affects the direction and characteristics of the generation. Type should be `CONDITIONING`.
+        - `neg` (Optional): Specifies negative conditioning data to counterbalance or steer away from certain aspects during generation. Type should be `CONDITIONING`.
+        - `latent` (Optional): Provides a latent vector to seed or influence the generative process, offering a way to introduce variability or specific directions. Type should be `LATENT`.
+        - `vae` (Optional): Represents a VAE (Variational Autoencoder) component, which can be used for encoding or decoding in the pipeline. Type should be `VAE`.
+        - `clip` (Optional): Incorporates a CLIP model for semantic understanding or alignment, enhancing the generative process with textual or visual guidance. Type should be `CLIP`.
+        - `controlnet` (Optional): Includes a ControlNet component for additional control over the generation process, allowing for more precise manipulations. Type should be `CONTROL_NET`.
+        - `image` (Optional): Includes an image to be processed or used as part of the generative process, adding visual data to the pipeline. Type should be `IMAGE`.
+        - `seed` (Optional): Provides a seed value for random number generation, ensuring reproducibility or variability in the generative process. Type should be `INT`.
+    - Outputs:
+        - `pipe`: The assembled pipeline, encapsulating all the provided components in a unified format for further processing. Type should be `PIPE_LINE`.
+        - `show_help`: A URL to the documentation or help page for the node, offering guidance on its usage and capabilities. Type should be `STRING`.

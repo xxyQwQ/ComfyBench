@@ -1,0 +1,10 @@
+- `SoftControlNetWeights`: This node is designed to dynamically adjust the weights for control networks in a soft, nuanced manner, allowing for more refined and flexible control over the generation process. It focuses on providing a customizable approach to weight manipulation, enabling users to fine-tune the influence of various control parameters based on specific needs or desired outcomes.
+    - Inputs:
+        - `weight_i` (Required): Specifies a weight in the control network, serving as an adjustable factor for nuanced control. The index 'i' ranges from 0 to 3, allowing for multiple levels of refinement in control adjustments. Type should be `FLOAT`.
+        - `flip_weights` (Required): A boolean flag that determines whether the control weights should be inverted, offering an alternative perspective on the control influence. Type should be `BOOLEAN`.
+        - `uncond_multiplier` (Optional): Defines an unconditional multiplier that applies universally across all control weights, allowing for a global adjustment to their influence. Type should be `FLOAT`.
+        - `cn_extras` (Optional): Allows for the inclusion of additional, custom-defined control weight parameters, providing a mechanism for extending and customizing the control influence beyond the standard set. Type should be `CN_WEIGHTS_EXTRAS`.
+        - `autosize` (Optional): Configures automatic sizing parameters for the control network, facilitating adaptive adjustments to the network's dimensions based on specific requirements. Type should be `ACNAUTOSIZE`.
+    - Outputs:
+        - `CN_WEIGHTS`: The computed control network weights after applying the specified adjustments. Type should be `CONTROL_NET_WEIGHTS`.
+        - `TK_SHORTCUT`: A shortcut to the timestep keyframe, encapsulating the adjusted control weights. Type should be `TIMESTEP_KEYFRAME`.

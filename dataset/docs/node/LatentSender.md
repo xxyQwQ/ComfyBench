@@ -1,8 +1,0 @@
-- `LatentSender`: LatentSender is designed for handling and transmitting latent representations of images. It encapsulates the functionality to prepare a preview of the latent image, save the latent tensor along with metadata and a preview image to a file, and send the latent image information to a specified destination. This node facilitates the sharing and manipulation of latent image representations by providing a structured way to save and communicate these representations.
-    - Parameters:
-        - `filename_prefix`: This parameter specifies the prefix for the filenames under which the latent images and their metadata will be saved. It plays a significant role in organizing the saved files. Type should be `STRING`.
-        - `link_id`: The 'link_id' parameter is used to identify the specific destination or channel to which the latent image information will be sent. It is essential for routing the information correctly. Type should be `INT`.
-        - `preview_method`: Specifies the method to be used for generating a preview of the latent image. This parameter affects how the latent representation is visualized before being saved or sent. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `samples`: The 'samples' parameter represents the latent representations of images to be handled. It is crucial for the node's operation as it forms the basis of the latent image information that will be saved, previewed, and sent. Type should be `LATENT`.
-    - Outputs:

@@ -1,0 +1,13 @@
+- `Modelscopet2v`: The Modelscopet2v node is designed for transforming text inputs into visual outputs, leveraging advanced models to interpret and visualize textual descriptions in a visual format. This node encapsulates the process of text-to-visual conversion, enabling the creation of images or visual representations based on textual input.
+    - Inputs:
+        - `prompt` (Required): The 'prompt' parameter specifies the textual input that describes the desired visual output. It plays a key role in guiding the model towards generating images that align with the given description, directly influencing the thematic and stylistic aspects of the generated visual content. Type should be `STRING`.
+        - `negative_prompt` (Required): The 'negative_prompt' parameter provides textual input that describes undesired aspects of the visual output. It helps in refining the generated images by steering the model away from unwanted characteristics, thus fine-tuning the final visual representation. Type should be `STRING`.
+        - `model_path` (Required): Specifies the path to the model used for generating visual content. This parameter allows for the selection of different models, potentially offering various styles or capabilities. Type should be `STRING`.
+        - `num_inference_steps` (Required): Determines the number of steps the model will take during the inference process. A higher number of steps can lead to more detailed and coherent visual outputs. Type should be `INT`.
+        - `guidance_scale` (Required): Controls the degree to which the model adheres to the prompt. A higher guidance scale can result in images that more closely match the provided description. Type should be `FLOAT`.
+        - `seed` (Required): Sets the random seed for generating visual content, ensuring reproducibility of results. Type should be `INT`.
+        - `width` (Required): Specifies the width of the generated visual content in pixels. Type should be `INT`.
+        - `height` (Required): Specifies the height of the generated visual content in pixels. Type should be `INT`.
+        - `num_frames` (Required): Determines the number of frames to be generated for video content, defining the length of the output video. Type should be `INT`.
+    - Outputs:
+        - `image`: This output represents the generated visual content based on the textual descriptions provided as input. It encapsulates the text-to-visual conversion logic, producing images or video frames. Type should be `IMAGE`.

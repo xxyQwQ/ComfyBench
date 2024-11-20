@@ -1,0 +1,9 @@
+- `LayerUtility_ ColorImage V2`: This node is designed to generate a solid color image based on specified dimensions and color. It abstracts the process of creating an image filled with a single color, facilitating the creation of background layers or color-based placeholders in graphic projects.
+    - Inputs:
+        - `size` (Required): Determines the size of the generated image, allowing for predefined or custom dimensions. It enables flexibility in defining the image's overall dimensions. Type should be `COMBO[STRING]`.
+        - `custom_width` (Required): Specifies the custom width for the image when 'size' is set to 'custom'. It defines the width of the image in pixels. Type should be `INT`.
+        - `custom_height` (Required): Specifies the custom height for the image when 'size' is set to 'custom'. It defines the height of the image in pixels. Type should be `INT`.
+        - `color` (Required): Defines the color of the generated image. This parameter allows for customization of the image's appearance, enabling the creation of images with any desired solid color. Type should be `STRING`.
+        - `size_as` (Optional): Optionally specifies an image to match its size. If provided, the generated image will match the dimensions of this reference image. Type should be `*`.
+    - Outputs:
+        - `image`: The output is a solid color image with the specified dimensions and color. It serves as a versatile element for various graphic design and layering tasks. Type should be `IMAGE`.

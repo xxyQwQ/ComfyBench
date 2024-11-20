@@ -1,0 +1,10 @@
+- `CR Cycle Text`: The CR Cycle Text node is designed to cycle through a list of text strings based on a specified mode, frame interval, and number of loops. It dynamically selects and outputs text strings for animation or display purposes, allowing for sequential or custom cycling patterns.
+    - Inputs:
+        - `mode` (Required): Specifies the cycling mode, such as 'Sequential', which determines how text strings are selected and cycled through during execution. Type should be `COMBO[STRING]`.
+        - `text_list` (Required): A list of text strings to be cycled through. This list forms the basis of the cycling operation, with each string potentially being displayed or used in sequence or according to the specified mode. Type should be `TEXT_LIST`.
+        - `frame_interval` (Required): The interval between frames, used to calculate the current text string to display based on the current frame. This parameter influences the pace at which text strings are cycled through. Type should be `INT`.
+        - `loops` (Required): The number of times the text list is looped through. This affects the total duration of the cycling operation. Type should be `INT`.
+        - `current_frame` (Required): The current frame number, used in conjunction with the frame interval to determine the current text string to display. Type should be `INT`.
+    - Outputs:
+        - `STRING`: The currently selected text string based on the cycling mode, frame interval, and current frame. Type should be `STRING`.
+        - `show_help`: A URL to a help page providing additional information and guidance on using the CR Cycle Text node. Type should be `STRING`.

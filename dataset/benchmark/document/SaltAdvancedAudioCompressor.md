@@ -1,0 +1,10 @@
+- `SaltAdvancedAudioCompressor`: This node provides advanced audio compression capabilities, allowing for detailed control over the compression process through parameters such as threshold, ratio, attack, release, and makeup gain. It is designed to modify the dynamic range of audio signals for enhanced sound quality or specific audio effects.
+    - Inputs:
+        - `audio` (Required): The raw audio data to be compressed. This input is crucial for the compression process as it directly influences the output quality and effectiveness of the compression. Type should be `AUDIO`.
+        - `threshold_dB` (Required): Sets the threshold level in decibels for the compressor. Audio signals above this level will be compressed, affecting the loudness and dynamic range of the output. Type should be `FLOAT`.
+        - `ratio` (Required): Determines the compression ratio, which affects how much the audio signal is reduced once it crosses the threshold level. Type should be `FLOAT`.
+        - `attack_ms` (Required): The time in milliseconds it takes for the compressor to apply compression after the audio signal exceeds the threshold. This parameter influences the responsiveness of the compression effect. Type should be `INT`.
+        - `release_ms` (Required): The time in milliseconds for the compressor to cease the compression effect after the audio signal falls below the threshold level. It affects the smoothness of the audio output. Type should be `INT`.
+        - `makeup_gain` (Required): The gain in decibels to be applied after compression, compensating for any loss in volume due to the compression process. Type should be `FLOAT`.
+    - Outputs:
+        - `audio`: The compressed audio data, resulting from the application of the specified compression settings. Type should be `AUDIO`.

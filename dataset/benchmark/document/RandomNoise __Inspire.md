@@ -1,0 +1,10 @@
+- `RandomNoise __Inspire`: The RandomNoise __Inspire node is designed to generate and apply random noise to input data, leveraging various parameters to control the noise characteristics. This node supports customization of noise generation through seeds, modes, and variation methods, enabling diverse effects on the data for creative or experimental purposes.
+    - Inputs:
+        - `noise_seed` (Required): Specifies the initial seed for noise generation, serving as the basis for the random noise process. This seed ensures reproducibility of the noise patterns across runs. Type should be `INT`.
+        - `noise_mode` (Required): Determines the computational device (CPU or GPU) used for noise generation, affecting performance and compatibility with different hardware setups. Type should be `COMBO[STRING]`.
+        - `batch_seed_mode` (Required): Controls how seeds are incremented across batches, offering various strategies for introducing variability or consistency in noise generation. Type should be `COMBO[STRING]`.
+        - `variation_seed` (Required): Defines a separate seed for controlling noise variation, allowing for additional randomness or pattern changes in the noise applied. Type should be `INT`.
+        - `variation_strength` (Required): Sets the intensity of the noise variation, adjusting how much the noise alters the input data. Type should be `FLOAT`.
+        - `variation_method` (Optional): Specifies the method used to blend the original and varied noise, influencing the final noise effect on the data. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `noise`: Produces a modified version of the input data with applied random noise, reflecting the specified parameters and variation effects. Type should be `NOISE`.

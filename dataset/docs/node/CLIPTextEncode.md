@@ -1,7 +1,0 @@
-- `CLIPTextEncode`: The CLIPTextEncode node is designed to encode textual input using a CLIP model, transforming text into a conditioning format suitable for further processing or integration with other models. It focuses on converting text prompts into a structured format that captures the essence of the input for use in conditioned generative tasks.
-    - Parameters:
-        - `text`: The 'text' parameter is the primary textual input that the node encodes. It plays a crucial role in determining the output conditioning, as it is directly processed by the CLIP model to generate embeddings. Type should be `STRING`.
-    - Inputs:
-        - `clip`: The 'clip' parameter represents the CLIP model used for text tokenization and encoding. It is essential for transforming the input text into a format that can be utilized for conditioning in generative tasks. Type should be `CLIP`.
-    - Outputs:
-        - `conditioning`: The output is a conditioning format that encapsulates the encoded text information, suitable for guiding generative models in producing content that aligns with the input text. Type should be `CONDITIONING`.

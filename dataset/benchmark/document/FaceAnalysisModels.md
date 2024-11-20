@@ -1,0 +1,6 @@
+- `FaceAnalysisModels`: The FaceAnalysisModels node is designed to load and manage face analysis models based on specified libraries and providers. It dynamically supports different face analysis libraries and hardware acceleration options, facilitating the flexible integration of face analysis capabilities into applications.
+    - Inputs:
+        - `library` (Required): Specifies the face analysis library to use. The choice of library affects the underlying model and algorithms for face analysis. Type should be `COMBO[STRING]`.
+        - `provider` (Required): Determines the hardware acceleration provider for the face analysis model, enabling optimized performance on various platforms. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `analysis_models`: Returns an instance of the loaded face analysis model, ready for performing face analysis tasks. Type should be `ANALYSIS_MODELS`.

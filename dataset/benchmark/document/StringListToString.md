@@ -1,0 +1,6 @@
+- `StringListToString`: This node is designed to concatenate a list of strings into a single string, using a specified delimiter. It allows for flexible string manipulation, particularly useful for aggregating multiple pieces of text with custom spacing or formatting.
+    - Inputs:
+        - `join_with` (Required): Specifies the delimiter to use for joining the list of strings. The default delimiter is a newline character, allowing for easy creation of multi-line strings from a list. Type should be `STRING`.
+        - `string_list` (Required): The list of strings to be concatenated. This input is marked as required, emphasizing its critical role in the node's operation. Type should be `STRING`.
+    - Outputs:
+        - `string`: The concatenated string, formed by joining the input list of strings with the specified delimiter. Type should be `STRING`.

@@ -1,6 +1,0 @@
-- `AlphaChanelAdd`: The AlphaChanelAdd node is designed to add an alpha channel to images that lack one, ensuring all images in a batch have four channels. This operation is crucial for maintaining consistency in image data, especially when working with image processing tasks that require an alpha channel for transparency or other effects.
-    - Parameters:
-    - Inputs:
-        - `images`: The 'images' parameter represents the batch of images to which an alpha channel will be added. It is essential for the node's operation as it determines the input images that need modification. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a modified version of the input images, each with an added alpha channel, ensuring all images have four channels. Type should be `IMAGE`.

@@ -1,0 +1,10 @@
+- `SinWave`: The SinWave node generates a sinusoidal wave based on various parameters such as phase, amplitude, and translations along the x and y axes. It is designed to produce a sine wave output that can be adjusted dynamically for different effects in visual or audio applications.
+    - Inputs:
+        - `phase` (Required): The 'phase' parameter controls the phase shift of the sine wave, affecting where the wave starts along the x-axis. It is crucial for adjusting the wave's position relative to its cycle. Type should be `FLOAT`.
+        - `amplitude` (Required): The 'amplitude' parameter determines the height of the sine wave peaks, allowing for the adjustment of the wave's intensity or loudness in applications. Type should be `FLOAT`.
+        - `x_translation` (Required): The 'x_translation' parameter shifts the sine wave along the x-axis, enabling the wave to be moved horizontally. Type should be `FLOAT`.
+        - `y_translation` (Required): The 'y_translation' parameter shifts the sine wave vertically along the y-axis, allowing for the adjustment of the wave's baseline position. Type should be `FLOAT`.
+        - `current_frame` (Required): The 'current_frame' parameter specifies the current frame or point in time for which the wave's value is being calculated, essential for animating the wave over time. Type should be `INT`.
+    - Outputs:
+        - `float`: The first output is the calculated sine wave value, representing the wave's current amplitude at the specified frame. Type should be `FLOAT`.
+        - `int`: The second output is the integer representation of the sine wave value, useful for applications requiring discrete values. Type should be `INT`.

@@ -1,0 +1,8 @@
+- `ImpactImageInfo`: The ImpactImageInfo node is designed to extract and provide detailed information about an image within the context of enhancing or detailing images for visual impact. It focuses on analyzing image characteristics and metadata to support subsequent processing steps, such as detailing, segmentation, or enhancement, tailored to the specific needs of the image.
+    - Inputs:
+        - `value` (Required): The 'value' parameter represents the input image whose characteristics such as batch size, height, width, and channel count are to be analyzed and returned. This information is crucial for understanding the image's structure and for facilitating further image processing operations. Type should be `IMAGE`.
+    - Outputs:
+        - `batch`: The 'batch' output indicates the batch size of the input image tensor, which is essential for batch processing scenarios. Type should be `INT`.
+        - `height`: The 'height' output provides the height of the input image, which is crucial for understanding the image's dimensions. Type should be `INT`.
+        - `width`: The 'width' output provides the width of the input image, indicating its dimensions. Type should be `INT`.
+        - `channel`: The 'channel' output indicates the number of channels in the input image, such as RGB channels, which is essential for color image processing. Type should be `INT`.

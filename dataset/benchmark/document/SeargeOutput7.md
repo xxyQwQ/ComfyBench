@@ -1,0 +1,6 @@
+- `SeargeOutput7`: SeargeOutput7 is designed to demultiplex and output specific parameters related to miscellaneous settings, including the strength of LoRA adjustments, from a given set of parameters. It focuses on extracting and providing access to detailed configuration options that may affect the generation process or model behavior.
+    - Inputs:
+        - `parameters` (Required): The 'parameters' input contains miscellaneous settings that may include various configuration options and values, such as LoRA strength, which are crucial for adjusting the generation process or model behavior. Type should be `PARAMETERS`.
+    - Outputs:
+        - `parameters`: Returns the original set of miscellaneous parameters, allowing for further processing or utilization in subsequent steps. Type should be `PARAMETERS`.
+        - `lora_strength`: Outputs the LoRA strength value extracted from the input parameters, indicating the level of LoRA adjustments applied. Type should be `FLOAT`.

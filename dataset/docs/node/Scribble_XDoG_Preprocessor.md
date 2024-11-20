@@ -1,8 +1,0 @@
-- `Scribble_XDoG_Preprocessor`: The Scribble_XDoG_Preprocessor node is designed for extracting stylized line drawings from images using a combination of scribble detection and XDoG (eXtended Difference of Gaussians) filtering techniques. It preprocesses images to highlight important edges and details, making them suitable for further artistic or analytical processing.
-    - Parameters:
-        - `threshold`: Determines the sensitivity of the XDoG filter in detecting edges. A lower threshold value results in finer details being captured, while a higher value emphasizes more prominent edges. Type should be `INT`.
-        - `resolution`: Specifies the resolution at which the image should be processed. It affects the level of detail captured in the extracted lines. Type should be `INT`.
-    - Inputs:
-        - `image`: The input image to be processed for line extraction. It serves as the primary data for the node to apply scribble detection and XDoG filtering techniques. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a processed image with stylized line drawings, emphasizing edges and details extracted using the Scribble_XDoG technique. Type should be `IMAGE`.

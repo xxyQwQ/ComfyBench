@@ -1,0 +1,8 @@
+- `LayerColor_ HSV`: This node is designed for color correction in the HSV color space, allowing adjustments to the hue, saturation, and value (brightness) of an image. It enables fine-tuning of image colors to achieve desired visual effects or correct color imbalances.
+    - Inputs:
+        - `image` (Required): The input image to be color corrected. This parameter is crucial as it determines the base for all subsequent HSV adjustments. Type should be `IMAGE`.
+        - `H` (Required): Specifies the hue adjustment. Positive values shift the hue right, while negative values shift it left, enabling the modification of the image's overall color tone. Type should be `INT`.
+        - `S` (Required): Determines the saturation level adjustment. Positive values increase saturation, making colors more vivid, while negative values decrease it, leading to a more muted color palette. Type should be `INT`.
+        - `V` (Required): Controls the value (brightness) adjustment. Positive values make the image brighter, whereas negative values make it darker, affecting the image's lightness or darkness. Type should be `INT`.
+    - Outputs:
+        - `image`: The output image after applying HSV color corrections. This reflects the adjustments made to hue, saturation, and value, showcasing the color-corrected version of the input image. Type should be `IMAGE`.

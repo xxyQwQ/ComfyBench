@@ -1,0 +1,162 @@
+{
+    "11": {
+        "_meta": {
+            "title": "Pad Image for Outpainting"
+        },
+        "class_type": "ImagePadForOutpaint",
+        "inputs": {
+            "bottom": 0,
+            "feathering": 0,
+            "image": [
+                "78",
+                0
+            ],
+            "left": 256,
+            "right": 256,
+            "top": 0
+        }
+    },
+    "12": {
+        "_meta": {
+            "title": "VAE Encode (for Inpainting)"
+        },
+        "class_type": "VAEEncodeForInpaint",
+        "inputs": {
+            "grow_mask_by": 16,
+            "mask": [
+                "11",
+                1
+            ],
+            "pixels": [
+                "11",
+                0
+            ],
+            "vae": [
+                "70",
+                0
+            ]
+        }
+    },
+    "21": {
+        "_meta": {
+            "title": "KSampler"
+        },
+        "class_type": "KSampler",
+        "inputs": {
+            "cfg": 7,
+            "denoise": 1,
+            "latent_image": [
+                "12",
+                0
+            ],
+            "model": [
+                "25",
+                0
+            ],
+            "negative": [
+                "7",
+                0
+            ],
+            "positive": [
+                "6",
+                0
+            ],
+            "sampler_name": "dpmpp_2m",
+            "scheduler": "karras",
+            "seed": 1,
+            "steps": 20
+        }
+    },
+    "23": {
+        "_meta": {
+            "title": "VAE Decode"
+        },
+        "class_type": "VAEDecode",
+        "inputs": {
+            "samples": [
+                "21",
+                0
+            ],
+            "vae": [
+                "70",
+                0
+            ]
+        }
+    },
+    "25": {
+        "_meta": {
+            "title": "Load Checkpoint"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "inputs": {
+            "ckpt_name": "dreamshaper_8Inpainting.safetensors"
+        }
+    },
+    "4": {
+        "_meta": {
+            "title": "Load Checkpoint"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "inputs": {
+            "ckpt_name": "dreamshaper_8.safetensors"
+        }
+    },
+    "6": {
+        "_meta": {
+            "title": "CLIP Text Encode (Positive)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "an image of iceberg"
+        }
+    },
+    "7": {
+        "_meta": {
+            "title": "CLIP Text Encode (Negative)"
+        },
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+            "clip": [
+                "4",
+                1
+            ],
+            "text": "illustration, painting, text, watermark, copyright, signature, notes"
+        }
+    },
+    "70": {
+        "_meta": {
+            "title": "Load VAE"
+        },
+        "class_type": "VAELoader",
+        "inputs": {
+            "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+        }
+    },
+    "78": {
+        "_meta": {
+            "title": "Load Image"
+        },
+        "class_type": "LoadImage",
+        "inputs": {
+            "image": "iceberg.jpg",
+            "upload": "image"
+        }
+    },
+    "79": {
+        "_meta": {
+            "title": "Save Image"
+        },
+        "class_type": "SaveImage",
+        "inputs": {
+            "filename_prefix": "ComfyUI",
+            "images": [
+                "23",
+                0
+            ]
+        }
+    }
+}

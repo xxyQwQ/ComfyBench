@@ -1,0 +1,5 @@
+- `FlipSigmas`: The `FlipSigmas` node is designed to manipulate a sequence of sigma values by reversing their order and ensuring that the first value is non-zero if originally zero, by setting it to a minimal positive value. This operation is crucial for adjusting the sigma sequence in certain sampling processes where the order of sigma values impacts the generation or transformation process.
+    - Inputs:
+        - `sigmas` (Required): The `sigmas` parameter represents a sequence of sigma values to be flipped. This sequence is crucial as it determines the scale of noise or variation to be applied in a generative process, and flipping it alters the progression of these scales. Type should be `SIGMAS`.
+    - Outputs:
+        - `sigmas`: The output is a flipped sequence of sigma values, with the first value adjusted to avoid being zero. This adjusted sequence is essential for subsequent operations that rely on the order and values of sigma scales. Type should be `SIGMAS`.

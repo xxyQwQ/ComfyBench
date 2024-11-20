@@ -1,0 +1,7 @@
+- `ImpactValueReceiver`: The ImpactValueReceiver node is designed to receive and convert values based on their specified type. It supports a variety of types including strings, integers, floats, and booleans, allowing for flexible data handling within the ImpactPack/Logic category.
+    - Inputs:
+        - `typ` (Required): Specifies the type of the value to be received and converted. It supports string, integer, float, and boolean types, enabling the node to handle a wide range of data formats. Type should be `COMBO[STRING]`.
+        - `value` (Required): The value to be converted according to the specified type. It's initially received as a string and then converted based on the 'typ' parameter. Type should be `STRING`.
+        - `link_id` (Required): An identifier for linking the received value to a specific context or usage within the system. It aids in the organization and tracking of data flow. Type should be `INT`.
+    - Outputs:
+        - `*`: The converted value, outputted in the specified type. This allows for the dynamic handling and utilization of data within the system. Type should be `*`.

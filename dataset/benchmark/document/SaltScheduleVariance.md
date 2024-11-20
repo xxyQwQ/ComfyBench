@@ -1,0 +1,11 @@
+- `SaltScheduleVariance`: This node applies a combination of noise-based tremors and easing functions to a schedule list to create varied animation frames. It allows for the dynamic adjustment of animation parameters over time, enhancing visual effects with perlin noise and optional curve adjustments.
+    - Inputs:
+        - `schedule_list` (Required): The list of values representing the schedule to be varied. It serves as the base for applying noise and curve adjustments, directly influencing the visual dynamics of the animation. Type should be `LIST`.
+        - `curves_mode` (Optional): Specifies the type of easing function to apply to the schedule list, offering a method to smoothly transition between values. Type should be `COMBO[STRING]`.
+        - `use_perlin_tremors` (Optional): A flag to enable or disable the application of perlin noise-based tremors to the schedule list, adding a layer of dynamic variation. Type should be `BOOLEAN`.
+        - `tremor_scale` (Optional): Determines the intensity of the noise-based tremors applied to the schedule list, affecting the degree of variation. Type should be `FLOAT`.
+        - `octaves` (Optional): Controls the number of layers of noise to combine for generating tremors, impacting the complexity of the resulting variation. Type should be `INT`.
+        - `persistence` (Optional): Affects the amplitude of each octave in the noise function, influencing the smoothness of the tremors. Type should be `FLOAT`.
+        - `lacunarity` (Optional): Determines the frequency of each octave in the noise function, affecting the detail of the tremors. Type should be `FLOAT`.
+    - Outputs:
+        - `schedule_list`: The modified schedule list after applying noise-based tremors and optional curve adjustments, ready for use in animating visual elements. Type should be `LIST`.

@@ -1,0 +1,6 @@
+- `Image Resize To Height`: This node is designed to resize an image to a specified target height while maintaining its aspect ratio. It calculates the necessary scaling factor based on the target height and the original height of the image, then applies a Lanczos filter for high-quality resizing.
+    - Inputs:
+        - `image` (Required): The image to be resized. It is crucial for determining the new dimensions of the image after resizing to the target height. Type should be `IMAGE`.
+        - `target_height` (Required): The desired height of the image after resizing. This parameter directly influences the scaling factor used to adjust the image's height. Type should be `INT`.
+    - Outputs:
+        - `image`: The resized image with the specified target height, maintaining the original aspect ratio. Type should be `IMAGE`.

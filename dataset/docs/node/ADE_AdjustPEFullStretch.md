@@ -1,8 +1,0 @@
-- `ADE_AdjustPEFullStretch`: This node is designed to adjust the positional encoding (PE) within a model by stretching it to a new length, optionally printing the adjustment process. It allows for dynamic modification of the PE to accommodate different sequence lengths or to apply specific transformations for animation or other advanced modeling purposes.
-    - Parameters:
-        - `pe_stretch`: Specifies the amount by which the positional encoding should be stretched. A positive integer increases the PE length, enabling the model to handle longer sequences or apply specific transformations. Type should be `INT`.
-        - `print_adjustment`: A boolean flag that, when set to True, enables the printing of the adjustment process for debugging or informational purposes. Type should be `BOOLEAN`.
-    - Inputs:
-        - `prev_pe_adjust`: An optional parameter that allows for the chaining of positional encoding adjustments by taking a previous adjustment group as input. Type should be `PE_ADJUST`.
-    - Outputs:
-        - `pe_adjust`: Returns an updated adjustment group that includes the new positional encoding stretch, ready for further processing or application. Type should be `PE_ADJUST`.

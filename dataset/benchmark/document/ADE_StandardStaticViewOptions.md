@@ -1,0 +1,7 @@
+- `ADE_StandardStaticViewOptions`: This node is designed to create static view options for the Animate Diff process, allowing for the customization of view length and overlap with optional fuse method adjustments.
+    - Inputs:
+        - `view_length` (Required): Specifies the length of the view, affecting the granularity of the animation frames. Type should be `INT`.
+        - `view_overlap` (Required): Determines the overlap between consecutive views, influencing the smoothness of the animation transition. Type should be `INT`.
+        - `fuse_method` (Optional): Optional parameter that defines the method for fusing context, offering flexibility in the animation's visual continuity. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `view_opts`: Outputs the configured view options, ready to be utilized in the Animate Diff process. Type should be `VIEW_OPTS`.

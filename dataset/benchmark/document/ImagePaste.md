@@ -1,0 +1,8 @@
+- `ImagePaste`: The ImagePaste node is designed to overlay a foreground image with transparency onto a background image, effectively merging them into a single composite image. This process allows for the creation of complex images by combining multiple layers.
+    - Inputs:
+        - `background_image` (Required): The background image over which the foreground image will be pasted. It serves as the base layer for the composite image. Type should be `IMAGE`.
+        - `foreground_image` (Required): The foreground image to be pasted over the background image. This image should have transparency areas to blend seamlessly with the background. Type should be `IMAGE`.
+        - `x_position` (Required): The horizontal position (x-coordinate) where the top-left corner of the foreground image will be placed on the background image. Type should be `INT`.
+        - `y_position` (Required): The vertical position (y-coordinate) where the top-left corner of the foreground image will be placed on the background image. Type should be `INT`.
+    - Outputs:
+        - `image`: The composite image resulting from pasting the foreground image over the background, converted back to a tensor format. Type should be `IMAGE`.

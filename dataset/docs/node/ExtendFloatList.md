@@ -1,6 +1,0 @@
-- `ExtendFloatList`: The ExtendFloatList node is designed to concatenate multiple lists of floating-point numbers into a single, extended list. This functionality is particularly useful in scenarios where aggregation of data from various sources is required, allowing for a streamlined and efficient handling of numerical data collections.
-    - Parameters:
-        - `inputs_len`: Specifies the number of float lists to be concatenated. This parameter determines how many lists will be merged into the extended list, affecting the node's execution and the size of the resulting list. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `float`: The concatenated list of floating-point numbers, resulting from the aggregation of all input lists. Type should be `FLOAT`.

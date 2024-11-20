@@ -1,0 +1,10 @@
+- `Text Find and Replace Input`: This node is designed to perform a search and replace operation on a given text. It searches for specified substrings within the input text and replaces them with a provided replacement string, effectively modifying the original text based on the user's criteria.
+    - Inputs:
+        - `text` (Required): The text in which the search and replace operation will be performed. It serves as the primary content for modification. Type should be `STRING`.
+        - `find` (Required): The substring to be searched for within the input text. This parameter dictates what part of the text is targeted for replacement. Type should be `STRING`.
+        - `replace` (Required): The string that will replace occurrences of the 'find' substring within the input text. It defines the new content that will substitute the targeted parts. Type should be `STRING`.
+    - Outputs:
+        - `result_text`: The modified text after the search and replace operation has been applied. Type should be `STRING`.
+        - `replacement_count_number`: The total number of replacements made during the operation, represented as a number. Type should be `NUMBER`.
+        - `replacement_count_float`: The total number of replacements made, represented as a float. Type should be `FLOAT`.
+        - `replacement_count_int`: The total number of replacements made, represented as an integer. Type should be `INT`.

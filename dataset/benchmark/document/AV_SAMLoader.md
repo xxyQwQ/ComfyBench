@@ -1,0 +1,5 @@
+- `AV_SAMLoader`: The AV_SAMLoader node is designed for loading SAM models specific to the Art Venture project. It facilitates the retrieval and initialization of SAM models from a predefined directory, ensuring that the models are ready for use in segmentation tasks.
+    - Inputs:
+        - `model_name` (Required): Specifies the name of the SAM model to load. This parameter is crucial for identifying and retrieving the correct model file from the available SAM models directory. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `sam_model`: Returns the loaded SAM model, ready for use in segmentation tasks. Type should be `AV_SAM_MODEL`.

@@ -1,0 +1,15 @@
+- `ChameleonMask`: The ChameleonMask node is designed to adaptively blend or modify images or masks based on certain criteria or conditions. It aims to provide a flexible approach to image manipulation, allowing for dynamic adjustments that cater to the specific needs of the input data.
+    - Inputs:
+        - `dst` (Required): Specifies the destination image over which the source image or mask will be applied, serving as the backdrop for the operation. Type should be `IMAGE`.
+        - `src` (Required): Defines the source image or mask to be blended or modified onto the destination image. Type should be `IMAGE`.
+        - `thresh_blur` (Required): Sets the threshold for blurring, affecting the smoothness of the mask edges. Type should be `INT`.
+        - `close_dist` (Required): Determines the distance for the closing operation, impacting the closure of small holes in the mask. Type should be `INT`.
+        - `open_dist` (Required): Specifies the distance for the opening operation, influencing the removal of small objects from the foreground of the mask. Type should be `INT`.
+        - `size_dist` (Required): Controls the size distribution for filtering, affecting the scale of features retained in the mask. Type should be `INT`.
+        - `mask_blur` (Required): Defines the blur level for the mask, impacting the overall softness and blending of edges. Type should be `INT`.
+        - `contrast_adjust` (Required): Adjusts the contrast of the image, enhancing or reducing the visual differences between elements. Type should be `FLOAT`.
+        - `mode` (Required): Selects the operational mode, determining the specific blending or modification technique used. Type should be `COMBO[STRING]`.
+        - `output_format` (Required): Chooses the output format of the image, affecting the visual style and compatibility. Type should be `COMBO[STRING]`.
+        - `optional_roi_mask` (Optional): An optional mask defining regions of interest, focusing the operation on specific areas of the image. Type should be `IMAGE`.
+    - Outputs:
+        - `image`: The resulting image after adaptive blending or modification, showcasing the applied effects. Type should be `IMAGE`.

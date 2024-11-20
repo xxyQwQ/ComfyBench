@@ -1,0 +1,6 @@
+- `SamplerEulerAncestral`: This node provides a mechanism to generate samples using the Euler Ancestral sampling method, tailored for specific noise and step size adjustments.
+    - Inputs:
+        - `eta` (Required): Specifies the step size for the Euler method, influencing the granularity of the sampling process. Type should be `FLOAT`.
+        - `s_noise` (Required): Determines the scale of noise to be added at each step, affecting the variability of the samples. Type should be `FLOAT`.
+    - Outputs:
+        - `sampler`: Outputs a sampler configured for Euler Ancestral sampling, ready for generating samples. Type should be `SAMPLER`.

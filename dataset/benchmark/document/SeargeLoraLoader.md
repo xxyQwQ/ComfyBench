@@ -1,0 +1,10 @@
+- `SeargeLoraLoader`: The SeargeLoraLoader node is designed to load and apply LoRA (Low-Rank Adaptation) modifications to models and CLIPs. It facilitates the dynamic adjustment of model behaviors by applying specific LoRA modifications, which are identified by their names and strengths, to the base models and CLIPs. This process allows for fine-tuning and customization of model outputs based on the applied LoRAs.
+    - Inputs:
+        - `model` (Required): The base model to which the LoRA modifications will be applied. It serves as the foundation for the LoRA adjustments. Type should be `MODEL`.
+        - `clip` (Required): The CLIP model to which the LoRA modifications will be applied, allowing for adjustments in how the CLIP model processes or interprets data. Type should be `CLIP`.
+        - `lora_name` (Required): The name of the LoRA modification to apply, which identifies the specific LoRA file or setting to be used for the adjustment. Type should be `LORA_NAME`.
+        - `strength_model` (Required): The strength of the LoRA modification applied to the model, determining the intensity of the adjustment. Type should be `FLOAT`.
+        - `strength_clip` (Required): The strength of the LoRA modification applied to the CLIP, determining the intensity of the adjustment. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The model after applying the specified LoRA modifications, reflecting the adjustments made. Type should be `MODEL`.
+        - `clip`: The CLIP model after applying the specified LoRA modifications, reflecting the adjustments made. Type should be `CLIP`.

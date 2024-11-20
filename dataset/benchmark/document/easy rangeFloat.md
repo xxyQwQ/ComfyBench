@@ -1,0 +1,11 @@
+- `easy rangeFloat`: The `easy rangeFloat` node is designed to facilitate the manipulation and generation of floating-point numbers within a specified range. It abstracts the complexity of handling floating-point operations, providing a straightforward interface for generating, adjusting, and working with float values in a range defined by the user.
+    - Inputs:
+        - `range_mode` (Required): Determines the mode of range calculation, either by specifying a step size or a total number of steps. Type should be `COMBO[STRING]`.
+        - `start` (Required): Specifies the starting value of the floating-point range. Type should be `FLOAT`.
+        - `stop` (Required): Defines the ending value of the floating-point range. Type should be `FLOAT`.
+        - `step` (Required): Sets the step size for the range when 'range_mode' is set to 'step'. Type should be `FLOAT`.
+        - `num_steps` (Required): Specifies the total number of steps in the range when 'range_mode' is set to 'num_steps'. Type should be `INT`.
+        - `end_mode` (Required): Indicates whether the range should include ('Inclusive') or exclude ('Exclusive') the stop value. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `range`: The generated range of floating-point numbers based on the input parameters. Type should be `FLOAT`.
+        - `range_sizes`: The size of the generated range, indicating how many floating-point numbers are included. Type should be `INT`.

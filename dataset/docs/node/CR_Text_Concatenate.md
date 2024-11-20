@@ -1,9 +1,0 @@
-- `CR Text Concatenate`: The CR Text Concatenate node is designed to merge two text strings into a single string, optionally inserting a separator between them. This functionality is useful for combining pieces of text in a controlled manner, allowing for the creation of new strings from existing ones.
-    - Parameters:
-        - `text1`: The first text string to be concatenated. It serves as the starting point of the new string. Type should be `STRING`.
-        - `text2`: The second text string to be concatenated. It is appended to the first string, optionally separated by a specified separator. Type should be `STRING`.
-        - `separator`: A text string used as a separator between the first and second text strings during concatenation. If left empty, the texts are directly concatenated without any separation. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `STRING`: The concatenated text resulting from merging the first and second text strings with an optional separator. Type should be `*`.
-        - `show_help`: A URL to the help documentation for the CR Text Concatenate node. Type should be `STRING`.

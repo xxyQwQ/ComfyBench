@@ -1,0 +1,5 @@
+- `CLIPVisionLoader`: The CLIPVisionLoader node is designed for loading CLIP Vision models from specified paths. It abstracts the complexities of locating and initializing CLIP Vision models, making them readily available for further processing or inference tasks.
+    - Inputs:
+        - `clip_name` (Required): Specifies the name of the CLIP Vision model to be loaded. This name is used to locate the model file within a predefined directory structure. Type should be `COMBO[STRING]`.
+    - Outputs:
+        - `clip_vision`: The loaded CLIP Vision model, ready for use in encoding images or performing other vision-related tasks. Type should be `CLIP_VISION`.

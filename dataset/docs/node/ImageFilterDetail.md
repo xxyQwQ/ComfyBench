@@ -1,6 +1,0 @@
-- `ImageFilterDetail`: The ImageFilterDetail node applies a detail enhancement filter to a collection of images, improving their visual clarity and definition.
-    - Parameters:
-    - Inputs:
-        - `images`: The collection of images to be processed. This input is essential for applying the detail enhancement filter to each image in the collection. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The enhanced images with improved detail and clarity. Type should be `IMAGE`.

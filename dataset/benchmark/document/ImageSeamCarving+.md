@@ -1,0 +1,11 @@
+- `ImageSeamCarving+`: This node specializes in dynamically resizing images while preserving the content's essential features, utilizing the seam carving technique. It intelligently removes or adds pixels in paths (seams) of least importance, allowing for aspect ratio changes, content amplification, or object removal without noticeable distortion.
+    - Inputs:
+        - `image` (Required): The input image to be processed. It is the primary subject for seam carving, where the algorithm will apply modifications based on the specified parameters. Type should be `IMAGE`.
+        - `width` (Required): The target width for the output image. This parameter dictates the new width the input image should be resized to, either by removing or adding seams. Type should be `INT`.
+        - `height` (Required): The target height for the output image. Similar to width, it determines the new height by adjusting the number of seams. Type should be `INT`.
+        - `energy` (Required): Defines the energy calculation mode to identify seams. Higher energy values indicate areas of higher importance, guiding the seam carving process. Type should be `COMBO[STRING]`.
+        - `order` (Required): Specifies the order of seam removal or addition, which can be either width-first or height-first, influencing the direction of the carving process. Type should be `COMBO[STRING]`.
+        - `keep_mask` (Optional): An optional mask to protect certain areas from being altered. Regions covered by the keep mask are treated as high importance, preserving them during seam carving. Type should be `MASK`.
+        - `drop_mask` (Optional): An optional mask to designate areas for removal. The drop mask marks regions as less important, making them prime candidates for seam elimination. Type should be `MASK`.
+    - Outputs:
+        - `image`: The output image after seam carving. It reflects the specified dimensions and modifications while aiming to preserve the visual content's integrity. Type should be `IMAGE`.

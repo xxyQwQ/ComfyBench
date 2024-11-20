@@ -1,0 +1,8 @@
+- `ImageRandomTransform+`: This node applies a series of random transformations to an image, including perspective distortion, rotation, color jitter (brightness, contrast, saturation, hue), horizontal flipping, and random cropping. These transformations introduce variability and can be used to augment images for training or to generate diverse variations of a given image.
+    - Inputs:
+        - `image` (Required): The input image to be transformed. It serves as the base for applying the random transformations, affecting the visual appearance and geometry of the output image. Type should be `IMAGE`.
+        - `seed` (Required): A seed value for the random number generator to ensure reproducibility of the transformations applied to the image. Type should be `INT`.
+        - `repeat` (Required): Specifies how many times the input image should be repeated before applying the transformations, effectively controlling the number of transformed images generated. Type should be `INT`.
+        - `variation` (Required): A scalar that modulates the intensity of the transformations applied, influencing the degree of variation in the output images. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The transformed images, each having undergone a unique set of random transformations based on the specified parameters. Type should be `IMAGE`.

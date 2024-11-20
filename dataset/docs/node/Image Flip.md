@@ -1,7 +1,0 @@
-- `Image Flip`: The Image Flip node provides functionality to flip images either horizontally or vertically, allowing for simple yet effective transformations of image data.
-    - Parameters:
-        - `mode`: Specifies the direction of the flip, either 'horizontal' or 'vertical'. This affects how the images are transformed. Type should be `COMBO[STRING]`.
-    - Inputs:
-        - `images`: A batch of images to be flipped. This parameter is crucial for determining which images undergo the flipping process. Type should be `IMAGE`.
-    - Outputs:
-        - `images`: The batch of images after being flipped according to the specified mode. Type should be `IMAGE`.

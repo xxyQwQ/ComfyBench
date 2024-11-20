@@ -1,0 +1,6 @@
+- `Inference_Core_UniFormer-SemSegPreprocessor`: This node is designed for semantic segmentation tasks, utilizing the UniFormer model to process images and generate semantic segmentation maps. It abstracts the complexity of model loading, image preprocessing, and inference into a streamlined operation, enabling efficient and accurate segmentation of images.
+    - Inputs:
+        - `image` (Required): The input image to be semantically segmented. This parameter is crucial for determining the content and structure of the output segmentation map. Type should be `IMAGE`.
+        - `resolution` (Optional): Specifies the resolution to which the input image is resized before processing. This affects the granularity and quality of the segmentation output. Type should be `INT`.
+    - Outputs:
+        - `image`: The output semantic segmentation map of the input image, represented as a tensor. Type should be `IMAGE`.

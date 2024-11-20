@@ -1,0 +1,13 @@
+- `BatchUncrop`: The BatchUncrop node is designed to reverse the cropping process on a batch of images. It takes previously cropped images along with their corresponding original images and other parameters to accurately restore them to their original context, adjusting for any specified borders and blending as needed. This node is essential for operations where the spatial integrity of images needs to be maintained after processing steps that involve cropping.
+    - Inputs:
+        - `original_images` (Required): Original images before cropping, used as a reference for the uncropping process to restore the images to their original state. Type should be `IMAGE`.
+        - `cropped_images` (Required): Cropped images that need to be uncropped and restored to their original context. Type should be `IMAGE`.
+        - `bboxes` (Required): Bounding boxes specifying the cropped areas within the original images, used to accurately place the cropped images back into their original context. Type should be `BBOX`.
+        - `border_blending` (Required): Controls the blending of the borders during the uncropping process to ensure a seamless transition between the cropped and original areas. Type should be `FLOAT`.
+        - `crop_rescale` (Required): Factor to rescale the cropped images before placing them back into the original images, allowing for adjustments in size if necessary. Type should be `FLOAT`.
+        - `border_top` (Required): Indicates whether a top border should be added during the uncropping process. Type should be `BOOLEAN`.
+        - `border_bottom` (Required): Indicates whether a bottom border should be added during the uncropping process. Type should be `BOOLEAN`.
+        - `border_left` (Required): Indicates whether a left border should be added during the uncropping process. Type should be `BOOLEAN`.
+        - `border_right` (Required): Indicates whether a right border should be added during the uncropping process. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The result of the uncropping process, where cropped images are integrated back into their original context, adjusted for borders and blending as specified. Type should be `IMAGE`.

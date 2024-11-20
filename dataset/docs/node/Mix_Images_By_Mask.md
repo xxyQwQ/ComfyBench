@@ -1,8 +1,0 @@
-- `Mix Images By Mask`: The Mix Images By Mask node blends two images together based on a provided mask, creating a composite image where parts of each input image are visible according to the mask's values. This node is essential for tasks that require the dynamic combination of images, such as creating effects or merging images in a context-sensitive manner.
-    - Parameters:
-    - Inputs:
-        - `image1`: The first image to be mixed. It serves as one of the base layers for the blending operation. Type should be `IMAGE`.
-        - `image2`: The second image to be mixed. It acts as the other base layer in the blending process. Type should be `IMAGE`.
-        - `mask`: A mask that determines how the two images are blended together. Areas of the mask with higher values allow more of the second image to show through. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The resulting image after blending the two input images according to the mask. Type should be `IMAGE`.

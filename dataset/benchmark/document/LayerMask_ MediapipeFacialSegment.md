@@ -1,0 +1,12 @@
+- `LayerMask_ MediapipeFacialSegment`: This node leverages the Mediapipe library to perform facial feature segmentation on images. It extracts specific facial features based on user input, such as eyes, eyebrows, lips, and teeth, and generates corresponding masks for each feature.
+    - Inputs:
+        - `image` (Required): The input image on which facial feature segmentation is to be performed. It is essential for identifying and extracting the facial features. Type should be `IMAGE`.
+        - `left_eye` (Required): A boolean indicating whether to include the left eye in the facial feature segmentation. This affects the output mask by including or excluding the left eye region. Type should be `BOOLEAN`.
+        - `left_eyebrow` (Required): A boolean indicating whether to include the left eyebrow in the segmentation. This choice influences the resulting mask by determining if the left eyebrow area is segmented. Type should be `BOOLEAN`.
+        - `right_eye` (Required): A boolean parameter that controls whether the right eye's region is included in the segmentation output. It affects the mask generation process by including or excluding the right eye. Type should be `BOOLEAN`.
+        - `right_eyebrow` (Required): Determines whether the right eyebrow is included in the facial feature segmentation. This parameter influences the mask creation by specifying if the right eyebrow area should be segmented. Type should be `BOOLEAN`.
+        - `lips` (Required): Indicates whether the lips should be segmented in the facial feature extraction. This parameter affects the output by including or excluding the lips in the generated mask. Type should be `BOOLEAN`.
+        - `tooth` (Required): Controls whether the teeth are included in the segmentation. This affects the final mask by determining if the teeth area is segmented. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The original image with facial features segmented based on the input parameters. Type should be `IMAGE`.
+        - `mask`: A mask image highlighting the segmented facial features. Each feature segmented based on the input parameters is represented in the mask. Type should be `MASK`.

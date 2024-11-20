@@ -1,0 +1,9 @@
+- `easy imagesSplitImage`: The `easy imagesSplitImage` node is designed to split a single image tensor into multiple segments, distributing the original image's content across several new image tensors. This operation facilitates the manipulation and analysis of image data by breaking it down into more manageable pieces.
+    - Inputs:
+        - `images` (Required): The `images` parameter represents the input image tensor that is to be split into multiple segments. This parameter is crucial for determining how the original image is divided and influences the resulting segmented images. Type should be `IMAGE`.
+    - Outputs:
+        - `image1`: Represents the first segment of the split image. Type should be `IMAGE`.
+        - `image2`: Represents the second segment of the split image. Type should be `IMAGE`.
+        - `image3`: Represents the third segment of the split image. Type should be `IMAGE`.
+        - `image4`: Represents the fourth segment of the split image. Type should be `IMAGE`.
+        - `image5`: Represents the fifth segment of the split image. Type should be `IMAGE`.

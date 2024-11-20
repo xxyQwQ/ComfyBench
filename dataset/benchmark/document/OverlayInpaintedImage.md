@@ -1,0 +1,7 @@
+- `OverlayInpaintedImage`: This node is designed to overlay an inpainted image onto another image, potentially within a specified crop region. It ensures that the overlay operation respects the dimensions and batch sizes of the input images, blending them seamlessly to produce a composite output.
+    - Inputs:
+        - `inpainted` (Required): The inpainted image tensor to be overlaid onto the base image. It plays a crucial role in the overlay process by providing the content that fills in the missing or altered parts of the original image. Type should be `IMAGE`.
+        - `overlay_image` (Required): The base image tensor onto which the inpainted image will be overlaid. This image serves as the backdrop for the inpainted content, integrating both to create a cohesive visual output. Type should be `IMAGE`.
+        - `crop_region` (Required): A tensor specifying the region within the base image where the inpainted image should be overlaid. This allows for precise control over the placement and integration of the inpainted content within the larger image context. Type should be `CROP_REGION`.
+    - Outputs:
+        - `image`: The resulting image tensor after overlaying the inpainted image onto the base image, within the specified crop region if applicable. This image combines the visual elements of both inputs in a unified manner. Type should be `IMAGE`.

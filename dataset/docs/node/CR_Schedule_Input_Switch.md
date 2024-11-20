@@ -1,9 +1,0 @@
-- `CR Schedule Input Switch`: This node allows for the dynamic selection between two input schedules based on a given integer input. It facilitates conditional scheduling within animations, enabling the switch from one schedule to another based on the specified condition.
-    - Parameters:
-        - `Input`: Determines which schedule to output based on its value. A value of 1 selects the first schedule, while any other value selects the second schedule. Type should be `INT`.
-    - Inputs:
-        - `schedule1`: The first schedule option that can be selected. Type should be `SCHEDULE`.
-        - `schedule2`: The second schedule option that can be selected. Type should be `SCHEDULE`.
-    - Outputs:
-        - `SCHEDULE`: Outputs the selected schedule based on the input condition. Type should be `SCHEDULE`.
-        - `show_help`: Provides a URL to the help documentation for this node. Type should be `STRING`.

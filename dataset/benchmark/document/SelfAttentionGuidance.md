@@ -1,0 +1,7 @@
+- `SelfAttentionGuidance`: This node enhances the self-attention mechanism within neural networks by recording and potentially modifying attention scores based on specific conditions. It aims to improve model performance and interpretability by providing insights into how different parts of the input are weighted during the attention process.
+    - Inputs:
+        - `model` (Required): The neural network model to which self-attention guidance will be applied. It is crucial for enabling the node to interact with and modify the model's attention mechanisms. Type should be `MODEL`.
+        - `scale` (Required): A scaling factor that adjusts the intensity of the attention modification. It plays a significant role in determining how much the original attention scores are altered. Type should be `FLOAT`.
+        - `blur_sigma` (Required): Specifies the standard deviation of the Gaussian blur applied to attention scores. This parameter influences the smoothness of the attention distribution, affecting the model's focus on input features. Type should be `FLOAT`.
+    - Outputs:
+        - `model`: The modified neural network model with enhanced self-attention mechanisms. This output reflects the adjustments made to the model's attention scores, aiming to improve focus and interpretability. Type should be `MODEL`.

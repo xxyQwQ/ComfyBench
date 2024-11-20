@@ -1,8 +1,0 @@
-- `Load Text File`: This node is designed to load text from a specified file, processing the text to exclude lines starting with specific characters and handling file path validations. It supports loading the entire file content or specific lines based on the mode selected, and maintains a history of loaded files and their respective lines for efficient data retrieval and manipulation.
-    - Parameters:
-        - `file_path`: The path to the text file to be loaded. It is crucial for locating and accessing the file's content. Type should be `STRING`.
-        - `dictionary_name`: An optional name for the dictionary key under which the loaded text lines will be stored. It defaults to the filename but can be customized. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `string`: The output includes the processed text line(s). Type should be `STRING`.
-        - `dict`: A dictionary mapping the dictionary name to the list of processed lines. Type should be `DICT`.

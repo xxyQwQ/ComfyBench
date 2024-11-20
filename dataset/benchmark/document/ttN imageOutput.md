@@ -1,0 +1,12 @@
+- `ttN imageOutput`: The `ttN_imageOutput` node is designed for image processing and output management within the ComfyUI tinyterraNodes framework. It encapsulates functionality for handling image outputs, including saving images with specific configurations, adjusting image visibility based on user-defined parameters, and potentially transforming images for further use. This node plays a crucial role in the workflow by providing flexible output options and integrating with other components for image manipulation and storage.
+    - Inputs:
+        - `image` (Required): The input image to be processed or managed by the node, serving as the primary data for output operations. Type should be `IMAGE`.
+        - `image_output` (Required): Specifies the desired output behavior for images, such as whether to display, hide, or save the images, influencing how the node processes and returns image data. Type should be `COMBO[STRING]`.
+        - `output_path` (Required): The file path where the image should be saved if the saving option is selected, providing a location for output storage. Type should be `STRING`.
+        - `save_prefix` (Required): A prefix added to the saved image filename, allowing for organized naming conventions. Type should be `STRING`.
+        - `number_padding` (Required): Determines the padding for numbering saved images, facilitating ordered file naming. Type should be `COMBO[STRING]`.
+        - `file_type` (Required): The file type for the saved image, such as PNG or JPEG, defining the format of the output file. Type should be `COMBO[STRING]`.
+        - `overwrite_existing` (Required): A boolean indicating whether existing files with the same name should be overwritten, controlling file management behavior. Type should be `BOOLEAN`.
+        - `embed_workflow` (Required): Indicates whether the workflow metadata should be embedded within the image file, enhancing traceability. Type should be `BOOLEAN`.
+    - Outputs:
+        - `image`: The processed image, returned based on the specified image output behavior. Type should be `IMAGE`.

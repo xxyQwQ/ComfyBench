@@ -1,7 +1,0 @@
-- `DenoiseSchedulerDetailerHookProvider`: This node provides a mechanism to dynamically adjust denoising levels throughout the generation cycle based on a predefined schedule. It aims to enhance image detail and quality by fine-tuning denoise parameters at different stages of the image generation process.
-    - Parameters:
-        - `schedule_for_cycle`: Specifies the scheduling strategy for adjusting denoise levels throughout the generation cycle. It determines how denoise levels are modified over time to achieve optimal image quality. Type should be `COMBO[STRING]`.
-        - `target_denoise`: The target denoise level to achieve by the end of the generation cycle. This parameter sets the goal for the dynamic adjustment of denoise levels, influencing the final image detail and quality. Type should be `FLOAT`.
-    - Inputs:
-    - Outputs:
-        - `detailer_hook`: Produces a detailer hook that is used to dynamically adjust denoise levels throughout the image generation cycle, based on the specified schedule and target denoise level. Type should be `DETAILER_HOOK`.

@@ -1,0 +1,16 @@
+- `Asymmetric Tiled KSampler`: This node specializes in generating samples through a tiling approach that allows for asymmetric adjustments to the tiling pattern. It modifies the convolutional layers of a model to use circular or constant padding based on the tiling configuration, enabling more flexible and potentially more aesthetically pleasing image generation.
+    - Inputs:
+        - `model` (Required): The model parameter represents the generative model to be used for sampling. It is crucial as it defines the architecture and parameters that will be adjusted for asymmetric tiling during the sampling process. Type should be `MODEL`.
+        - `seed` (Required): The seed parameter ensures reproducibility of the sampling process by initializing the random number generator to a specific state. Type should be `INT`.
+        - `tileX` (Required): The tileX parameter controls the horizontal tiling behavior, allowing for circular or constant padding to be applied asymmetrically. Type should be `INT`.
+        - `tileY` (Required): The tileY parameter controls the vertical tiling behavior, complementing tileX by enabling asymmetric padding adjustments in the vertical direction. Type should be `INT`.
+        - `steps` (Required): The steps parameter determines the number of iterations the sampling process will undergo, affecting the detail and quality of the generated sample. Type should be `INT`.
+        - `cfg` (Required): The cfg parameter adjusts the conditioning factor, influencing the strength of the conditioning signal during the sampling process. Type should be `FLOAT`.
+        - `sampler_name` (Required): The sampler_name parameter specifies the sampling algorithm to be used, impacting the characteristics of the generated sample. Type should be `COMBO[STRING]`.
+        - `scheduler` (Required): The scheduler parameter selects the scheduling algorithm for controlling the sampling process, affecting the progression of sampling steps. Type should be `COMBO[STRING]`.
+        - `positive` (Required): The positive parameter provides positive conditioning information, guiding the sampling process towards desired attributes. Type should be `CONDITIONING`.
+        - `negative` (Required): The negative parameter provides negative conditioning information, steering the sampling process away from undesired attributes. Type should be `CONDITIONING`.
+        - `latent_image` (Required): The latent_image parameter represents the initial state in the latent space from which the sampling process begins. Type should be `LATENT`.
+        - `denoise` (Required): The denoise parameter controls the level of denoising applied during the sampling process, affecting the clarity and smoothness of the generated sample. Type should be `FLOAT`.
+    - Outputs:
+        - `latent`: The output is a modified latent representation, reflecting the asymmetric tiling adjustments and sampling process. Type should be `LATENT`.

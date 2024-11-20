@@ -1,6 +1,0 @@
-- `SamplerLMS`: The SamplerLMS node provides a mechanism to generate a sampler based on the LMS (Least Mean Squares) algorithm, allowing for the customization of the sampling process through the adjustment of the order parameter. This node is designed to facilitate the creation of samplers that utilize the LMS method for applications within custom sampling strategies.
-    - Parameters:
-        - `order`: The 'order' parameter specifies the order of the LMS algorithm used in the sampling process. Adjusting this parameter allows for the tuning of the sampler's behavior, impacting the quality and characteristics of the generated samples. Type should be `INT`.
-    - Inputs:
-    - Outputs:
-        - `sampler`: This output represents a sampler configured according to the LMS algorithm and the specified order parameter. It is ready to be used in sampling tasks within the framework. Type should be `SAMPLER`.

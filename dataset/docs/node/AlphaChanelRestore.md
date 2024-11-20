@@ -1,6 +1,0 @@
-- `AlphaChanelRestore`: The AlphaChanelRestore node is designed to process images by ensuring they all have an alpha channel, effectively restoring or adding an alpha channel to images that lack one. This operation is crucial for maintaining consistency in image data, especially when working with image processing pipelines that require images to have a uniform number of channels.
-    - Parameters:
-    - Inputs:
-        - `images`: The 'images' input represents the batch of images to be processed. It is essential for determining which images lack an alpha channel and subsequently adding one to ensure all images in the batch have four channels. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is a batch of images with an alpha channel added where necessary, ensuring all images have four channels. Type should be `IMAGE`.

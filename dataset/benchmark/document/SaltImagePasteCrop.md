@@ -1,0 +1,10 @@
+- `SaltImagePasteCrop`: The SaltImagePasteCrop node specializes in blending and sharpening operations for image processing within a batch context. It seamlessly integrates crop images into target images, applying specified blending and sharpening parameters to achieve a visually cohesive result.
+    - Inputs:
+        - `images` (Required): A batch of target images to which crop images will be applied. This parameter is crucial for defining the base images that will undergo the paste and crop operations. Type should be `IMAGE`.
+        - `crop_images` (Required): A batch of crop images that will be pasted onto the target images. This parameter is essential for supplying the images that will be integrated into the target images using blending and sharpening techniques. Type should be `IMAGE`.
+        - `crop_data_batch` (Required): Optional batch of crop data providing specific instructions for each pasting operation, including position and size. When provided, it enables precise control over the pasting process. Type should be `CROP_DATA_BATCH`.
+        - `crop_blending` (Required): The blending factor to be used when integrating crop images into the target images, controlling the blend's intensity. Type should be `FLOAT`.
+        - `crop_sharpening` (Required): The amount of sharpening to apply to the crop images before pasting, enhancing image details. Type should be `INT`.
+    - Outputs:
+        - `images`: A batch of images resulting from the pasting and cropping operations, with applied blending and sharpening effects. Type should be `IMAGE`.
+        - `masks`: A batch of mask images corresponding to the areas affected by the pasting and cropping operations in the target images. Type should be `IMAGE`.

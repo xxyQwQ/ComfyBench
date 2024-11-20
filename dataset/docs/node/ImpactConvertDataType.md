@@ -1,9 +1,0 @@
-- `ImpactConvertDataType`: The ImpactConvertDataType node is designed to convert a given input value into multiple data types, including string, float, integer, and boolean, based on the input's nature and content. This conversion facilitates the handling and processing of data across different formats within the ImpactPack/Logic category.
-    - Parameters:
-    - Inputs:
-        - `value`: The 'value' parameter is the input that will be converted into multiple data types. Its nature and content determine the outcome of the conversion, affecting the node's execution and results. Type should be `*`.
-    - Outputs:
-        - `string`: Represents the input value converted to a string format. Type should be `STRING`.
-        - `float`: Represents the input value converted to a float format, with numerical inputs directly converted and non-numerical inputs interpreted as boolean values before conversion. Type should be `FLOAT`.
-        - `int`: Represents the input value converted to an integer format, following the same conversion logic as for the float type. Type should be `INT`.
-        - `boolean`: Represents the input value converted to a boolean format, with numerical values interpreted based on their truthiness and non-numerical values based on specific string interpretations. Type should be `BOOLEAN`.

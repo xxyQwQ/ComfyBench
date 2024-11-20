@@ -1,0 +1,15 @@
+- `CreateTextOnPath`: This node is designed to create text along a specified path, allowing for dynamic text placement and styling in graphical applications. It enables the precise alignment and orientation of text to follow complex curves or shapes, enhancing the visual appeal and readability of text in graphical interfaces or designs.
+    - Inputs:
+        - `coordinates` (Required): Specifies the path along which the text will be created. This is crucial for determining the trajectory of the text alignment and placement. Type should be `STRING`.
+        - `text` (Required): The text to be placed along the path. This input is crucial for defining the content that will be visually represented in the design. Type should be `STRING`.
+        - `frame_width` (Required): Defines the width of the frame within which the text is to be placed. It affects the scaling and positioning of the text relative to the path. Type should be `INT`.
+        - `frame_height` (Required): Defines the height of the frame within which the text is to be placed. It affects the scaling and positioning of the text relative to the path. Type should be `INT`.
+        - `font` (Required): Specifies the font used for the text. This input is essential for customizing the appearance of the text to match design requirements. Type should be `COMBO[STRING]`.
+        - `font_size` (Required): Determines the size of the font. This is key to ensuring the text is legible and aesthetically pleasing when placed along the path. Type should be `INT`.
+        - `alignment` (Required): Defines the alignment of the text relative to the path. This is important for controlling how the text is positioned and oriented along the path. Type should be `COMBO[STRING]`.
+        - `text_color` (Required): Specifies the color of the text. This input allows for the customization of the text's visual appearance to fit the overall design. Type should be `STRING`.
+        - `size_multiplier` (Optional): Affects the overall size of the text, allowing for dynamic scaling based on design needs. Type should be `FLOAT`.
+    - Outputs:
+        - `image`: The generated image with text placed along the specified path, adhering to the input style and content requirements. Type should be `IMAGE`.
+        - `mask`: A mask representing the area of the image where text has been placed, useful for further image processing steps. Type should be `MASK`.
+        - `mask_inverted`: An inverted mask of the text area, indicating where text has not been placed, which can be useful for additional processing or effects. Type should be `MASK`.

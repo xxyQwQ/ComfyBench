@@ -1,0 +1,14 @@
+- `MikeyLatentTileSamplerCustom`: This node is designed to handle custom operations on latent tiles within a generative model's framework. It likely extends or modifies the functionality of standard latent tile sampling processes to accommodate specific requirements or optimizations not covered by the default implementations.
+    - Inputs:
+        - `model` (Required): Specifies the generative model to be used for sampling, affecting the characteristics and quality of the generated latent tiles. Type should be `MODEL`.
+        - `add_noise` (Required): Determines whether noise should be added to the latent tiles, influencing their variability and potentially enhancing their uniqueness. Type should be `BOOLEAN`.
+        - `noise_seed` (Required): Sets the seed for noise generation, ensuring reproducibility or variability in the added noise effects on the latent tiles. Type should be `INT`.
+        - `cfg` (Required): Controls the conditioning factor, adjusting the influence of the conditioning on the generation process. Type should be `FLOAT`.
+        - `positive` (Required): Positive conditioning to guide the generation towards desired attributes or features. Type should be `CONDITIONING`.
+        - `negative` (Required): Negative conditioning to steer the generation away from undesired attributes or features. Type should be `CONDITIONING`.
+        - `sampler` (Required): Specifies the sampling algorithm to be used, impacting the approach to navigating the latent space. Type should be `SAMPLER`.
+        - `sigmas` (Required): Defines the range of noise levels to be applied, affecting the diversity of the generated results. Type should be `SIGMAS`.
+        - `latent_image` (Required): The initial latent image to be processed, serving as the starting point for generation. Type should be `LATENT`.
+        - `tile_size` (Required): Determines the size of the tiles to be generated, affecting the granularity of the output. Type should be `INT`.
+    - Outputs:
+        - `samples`: Represents the generated latent tiles, showcasing the results of the sampling process with applied conditions and modifications. Type should be `LATENT`.

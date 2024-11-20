@@ -1,0 +1,9 @@
+- `IG Float List`: The IG Float List node is designed for parsing and organizing lists of floating-point numbers from string inputs. It enables precise control over the representation of these numbers, including the selection of specific elements based on index and the formatting of the entire list to a specified number of decimal places. This functionality is essential for tasks that require manipulation and detailed examination of numerical data within a user interface.
+    - Inputs:
+        - `index` (Required): Specifies the position in the float list from which a single float value will be returned. It plays a crucial role in selecting specific elements for further operations or display. Type should be `INT`.
+        - `decimal_places` (Required): Determines the number of decimal places to which the float values in the list will be formatted. This allows for precise control over the numerical representation, affecting both the output's appearance and its numerical accuracy. Type should be `INT`.
+        - `float_list` (Required): The string input containing the list of floats, separated by common delimiters. This input is parsed to create a list of float values, which are then processed according to the specified parameters. Type should be `STRING`.
+    - Outputs:
+        - `current value`: The float value at the specified index within the list. It provides direct access to individual elements, facilitating detailed numerical analysis. Type should be `FLOAT`.
+        - `list`: The list of parsed float values. This output offers a structured representation of the input data, enabling further numerical operations or analysis. Type should be `FLOAT`.
+        - `list text`: A list of strings representing the float values formatted to the specified number of decimal places. This output is useful for displaying numerical data in a user-friendly format. Type should be `STRING_LIST`.

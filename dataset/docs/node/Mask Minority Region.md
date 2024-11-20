@@ -1,7 +1,0 @@
-- `Mask Minority Region`: The Mask Minority Region node is designed to identify and process the minority regions within given mask images, applying a threshold to distinguish between major and minor areas. This functionality is crucial for tasks requiring focus on less dominant features within images, such as isolating specific objects or areas that occupy a smaller portion of the visual space.
-    - Parameters:
-        - `threshold`: The 'threshold' parameter sets the boundary for distinguishing between majority and minority regions within the mask images. It plays a critical role in defining which areas are considered minor and thus subject to further processing. Type should be `INT`.
-    - Inputs:
-        - `masks`: The 'masks' parameter represents the input mask images on which the minority region identification and processing will be performed. It is essential for determining the areas to be isolated based on their dominance within the image. Type should be `MASK`.
-    - Outputs:
-        - `MASKS`: The output is a tensor representing the processed mask images, where the minority regions have been isolated and emphasized, ready for further analysis or manipulation. Type should be `MASK`.

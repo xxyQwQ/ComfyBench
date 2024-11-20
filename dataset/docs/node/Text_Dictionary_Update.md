@@ -1,9 +1,0 @@
-- `Text Dictionary Update`: This node is designed to merge multiple dictionaries into a single dictionary, allowing for the combination of key-value pairs from each input dictionary. It's particularly useful in scenarios where consolidating data from various sources into a unified format is required.
-    - Parameters:
-    - Inputs:
-        - `dictionary_a`: The primary dictionary to be updated. Acts as the base for the merge operation. Type should be `DICT`.
-        - `dictionary_b`: The second dictionary whose key-value pairs are added to the primary dictionary. Type should be `DICT`.
-        - `dictionary_c`: An optional third dictionary to merge. Its key-value pairs are added to the resulting dictionary if provided. Type should be `DICT`.
-        - `dictionary_d`: An optional fourth dictionary to merge. Its key-value pairs are added to the resulting dictionary if provided. Type should be `DICT`.
-    - Outputs:
-        - `dict`: The resulting dictionary after merging the input dictionaries. Contains the combined key-value pairs from all provided dictionaries. Type should be `DICT`.

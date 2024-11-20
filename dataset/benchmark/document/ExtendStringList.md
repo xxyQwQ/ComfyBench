@@ -1,0 +1,5 @@
+- `ExtendStringList`: The ExtendStringList node is designed to concatenate multiple lists of strings into a single, extended list. This node is particularly useful in scenarios where aggregation of string data from various sources is required, facilitating operations that involve the manipulation or analysis of collective string datasets.
+    - Inputs:
+        - `inputs_len` (Required): Specifies the number of string lists to be concatenated. This parameter determines how many string lists will be combined into the extended list. Type should be `INT`.
+    - Outputs:
+        - `string`: The resulting list after concatenating all provided string lists. This list contains all strings from the input lists in their respective order. Type should be `STRING`.

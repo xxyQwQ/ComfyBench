@@ -1,0 +1,5 @@
+- `SegsToCombinedMask`: This node is designed to transform a collection of segmented objects (segs) into a single, combined mask. It effectively merges individual segment masks into a unified mask representation, facilitating operations that require a holistic view of all segments within an image.
+    - Inputs:
+        - `segs` (Required): The 'segs' parameter represents a collection of segmented objects. It is crucial for defining the segments to be combined into a single mask, affecting the overall composition and appearance of the resulting mask. Type should be `SEGS`.
+    - Outputs:
+        - `mask`: The output is a tensor representation of the combined mask, where the individual segment masks have been merged into a unified mask. This mask is suitable for further processing or analysis. Type should be `MASK`.

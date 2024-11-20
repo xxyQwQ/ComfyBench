@@ -1,0 +1,6 @@
+- `SaltAudioStereoMerge`: This node merges two mono audio inputs into a single stereo audio output, ensuring that each input occupies one channel of the stereo output. It is designed to work with audio files in WAV format, automatically adjusting the channels of the inputs to mono if necessary and aligning their lengths before merging.
+    - Inputs:
+        - `audio_a` (Required): The first mono audio input to be merged into the stereo output. It occupies the left channel of the resulting stereo audio. Type should be `AUDIO`.
+        - `audio_b` (Required): The second mono audio input to be merged into the stereo output. It occupies the right channel of the resulting stereo audio. Type should be `AUDIO`.
+    - Outputs:
+        - `audio`: The resulting stereo audio output, with the first input occupying the left channel and the second input occupying the right channel. Type should be `AUDIO`.

@@ -1,0 +1,6 @@
+- `LayerFilter_ GaussianBlur`: The GaussianBlur node applies a Gaussian blur filter to images, effectively smoothing them by reducing high-frequency noise and details. This node is part of the LayerFilter category, focusing on enhancing or modifying the visual appearance of images through blurring techniques.
+    - Inputs:
+        - `image` (Required): The 'image' parameter represents the input image(s) to be blurred. It is crucial for defining the visual content that will undergo the Gaussian blur transformation. Type should be `IMAGE`.
+        - `blur` (Required): The 'blur' parameter specifies the intensity of the Gaussian blur effect. A higher value results in a more pronounced blurring effect, directly influencing the smoothness of the output image. Type should be `INT`.
+    - Outputs:
+        - `image`: The output 'image' parameter is the result of applying the Gaussian blur filter to the input image(s), showcasing the transformed visual content with reduced noise and details. Type should be `IMAGE`.

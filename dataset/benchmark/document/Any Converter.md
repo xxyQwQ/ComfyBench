@@ -1,0 +1,15 @@
+- `Any Converter`: The Any Converter node is designed to facilitate type conversion and processing of various input types, including integers, floats, numbers, strings, and seeds. It primarily serves to normalize and convert input data into multiple formats, ensuring compatibility and utility across different processing scenarios. This node is particularly useful in scenarios where dynamic type handling and conversion are required, providing a versatile tool for data manipulation and preparation.
+    - Inputs:
+        - `int_` (Optional): An optional integer input that, if provided, is directly used as the value for conversion. It plays a crucial role in determining the output when present, overriding other inputs except for 'str_' if it is valid. Type should be `INT`.
+        - `float_` (Optional): An optional floating-point input that is used for conversion if 'int_' is not provided. It allows for decimal values to be included in the conversion process, adding flexibility in handling numerical data. Type should be `FLOAT`.
+        - `number_` (Optional): A generic numerical input that is used for conversion if neither 'int_' nor 'float_' are provided. It offers a broader range of numerical input handling, accommodating various formats. Type should be `NUMBER`.
+        - `string_` (Optional): An optional string input that, if valid, is converted into multiple formats including integer, float, and seed. This input significantly expands the node's versatility by allowing text-based numerical conversion. Type should be `STRING`.
+        - `seed_` (Optional): An optional seed input provided as a dictionary, used for conversion if no other inputs are valid. It extracts the 'seed' value for conversion, demonstrating the node's capability to handle structured input. Type should be `SEED`.
+        - `str_` (Optional): An alternative string input that can be used for conversion, similar to 'string_'. If valid, it takes precedence over other inputs except for 'int_', showcasing the node's flexibility in input prioritization. Type should be `STR`.
+    - Outputs:
+        - `int`: The converted integer value from the input. Type should be `INT`.
+        - `float`: The converted floating-point value from the input, provided twice for compatibility. Type should be `FLOAT`.
+        - `number`: The converted numerical value from the input, identical to 'float' for consistency. Type should be `NUMBER`.
+        - `string`: The original or converted string representation of the input. Type should be `STRING`.
+        - `seed`: A dictionary containing the converted integer value under the key 'seed', demonstrating the node's ability to output structured data. Type should be `SEED`.
+        - `str`: The original or converted string input, ensuring textual data is preserved or transformed as needed. Type should be `STR`.

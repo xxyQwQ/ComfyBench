@@ -1,5 +1,0 @@
-- `Get Models`: The 'Get Models' node is designed to facilitate the retrieval and organization of various model-related files within a specified directory. It supports a range of model types and configurations, allowing users to dump a comprehensive list or specific categories of models into a JSON file for easy access and management.
-    - Parameters:
-        - `dump`: Specifies the category of models to retrieve. It can be a specific model type like 'clip' or 'vae', or 'all models' to retrieve every available model. This selection dictates the scope of the dump operation, tailoring the output to the user's needs. Type should be `COMBO[STRING]`.
-    - Inputs:
-    - Outputs:

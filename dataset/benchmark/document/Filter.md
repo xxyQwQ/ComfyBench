@@ -1,0 +1,7 @@
+- `Filter`: The Filter node is designed to selectively process data based on specific criteria, allowing for the refinement and extraction of relevant information from a dataset. It focuses on evaluating and filtering input data to meet defined conditions, thereby enabling targeted data analysis and manipulation.
+    - Inputs:
+        - `in_question` (Required): Serves as the primary query or condition for filtering, determining the focus of data processing. Type should be `STRING`.
+        - `wordlist` (Required): A list of words or terms used as criteria for filtering the data, aiding in the refinement of results. Type should be `STRING`.
+        - `safeword` (Required): A specific term or flag that ensures certain data is preserved or excluded from filtering, enhancing control over the output. Type should be `STRING`.
+    - Outputs:
+        - `string`: The result of the filtering process, typically a subset of the input data that meets the defined criteria. Type should be `STRING`.

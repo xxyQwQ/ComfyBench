@@ -1,9 +1,0 @@
-- `MiDaS-DepthMapPreprocessor`: This node preprocesses images to generate depth maps using the MiDaS model, enhancing the perception of depth in images for further processing or visualization.
-    - Parameters:
-        - `a`: The 'a' parameter adjusts the depth estimation sensitivity, influencing the depth map's perception of distance and depth. Type should be `FLOAT`.
-        - `bg_threshold`: The 'bg_threshold' parameter sets the threshold for background separation, aiding in distinguishing between foreground and background elements in the depth map. Type should be `FLOAT`.
-        - `resolution`: The 'resolution' parameter specifies the resolution at which the depth map should be generated, affecting the detail and quality of the output. Type should be `INT`.
-    - Inputs:
-        - `image`: The 'image' parameter is the input image to be processed for depth map generation, serving as the primary data for depth estimation. Type should be `IMAGE`.
-    - Outputs:
-        - `image`: The output is an image representing the depth map, where pixel intensity corresponds to the estimated depth from the camera perspective. Type should be `IMAGE`.

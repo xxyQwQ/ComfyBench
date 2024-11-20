@@ -1,0 +1,12 @@
+- `CR Text Replace`: This node allows for the replacement of specified substrings within a given text with new substrings. It supports up to three distinct find-and-replace operations within a single execution, making it a versatile tool for text manipulation and content editing.
+    - Inputs:
+        - `text` (Required): The primary text in which the replacements will be made. It serves as the foundational content for the node's operation. Type should be `STRING`.
+        - `find1` (Optional): The first substring to be searched for within the primary text. If found, it will be replaced with 'replace1'. Type should be `STRING`.
+        - `replace1` (Optional): The replacement for the first found substring 'find1' within the primary text. Type should be `STRING`.
+        - `find2` (Optional): The second substring to be searched for within the primary text. If found, it will be replaced with 'replace2'. Type should be `STRING`.
+        - `replace2` (Optional): The replacement for the second found substring 'find2' within the primary text. Type should be `STRING`.
+        - `find3` (Optional): The third substring to be searched for within the primary text. If found, it will be replaced with 'replace3'. Type should be `STRING`.
+        - `replace3` (Optional): The replacement for the third found substring 'find3' within the primary text. Type should be `STRING`.
+    - Outputs:
+        - `STRING`: The modified text after all specified replacements have been made. Type should be `*`.
+        - `show_help`: A URL providing additional information and documentation about the node. Type should be `STRING`.

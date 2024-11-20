@@ -1,7 +1,0 @@
-- `LLMPptxReader`: The LLMPptxReader node is designed to read Microsoft PowerPoint (PPTX) files and convert them into a format that can be processed by llama_index, potentially including the interpretation of images within the documents.
-    - Parameters:
-        - `path`: Specifies the file path to the PowerPoint (PPTX) file to be read. This is essential for locating and accessing the file for processing. Type should be `STRING`.
-        - `extra_info`: Provides additional information or instructions in a string format, which can be used to influence how the document is read or processed. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `documents`: Outputs the content of the PowerPoint file as a document in a format compatible with llama_index. Type should be `DOCUMENT`.

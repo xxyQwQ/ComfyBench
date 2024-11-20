@@ -1,6 +1,0 @@
-- `Load 64 Encoded Image`: The LoadImage64 node is designed to decode and load images from base64-encoded strings, converting them into a tensor format suitable for further image processing tasks. This functionality facilitates the handling of images transmitted over networks where binary data needs to be encoded into a string format.
-    - Parameters:
-        - `image_code`: The 'image_code' parameter is a base64-encoded string representing an image. It is crucial for decoding the image back into a tensor format for processing. This parameter enables the node to handle images transmitted in a text-based format, making it versatile for various network-based image handling scenarios. Type should be `STRING`.
-    - Inputs:
-    - Outputs:
-        - `image`: The output is a tensor representation of the decoded image, ready for further processing in image-related tasks. This tensor encapsulates the image data in a format that is compatible with deep learning models and other image processing operations. Type should be `IMAGE`.

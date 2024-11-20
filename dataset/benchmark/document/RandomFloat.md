@@ -1,0 +1,7 @@
+- `RandomFloat`: The RandomFloat node generates a random floating-point number within a specified range. It abstracts the complexity of random number generation using PyTorch's capabilities to provide a simple interface for obtaining a random float, which can be used in various applications requiring stochastic behavior.
+    - Inputs:
+        - `min` (Required): Specifies the minimum value in the range from which the random float will be generated. It sets the lower bound for the random number, ensuring that the output is not less than this value. Type should be `FLOAT`.
+        - `max` (Required): Defines the maximum value in the range for the random float generation. It acts as the upper limit, guaranteeing that the generated number does not exceed this value. Type should be `FLOAT`.
+    - Outputs:
+        - `float`: The generated random floating-point number. Type should be `FLOAT`.
+        - `string`: The string representation of the generated random floating-point number. Type should be `STRING`.

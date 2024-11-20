@@ -1,0 +1,5 @@
+- `ImpactSEGSConcat`: The ImpactSEGSConcat node is designed to concatenate multiple segmentation data structures (SEGS) into a single SEGS structure. It ensures that all concatenated segments have the same dimensions and combines them accordingly, handling discrepancies by ignoring incompatible segments.
+    - Inputs:
+        - `segs1` (Required): Represents the first set of segmentation data structures to be concatenated. It is crucial for combining multiple SEGS into a single structure, ensuring they share the same dimensions for successful concatenation. Type should be `SEGS`.
+    - Outputs:
+        - `segs`: The output is a single SEGS data structure that combines the input SEGS structures, ensuring they share the same dimensions. It may return an empty SEGS if no compatible segments are found. Type should be `SEGS`.

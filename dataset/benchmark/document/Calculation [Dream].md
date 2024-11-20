@@ -1,0 +1,12 @@
+- `Calculation [Dream]`: The Calculation node is designed to dynamically evaluate mathematical expressions based on user-defined variables and constants. It allows for the flexible computation of results by interpreting and executing a given expression with the ability to incorporate both integer and floating-point numbers.
+    - Inputs:
+        - `expression` (Required): Defines the mathematical expression to be evaluated. This expression can include variables and arithmetic operations, serving as the blueprint for the calculation. Type should be `STRING`.
+        - `a_int` (Optional): Represents an integer variable 'a' that can be used within the expression. Its value influences the outcome of the calculation. Type should be `INT`.
+        - `b_int` (Optional): Represents an integer variable 'b' that can be used within the expression. Its value influences the outcome of the calculation. Type should be `INT`.
+        - `c_int` (Optional): Represents an integer variable 'c' that can be used within the expression. Its value influences the outcome of the calculation. Type should be `INT`.
+        - `r_float` (Optional): Represents a floating-point variable 'r' that can be used within the expression. Its value influences the outcome of the calculation. Type should be `FLOAT`.
+        - `s_float` (Optional): Represents a floating-point variable 's' that can be used within the expression. Its value influences the outcome of the calculation. Type should be `FLOAT`.
+        - `t_float` (Optional): Represents a floating-point variable 't' that can be used within the expression. Its value influences the outcome of the calculation. Type should be `FLOAT`.
+    - Outputs:
+        - `FLOAT`: The floating-point result of the evaluated expression. Type should be `FLOAT`.
+        - `INT`: The integer result of the evaluated expression, obtained by rounding the floating-point result. Type should be `INT`.

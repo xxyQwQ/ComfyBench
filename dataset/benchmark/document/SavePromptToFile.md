@@ -1,0 +1,8 @@
+- `SavePromptToFile`: The SavePromptToFile node is designed to save various components of a prompt, including positive and negative aspects, into a text file. It handles the creation of a unique filename based on the prompt content or a provided prefix, ensuring the saved file is easily identifiable and organized within a specified directory.
+    - Inputs:
+        - `filename_prefix` (Required): An optional prefix for the filename, allowing for custom organization or identification of the file within the output directory. Type should be `STRING`.
+        - `positive_prompt` (Required): The main prompt text to be saved. It serves as the primary content for the file and influences the generation of the filename if no prefix is provided. Type should be `STRING`.
+        - `negative_prompt` (Required): The negative aspects of the prompt to be saved, providing a contrast or alternative perspective to the positive prompt. Type should be `STRING`.
+        - `prompt_g` (Optional): An optional granular component of the prompt, saved additionally if provided. Type should be `STRING`.
+        - `prompt_l` (Optional): Another optional granular component of the prompt, saved if present to add more context or detail. Type should be `STRING`.
+    - Outputs:

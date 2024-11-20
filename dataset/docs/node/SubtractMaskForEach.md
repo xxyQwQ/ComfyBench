@@ -1,7 +1,0 @@
-- `SubtractMaskForEach`: This node is designed to perform a bitwise subtraction operation on masks for each frame or segment within a given dataset. It aims to identify and isolate changes or differences between consecutive frames or segments by subtracting one mask from another, thereby facilitating the analysis of temporal or spatial variations in the data.
-    - Parameters:
-    - Inputs:
-        - `base_segs`: This parameter represents the base segments from which the mask segments will be subtracted. It serves as the reference point for the subtraction operation, highlighting areas present in these segments but not in the mask segments. Type should be `SEGS`.
-        - `mask_segs`: The mask segments to be subtracted from the base segments. These segments represent the changes or additional areas not present in the base segments, and their subtraction helps in isolating these differences. Type should be `SEGS`.
-    - Outputs:
-        - `segs`: The result of the bitwise subtraction between the base segments and mask segments, highlighting the differences or changes between them. This output is crucial for analyzing temporal or spatial variations within the dataset. Type should be `SEGS`.

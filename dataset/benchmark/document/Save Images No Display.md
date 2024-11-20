@@ -1,0 +1,14 @@
+- `Save Images No Display`: This node is designed to save images without displaying them in the UI, extending the functionality of its parent class to focus on backend image processing and storage.
+    - Inputs:
+        - `images` (Required): The images to be saved; central to the node's operation as it determines the content to be stored. Type should be `IMAGE`.
+        - `sub_directory` (Required): Specifies the sub-directory path where images will be saved, influencing the organization of saved images. Type should be `STRING`.
+        - `filename_text_i` (Required): Part of the filename composition, contributing to a customizable naming convention for saved images. This represents a series of filename components (filename_text_1, filename_text_2, filename_text_3) allowing for extensive customization. Type should be `STRING`.
+        - `filename_separator` (Required): Defines the separator used between filename components, affecting the readability and structure of filenames. Type should be `STRING`.
+        - `timestamp` (Required): Timestamp information to be included in the filename, providing temporal context to the saved images. Type should be `COMBO[STRING]`.
+        - `counter_type` (Required): Determines the type of counter used in the filename, aiding in the unique identification of each saved image. Type should be `COMBO[STRING]`.
+        - `filename_text_i_pos` (Required): Positional information for the text components in the filename, influencing the naming order. This represents a series of positions (filename_text_1_pos, filename_text_2_pos, filename_text_3_pos) for each text component. Type should be `INT`.
+        - `timestamp_pos` (Required): Specifies the position of the timestamp in the filename, affecting the overall naming convention. Type should be `INT`.
+        - `timestamp_type` (Required): Indicates the format of the timestamp used in the filename, providing clarity on the temporal information's presentation. Type should be `COMBO[STRING]`.
+        - `counter_pos` (Required): Positional information for the counter in the filename, contributing to the unique identification of each image. Type should be `INT`.
+        - `extra_metadata` (Required): Allows for the inclusion of extra metadata in the saved images, enriching the information associated with each file. Type should be `STRING`.
+    - Outputs:

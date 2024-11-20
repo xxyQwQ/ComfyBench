@@ -1,7 +1,0 @@
-- `RegionalPrompt`: The RegionalPrompt node is designed to generate regional prompts based on a given mask and an advanced sampler. It focuses on creating specific prompts that are tailored to particular regions of an image, enhancing the customization and precision of image generation tasks.
-    - Parameters:
-    - Inputs:
-        - `mask`: The mask parameter specifies the area of interest within an image for which the regional prompt will be generated. It plays a crucial role in defining the scope and focus of the prompt generation process. Type should be `MASK`.
-        - `advanced_sampler`: The advanced_sampler parameter is utilized to apply sophisticated sampling techniques for generating the regional prompt. It significantly influences the quality and characteristics of the generated prompt. Type should be `KSAMPLER_ADVANCED`.
-    - Outputs:
-        - `regional_prompts`: This output consists of regional prompts generated based on the specified mask and advanced sampler. It's essential for subsequent image generation or manipulation tasks. Type should be `REGIONAL_PROMPTS`.

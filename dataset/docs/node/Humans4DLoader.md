@@ -1,7 +1,0 @@
-- `Humans4DLoader`: The Humans4DLoader node is designed to load and prepare 4D human models for further processing or analysis. It handles the downloading of necessary models and configurations, setting up the models for execution, and ensuring they are ready for use in tasks such as motion analysis or 3D reconstruction.
-    - Parameters:
-        - `detector`: Specifies the detector model to be used for identifying humans in images. The choice of detector can influence the accuracy and performance of human detection. Type should be `COMBO[STRING]`.
-        - `fp16`: Indicates whether to use half-precision floating-point format (FP16) for the model, potentially improving performance on compatible hardware. Type should be `BOOLEAN`.
-    - Inputs:
-    - Outputs:
-        - `human4d_model`: The output is a structured object containing the loaded 4D human model, its configuration, and the detector, ready for further processing. Type should be `HUMAN4D_MODEL`.
