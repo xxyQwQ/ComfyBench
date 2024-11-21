@@ -53,7 +53,9 @@ pip install -r requirements.txt
 
 Finally, modify `config.yaml` to set your ComfyUI server and API key. Feel free to change proxies and models if necessary.
 
-⚠️ The correct execution of the workflows relies on a consistent ComfyUI environment, so you have to manually install all the necessary models and extensions in ComfyUI. Despite some models can be automatically installed, other models need to be manually downloaded and placed in the specific directory. You may find them by yourself on [Hugging Face](https://huggingface.co/) or directly download from our [Cloud Drive](https://pan.baidu.com/s/1z83-XnoHcnMz6y0At2i_iw?pwd=1120). Besides, we provide a list of extensions in `assets/extension.md` so that you can install them manually. Some extensions may not be used, but installing them would be harmless. You can verify the completeness of your ComfyUI environment by importing and executing the workflows in `dataset/benchmark/workflow`.
+⚠️ Before executing the workflows, prepare your ComfyUI with necessary models and extensions.
+
+Despite some models can be automatically installed, other models need to be manually downloaded and placed in the specific directory. You may find them by yourself on [Hugging Face](https://huggingface.co/) or directly download from our [Cloud Drive](https://pan.baidu.com/s/1z83-XnoHcnMz6y0At2i_iw?pwd=1120). Besides, we provide a list of extensions in `assets/extension.md` so that you can install them manually. You can verify the completeness with the workflows in `dataset/benchmark/workflow`.
 
 ## 🚀 ComfyAgent Execution
 
@@ -101,7 +103,7 @@ In this example, the log files and generated workflows will be saved in `cache/b
 
 ## 🎬 Gallery
 
-Here are some examples of results produced by ComfyAgent on ComfyBench. Visit our [Project Page](https://xxyqwq.github.io/ComfyBench) for more details.
+Here are some examples of the results produced by ComfyAgent on ComfyBench. Visit our [Project Page](https://xxyqwq.github.io/ComfyBench) for more details.
 
 | Task Instruction                                             |                 Input                 |                 Result                  |
 | ------------------------------------------------------------ | :-----------------------------------: | :-------------------------------------: |
@@ -114,8 +116,11 @@ Here are some examples of results produced by ComfyAgent on ComfyBench. Visit ou
 | *You are given a low-resolution photo of a crowd of people. Upscale the image by 4x. The result should be a high-resolution version of the image.* | ![Input](assets/gallery/13_input.png) | ![Result](assets/gallery/13_result.png) |
 | *You are given an image of a table filled with dishes. Remove the fork on the table. The result should be a high-quality image without visible artifacts.* | ![Input](assets/gallery/14_input.png) | ![Result](assets/gallery/14_result.png) |
 | *You are given an image of a red car parked on the street. Replace the tree behind the car with a white house. The result should be a high-quality image without visible artifacts.* | ![Input](assets/gallery/15_input.png) | ![Result](assets/gallery/15_result.png) |
+| *You are given an image of a red bridge with a person standing on it. Remove the person from the image while maintaining the original appearance of the bridge. The result should be a high-quality image without visible artifacts.* | ![Input](assets/gallery/03_input.png) | ![Result](assets/gallery/03_result.png) |
 | *You are given a photo of mountains and rivers with a visible watermark in the bottom right corner. Remove the watermark from the image while maintaining the quality and content of the original photo. The result should be a high-quality image without the watermark.* | ![Input](assets/gallery/11_input.png) | ![Result](assets/gallery/11_result.png) |
 | *You are given an image of a girl playing the guitar. Generate an image of an old man playing the guitar in a forest with the same pose as the girl. The result should be a realistic image of an old man playing the guitar.* | ![Input](assets/gallery/07_input.png) | ![Result](assets/gallery/07_result.png) |
 | *You are given an image of a man wearing a black jacket. Change the black jacket into a white hoodie while ensuring that the modification looks natural and realistic. The result should be a high-quality image of the man wearing a white hoodie.* | ![Input](assets/gallery/10_input.png) | ![Result](assets/gallery/10_result.png) |
+| *You are given an image of a male celebrity. Transform the man in the image into a beautiful woman with ponytail hair while preserving her facial identity. The result should be a high-quality image of the woman.* | ![Input](assets/gallery/01_input.png) | ![Result](assets/gallery/01_result.png) |
 | *You are given an image of a toy dog. Replace the background with a scene of a sunny park with green grass while keeping the lighting and shadows consistent. The result should be an image of the toy dog in the park scene.* | ![Input](assets/gallery/08_input.png) | ![Result](assets/gallery/08_result.png) |
+| *You are given an image of a standing cat. Replace the background with a scene of a cozy living room while keeping the lighting and shadows consistent. The result should be an image of the cat in the living room scene.* | ![Input](assets/gallery/02_input.png) | ![Result](assets/gallery/02_result.png) |
 | *You are given an image containing two bottles of cosmetic products illuminated by a soft yellow light. Modify the illumination into a bright pink light to create a more vibrant and attractive appearance. The result should be an image of the cosmetic products with the new illumination.* | ![Input](assets/gallery/16_input.jpg) | ![Result](assets/gallery/16_result.png) |

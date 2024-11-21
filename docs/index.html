@@ -23,7 +23,7 @@
   <meta name="keywords" content="Agent, Workflow, Generative, ComfyUI">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>GenAgent</title>
+  <title>ComfyBench</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -49,7 +49,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              GenAgent: Build Collaborative AI Systems with Automated Workflow Generation - Case Studies on ComfyUI
+              ComfyBench: Benchmarking LLM-based Agents in ComfyUI for Autonomously Designing Collaborative AI Systems
             </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
@@ -59,6 +59,8 @@
                 <a href="https://github.com/whlzy/" target="_blank">Zeyu Lu</a>,</span>
               <span class="author-block">
                 <a href="https://dihuang.me/" target="_blank">Di Huang</a>,</span>
+              <span class="author-block"></span>
+              <a href="https://github.com/wzdthu/" target="_blank">Zidong Wang</a>,</span>
               <span class="author-block">
                 <a href="https://wlouyang.github.io/" target="_blank">Wanli Ouyang</a>,</span>
               <span class="author-block">
@@ -66,7 +68,7 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Shanghai AI Lab</span>
+              <span class="author-block">Shanghai Artificial Intelligence Laboratory</span>
               <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
             </div>
 
@@ -97,7 +99,7 @@
 
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://github.com/xxyQwQ/GenAgent" target="_blank"
+                  <a href="https://github.com/xxyQwQ/ComfyBench" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -114,22 +116,28 @@
     </div>
   </section>
 
-  <!-- Teaser Image -->
+  <!-- Teaser -->
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
         <img src="static/images/teaser.png" alt="Teaser Image" class="teaser-image">
-        <h2 class="subtitle has-text-justified">
-          The GenAgent framework builds collaborative AI systems by creating workflows. The workflows are converted into
-          code so that LLM agents can better understand them. GenAgent can learn from human-designed workflows and
-          create new ones. The generated workflows can be interpreted as collaborative systems to complete complex
-          tasks.
-        </h2>
+        <div class="content has-text-justified">
+          <p>
+            (a) ComfyBench is a comprehensive benchmark to evaluate agents's ability to design collaborative AI systems
+            in ComfyUI. Given the task instruction, agents are required to learn from documents and create workflows to
+            describe collaborative AI systems. The performance is measured by <em>pass rate</em> and <em>resolve
+              rate</em>, reflecting whether the workflow can be correctly executed and whether the task requirements are
+            realized. (b) ComfyAgent builds collaborative Al systems in ComfyUI by generating workflows. The workflows
+            are converted into equivalent code so that LLMs can better understand them. ComfyAgent can learn from
+            existing workflows and autonomously design new ones. The generated workflows can be interpreted as
+            collaborative AI systems to complete given tasks.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Paper abstract -->
+  <!-- Abstract -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -137,55 +145,140 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Much previous AI research has focused on developing monolithic models to maximize their intelligence and
-              capability, with the primary goal of enhancing performance on specific tasks. In contrast, this paper
-              explores an alternative approach: collaborative AI systems that use workflows to integrate models, data
-              sources, and pipelines to solve complex and diverse tasks. We introduce <strong>GenAgent</strong>, an
-              LLM-based framework that automatically generates complex workflows, offering greater flexibility and
-              scalability compared to monolithic models. The core innovation of GenAgent lies in representing workflows
-              with code, alongside constructing workflows with collaborative agents in a step-by-step manner. We
-              implement GenAgent on the <strong>ComfyUI</strong> platform and propose a new benchmark,
-              <strong>OpenComfy</strong>. The results demonstrate that GenAgent outperforms baseline approaches in both
-              run-level and task-level evaluations, showing its capability to generate complex workflows with superior
-              effectiveness and stability.
+              Much previous AI research has focused on developing monolithic models to maximize their intelligence, with
+              the primary goal of enhancing performance on specific tasks. In contrast, this work attempts to study
+              using LLM-based agents to design collaborative AI systems autonomously. To explore this problem, we first
+              introduce <strong>ComfyBench</strong> to evaluate agents’s ability to design collaborative AI systems in
+              ComfyUI. ComfyBench is a comprehensive benchmark comprising 200 diverse tasks covering various
+              instruction-following generation challenges, along with detailed annotations for 3,205 nodes and 20
+              workflows. Based on ComfyBench, we further develop <strong>ComfyAgent</strong>, a novel framework that
+              empowers LLM-based agents to autonomously design collaborative AI systems by generating workflows.
+              ComfyAgent is based on two core concepts. First, it represents workflows with code, which can be
+              reversibly converted into workflows and executed as collaborative systems by the interpreter. Second, it
+              constructs a multi-agent system that cooperates to learn from existing workflows and generate new
+              workflows for a given task. While experimental results demonstrate that ComfyAgent achieves a comparable
+              resolve rate to o1-preview and significantly surpasses other agents on ComfyBench, ComfyAgent has resolved
+              only 15% of creative tasks. LLM-based agents still have a long way to go in autonomously designing
+              collaborative AI systems. Progress with ComfyBench is paving the way for more intelligent and autonomous
+              collaborative AI systems.
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End paper abstract -->
 
   <section class="section hero is-small">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full">
           <div class="content">
-            <h2 class="title is-3">Representing Workflow with Code</h2>
+            <h2 class="title is-3">ComfyBench: Benchmark Contents</h2>
             <div class="level-set has-text-justified">
               <p>
-                Workflows are widely used across various applications, with diverse representations: flow graph, JSON,
-                element list and code.
+                ComfyBench is a comprehensive benchmark that includes:
               <ul>
-                <li><strong>Flow graph</strong> is one of the most intuitive and user-friendly representations of
-                  workflow DAGs for humans, but not LLMs.</li>
-                <li><strong>JSON</strong> is a popular way for LLMs to represent structured information, but processing
-                  long JSON files is extremely difficult.</li>
-                <li><strong>Element list</strong> is a natural representation for LLMs to grasp workflows, but is short
-                  of semantic and topological information.</li>
-                <li><strong>Code</strong> is a reasonable and effective representation for LLMs to understand and
-                  generate workflows.
-                </li>
+                <li><strong>Node Documentation</strong> provides complete documentation for 3,205 nodes registered in
+                  ComfyUI. This documentation provides detailed information about each node's usage, inputs, and
+                  outputs, serving as an essential reference for agents.</li>
+                <li><strong>Curriculum Workflow</strong> is a collection of 20 annotated tutorial workflows that
+                  demonstrate common nodes and patterns for solving basic tasks in ComfyUI, helping agents learn useful
+                  skills in a structured way.</li>
+                <li><strong>Task Instruction</strong> serves as the core component consisting of 200 task instructions
+                  that require designing and executing ComfyUI workflows. The tasks are divided into three difficulty
+                  levels:</li>
+                <ul>
+                  <li><strong>Vanilla</strong> includes 100 tasks, which can be solved by learning from a single
+                    demonstration with minor modifications.</li>
+                  <li><strong>Complex</strong> includes 60 tasks, which require combining multiple curriculum workflows
+                    and making adjustments.</li>
+                  <li><strong>Creative</strong> includes 40 tasks, which require understanding core principles and
+                    applying skills in novel ways.</li>
+                </ul>
               </ul>
+              If an additional image or video is involved in the task, it will be specified in the instruction.
+              </p>
+              <img src="static/images/comfybench.png" alt="ComfyBench Contents" class="center-image"
+                style="width: 60%; margin: auto; display: block;" />
+              <div class="container mt-4">
+                <div class="alert alert-danger" role="alert">
+                  ComfyBench provides annotations for 3205 nodes and 20 workflows, together with 200 task instructions
+                  categorized into three difficulty levels: <em>vanilla</em>, <em>complex</em>, and <em>creative</em>,
+                  reflecting the generalization ability of agents.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-small is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">ComfyBench: Evaluation Metrics</h2>
+            <div class="level-set has-text-justified">
+              <p>
+                We design two metrics to evaluate the generated workflows in ComfyBench:
+              <ul>
+                <li><strong>Pass Rate</strong> measures whether the generated workflows are correct. It is evaluated by
+                  the ComfyUI server. A task will be marked as passed only if the server finishes the execution process
+                  and returns a success message.</li>
+                <li><strong>Resolve Rate</strong> measures whether the generated workflows produce the expected results.
+                  It is automatically evaluated using GPT-4o. A task will be marked as resolved only if the GPT-4o model
+                  confirms that all the requirements are satisfied.</li>
+              </ul>
+              To verify the reliability of VLM-based evaluation, we conduct a human evaluation to analyze the agreement
+              between human evaluators and GPT-4o. We randomly select 50 tasks that are completed by ComfyAgent, where
+              human evaluators and GPT-4o are asked to provide their judgments respectively. We compute the average
+              scores for each question under a sample size of 400 and conduct a correlation analysis, which indicates a
+              strong agreement between human evaluators and GPT-4o.
+              </p>
+              <img src="static/images/alignment.png" alt="Human Alignment" class="center-image"
+                style="width: 60%; margin: auto; display: block;" />
+              <div class="container mt-4">
+                <div class="alert alert-danger" role="alert">
+                  Correlation analysis between the average scores given by human evaluators and GPT-4o indicates a
+                  strong agreement.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">ComfyAgent: Workflow Representation</h2>
+            <div class="level-set has-text-justified">
+              <p>
+                There are four common formats to represent workflows:
+              <ul>
+                <li><strong>Flow graph</strong> provides intuitive visualization for humans but is unsuitable for LLM or
+                  VLM processing.</li>
+                <li><strong>JSON</strong> provides a structured representation but is limited by redundant information
+                  and LLMs' context limitations.</li>
+                <li><strong>Element list</strong> is closer to natural language and provides a more compact
+                  representation, but it lacks explicit topological relationships, hindering LLMs from correctly
+                  processing complex workflows.</li>
+                <li><strong>Code</strong> emerges as the most effective representation, offering various advantages
+                  including Turing completeness, rich semantic information, and natural compatibility with LLMs' code
+                  generation capabilities.</li>
+              </ul>
+              We implement code representation using a restricted subset of Python-like syntax.
               </p>
               <img src="static/images/representation.png" alt="Workflow Representation" class="center-image" />
               <div class="container mt-4">
                 <div class="alert alert-danger" role="alert">
-                  Four different representations of workflows, including flow graph, JSON, element list, and code. Flow
-                  graph is only intuitive for human vision. JSON is a structured format but is complex and redundant.
-                  Element list is more compact and closer to natural language but lacks semantic and topological
-                  information. Code is compact, Turing complete, semantically rich, and friendly for LLMs, thus suitable
-                  for describing workflows.
+                  Examples of four common formats to represent workflows: flow graph, JSON, element list, and code.
                 </div>
               </div>
             </div>
@@ -200,33 +293,56 @@
       <div class="columns is-centered">
         <div class="column is-full">
           <div class="content">
-            <h2 class="title is-3">Building Workflow with GenAgent</h2>
+            <h2 class="title is-3">ComfyAgent: Multi-Agent Framework</h2>
             <div class="level-set has-text-justified">
-              <p>
-                We propose the GenAgent framework where the agents collaborate to complete the workflow generation task.
-                GenAgent is mainly composed of three independent modules: Memory, PlanAgent, and Action.
+              <p>We propose ComfyAgent, a multi-agent framework consisting of three independent modules:
               <ul>
-                <li><strong>Memory</strong> includes history, reference, and workspace, storing the agent’s recent
-                  history behaviors, results from intermediate, external reference knowledge, and internal reasoning.
+                <li><strong>Memory</strong> stores the recent state of ComfyAgent, which is formulated into three parts:
+                  <ul>
+                    <li><strong>History</strong> maintains recent plans and actions of Planner, enabling action review
+                      for
+                      subsequent planning.</li>
+                    <li><strong>Reference</strong> stores information retrieved from the knowledge base, and can be
+                      updated through active retrieval.</li>
+                    <li><strong>Workspace</strong> contains the current workflow together with its natural language
+                      annotation.</li>
+                  </ul>
                 </li>
-                <li><strong>PlanAgent</strong> is responsible for the global planning of workflows under the task
-                  instruction. At each step, PlanAgent generates a high-level plan with an action decision based on the
-                  current memory and task instruction.</li>
-                <li><strong>Actions</strong> represent different activities that PlanAgent can select, and the goal of
-                  each action is to modify the current memory. Different actions are handled by different agents or
-                  modules.</li>
+                <li><strong>Planner</strong> serves as the core of ComfyAgent, providing the global scheme to design and
+                  modify workflows:
+                  <ul>
+                    <li>At the beginning of the task, PlanAgent selects an existing workflow to initialize the memory
+                      and
+                      produces a thorough multi-step plan based on the task instruction.</li>
+                    <li>For each step, PlanAgent produces a high-level plan, together with an action based on the
+                      current
+                      memory.</li>
+                    <li>For each step, PlanAgent evaluates the completion status of the task. Once the task is deemed
+                      completed, PlanAgent will finish the procedure and save the workflow.</li>
+                  </ul>
+                </li>
+                <li><strong>Actions</strong> can be selected by PlanAgent. We define three actions as follows:
+                  <ul>
+                    <li><strong>Combine</strong> is processed by CombineAgent, combining the current workflow with
+                      another
+                      workflow from references.</li>
+                    <li><strong>Adapt</strong> is processed by AdaptAgent, adapting the details of the current workflow
+                      based on the prompt.</li>
+                    <li><strong>Retrieve</strong> is processed by RetrieveAgent, retrieving relevant information and
+                      updating references.</li>
+                  </ul>
+                  After combination or adaptation, the updated workflow will be checked and refined by RefineAgent.
+                </li>
               </ul>
+              After the action is processed, ComfyAgent will enter a new step, where PlanAgent updates the existing plan
+              and forms a new action. The code representation will be finally converted into the standard format to
+              describe the collaborative AI system.
               </p>
-              <img src="static/images/method.png" alt="GenAgent Framework" class="center-image" />
+              <img src="static/images/comfyagent.png" alt="GenAgent Framework" class="center-image" />
               <div class="container mt-4">
                 <div class="alert alert-danger" role="alert">
-                  The architecture of the GenAgent framework. Multiple agents collaborate to generate workflows in a
-                  step-by-step manner. The PlanAgent receives the task instruction and generates high-level plans and
-                  action decisions at every step. Different actions are then handled by the CombineAgent, AdaptAgent,
-                  and RetrieveAgent, respectively. The agents are equipped with memory, which consists of history,
-                  reference, and workspace. The RefineAgent is responsible for debugging if needed. Once the PlanAgent
-                  decides to finish the generation process, the workflow will be submitted to the interpreter for
-                  execution.
+                  The architecture of the ComfyAgent framework. Multiple agents cooperate to design workflows in a
+                  step-by-step manner.
                 </div>
               </div>
             </div>
@@ -241,26 +357,37 @@
       <div class="columns is-centered">
         <div class="column is-full">
           <div class="content">
-            <h2 class="title is-3">Benchmark Evaluation</h2>
+            <h2 class="title is-3">Experiments: Evaluation Results</h2>
             <div class="level-set has-text-justified">
               <p>
-                We implement GenAgent on the ComfyUI platform as a proof of concept. ComfyUI uses workflows to describe
-                the generation pipelines, supporting various models and tools, making it possible to solve a wide range
-                of generation tasks. A typical ComfyUI workflow consists of tens of nodes and links, which are connected
-                to form a complex DAG. We propose a benchmark, OpenComfy, which contains 20 different tasks of various
-                types. We provide complete documentation for every node and a set of examples containing 12 basic
-                workflows with manual annotations, so that agents can learn from these external knowledge. We compare
-                GenAgent with 4 baseline agents: <strong>Zero-shot Agent</strong>, <strong>Few-shot Agent</strong>,
-                <strong>CoT Agent</strong>, and <strong>RAG Agent</strong>.
+                We conduct experiments on advanced LLMs, including Llama-3.1 (<code>llama-3.1-70b-instruct</code>),
+                Claude-3.5 (<code>claude-3.5-sonnet-20240620</code>), GPT-4o (<code>gpt-4o-2024-08-06</code>), o1-mini
+                (<code>o1-mini-2024-09-12</code>), and o1-preview (<code>o1-preview-2024-09-12</code>). We adopt five
+                methods that are universally effective and can be conveniently adapted to solve the tasks in ComfyBench:
+              <ul>
+                <li><strong>Zero-shot Learning</strong> directly feeds LLMs with the task instruction to conduct
+                  inference.</li>
+                <li><strong>Few-shot Learning</strong> provides a set of demonstrations in the prompt, which utilizes
+                  the in-context learning ability of LLMs.</li>
+                <li><strong>Chain-of-Thought (CoT)</strong> instructs the agent to articulate the reasoning process
+                  before providing the final answer.</li>
+                <li><strong>CoT with Self-consistency (CoT-SC)</strong> ensembles parallel trajectories and then selects
+                  the most consistent answer.</li>
+                <li><strong>Retrieval-Augmented Generation (RAG)</strong> efficiently learns from the retrieved
+                  demonstrations.</li>
+              </ul>
+              We evaluate the methods mainly on GPT-4o. ComfyAgent is also evaluated on Llama-3.1 to verify its
+              performance on the open-source model. RAG is evaluated on all the models to provide a horizontal
+              comparison of their capabilities.
               </p>
+              <img src="static/images/evaluation.png" alt="Evaluation Result" class="center-image" />
               <div class="container mt-4">
                 <div class="alert alert-danger" role="alert">
-                  The evaluation results on the OpenComfy benchmark. Two types of pass rates of both run-level and
-                  task-level evaluations are reported. We compare GenAgent with zero-shot, few-shot, CoT, and RAG
-                  agents. The best results are highlighted in bold.
+                  Evaluation results of all the baseline agents on ComfyBench. The pass rate and resolve rate of every
+                  task category, together with the summary result on ComfyBench, are reported. The best results are
+                  highlighted in bold.
                 </div>
               </div>
-              <img src="static/images/evaluation.png" alt="Benchmark Evaluation" class="center-image" />
             </div>
           </div>
         </div>
@@ -273,47 +400,344 @@
       <div class="columns is-centered">
         <div class="column is-full">
           <div class="content">
-            <h2 class="title is-3">Generation Example</h2>
+            <h2 class="title is-3">Experiments: Ablation Studies</h2>
             <div class="level-set has-text-justified">
-              <p>We present the generation results of two different tasks selected from the OpenComfy benchmark, which
-                can intuitively show that GenAgent can generate complex ComfyUI workflows and complete various
-                generation tasks.</p>
-              <h3 class="subtitle is-5">Example 1</h3>
-              <p><strong>Example overview:</strong> The task provides a photo of a girl playing the guitar and requires
-                generating an image of an old man in the forest, playing the guitar with the same pose as the girl. The
-                expected style and resolution are also specified.</p>
-              <img src="static/images/example_1_overview.png" alt="Generation Example 1" class="center-image" />
-              <p><strong>Task requirement:</strong> You are given an image of a girl playing guitar in
-                `play_guitar.jpg`. Generate an image of an old man playing guitar in the forest with the same pose as
-                the girl. The result should be a realistic and detailed image with 1024x768 resolution.</p>
-              <p><strong>Generated workflow:</strong> The generated workflow consists of 13 nodes, involving a pose
-                estimator and a ControlNet model to inject the pose information as conditions. You can see the generated
-                workflow in the embedding below.</p>
-              <iframe src="https://comfyworkflows.com/embed/af0ffe25-c0a3-4985-af24-12d155c8e7cb" width="100%"
-                height="500" frameBorder="0" allowFullScreen></iframe>
-              <p><strong>Generation result:</strong> The image generated by the executed workflow is shown below.</p>
-              <img src="static/images/example_1_result.png" alt="Generation Example 1 Result" class="center-image" />
+              <p>
+                We conduct ablation studies to verify two core designs of ComfyAgent:
+              <ul>
+                <li><strong>Representation</strong>: To verify the effectiveness of code representation, we implement
+                  three variants of RAG on GPT-4o, where the workflows are respectively represented in JSON, element
+                  list, and code.</li>
+                <li><strong>Architecture</strong>: To verify the reasonability of the multi-agent framework, we
+                  implement four variants of ComfyAgent on GPT-4o, each removing one agent from the original framework.
+                </li>
+              </ul>
+              It turns out that RAG with code representation shows superior performance over other representations,
+              and that removing any agent from ComfyAgent will lead to a significant performance degradation.
+              </p>
+              <img src="static/images/ablation.png" alt="Ablation Study" class="center-image" />
+              <div class="container mt-4">
+                <div class="alert alert-danger" role="alert">
+                  Ablation results of RAG with different workflow representations and ComfyAgent with different
+                  architectures on ComfyBench.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-              <h3 class="subtitle is-5">Example 2</h3>
-              <p><strong>Example overview:</strong> The task requires generating an image of London following the style
-                of the given photo of Budapest and convert it into a video. Considering the resolution and frame rate
-                are limited by a single model, the task also involves upscaling and interpolation to form a high-quality
-                video.</p>
-              <img src="static/images/example_2_overview.png" alt="Generation Example 2" class="center-image" />
-              <p><strong>Task requirement:</strong> You are given a photo of Budapest `budapest.jpg`. First generate an
-                image of London with the same style as the given image. Then turn it into a 2-second video with 512x512
-                resolution and 8 frames per second. Finally increase its resolution to 1024x1024 and frame rate to 24.
-                The result should be a high-quality video saved in gif format.</p>
-              <p><strong>Generated workflow:</strong> The generated workflow consists of 22 nodes and complicated
-                connections, utilizing multiple models such as SVD, ESRGAN, and RIFE. You can see the generated workflow
-                in the embedding below.</p>
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Gallery: Example Workflows</h2>
+            <div class="level-set has-text-justified">
+              <p>Here we present a typical workflow generated by ComfyAgent. The task instruction is as follows:</p>
+              <pre><code>Generate a 2-second video of a train running on a railway track through a countryside landscape. The result should be a high-quality video.</code></pre>
+              <p>The code representation of the generated workflow is as follows:</p>
+              <pre><code>model_video, clip_vision_video, vae_video = ImageOnlyCheckpointLoader(ckpt_name="""svd_xt_1_1.safetensors""")
+model_image, clip_image, vae_image = CheckpointLoaderSimple(ckpt_name="""sd_xl_base_1.0.safetensors""")
+conditioning_positive = CLIPTextEncode(text="""a train running on a railway track through a countryside landscape, high resolution, detailed, realistic, 4k""", clip=clip_image)
+conditioning_negative = CLIPTextEncode(text="""blurry, low quality, text, watermark""", clip=clip_image)
+latent_initial = EmptyLatentImage(width=1024, height=576, batch_size=1)
+latent_image = KSampler(seed=123456789, steps=20, cfg=8, sampler_name="""uni_pc_bh2""", scheduler="""normal""", denoise=1, model=model_image, positive=conditioning_positive, negative=conditioning_negative, latent_image=latent_initial)
+image_initial = VAEDecode(samples=latent_image, vae=vae_image)
+_ = PreviewImage(images=image_initial)
+positive_video, negative_video, latent_video = SVD_img2vid_Conditioning(width=1024, height=576, video_frames=16, motion_bucket_id=127, fps=8, augmentation_level=0, clip_vision=clip_vision_video, init_image=image_initial, vae=vae_video)
+model_cfg = VideoLinearCFGGuidance(min_cfg=1, model=model_video)
+latent_video_frames = KSampler(seed=987654321, steps=30, cfg=2.5, sampler_name="""euler""", scheduler="""karras""", denoise=1, model=model_cfg, positive=positive_video, negative=negative_video, latent_image=latent_video)
+image_video_frames = VAEDecode(samples=latent_video_frames, vae=vae_video)
+video_output = VHS_VideoCombine(frame_rate=8, loop_count=0, filename_prefix="""train_video""", format="""video/h264-mp4""", pix_fmt="""yuv420p""", crf=19, save_metadata=True, pingpong=False, save_output=True, images=image_video_frames)</code></pre>
+              <p>The actual ComfyUI workflow describing the collaborative AI system is as follows:</p>
               <iframe src="https://comfyworkflows.com/embed/df8a26bb-f7e5-4e6e-bcc6-7bb203123e25" width="100%"
                 height="500" frameBorder="0" allowFullScreen></iframe>
-              <p><strong>Generation result:</strong> The video generated by the executed workflow is shown below.</p>
-              <video poster="" id="example_2" autoplay controls muted loop width="100%">
-                <source src="static/videos/example_2_result.mp4" type="video/mp4">
-              </video>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image carousel -->
+  <section class="section hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="content">
+          <h2 class="title is-3">Gallery: Example Results</h2>
+          <p>Some examples of the results produced by ComfyAgent on ComfyBench are presented as follows:</p>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a scribble flower. Repaint the
+                scribble into a realistic red flower. The result should be an image of a red flower.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/09_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/09_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a red apple. Change it into a
+                green apple on a table while maintaining other details. The result should be an image of a green apple.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/18_input.jpg" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/18_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a sample logo containing a
+                containing a bird pattern. Convert it into a cubist art poster with dark colors. The result should be an
+                image of a poster without watermark.</p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/17_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/17_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a large castle standing on top
+                of a hill. Convert the castle into the style of ice cream while maintaining its original structure. The
+                result should be an image with the castle transformed into a colorful and fantastic ice cream castle.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/12_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/12_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given a low-resolution photo of a crowd of
+                people. Upscale the image by 4x. The result should be a high-resolution version of the image.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/13_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/13_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a table filled with dishes.
+                Remove the fork on the table. The result should be a high-quality image without visible artifacts.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/14_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/14_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a red car parked on the
+                street. Replace the tree behind the car with a white house. The result should be a high-quality image
+                without visible artifacts.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/15_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/15_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a red bridge with a person
+                standing on it. Remove the person from the image while maintaining the original appearance of the
+                bridge. The result should be a high-quality image without visible artifacts.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/03_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/03_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given a photo of mountains and rivers with a
+                visible watermark in the bottom right corner. Remove the watermark from the image while maintaining the
+                quality and content of the original photo. The result should be a high-quality image without the
+                watermark.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/11_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/11_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a girl playing the guitar.
+                Generate an image of an old man playing the guitar in a forest with the same pose as the girl. The
+                result should be a realistic image of an old man playing the guitar.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/07_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/07_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a man wearing a black
+                jacket. Change the black jacket into a white hoodie while ensuring that the modification looks
+                natural and realistic. The result should be a high-quality image of the man wearing a white hoodie.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/10_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/10_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a male celebrity. Transform
+                the man in the image into a beautiful woman with ponytail hair while preserving her facial identity. The
+                result should be a high-quality image of the woman.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/01_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/01_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a toy dog. Replace the
+                background with a scene of a sunny park with green grass while keeping the lighting and shadows
+                consistent. The result should be an image of the toy dog in the park scene.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/08_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/08_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image of a standing cat. Replace the
+                background with a scene of a cozy living room while keeping the lighting and shadows consistent. The
+                result should be an image of the cat in the living room scene.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/02_input.png" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/02_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="subtitle has-text-centered" style="font-size: 1.2rem;">Task Instruction</h2>
+              <p style="font-style: italic; font-size: 1.1rem;">You are given an image containing two bottles of
+                cosmetic products illuminated by a soft yellow light. Modify the illumination into a bright pink light
+                to create a more vibrant and attractive appearance. The result should be an image of the cosmetic
+                products with the new illumination.
+              </p>
+              <div class="columns">
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Input</h3>
+                  <img src="static/images/16_input.jpg" alt="Input" />
+                </div>
+                <div class="column">
+                  <h3 class="subtitle has-text-centered" style="font-size: 1.2rem;">Result</h3>
+                  <img src="static/images/16_result.png" alt="Result" />
+                </div>
+              </div>
+            </div>
+            <!-- <div class="item">
+            <h2 class="subtitle has-text-centered" style="font-size: 1.5rem;">Task Instruction</h2>
+            <h2 class="subtitle" style="font-style: italic; font-size: 1.2rem;">You are given an image of a male celebrity. Transform the man in the image into a beautiful woman with ponytail hair while preserving her facial identity.</h2>
+            <div class="columns">
+              <div class="column">
+                <h3 class="subtitle has-text-centered" style="font-size: 1.5rem;">Input</h3>
+                <img src="static/images/01_input.png" alt="Input" />
+              </div>
+              <div class="column">
+                <h3 class="subtitle has-text-centered" style="font-size: 1.5rem;">Result</h3>
+                <video poster="" id="example_2" autoplay controls muted loop width="100%">
+                  <source src="static/videos/example_2_result.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div> -->
           </div>
         </div>
       </div>
@@ -324,19 +748,14 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{xue2024genagentbuildcollaborativeai,
-        title={GenAgent: Build Collaborative AI Systems with Automated Workflow Generation -- Case Studies on ComfyUI}, 
-        author={Xiangyuan Xue and Zeyu Lu and Di Huang and Wanli Ouyang and Lei Bai},
-        year={2024},
-        eprint={2409.01392},
-        archivePrefix={arXiv},
-        primaryClass={cs.CL},
-        url={https://arxiv.org/abs/2409.01392}, 
-  }
-      </code></pre>
+      <pre><code>@article{xue2024comfybench,
+  title={ComfyBench: Benchmarking LLM-based Agents in ComfyUI for Autonomously Designing Collaborative AI Systems},
+  author={Xue, Xiangyuan and Lu, Zeyu and Huang, Di and Wang, Zidong and Ouyang, Wanli and Bai, Lei},
+  journal={arXiv preprint arXiv:2409.01392},
+  year={2024}
+},</code></pre>
     </div>
   </section>
-  <!--End BibTex citation -->
 
   <footer class="footer">
     <div class="container">
@@ -344,7 +763,6 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              <p>We would like to thank Zidong Wang and <a href="https://icoz69.github.io/">Chi Zhang</a> for insightful discussions and valuable feedback throughout the development of this project.</p>
               This project page was built from <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
                 target="_blank">Academic Project Page Template</a>.
               <br> This website is licensed under a <a rel="license"
