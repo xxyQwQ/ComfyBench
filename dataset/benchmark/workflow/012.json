@@ -257,7 +257,7 @@
     },
     "61": {
         "inputs": {
-            "model_path": "IC-Light\\iclight_sd15_fcon.safetensors",
+            "model_path": "IC-Light/iclight_sd15_fcon.safetensors",
             "model": [
                 "4",
                 0

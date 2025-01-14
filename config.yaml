@@ -18,10 +18,10 @@ embedding:
 completion:
   base_url: null
   api_key: null
-  model_name: "gpt-4o-2024-08-06"
+  model_name: "chatgpt-4o-latest"
 
 # vision api for evaluation
 vision:
   base_url: null
   api_key: null
-  model_name: "gpt-4o-2024-08-06"
+  model_name: "chatgpt-4o-latest"
