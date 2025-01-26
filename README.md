@@ -124,3 +124,16 @@ Here are some examples of the results produced by ComfyAgent on ComfyBench. Visi
 | *You are given an image of a toy dog. Replace the background with a scene of a sunny park with green grass while keeping the lighting and shadows consistent. The result should be an image of the toy dog in the park scene.* | ![Input](assets/gallery/08_input.png) | ![Result](assets/gallery/08_result.png) |
 | *You are given an image of a standing cat. Replace the background with a scene of a cozy living room while keeping the lighting and shadows consistent. The result should be an image of the cat in the living room scene.* | ![Input](assets/gallery/02_input.png) | ![Result](assets/gallery/02_result.png) |
 | *You are given an image containing two bottles of cosmetic products illuminated by a soft yellow light. Modify the illumination into a bright pink light to create a more vibrant and attractive appearance. The result should be an image of the cosmetic products with the new illumination.* | ![Input](assets/gallery/16_input.jpg) | ![Result](assets/gallery/16_result.png) |
+
+## 📜 Citation
+
+If you find our work helpful, please consider citing our paper:
+
+```bibtex
+@article{xue2024comfybench,
+  title={ComfyBench: Benchmarking LLM-based Agents in ComfyUI for Autonomously Designing Collaborative AI Systems},
+  author={Xue, Xiangyuan and Lu, Zeyu and Huang, Di and Wang, Zidong and Ouyang, Wanli and Bai, Lei},
+  journal={arXiv preprint arXiv:2409.01392},
+  year={2024}
+}
+```
