@@ -19,9 +19,15 @@ completion:
   base_url: null
   api_key: null
   model_name: "chatgpt-4o-latest"
+  hyper_parameter:
+    temperature: 0.0
+    top_p: 1.0
 
 # vision api for evaluation
 vision:
   base_url: null
   api_key: null
   model_name: "chatgpt-4o-latest"
+  hyper_parameter:
+    temperature: 0.0
+    top_p: 1.0

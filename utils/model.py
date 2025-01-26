@@ -22,9 +22,11 @@ with open('./config.yaml', 'r') as file:
     COMPLETION_BASE_URL = config['completion']['base_url']
     COMPLETION_API_KEY = config['completion']['api_key']
     COMPLETION_MODEL_NAME = config['completion']['model_name']
+    COMPLETION_HYPER_PARAMETER = config['completion']['hyper_parameter']
     VISION_BASE_URL = config['vision']['base_url']
     VISION_API_KEY = config['vision']['api_key']
     VISION_MODEL_NAME = config['vision']['model_name']
+    VISION_HYPER_PARAMETER = config['vision']['hyper_parameter']
 
 
 class ReferenceStorage(object):
@@ -78,7 +80,8 @@ def invoke_completion(message: str) -> tuple[str, any]:
             messages=[{
                 'role': 'user',
                 'content': message
-            }]
+            }],
+            **COMPLETION_HYPER_PARAMETER
         )
         answer = response.choices[0].message.content
         usage = response.usage
@@ -99,7 +102,8 @@ def invoke_vision(message: any) -> tuple[str, any]:
     try:
         response = client.chat.completions.create(
             model=VISION_MODEL_NAME,
-            messages=message
+            messages=message,
+            **VISION_HYPER_PARAMETER
         )
         answer = response.choices[0].message.content
         usage = response.usage
