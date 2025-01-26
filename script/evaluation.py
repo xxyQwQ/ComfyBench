@@ -422,7 +422,7 @@ def main():
     parser.add_argument('--submit_folder', type=str, required=True)
     parser.add_argument('--cache_path', type=str, default=None)
     parser.add_argument('--num_workers', type=int, default=10)
-    parser.add_argument('--resume_last', action='store_true', type=bool)
+    parser.add_argument('--resume_last', action='store_true')
     args = parser.parse_args()
 
     if args.cache_path is None:

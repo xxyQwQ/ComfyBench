@@ -8,6 +8,8 @@ import multiprocessing as mp
 from utils import console
 from agent.cot import CoTPipeline
 from agent.rag import RAGPipeline
+from agent.crp import CRPPipeline
+from agent.mad import MADPipeline
 from agent.cotsc import CoTSCPipeline
 from agent.comfy import ComfyPipeline
 from agent.fewshot import FewShotPipeline
@@ -43,6 +45,8 @@ def main():
     parser.add_argument('--num_examples', type=int, default=3)
     parser.add_argument('--num_trajectories', type=int, default=3)
     parser.add_argument('--num_references', type=int, default=5)
+    parser.add_argument('--num_solvers', type=int, default=3)
+    parser.add_argument('--num_rounds', type=int, default=1)
     parser.add_argument('--step_limitation', type=int, default=5)
     parser.add_argument('--debug_limitation', type=int, default=1)
     args = parser.parse_args()
@@ -73,6 +77,17 @@ def main():
     elif args.agent_name == 'rag':
         pipeline = RAGPipeline(
             num_references=args.num_references
+        )
+    elif args.agent_name == 'crp':
+        pipeline = CRPPipeline(
+            num_references=args.num_references,
+            num_rounds=args.num_rounds
+        )
+    elif args.agent_name == 'mad':
+        pipeline = MADPipeline(
+            num_references=args.num_references,
+            num_solvers=args.num_solvers,
+            num_rounds=args.num_rounds
         )
     elif args.agent_name == 'comfy':
         pipeline = ComfyPipeline(
