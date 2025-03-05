@@ -29,6 +29,7 @@ ComfyBench: Benchmarking LLM-based Agents in ComfyUI for Autonomously Designing 
 
 ## 📰 News
 
+- **[2025/02/27]** *ComfyBench* is accepted by CVPR 2025.
 - **[2024/11/20]** The latest version of our code is updated.
 - **[2024/11/14]** The work is further extended and renamed as *ComfyBench*.
 - **[2024/09/04]** Our code implementation is released on GitHub.
